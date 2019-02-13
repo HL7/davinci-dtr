@@ -1,0 +1,6 @@
+/output
+/temp
+*.dropbox
+.DS_Store
+Thumbs.db
+[Dd]esktop.ini

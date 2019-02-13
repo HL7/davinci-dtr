@@ -1,0 +1,2 @@
+// This will go away as soon as the IG points to a specific ballot release
+The link 'http://build.fhir.org/fhir-spec.zip' for "R4" cannot be resolved

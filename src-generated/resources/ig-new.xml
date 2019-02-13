@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="davinci-dtr"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
+    <valueString value="/Users/cspringatecombs/projects/dme/davinci-dtr/src-generated/resources"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
+    <valueString value="/Users/cspringatecombs/projects/dme/davinci-dtr/src/resources"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
+    <valueString value="/Users/cspringatecombs/projects/dme/davinci-dtr/src/vocabulary"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
+    <valueString value="/Users/cspringatecombs/projects/dme/davinci-dtr/src/examples"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
+    <valueString value="/Users/cspringatecombs/projects/dme/davinci-dtr/src/images"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
+    <valueString value="/Users/cspringatecombs/projects/dme/davinci-dtr/src-generated/pages"/>
+  </extension>
+  <url value="http://hl7.org/fhir/us/davinci-dtr/ImplementationGuide/davinci-dtr"/>
+  <version value="0.1.0"/>
+  <name value="DocumentationTemplatesAndRules"/>
+  <title value="Da Vinci - Documentation Templates and Rules"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="HL7 Davinci Project"/>
+  <description value="Guidelines for documentation templates and rules for coverage requirements"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <packageId value="hl7.fhir.us.davinci.dtr"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.0"/>
+  <fhirVersion value="4.0.0"/>
+  <definition>
+    <grouping id="profiles">
+      <name value="Profiles"/>
+      <description value="Profiles to be supported by EHRs and payor systems conforming to this implementation guide"/>
+    </grouping>
+    <grouping id="extensions">
+      <name value="Extensions"/>
+      <description value="Extensions defined as part of this implementation guide"/>
+    </grouping>
+    <grouping id="search">
+      <name value="Search Parameters"/>
+      <description value="Search Parameters defined as part of this implementation guide"/>
+    </grouping>
+    <grouping id="terminology">
+      <name value="Terminology"/>
+      <description value="Value Sets and/or code systems defined as part of this implementation guide"/>
+    </grouping>
+    <page>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <nameUrl value="index.html"/>
+        <title value="Home Page"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="use_case.html"/>
+        <title value="Use Case"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="underlying_technologies.html"/>
+        <title value="Underlying Technologies"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="specification.html"/>
+        <title value="Specification"/>
+        <generation value="markdown"/>
+        <page>
+          <nameUrl value="specification__profiles.html"/>
+          <title value="Profiles"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="specification__cds_hooks.html"/>
+          <title value="CDS Hooks"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="specification__cql.html"/>
+          <title value="CQL"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="specification__behaviors.html"/>
+          <title value="Expectations of Application Behavior"/>
+          <generation value="markdown"/>
+          <page>
+            <nameUrl value="specification__behaviors__retrieval_of_payer_resources.html"/>
+            <title value="Retrieval of Payer Resources"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="specification__behaviors__execution_of_CQL.html"/>
+            <title value="Execution of CQL"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="specification__behaviors__questionnaire_evaluation.html"/>
+            <title value="Questionnaire Evaluation"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="specification__behaviors__requesting_additional_information_from_the_user.html"/>
+            <title value="Requesting Additional Information from the User"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="specification__behaviors__persisting_application_state.html"/>
+            <title value="Persisting Application State"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="specification__behaviors__persisting_results.html"/>
+            <title value="Persisting Results"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="specification__behaviors__task_creation.html"/>
+            <title value="Task Creation"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="specification__behaviors__launch_outside_of_CRD.html"/>
+            <title value="Launch outside of CRD"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="specification__behaviors__privacy_safety_and_security.html"/>
+            <title value="Privacy, Safety and Security"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="specification__behaviors__additional_considerations.html"/>
+            <title value="Additional Considerations"/>
+            <generation value="markdown"/>
+          </page>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="resources.html"/>
+        <title value="Resources"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="credits.html"/>
+        <title value="Credits"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <parameter>
+      <code value="apply"/>
+      <value value="version"/>
+    </parameter>
+    <parameter>
+      <code value="html-template"/>
+      <value value="template-page.html"/>
+    </parameter>
+    <parameter>
+      <code value="generate-json"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="generate-xml"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="generate-turtle"/>
+      <value value="true"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>
