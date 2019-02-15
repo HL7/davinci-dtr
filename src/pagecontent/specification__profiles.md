@@ -1,3 +1,7 @@
+FHIR resources exchanged in the execution of a DTR application are subject to conformance requirements with the following HL7 Implementation Guides.
+
 ### US Core
+The DTR application will access information about a patient to execute rules and gather documentation to satisfy payer needs. To do this, the DTR application will make requests to a the FHIR server of the Healthcare Provider Organization's EHR. The FHIR server SHALL conform to the [US Core Implementation Guide STU2](http://hl7.org/fhir/us/core/STU2/) when providing access to FHIR STU3. The FHIR server SHALL conform to the [US Core Implementation Guide STU3](http://hl7.org/fhir/us/core/2019Jan/) when providing access to FHIR R4.
 
 ### SDC
+Payers have documentation requirements and rules that must be satisfied as part of their typical operations when reimbursing for care. In an ideal case, all of the information needed by a payer would be stored in a healthcare provider's EHR system in a structured format for easy retrieval. Unfortunately, this is rarely the case, so measures must be takes to allow users to input information that is not automatically discoverable. To facilitate this, the [Structured Data Capture Implementation Guide](http://hl7.org/fhir/us/sdc/index.html) is used to allow payers to declare information needs and provide the DTR application with a means of obtaining this data from a user.
