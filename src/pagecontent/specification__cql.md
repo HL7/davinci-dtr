@@ -14,7 +14,7 @@ As an example, a payer may have a set of rules or information that must be gathe
 ### Expression Naming Conventions
 CQL allows the gathering of information through the use of `define` statements. These statements are given an identifier. When CQL execution is complete, a context will be created where these identifiers are populated with the results of the statement execution.
 
-DTR makes use of the identifier names within the CQL. The DTR application will examine the payer supplied Questionnaire resource. For each returned statement in CQL, the DTR application will attement to find a `Questionnaire.item` with a `linkId` that is the same as the statement identifier. The resulting value held in the identifier, unless `null` will be used to answer the question.
+DTR makes use of the identifier names within the CQL. The DTR application will examine the payer supplied Questionnaire resource. This resource SHALL conform to the [CQF-Questionnaire Profile](http://hl7.org/fhir/R4/cqf.html) For each returned statement in CQL, the DTR application will attement to find a `Questionnaire.item` with a `valueEpression` that contains the same as the statement identifier. The resulting value held in the identifier, unless `null` will be used to answer the question.
 
 ### CQL Constraints
 CQL for use in DTR SHALL have a `context` of `Patient`.
