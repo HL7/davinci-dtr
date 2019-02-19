@@ -22,4 +22,4 @@ The DTR application SHALL use the URL provided in the `template` property of the
 The Questionnaire SHALL have a `cqf-library` extension property specified. That property SHALL provide the location of one or more CQL libraries needed to execute the payer rules.
 
 ### CQL Rules
-The rules will be represented as a FHIR Library resource. 
+The DTR application SHALL use the URL provided in the `cqf-library` extension to retrieve the CQL necessary to execute the payer rules. Metadata about the rules will be represented as a FHIR Library resource. The payer SHALL provide this as a FHIR resource, such that the DTR application will be executing a FHIR read interaction on the payer's server.
