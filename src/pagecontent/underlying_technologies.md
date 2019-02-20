@@ -18,37 +18,19 @@ This implementation guide also leverages the US Core set of profiles defined by 
 This implementation guide supports the [STU3](http://hl7.org/fhir/STU3) and [R4]({{site.data.fhir.path}}index.html) versions of the FHIR standard. FHIR services based on STU3 are being moved into production by EHR vendors. R4 is just recently published and the goal is to ensure the implementation guide is aligned with the current direction of the FHIR standard. Initial implementations will focus on STU3.
 
 This implementation guide also builds on the US Core Implementation Guide and implementers need to familiarize themselves with the profiles in those Implementation Guides:
-<table>
-  <tr>
-    <td>FHIR R4 US Core (not yet created)</td>
-  </tr>
-  <tr>
-    <td><a href="http://hl7.org/fhir/us/core/1.0.1">FHIR STU3 US Core (1.0.1)</a></td>
-  </tr>
-</table>
+
+| FHIR Version |
+| ------------ |
+| [FHIR R4 US Core](http://hl7.org/fhir/us/core/2019Jan/) |
+| [FHIR STU3 US Core (1.0.1)](http://hl7.org/fhir/us/core/1.0.1) |
 
 Implementers should also familiarize themselves with the FHIR resources used within the guide:
 
-<table>
-  <thead>
-    <tr>
-      <th>STU3</th>
-      <th>R4</th>
-    </tr>
-  </thead>
-  <tr>
-    <td>    
-      <a href="http://hl7.org/fhir/STU3/questionnaire.html">Questionnaire</a><br/>
-      <a href="http://hl7.org/fhir/STU3/questionnaire.html">QuestionnaireResponse</a><br/>
-      <a href="http://hl7.org/fhir/STU3/task.html">Task</a><br/>
-    </td>
-    <td>  
-      <a href="{{site.data.fhir.path}}questionnaire.html">Questionnaire</a><br/>
-      <a href="{{site.data.fhir.path}}questionnaireResponse.html">Questionnaire</a><br/>     
-      <a href="{{site.data.fhir.path}}task.html">Task</a><br/>
-    </td>
-  </tr>
-</table>
+| STU3 | R4 |
+| ---- | -- |
+| [Questionnaire](http://hl7.org/fhir/STU3/questionnaire.html) | [Questionnaire](http://hl7.org/fhir/R4questionnaire.html) |
+| [QuestionnaireResponse](http://hl7.org/fhir/STU3/questionnaireresponse.html) |[QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) |
+| [Task](http://hl7.org/fhir/STU3/task.html) | [Task](http://hl7.org/fhir/R4/task.html) |
 
 ### US Core
 Clinical systems will use the specification and workflows defined by [US Core](http://www.hl7.org/fhir/us/core/) to initiate Document Template and Rule with the payers. Implementers should be familiar with this specification.
