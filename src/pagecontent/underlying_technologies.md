@@ -37,46 +37,14 @@ Implementers should also familiarize themselves with the FHIR resources used wit
     </tr>
   </thead>
   <tr>
-    <td>
-      <a href="http://hl7.org/fhir/STU3/appointment.html">Appointment</a><br/>
-      <a href="http://hl7.org/fhir/STU3/coverage.html">Coverage</a><br/>
-      <a href="http://hl7.org/fhir/STU3/communicationrequest.html">CommunicationRequest</a><br/>
-      <a href="http://hl7.org/fhir/STU3/device.html">Device</a><br/>
-      <a href="http://hl7.org/fhir/STU3/devicerequest.html">DeviceRequest</a><br/>
-      <a href="http://hl7.org/fhir/STU3/encounter.html">Encounter</a><br/>
-      <a href="http://hl7.org/fhir/STU3/location.html">Location</a><br/>
-      <a href="http://hl7.org/fhir/STU3/organization.html">Organization</a><br/>
-      <a href="http://hl7.org/fhir/STU3/medication.html">Medication</a><br/>
-      <a href="http://hl7.org/fhir/STU3/medicationrequest.html">MedicationRequest</a><br/>
-      <a href="http://hl7.org/fhir/STU3/nutritionorder.html">NutritionOrder</a><br/>
-      <a href="http://hl7.org/fhir/STU3/patient.html">Patient</a><br/>
-      <a href="http://hl7.org/fhir/STU3/practitioner.html">Practitioner</a><br/>
-      <a href="http://hl7.org/fhir/STU3/practitionerrole.html">PractitionerRole</a><br/>
-      <a href="http://hl7.org/fhir/STU3/procedurerequest.html">ProcedureRequest</a><br/>
+    <td>    
       <a href="http://hl7.org/fhir/STU3/questionnaire.html">Questionnaire</a><br/>
-      <a href="http://hl7.org/fhir/STU3/referralrequest.html">ReferralRequest</a><br/>
-      <a href="http://hl7.org/fhir/STU3/supplyrequest.html">SupplyRequest</a><br/>
+      <a href="http://hl7.org/fhir/STU3/questionnaire.html">QuestionnaireResponse</a><br/>
       <a href="http://hl7.org/fhir/STU3/task.html">Task</a><br/>
-      <a href="http://hl7.org/fhir/STU3/visionprescription.html">VisionPrescription</a>
     </td>
-    <td>
-      <a href="{{site.data.fhir.path}}appointment.html">Appointment</a><br/>
-      <a href="{{site.data.fhir.path}}coverage.html">Coverage</a><br/>
-      <a href="{{site.data.fhir.path}}communicationrequest.html">CommunicationRequest</a><br/>
-      <a href="{{site.data.fhir.path}}device.html">Device</a><br/>
-      <a href="{{site.data.fhir.path}}devicerequest.html">DeviceRequest</a><br/>
-      <a href="{{site.data.fhir.path}}encounter.html">Encounter</a><br/>
-      <a href="{{site.data.fhir.path}}location.html">Location</a><br/>
-      <a href="{{site.data.fhir.path}}organization.html">Organization</a><br/>
-      <a href="{{site.data.fhir.path}}medication.html">Medication</a><br/>
-      <a href="{{site.data.fhir.path}}medicationrequest.html">MedicationRequest</a><br/>
-      <a href="{{site.data.fhir.path}}nutritionorder.html">NutritionOrder</a><br/>
-      <a href="{{site.data.fhir.path}}patient.html">Patient</a><br/>
-      <a href="{{site.data.fhir.path}}practitioner.html">Practitioner</a><br/>
-      <a href="{{site.data.fhir.path}}practitionerrole.html">PractitionerRole</a><br/>
+    <td>  
       <a href="{{site.data.fhir.path}}questionnaire.html">Questionnaire</a><br/>
-      <a href="{{site.data.fhir.path}}servicerequest.html">ServiceRequest</a><br/>
-      <a href="{{site.data.fhir.path}}supplyrequest.html">SupplyRequest</a><br/>
+      <a href="{{site.data.fhir.path}}questionnaireResponse.html">Questionnaire</a><br/>     
       <a href="{{site.data.fhir.path}}task.html">Task</a><br/>
     </td>
   </tr>
