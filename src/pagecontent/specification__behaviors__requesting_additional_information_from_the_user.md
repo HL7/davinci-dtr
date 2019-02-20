@@ -13,7 +13,7 @@ When `item`s meet the conditions stated above, they SHALL be presented to the us
 Payers may have requirements on how questions are presented to users. To allow for this, payers MAY supply Questionnaire resources that conform to the [Advanced Rendering Questionnaire Profile](http://build.fhir.org/ig/HL7/sdc/sdc-questionnaire-render.html) as definded in Structure Data Capture. The DTR application SHALL use the `rendering-style` and `rendering-xhtml` properties provided if the `rendering-styleSensitive` extension property is `true`. If the `rendering-styleSensitive` extension property is not present or `false` the DTR application SHOULD use `rendering-style` and `rendering-xhtml` properties.
 
 #### Rendering Questionnaire items without specified styles
-Payers are not required to provide Questionnaires that conform to the Advanced Rendering Questionnaire Profile. When a Questionnaire is provided that does not conform to this profile, it is at the discretion of the DTR application to chose a reasonable presentation of the questions that require user input.
+Payers are not required to provide Questionnaires that conform to the Advanced Rendering Questionnaire Profile. When a Questionnaire is provided that does not conform to this profile, it is at the discretion of the DTR application to chose a reasonable presentation of the questions that require user input. The DTR application SHALL use the appropriate input mechanism depending on the `item.type`. Additionally, the DTR application SHALL support `item.answerValueSet`, `item.answerOption` and `item.initial` if provided.
 
 ### Provider Attestation
 There may be cases where the CQL provided by a payer was unable to locate information on a patient that is present in the EHR system. This may be due to the information existing in unstructured notes where it is not able to be easily retrieved by CQL, or it may be in a location that the CQL did not expect. To reduce the burden on the users of the application, DTR provides a mechanism for the user to attest that the information exists in the patient's record, without specifying the exact value or location of the information.
@@ -25,6 +25,88 @@ The DTR application SHALL include a mechanism to allow a user to attest the the 
 When a user provides an attestation, the DTR application SHALL record that in the corresponding QuestionnaireResponse.item. In this case, the DTR application SHALL create an `answer` property on the `item`. The `answer` SHALL have a `valueCoding` that is set to the **TODO** value from the attestation value set. The `item` will also have an `author` extension property which will reference the `fhirUser` provided to the DTR application.
 
 #### Attestation Value Set
+
+**TODO**
+
 ### Recording Responses
+The DTR application SHALL take input from the user and record the provided information. As with provider attestation, the DTR application SHALL record that in the corresponding QuestionnaireResponse.item. In this case, the DTR application SHALL create an `answer` property on the `item`. The `answer` SHALL have an appropriate `value[x]` depending on the corresponding `type` in the `Questionnaire.item`. Again, similar to attestations, the `item` will have an `author` extension property which will reference the `fhirUser` provided to the DTR application.
+
 #### QuestionnaireResponse
+The DTR application SHALL create a QuestionnaireResponse resource based on all of the information collected. Given the following JSON fragment representing a `Questionnaire.item`:
+
+```
+{
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+      "valueExpression": {
+        "language": "text/cql",
+        "expression": "Age"
+      }
+    }
+  ],
+  "linkId": "age",
+  "code": [
+    {
+      "system": "http://loinc.org",
+      "code": "30525-0"
+    }
+  ],
+  "text": "What is the patient's age?",
+  "type": "integer"
+}
+```
+
+The following `QuestionnaireResponse.item` JSON fragment would be created assuming that the patient's age is 65 years old and that this information was gathered through CQL execution.
+
+```
+{
+  "linkId": "age",
+  "answer": {
+    "valueInteger": 65
+  }
+}
+```
+
+If the value was supplied by the user, the `author` extension property will be set. The following `QuestionnaireResponse.item` JSON fragment provides an example of this:
+
+```
+{
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-author",
+      "valueReference": {
+        "reference": "http://exampleprovider.org/fhir/Practitioner/1234"
+      }
+    }
+  ],
+  "linkId": "age",
+  "answer": {
+    "valueInteger": 65
+  }
+}
+```
+
+Finally, if the user did not supply a value, but provided an attestation that the information exists in the patient's record, it would be represented bu the following  `QuestionnaireResponse.item` JSON fragment:
+
+```
+{
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-author",
+      "valueReference": {
+        "reference": "http://exampleprovider.org/fhir/Practitioner/1234"
+      }
+    }
+  ],
+  "linkId": "age",
+  "answer": {
+    "valueCoding": {
+      "system": "http://todo.org/attestation", "code": "attestation"
+    }
+  }
+}
+```
+
 #### Separating user provided information from CQL retrieved information
+For information systems processing a QuestionnnaireResponse generated by the DTR application, any `QuestionnnaireResponse.item` with the `author` extension property populated was created by some form of user input. If the `author` property is not present, then the information was gathered through the execution of CQL.
