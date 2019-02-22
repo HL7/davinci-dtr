@@ -32,6 +32,7 @@ The goal of this use case is to reduce user or provider burden and simplify proc
 * indications of whether prior authorization is required
 
 This shows a high level overview of CRD and DTR (DTR is the SMART on FHIR App)
+
 ![Image](../images/crd_dtr_flow.png?raw=true)
 
 ### Oxygen Therapy Ordering Example
