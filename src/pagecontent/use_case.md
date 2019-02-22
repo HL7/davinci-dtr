@@ -44,4 +44,4 @@ This shows a high level overview of CRD and DTR (DTR is the SMART on FHIR App)
 4. The engine then extracts the answers in order to formulate a FHIR Questionaire response
 5. It then write the FHIR Questionaire response back to Payer server and optionaly to     the EHR in a text format.    
 
-![Image](../images/Process_Flow_Detail.png?raw=true)]
+![Image](../images/Process_Flow_Detail.png?raw=true)
