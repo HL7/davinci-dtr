@@ -21,7 +21,7 @@ Users or Providers are challenged to deal with the diversity of administrative a
 The goal of this use case is to reduce user or provider burden and simplify process by establishing electronic versions of administrative and clinical requirements that can become part of the providers daily workflow. 
 
 ### Relation to CRD
-[CRD](http://build.fhir.org/ig/HL7/davinci-crd/) to addresses the below bulleted functionality with some DTR overlap. DTR differs mostly is with its' ability to run rules and auto fill forms and templates.  
+[CRD](http://build.fhir.org/ig/HL7/davinci-crd/) addresses the below (bulleted) items with some DTR overlap. DTR differs mostly is with its' ability to run rules and auto fill forms and templates.  
 
 * updated coverage information 
 * alternative preferred/first-line/lower-cost services/products 
