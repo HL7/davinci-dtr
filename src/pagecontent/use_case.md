@@ -33,7 +33,7 @@ The goal of this use case is to reduce user or provider burden and simplify proc
 
 This shows a high-level overview of CRD and DTR (DTR is the SMART on FHIR App)
 
-![Image](../images/CRD_DTR_Flow.png?raw=true)
+![Image](CRD_DTR_Flow.png)
 ### Oxygen Therapy Ordering Example
 This shows a high-level overview of CRD and DTR (DTR is the SMART on FHIR App)
 
@@ -43,7 +43,7 @@ This shows a high-level overview of CRD and DTR (DTR is the SMART on FHIR App)
 4. The engine then extracts the answers in order to formulate a FHIR Questionnaire response
 5. It then writes the FHIR Questionnaire response back to Payer server and optionally to       the EHR in a text format.    
 
-![Image](../images/Process_Flow_Detail.png?raw=true)
+![Image](Process_Flow_Detail.png)
 
 
 
