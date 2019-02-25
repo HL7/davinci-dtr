@@ -46,3 +46,6 @@ Client systems conformant to this implementation guide SHALL also serve as a SMA
 
 ### SDC
 Clinical systems will use the specification and workflows defined by [SDC](http://hl7.org/fhir/us/sdc/) to initiate Document Template and Rule functionality with the payers. Implementers should be familiar with this specification.
+
+### CQL
+Clinical systems will use the specification and workflows defined by [CQL](https://cql.hl7.org/STU2/) to initiate Document Template and Rule functionality with the payers. Implementers should be familiar with this specification.
