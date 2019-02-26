@@ -32,6 +32,6 @@ The SMART on FHIR App Launch Framework IG and FHIR specification provide methods
 As an example, the DTR application may retrieve a Practitioner resource by retrieving the URL supplied in the `fhirUser` claim. The DTR application may then query the CareTeam or PractitionerRole resources to determine their relationship to other staff in the provider organization and determine if their usage sessions should also be made available.
 
 ### Session Expiration
-While a user may need to suspend interaction with the DTR application, there may be a limit on the amount of time that a set of documentation templates and rules is valid. It is unreasonable to resume the DTR application for an order that was proposed five years in the past.
+While a user may need to suspend interaction with the DTR application, there may be a limit on the amount of time that a set of documentation templates and rules is valid. For example, it is unreasonable to resume the DTR application for an order that was started five years in the past.
 
 Payers SHOULD use the `Questionnaire.effectivePeriod` element to describe the period over which the documentation templates and rules are valid. The DTR application SHALL NOT allow completion of a usage session if the current time has exceeded the end of the `effectivePeriod`.
