@@ -36,8 +36,13 @@ This table SHALL be followed with the following text:
 All other necessary information was discovered in the patient's records or attested to be present.
 ```
 
-The DTR application SHALL create a DocumentReference resource with this information that conforms to the US Core DocumentReference profile. The generated markdown SHALL be recorded in `DocumentReference.content.attachment.data`.
+The DTR application SHALL create a DocumentReference resource with this information that conforms to the US Core DocumentReference profile. The generated markdown SHALL be recorded in `DocumentReference.content.attachment.data`. `DocumentReference.content.attachment.contentType` SHALL be `text/markdown`.
 
-#### Interaction with EHR API
+#### Interaction with EHR
+EHR systems that conform to US Core STU3 allow for the creation of DocumentationReference resources through a FHIR API. As such, the DTR application should use the typical [FHIR create](http://hl7.org/fhir/R4/http.html#create) interaction to write the documentation into the EHR.
+
 ### QuestionnaireResponse
+The DTR application creates a QuestionnaireResponse resource through the course of normal operation. This resource may be persisted in the EHR system of the healthcare provider if it is supported. It may also be transmitted to the Payer IT system.
+
 #### Interaction with Payer API
+The Payer IT system should support the FHIR create interaction to allow the DTR application to send the QuestionnaireResponse resource to the payer. The FHIR endpoint for the payer may require authention. If it is required, it SHALL follow the procedures described in Section 4.4.1.1 - Authentication of SMART on FHIR application to payer API.
