@@ -20,4 +20,4 @@ EHR systems that conform to US Core STU3 allow for the creation of Documentation
 The DTR application creates a QuestionnaireResponse resource through the course of normal operation. This resource may be persisted in the EHR system of the healthcare provider if it is supported. It may also be transmitted to the Payer IT system.
 
 #### Interaction with Payer API
-The Payer IT system should support the FHIR create interaction to allow the DTR application to send the QuestionnaireResponse resource to the payer. The FHIR endpoint for the payer may require authention. If it is required, it SHALL follow the procedures described in Section 4.4.1.1 - Authentication of SMART on FHIR application to payer API.
+The Payer IT system should support the FHIR create interaction to allow the DTR application to send the QuestionnaireResponse resource to the payer. The FHIR endpoint for the payer may require authentication. If it is required, it SHALL follow the procedures described in Section 4.4.1.1 - Authentication of SMART on FHIR application to payer API.
