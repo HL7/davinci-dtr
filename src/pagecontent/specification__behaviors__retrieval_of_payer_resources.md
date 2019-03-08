@@ -1,4 +1,4 @@
-The DTR application will need to retrieve resources from a payer IT system to operate properly. This application will need to obtain a FHIR Questionnaire and associated CQL rules in order to execute. The information needed to obtain the needed resources will be provided as escaped JSON in the `appContext` property. That object will have the following properties:
+The DTR application will need to retrieve resources from a payer IT system to operate properly. This application will need to obtain a FHIR Questionnaire and associated CQL rules in order to execute. The information needed to obtain the needed resources will be provided as escaped JSON in the `appContext` property, which is supplied in the CDS Hooks Card Link object as describes in Section 4.2.1. That object will have the following properties:
 
 | Field | Optionality | Type | Description |
 | ----- | ----------- | ---- | ----------- |
@@ -6,7 +6,7 @@ The DTR application will need to retrieve resources from a payer IT system to op
 | template | REQUIRED | *string* | The URL of the Questionnaire for the DTR application to use for execution. |
 
 ### Authentication of SMART on FHIR application to payer API
-Payers may require the DTR application to authenticate in order to retrieve resources. In the case that authentication is required, . This JSON is based on the structure for [FHIR Authorization in CDS Hooks](https://cds-hooks.hl7.org/ballots/2018May/specification/1.0/#fhir-resource-access).
+Payers may require the DTR application to authenticate in order to retrieve resources. In the case that authentication is required, the following JSON structure SHALL be populated by the payer system. This JSON is based on the structure for [FHIR Authorization in CDS Hooks](https://cds-hooks.hl7.org/ballots/2018May/specification/1.0/#fhir-resource-access).
 
 | Field | Optionality | Type | Description |
 | ----- | ----------- | ---- | ----------- |
