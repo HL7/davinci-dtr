@@ -2,8 +2,8 @@ While the goal of DTR is to gather all of the necessary information to satisfy p
 
 ### Questionnaire Rendering
 The DTR application will need to collect information from the user for `item`s in the Questionnaire where the following conditions are met:
-* The `cqf-expression` for the `item` evaluates to `null`
-* If the `item` has an `enableWhen` property, the conditions for the statements: `operator` and `answer[x]` evaluate to `true`.
+* The `cqf-expression` (FHIR R4) or `cqif-calculatedValue` (FHIR STU3) for the `item` evaluates to `null`
+* If the `item` has an `enableWhen` property, the conditions for the statements: `operator` (FHIR R4) or `question` (FHIR STU3) and `answer[x]` evaluate to `true`.
 
 Payers should note that the ordering of `item` elements in a Questionnaire resource is considered to be relevant by the FHIR specification. The DTR application SHALL prompt users for `item`s in the order that they appear in the Questionnaire resource. Payers should also take note of the order of `item`s when making use of the `enableWhen` property. An `item` may only use `enableWhen` if it can obtain an answer from a previous question.
 
@@ -13,7 +13,7 @@ When `item`s meet the conditions stated above, they SHALL be presented to the us
 Payers may have requirements on how questions are presented to users. To allow for this, payers MAY supply Questionnaire resources that conform to the [Advanced Rendering Questionnaire Profile](http://build.fhir.org/ig/HL7/sdc/sdc-questionnaire-render.html) as definded in Structure Data Capture. The DTR application SHALL use the `rendering-style` and `rendering-xhtml` properties provided if the `rendering-styleSensitive` extension property is `true`. If the `rendering-styleSensitive` extension property is not present or `false` the DTR application SHOULD use `rendering-style` and `rendering-xhtml` properties.
 
 #### Rendering Questionnaire items without specified styles
-Payers are not required to provide Questionnaires that conform to the Advanced Rendering Questionnaire Profile. When a Questionnaire is provided that does not conform to this profile, it is at the discretion of the DTR application to chose a reasonable presentation of the questions that require user input. The DTR application SHALL use the appropriate input mechanism depending on the `item.type`. Additionally, the DTR application SHALL support `item.answerValueSet`, `item.answerOption` and `item.initial` if provided.
+Payers are not required to provide Questionnaires that conform to the Advanced Rendering Questionnaire Profile. When a Questionnaire is provided that does not conform to this profile, it is at the discretion of the DTR application to chose a reasonable presentation of the questions that require user input. The DTR application SHALL use the appropriate input mechanism depending on the `item.type`. Additionally, when working with a FHIR R4 Questionnaire, the DTR application SHALL support `item.answerValueSet` , `item.answerOption` and `item.initial` if provided. When working with a FHIR STU3 Questionnaire, the DTR application SHALL support `item.options` , `item.option` and `item.initial[x]` if provided.
 
 #### Rendering multiple items
 This implementation guide does not place any requirements on the DTR application to display multiple `Questionnaire.item`s to a user at a time or only a single `item`.
@@ -38,7 +38,7 @@ When a user provides an attestation, the DTR application SHALL record that in th
 **TODO**
 
 ### Recording Responses
-The DTR application SHALL take input from the user and record the provided information. As with provider attestation, the DTR application SHALL record that in the corresponding QuestionnaireResponse.item. In this case, the DTR application SHALL create an `answer` property on the `item`. The `answer` SHALL have an appropriate `value[x]` depending on the corresponding `type` in the `Questionnaire.item`. Again, similar to attestations, the `item` will have an `author` extension property which will reference the `fhirUser` provided to the DTR application.
+The DTR application SHALL take input from the user and record the provided information. As with provider attestation, the DTR application SHALL record that in the corresponding QuestionnaireResponse.item. In this case, the DTR application SHALL create an `answer` property on the `item`. The `answer` SHALL have an appropriate `value[x]` depending on the corresponding `type` in the `Questionnaire.item`. Again, similar to attestations, the `item` will have an `author` extension property which will reference the `fhirUser` provided to the DTR application. These procedures apply to QuestionnaireResponses in both FHIR R4 and FHIR STU3.
 
 #### QuestionnaireResponse
 The DTR application SHALL create a QuestionnaireResponse resource based on all of the information collected. Given the following JSON fragment representing a `Questionnaire.item`:
