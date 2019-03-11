@@ -8,7 +8,15 @@
 <p>Profiles to be supported by EHRs and payor systems conforming to this implementation guide</p>
 <p>
 <table>
-<tbody/>
+<tbody>
+<tr>
+<td style="column-width:30%">
+<a href="dtr-questionnaire-r4.html">
+                        •  DTR Questionnaire - R4</a>
+</td>
+<td>The Questionnaire resource is used to represent the information needs that a payer has to satisfy their documentation requirements and/or rules</td>
+</tr>
+</tbody>
 </table>
 </p>
 <a name="2"> </a>

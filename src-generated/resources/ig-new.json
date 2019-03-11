@@ -3,27 +3,27 @@
   "id" : "davinci-dtr",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/cspringatecombs/projects/dme/davinci-dtr/src-generated/resources"
+    "valueString" : "/Users/andrewg/projects/davinci-dtr/src-generated/resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/cspringatecombs/projects/dme/davinci-dtr/src/resources"
+    "valueString" : "/Users/andrewg/projects/davinci-dtr/src/resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/cspringatecombs/projects/dme/davinci-dtr/src/vocabulary"
+    "valueString" : "/Users/andrewg/projects/davinci-dtr/src/vocabulary"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/cspringatecombs/projects/dme/davinci-dtr/src/examples"
+    "valueString" : "/Users/andrewg/projects/davinci-dtr/src/examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/cspringatecombs/projects/dme/davinci-dtr/src/images"
+    "valueString" : "/Users/andrewg/projects/davinci-dtr/src/images"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/cspringatecombs/projects/dme/davinci-dtr/src-generated/pages"
+    "valueString" : "/Users/andrewg/projects/davinci-dtr/src-generated/pages"
   }],
   "url" : "http://hl7.org/fhir/us/davinci-dtr/ImplementationGuide/davinci-dtr",
   "version" : "0.1.0",
@@ -63,6 +63,15 @@
       "id" : "terminology",
       "name" : "Terminology",
       "description" : "Value Sets and/or code systems defined as part of this implementation guide"
+    }],
+    "resource" : [{
+      "reference" : {
+        "reference" : "StructureDefinition/dtr-questionnaire-r4"
+      },
+      "name" : "DTR Questionnaire - R4",
+      "description" : "The Questionnaire resource is used to represent the information needs that a payer has to satisfy their documentation requirements and/or rules",
+      "exampleBoolean" : false,
+      "groupingId" : "profiles"
     }],
     "page" : {
       "nameUrl" : "toc.html",

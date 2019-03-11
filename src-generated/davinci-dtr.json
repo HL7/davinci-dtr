@@ -90,5 +90,7 @@
   "spreadsheets": [
   ],
   "resources": {
+    "StructureDefinition/dtr-questionnaire-r4":{
+    }
   }
 }
