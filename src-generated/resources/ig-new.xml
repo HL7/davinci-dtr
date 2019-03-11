@@ -64,6 +64,15 @@
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/dtr-questionnaireresponse-r4"/>
+      </reference>
+      <name value="DTR QuestionnaireResponse - R4"/>
+      <description value="The QuestionnaireResponse resource is used to represent the information supplied by the provider"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
     <page>
       <nameUrl value="toc.html"/>
       <title value="Table of Contents"/>

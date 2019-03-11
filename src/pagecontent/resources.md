@@ -23,7 +23,7 @@ DTR conformant SMART on FHIR applications SHALL support both the CQF-Questionnai
 ### DTR QuestionnaireResponse
 The QuestionnaireResponse resource is used to represent a response to the Questionnaire presented by the payer. This profile uses the [author extension](http://www.hl7.org/implement/standards/fhir/extension-questionnaireresponse-author.html) when items are based on information input into the DTR application by the user.
 
-**TODO** - Generate the actual structure definitions
+[DTR QuestionnaireResponse FHIR R4](dtr-questionnaireresponse-r4.html)
 
 | element | cardinality | description |
 | ------- | ----------- | ----------- |
@@ -34,5 +34,3 @@ The QuestionnaireResponse resource is used to represent a response to the Questi
 | item | 1..* | There must be at least one item |
 | item.questionnaireresponse-author | 0..* | SHALL be populated if the response is based on user input |
 
-### Profile of Task
-TBD
