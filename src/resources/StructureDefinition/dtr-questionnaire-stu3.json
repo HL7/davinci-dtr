@@ -1,0 +1,49 @@
+{
+	"resourceType": "StructureDefinition",
+	"id": "dtr-questionnaire-stu3",
+	"meta": {
+		"versionId": "7",
+		"lastUpdated": "2019-03-08T12:01:59.000-05:00"
+	},
+	"url": "http://build.fhir.org/ig/HL7/davinci-dtr/resources.html#dtr-questionnaire",
+	"name": "DTR Questionnaire",
+	"status": "draft",
+	"fhirVersion": "3.0.1",
+	"kind": "resource",
+	"abstract": false,
+	"type": "Questionnaire",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/Questionnaire",
+	"derivation": "constraint",
+	"differential": {
+		"element": [
+			{
+				"id": "Questionnaire",
+				"path": "Questionnaire"
+			},
+			{
+				"id": "Questionnaire.status",
+				"path": "Questionnaire.status",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Questionnaire.experimental",
+				"path": "Questionnaire.experimental",
+				"min": 0,
+				"max": "0"
+			},
+			{
+				"id": "Questionnaire.date",
+				"path": "Questionnaire.date",
+				"min": 1,
+				"max": "1"
+			},
+			{
+				"id": "Questionnaire.contact",
+				"path": "Questionnaire.contact",
+				"min": 1,
+				"max": "*"
+			}
+		]
+	}
+}

@@ -6,7 +6,7 @@ Payers MAY also supply Questionnaire resources that conform to the [SDC Advanced
 
 DTR conformant SMART on FHIR applications SHALL support both the CQF-Questionnaire and SDC Advanced Rendering Profiles.
 
-**TODO** - Generate the actual structure definitions
+[DTR Questionnaire FHIR STU3](dtr-questionnaire-stu3.html)
 
 | element | cardinality | description |
 | ------- | ----------- | ----------- |
