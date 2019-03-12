@@ -66,6 +66,12 @@
         ]
 			},
 			{
+				"id": "Questionnaire.item",
+				"path": "Questionnaire.item",
+				"min": 1,
+				"max": "*"
+			},
+			{
 				"id": "Questionnaire.item.cqf-expression",
 				"path": "Questionnaire.item.extension",
 				"min": 1,

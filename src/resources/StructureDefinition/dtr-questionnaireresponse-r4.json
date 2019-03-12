@@ -1,6 +1,10 @@
 {
   "resourceType": "StructureDefinition",
   "id": "dtr-questionnaireresponse-r4",
+  "text": {
+		"status": "additional",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>The QuestionnaireResponse resource is used to represent the information supplied by the provider.</p></div>"
+	},
   "meta": {
     "versionId": "10",
     "lastUpdated": "2019-03-11T14:10:05.000-04:00"
@@ -28,6 +32,12 @@
         "max": "0"
       },
       {
+        "id": "QuestionnaireResponse.partOf",
+        "path": "QuestionnaireResponse.partOf",
+        "min": 0,
+        "max": "0"
+      },
+      {
         "id": "QuestionnaireResponse.questionnaire",
         "path": "QuestionnaireResponse.questionnaire",
         "min": 1,
@@ -45,16 +55,14 @@
         "min": 1
       },
       {
-        "id": "QuestionnaireResponse.item.extension",
+        "id": "QuestionnaireResponse.item.author",
         "path": "QuestionnaireResponse.item.extension",
-        "fixedUri": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-author"
-      },
-      {
-        "id": "QuestionnaireResponse.extension",
-        "path": "QuestionnaireResponse.extension",
-        "slicing": {
-          "rules": "open"
-        }
+        "type" : [
+          {
+            "code" : "Extension",
+						"profile" : "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-author"
+					}
+        ]
       }
     ]
   }
