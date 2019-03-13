@@ -60,7 +60,7 @@
         "type" : [
           {
             "code" : "Extension",
-						"profile" : "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-author"
+						"profile" : ["http://hl7.org/fhir/StructureDefinition/questionnaireresponse-author"]
 					}
         ]
       }

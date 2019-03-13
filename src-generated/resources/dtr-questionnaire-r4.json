@@ -61,7 +61,7 @@
         "type" : [
           {
             "code" : "Extension",
-						"profile" : "http://hl7.org/fhir/StructureDefinition/cqf-library"
+						"profile" : ["http://hl7.org/fhir/StructureDefinition/cqf-library"]
 					}
         ]
 			},
@@ -84,7 +84,7 @@
         "type" : [
           {
             "code" : "Extension",
-						"profile" : "http://hl7.org/fhir/StructureDefinition/cqf-expression"
+						"profile" : ["http://hl7.org/fhir/StructureDefinition/cqf-expression"]
 					}
         ]
 			}
