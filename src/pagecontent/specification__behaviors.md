@@ -7,4 +7,3 @@
 * [Task Creation](specification__behaviors__task_creation.html)
 * [Launch outside of CRD](specification__behaviors__launch_outside_of_CRD.html)
 * [Privacy, Safety and Security](specification__behaviors__privacy_safety_and_security.html)
-* [Additional Considerations](specification__behaviors__additional_considerations.html)
