@@ -16,7 +16,7 @@
 	"kind": "resource",
 	"abstract": false,
 	"type": "Questionnaire",
-	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/cqf-questionnaire",
+	"baseDefinition": "http://hl7.org/fhir/StructureDefinition/cqif-questionnaire",
 	"derivation": "constraint",
 	"differential": {
 		"element": [
