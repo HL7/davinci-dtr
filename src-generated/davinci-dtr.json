@@ -92,6 +92,8 @@
   "resources": {
     "StructureDefinition/dtr-questionnaire-r4":{
     },
+    "StructureDefinition/dtr-questionnaire-stu3":{
+    },
     "StructureDefinition/dtr-questionnaireresponse-r4":{
     }
   }

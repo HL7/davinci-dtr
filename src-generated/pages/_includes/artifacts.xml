@@ -18,6 +18,13 @@
 </tr>
 <tr>
 <td style="column-width:30%">
+<a href="dtr-questionnaire-stu3.html">
+                        •  DTR Questionnaire - STU3</a>
+</td>
+<td>The Questionnaire resource is used to represent the information needs that a payer has to satisfy their documentation requirements and/or rules</td>
+</tr>
+<tr>
+<td style="column-width:30%">
 <a href="dtr-questionnaireresponse-r4.html">
                         •  DTR QuestionnaireResponse - R4</a>
 </td>

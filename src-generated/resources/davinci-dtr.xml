@@ -15,6 +15,7 @@
   </jurisdiction>
   <packageId value="hl7.fhir.us.davinci.dtr"/>
   <fhirVersion value="4.0.0"/>
+  <fhirVersion value="3.0.1"/>
   <definition>
     <!-- Note: Order matters -->
     <grouping id="profiles">
@@ -43,6 +44,16 @@
         <reference value="StructureDefinition/dtr-questionnaire-r4"/>
       </reference>
       <name value="DTR Questionnaire - R4"/>
+      <description value="The Questionnaire resource is used to represent the information needs that a payer has to satisfy their documentation requirements and/or rules"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/dtr-questionnaire-stu3"/>
+      </reference>
+      <fhirVersion value="3.0.1"/>
+      <name value="DTR Questionnaire - STU3"/>
       <description value="The Questionnaire resource is used to represent the information needs that a payer has to satisfy their documentation requirements and/or rules"/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>

@@ -42,6 +42,7 @@
   "packageId" : "hl7.fhir.us.davinci.dtr",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.0",
+  "3.0.1",
   "4.0.0"],
   "definition" : {
     "grouping" : [{
@@ -69,6 +70,16 @@
         "reference" : "StructureDefinition/dtr-questionnaire-r4"
       },
       "name" : "DTR Questionnaire - R4",
+      "description" : "The Questionnaire resource is used to represent the information needs that a payer has to satisfy their documentation requirements and/or rules",
+      "exampleBoolean" : false,
+      "groupingId" : "profiles"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/dtr-questionnaire-stu3"
+      },
+      "fhirVersion" : ["3.0.1"],
+      "name" : "DTR Questionnaire - STU3",
       "description" : "The Questionnaire resource is used to represent the information needs that a payer has to satisfy their documentation requirements and/or rules",
       "exampleBoolean" : false,
       "groupingId" : "profiles"
