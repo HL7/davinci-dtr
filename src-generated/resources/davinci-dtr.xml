@@ -58,6 +58,7 @@
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
+    
     <page>
       <nameUrl value="toc.html"/>
       <title value="Table of Contents"/>

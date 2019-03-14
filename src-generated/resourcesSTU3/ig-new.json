@@ -55,6 +55,14 @@
       "name" : "DTR Questionnaire - STU3",
       "description" : "The Questionnaire resource is used to represent the information needs that a payer has to satisfy their documentation requirements and/or rules",
       "groupingId" : "profiles"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/dtr-questionnaireresponse-stu3"
+      },
+      "name" : "DTR QuestionnaireResponse - STU3",
+      "description" : "The QuestionnaireResponse resource is used to represent the information supplied by the provider",
+      "groupingId" : "profiles"
     }],
     "parameter" : [{
       "code" : "apply",

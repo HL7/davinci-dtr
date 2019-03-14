@@ -26,5 +26,12 @@
         <reference value="StructureDefinition/dtr-questionnaire-stu3"/>
       </sourceReference>
 </resource>
+<resource>
+<name value="DTR QuestionnaireResponse - STU3"/>
+<description value="The QuestionnaireResponse resource is used to represent the information supplied by the provider"/>
+<sourceReference>
+        <reference value="StructureDefinition/dtr-questionnaireresponse-stu3"/>
+      </sourceReference>
+</resource>
 </package>
 </ImplementationGuide>

@@ -72,6 +72,19 @@
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/tools-alternateVersion">
+        <valueCode value="STU3"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dtr-questionnaireresponse-stu3"/>
+      </reference>
+      <fhirVersion value="3.0.1"/>
+      <name value="DTR QuestionnaireResponse - STU3"/>
+      <description value="The QuestionnaireResponse resource is used to represent the information supplied by the provider"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
     <page>
       <nameUrl value="toc.html"/>
       <title value="Table of Contents"/>

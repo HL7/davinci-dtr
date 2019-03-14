@@ -6,12 +6,13 @@ Payers MAY also supply Questionnaire resources that conform to the [SDC Advanced
 
 DTR conformant SMART on FHIR applications SHALL support both the CQF-Questionnaire and SDC Advanced Rendering Profiles.
 
-[DTR Questionnaire FHIR R4](dtr-questionnaire-r4.html)
-[DTR Questionnaire FHIR STU3](STU3/dtr-questionnaire-stu3.html)
+* [DTR Questionnaire FHIR R4](dtr-questionnaire-r4.html)
+* [DTR Questionnaire FHIR STU3](STU3/dtr-questionnaire-stu3.html)
 
 ### DTR QuestionnaireResponse
 The QuestionnaireResponse resource is used to represent a response to the Questionnaire presented by the payer. This profile uses the [author extension](http://www.hl7.org/implement/standards/fhir/extension-questionnaireresponse-author.html) when items are based on information input into the DTR application by the user.
 
-[DTR QuestionnaireResponse FHIR R4](dtr-questionnaireresponse-r4.html)
+* [DTR QuestionnaireResponse FHIR R4](dtr-questionnaireresponse-r4.html)
+* [DTR QuestionnaireResponse FHIR STU3](STU3/dtr-questionnaireresponse-stu3.html)
 
 
