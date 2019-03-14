@@ -13,5 +13,5 @@ The implementation guide is organized into the following sections:
 
 ### Downloads
 * The full [DTR Implementation Guide](full-ig.zip)
-* [DTR Resource Definitions](definitions.json.zip)
-* [DTR IG Validator Pack](validator-davinci-dtr.pack)
+* [FHIR R4 DTR Resource Definitions](definitions.json.zip) and [FHIR STU3 DTR Resource Definitions](STU3/definitions.json.zip)
+* [FHIR R4 DTR IG Validator Pack](validator-davinci-dtr.pack) and [FHIR STU3 DTR IG Validator Pack](STU3/validator-davinci-dtr.pack)

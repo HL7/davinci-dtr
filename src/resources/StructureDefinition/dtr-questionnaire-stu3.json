@@ -9,7 +9,7 @@
 		"versionId": "7",
 		"lastUpdated": "2019-03-08T12:01:59.000-05:00"
 	},
-	"url": "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaire-stu3",
+	"url": "http://hl7.org/fhir/us/davinci-dtr/STU3/StructureDefinition/dtr-questionnaire-stu3",
 	"name": "DTRQuestionnaireSTU3",
 	"status": "draft",
 	"fhirVersion": "3.0.1",
@@ -61,7 +61,7 @@
         "type" : [
           {
             "code" : "Extension",
-						"profile" : ["http://hl7.org/fhir/StructureDefinition/cqif-library"]
+						"profile" : "http://hl7.org/fhir/StructureDefinition/cqif-library"
 					}
         ]
 			},
@@ -72,7 +72,7 @@
 				"max": "*"
 			},
 			{
-				"id": "Questionnaire.item.cqif-expression",
+				"id": "Questionnaire.item.cqif-calculatedValue",
 				"path": "Questionnaire.item.extension",
 				"min": 1,
 				"max": "1",
@@ -84,7 +84,7 @@
         "type" : [
           {
             "code" : "Extension",
-						"profile" : ["http://hl7.org/fhir/StructureDefinition/cqf-expression"]
+						"profile" : "http://hl7.org/fhir/StructureDefinition/cqif-calculatedValue"
 					}
         ]
 			}

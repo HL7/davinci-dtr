@@ -28,7 +28,7 @@ Implementers should also familiarize themselves with the FHIR resources used wit
 
 | STU3 | R4 |
 | ---- | -- |
-| [Questionnaire](http://hl7.org/fhir/STU3/questionnaire.html) | [Questionnaire](http://hl7.org/fhir/R4questionnaire.html) |
+| [Questionnaire](http://hl7.org/fhir/STU3/questionnaire.html) | [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html) |
 | [QuestionnaireResponse](http://hl7.org/fhir/STU3/questionnaireresponse.html) |[QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) |
 | [Task](http://hl7.org/fhir/STU3/task.html) | [Task](http://hl7.org/fhir/R4/task.html) |
 
