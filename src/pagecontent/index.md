@@ -11,3 +11,7 @@ The implementation guide is organized into the following sections:
 * [Resources](resources.html) Introduces and provides links to the FHIR profiles.
 * [Credits](credits.html) Identifies the individuals and organizations involved in developing this implementation guide.
 
+### Downloads
+* The full [DTR Implementation Guide](full-ig.zip)
+* [DTR Resource Definitions](definitions.json.zip)
+* [DTR IG Validator Pack](validator-davinci-dtr.pack)
