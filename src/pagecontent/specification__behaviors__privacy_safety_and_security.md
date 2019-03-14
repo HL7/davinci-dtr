@@ -4,6 +4,15 @@ Guidance and conformance expectations around privacy and security are provided b
 * CDS Hooks: [Security & Safety](https://cds-hooks.hl7.org/specification/1.0/#security-and-safety)
 * SMART on FHIR: [SMART App Launch](http://www.hl7.org/fhir/smart-app-launch)
 
-In addition to these, this implementation guide imposes the following additional rules:
+It should be noted that there are multiple actors with potential access to patient information. The implementation and deployment of these actors will have an impact on if and when patient information is transmitted from a provider organization to a payer organization.
 
-* EHR systems are the final arbiters of what data can be shared with payer systems.  They MAY filter or withhold any resources or data elements necessary to support their obligations as health data custodians, including legal, policy and patient consent-based restrictions.  However, client systems withholding information take on the responsibility of ensuring coverage requirements are met, even if discovery is no longer possible through the interfaces provided by this implementation guide.
+Some SMART on FHIR applications are browser based, such as those conforming to the [public app profile](http://hl7.org/fhir/smart-app-launch/#use-the-public-app-profile-if-your-app-is-unable-to-protect-a-client_secret). In this scenario, patient information is communicated from the EHR system to the DTR application through the EHR's FHIR endpoint. In this case, unless the DTR application takes explict actions to send the information back to the payer organization, it will reside only in the provider organization.
+
+Other SMART on FHIR applications are server based, such as those conforming to the [confidential app profile](http://hl7.org/fhir/smart-app-launch/#use-the-confidential-app--profile-if-your-app-is-able-to-protect-a-client_secret). In this case, patient data will be requested by the server hosting the DTR application. This may be external to the provider organization.
+
+> Note to ballot comments
+>
+> This is an area the project is explicitly seeking comments on. Thoughts on the whether
+> EHR systems should be required to support specific SMART on FHIR application profiles
+> or comments on restrictions that should be applied to what payer organizations may do
+> with any received patient information are welcome.
