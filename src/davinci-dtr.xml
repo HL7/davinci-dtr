@@ -51,6 +51,9 @@
       <groupingId value="profiles"/>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/tools-alternateVersion">
+        <valueCode value="STU3"/>
+      </extension>
       <reference>
         <reference value="StructureDefinition/dtr-questionnaire-stu3"/>
       </reference>

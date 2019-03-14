@@ -4,7 +4,7 @@
   "excludexml":"Yes",
   "excludejson":"No",
   "excludettl":"Yes",
-  "assets":"",
-  "child":"STU3/",
-  "headingOffset":""
+  "assets":"../",
+  "child":"",
+  "headingOffset":"2.2."
 }

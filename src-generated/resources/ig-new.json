@@ -76,16 +76,6 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/dtr-questionnaire-stu3"
-      },
-      "fhirVersion" : ["3.0.1"],
-      "name" : "DTR Questionnaire - STU3",
-      "description" : "The Questionnaire resource is used to represent the information needs that a payer has to satisfy their documentation requirements and/or rules",
-      "exampleBoolean" : false,
-      "groupingId" : "profiles"
-    },
-    {
-      "reference" : {
         "reference" : "StructureDefinition/dtr-questionnaireresponse-r4"
       },
       "name" : "DTR QuestionnaireResponse - R4",
