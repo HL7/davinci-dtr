@@ -55,7 +55,7 @@ body {
   background-color: #f5f5f5;
 }
 #segment-header > .container {
-  background-color: #e6e6e6;
+  background-color: #ffffff;
 }
 #segment-footer {
   background-color: #707070;
@@ -129,6 +129,8 @@ body {
   float: left;
   margin-top: 16px;
   color: maroon;
+  text-align: center;
+  width: 60%;
 }
 #hl7-search {
   line-height: 50px;

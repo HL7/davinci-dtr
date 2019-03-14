@@ -17,6 +17,7 @@
   </jurisdiction>
   <packageId value="hl7.fhir.us.davinci.dtr"/>
   <fhirVersion value="4.0.0"/>
+  <fhirVersion value="3.0.1"/>
   <definition>
     <!-- Note: Order matters -->
     <grouping id="profiles">
@@ -50,10 +51,36 @@
       <groupingId value="profiles"/>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/tools-alternateVersion">
+        <valueCode value="STU3"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dtr-questionnaire-stu3"/>
+      </reference>
+      <fhirVersion value="3.0.1"/>
+      <name value="DTR Questionnaire - STU3"/>
+      <description value="The Questionnaire resource is used to represent the information needs that a payer has to satisfy their documentation requirements and/or rules"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
       <reference>
         <reference value="StructureDefinition/dtr-questionnaireresponse-r4"/>
       </reference>
       <name value="DTR QuestionnaireResponse - R4"/>
+      <description value="The QuestionnaireResponse resource is used to represent the information supplied by the provider"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/tools-alternateVersion">
+        <valueCode value="STU3"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dtr-questionnaireresponse-stu3"/>
+      </reference>
+      <fhirVersion value="3.0.1"/>
+      <name value="DTR QuestionnaireResponse - STU3"/>
       <description value="The QuestionnaireResponse resource is used to represent the information supplied by the provider"/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>

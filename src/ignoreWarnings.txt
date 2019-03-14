@@ -1,2 +1,40 @@
-// This will go away as soon as the IG points to a specific ballot release
-The link 'http://build.fhir.org/fhir-spec.zip' for "R4" cannot be resolved
+// All of these links resolve
+The link 'http://hl7.org/fhir/' for "(4.0.0" cannot be resolved
+The link 'http://hl7.org/fhir/us/davinci-crd/history.html' for "Version History" cannot be resolved
+The link 'http://hl7.org/fhir/R4/clinicalreasoning-module.html' for "Clinical Reasoning Module" cannot be resolved
+The link 'http://hl7.org/fhir/R4/clinicalreasoning-knowledge-artifact-representation.html#documentation-template' for "Documentation Template" cannot be resolved
+The link 'http://hl7.org/fhir/R4/cqf-questionnaire.html' for "CQF-Questionnaire Profile" cannot be resolved
+The link 'http://hl7.org/fhir/R4/clinicalreasoning-module.html' for "FHIR Clinical Reasoning Module" cannot be resolved
+The link 'http://hl7.org/fhir/us/core/STU2/' for "US Core Implementation Guide STU2" cannot be resolved
+The link 'http://hl7.org/fhir/us/core/2019Jan/' for "US Core Implementation Guide STU3" cannot be resolved
+The link 'http://hl7.org/fhir/us/sdc/index.html' for "Structured Data Capture Implementation Guide" cannot be resolved
+The link 'http://hl7.org/fhir/R4/cqf.html' for "CQF Questionnaire Profile" cannot be resolved
+The link 'http://hl7.org/fhir/us/core/2019Jan/' for "US-Core" cannot be resolved
+The link 'http://hl7.org/fhir/us/core/2019Jan/' for "FHIR R4 US Core" cannot be resolved
+The link 'http://hl7.org/fhir/us/core/1.0.1' for "FHIR STU3 US Core (1.0.1)" cannot be resolved
+The link 'http://hl7.org/fhir/R4/questionnaireresponse.html' for "QuestionnaireResponse" cannot be resolved
+The link 'http://hl7.org/fhir/R4/task.html' for "Task" cannot be resolved
+The link 'http://hl7.org/fhir/smart-app-launch' for "SMART on FHIR" cannot be resolved
+The link 'http://hl7.org/fhir/us/sdc/' for "SDC" cannot be resolved
+The link 'http://hl7.org/fhir/STU3/cqif/resource.html#versions' for "Technical and Business Versions" cannot be resolved
+The link 'http://hl7.org/fhir/STU3/cqif/questionnaireresponse.html#' for "QuestionnaireResponse" cannot be resolved
+The link 'http://hl7.org/fhir/R4/questionnaire.html' for "Questionnaire" cannot be resolved
+The link 'http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context/index.html#scopes-for-requesting-identity-data' for "scopes for requesting identity data" cannot be resolved
+The link 'http://hl7.org/fhir/smart-app-launch/#ehr-launch-sequence' for "EHR launch sequence" cannot be resolved
+The link 'http://hl7.org/fhir/smart-app-launch/#step-3-app-exchanges-authorization-code-for-access-token' for "Step 3 of the launch sequence" cannot be resolved
+The link 'http://hl7.org/fhir/smart%2Dapp%2Dlaunch/#standalone-launch-sequence' for "Standalone launch sequence" cannot be resolved
+The link 'http://hl7.org/fhir/R4/http.html#create' for "FHIR create" cannot be resolved
+The link 'http://hl7.org/fhir/smart-app-launch' for "SMART Application Launch Framework Implementation Guide Release 1.0.0" cannot be resolved
+The link 'http://hl7.org/fhir/smart-app-launch/#ehr-launch-sequence' for "EHR launch sequence" cannot be resolved
+The link 'http://hl7.org/fhir/smart-app-launch/#step-1-app-asks-for-authorization' for "Step 1 of the launch sequence" cannot be resolved
+The link 'http://hl7.org/fhir/smart-app-launch/#step-3-app-exchanges-authorization-code-for-access-token' for "Step 3 of the launch sequence" cannot be resolved
+The link 'http://hl7.org/fhir/smart-app-launch/#use-the-public-app-profile-if-your-app-is-unable-to-protect-a-client_secret' for "public app profile" cannot be resolved
+The link 'http://hl7.org/fhir/smart-app-launch/#use-the-confidential-app--profile-if-your-app-is-able-to-protect-a-client_secret' for "confidential app profile" cannot be resolved
+
+// These seem to be tooling issues when pulling in CQIF Questionnaire
+The link 'http://hl7.org/fhir/STU3/cqif/elementdefinition.html' for "ElementDefinition" cannot be resolved
+The link 'http://hl7.org/fhir/STU3/cqif/structuredefinition.html#' for "StructureDefinition" cannot be resolved
+The link 'http://hl7.org/fhir/STU3/cqif/dataelement.html#' for "DataElement" cannot be resolved
+The link 'http://hl7.org/fhir/STU3/cqif/element-definitions.html#Element.id' for "Element.id" cannot be resolved
+The link 'http://hl7.org/fhir/STU3/cqif/loinc.html#dataelements' for "LOINC codes" cannot be resolved
+The link 'http://hl7.org/fhir/STU3/cqif/loinc.html#alist' for "LOINC Answer Lists" cannot be resolved
