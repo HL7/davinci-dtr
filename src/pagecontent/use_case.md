@@ -13,21 +13,23 @@ A healthcare provider organization contains medical providers such as hospitals,
 The Electronic Health Record (EHR) system shall be the primary system used to initiate the DTR process. The SMART in FHIR app will typically be initiated from within the EHR.   
 
 #### DTR compliant SMART on FHIR app
-Within DTR the SMART on FHIR app is considered a key component because of the inherit nature of SMART on FHIR apps. Namely the ability call into backend systems such as payers using [CDS Hooks](https://cds-hooks.hl7.org) as well as the ability to run rules such as [CQL](https://cql.hl7.org/STU2/). This functionality will enable DTR to gather documents and templates as well as run rules in an effort to reduce the time involved in the Documentation Requirements Lookup Service (DRLS) process.
+Within DTR the SMART on FHIR app is considered a key component because of the inherent nature of SMART on FHIR apps, namely the ability call into backend systems such as payers using [CDS Hooks](https://cds-hooks.hl7.org) as well as the ability to run rules such as [CQL](https://cql.hl7.org/STU2/). This functionality will enable DTR to gather documents and templates as well as run rules to reduce the time involved in the Documentation Requirements Lookup Service (DRLS) process.
 
 #### Users (clinicians and office staff)
 Users or Providers are challenged to deal with the diversity of administrative and clinical requirements that impact documenting the need for treatment and selecting the appropriate best path for care. The current environment is made more complex by the large number of payer-based requirements that must be met to document that covered services and devices are medically necessary and appropriate.
 
-The goal of this use case is to reduce user or provider burden and simplify process by establishing electronic versions of administrative and clinical requirements that can become part of the providers daily workflow. 
+The goal of this use case is to reduce user or provider burden and simplify processes by establishing electronic versions of administrative and clinical requirements that can become part of the providers daily workflow. 
 
 ### Relation to CRD
-[CRD](http://build.fhir.org/ig/HL7/davinci-crd/) addresses the below (bulleted) items with some DTR overlap. DTR differs mostly is with its' ability to run rules and auto fill forms and templates.  
+[CRD](http://build.fhir.org/ig/HL7/davinci-crd/) addresses the bulleted items below with some DTR overlap:
 
 * updated coverage information 
 * alternative preferred/first-line/lower-cost services/products 
 * documents and rules related to coverage 
 * forms and templates 
 * indications of whether prior authorization is required
+
+DTR differs from CRD mostly in its ability to run rules and auto fill forms and templates.  
 
 ### Process Flow 
 

@@ -1,4 +1,4 @@
-The DTR application will need to retrieve resources from a payer IT system to operate properly. This application will need to obtain a FHIR Questionnaire and associated CQL rules in order to execute. The information needed to obtain the needed resources will be provided as escaped JSON in the `appContext` property, which is supplied in the CDS Hooks Card Link object as describes in Section 4.2.1. That object will have the following properties:
+The DTR application will need to retrieve resources from a payer IT system to operate properly. This application will need to obtain a FHIR Questionnaire and associated CQL rules in order to execute. The information needed to obtain the needed resources will be provided as escaped JSON in the `appContext` property of the CDS Hooks Card Link object, as described in Section 4.2.1. That object will have the following properties:
 
 | Field | Optionality | Type | Description |
 | ----- | ----------- | ---- | ----------- |
@@ -10,9 +10,9 @@ Payers may require the DTR application to authenticate in order to retrieve reso
 
 | Field | Optionality | Type | Description |
 | ----- | ----------- | ---- | ----------- |
-| access_token | REQUIRED | *string* | This is the OAuth 2 access token that provides access to the Payer FHIR server. |
+| access_token | REQUIRED | *string* | The OAuth 2 access token that provides access to the Payer FHIR server. |
 | token_type | REQUIRED | *string* | Fixed value: `Bearer`. |
-| expires_in | REQUIRED | *integer* | The lifetime in seconds of the access token. |
+| expires_in | REQUIRED | *integer* | The lifetime of the access token in seconds. |
 | scope | REQUIRED | *string* | Fixed value: `user/Questionnaire.read user/Library.read`. |
 | subject | REQUIRED | *string* | The OAuth 2.0 client identifier of the DTR application, as registered with the Payer's authorization server. |
 
