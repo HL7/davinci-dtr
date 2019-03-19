@@ -10,4 +10,4 @@ When DTR applications are launched in this manner, in [Step 3 of the launch sequ
 ### Standalone launch
 DTR applications SHALL support the [Standalone launch sequence](http://hl7.org/fhir/smart%2Dapp%2Dlaunch/#standalone-launch-sequence). In this case, the DTR application SHALL establish the user's identity following the procedures in Section 4.4.5.2.
 
-Once user identity has been established, the DTR application should allow the user to select a usage session form all of the sessions available to that particular user.
+Once user identity has been established, the DTR application should allow the user to select a usage session from all of the sessions available to that particular user.

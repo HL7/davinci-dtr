@@ -22,7 +22,7 @@ The DTR application is initially launched in response to a Coverage Requirements
 
 The DTR application usage session binds this set of orders and patient to a particular user. When persisting application state, it is the responsibility of the DTR application to record the relationship between the orders, patient and user.
 
-The DTR application application may be launched outside the context of a CRD request, at which point, it must be able to restore a usage session. This will be covered in detail in Section 4.4.8 - Launch outside of CRD
+The DTR application may be launched outside the context of a CRD request, at which point, it must be able to restore a usage session. This will be covered in detail in Section 4.4.8 - Launch outside of CRD
 
 #### Visibility of Usage Sessions to Other Users
 Depending on workflows within an organization, it may be desirable for one user to start a usage session, but for it to be completed by another user. Rules for which users of a DTR application should be authorized to see information on a particular set of patients are outside the scope of this implementation guide.
