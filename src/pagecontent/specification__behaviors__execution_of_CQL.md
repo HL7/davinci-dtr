@@ -5,7 +5,7 @@ As discussed in the Execution Results section below, it's possible not every CQL
 
 ### Engine Execution
 
-The package containing the CQL and Questionnaire resources can contain helper libraries that are called from other CQL files. The engine SHALL make available to the execution context all CQL libraries that are found in the package.
+The FHIR Library containing/referencing a CQL logic file can reference other needed CQL files (e.g. helper libraries) using the `relatedArtifact` field and a `RelatedArtifact` with a `type` of `depends-on`. The engine SHALL make available to the execution context all such referenced CQL libraries. If the questionnaire has multiple `cqif-library`(STU3)/`cqf-library`(R4) fields, then any `cqif-calculatedValue`(STU3)/`valueExpression`(R4) must specify the library name as well as the statement name as follows: `"LibraryName".statementName`.
 
 It is likely that different versions of CQL will need to be created for different FHIR versions, as the same information could be in a different resource. The SMART on FHIR application will have access to the FHIR endpoint, it should check the version and then retrieve the package that has been created for the correct FHIR version.
 

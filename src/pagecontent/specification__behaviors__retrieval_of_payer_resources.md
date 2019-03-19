@@ -1,4 +1,4 @@
-The DTR application will need to retrieve resources from a payer IT system to operate properly. This application will need to obtain a FHIR Questionnaire and associated CQL rules in order to execute. The information needed to obtain the needed resources will be provided as escaped JSON in the `appContext` property of the CDS Hooks Card Link object, as described in Section 4.2.1. That object will have the following properties:
+The DTR application will need to retrieve resources from a payer IT system to operate properly. This application will need to obtain a FHIR Questionnaire and associated CQL logic files in order to execute. The information needed to obtain the needed resources will be provided as escaped JSON in the `appContext` property of the CDS Hooks Card Link object, as described in Section 4.2.1. That object will have the following properties:
 
 | Field | Optionality | Type | Description |
 | ----- | ----------- | ---- | ----------- |
