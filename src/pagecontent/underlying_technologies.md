@@ -1,7 +1,7 @@
 ### FHIR
 This implementation guide uses terminology, notations and design principles that are
 specific to FHIR. Before reading this implementation guide, it's important to be familiar with some of the basic principles of FHIR as well
-as general guidance on how to read FHIR specifications. Readers who are unfamiliar with FHIR are encouraged to read (or at least skim) the following
+as general guidance on how to read FHIR specifications. Readers who are unfamiliar with FHIR are encouraged to read the following
 prior to reading the rest of this implementation guide.
 
 * [FHIR overview]({{site.data.fhir.path}}overview.html)
@@ -42,7 +42,7 @@ Clinical systems will use the specification and workflows defined by [CDS Hooks]
 Clinical systems will use the specification and workflows defined by [CRD](http://build.fhir.org/ig/HL7/davinci-crd/) to initiate Document Template and Rule functionality with the payers. Implementers should be familiar with this specification.
 
 ### SMART on FHIR
-Client systems conformant to this implementation guide SHALL also serve as a SMART on FHIR client. This is to allow Document Template and Rule functionality to be invoked outside of regular clinical workflows using a SMART on FHIR application to provide a consistent way of edvaluating "what if?" scenarios across EHR implementations. As such client implementers will also need to be familiar with the [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) specification.  Because the SMART on FHIR app will interact with payer systems through the CDS Hooks interface, payer implementers only need to be familiar with the SMART on FHIR specification if they plan to develop SMART apps for launch by CDS Hooks or for other purposes.
+Client systems conformant to this implementation guide SHALL also serve as a SMART on FHIR client. This is to allow Document Template and Rule functionality to be invoked outside of regular clinical workflows using a SMART on FHIR application to provide a consistent way of evaluating "what if?" scenarios across EHR implementations. As such client implementers will also need to be familiar with the [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) specification.  Because the SMART on FHIR app will interact with payer systems through the CDS Hooks interface, payer implementers only need to be familiar with the SMART on FHIR specification if they plan to develop SMART apps for launch by CDS Hooks or for other purposes.
 
 ### SDC
 Clinical systems will use the specification and workflows defined by [SDC](http://hl7.org/fhir/us/sdc/) to initiate Document Template and Rule functionality with the payers. Implementers should be familiar with this specification.

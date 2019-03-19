@@ -5,6 +5,9 @@ Primary Authors:
 * Cole Springate-Combs (The MITRE Corporation)
 * Larry Decelles (The MITRE Corporation)
 
+Technical Editing:
+* Keeyan Ghoreshi
+
 Project leads:
 * Robert Dieterle (Enable Care, LLC)
 * Viet Nguyen (Stratametrics, LLC)
