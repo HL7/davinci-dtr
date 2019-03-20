@@ -7,7 +7,7 @@ As an example, given the following CQL fragment:
 define "Age": AgeInYears()
 ```
 
-This will create a CQL expression named `Age`. The expression can then be used to populate a `item` within a Questionnaire. The following JSON fragment represents the portion of the Questionnaire that can be populated from the CQL:
+This will create a CQL expression named `Age`. The expression can then be used to populate an `item` within a Questionnaire. The following JSON fragment represents the portion of the Questionnaire that can be populated from the CQL:
 
 ```
 {

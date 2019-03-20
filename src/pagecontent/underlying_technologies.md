@@ -33,7 +33,7 @@ Implementers should also familiarize themselves with the FHIR resources used wit
 | [Task](http://hl7.org/fhir/STU3/task.html) | [Task](http://hl7.org/fhir/R4/task.html) |
 
 ### US Core
-Clinical systems will use the specification and workflows defined by [US Core](http://www.hl7.org/fhir/us/core/) to initiate Document Template and Rule with the payers. Implementers should be familiar with this specification.
+Clinical systems will use the specification and workflows defined by [US Core](http://www.hl7.org/fhir/us/core/) to initiate Document Template and Rule functionality with the payers. Implementers should be familiar with this specification.
 
 ### CDS Hooks
 Clinical systems will use the specification and workflows defined by [CDS Hooks](https://cds-hooks.hl7.org) to initiate Document Template and Rule functionality with the payers. Implementers should be familiar with this specification.
