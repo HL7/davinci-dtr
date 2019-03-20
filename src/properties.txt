@@ -4,10 +4,10 @@
 # guidename must match the id of the implementation guide
 ################################################################################################
 guidename=davinci-dtr
-copyrightyear=2018+
+copyrightyear=2019
 license=CC0-1.0
 version=0.1.0
-ballotstatus=Continuous Build
+ballotstatus=Ballot for Comment
 fhirspec=http://hl7.org/fhir
 childHeadingOffset=2.2
 excludexml=Yes

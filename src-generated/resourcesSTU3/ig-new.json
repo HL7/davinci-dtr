@@ -30,7 +30,13 @@
   "name" : "DocumentationTemplatesAndRules",
   "status" : "draft",
   "experimental" : false,
-  "publisher" : "HL7 Davinci Project",
+  "publisher" : "HL7 Da Vinci Project",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/dss"
+    }]
+  }],
   "description" : "Guidelines for documentation templates and rules for coverage requirements",
   "jurisdiction" : [{
     "coding" : [{

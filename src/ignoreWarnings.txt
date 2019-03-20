@@ -1,5 +1,5 @@
 // All of these links resolve
-The link 'http://hl7.org/fhir/' for "(4.0.0" cannot be resolved
+The link 'http://hl7.org/fhir/' for "FHIR 4.0.0" cannot be resolved
 The link 'http://hl7.org/fhir/us/davinci-crd/history.html' for "Version History" cannot be resolved
 The link 'http://hl7.org/fhir/R4/clinicalreasoning-module.html' for "Clinical Reasoning Module" cannot be resolved
 The link 'http://hl7.org/fhir/R4/clinicalreasoning-knowledge-artifact-representation.html#documentation-template' for "Documentation Template" cannot be resolved

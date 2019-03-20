@@ -7,7 +7,13 @@
   <title value="Da Vinci - Documentation Templates and Rules"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <publisher value="HL7 Davinci Project"/>
+  <publisher value="HL7 Da Vinci Project"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/dss"/>
+    </telecom>
+  </contact>
   <description value="Guidelines for documentation templates and rules for coverage requirements"/>
   <jurisdiction>
     <coding>

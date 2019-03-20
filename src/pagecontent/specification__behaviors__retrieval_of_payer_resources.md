@@ -4,6 +4,7 @@ The DTR application will need to retrieve resources from a payer IT system to op
 | ----- | ----------- | ---- | ----------- |
 | fhirAuthorization | OPTIONAL | *object* | A structure holding an OAuth 2.0 bearer access token granting the DTR Application access to payer FHIR resources, along with supplemental information relating to the token. |
 | template | REQUIRED | *string* | The URL of the Questionnaire for the DTR application to use for execution. |
+| request | REQUIRED | *string* | The URL of the request resource for which documentation requirements are being gathered. |
 
 ### Authentication of SMART on FHIR application to payer API
 Payers may require the DTR application to authenticate in order to retrieve resources. In the case that authentication is required, the following JSON structure SHALL be populated by the payer system. This JSON is based on the structure for [FHIR Authorization in CDS Hooks](https://cds-hooks.hl7.org/ballots/2018May/specification/1.0/#fhir-resource-access).
