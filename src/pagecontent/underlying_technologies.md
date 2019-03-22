@@ -30,7 +30,6 @@ Implementers should also familiarize themselves with the FHIR resources used wit
 | ---- | -- |
 | [Questionnaire](http://hl7.org/fhir/STU3/questionnaire.html) | [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html) |
 | [QuestionnaireResponse](http://hl7.org/fhir/STU3/questionnaireresponse.html) |[QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) |
-| [Task](http://hl7.org/fhir/STU3/task.html) | [Task](http://hl7.org/fhir/R4/task.html) |
 
 ### US Core
 Clinical systems will use the specification and workflows defined by [US Core](http://www.hl7.org/fhir/us/core/) to initiate Document Template and Rule functionality with the payers. Implementers should be familiar with this specification.
