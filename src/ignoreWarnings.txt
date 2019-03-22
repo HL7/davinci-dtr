@@ -31,6 +31,10 @@ The link 'http://hl7.org/fhir/smart-app-launch/#step-3-app-exchanges-authorizati
 The link 'http://hl7.org/fhir/smart-app-launch/#use-the-public-app-profile-if-your-app-is-unable-to-protect-a-client_secret' for "public app profile" cannot be resolved
 The link 'http://hl7.org/fhir/smart-app-launch/#use-the-confidential-app--profile-if-your-app-is-able-to-protect-a-client_secret' for "confidential app profile" cannot be resolved
 
+// Should be fixed when the IG is published
+The link 'http://hl7.org/fhir/us/davinci-dtr/history.cfml' for "Version History" cannot be resolved
+The link 'http://hl7.org/fhir/us/davinci-dtr/STU3/history.cfml' for "Version History" cannot be resolved
+
 // These seem to be tooling issues when pulling in CQIF Questionnaire
 The link 'http://hl7.org/fhir/STU3/cqif/elementdefinition.html' for "ElementDefinition" cannot be resolved
 The link 'http://hl7.org/fhir/STU3/cqif/structuredefinition.html#' for "StructureDefinition" cannot be resolved
