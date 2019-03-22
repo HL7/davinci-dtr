@@ -11,6 +11,7 @@
   * [Requesting Additional Information from the User](specification__behaviors__requesting_additional_information_from_the_user.html)
   * [Persisting Application State](specification__behaviors__persisting_application_state.html)
   * [Persisting Results](specification__behaviors__persisting_results.html)
+  * [Task Creation](specification__behaviors__task_creation.html)
   * [Launch outside of CRD](specification__behaviors__launch_outside_of_CRD.html)
   * [Privacy, Safety and Security](specification__behaviors__privacy_safety_and_security.html)
 
