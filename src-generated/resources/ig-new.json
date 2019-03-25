@@ -45,7 +45,7 @@
       "code" : "US"
     }]
   }],
-  "packageId" : "hl7.fhir.us.davinci.dtr",
+  "packageId" : "hl7.fhir.us.davinci-dtr",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.0",
   "3.0.1",

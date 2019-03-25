@@ -40,7 +40,7 @@
           
     </jurisdiction>
       
-    <packageId value="hl7.fhir.us.davinci.dtr"/>
+    <packageId value="hl7.fhir.us.davinci-dtr"/>
       
     <fhirVersion value="4.0.0"/>
       
