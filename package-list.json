@@ -16,7 +16,7 @@
          "date": "2019-05-01",
          "desc": "For Comment Ballot for FHIR R4",
          "changes": "history.html",
-         "path": "http://hl7.org/fhir/us/davinci-dtr/2019May/index.html",
+         "path": "http://hl7.org/fhir/us/davinci-dtr/2019May",
          "status": "ballot",
          "sequence": "STU1"
       }

@@ -108,7 +108,7 @@
     </xsl:choose>
     <text>",
     "txCache": "txcache",
-    "history" : "history.html",
+    "history" : "http://hl7.org/fhir/us/davinci-dtr/history.cfml",
     "qa": "../temp</text>
     <xsl:if test="$additional">
       <xsl:value-of select="$additional"/>
