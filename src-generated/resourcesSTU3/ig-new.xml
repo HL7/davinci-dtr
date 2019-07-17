@@ -50,6 +50,14 @@
     </grouping>
     <resource>
       <reference>
+        <reference value="StructureDefinition/dtr-task-stu3"/>
+      </reference>
+      <name value="DTR Task - STU3"/>
+      <description value="The Task resource is used to allow users to generate requests for information during the flow of DTR"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/dtr-questionnaire-stu3"/>
       </reference>
       <name value="DTR Questionnaire - STU3"/>

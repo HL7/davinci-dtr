@@ -70,6 +70,18 @@
         <valueCode value="STU3"/>
       </extension>
       <reference>
+        <reference value="StructureDefinition/dtr-task-stu3"/>
+      </reference>
+      <name value="DTR Task - STU3"/>
+      <description value="The Task resource is used to allow users to generate requests for information during the flow of DTR"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/tools-alternateVersion">
+        <valueCode value="STU3"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/dtr-questionnaire-stu3"/>
       </reference>
       <fhirVersion value="3.0.1"/>

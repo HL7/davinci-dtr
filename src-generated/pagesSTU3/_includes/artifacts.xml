@@ -11,6 +11,13 @@
             <tbody>
                 <tr>
                     <td style="column-width:30%">
+                        <a href="dtr-task-stu3.html">
+                        •  DTR Task - STU3</a>
+                    </td>
+                    <td>The Task resource is used to allow users to generate requests for information during the flow of DTR</td>
+                </tr>
+                <tr>
+                    <td style="column-width:30%">
                         <a href="dtr-questionnaire-stu3.html">
                         •  DTR Questionnaire - STU3</a>
                     </td>

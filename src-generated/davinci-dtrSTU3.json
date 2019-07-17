@@ -88,6 +88,8 @@
   "spreadsheets": [
   ],
   "resources": {
+    "StructureDefinition/dtr-task-stu3":{
+    },
     "StructureDefinition/dtr-questionnaire-stu3":{
     },
     "StructureDefinition/dtr-questionnaireresponse-stu3":{

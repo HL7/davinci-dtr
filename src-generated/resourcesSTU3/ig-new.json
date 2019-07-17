@@ -56,6 +56,14 @@
     }],
     "resource" : [{
       "reference" : {
+        "reference" : "StructureDefinition/dtr-task-stu3"
+      },
+      "name" : "DTR Task - STU3",
+      "description" : "The Task resource is used to allow users to generate requests for information during the flow of DTR",
+      "groupingId" : "profiles"
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/dtr-questionnaire-stu3"
       },
       "name" : "DTR Questionnaire - STU3",

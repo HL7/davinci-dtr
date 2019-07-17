@@ -51,6 +51,15 @@
         <description value="Profiles to be supported by EHRs and payor systems conforming to this implementation guide"/>
             
         <resource>
+            <name value="DTR Task - STU3"/>
+            <description value="The Task resource is used to allow users to generate requests for information during the flow of DTR"/>
+            <sourceReference>
+                        
+                <reference value="StructureDefinition/dtr-task-stu3"/>
+                      
+            </sourceReference>
+        </resource>
+        <resource>
             <name value="DTR Questionnaire - STU3"/>
             <description value="The Questionnaire resource is used to represent the information needs that a payer has to satisfy their documentation requirements and/or rules"/>
             <sourceReference>
