@@ -42,11 +42,10 @@
       <name value="Terminology"/>
       <description value="Value Sets and/or code systems defined as part of this implementation guide"/>
     </grouping>
-    <!-- Uncomment when we have some
     <grouping id="examples">
       <name value="Example(s)"/>
       <description value="Example(s) showing the use of the DTR"/>
-    </grouping>-->
+    </grouping>
     <resource>
       <reference>
         <reference value="StructureDefinition/dtr-questionnaire-r4"/>
@@ -55,6 +54,15 @@
       <description value="The Questionnaire resource is used to represent the information needs that a payer has to satisfy their documentation requirements and/or rules"/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Questionnaire/home-o2-questionnaire"/>
+      </reference>
+      <name value="DTR Home Oxygen Therapy Questionnaire - R4"/>
+      <description value="An example questionnaire that shows how to use DTR to collect documentation requirements for home oxygen therapy"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="examples"/>
     </resource>
     <resource>
       <reference>

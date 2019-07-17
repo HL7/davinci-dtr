@@ -70,6 +70,11 @@
       "id" : "terminology",
       "name" : "Terminology",
       "description" : "Value Sets and/or code systems defined as part of this implementation guide"
+    },
+    {
+      "id" : "examples",
+      "name" : "Example(s)",
+      "description" : "Example(s) showing the use of the DTR"
     }],
     "resource" : [{
       "reference" : {
@@ -79,6 +84,15 @@
       "description" : "The Questionnaire resource is used to represent the information needs that a payer has to satisfy their documentation requirements and/or rules",
       "exampleBoolean" : false,
       "groupingId" : "profiles"
+    },
+    {
+      "reference" : {
+        "reference" : "Questionnaire/home-o2-questionnaire"
+      },
+      "name" : "DTR Home Oxygen Therapy Questionnaire - R4",
+      "description" : "An example questionnaire that shows how to use DTR to collect documentation requirements for home oxygen therapy",
+      "exampleBoolean" : true,
+      "groupingId" : "examples"
     },
     {
       "reference" : {

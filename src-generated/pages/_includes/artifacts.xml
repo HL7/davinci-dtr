@@ -57,4 +57,20 @@
             <tbody/>
         </table>
     </p>
+    <a name="5"> </a>
+    <h3>Example(s) </h3>
+    <p>Example(s) showing the use of the DTR</p>
+    <p>
+        <table>
+            <tbody>
+                <tr>
+                    <td style="column-width:30%">
+                        <a href="home-o2-questionnaire.html">
+                        •  DTR Home Oxygen Therapy Questionnaire - R4</a>
+                    </td>
+                    <td>An example questionnaire that shows how to use DTR to collect documentation requirements for home oxygen therapy</td>
+                </tr>
+            </tbody>
+        </table>
+    </p>
 </div>
