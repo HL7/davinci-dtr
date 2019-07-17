@@ -73,16 +73,12 @@
       <value value="template-page.html"/>
     </parameter>
     <parameter>
-      <code value="generate-json"/>
-      <value value="true"/>
+      <code value="generate"/>
+      <value value="xml"/>
     </parameter>
     <parameter>
-      <code value="generate-xml"/>
-      <value value="true"/>
-    </parameter>
-    <parameter>
-      <code value="generate-turtle"/>
-      <value value="true"/>
+      <code value="generate"/>
+      <value value="JSON"/>
     </parameter>
   </definition>
 </ImplementationGuide>

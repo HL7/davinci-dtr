@@ -21,7 +21,7 @@
     <valueString value="/Users/andrewg/projects/davinci-dtr/src-generated/pages"/>
   </extension>
   <url value="http://hl7.org/fhir/us/davinci-dtr/ImplementationGuide/davinci-dtr"/>
-  <version value="0.1.0"/>
+  <version value="1.0.0"/>
   <name value="DocumentationTemplatesAndRules"/>
   <title value="Da Vinci - Documentation Templates and Rules"/>
   <status value="draft"/>
@@ -189,16 +189,12 @@
       <value value="template-page.html"/>
     </parameter>
     <parameter>
-      <code value="generate-json"/>
-      <value value="true"/>
+      <code value="generate"/>
+      <value value="xml"/>
     </parameter>
     <parameter>
-      <code value="generate-xml"/>
-      <value value="true"/>
-    </parameter>
-    <parameter>
-      <code value="generate-turtle"/>
-      <value value="true"/>
+      <code value="generate"/>
+      <value value="JSON"/>
     </parameter>
   </definition>
 </ImplementationGuide>

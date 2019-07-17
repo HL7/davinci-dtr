@@ -26,7 +26,7 @@
     "valueString" : "/Users/andrewg/projects/davinci-dtr/src-generated/pages"
   }],
   "url" : "http://hl7.org/fhir/us/davinci-dtr/ImplementationGuide/davinci-dtr",
-  "version" : "0.1.0",
+  "version" : "1.0.0",
   "name" : "DocumentationTemplatesAndRules",
   "title" : "Da Vinci - Documentation Templates and Rules",
   "status" : "draft",
@@ -198,16 +198,12 @@
       "value" : "template-page.html"
     },
     {
-      "code" : "generate-json",
-      "value" : "true"
+      "code" : "generate",
+      "value" : "xml"
     },
     {
-      "code" : "generate-xml",
-      "value" : "true"
-    },
-    {
-      "code" : "generate-turtle",
-      "value" : "true"
+      "code" : "generate",
+      "value" : "JSON"
     }]
   }
 }
