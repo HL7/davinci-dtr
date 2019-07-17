@@ -42,3 +42,6 @@ The link 'http://hl7.org/fhir/STU3/cqif/dataelement.html#' for "DataElement" can
 The link 'http://hl7.org/fhir/STU3/cqif/element-definitions.html#Element.id' for "Element.id" cannot be resolved
 The link 'http://hl7.org/fhir/STU3/cqif/loinc.html#dataelements' for "LOINC codes" cannot be resolved
 The link 'http://hl7.org/fhir/STU3/cqif/loinc.html#alist' for "LOINC Answer Lists" cannot be resolved
+
+// Seems to be a tooling issue
+The link 'http://hl7.org/fhir/us/davinci-dtr/STU3/history.html' for "Version History null" cannot be resolved
