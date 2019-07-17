@@ -57,6 +57,15 @@
       <groupingId value="profiles"/>
     </resource>
     <resource>
+      <reference>
+        <reference value="StructureDefinition/dtr-task-r4"/>
+      </reference>
+      <name value="DTR Task - R4"/>
+      <description value="The Task resource is used to allow users to generate requests for information during the flow of DTR"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/tools-alternateVersion">
         <valueCode value="STU3"/>
       </extension>

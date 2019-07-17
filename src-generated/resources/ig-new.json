@@ -82,6 +82,15 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/dtr-task-r4"
+      },
+      "name" : "DTR Task - R4",
+      "description" : "The Task resource is used to allow users to generate requests for information during the flow of DTR",
+      "exampleBoolean" : false,
+      "groupingId" : "profiles"
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/dtr-questionnaireresponse-r4"
       },
       "name" : "DTR QuestionnaireResponse - R4",
