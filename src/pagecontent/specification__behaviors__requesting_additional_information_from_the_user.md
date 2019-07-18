@@ -10,7 +10,11 @@ Payers should note that the ordering of `item` elements in a Questionnaire resou
 When `item`s meet the conditions stated above, they SHALL be presented to the user for their input.
 
 #### Structured Data Capture
-Payers may have requirements on how questions are presented to users. To allow for this, payers MAY supply Questionnaire resources that conform to the [Advanced Rendering Questionnaire Profile](http://build.fhir.org/ig/HL7/sdc/sdc-questionnaire-render.html) as defined in Structure Data Capture. The DTR application SHALL use the `rendering-style` and `rendering-xhtml` properties provided if the `rendering-styleSensitive` extension property is `true`. If the `rendering-styleSensitive` extension property is not present or `false` the DTR application SHOULD use `rendering-style` and `rendering-xhtml` properties.
+Payers may have requirements on how questions are presented to users. To allow for this, payers MAY supply Questionnaire resources that conform to the [Advanced Rendering Questionnaire Profile](http://build.fhir.org/ig/HL7/sdc/sdc-questionnaire-render.html) as defined in Structure Data Capture. 
+
+The purpose of this extension is to indicate that it is not SAFE to render the form if the styles indicated in the questionnaire are not followed. If the system is not capable of rendering the form as the questionnaire dictates, then it cannot display the form.  Note the use of this flag should be extremely rare in DTR applications.  
+
+If the `rendering-styleSensitive` extension property is not present or `false` the DTR application SHOULD use `rendering-style` and `rendering-xhtml` properties.
 
 #### Rendering Questionnaire items without specified styles
 Payers are not required to provide Questionnaires that conform to the Advanced Rendering Questionnaire Profile. When a Questionnaire is provided that does not conform to this profile, it is at the discretion of the DTR application to chose a reasonable presentation of the questions that require user input. The DTR application SHALL use the appropriate input mechanism depending on the `item.type`. Additionally, when working with a FHIR R4 Questionnaire, the DTR application SHALL support `item.answerValueSet` , `item.answerOption` and `item.initial` if provided. When working with a FHIR STU3 Questionnaire, the DTR application SHALL support `item.options` , `item.option` and `item.initial[x]` if provided.
