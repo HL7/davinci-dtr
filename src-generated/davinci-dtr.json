@@ -19,7 +19,7 @@
     "txCache": "txcache",
     "history" : "http://hl7.org/fhir/us/davinci-dtr/history.cfml",
     "qa": "../temp/qa",
-    "specification": "http://hl7.org/fhir"
+    "specification": "http://build.fhir.org/"
   },
   "suppressedWarningFile": "../src/ignoreWarnings.txt",
   "includeHeadings": false,

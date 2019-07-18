@@ -10,9 +10,9 @@ Payers should note that the ordering of `item` elements in a Questionnaire resou
 When `item`s meet the conditions stated above, they SHALL be presented to the user for their input.
 
 #### Structured Data Capture
-Payers may have requirements on how questions are presented to users. To allow for this, payers MAY supply Questionnaire resources that conform to the [Advanced Rendering Questionnaire Profile](http://build.fhir.org/ig/HL7/sdc/sdc-questionnaire-render.html) as defined in Structure Data Capture. 
+Payers may have requirements on how questions are presented to users. To allow for this, payers MAY supply Questionnaire resources that conform to the [Advanced Rendering Questionnaire Profile](http://build.fhir.org/ig/HL7/sdc/sdc-questionnaire-render.html) as defined in Structure Data Capture.
 
-The purpose of this extension is to indicate that it is not SAFE to render the form if the styles indicated in the questionnaire are not followed. If the system is not capable of rendering the form as the questionnaire dictates, then it cannot display the form.  Note the use of this flag should be extremely rare in DTR applications.  
+The purpose of this extension is to indicate that it is not SAFE to render the form if the styles indicated in the questionnaire are not followed. If the system is not capable of rendering the form as the questionnaire dictates, then it cannot display the form.  Note the use of this flag should be extremely rare in DTR applications.
 
 If the `rendering-styleSensitive` extension property is not present or `false` the DTR application SHOULD use `rendering-style` and `rendering-xhtml` properties.
 
@@ -61,7 +61,7 @@ The DTR application SHALL create a QuestionnaireResponse resource based on all o
     }
   ],
   "text": "What is the patient's age?",
-  "type": "integer"
+  "type": "quantity"
 }
 ```
 
@@ -71,7 +71,7 @@ The following `QuestionnaireResponse.item` JSON fragment would be created assumi
 {
   "linkId": "age",
   "answer": {
-    "valueInteger": 65
+    "valueQuantity": {"value": 65, "unit": "a", "system": "http://unitsofmeasure.org"}
   }
 }
 ```
@@ -90,7 +90,7 @@ If the value was supplied by the user, the `author` extension property will be s
   ],
   "linkId": "age",
   "answer": {
-    "valueInteger": 65
+    "valueQuantity": {"value": 65, "unit": "a", "system": "http://unitsofmeasure.org"}
   }
 }
 ```

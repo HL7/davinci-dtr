@@ -28,7 +28,7 @@ This will create a CQL expression named `Age`. The expression can then be used t
     }
   ],
   "text": "What is the patient's age?",
-  "type": "integer"
+  "type": "quantity"
 }
 ```
 
@@ -44,7 +44,7 @@ The DTR application is responsible for iterating through all of the `Questionnai
 {
   "linkId": "age",
   "answer": {
-    "valueInteger" : 65
+    "valueQuantity": {"value": 65, "unit": "a", "system": "http://unitsofmeasure.org"}
   }
 }
 ```
