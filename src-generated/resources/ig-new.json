@@ -91,7 +91,7 @@
       },
       "name" : "DTR Home Oxygen Therapy Questionnaire - R4",
       "description" : "An example questionnaire that shows how to use DTR to collect documentation requirements for home oxygen therapy",
-      "exampleBoolean" : true,
+      "exampleCanonical" : "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaire-r4",
       "groupingId" : "examples"
     },
     {
@@ -107,6 +107,7 @@
       "reference" : {
         "reference" : "Questionnaire/home-o2-questionnaire-stu3"
       },
+      "fhirVersion" : ["3.0.1"],
       "name" : "DTR Home Oxygen Therapy Questionnaire - STU3",
       "description" : "An example questionnaire that shows how to use DTR to collect documentation requirements for home oxygen therapy",
       "exampleBoolean" : true,
@@ -127,13 +128,14 @@
       },
       "name" : "DTR Home Oxygen Therapy QuestionnaireResponse - R4",
       "description" : "An example questionnaire response for home oxygen therapy that is populated after being filled in using the SMART on FHIR application within DTR",
-      "exampleBoolean" : true,
+      "exampleCanonical" : "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse-r4",
       "groupingId" : "examples"
     },
     {
       "reference" : {
         "reference" : "QuestionnaireResponse/home-o2-questionnaireresponse-stu3"
       },
+      "fhirVersion" : ["3.0.1"],
       "name" : "DTR Home Oxygen Therapy QuestionnaireResponse - R3",
       "description" : "An example questionnaire response for home oxygen therapy that is populated after being filled in using the SMART on FHIR application within DTR",
       "exampleBoolean" : true,
