@@ -2,7 +2,7 @@
 The Questionnaire resource is used to represent the information needs that a payer has to satisfy for their documentation requirements and/or rules. This implementation guide uses the
 [CQF-Questionnaire Profile](http://hl7.org/fhir/R4/cqf-questionnaire.html) from the [FHIR Clinical Reasoning Module](http://hl7.org/fhir/R4/clinicalreasoning-module.html). This profile is applied to provide a linkage between the information needs expressed in the Questionnaire and the rules and queries provided by the Payer in Clinical Quality Language (CQL).
 
-Payers MAY also supply Questionnaire resources that conform to the [Structured Data Capture (SDC) Advanced Rendering Profile](http://build.fhir.org/ig/HL7/sdc/sdc-questionnaire-render.html) to control how information requests will ultimately be presented to users.
+Payers MAY also supply Questionnaire resources that conform to the [Structured Data Capture (SDC) Advanced Rendering Profile](http://hl7.org/fhir/uv/sdc/2019May/rendering.html) to control how information requests will ultimately be presented to users.
 
 Documentation Templates and Rules (DTR) conformant Substitutable Medical Applications, Reusable Technologies (SMART) on FHIR applications SHALL support both the CQF-Questionnaire and SDC Advanced Rendering Profiles.
 
