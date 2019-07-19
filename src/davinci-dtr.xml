@@ -74,6 +74,15 @@
       <groupingId value="profiles"/>
     </resource>
     <resource>
+      <reference>
+        <reference value="Task/blood-gass-panel-task-r4"/>
+      </reference>
+      <name value="DTR Task - R4"/>
+      <description value="An example task to request the creation of a blood gass panel"/>
+      <exampleCanonical value="http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-task-r4"/>
+      <groupingId value="examples"/>
+    </resource>
+    <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/tools-alternateVersion">
         <valueCode value="STU3"/>
       </extension>
@@ -300,6 +309,11 @@
         <page>
           <nameUrl value="home-o2-questionnaireresponse-stu3.html"/>
           <title value="DTR QuestionnaireResponse Home Oxygen Therapy Example STU3"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="blood-gass-panel-task-r4.html"/>
+          <title value="DTR Task Blood Gass Panel Example R4"/>
           <generation value="generated"/>
         </page>
       </page>

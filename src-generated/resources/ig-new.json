@@ -105,6 +105,15 @@
     },
     {
       "reference" : {
+        "reference" : "Task/blood-gass-panel-task-r4"
+      },
+      "name" : "DTR Task - R4",
+      "description" : "An example task to request the creation of a blood gass panel",
+      "exampleCanonical" : "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-task-r4",
+      "groupingId" : "examples"
+    },
+    {
+      "reference" : {
         "reference" : "Questionnaire/home-o2-questionnaire-stu3"
       },
       "fhirVersion" : ["3.0.1"],
@@ -292,6 +301,11 @@
         {
           "nameUrl" : "home-o2-questionnaireresponse-stu3.html",
           "title" : "DTR QuestionnaireResponse Home Oxygen Therapy Example STU3",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "blood-gass-panel-task-r4.html",
+          "title" : "DTR Task Blood Gass Panel Example R4",
           "generation" : "generated"
         }]
       },
