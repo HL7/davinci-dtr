@@ -100,12 +100,30 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Questionnaire/home-o2-questionnaire-stu3"/>
+      </reference>
+      <name value="DTR Home Oxygen Therapy Questionnaire - STU3"/>
+      <description value="An example questionnaire that shows how to use DTR to collect documentation requirements for home oxygen therapy"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="examples"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/dtr-questionnaireresponse-r4"/>
       </reference>
       <name value="DTR QuestionnaireResponse - R4"/>
       <description value="The QuestionnaireResponse resource is used to represent the information supplied by the provider"/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/home-o2-questionnaireresponse"/>
+      </reference>
+      <name value="DTR Home Oxygen Therapy QuestionnaireResponse - R4"/>
+      <description value="An example questionnaire response for home oxygen therapy that is populated after being filled in using the SMART on FHIR application within DTR"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="examples"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/StructureDefinition/tools-alternateVersion">
@@ -119,6 +137,15 @@
       <description value="The QuestionnaireResponse resource is used to represent the information supplied by the provider"/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/home-o2-questionnaireresponse-stu3"/>
+      </reference>
+      <name value="DTR Home Oxygen Therapy QuestionnaireResponse - R3"/>
+      <description value="An example questionnaire response for home oxygen therapy that is populated after being filled in using the SMART on FHIR application within DTR"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="examples"/>
     </resource>
     <page>
       <nameUrl value="toc.html"/>
@@ -213,6 +240,11 @@
         <nameUrl value="resources.html"/>
         <title value="Resources"/>
         <generation value="markdown"/>
+        <page>
+          <nameUrl value="resources__home-o2-prepopulation.html"/>
+          <title value="Home Oxygen Therapy Questionnaire Prepopulation CQL"/>
+          <generation value="markdown"/>
+        </page>
       </page>
       <page>
         <nameUrl value="credits.html"/>

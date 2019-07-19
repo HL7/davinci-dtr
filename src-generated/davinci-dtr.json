@@ -99,7 +99,13 @@
     },
     "StructureDefinition/dtr-task-r4":{
     },
+    "Questionnaire/home-o2-questionnaire-stu3":{
+    },
     "StructureDefinition/dtr-questionnaireresponse-r4":{
+    },
+    "QuestionnaireResponse/home-o2-questionnaireresponse":{
+    },
+    "QuestionnaireResponse/home-o2-questionnaireresponse-stu3":{
     }
   }
 }

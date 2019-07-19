@@ -1,9 +1,9 @@
 {
   "resourceType": "Questionnaire",
-  "id": "home-o2-questionnaire",
+  "id": "home-o2-questionnaire-stu3",
   "meta": {
     "profile": [
-      "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaire-r4"
+      "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaire-stu3"
     ]
   },
   "title": "Home Oxygen Therapy",
@@ -109,7 +109,7 @@
           "text": "Gender",
           "type": "choice",
           "required": true,
-          "answerValueSet": {
+          "options": {
             "reference": "#gender"
           },
           "extension": [
@@ -211,7 +211,7 @@
           "type": "open-choice",
           "required": true,
           "repeats": true,
-          "answerOption": [
+          "option": [
             {
               "valueCoding": {
                 "code": "COPD"
@@ -320,7 +320,6 @@
           "required": false,
           "enableWhen": [
             {
-              "operator": "=",
               "question": "5.1b",
               "answerBoolean": true
             }
@@ -339,7 +338,6 @@
           "required": false,
           "enableWhen": [
             {
-              "operator": "=",
               "question": "3.2",
               "answerQuantity": {
                 "value": 89,
@@ -355,7 +353,6 @@
           "required": false,
           "enableWhen": [
             {
-              "operator": "=",
               "question": "3.2",
               "answerQuantity": {
                 "value": 89,
@@ -371,7 +368,6 @@
           "required": false,
           "enableWhen": [
             {
-              "operator": "=",
               "question": "3.2",
               "answerQuantity": {
                 "value": 89,
@@ -393,7 +389,6 @@
           "required": false,
           "enableWhen": [
             {
-              "operator": "=",
               "question": "3.10",
               "answerBoolean": true
             }
@@ -487,7 +482,7 @@
           "type": "open-choice",
           "required": true,
           "repeats": true,
-          "answerOption": [
+          "option": [
             {
               "valueCoding": {
                 "code": "At rest and awake"
@@ -541,7 +536,7 @@
           "text": "Type",
           "type": "choice",
           "required": true,
-          "answerOption": [
+          "option": [
             {
               "valueCoding": {
                 "code": "Liquid"
@@ -565,7 +560,7 @@
           "type": "open-choice",
           "required": true,
           "repeats": true,
-          "answerOption": [
+          "option": [
             {
               "valueCoding": {
                 "code": "Nasal cannula"
@@ -608,7 +603,7 @@
           "text": "Type of order",
           "type": "choice",
           "required": true,
-          "answerOption": [
+          "option": [
             {
               "valueCoding": {
                 "code": "Initial or original order for certification"
@@ -638,14 +633,13 @@
           "required": true,
           "enableWhen": [
             {
-              "operator": "=",
               "question": "5.4",
               "answerCoding": {
                 "code": "Change in status"
               }
             }
           ],
-          "answerOption": [
+          "option": [
             {
               "valueCoding": {
                 "code": "Patient relocated"
@@ -665,14 +659,13 @@
           "required": true,
           "enableWhen": [
             {
-              "operator": "=",
               "question": "5.4",
               "answerCoding": {
                 "code": "Revision or change in equipment"
               }
             }
           ],
-          "answerOption": [
+          "option": [
             {
               "valueCoding": {
                 "code": "New Physician order"
@@ -692,14 +685,13 @@
           "required": true,
           "enableWhen": [
             {
-              "operator": "=",
               "question": "5.4",
               "answerCoding": {
                 "code": "Replacement"
               }
             }
           ],
-          "answerOption": [
+          "option": [
             {
               "valueCoding": {
                 "code": "Lost or stolen"
