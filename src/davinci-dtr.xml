@@ -241,9 +241,64 @@
         <title value="Resources"/>
         <generation value="markdown"/>
         <page>
+          <nameUrl value="dtr-questionnaire-r4.html"/>
+          <title value="DTR Questionnaire Profile R4"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="STU3/dtr-questionnaire-stu3.html"/>
+          <title value="DTR Questionnaire Profile STU3"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="dtr-questionnaireresponse-r4.html"/>
+          <title value="DTR QuestionnaireResponse Profile R4"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="STU3/dtr-questionnaireresponse-stu3.html"/>
+          <title value="DTR QuestionnaireResponse Profile STU3"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="dtr-task-r4.html"/>
+          <title value="DTR Task Profile R4"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="STU3/dtr-task-stu3.html"/>
+          <title value="DTR Task Profile STU3"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="resources__home-o2-prepopulation.html"/>
           <title value="Home Oxygen Therapy Questionnaire Prepopulation CQL"/>
           <generation value="markdown"/>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="examples.html"/>
+        <title value="Examples"/>
+        <generation value="markdown"/>
+        <page>
+          <nameUrl value="home-o2-questionnaire.html"/>
+          <title value="DTR Questionnaire Home Oxygen Therapy Example R4"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="home-o2-questionnaire-stu3.html"/>
+          <title value="DTR Questionnaire Home Oxygen Therapy Example STU3"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="home-o2-questionnaireresponse.html"/>
+          <title value="DTR QuestionnaireResponse Home Oxygen Therapy Example R4"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="home-o2-questionnaireresponse-stu3.html"/>
+          <title value="DTR QuestionnaireResponse Home Oxygen Therapy Example STU3"/>
+          <generation value="generated"/>
         </page>
       </page>
       <page>
