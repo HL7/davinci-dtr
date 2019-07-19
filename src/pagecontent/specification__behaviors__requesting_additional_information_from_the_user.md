@@ -1,4 +1,4 @@
-While the goal of DTR is to automaticallhy gather all of the necessary information to satisfy payer rule and documentation requirements, this is not possible in all cases. When the execution of CQL is unable to obtain the required data, it is necessary to prompt the user for input.
+While the goal of Documentation Templates and Rules (DTR) is to automaticallhy gather all of the necessary information to satisfy payer rule and documentation requirements, this is not possible in all cases. When the execution of Clinical Quality Language (CQL) is unable to obtain the required data, it is necessary to prompt the user for input.
 
 ### Questionnaire Rendering
 The DTR application will need to collect information from the user for `item`s in the Questionnaire where the following conditions are met:
@@ -25,13 +25,13 @@ This implementation guide does not place any requirements on the DTR application
 > Note to ballot comments
 >
 > This is an area the project is explicitly seeking comments on. Please provide
-> your thoughts on what, if any, requirements should be placed on the SMART
-> on FHIR application for displaying the questions one at a time or many at once.
+> your thoughts on what, if any, requirements should be placed on the Substitutable Medical Applications, 
+> Reusable Technologies (SMART) on FHIR application for displaying the questions one at a time or many at once.
 
 We encourage questionnaire design to minimize the number of questions that are necessary to view/complete (e.g. if an answer obviates the need to complete a section, then the section should not appear for completion)
 
 ### Provider Attestation
-There may be cases where the CQL provided by a payer was unable to locate information on a patient that is present in the EHR system. This may be due to the information existing in unstructured notes where it is not able to be easily retrieved by CQL, or it may be in a location that the CQL did not expect. To reduce the burden on the users of the application, DTR provides a mechanism for the user to attest that the information exists in the patient's record, without specifying the exact value or location of the information.
+There may be cases where the CQL provided by a payer was unable to locate information on a patient that is present in the Electronic Health Record (EHR) system. This may be due to the information existing in unstructured notes where it is not able to be easily retrieved by CQL, or it may be in a location that the CQL did not expect. To reduce the burden on the users of the application, DTR provides a mechanism for the user to attest that the information exists in the patient's record, without specifying the exact value or location of the information.
 
 The DTR application SHALL include a mechanism to allow a user to attest the the answer to the presented question exists in the patient's record. This mechanism MAY be an HTML `input` element with the `type` set to `button` or it may be an `a` element. The behavior of these elements SHALL be to record the user's attestation that the information is present in the patient's record.
 

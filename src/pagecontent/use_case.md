@@ -10,10 +10,10 @@ The payer Information Technology (IT) system is an innovative approach introduce
 A healthcare provider organization contains medical providers such as hospitals, doctors, etc. 
 
 #### EHR System
-The Electronic Health Record (EHR) system shall be the primary system used to initiate the DTR process. The SMART on FHIR app will typically be initiated from within the EHR.
+The Electronic Health Record (EHR) system shall be the primary system used to initiate the DTR process. The Substitutable Medical Applications, Reusable Technologies (SMART) on FHIR app will typically be initiated from within the EHR.
 
 #### DTR compliant SMART on FHIR app
-Within DTR the SMART on FHIR app is considered a key component because of the inherent nature of SMART on FHIR apps, namely the ability to call into backend systems such as payers using [CDS Hooks](https://cds-hooks.hl7.org) as well as the ability to run rules such as [CQL](https://cql.hl7.org/STU2/). This functionality will enable DTR to gather documents and templates as well as run rules to reduce the time involved in the Documentation Requirements Lookup Service (DRLS) process.
+Within Documentation Templates and Rules (DTR) the SMART on FHIR app is considered a key component because of the inherent nature of SMART on FHIR apps, namely the ability to call into backend systems such as payers using [Clinical Decision Support (CDS) Hooks](https://cds-hooks.hl7.org) as well as the ability to run rules such as [Clinical Quality Language (CQL)](https://cql.hl7.org/STU2/). This functionality will enable DTR to gather documents and templates as well as run rules to reduce the time involved in the Documentation Requirements Lookup Service (DRLS) process.
 
 #### Users (clinicians and office staff)
 Users or Providers are challenged to deal with the diversity of administrative and clinical requirements that impact documenting the need for treatment and selecting the appropriate best path for care. The current environment is made more complex by the large number of payer-based requirements that must be met to document that covered services and devices are medically necessary and appropriate.
@@ -21,7 +21,7 @@ Users or Providers are challenged to deal with the diversity of administrative a
 The goal of this use case is to reduce user or provider burden and simplify processes by establishing electronic versions of administrative and clinical requirements that can become part of the providers daily workflow. 
 
 ### Relation to CRD
-[CRD](http://build.fhir.org/ig/HL7/davinci-crd/) addresses the bulleted items below with some DTR overlap:
+[Coverage Requirements Discovery (CRD)](http://build.fhir.org/ig/HL7/davinci-crd/) addresses the bulleted items below with some DTR overlap:
 
 * updated coverage information 
 * alternative preferred/first-line/lower-cost services/products 

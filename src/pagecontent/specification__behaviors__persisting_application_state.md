@@ -1,11 +1,11 @@
-Users of the DTR application are likely to be performing many tasks to support patient care or administration of the provider organization. As such, it should be expected that users may need to halt interaction with the DTR application and resume at a later time.
+Users of the Documentation Templates and Rules (DTR) application are likely to be performing many tasks to support patient care or administration of the provider organization. As such, it should be expected that users may need to halt interaction with the DTR application and resume at a later time.
 
-The DTR application should anticipate that users may not be able to complete a full interaction between launch from a CDS Hooks Card to providing a response back to the payer. It is recommended that DTR conformant SMART on FHIR applications preserve state automatically as a user interacts with it. In this manner, the user does not need to explicitly take action to save their state.
+The DTR application should anticipate that users may not be able to complete a full interaction between launch from a Clinical Decision Support (CDS) Hooks Card to providing a response back to the payer. It is recommended that DTR conformant Substitutable Medical Applications, Reusable Technologies (SMART) on FHIR applications preserve state automatically as a user interacts with it. In this manner, the user does not need to explicitly take action to save their state.
 
 Exact mechanisms for saving state are outside the scope of this implementation guide. The following sections describe mechanisms that a DTR application may use to establish the data necessary to store and retrieve state.
 
 ### SMART on FHIR applications and Servers
-SMART on FHIR applications must be launched by a host that is accessible to the launching EHR. Once launched, a SMART on FHIR application may communicate with the host that it was initially launched from. This may be to retrieve data to assist in the functionality of the SMART on FHIR application, or it may be to record actions taken by the application user.
+SMART on FHIR applications must be launched by a host that is accessible to the launching Electronic Health Record (EHR) System. Once launched, a SMART on FHIR application may communicate with the host that it was initially launched from. This may be to retrieve data to assist in the functionality of the SMART on FHIR application, or it may be to record actions taken by the application user.
 
 In the case of DTR, the SMART on FHIR application may be launched from a number of locations. A likely scenario is that the DTR conformant SMART on FHIR application will be hosted by a Payer IT system.
 
@@ -15,7 +15,7 @@ The DTR application may send information back to the host it was launched from t
 To persist application state, the DTR application will need to know who is currently using the application. SMART on FHIR provides methods for the application to obtain this information.
 
 #### SMART on FHIR App Launch Framework IG
-Using the SMART on FHIR App Launch Framework IG, the DTR application should request [scopes for requesting identity data](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context/index.html#scopes-for-requesting-identity-data), namely `openid` and `fhirUser`. The DTR application can then retrieve the FHIR resource representing the current person and extract whatever identifiers it deems necessary for the persistance of application state.
+Using the SMART on FHIR App Launch Framework Implementation Guide (IG), the DTR application should request [scopes for requesting identity data](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context/index.html#scopes-for-requesting-identity-data), namely `openid` and `fhirUser`. The DTR application can then retrieve the FHIR resource representing the current person and extract whatever identifiers it deems necessary for the persistance of application state.
 
 The EHR's authorization server MUST support the openid and fhirUser scopes, due to the importance of the fhirUser element in the QuestionnaireResponse resource..
 
@@ -24,7 +24,7 @@ The DTR application is initially launched in response to a Coverage Requirements
 
 The DTR application usage session binds this set of orders and patient to a particular user. When persisting application state, it is the responsibility of the DTR application to record the relationship between the orders, patient and user.
 
-The DTR application may be launched outside the context of a CRD request, at which point, it must be able to restore a usage session. This will be covered in detail in Section 4.4.8 - Launch outside of CRD
+The DTR application may be launched outside the context of a Coverage Requirements Discovery (CRD) request, at which point, it must be able to restore a usage session. This will be covered in detail in Section 4.4.8 - Launch outside of CRD
 
 #### Visibility of Usage Sessions to Other Users
 Depending on workflows within an organization, it may be desirable for one user to start a usage session, but for it to be completed by another user. Rules for which users of a DTR application should be authorized to see information on a particular set of patients are outside the scope of this implementation guide.

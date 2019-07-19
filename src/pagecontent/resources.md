@@ -1,10 +1,10 @@
 ### DTR Questionnaire
 The Questionnaire resource is used to represent the information needs that a payer has to satisfy for their documentation requirements and/or rules. This implementation guide uses the
-[CQF-Questionnaire Profile](http://hl7.org/fhir/R4/cqf-questionnaire.html) from the [FHIR Clinical Reasoning Module](http://hl7.org/fhir/R4/clinicalreasoning-module.html). This profile is applied to provide a linkage between the information needs expressed in the Questionnaire and the rules and queries provided by the Payer in CQL.
+[CQF-Questionnaire Profile](http://hl7.org/fhir/R4/cqf-questionnaire.html) from the [FHIR Clinical Reasoning Module](http://hl7.org/fhir/R4/clinicalreasoning-module.html). This profile is applied to provide a linkage between the information needs expressed in the Questionnaire and the rules and queries provided by the Payer in Clinical Quality Language (CQL).
 
-Payers MAY also supply Questionnaire resources that conform to the [SDC Advanced Rendering Profile](http://build.fhir.org/ig/HL7/sdc/sdc-questionnaire-render.html) to control how information requests will ultimately be presented to users.
+Payers MAY also supply Questionnaire resources that conform to the [Structured Data Capture (SDC) Advanced Rendering Profile](http://build.fhir.org/ig/HL7/sdc/sdc-questionnaire-render.html) to control how information requests will ultimately be presented to users.
 
-DTR conformant SMART on FHIR applications SHALL support both the CQF-Questionnaire and SDC Advanced Rendering Profiles.
+Documentation Templates and Rules (DTR) conformant Substitutable Medical Applications, Reusable Technologies (SMART) on FHIR applications SHALL support both the CQF-Questionnaire and SDC Advanced Rendering Profiles.
 
 * [DTR Questionnaire FHIR R4](dtr-questionnaire-r4.html) - [Example](home-o2-questionnaire.html)
 * [DTR Questionnaire FHIR STU3](STU3/dtr-questionnaire-stu3.html) - [Example](home-o2-questionnaire-stu3.html)
@@ -22,5 +22,5 @@ The task resource is used to capture a request for additional actions that arise
 * [DTR Task FHIR STU3](STU3/dtr-task-stu3.html)
 
 ### DTR CQL
-The CQL resource is used to query the EHR FHIR server to prepopulate the DTR Questionnaire.
+The CQL resource is used to query the Electronic Health Record (EHR) FHIR server to prepopulate the DTR Questionnaire.
 * [DTR CQL Prepolulation](specification__cql.html) - [Example](resources__home-o2-prepopulation.html)

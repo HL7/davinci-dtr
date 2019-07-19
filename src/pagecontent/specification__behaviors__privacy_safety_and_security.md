@@ -4,9 +4,9 @@ Guidance and conformance expectations around privacy and security are provided b
 * CDS Hooks: [Security & Safety](https://cds-hooks.hl7.org/specification/1.0/#security-and-safety)
 * SMART on FHIR: [SMART App Launch](http://www.hl7.org/fhir/smart-app-launch)
 
-If the DTR / SMART on FHIR application is executed using an app, the app will only have access to data specifically authorized by the organization as appropriate for use.
+If the Documentation Templates and Rules (DTR) / Substitutable Medical Applications, Reusable Technologies (SMART) on FHIR application is executed using an app, the app will only have access to data specifically authorized by the organization as appropriate for use.
 
-When meeting the DTR / SMART on FHIR application requirements using a distinct app (i.e. not within the EHR), the app SHALL have a distinct client id for when it's being invoked purely as a mechanism to supplement EHR data vs. when it's being invoked to potentially share data back to the payer.
+When meeting the DTR / SMART on FHIR application requirements using a distinct app (i.e. not within the  Electronic Health Record (EHR)), the app SHALL have a distinct client id for when it's being invoked purely as a mechanism to supplement EHR data vs. when it's being invoked to potentially share data back to the payer.
 
 This will allow the scopes to be different depending on whether data might flow to the payer. It will also allow the EHR to appropriately audit data accesses where data might flow external to the EHR.
 As well, there is a requirement that the data passed to a payer SHALL also be stored in the EHR where it can be audited for appropriate use.
