@@ -3,27 +3,27 @@
   "id" : "davinci-dtr",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/andrewg/projects/davinci-dtr/src-generated/resourcesSTU3"
+    "valueString" : "/Users/plarocque/dme-erx/davinci-dtr/src-generated/resourcesSTU3"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/andrewg/projects/davinci-dtr/src/resources"
+    "valueString" : "/Users/plarocque/dme-erx/davinci-dtr/src/resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/andrewg/projects/davinci-dtr/src/vocabulary"
+    "valueString" : "/Users/plarocque/dme-erx/davinci-dtr/src/vocabulary"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/andrewg/projects/davinci-dtr/src/examples"
+    "valueString" : "/Users/plarocque/dme-erx/davinci-dtr/src/examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/andrewg/projects/davinci-dtr/src/images"
+    "valueString" : "/Users/plarocque/dme-erx/davinci-dtr/src/images"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/andrewg/projects/davinci-dtr/src-generated/pagesSTU3"
+    "valueString" : "/Users/plarocque/dme-erx/davinci-dtr/src-generated/pagesSTU3"
   }],
   "url" : "http://hl7.org/fhir/us/davinci-dtr/STU3/ImplementationGuide/davinci-dtr",
   "version" : "3.0.1",
@@ -89,6 +89,24 @@
       },
       "name" : "DTR Task Example - STU3",
       "description" : "An example task to request the creation of a blood gass panel",
+      "exampleBoolean" : true,
+      "groupingId" : "examples"
+    },
+    {
+      "reference" : {
+        "reference" : "Questionnaire/home-o2-questionnaire-stu3"
+      },
+      "name" : "DTR Home Oxygen Therapy Questionnaire - STU3",
+      "description" : "An example questionnaire that shows how to use DTR to collect documentation requirements for home oxygen therapy",
+      "exampleBoolean" : true,
+      "groupingId" : "examples"
+    },
+    {
+      "reference" : {
+        "reference" : "QuestionnaireResponse/home-o2-questionnaireresponse-stu3"
+      },
+      "name" : "DTR Home Oxygen Therapy QuestionnaireResponse - R3",
+      "description" : "An example questionnaire response for home oxygen therapy that is populated after being filled in using the SMART on FHIR application within DTR",
       "exampleBoolean" : true,
       "groupingId" : "examples"
     }],

@@ -7,7 +7,7 @@ A Payer is a person or company who pays for the service of providers. The majori
 The payer Information Technology (IT) system is an innovative approach introduced to revolutionize the accounting processes and maintenance of payment records. These systems were introduced as a result of the growing need to meet time-to-market requirements, maintain smooth communication between payers and providers, and minimize administrative costs.
 
 #### Healthcare Provider Organization
-A healthcare provider organization contains medical providers such as hospitals, doctors, etc. 
+A healthcare provider organization contains medical providers such as hospitals, doctors, etc.
 
 #### EHR System
 The Electronic Health Record (EHR) system shall be the primary system used to initiate the DTR process. The Substitutable Medical Applications, Reusable Technologies (SMART) on FHIR app will typically be initiated from within the EHR.
@@ -18,20 +18,20 @@ Within Documentation Templates and Rules (DTR) the SMART on FHIR app is consider
 #### Users (clinicians and office staff)
 Users or Providers are challenged to deal with the diversity of administrative and clinical requirements that impact documenting the need for treatment and selecting the appropriate best path for care. The current environment is made more complex by the large number of payer-based requirements that must be met to document that covered services and devices are medically necessary and appropriate.
 
-The goal of this use case is to reduce user or provider burden and simplify processes by establishing electronic versions of administrative and clinical requirements that can become part of the providers daily workflow. 
+The goal of this use case is to reduce user or provider burden and simplify processes by establishing electronic versions of administrative and clinical requirements that can become part of the providers daily workflow.
 
 ### Relation to CRD
-[Coverage Requirements Discovery (CRD)](http://build.fhir.org/ig/HL7/davinci-crd/) addresses the bulleted items below with some DTR overlap:
+[Coverage Requirements Discovery (CRD)](http://hl7.org/fhir/us/davinci-crd/2019May/) addresses the bulleted items below with some DTR overlap:
 
-* updated coverage information 
-* alternative preferred/first-line/lower-cost services/products 
-* documents and rules related to coverage 
-* forms and templates 
+* updated coverage information
+* alternative preferred/first-line/lower-cost services/products
+* documents and rules related to coverage
+* forms and templates
 * indications of whether prior authorization is required
 
 DTR differs from CRD mostly in its ability to run rules and auto fill forms and templates.  The CRD portion of the full workflow might be responsible for verifying with the payer that a given device request requires documentation, and then consolidating the necessary links for the DTR app to be run.  In most cases, the CRD application would return a CDS hooks card populated with a SMART launch link for the DTR app, a link to a questionnaire resource, a patient ID, and a link to the device request resource.  While CRD may verify that documentation rules are required, it does not involve any actual authorization or validation of the rule.  The DTR app is responsible for taking the provided rule and checking if available EHR data satisfies the requirements, as well as allowing manual population of missing data.  
 
-### Process Flow 
+### Process Flow
 
 This shows a high-level overview of CRD and DTR (DTR is the SMART on FHIR App)
 
@@ -47,10 +47,10 @@ This shows an overview of how the SMART on FHIR App fits into the flow when orde
 5. The user provides any missing information to fully populate the Questionnaire response.
 6. It then writes the FHIR Questionnaire response back to Payer server and optionally to the EHR in a text format.
 
-> Note: There is no need for the user to see the form if it can be auto-completed unless they need to approve sending the result to the payer or to "sign" the information prior to submission. 
+> Note: There is no need for the user to see the form if it can be auto-completed unless they need to approve sending the result to the payer or to "sign" the information prior to submission.
 
  > If the resulting information is to be sent to a third party (e.g. payer). The DTR / SMART on FHIR App should include a step requiring the provider to grant permission to send along the information gathered in the form before sending. However this should be configurable on a site or provider basis.
 
-Note: DTR is not intended to change orders, only to gather documentation related to a specific service and where it is incomplete, provide the ability to capture the additional documentation required.  
+Note: DTR is not intended to change orders, only to gather documentation related to a specific service and where it is incomplete, provide the ability to capture the additional documentation required.
 
 ![Process Flow Detail](Process_Flow_Detail.png){:style="float: none;"}

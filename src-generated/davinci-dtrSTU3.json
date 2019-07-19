@@ -94,7 +94,11 @@
     },
     "StructureDefinition/dtr-questionnaire-stu3":{
     },
+    "Questionnaire/home-o2-questionnaire-stu3":{
+    },
     "StructureDefinition/dtr-questionnaireresponse-stu3":{
+    },
+    "QuestionnaireResponse/home-o2-questionnaireresponse-stu3":{
     }
   }
 }

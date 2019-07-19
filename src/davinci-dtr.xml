@@ -122,6 +122,9 @@
       <groupingId value="profiles"/>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/tools-alternateVersion">
+        <valueCode value="STU3"/>
+      </extension>
       <reference>
         <reference value="Questionnaire/home-o2-questionnaire-stu3"/>
       </reference>
@@ -163,6 +166,9 @@
       <groupingId value="profiles"/>
     </resource>
     <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/tools-alternateVersion">
+        <valueCode value="STU3"/>
+      </extension>
       <reference>
         <reference value="QuestionnaireResponse/home-o2-questionnaireresponse-stu3"/>
       </reference>
@@ -311,7 +317,7 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="home-o2-questionnaire-stu3.html"/>
+          <nameUrl value="STU3/home-o2-questionnaire-stu3.html"/>
           <title value="DTR Questionnaire Home Oxygen Therapy Example STU3"/>
           <generation value="generated"/>
         </page>
@@ -321,7 +327,7 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="home-o2-questionnaireresponse-stu3.html"/>
+          <nameUrl value="STU3/home-o2-questionnaireresponse-stu3.html"/>
           <title value="DTR QuestionnaireResponse Home Oxygen Therapy Example STU3"/>
           <generation value="generated"/>
         </page>
