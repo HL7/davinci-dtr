@@ -1,5 +1,9 @@
 ### Use of Card.links
-One entry point into the DTR application is launching from a [CDS Hooks Card](https://cds-hooks.hl7.org/ballots/2018May/specification/1.0/#card-attributes). When a payer wishes to offer an entry into a DTR application as a part of a CDS Hooks response, the Payer IT system SHALL return a `Card` object with at least one `Link` object populated in the `Card.links` property. The `Link` object SHALL hava a `type` property set to `smart`. The `Link` object SHALL have a `url` property set to the launch URL of the DTR application.
+One entry point into the DTR application is launching from a [CDS Hooks Card](https://cds-hooks.hl7.org/ballots/2018May/specification/1.0/#card-attributes). 
+
+DTR applications SHOULD, to the extent possible, capture and return information that is relevant to the specific use case. 
+
+As a part of a CDS Hooks response, the Payer IT system SHALL return a Card object with at least one Link object populated in the Card.linksproperty. The Link object SHALL have a type property set to smart. The Link object SHALL have a URL property set to the launch URL of the DTR application.
 
 A payer may secure endpoints from which the DTR application will retrieve additional artifacts to support execution. If the payer does require authentication, then the Payer IT system SHALL provide the authentication information through the `appContext` property of the `Link` object. The `appContext` property SHALL contain escaped JSON. The structure of this JSON is described in Section 4.1.1 - Authentication of SMART on FHIR application to payer API.
 
