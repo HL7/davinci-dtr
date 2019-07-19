@@ -1,0 +1,120 @@
+{
+    "resourceType": "Task",
+    "id": "dtr-task-example",
+    "meta": {
+      "profile": ["http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-task-r4"]
+    },
+    "contained": [
+        {
+            "resourceType": "Patient",
+            "id": "example1",
+            "gender": "male",
+            "birthDate": "1996-12-23",
+            "address": [
+              {
+                "use": "home",
+                "type": "both",
+                "state": "MA"
+              }
+            ]
+        },
+        {
+            "resourceType": "Practitioner",
+            "id": "example2",
+            "identifier": [
+              {
+                "system": "http://hl7.org/fhir/sid/us-npi",
+                "value": "1122334455"
+              }
+            ],
+            "name": [
+              {
+                "family": "Doe",
+                "given": [
+                  "Jane"
+                ],
+                "prefix": [
+                  "Dr."
+                ]
+              }
+            ]
+        },
+        {
+            "resourceType": "Organization",
+            "id": "example3",
+            "name": "Centers for Medicare and Medicaid Services"
+        },
+        {
+            "resourceType": "ServiceRequest",
+            "id": "example4",
+            "status": "active",
+            "intent": "original-order",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "24338-6"
+                }
+              ],
+              "text": "Gas panel - Blood"
+            },
+            "subject": {
+              "reference": "Patient/example1"
+            },
+            "occurrenceDateTime": "2019-05-08T09:33:27+07:00",
+            "requester": {
+              "reference": "Practitioner/example2",
+              "display": "Dr. Jane Doe"
+            },
+            "reasonCode": [
+              {
+                "text": "Check for O2 blood saturation levels"
+              }
+            ]
+        }
+    ],
+    "status": "requested",
+    "basedOn":{
+        "reference": "home-o2-questionnaire"
+    },
+    "intent": "order",
+    "description": "Create order for getting O2 blood saturation levels",
+    "focus": {
+        "reference": "#example4",
+        "display": "Blood gas panel request"
+    },
+    "for": {
+        "reference": "#example1"
+      },
+    "priority": "routine",
+    "executionPeriod": {
+        "start": "2019-07-13T08:25:05+10:00"
+    },
+    "authoredOn": "2019-07-18T08:25:05+10:00",
+    "lastModified": "2019-07-18T09:45:05+10:00",
+    "requester": {
+        "reference": "#example2",
+        "display": "Dr Jane Doe",
+        "onBehalfOf": {
+            "reference": "#example3"
+        }
+    },
+    "performerType": [
+        {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/task-performer-type",
+              "code": "performer",
+              "display": "Performer"
+            }
+          ],
+          "text": "Performer"
+        }
+    ],
+    "restriction": {
+        "repetitions": 1,
+        "period": {
+          "end": "2016-11-02T09:45:05+10:00"
+        }
+    }
+  }
