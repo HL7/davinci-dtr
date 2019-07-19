@@ -46,4 +46,10 @@ This shows an overview of how the SMART on FHIR App fits into the flow when orde
 4. The engine then extracts the answers in order to formulate a FHIR Questionnaire response.
 5. It then writes the FHIR Questionnaire response back to Payer server and optionally to the EHR in a text format.
 
+> Note: There is no need for the user to see the form if it can be auto-completed unless they need to approve sending the result to the payer or to "sign" the information prior to submission. 
+
+ > If the resulting information is to be sent to a third party (e.g. payer). The DTR / SMART on FHIR App should include a step requiring the provider to grant permission to send along the information gathered in the form before sending. However this should be configurable on a site or provider basis.
+
+Note: DTR is not intended to change orders, only to gather documentation related to a specific service and where it is incomplete, provide the ability to capture the additional documentation required.  
+
 ![Process Flow Detail](Process_Flow_Detail.png){:style="float: none;"}

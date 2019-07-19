@@ -25,6 +25,12 @@
     {
       "resourceType": "ValueSet",
       "id": "gender",
+      "identifier": [
+        {
+          "system": "http://hl7.org/fhir/ValueSet/administrative-gender",
+          "value": "todo"
+        }
+      ],
       "name": "Gender",
       "status": "draft",
       "description": "Gender",

@@ -1,4 +1,7 @@
 // All of these links resolve
+The link 'http://build.fhir.org/ig/HL7/sdc/sdc-questionnaire-render.html' for "Advanced Rendering Questionnaire Profile" cannot be resolved
+The link 'http://build.fhir.org/ig/HL7/sdc/sdc-questionnaire-render.html' for "SDC Advanced Rendering Profile" cannot be resolved
+The link 'http://build.fhir.org/ig/HL7/davinci-crd/' for "CRD" cannot be resolved
 The link 'http://hl7.org/fhir/' for "FHIR 4.0.0" cannot be resolved
 The link 'http://hl7.org/fhir/us/davinci-crd/history.html' for "Version History" cannot be resolved
 The link 'http://hl7.org/fhir/R4/clinicalreasoning-module.html' for "Clinical Reasoning Module" cannot be resolved
@@ -45,3 +48,4 @@ The link 'http://hl7.org/fhir/STU3/cqif/loinc.html#alist' for "LOINC Answer List
 
 // Seems to be a tooling issue
 The link 'http://hl7.org/fhir/us/davinci-dtr/STU3/history.html' for "Version History null" cannot be resolved
+URL value 'http://hl7.org/fhir/tools/StructureDefinition/resource-information' does not resolve

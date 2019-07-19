@@ -18,3 +18,5 @@ DTR makes use of the identifier names within the CQL. The DTR application will e
 
 ### CQL Constraints
 CQL for use in DTR SHALL have a `context` of `Patient`.
+
+CQL must be version [CQL STU2](https://cql.hl7.org/STU2/index.html) or later.

@@ -17,6 +17,8 @@ To persist application state, the DTR application will need to know who is curre
 #### SMART on FHIR App Launch Framework IG
 Using the SMART on FHIR App Launch Framework IG, the DTR application should request [scopes for requesting identity data](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context/index.html#scopes-for-requesting-identity-data), namely `openid` and `fhirUser`. The DTR application can then retrieve the FHIR resource representing the current person and extract whatever identifiers it deems necessary for the persistance of application state.
 
+The EHR's authorization server MUST support the openid and fhirUser scopes, due to the importance of the fhirUser element in the QuestionnaireResponse resource..
+
 ### Usage Sessions
 The DTR application is initially launched in response to a Coverage Requirements Discovery request. This request is for a given set of orders for a particular patient.
 
