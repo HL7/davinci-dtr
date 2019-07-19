@@ -13,7 +13,7 @@ A healthcare provider organization contains medical providers such as hospitals,
 The Electronic Health Record (EHR) system shall be the primary system used to initiate the DTR process. The Substitutable Medical Applications, Reusable Technologies (SMART) on FHIR app will typically be initiated from within the EHR.
 
 #### DTR compliant SMART on FHIR app
-Within Documentation Templates and Rules (DTR) the SMART on FHIR app is considered a key component because of the inherent nature of SMART on FHIR apps, namely the ability to call into backend systems such as payers using [Clinical Decision Support (CDS) Hooks](https://cds-hooks.hl7.org) as well as the ability to run rules such as [Clinical Quality Language (CQL)](https://cql.hl7.org/STU2/). This functionality will enable DTR to gather documents and templates as well as run rules to reduce the time involved in the Documentation Requirements Lookup Service (DRLS) process.
+Within Documentation Templates and Rules (DTR) the SMART on FHIR app is considered a key component because of the inherent nature of SMART on FHIR apps, namely the ability to call into backend systems such as payers using the [SMART launch protocol](http://www.hl7.org/fhir/smart-app-launch/) and [FHIR](https://www.hl7.org/fhir/) as well as the ability to run rules such as [Clinical Quality Language (CQL)](https://cql.hl7.org/STU2/). This functionality will enable DTR to gather documents and templates, retrieve FHIR resources from EHRs, and run rules to reduce the time involved in the Documentation Requirements Lookup Service (DRLS) process.
 
 #### Users (clinicians and office staff)
 Users or Providers are challenged to deal with the diversity of administrative and clinical requirements that impact documenting the need for treatment and selecting the appropriate best path for care. The current environment is made more complex by the large number of payer-based requirements that must be met to document that covered services and devices are medically necessary and appropriate.
@@ -29,7 +29,7 @@ The goal of this use case is to reduce user or provider burden and simplify proc
 * forms and templates
 * indications of whether prior authorization is required
 
-DTR differs from CRD mostly in its ability to run rules and auto fill forms and templates.
+DTR differs from CRD mostly in its ability to run rules and auto fill forms and templates.  The CRD portion of the full workflow might be responsible for verifying with the payer that a given device request requires documentation, and then consolidating the necessary links for the DTR app to be run.  In most cases, the CRD application would return a CDS hooks card populated with a SMART launch link for the DTR app, a link to a questionnaire resource, a patient ID, and a device request resource as JSON.  While CRD may verify that documentation rules are required, it does not involve any actual authorization or validation of the rule.  The DTR app is responsible for taking the provided rule and checking if available EHR data satisfies the requirements, as well as allowing manual population of missing data.  
 
 ### Process Flow
 
@@ -44,7 +44,8 @@ This shows an overview of how the SMART on FHIR App fits into the flow when orde
 2. It is determined that there is prior authorization required and there are forms to be filled out.
 3. The SMART on FHIR App fetches CQL (rules) and a FHIR Questionnaire.
 4. The engine then extracts the answers in order to formulate a FHIR Questionnaire response.
-5. It then writes the FHIR Questionnaire response back to Payer server and optionally to the EHR in a text format.
+5. The user provides any missing information to fully populate the Questionnaire response.
+6. It then writes the FHIR Questionnaire response back to Payer server and optionally to the EHR in a text format.
 
 > Note: There is no need for the user to see the form if it can be auto-completed unless they need to approve sending the result to the payer or to "sign" the information prior to submission.
 
