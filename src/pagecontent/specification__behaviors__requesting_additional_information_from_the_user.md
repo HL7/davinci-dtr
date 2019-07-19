@@ -28,6 +28,8 @@ This implementation guide does not place any requirements on the DTR application
 > your thoughts on what, if any, requirements should be placed on the SMART
 > on FHIR application for displaying the questions one at a time or many at once.
 
+We encourage questionnaire design to minimize the number of questions that are necessary to view/complete (e.g. if an answer obviates the need to complete a section, then the section should not appear for completion)
+
 ### Provider Attestation
 There may be cases where the CQL provided by a payer was unable to locate information on a patient that is present in the EHR system. This may be due to the information existing in unstructured notes where it is not able to be easily retrieved by CQL, or it may be in a location that the CQL did not expect. To reduce the burden on the users of the application, DTR provides a mechanism for the user to attest that the information exists in the patient's record, without specifying the exact value or location of the information.
 
