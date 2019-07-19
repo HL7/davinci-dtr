@@ -3,11 +3,33 @@
     "id": "home-o2-questionnaireresponse-stu3",
     "meta": {
       "profile": [
-        "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse-stu3"
+        "http://hl7.org/fhir/us/davinci-dtr/STU3/StructureDefinition/dtr-questionnaireresponse-stu3"
       ]
     },
     "authored": "2019-07-18",
     "status": "completed",
+    "subject": {
+        "reference": "#example1",
+        "display": "Vlad"
+    },
+    "contained": [
+        {
+            "resourceType": "Patient",
+            "id": "example1",
+            "gender": "male",
+            "birthDate": "1996-12-23",
+            "address": [
+              {
+                "use": "home",
+                "type": "both",
+                "state": "MA"
+              }
+            ]
+        }
+    ],
+    "questionnaire": {
+        "display": "Questionnaire/q045"
+    },
     "item": [
         {
             "linkId": "1",
@@ -185,7 +207,7 @@
                     "text": "Length of need: (months) (99 = lifetime)",
                     "answer": [
                         {
-                            "integer": "99"
+                            "valueInteger": 99
                         }
                     ]
                 },
@@ -198,7 +220,7 @@
                             "text": "LPM",
                             "answer": [
                                 {
-                                    "integer": "2"
+                                    "valueInteger": 2
                                 }
                             ]
                         },
@@ -207,7 +229,7 @@
                             "text": "oxygen %",
                             "answer": [
                                 {
-                                    "integer": "98"
+                                    "valueInteger": 98
                                 }
                             ]
                         }
@@ -222,7 +244,7 @@
                             "text": "LPM",
                             "answer": [
                                 {
-                                    "integer": "2"
+                                    "valueInteger": 2
                                 }
                             ]
                         },
@@ -231,7 +253,7 @@
                             "text": "oxygen %",
                             "answer": [
                                 {
-                                    "integer": "97"
+                                    "valueInteger": 97
                                 }
                             ]
                         }

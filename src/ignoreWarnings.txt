@@ -51,3 +51,6 @@ The link 'http://hl7.org/fhir/STU3/cqif/loinc.html#alist' for "LOINC Answer List
 // Seems to be a tooling issue
 The link 'http://hl7.org/fhir/us/davinci-dtr/STU3/history.html' for "Version History null" cannot be resolved
 URL value 'http://hl7.org/fhir/tools/StructureDefinition/resource-information' does not resolve
+
+// We do not want to include the resources
+The link 'Questionnaire/q045' for "Questionnaire/q045" cannot be resolved
