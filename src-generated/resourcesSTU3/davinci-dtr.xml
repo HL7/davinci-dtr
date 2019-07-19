@@ -78,5 +78,22 @@
             </sourceReference>
         </resource>
     </package>
+    <package id="examples">
+              
+        <name value="Example(s)"/>
+              
+        <description value="Example(s) showing the use of the DTR"/>
+            
+        <resource>
+            <example value="true"/>
+            <name value="DTR Task Example - STU3"/>
+            <description value="An example task to request the creation of a blood gass panel"/>
+            <sourceReference>
+                        
+                <reference value="Task/blood-gass-panel-task-stu3"/>
+                      
+            </sourceReference>
+        </resource>
+    </package>
     
 </ImplementationGuide>

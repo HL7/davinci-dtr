@@ -77,7 +77,7 @@
       <reference>
         <reference value="Task/blood-gass-panel-task-r4"/>
       </reference>
-      <name value="DTR Task - R4"/>
+      <name value="DTR Task Example - R4"/>
       <description value="An example task to request the creation of a blood gass panel"/>
       <exampleCanonical value="http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-task-r4"/>
       <groupingId value="examples"/>
@@ -87,8 +87,22 @@
         <valueCode value="STU3"/>
       </extension>
       <reference>
+        <reference value="Task/blood-gass-panel-task-stu3"/>
+      </reference>
+      <fhirVersion value="3.0.1"/>
+      <name value="DTR Task Example - STU3"/>
+      <description value="An example task to request the creation of a blood gass panel"/>
+      <exampleBoolean value="true"/>
+      <groupingId value="examples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/StructureDefinition/tools-alternateVersion">
+        <valueCode value="STU3"/>
+      </extension>
+      <reference>
         <reference value="StructureDefinition/dtr-task-stu3"/>
       </reference>
+      <fhirVersion value="3.0.1"/>
       <name value="DTR Task - STU3"/>
       <description value="The Task resource is used to allow users to generate requests for information during the flow of DTR"/>
       <exampleBoolean value="false"/>
@@ -314,6 +328,11 @@
         <page>
           <nameUrl value="blood-gass-panel-task-r4.html"/>
           <title value="DTR Task Blood Gass Panel Example R4"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="STU3/blood-gass-panel-task-stu3.html"/>
+          <title value="DTR Task Blood Gass Panel Example STU3"/>
           <generation value="generated"/>
         </page>
       </page>

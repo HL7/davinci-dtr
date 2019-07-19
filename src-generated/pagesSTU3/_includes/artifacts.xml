@@ -62,7 +62,15 @@
     <p>Example(s) showing the use of the DTR</p>
     <p>
         <table>
-            <tbody/>
+            <tbody>
+                <tr>
+                    <td style="column-width:30%">
+                        <a href="blood-gass-panel-task-stu3.html">
+                        •  DTR Task Example - STU3</a>
+                    </td>
+                    <td>An example task to request the creation of a blood gass panel</td>
+                </tr>
+            </tbody>
         </table>
     </p>
 </div>

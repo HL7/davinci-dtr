@@ -1,8 +1,8 @@
 {
     "resourceType": "Task",
-    "id": "dtr-task-example",
+    "id": "blood-gass-panel-task-stu3",
     "meta": {
-      "profile": ["http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-task-stu3"]
+      "profile": ["http://hl7.org/fhir/us/davinci-dtr/STU3/StructureDefinition/dtr-task-stu3"]
     },
     "contained": [
         {
@@ -40,12 +40,7 @@
             ]
         },
         {
-            "resourceType": "Organization",
-            "id": "example3",
-            "name": "Centers for Medicare and Medicaid Services"
-        },
-        {
-            "resourceType": "ServiceRequest",
+            "resourceType": "ProcedureRequest",
             "id": "example4",
             "status": "active",
             "intent": "original-order",
@@ -59,12 +54,13 @@
               "text": "Gas panel - Blood"
             },
             "subject": {
-              "reference": "Patient/example1"
+              "reference": "#example1"
             },
             "occurrenceDateTime": "2019-05-08T09:33:27+07:00",
             "requester": {
-              "reference": "Practitioner/example2",
-              "display": "Dr. Jane Doe"
+              "agent": {
+                "reference": "#example2"
+              }
             },
             "reasonCode": [
               {
@@ -74,9 +70,11 @@
         }
     ],
     "status": "requested",
-    "basedOn":{
-        "reference": "home-o2-questionnaire"
-    },
+    "basedOn": [
+      {
+        "display": "home-o2-questionnaire"
+      }
+    ],
     "intent": "order",
     "description": "Create order for getting O2 blood saturation levels",
     "focus": {
@@ -93,19 +91,16 @@
     "authoredOn": "2019-07-18T08:25:05+10:00",
     "lastModified": "2019-07-18T09:45:05+10:00",
     "requester": {
-        "reference": "#example2",
-        "display": "Dr Jane Doe",
-        "onBehalfOf": {
-            "reference": "#example3"
-        }
+      "agent": {
+        "reference": "#example2"
+      }
     },
     "performerType": [
         {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/task-performer-type",
-              "code": "performer",
-              "display": "Performer"
+              "system": "http://snomed.info/sct",
+              "code": "18850004"
             }
           ],
           "text": "Performer"

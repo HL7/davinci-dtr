@@ -53,6 +53,11 @@
       "id" : "profiles",
       "name" : "Profiles",
       "description" : "Profiles to be supported by EHRs and payor systems conforming to this implementation guide"
+    },
+    {
+      "id" : "examples",
+      "name" : "Example(s)",
+      "description" : "Example(s) showing the use of the DTR"
     }],
     "resource" : [{
       "reference" : {
@@ -77,6 +82,15 @@
       "name" : "DTR QuestionnaireResponse - STU3",
       "description" : "The QuestionnaireResponse resource is used to represent the information supplied by the provider",
       "groupingId" : "profiles"
+    },
+    {
+      "reference" : {
+        "reference" : "Task/blood-gass-panel-task-stu3"
+      },
+      "name" : "DTR Task Example - STU3",
+      "description" : "An example task to request the creation of a blood gass panel",
+      "exampleBoolean" : true,
+      "groupingId" : "examples"
     }],
     "parameter" : [{
       "code" : "apply",

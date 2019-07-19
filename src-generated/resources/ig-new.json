@@ -107,7 +107,7 @@
       "reference" : {
         "reference" : "Task/blood-gass-panel-task-r4"
       },
-      "name" : "DTR Task - R4",
+      "name" : "DTR Task Example - R4",
       "description" : "An example task to request the creation of a blood gass panel",
       "exampleCanonical" : "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-task-r4",
       "groupingId" : "examples"
@@ -306,6 +306,11 @@
         {
           "nameUrl" : "blood-gass-panel-task-r4.html",
           "title" : "DTR Task Blood Gass Panel Example R4",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "STU3/blood-gass-panel-task-stu3.html",
+          "title" : "DTR Task Blood Gass Panel Example STU3",
           "generation" : "generated"
         }]
       },

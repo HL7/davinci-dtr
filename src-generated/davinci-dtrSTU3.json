@@ -88,6 +88,8 @@
   "spreadsheets": [
   ],
   "resources": {
+    "Task/blood-gass-panel-task-stu3":{
+    },
     "StructureDefinition/dtr-task-stu3":{
     },
     "StructureDefinition/dtr-questionnaire-stu3":{
