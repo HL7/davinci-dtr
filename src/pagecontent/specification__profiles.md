@@ -1,5 +1,7 @@
 FHIR resources exchanged in the execution of a Documentation Templates and Rules (DTR) application are subject to conformance requirements with the following HL7 Implementation Guides.
 
+The Da Vinci DTR Implementation Guide (IG) will make use of US Core profiles that are based on the FHIR R4 specification wherever practical. The DTR IG will use the HL7 FHIR Release 4/US Core STU3 specification as its base but will provide additional guidance and documentation to support implementations that follow the HL7 FHIR STU3/US Core STU2 and HL7 FHIR DSTU2/Argonaut specifications.
+
 ### US Core
 The DTR application will access information about a patient to execute rules and gather documentation to satisfy payer needs. To do this, the DTR application will make requests to a FHIR server of the Healthcare Provider Organization's Electronic Health Record (EHR) system. The FHIR server SHALL conform to the [US Core Implementation Guide STU2](http://hl7.org/fhir/us/core/STU2/) when providing access to FHIR STU3. The FHIR server SHALL conform to the [US Core Implementation Guide STU3](http://hl7.org/fhir/us/core/2019Jan/) when providing access to FHIR R4.
 
