@@ -1,4 +1,4 @@
-While the goal of Documentation Templates and Rules (DTR) is to automaticallhy gather all of the necessary information to satisfy payer rule and documentation requirements, this is not possible in all cases. When the execution of Clinical Quality Language (CQL) is unable to obtain the required data, it is necessary to prompt the user for input.
+While the goal of DTR is to automatically gather all of the necessary information to satisfy payer rules and documentation requirements without interrupting the user with a CDS Hooks card or SMART app, this is not possible in all cases. When the execution of Clinical Quality Language (CQL) is unable to obtain the required data, it is necessary to prompt the user for input.
 
 ### Questionnaire Rendering
 The DTR application will need to collect information from the user for `item`s in the Questionnaire where the following conditions are met:
