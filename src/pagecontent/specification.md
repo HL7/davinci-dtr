@@ -15,3 +15,5 @@
   * [Launch outside of CRD](specification__behaviors__launch_outside_of_CRD.html)
   * [Privacy, Safety and Security](specification__behaviors__privacy_safety_and_security.html)
 
+>Note: A reference implementation has been created. The code is available at [DTR GitHub](https://github.com/HL7-DaVinci/dtr). The executable is at [DTR Logical Health](https://davinci-dtr.logicahealth.org/smart/launch.html).
+
