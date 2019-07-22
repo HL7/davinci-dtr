@@ -13,6 +13,8 @@ As well, there is a requirement that the data passed to a payer SHALL also be st
 
 It should be noted that there are multiple actors with potential access to patient information. The implementation and deployment of these actors will have an impact on if and when patient information is transmitted from a provider organization to a payer organization.
 
+>It is the under control of the SMART on FHIR app or the capable EHR, based on the API access scope, what information is accessible to be included in the questionnaireResponse. The SMART on FHIR app cannot be responsible for informing the user that the information exists is inaccessible to the application. This may differ depending on whether it is a native EHR application or a third-party application.
+
 Some SMART on FHIR applications are browser based, such as those conforming to the [public app profile](http://hl7.org/fhir/smart-app-launch/#use-the-public-app-profile-if-your-app-is-unable-to-protect-a-client_secret). In this scenario, patient information is communicated from the EHR system to the DTR application through the EHR's FHIR endpoint. In this case, unless the DTR application takes explict actions to send the information back to the payer organization, it will reside only in the provider organization.
 
 Other SMART on FHIR applications are server based, such as those conforming to the [confidential app profile](http://hl7.org/fhir/smart-app-launch/#use-the-confidential-app--profile-if-your-app-is-able-to-protect-a-client_secret). In this case, patient data will be requested by the server hosting the DTR application. This may be external to the provider organization.
