@@ -4,7 +4,7 @@
 A Payer is a person or company who pays for the service of providers. The majority of payers here are also referred to as insurance companies.
 
 #### Payer IT System
-The payer Information Technology (IT) system is an innovative approach introduced to revolutionize the accounting processes and maintenance of payment records. These systems were introduced as a result of the growing need to meet time-to-market requirements, maintain smooth communication between payers and providers, and minimize administrative costs.
+The payer IT system shall be the primary system responding to DTR queries.
 
 #### Healthcare Provider Organization
 A healthcare provider organization contains medical providers such as hospitals, doctors, etc.
