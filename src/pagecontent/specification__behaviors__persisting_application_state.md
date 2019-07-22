@@ -29,7 +29,7 @@ The DTR application may be launched outside the context of a Coverage Requiremen
 #### Visibility of Usage Sessions to Other Users
 Depending on workflows within an organization, it may be desirable for one user to start a usage session, but for it to be completed by another user. Rules for which users of a DTR application should be authorized to see information on a particular set of patients are outside the scope of this implementation guide.
 
-The SMART on FHIR App Launch Framework IG and FHIR specification provide methods for discovering information about the user and how that user fits into the provider organization. With this information, the DTR application, possibly consulting with the Payer IT system, can decide which usage sessions to expose to a given user.
+The SMART on FHIR App Launch Framework IG and FHIR specification provide methods for discovering information about the user and how that user fits into the provider organization. With this information, the DTR application, possibly consulting with the Payer and Provider IT systems, can decide which usage sessions to expose to a given user.
 
 As an example, the DTR application may retrieve a Practitioner resource by retrieving the URL supplied in the `fhirUser` claim. The DTR application may then query the CareTeam or PractitionerRole resources to determine their relationship to other staff in the provider organization and determine if their usage sessions should also be made available.
 
