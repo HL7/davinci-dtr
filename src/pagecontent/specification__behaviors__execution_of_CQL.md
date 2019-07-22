@@ -14,7 +14,9 @@ Consideration must also be made regarding the CQL version.
 #### Behavior when receiving malformed CQL
 If the CQL is malformed (is not syntactically correct) in any way, the execution engine SHALL not attempt any execution, and the user SHALL be notified with an appropriate on screen error message. The application SHOULD log failures and ensure the maintainer of the CQL/Questionnaire package is notified. 
 
->In an effort to notify the appropriate party or maintainer that  the CQL/Questionnaire is malformed. The application developer SHOULD use FHIR resource operationOutcome.  
+In an effort to notify the appropriate party or maintainer that  the CQL/Questionnaire is malformed. The application developer SHOULD use FHIR resource operationOutcome.  
+
+>Since we will use the standard that if the CQL cannot be executed by the CQL engine in the SMART on FHIR app or in the capable EMR then it is considered a CQL failure (the CQL author should be taking into account the capability of the CQL engine in designing their CQL for execution).
 
 #### Behavior when encountering execution errors
 If any errors are encountered during execution, the engine SHALL not attempt any further execution, and the user SHALL be notified with an appropriate on screen error message. The application SHALL log failures and ensure the maintainer of the CQL/Questionnaire package is notified. 
