@@ -12,9 +12,11 @@ It is likely that different versions of CQL will need to be created for differen
 Consideration must also be made regarding the CQL version.
 
 #### Behavior when receiving malformed CQL
-If the CQL is malformed (is not syntactically correct) in any way, the execution engine SHALL not attempt any execution, and the user SHALL be notified with an appropriate on screen error message. The application SHALL log failures and ensure the maintainer of the CQL/Questionnaire package is notified. To Commenters: The method of ensuring the maintainer is notified should probably be further specified.
-#### Behavior when encountering execution errors
+If the CQL is malformed (is not syntactically correct) in any way, the execution engine SHALL not attempt any execution, and the user SHALL be notified with an appropriate on screen error message. The application SHOULD log failures and ensure the maintainer of the CQL/Questionnaire package is notified. 
 
+>In an effort to notify the appropriate party or maintainer that  the CQL/Questionnaire is malformed. The application developer SHOULD use FHIR resource operationOutcome.  
+
+#### Behavior when encountering execution errors
 If any errors are encountered during execution, the engine SHALL not attempt any further execution, and the user SHALL be notified with an appropriate on screen error message. The application SHALL log failures and ensure the maintainer of the CQL/Questionnaire package is notified. 
 
 Note that a query for data that returns no results is never considered a failure.
