@@ -46,7 +46,7 @@ This shows a high-level overview of CRD and DTR (DTR is the SMART on FHIR App)
 ### Oxygen Therapy Ordering Example
 This shows an overview of how the SMART on FHIR App fits into the flow when ordering oxygen therapy.
 
-1. Oxygen Therapy is ordered via the (order-review) hook.
+1. Oxygen Therapy order triggers appropriate CDS hook.
 2. It is determined that there is prior authorization required and there are forms to be filled out.
 3. The SMART on FHIR App fetches CQL (rules) and a FHIR Questionnaire.
 4. The engine then extracts the answers in order to formulate a FHIR Questionnaire response.
