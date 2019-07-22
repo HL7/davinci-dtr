@@ -4,9 +4,11 @@ When the Documentation Templates and Rules (DTR) application has collected all o
 Many EHR Systems do not currently support writing a QuestionnaireResponse into a FHIR server. However, The US Core Implementation Guide (IG) now includes a [DocumentReference Profile](https://build.fhir.org/ig/HL7/US-Core-R4/StructureDefinition-new-us-core-documentreference.html), which allows clients, like the DTR application, to write notes into the EHR System's FHIR server. The following section describes how the QuestionnaireResponse that is generated through the processes described in Section 4.4.3 and Section 4.4.4 can be transformed into text such that it may be persisted as a note in the EHR system.
 
 #### QuestionnaireResponse transformation process
-The DTR application SHALL support transforming a DTR-QuestionnaireResponse resource into a [Portable Document Format](https://www.iso.org/standard/63534.html) (PDF) representation. DTR applications SHALL ensure that the document indicates differences between user supplied information and data gathered from the EHR system.
+The information that is collected (via the Questionnaire interaction with the user) SHOULD be written to the EHR via the available FHIR API if possible. The results of the questionnaireResponse SHALL be saved as the FHIR resource and/or as a human readable format that is supported by the EHR.
 
-The DTR application SHALL create a DocumentReference resource with this information that conforms to the US Core DocumentReference profile. The generated PDF SHALL be recorded in `DocumentReference.content.attachment.data`. `DocumentReference.content.attachment.contentType` SHALL be `application/pdf`
+The DTR application SHOULD support transforming a DTR-QuestionnaireResponse resource into a [Portable Document Format](https://www.iso.org/standard/63534.html) (PDF) representation. DTR applications SHOULD ensure that the document indicates differences between user supplied information and data gathered from the EHR system.
+
+The DTR application SHOULD create a DocumentReference resource with this information that conforms to the US Core DocumentReference profile. The generated PDF SHOULD be recorded in `DocumentReference.content.attachment.data`. `DocumentReference.content.attachment.contentType` SHOULD be `application/pdf`
 
 > Note to ballot comments
 >
