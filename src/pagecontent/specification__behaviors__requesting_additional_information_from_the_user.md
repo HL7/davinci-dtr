@@ -37,6 +37,7 @@ The DTR application SHALL include a mechanism to allow a user to attest the the 
 
 When a user provides an attestation, the DTR application SHALL record that in the corresponding QuestionnaireResponse.item. In this case, the DTR application SHALL create an `answer` property on the `item`. The `answer` SHALL have a `valueCoding` that is set to the SNOMED CT code `410515003`, known present. The `item` will also have an `author` extension property which will reference the `fhirUser` provided to the DTR application.
 
+>If information is privacy restricted, then we must assume that this information should be treated as if it does not exist. In this case the provider SHOULD verify with the patient if they want to share the information with the payer.
 
 ### Recording Responses
 The DTR application SHALL take input from the user and record the provided information. As with provider attestation, the DTR application SHALL record that in the corresponding QuestionnaireResponse.item. In this case, the DTR application SHALL create an `answer` property on the `item`. The `answer` SHALL have an appropriate `value[x]` depending on the corresponding `type` in the `Questionnaire.item`. Again, similar to attestations, the `item` will have an `author` extension property which will reference the `fhirUser` provided to the DTR application. These procedures apply to QuestionnaireResponses in both FHIR R4 and FHIR STU3.
