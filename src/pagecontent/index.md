@@ -5,6 +5,8 @@ The Documentation Templates and Rules (DTR) Implementation Guide (IG) specifies 
 
 This IG leverages Clinical Quality Language (CQL) to allow payers to inspect a patient's record for the necessary information related to the required documentation for a proposed item. The IG details the use of a payer provided Questionnaire resource and results from CQL execution to generate a QuestionnaireResponse resource containing the necessary information. This IG also provides methods for sending that information to the payer or for persistance in the provider's Electronic Health Record (EHR) system.
 
+Although not detailed in this IG it may be possible to achieve the same level of integration with a native EHR application instead of the SMART on FHIR app. The same provider sourced FHIR Questionnaire and CQL could be consumed by the native EHR application. The interface for exchanging data would need to be developed further in a method that achieves the same level of interoperability that the SMART on FHIR app achieves.
+
 ### Content and Organization
 The implementation guide is organized into the following sections:
 * [Use Case](use_case.html) Provides examples of how this specification can be used by provider and payor organizations.

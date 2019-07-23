@@ -7,6 +7,7 @@ Primary Authors:
 
 Technical Editing:
 * Keeyan Ghoreshi
+* Patrick LaRocque
 
 Project leads:
 * Robert Dieterle (Enable Care, LLC)
