@@ -1,4 +1,4 @@
-While the goal of Documentation Templates and Rules (DTR) is to automaticallhy gather all of the necessary information to satisfy payer rule and documentation requirements, this is not possible in all cases. When the execution of Clinical Quality Language (CQL) is unable to obtain the required data, it is necessary to prompt the user for input.
+While the goal of Documentation Templates and Rules (DTR) is to automatically gather all of the necessary information to satisfy payer rule and documentation requirements, this is not possible in all cases. When the execution of Clinical Quality Language (CQL) is unable to obtain the required data, it is necessary to prompt the user for input.
 
 ### Questionnaire Rendering
 The DTR application will need to collect information from the user for `item`s in the Questionnaire where the following conditions are met:
@@ -20,20 +20,12 @@ If the `rendering-styleSensitive` extension property is not present or `false` t
 Payers are not required to provide Questionnaires that conform to the Advanced Rendering Questionnaire Profile. When a Questionnaire is provided that does not conform to this profile, it is at the discretion of the DTR application to chose a reasonable presentation of the questions that require user input. The DTR application SHALL use the appropriate input mechanism depending on the `item.type`. Additionally, when working with a FHIR R4 Questionnaire, the DTR application SHALL support `item.answerValueSet` , `item.answerOption` and `item.initial` if provided. When working with a FHIR STU3 Questionnaire, the DTR application SHALL support `item.options` , `item.option` and `item.initial[x]` if provided.
 
 #### Rendering multiple items
-This implementation guide does not place any requirements on the DTR application to display multiple `Questionnaire.item`s to a user at a time or only a single `item`.
-
-> Note to ballot comments
->
-> This is an area the project is explicitly seeking comments on. Please provide
-> your thoughts on what, if any, requirements should be placed on the Substitutable Medical Applications, 
-> Reusable Technologies (SMART) on FHIR application for displaying the questions one at a time or many at once.
-
-We encourage questionnaire design to minimize the number of questions that are necessary to view/complete (e.g. if an answer obviates the need to complete a section, then the section should not appear for completion)
+This implementation guide does not place any requirements on the DTR application to display multiple `Questionnaire.item`s to a user at a time or only a single `item`.  Implementers should decide whether which method of displaying questions makes the sense within their own workflow.  We encourage questionnaire designs that minimize the number of questions that are necessary to view/complete (e.g. if an answer obviates the need to complete a section, then the section should not appear for completion).
 
 ### Provider Attestation
 There may be cases where the CQL provided by a payer was unable to locate information on a patient that is present in the Electronic Health Record (EHR) system. This may be due to the information existing in unstructured notes where it is not able to be easily retrieved by CQL, or it may be in a location that the CQL did not expect. To reduce the burden on the users of the application, DTR provides a mechanism for the user to attest that the information exists in the patient's record, without specifying the exact value or location of the information.
 
-The DTR application SHALL include a mechanism to allow a user to attest the the answer to the presented question exists in the patient's record. This mechanism MAY be an HTML `input` element with the `type` set to `button` or it may be an `a` element. The behavior of these elements SHALL be to record the user's attestation that the information is present in the patient's record.
+The DTR application SHALL include a mechanism to allow a user to attest the answer to the presented question exists in the patient's record. This mechanism MAY be an HTML `input` element with the `type` set to `button` or it may be an `a` element. The behavior of these elements SHALL be to record the user's attestation that the information is present in the patient's record.
 
 When a user provides an attestation, the DTR application SHALL record that in the corresponding QuestionnaireResponse.item. In this case, the DTR application SHALL create an `answer` property on the `item`. The `answer` SHALL have a `valueCoding` that is set to the SNOMED CT code `410515003`, known present. The `item` will also have an `author` extension property which will reference the `fhirUser` provided to the DTR application.
 

@@ -1,7 +1,7 @@
 Guidance and conformance expectations around privacy and security are provided by all three specifications this implementation guide relies on. Implementers SHALL be familiar with and adhere to any security and privacy rules defined by:
 
 * FHIR core: [Security & Privacy module]({{site.data.fhir.path}}secpriv-module.html), [Security Principles]({{site.data.fhir.path}}security.html) and [Implementer's Checklist]({{site.data.fhir.path}}safety.html)
-* CDS Hooks: [Security & Safety](https://cds-hooks.hl7.org/specification/1.0/#security-and-safety)
+* CDS Hooks: [Security & Safety](https://cds-hooks.hl7.org/1.0/#security-and-safety)
 * SMART on FHIR: [SMART App Launch](http://www.hl7.org/fhir/smart-app-launch)
 
 If the Documentation Templates and Rules (DTR) / Substitutable Medical Applications, Reusable Technologies (SMART) on FHIR application is executed using an app, the app will only have access to data specifically authorized by the organization as appropriate for use.
@@ -17,9 +17,4 @@ Some SMART on FHIR applications are browser based, such as those conforming to t
 
 Other SMART on FHIR applications are server based, such as those conforming to the [confidential app profile](http://hl7.org/fhir/smart-app-launch/#use-the-confidential-app--profile-if-your-app-is-able-to-protect-a-client_secret). In this case, patient data will be requested by the server hosting the DTR application. This may be external to the provider organization.
 
-> Note to ballot comments
->
-> This is an area the project is explicitly seeking comments on. Thoughts on the whether
-> EHR systems should be required to support specific SMART on FHIR application profiles
-> or comments on restrictions that should be applied to what payer organizations may do
-> with any received patient information are welcome.
+Payer systems SHALL use information received solely for purpose for which the documentation template was created (typically processing of a specific claim or prior authorization request) and SHALL NOT use information received over the DTR interfaces for any additional purposes other than audit.

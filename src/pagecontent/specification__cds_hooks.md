@@ -1,5 +1,5 @@
 ### Use of Card.links
-One entry point into the Documentation Templates and Rules (DTR) application is launching from a [Clinical Decision Support (CDS) Hooks Card](https://cds-hooks.hl7.org/ballots/2018May/specification/1.0/#card-attributes). 
+One entry point into the Documentation Templates and Rules (DTR) application is launching from a [Clinical Decision Support (CDS) Hooks Card](https://cds-hooks.hl7.org/1.0/#card-attributes). 
 
 DTR applications SHOULD, to the extent possible, capture and return information that is relevant to the specific use case. 
 

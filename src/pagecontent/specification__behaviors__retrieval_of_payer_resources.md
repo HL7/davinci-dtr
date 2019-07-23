@@ -2,12 +2,14 @@ The Documentation Templates and Rules (DTR) application will need to retrieve re
 
 | Field | Optionality | Type | Description |
 | ----- | ----------- | ---- | ----------- |
-| fhirAuthorization | OPTIONAL | *object* | A structure holding an OAuth 2.0 bearer access token granting the DTR Application access to payer FHIR resources, along with supplemental information relating to the token. |
-| template | REQUIRED | *string* | The URL of the Questionnaire for the DTR application to use for execution. |
+| filePath | OPTIONAL | *string* | The base URL for the questionnaire and related CQL resources. If left blank the app should use a default base URL. |
+| template | REQUIRED | *string* | The id of the Questionnaire for the DTR application to use for execution. |
 | request | REQUIRED | *object* | A copy of the draft request resource for which documentation requirements are being gathered. |
 
+TODO: Figure out if passing the object is a security violation - and if so, figure out how to manage it.
+
 ### Authentication of SMART on FHIR application to payer API
-Payers may require the DTR application to authenticate in order to retrieve resources. In the case that authentication is required, the following JSON structure SHALL be populated by the payer system. This JSON is based on the structure for [FHIR Authorization in CDS Hooks](https://cds-hooks.hl7.org/ballots/2018May/specification/1.0/#fhir-resource-access).
+Payers may require the DTR application to authenticate in order to retrieve resources. In the case that authentication is required, the following JSON structure SHALL be populated by the payer system. This JSON is based on the structure for [FHIR Authorization in CDS Hooks](https://cds-hooks.hl7.org/1.0/#fhir-resource-access).
 
 | Field | Optionality | Type | Description |
 | ----- | ----------- | ---- | ----------- |
