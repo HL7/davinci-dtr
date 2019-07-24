@@ -9,14 +9,16 @@ The payer IT system shall be the primary system responding to DTR queries.
 #### Healthcare Provider Organization
 A healthcare provider organization contains medical providers such as hospitals, doctors, etc.
 
-#### EHR System
+#### EMR System
 The Electronic Medical Record (EMR) system shall be the primary system used to initiate the DTR process. The Substitutable Medical Applications, Reusable Technologies (SMART) on FHIR app will typically be initiated from within the EMR.
 
 The goal of DTR is to collect clinical documentation and/or to encourage the completion of documentation that demonstrates medical necessity for ordered items, it is focused on the clinical documentation effort and not the administrative process. 
 
-It is possible to have a process where the focus is on the interaction with the EHR via an external application(s). Examples of external systems are administrative, payment, practice management, scheduling, and other applications. 
+It is possible to have a process where the focus is on the interaction with the EMR via an external application(s). Examples of external systems are administrative, payment, practice management, scheduling, and other applications. 
 
->If information is not available to the SMART on FHIR application, then the application will need to prompt the provider to enter information that is not available to the application. Ultimately, the solution is to provide greater integration (including possibly FHIR APIs) between the EHR and other supporting applications. (Quality measures may also require this type of integration)
+>If information is not available to the SMART on FHIR application, then the application will need to prompt the provider to enter information that is not available to the application. Ultimately, the solution is to provide greater integration (including possibly FHIR APIs) between the EMR and other supporting applications. (Quality measures may also require this type of integration)
+
+>If Electronic Health Record (EHR) is used in this IG it should be considered synonymous to EMR. 
 
 #### DTR compliant SMART on FHIR app
 Within Documentation Templates and Rules (DTR) the SMART on FHIR app is considered a key component because of the inherent nature of SMART on FHIR apps, namely the ability to call into backend systems such as payers using the [SMART launch protocol](http://www.hl7.org/fhir/smart-app-launch/) and [FHIR](https://www.hl7.org/fhir/) as well as the ability to run rules such as [Clinical Quality Language (CQL)](https://cql.hl7.org/STU2/). This functionality will enable DTR to gather documents and templates, retrieve FHIR resources from EHRs, and run rules to reduce the time involved in the Documentation Requirements Lookup Service (DRLS) process.
