@@ -4,11 +4,12 @@ When the Documentation Templates and Rules (DTR) application has collected all o
 Many EHR Systems do not currently support writing a QuestionnaireResponse into a FHIR server. However, The US Core Implementation Guide (IG) now includes a [DocumentReference Profile](https://build.fhir.org/ig/HL7/US-Core-R4/StructureDefinition-new-us-core-documentreference.html), which allows clients, like the DTR application, to write notes into the EHR System's FHIR server. The following section describes how the QuestionnaireResponse that is generated through the processes described in Section 4.4.3 and Section 4.4.4 can be transformed into text such that it may be saved as a note in the EHR system.
 
 #### QuestionnaireResponse transformation process
+
 The information that is collected (via the Questionnaire interaction with the user) SHOULD be written to the EHR via the available FHIR API if possible. The results of the questionnaireResponse SHALL be saved as the FHIR resource and/or as a human readable format that is supported by the EHR.
 
-The DTR application SHOULD support transforming a DTR-QuestionnaireResponse resource into a [Portable Document Format](https://www.iso.org/standard/63534.html) (PDF) representation. DTR applications SHOULD ensure that the document indicates differences between user supplied information and data gathered from the EHR system.
+The DTR application SHOULD support transforming a DTR-QuestionnaireResponse resource into a [Portable Document Format](https://www.iso.org/standard/63534.html) (PDF) representation. DTR applications SHOULD ensure that the document indicates whether data was entered by the provider in reponse to the questionnaire or retrieved from the EHR directly.
 
-The DTR application SHOULD create a DocumentReference resource with this information that conforms to the US Core DocumentReference profile. The generated PDF SHOULD be recorded in `DocumentReference.content.attachment.data`. `DocumentReference.content.attachment.contentType` SHOULD be `application/pdf`
+The DTR application SHOULD store this information in the EHR - either as a DocumentReference resource conforming to the US Core profile or in another EHR-appropriate form. The generated PDF SHOULD be recorded in `DocumentReference.content.attachment.data`. `DocumentReference.content.attachment.contentType` SHOULD be `application/pdf`
 
 > Note to ballot comments
 >
@@ -22,4 +23,4 @@ EHR systems that conform to US Core STU3 allow for the creation of Documentation
 The DTR application creates a QuestionnaireResponse resource through the course of normal operation. This resource may be saved to the patient record in the EHR system of the healthcare provider if it is supported. It may also be transmitted to the Payer IT system.
 
 #### Interaction with Payer API
-The Payer IT system should support the FHIR create interaction to allow the DTR application to send the QuestionnaireResponse resource to the payer. The FHIR endpoint for the payer may require authentication. If it is required, it SHALL follow the procedures described in [Section 4.4.1.1](specification__behaviors__retrieval_of_payer_resources.html#authentication-of-smart-on-fhir-application-to-payer-api) - Authentication of SMART on FHIR application to payer API.
+The Payer IT system should support the FHIR create interaction to allow the DTR application to send the QuestionnaireResponse resource to the payer. The FHIR endpoint for the payer may require authentication. If it is required, it SHALL follow the procedures described in [Section 4.4.1](specification__behaviors__retrieval_of_payer_resources.html#authentication-of-smart-on-fhir-application-to-payer-api) - Authentication of SMART on FHIR application to payer API.

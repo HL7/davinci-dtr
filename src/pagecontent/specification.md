@@ -1,3 +1,5 @@
+This section of the implementation guide defines the guidelines of app behavior and information on how to implement the technologies required to build a conformant app.
+
 * [Profiles](specification__profiles.html)
 
 * [CDS Hooks](specification__cds_hooks.html)
