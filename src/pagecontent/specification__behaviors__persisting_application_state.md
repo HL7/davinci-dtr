@@ -33,6 +33,8 @@ The SMART on FHIR App Launch Framework IG and FHIR specification provide methods
 
 As an example, the DTR application may retrieve a Practitioner resource by retrieving the URL supplied in the `fhirUser` claim. The DTR application may then query the CareTeam or PractitionerRole resources to determine their relationship to other staff in the provider organization and determine if their usage sessions should also be made available.
 
+Furthermore, the notion of workflows and multiple users could get extended to work queues. The EHR could maintain a list of in progress FHIR Questionnaires and store a reference to each of these within the EHR for the clinicians and other employees within the organization to continue working on. There could be built in mechanisms to assign FHIR Tasks for the work to the queues of other employees. Specific details surrounding this type of work queue implementation are out of the scope of this IG.
+
 ### Session Expiration
 While a user may need to suspend interaction with the DTR application, there may be a limit on the amount of time that a set of documentation templates and rules is valid. For example, it is unreasonable to resume the DTR application for an order that was started five years in the past.
 
