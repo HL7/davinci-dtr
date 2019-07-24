@@ -9,7 +9,7 @@ The Documentation Templates and Rules (DTR) application will need to retrieve re
 TODO: Figure out if passing the object is a security violation - and if so, figure out how to manage it.
 
 ### Authentication of SMART on FHIR application to payer API
-Payers may require the DTR application to authenticate in order to retrieve resources. In the case that authentication is required, the following JSON structure SHALL be populated by the payer system. This JSON is based on the structure for [FHIR Authorization in CDS Hooks](https://cds-hooks.hl7.org/1.0/#fhir-resource-access).
+Payers SHALL require the DTR application to authenticate in order to retrieve resources when PHI is exchanged. In the case that authentication is required, the following JSON structure SHALL be populated by the payer system. This JSON is based on the structure for [FHIR Authorization in CDS Hooks](https://cds-hooks.hl7.org/1.0/#fhir-resource-access).
 
 | Field | Optionality | Type | Description |
 | ----- | ----------- | ---- | ----------- |
