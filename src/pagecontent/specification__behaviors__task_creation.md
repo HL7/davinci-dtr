@@ -6,8 +6,10 @@ The DTR application should attempt to prepopulate as much of the Task resource a
 
 The questionnaire should be able to suspend completion until all tasks are completed.  How the application is suspended is left to the implementer, but the state of the questionnaire should be preserved.  The DTR application launches with a unique `state` id, which could be used to preserve state until the questionnaire resumes.
 
-> Note to ballot comments
+> Note to ballot commenters
 >
-> This is an area the project is explicitly seeking comments on. Thoughts on the ability
+> This area of the project is explicitly seeking comments. Thoughts on the ability
 > of EHR systems to accept Task resources as well as feedback on the constraints that
 > should be placed on the task resource are welcome.
+> 
+> The ability for a clinician to delegate work is absolutely critical -- not just for the type of appointment scheduling mentioned on this page, but also for the actual form/questionnaire completion itself. If this feature of the IG is actually used to move work from clinicians to other users, it should be fleshed out and mandated. (Note: It may not be possible to mandate in this version of the IG. So consider using SHOULD not SHALL. Pursue further testing at Connectathons and in practice before mandating.)
