@@ -16,7 +16,7 @@ The goal of DTR is to collect clinical documentation and/or to encourage the com
 
 It is possible to have a process where the focus is on the interaction with the EMR via an external application(s). Examples of external systems are administrative, payment, practice management, scheduling, and other applications. 
 
->If information is not available to the SMART on FHIR application, then the application will need to prompt the provider to enter information that is not available to the application. Ultimately, the solution is to provide greater integration (including possibly FHIR APIs) between the EMR and other supporting applications. (Quality measures may also require this type of integration)
+>If information is not available to the SMART on FHIR application, then the application will need to prompt the provider to enter the missing information. Ultimately, the solution is to provide greater integration (including possibly FHIR APIs) between the EMR and other supporting applications. (Quality measures may also require this type of integration)
 
 >If Electronic Health Record (EHR) is used in this IG it should be considered synonymous to EMR. 
 
@@ -37,7 +37,7 @@ The goal of this use case is to reduce user or provider burden and simplify proc
 * forms and templates
 * indications of whether prior authorization is required
 
-DTR differs from CRD mostly in its ability to run rules and auto fill forms and templates.  The CRD portion of the full workflow might be responsible for verifying with the payer that a given device request requires documentation, and then consolidating the necessary links for the DTR app to be run.  In most cases, the CRD application would return a CDS hooks card populated with a SMART launch link for the DTR app, a link to a questionnaire resource, a patient ID, and a device request resource as JSON.  While CRD may verify that documentation rules are required, it does not involve any actual authorization or validation of the rule.  The DTR app is responsible for taking the provided rule and checking if available EHR data satisfies the requirements, as well as allowing manual population of missing data.  
+DTR differs from CRD mostly in its ability to run rules and auto fill forms and templates.  The CRD portion of the full workflow might be responsible for verifying with the payer that a given device request requires documentation, and then consolidating the necessary links for the DTR app to be run.  In most cases, the CRD application would return a CDS hooks card populated with a SMART launch link for the DTR app, a link to a questionnaire resource, and a device request resource ID.  While CRD may verify that documentation rules are required, it does not involve any actual authorization or validation of the rule.  The DTR app is responsible for taking the provided rule and checking if available EHR data satisfies the requirements, as well as allowing manual population of missing data.  
 
 ### Process Flow
 
