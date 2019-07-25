@@ -1,6 +1,10 @@
 {
     "resourceType": "QuestionnaireResponse",
     "id": "home-o2-questionnaireresponse",
+    "text": {
+      "status": "generated",
+      "div": "<div><p>This completed form contains all of the information collected from the provider on Home Oxygen Therapy.</p></div>"
+    },
     "meta": {
       "profile": [
         "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse-r4"

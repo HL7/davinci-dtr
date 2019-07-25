@@ -1,6 +1,10 @@
 {
     "resourceType": "Task",
     "id": "blood-gass-panel-task-r4",
+    "text": {
+      "status": "generated",
+      "div": "<div><p>This is an example Task that was created to request a Blood Gas Panel.</p></div>"
+    },
     "meta": {
       "profile": ["http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-task-r4"]
     },
