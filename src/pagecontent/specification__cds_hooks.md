@@ -3,7 +3,7 @@ One entry point into the Documentation Templates and Rules (DTR) application is 
 
 DTR applications SHOULD, to the extent possible, capture and return information that is relevant to the specific use case. 
 
-As a part of a CDS Hooks response, the Payer IT system SHALL return a Card object with at least one Link object populated in the Card.linksproperty. The Link object SHALL have a type property set to smart. The Link object SHALL have a URL property set to the launch URL of the DTR application.
+As a part of a CDS Hooks response, the Payer IT system SHALL return a Card object with at least one Link object populated in the Card.links property. The Link object SHALL have a type property set to smart. The Link object SHALL have a URL property set to the launch URL of the DTR application.
 
 A payer may secure endpoints from which the DTR application will retrieve additional artifacts to support execution. If the payer does require authentication, then the Payer IT system SHALL provide the authentication information through the `appContext` property of the `Link` object. The `appContext` property SHALL contain escaped JSON. The structure of this JSON is described in [Section 4.4.1.1](specification__behaviors__retrieval_of_payer_resources.html#authentication-of-smart-on-fhir-application-to-payer-api) - Authentication of SMART on FHIR application to payer API.
 
