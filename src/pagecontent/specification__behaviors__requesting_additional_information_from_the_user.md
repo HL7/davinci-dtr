@@ -105,7 +105,7 @@ Finally, if the user did not supply a value, but provided an attestation that th
   "linkId": "age",
   "answer": {
     "valueCoding": {
-      "system": "http://todo.org/attestation", "code": "attestation"
+      "system": "http://snomed.info/sct", "code": "410515003"
     }
   }
 }
