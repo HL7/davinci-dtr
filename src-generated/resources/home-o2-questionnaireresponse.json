@@ -3,7 +3,7 @@
     "id": "home-o2-questionnaireresponse",
     "text": {
       "status": "generated",
-      "div": "<div><p>This completed form contains all of the information collected from the provider on Home Oxygen Therapy.</p></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This completed form contains all of the information collected from the provider on Home Oxygen Therapy.</p></div>"
     },
     "meta": {
       "profile": [

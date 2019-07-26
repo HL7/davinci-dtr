@@ -3,7 +3,7 @@
   "id": "home-o2-questionnaire",
   "text": {
     "status": "generated",
-    "div": "<div><p>This form is used to collect information from the provider on Home Oxygen Therapy.</p></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This form is used to collect information from the provider on Home Oxygen Therapy.</p></div>"
   },
   "meta": {
     "profile": ["http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaire-r4"]
