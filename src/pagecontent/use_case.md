@@ -21,7 +21,7 @@ It is possible to have a process where the focus is on the interaction with the 
 >If Electronic Health Record (EHR) is used in this IG it should be considered synonymous to EMR. 
 
 #### DTR compliant SMART on FHIR app
-Within Documentation Templates and Rules (DTR) the SMART on FHIR app is considered a key component because of the inherent nature of SMART on FHIR apps, namely the ability to call into backend systems such as payers using the [SMART launch protocol](http://www.hl7.org/fhir/smart-app-launch/) and [FHIR](https://www.hl7.org/fhir/) as well as the ability to run rules such as [Clinical Quality Language (CQL)](https://cql.hl7.org/STU2/). This functionality will enable DTR to gather documents and templates, retrieve FHIR resources from EHRs, and run rules to reduce the time involved in the Documentation Requirements Lookup Service (DRLS) process.
+Within Documentation Templates and Rules (DTR) the SMART on FHIR app is considered a key component because of the inherent nature of SMART on FHIR apps, namely the ability to call into backend systems such as payers using the [SMART launch protocol](http://www.hl7.org/fhir/smart-app-launch/) and [FHIR](https://www.hl7.org/fhir/) as well as the ability to run rules such as [Clinical Quality Language (CQL)](https://cql.hl7.org/STU2/). This functionality will enable DTR to gather documents and templates, retrieve FHIR resources from EMRs, and run rules to reduce the time involved in the Documentation Requirements Lookup Service (DRLS) process.
 
 #### Users (clinicians and office staff)
 Users or Providers are challenged to deal with the diversity of administrative and clinical requirements that impact documenting the need for treatment and selecting the appropriate best path for care. The current environment is made more complex by the large number of payer-based requirements that must be met to document that covered services and devices are medically necessary and appropriate.
@@ -51,9 +51,9 @@ This shows an overview of how the SMART on FHIR App fits into the flow when orde
 1. Oxygen Therapy order triggers appropriate CDS hook.
 2. It is determined that there is prior authorization required and there are forms to be filled out.
 3. The SMART on FHIR App fetches CQL (rules) and a FHIR Questionnaire.
-4. The engine then extracts the answers in order to formulate a FHIR Questionnaire response.
+4. The engine then extracts the answers in order to formulate a FHIR QuestionnaireResponse.
 5. The user provides any missing information to fully populate the Questionnaire response.
-6. It then writes the FHIR Questionnaire response back to Payer server and optionally to the EHR in a text format.
+6. It then writes the FHIR QuestionnaireResponse back to Payer server and optionally to the EHR in a text format.
 
 > Note: There is no need for the user to see the form if it can be auto-completed unless they need to approve sending the result to the payer or to "sign" the information prior to submission.
 

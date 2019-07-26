@@ -15,7 +15,7 @@ prior to reading the rest of this implementation guide.
 
 This implementation guide also leverages the US Core set of profiles defined by HL7 for sharing human Electronic Health Record (EHR) data in the US.  Additional information is located at: [US-Core](http://hl7.org/fhir/us/core/2019Jan/)
 
-This implementation guide supports the [STU3](http://hl7.org/fhir/STU3) and [R4]({{site.data.fhir.path}}index.html) versions of the FHIR standard. FHIR services based on STU3 are being moved into production by EHR vendors. R4 is just recently published and the goal is to ensure the implementation guide is aligned with the current direction of the FHIR standard. Initial implementations will focus on STU3.
+This implementation guide supports the [STU3](http://hl7.org/fhir/STU3) and [R4](http://hl7.org/fhir/R4/index.html) versions of the FHIR standard. FHIR services based on STU3 are being moved into production by EHR vendors. R4 is just recently published and the goal is to ensure the implementation guide is aligned with the current direction of the FHIR standard. Initial implementations will focus on STU3.
 
 This implementation guide also builds on the US Core Implementation Guide and implementers need to familiarize themselves with the profiles in those Implementation Guides:
 

@@ -6,8 +6,8 @@ Primary Authors:
 * Larry Decelles (The MITRE Corporation)
 
 Technical Editing:
-* Keeyan Ghoreshi
-* Patrick LaRocque
+* Keeyan Ghoreshi (The MITRE Corporation)
+* Patrick LaRocque (The MITRE Corporation)
 
 Project leads:
 * Robert Dieterle (Enable Care, LLC)
