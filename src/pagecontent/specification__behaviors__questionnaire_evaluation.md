@@ -35,7 +35,7 @@ This will create a CQL expression named `Age`. The expression can then be used t
 Using the `cqf-expresion` extension, the `item` SHALL refer to the named expression in the CQL rules that contains the desired information.
 
 #### Application with FHIR STU3
-The same conceptual approach is shared with FHIR R4 however, the extensions change slightly between versions. Instead of using the `cqf-expression` extension, the `cqif-calculatedValue` extension should be used.
+The same conceptual approach is shared with FHIR R4, though the extensions change slightly between versions. Instead of using the `cqf-expression` extension, the `cqif-calculatedValue` extension should be used.
 
 ### Generation of QuestionnaireResponse
 The Documentation Templates and Rules (DTR) application is responsible for iterating through all of the `Questionnaire.item` elements and checking the `cqf-expression` when using FHIR R4 or `cqif-calculatedValue` when using FHIR STU3, for values to populate a QuestionnaireResponse. The DTR application SHALL create a QuestionnaireResponse resource. For each `Questionnaire.item`, there SHALL be a corresponding `QuestionnaireResponse.item`. When the `cqf-expression` or `cqif-calculatedValue` is not `null`, the value of the expression SHALL be used as the answer in the QuestionnaireResponse. The following JSON fragment shows an example representation of `item` in the QuestionnaireResponse based on the example above.
@@ -49,4 +49,4 @@ The Documentation Templates and Rules (DTR) application is responsible for itera
 }
 ```
 
-For each `Questionnaire.item` with a `null` value for the `cqf-expression` or `cqif-calculatedValue`, user input will be required to obtain the desired information, which is described in Section 4.4.4.
+For each `Questionnaire.item` with a `null` value for the `cqf-expression` or `cqif-calculatedValue`, user input will be required to obtain the desired information, which is described in [Section 4.4.4](specification__behaviors__requesting_additional_information_from_the_user.html).
