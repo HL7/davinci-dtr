@@ -35,6 +35,8 @@ The link 'http://hl7.org/fhir/smart-app-launch/#step-1-app-asks-for-authorizatio
 The link 'http://hl7.org/fhir/smart-app-launch/#step-3-app-exchanges-authorization-code-for-access-token' for "Step 3 of the launch sequence" cannot be resolved
 The link 'http://hl7.org/fhir/smart-app-launch/#use-the-public-app-profile-if-your-app-is-unable-to-protect-a-client_secret' for "public app profile" cannot be resolved
 The link 'http://hl7.org/fhir/smart-app-launch/#use-the-confidential-app--profile-if-your-app-is-able-to-protect-a-client_secret' for "confidential app profile" cannot be resolved
+The link 'http://build.fhir.org/ig/HL7/davinci-dtr/home-o2-questionnaire.html' for "Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]"
+The link 'http://build.fhir.org/ig/HL7/davinci-dtr/home-o2-questionnaireresponse.html' for "The questionnaire "Questionnaire/q045" could not be resolved, so no validation can be performed against the base questionnaire"
 
 // Should be fixed when the IG is published
 The link 'http://hl7.org/fhir/us/davinci-dtr/history.cfml' for "Version History" cannot be resolved
