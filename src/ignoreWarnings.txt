@@ -54,5 +54,9 @@ The link 'http://hl7.org/fhir/STU3/cqif/loinc.html#alist' for "LOINC Answer List
 The link 'http://hl7.org/fhir/us/davinci-dtr/STU3/history.html' for "Version History null" cannot be resolved
 URL value 'http://hl7.org/fhir/tools/StructureDefinition/resource-information' does not resolve
 
+// Suppress information messages 
+The info message 'http://build.fhir.org/ig/HL7/davinci-dtr/blood-gass-panel-task-stu3.html' for "None of the codes provided are in the value set http://hl7.org/fhir/ValueSet/task-performer-type (http://hl7.org/fhir/ValueSet/task-performer-type, and a code is recommended to come from this value set) (codes = http://snomed.info/sct#18850004)"
+The info message 'http://build.fhir.org/ig/HL7/davinci-dtr/home-o2-questionnaireresponse-stu3.html' for "No questionnaire is identified, so no validation can be performed against the base questionnaire" 
+
 // We do not want to include the resources
 The link 'Questionnaire/q045' for "Questionnaire/q045" cannot be resolved
