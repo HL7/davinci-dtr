@@ -10,7 +10,7 @@ Payers should note that the ordering of `item` elements in a Questionnaire resou
 When `item`s meet the conditions stated above, they SHALL be presented to the user for their input.
 
 #### Structured Data Capture
-Payers may have requirements on how questions are presented to users. To allow for this, payers MAY supply Questionnaire resources that conform to the [Advanced Rendering Questionnaire Profile](http://build.fhir.org/ig/HL7/sdc/sdc-questionnaire-render.html) as defined in Structure Data Capture.
+Payers may have requirements on how questions are presented to users. To allow for this, payers MAY supply Questionnaire resources that conform to the [Advanced Rendering Questionnaire Profile](http://hl7.org/fhir/uv/sdc/2019May/sdc-questionnaire-render.html) as defined in Structure Data Capture.
 
 The purpose of this extension is to indicate that it is not SAFE to render the form if the styles indicated in the questionnaire are not followed. If the system is not capable of rendering the form as the questionnaire dictates, then it cannot display the form.  Note the use of this flag should be extremely rare in DTR applications.
 
