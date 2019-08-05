@@ -14,7 +14,7 @@
 
       },
       {
-         "version": "1.0.0",
+         "version": "0.2.0",
          "date": "2019-09-01",
          "desc": "STU1 Ballot for FHIR R4",
          "path": "http://hl7.org/fhir/us/davinci-dtr/2019Sep",
