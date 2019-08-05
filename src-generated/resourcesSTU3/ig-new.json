@@ -3,27 +3,27 @@
   "id" : "davinci-dtr",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/plarocque/dme-erx/davinci-dtr/src-generated/resourcesSTU3"
+    "valueString" : "/Users/andrewg/projects/davinci-dtr/src-generated/resourcesSTU3"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/plarocque/dme-erx/davinci-dtr/src/resources"
+    "valueString" : "/Users/andrewg/projects/davinci-dtr/src/resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/plarocque/dme-erx/davinci-dtr/src/vocabulary"
+    "valueString" : "/Users/andrewg/projects/davinci-dtr/src/vocabulary"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/plarocque/dme-erx/davinci-dtr/src/examples"
+    "valueString" : "/Users/andrewg/projects/davinci-dtr/src/examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/plarocque/dme-erx/davinci-dtr/src/images"
+    "valueString" : "/Users/andrewg/projects/davinci-dtr/src/images"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/plarocque/dme-erx/davinci-dtr/src-generated/pagesSTU3"
+    "valueString" : "/Users/andrewg/projects/davinci-dtr/src-generated/pagesSTU3"
   }],
   "url" : "http://hl7.org/fhir/us/davinci-dtr/STU3/ImplementationGuide/davinci-dtr",
   "version" : "3.0.1",

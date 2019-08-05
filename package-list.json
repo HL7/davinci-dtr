@@ -10,17 +10,17 @@
          "path": "http://build.fhir.org/ig/HL7/davinci-dtr",
          "status": "ci-build",
          "current": true,
-         "fhir-version": "4.0.0"
+         "fhirversion": "4.0.0"
 
       },
       {
          "version": "1.0.0",
          "date": "2019-09-01",
          "desc": "STU1 Ballot for FHIR R4",
-         "path": "http://hl7.org/fhir/us/davinci-dtr/2019September",
+         "path": "http://hl7.org/fhir/us/davinci-dtr/2019Sep",
          "status": "ballot",
          "sequence": "STU1",
-         "fhir-version": "4.0.0"
+         "fhirversion": "4.0.0"
       },
       {
          "version": "0.1.0",
@@ -29,7 +29,7 @@
          "path": "http://hl7.org/fhir/us/davinci-dtr/2019May",
          "status": "ballot",
          "sequence": "STU1",
-         "fhir-version": "4.0.0"
+         "fhirversion": "4.0.0"
       }
    ]
 }
