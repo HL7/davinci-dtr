@@ -31,7 +31,7 @@
   "title" : "Da Vinci - Documentation Templates and Rules",
   "status" : "draft",
   "experimental" : false,
-  "publisher" : "HL7 Da Vinci Project",
+  "publisher" : "HL7 Clinical Decision Support Work Group",
   "contact" : [{
     "telecom" : [{
       "system" : "url",
