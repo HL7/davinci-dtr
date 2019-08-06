@@ -3,22 +3,22 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="davinci-dtr"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/andrewg/projects/davinci-dtr/src-generated/resources"/>
+    <valueString value="C:\Users\Bryn\Documents\Src\HL7\Specifications\DTR\src-generated\resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/andrewg/projects/davinci-dtr/src/resources"/>
+    <valueString value="C:\Users\Bryn\Documents\Src\HL7\Specifications\DTR\src\resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/andrewg/projects/davinci-dtr/src/vocabulary"/>
+    <valueString value="C:\Users\Bryn\Documents\Src\HL7\Specifications\DTR\src\vocabulary"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/Users/andrewg/projects/davinci-dtr/src/examples"/>
+    <valueString value="C:\Users\Bryn\Documents\Src\HL7\Specifications\DTR\src\examples"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/Users/andrewg/projects/davinci-dtr/src/images"/>
+    <valueString value="C:\Users\Bryn\Documents\Src\HL7\Specifications\DTR\src\images"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/Users/andrewg/projects/davinci-dtr/src-generated/pages"/>
+    <valueString value="C:\Users\Bryn\Documents\Src\HL7\Specifications\DTR\src-generated\pages"/>
   </extension>
   <url value="http://hl7.org/fhir/us/davinci-dtr/ImplementationGuide/davinci-dtr"/>
   <version value="0.2.0"/>

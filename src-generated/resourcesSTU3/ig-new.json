@@ -3,27 +3,27 @@
   "id" : "davinci-dtr",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/andrewg/projects/davinci-dtr/src-generated/resourcesSTU3"
+    "valueString" : "C:\\Users\\Bryn\\Documents\\Src\\HL7\\Specifications\\DTR\\src-generated\\resourcesSTU3"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/andrewg/projects/davinci-dtr/src/resources"
+    "valueString" : "C:\\Users\\Bryn\\Documents\\Src\\HL7\\Specifications\\DTR\\src\\resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/andrewg/projects/davinci-dtr/src/vocabulary"
+    "valueString" : "C:\\Users\\Bryn\\Documents\\Src\\HL7\\Specifications\\DTR\\src\\vocabulary"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/Users/andrewg/projects/davinci-dtr/src/examples"
+    "valueString" : "C:\\Users\\Bryn\\Documents\\Src\\HL7\\Specifications\\DTR\\src\\examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/andrewg/projects/davinci-dtr/src/images"
+    "valueString" : "C:\\Users\\Bryn\\Documents\\Src\\HL7\\Specifications\\DTR\\src\\images"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/Users/andrewg/projects/davinci-dtr/src-generated/pagesSTU3"
+    "valueString" : "C:\\Users\\Bryn\\Documents\\Src\\HL7\\Specifications\\DTR\\src-generated\\pagesSTU3"
   }],
   "url" : "http://hl7.org/fhir/us/davinci-dtr/STU3/ImplementationGuide/davinci-dtr",
   "version" : "3.0.1",
