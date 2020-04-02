@@ -22,7 +22,7 @@ Payers SHALL require the DTR application to authenticate in order to retrieve re
 ### Questionnaire
 The DTR application SHALL use the URL provided in the `template` property of the `appContext` to retrieve a Questionnaire resource. The payer SHALL provide this as a FHIR resource, such that the DTR application will be executing a FHIR read interaction on the payer's server. The returned Questionnaire resource SHALL conform to the CQF Questionnaire profile and MAY conform to Structured Data Capture.
 
-The Questionnaire SHALL have a `cqf-library` extension property specified when using FHIR R4. When using FHIR STU3, The Questionnaire SHALL have a `cqif-library` extension property specified. That property SHALL provide the location of one or more CQL libraries needed to execute the payer rules.
+The Questionnaire SHALL have a `cqf-library` extension property specified when using FHIR R4. That property SHALL provide the location of one or more CQL libraries needed to execute the payer rules.
 
 ### CQL Rules
-The DTR application SHALL use the URL provided in the `cqf-library` or `cqif-library` extension to retrieve the CQL necessary to execute the payer rules. Metadata about the rules will be represented as a FHIR Library resource. The payer SHALL provide this as a FHIR resource, such that the DTR application will be executing a FHIR read interaction on the payer's server.
+The DTR application SHALL use the URL provided in the `cqf-library` extension to retrieve the CQL necessary to execute the payer rules. Metadata about the rules will be represented as a FHIR Library resource. The payer SHALL provide this as a FHIR resource, such that the DTR application will be executing a FHIR read interaction on the payer's server.
