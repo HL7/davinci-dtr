@@ -15,7 +15,7 @@ prior to reading the rest of this implementation guide.
 
 This implementation guide also leverages the US Core set of profiles defined by HL7 for sharing human Electronic Health Record (EHR) data in the US.  Additional information is located at: [US-Core](http://hl7.org/fhir/us/core/2019Jan/)
 
-This implementation guide supports the [STU3](http://hl7.org/fhir/STU3) and [R4](http://hl7.org/fhir/R4/index.html) versions of the FHIR standard. FHIR services based on STU3 are being moved into production by EHR vendors. R4 is just recently published and the goal is to ensure the implementation guide is aligned with the current direction of the FHIR standard. Initial implementations will focus on STU3.
+This implementation guide supports the [R4](http://hl7.org/fhir/R4/index.html) version of the FHIR standard. FHIR services based on R4 are the future of the standard, and the implementation guide aims to support the most modern solution and support transition of FHIR systems to R4.
 
 This implementation guide also builds on the US Core Implementation Guide and implementers need to familiarize themselves with the profiles in those Implementation Guides:
 
@@ -26,10 +26,10 @@ This implementation guide also builds on the US Core Implementation Guide and im
 
 Implementers should also familiarize themselves with the FHIR resources used within the guide:
 
-| STU3 | R4 |
-| ---- | -- |
-| [Questionnaire](http://hl7.org/fhir/STU3/questionnaire.html) | [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html) |
-| [QuestionnaireResponse](http://hl7.org/fhir/STU3/questionnaireresponse.html) |[QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) |
+| Resources |
+| ------------ |
+| [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html) |
+| [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) |
 
 ### US Core
 Clinical systems SHALL use the specification and workflows defined by [US Core](http://www.hl7.org/fhir/us/core/) to initiate Document Template and Rule functionality with the payers. Implementers should be familiar with this specification.

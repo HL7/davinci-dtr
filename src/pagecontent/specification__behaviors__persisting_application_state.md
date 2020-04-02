@@ -38,4 +38,4 @@ Furthermore, the notion of workflows and multiple users could get extended to wo
 ### Session Expiration
 While a user may need to suspend interaction with the DTR application, there may be a limit on the amount of time that a set of documentation templates and rules is valid. For example, it is unreasonable to resume the DTR application for an order that was started five years in the past.
 
-Payers SHOULD use the `Questionnaire.effectivePeriod` element to describe the period over which the documentation templates and rules are valid. This element is available in the FHIR STU3 and well as the FHIR R4 versions of the Questionnaire resource. The DTR application SHALL NOT allow completion of a usage session if the current time has exceeded the end of the `effectivePeriod`.
+Payers SHOULD use the `Questionnaire.effectivePeriod` element to describe the period over which the documentation templates and rules are valid. The DTR application SHALL NOT allow completion of a usage session if the current time has exceeded the end of the `effectivePeriod`.

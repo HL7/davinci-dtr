@@ -16,6 +16,8 @@ The DTR application SHOULD store this information in the EHR - either as a Docum
 > This is an area the project is explicitly seeking comments on. Please provide any
 > details on constraints that should be applied to the document generation process.
 
+> Mention of stu3 but not sure if needed for removal
+
 #### Interaction with EHR
 EHR systems that conform to US Core STU3 allow for the creation of DocumentationReference resources through a FHIR API. As such, the DTR application should use the typical [FHIR create](http://hl7.org/fhir/R4/http.html#create) interaction to write the documentation into the EHR.
 
