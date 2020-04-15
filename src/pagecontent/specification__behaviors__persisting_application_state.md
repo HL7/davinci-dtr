@@ -1,6 +1,6 @@
 Users of the Documentation Templates and Rules (DTR) application are likely to be performing many tasks to support patient care or administration of the provider organization. As such, it should be expected that users may need to halt interaction with the DTR application and resume at a later time.
 
-The DTR application should anticipate that users may not be able to complete a full interaction between launch from a Clinical Decision Support (CDS) Hooks Card to providing a response back to the payer. It is recommended that DTR conformant Substitutable Medical Applications, Reusable Technologies (SMART) on FHIR applications preserve state automatically as a user interacts with it. In this manner, the user does not need to explicitly take action to save their state.
+The DTR application should anticipate that users may not be able to complete a full interaction between launch from a Clinical Decision Support (CDS) Hooks Card to providing a response back to the payer. It is recommended that DTR conformant [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) applications preserve state automatically as a user interacts with it. In this manner, the user does not need to explicitly take action to save their state.
 
 Exact mechanisms for saving state are outside the scope of this implementation guide. The following sections describe mechanisms that a DTR application may use to establish the data necessary to store and retrieve state.
 

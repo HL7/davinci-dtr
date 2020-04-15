@@ -4,7 +4,9 @@ Guidance and conformance expectations around privacy and security are provided b
 * CDS Hooks: [Security & Safety](https://cds-hooks.hl7.org/1.0/#security-and-safety)
 * SMART on FHIR: [SMART App Launch](http://www.hl7.org/fhir/smart-app-launch)
 
-If the Documentation Templates and Rules (DTR) / Substitutable Medical Applications, Reusable Technologies (SMART) on FHIR application is executed using an app, the app will only have access to data specifically authorized by the organization as appropriate for use.
+If the Documentation Templates and Rules (DTR) / Substitutable Medical Applications, Reusable Technologies (SMART) on FHIR application is executed using an app, the app will have access to data authorized by the organization as appropriate for use by the app, and accessible to the user. Note that, especially if a common SMART on FHIR app is used to deal with multiple prior auth decision types, and even if that is not the case, it is highly likely that the app will have the abiltiy to pull much more data than is needed. For example, if Observation.read capabilities are needed, the app will be able to pull Observations beyond what is actually needed for the prior auth.
+
+Any EHR with SMART on FHIR support should be prepared to deal with the implications of providing a client with the scopes they request.  For example, EHRs can severly limit FHIR search capabilities for clients, requiring a patient ID in any search query to ensure the client can only access resoures related to that patient.
 
 When meeting the DTR / SMART on FHIR application requirements using a distinct app (i.e. not within the  Electronic Health Record (EHR)), the app SHALL have a distinct client id for when it's being invoked purely as a mechanism to supplement EHR data vs. when it's being invoked to potentially share data back to the payer.
 
@@ -15,7 +17,7 @@ It should be noted that there are multiple actors with potential access to patie
 
 It is the under control of the SMART on FHIR app or the capable EHR, based on the API access scope, what information is accessible to be included in the questionnaireResponse. The SMART on FHIR app cannot be responsible for informing the user that the information exists in the patient's record but is inaccessible to the application. This may differ depending on whether it is a native EHR application or a third-party application.
 
-Data retrieved by the SMART app from the provider's FHIR server may or may not be shared with, kept by the payer. Depending upon the SMART app's architecture, patient information obtained by the SMART app may or may not leave the provider's network. 
+Data retrieved by the SMART app from the provider's FHIR server may or may not be shared with or kept by the payer. Depending upon the SMART app's architecture, patient information obtained by the SMART app may or may not leave the provider's network. 
 
 Providers should carefully evaluate SMART apps conforming to the DTR IG to evaluate risk. In this case, patient data will be requested by the server hosting the DTR application. This may be external to the provider organization.
 

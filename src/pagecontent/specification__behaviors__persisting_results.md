@@ -7,6 +7,8 @@ Many EHR Systems do not currently support writing a QuestionnaireResponse into a
 
 The information that is collected (via the Questionnaire interaction with the user) SHOULD be written to the EHR via the available FHIR API if possible. The results of the questionnaireResponse SHALL be saved as the FHIR resource and/or as a human readable format that is supported by the EHR.
 
+ If the EHR has the capability to render a QuestionnaireResponse, it SHOULD save the QuestionnaireResponse as part of the patient record. If EHR does not have ability to render the QuestionnaireResponse, then the EHR should support saving the QuestionnaireResponse information as whichever supported structure produces the least impact on users.
+
 The DTR application SHOULD support transforming a DTR-QuestionnaireResponse resource into a [Portable Document Format](https://www.iso.org/standard/63534.html) (PDF) representation. DTR applications SHOULD ensure that the document indicates whether data was entered by the provider in reponse to the questionnaire or retrieved from the EHR directly.
 
 The DTR application SHOULD store this information in the EHR - either as a DocumentReference resource conforming to the US Core profile or in another EHR-appropriate form. The generated PDF SHOULD be recorded in `DocumentReference.content.attachment.data`. `DocumentReference.content.attachment.contentType` SHOULD be `application/pdf`

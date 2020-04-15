@@ -2,11 +2,11 @@ The Documentation Templates and Rules (DTR) application will need to retrieve re
 
 | Field | Optionality | Type | Description |
 | ----- | ----------- | ---- | ----------- |
-| filePath | OPTIONAL | *string* | The base URL for the questionnaire and related CQL resources. If left blank the app should use a default base URL. |
+| filePath | OPTIONAL | *string* | The base URL to retrieve the questionnaire and related CQL resources from. If left blank the app should use a default base URL. |
 | template | REQUIRED | *string* | The id of the Questionnaire for the DTR application to use for execution. |
 | request | REQUIRED | *string* | The URL of the request resource in the EHR FHIR server. |
 
-The request resource created during the CRD workflow should be persisted in the EHR FHIR server for retrieval by the DTR application.  This might, for example, be the ServiceRequest resource that is sent in the CDS hook to the CRD server.  
+ The request resource created during the CRD workflow should be saved to the EHR FHIR server for retrieval by the DTR application, if possible. This might, for example, be the ServiceRequest resource that is sent in the CDS hook to the CRD server. Additionally, a tight integration between the CRD service and the DTR application should enable the DTR app to access FHIR resources received by the CRD service that are not available from the EHR's FHIR server.
 
 ### Authentication of SMART on FHIR application to payer API
 Payers SHALL require the DTR application to authenticate in order to retrieve resources when PHI is exchanged. In the case that authentication is required, the following JSON structure SHALL be populated by the payer system. This JSON is based on the structure for [FHIR Authorization in CDS Hooks](https://cds-hooks.hl7.org/1.0/#fhir-resource-access).
