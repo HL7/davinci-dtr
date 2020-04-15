@@ -35,16 +35,21 @@ Implementers should also familiarize themselves with the FHIR resources used wit
 Clinical systems SHALL use the specification and workflows defined by [US Core](http://www.hl7.org/fhir/us/core/) to initiate Document Template and Rule functionality with the payers. Implementers should be familiar with this specification.
 
 ### Clinical Decision Support Hooks
-Clinical systems SHALL use the specification and workflows defined by [Clinical Decision Support (CDS) Hooks](https://cds-hooks.hl7.org) to initiate Document Template and Rule functionality with the payers. Implementers should be familiar with this specification.
+ Clinical systems and payer systems SHALL use the specification and workflows defined by [Clinical Decision Support (CDS) Hooks](https://cds-hooks.hl7.org) to initiate Document Template and Rule. Implementers should be familiar with this specification.
 
 ### Coverage Requirements Discovery
 Clinical systems SHALL use the specification and workflows defined by [Coverage Requirements Discovery (CRD)](http://hl7.org/fhir/us/davinci-crd/2019May/) to initiate Document Template and Rule functionality with the payers. Implementers should be familiar with this specification.
 
 ### SMART on FHIR
-Client systems conformant to this implementation guide SHALL also serve as a Substitutable Medical Applications, Reusable Technologies (SMART) on FHIR client. This is to allow Document Template and Rule functionality to be invoked outside of regular clinical workflows using a SMART on FHIR application to provide a consistent way of evaluating "what if?" scenarios across EHR implementations. As such client implementers will also need to be familiar with the [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) specification.  Because the SMART on FHIR app will interact with payer systems through the CDS Hooks interface, payer implementers only need to be familiar with the SMART on FHIR specification if they plan to develop SMART apps for launch by CDS Hooks or for other purposes.
+Client systems conformant to this implementation guide SHALL also serve as a [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) client. This is to allow Document Template and Rule functionality to be invoked outside of regular clinical workflows using a SMART on FHIR application to provide a consistent way of evaluating "what if?" scenarios across EHR implementations. As such client implementers will also need to be familiar with the [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) specification.  Because the SMART on FHIR app will interact with payer systems through the CDS Hooks interface, payer implementers only need to be familiar with the SMART on FHIR specification if they plan to develop SMART apps for launch by CDS Hooks or for other purposes.
 
 ### Structured Data Capture
 Clinical systems SHALL use the specification and workflows defined by [Structured Data Capture (SDC)](http://hl7.org/fhir/us/sdc/) to initiate Document Template and Rule functionality with the payers. Implementers should be familiar with this specification.
 
 ### Clinical Quality Language
-Clinical systems SHALL use the specification and workflows defined by [Clinical Quality Language (CQL)](https://cql.hl7.org/STU2/) to initiate Document Template and Rule functionality with the payers. Implementers should be familiar with this specification.
+Payer systems SHALL use the specification and workflows defined by [Clinical Quality Language (CQL)|https://cql.hl7.org/STU2/] to facilitate Documentation Templates and Rules functionality within clinical systems. Implementers should be familiar with this specification.
+
+### Must Support
+Da Vinci Documentation Templates and Rules implementation guide does NOT mark any elements with "mustSupport" flag ([http://hl7.org/fhir/R4/profiling.html#mustsupport)] in its own profiles.
+
+This implementation guide also references US Core IG (section #3.2). Da Vinci DTR implementation shall conform the US Core IG Must Support Guidance ([http://hl7.org/fhir/us/core/general-guidance.html#must-support]) where US Core IG resources are used.

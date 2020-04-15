@@ -1,11 +1,11 @@
 ### Use of Card.links
 One entry point into the Documentation Templates and Rules (DTR) application is launching from a [Clinical Decision Support (CDS) Hooks Card](https://cds-hooks.hl7.org/1.0/#card-attributes). 
 
-DTR applications SHOULD, to the extent possible, capture and return information that is relevant to the specific use case. 
+DTR applications SHALL, to the extent possible, capture and return information that is relevant to the specific use case.
 
-As a part of a CDS Hooks response, the Payer IT system SHALL return a Card object with at least one Link object populated in the Card.links property. The Link object SHALL have a type property set to smart. The Link object SHALL have a URL property set to the launch URL of the DTR application.
+ As a part of a CDS Hooks response, if there is a need for further information then the Payer IT system SHALL return a Card object with at least one Link object populated in the Card.links property. Otherwise no Link object would be provided. The Link object SHALL have a type property set to smart. The Link object SHALL have a URL property set to the launch URL of the DTR application.
 
-A payer may secure endpoints from which the DTR application will retrieve additional artifacts to support execution. If the payer does require authentication, then the Payer IT system SHALL provide the authentication information through the `appContext` property of the `Link` object. The `appContext` property SHALL contain escaped JSON. The structure of this JSON is described in [Section 4.4.1.1](specification__behaviors__retrieval_of_payer_resources.html#authentication-of-smart-on-fhir-application-to-payer-api) - Authentication of SMART on FHIR application to payer API.
+A payer may secure endpoints from which the DTR application will retrieve additional artifacts to support execution. If the payer does require authentication, the DTR app requests an OAuth token using SMART backend services and then uses that second access token to authenticate against the payer FHIR server.
 
 ### Establish Patient Context
 When the DTR application is being launched from a CDS Hooks Card Link, the Electronic Health Record (EHR) system and DTR application will follow the procedures established by the [SMART Application Launch Framework Implementation Guide Release 1.0.0](http://hl7.org/fhir/smart-app-launch). The EHR and DTR application SHALL follow the [EHR launch sequence](http://hl7.org/fhir/smart-app-launch/#ehr-launch-sequence). 
