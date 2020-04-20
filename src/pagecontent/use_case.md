@@ -18,7 +18,7 @@ It is possible to have a process where the focus is on the interaction with the 
 
 >If information is not available to the SMART on FHIR application, then the application will need to prompt the provider to enter the missing information. Ultimately, the solution is to provide greater integration (including possibly FHIR APIs) between the EMR and other supporting applications. (Quality measures may also require this type of integration)
 
->If Electronic Health Record (EHR) is used in this IG it should be considered synonymous to EMR. 
+>If Electronic Medical Record (EMR) is used in this IG it should be considered synonymous to EMR. 
 
 #### DTR compliant SMART on FHIR app
 Within Documentation Templates and Rules (DTR), the SMART on FHIR app serves as a middleware layer easing payer and provider integrations. Specifically, the relatively low adoption of [Clinical Quality Language (CQL)](https://cql.hl7.org/STU2/) by providers and [FHIR](https://www.hl7.org/fhir/) by payers is eased through the use of a third-party "app".  This functionality will enable DTR to gather documents and templates, retrieve FHIR resources from EMRs, and run rules to reduce the time involved in the Documentation Requirements Lookup Service (DRLS) process.
@@ -32,7 +32,7 @@ Within Documentation Templates and Rules (DTR), the SMART on FHIR app serves as 
 * forms and templates
 * indications of whether prior authorization is required
 
-DTR differs from CRD mostly in its ability to run rules and auto fill forms and templates.  The CRD portion of the full workflow might be responsible for verifying with the payer that a given device request requires documentation, and then consolidating the necessary links for the DTR app to be run.  In most cases, the CRD service would return a CDS hooks card populated with a SMART launch link for the DTR app, a link to a questionnaire resource, and a device request resource ID.  While CRD may verify that documentation rules are required, it does not involve any actual authorization or validation of the rule.  The DTR app or native EHR application is responsible for taking the provided rule and checking if available EHR data satisfies the requirements, as well as allowing manual population of missing data.  
+DTR differs from CRD mostly in its ability to run rules and auto fill forms and templates.  The CRD portion of the full workflow might be responsible for verifying with the payer that a given device request requires documentation, and then consolidating the necessary links for the DTR app to be run.  In most cases, the CRD service would return a CDS hooks card populated with a SMART launch link for the DTR app, a link to a questionnaire resource, and a device request resource ID.  While CRD may verify that documentation rules are required, it does not involve any actual authorization or validation of the rule.  The DTR app or native EMR application is responsible for taking the provided rule and checking if available EMR data satisfies the requirements, as well as allowing manual population of missing data.  
 
 ### Process Flow
 
@@ -46,9 +46,9 @@ This shows an overview of how the SMART on FHIR App fits into the flow when orde
 1. Oxygen Therapy order triggers appropriate CDS hook.
 2. It is determined that there is prior authorization required and there are forms to be filled out.
 3. The SMART on FHIR App fetches CQL (rules) and a FHIR Questionnaire.
-4. The engine then extracts the answers in order to formulate a FHIR QuestionnaireResponse.
+4. The engine then extracts as many answers as it can in order to formulate a FHIR QuestionnaireResponse.
 5. If there is missing information, the user can manually provide it to fully populate the Questionnaire response.  Otherwise, the Questionnaire is not shown to the user unless specifically requested.
-6. It then writes the FHIR QuestionnaireResponse back to Payer server and optionally to the EHR in a text format.
+6. It then writes the FHIR QuestionnaireResponse back to Payer server and optionally to the EMR in a text format.
 
 > Note: There is no need for the user to see the form if it can be auto-completed unless they need to approve sending the result to the payer or to "sign" the information prior to submission.  FHIR Questionnaires should indicate which items are necessary for auto-completion using the "required" property.  The application SHALL give the provider the ability, but not the requirement to review any information prior to sending it to a third party. This ability may be "turned-off" by the organization and possibly the individual provider. 
 

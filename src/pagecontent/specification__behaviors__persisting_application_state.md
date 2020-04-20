@@ -5,7 +5,7 @@ The DTR application should anticipate that users may not be able to complete a f
 Exact mechanisms for saving state are outside the scope of this implementation guide. The following sections describe mechanisms that a DTR application may use to establish the data necessary to store and retrieve state.
 
 ### SMART on FHIR applications and Servers
-SMART on FHIR applications must be launched by a host that is accessible to the launching Electronic Health Record (EHR) System. Once launched, a SMART on FHIR application may communicate with the host that it was initially launched from. This may be to retrieve data to assist in the functionality of the SMART on FHIR application, or it may be to record actions taken by the application user.
+SMART on FHIR applications must be launched by a host that is accessible to the launching Electronic Medical Record (EMR) System. Once launched, a SMART on FHIR application may communicate with the host that it was initially launched from. This may be to retrieve data to assist in the functionality of the SMART on FHIR application, or it may be to record actions taken by the application user.
 
 In the case of DTR, the SMART on FHIR application may be launched from a number of locations. A likely scenario is that the DTR conformant SMART on FHIR application will be hosted by a Payer IT system.
 
@@ -17,7 +17,7 @@ To persist application state, the DTR application will need to know who is curre
 #### SMART on FHIR App Launch Framework IG
 Using the SMART on FHIR App Launch Framework Implementation Guide (IG), the DTR application should request [scopes for requesting identity data](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context/index.html#scopes-for-requesting-identity-data), namely `openid` and `fhirUser`. The DTR application can then retrieve the FHIR resource representing the current person and extract whatever identifiers it deems necessary for the persistance of application state.
 
-The EHR's authorization server MUST support the openid and fhirUser scopes, due to the importance of the fhirUser element in the QuestionnaireResponse resource..
+The EMR's authorization server MUST support the openid and fhirUser scopes, due to the importance of the fhirUser element in the QuestionnaireResponse resource..
 
 ### Usage Sessions
 The DTR application is initially launched in response to a Coverage Requirements Discovery request. This request is for a given set of orders for a particular patient.
@@ -33,7 +33,7 @@ The SMART on FHIR App Launch Framework IG and FHIR specification provide methods
 
 As an example, the DTR application may retrieve a Practitioner resource by retrieving the URL supplied in the `fhirUser` claim. The DTR application may then query the CareTeam or PractitionerRole resources to determine their relationship to other staff in the provider organization and determine if their usage sessions should also be made available.
 
-Furthermore, the notion of workflows and multiple users could get extended to work queues. The EHR could maintain a list of in progress FHIR Questionnaires and store a reference to each of these within the EHR for the clinicians and other employees within the organization to continue working on. There could be built in mechanisms to assign FHIR Tasks for the work to the queues of other employees. Specific details surrounding this type of work queue implementation are out of the scope of this IG.
+Furthermore, the notion of workflows and multiple users could get extended to work queues. The EMR could maintain a list of in progress FHIR Questionnaires and store a reference to each of these within the EMR for the clinicians and other employees within the organization to continue working on. There could be built in mechanisms to assign FHIR Tasks for the work to the queues of other employees. Specific details surrounding this type of work queue implementation are out of the scope of this IG.
 
 ### Session Expiration
 While a user may need to suspend interaction with the DTR application, there may be a limit on the amount of time that a set of documentation templates and rules is valid. For example, it is unreasonable to resume the DTR application for an order that was started five years in the past.

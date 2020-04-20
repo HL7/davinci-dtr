@@ -13,7 +13,7 @@ prior to reading the rest of this implementation guide.
 * [How to read resource & profile definitions]({{site.data.fhir.path}}formats.html)
 * [Base resource]({{site.data.fhir.path}}resource.html)
 
-This implementation guide also leverages the US Core set of profiles defined by HL7 for sharing human Electronic Health Record (EHR) data in the US.  Additional information is located at: [US-Core](http://hl7.org/fhir/us/core/2019Jan/)
+This implementation guide also leverages the US Core set of profiles defined by HL7 for sharing human Electronic Medical Record (EMR) data in the US.  Additional information is located at: [US-Core](http://hl7.org/fhir/us/core/2019Jan/)
 
 This implementation guide supports the [R4](http://hl7.org/fhir/R4/index.html) version of the FHIR standard. FHIR services based on R4 are the future of the standard, and the implementation guide aims to support the most modern solution and support transition of FHIR systems to R4.
 
@@ -41,7 +41,7 @@ Clinical systems SHALL use the specification and workflows defined by [US Core](
 Clinical systems SHALL use the specification and workflows defined by [Coverage Requirements Discovery (CRD)](http://hl7.org/fhir/us/davinci-crd/2019May/) to initiate Document Template and Rule functionality with the payers. Implementers should be familiar with this specification.
 
 ### SMART on FHIR
-Client systems conformant to this implementation guide SHALL also serve as a [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) client. This is to allow Document Template and Rule functionality to be invoked outside of regular clinical workflows using a SMART on FHIR application to provide a consistent way of evaluating "what if?" scenarios across EHR implementations. As such client implementers will also need to be familiar with the [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) specification.  Because the SMART on FHIR app will interact with payer systems through the CDS Hooks interface, payer implementers only need to be familiar with the SMART on FHIR specification if they plan to develop SMART apps for launch by CDS Hooks or for other purposes.
+Client systems conformant to this implementation guide SHALL also serve as a [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) client. This is to allow Document Template and Rule functionality to be invoked outside of regular clinical workflows using a SMART on FHIR application to provide a consistent way of evaluating "what if?" scenarios across EMR implementations. As such client implementers will also need to be familiar with the [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) specification.  Because the SMART on FHIR app will interact with payer systems through the CDS Hooks interface, payer implementers only need to be familiar with the SMART on FHIR specification if they plan to develop SMART apps for launch by CDS Hooks or for other purposes.
 
 ### Structured Data Capture
 Clinical systems SHALL use the specification and workflows defined by [Structured Data Capture (SDC)](http://hl7.org/fhir/us/sdc/) to initiate Document Template and Rule functionality with the payers. Implementers should be familiar with this specification.
