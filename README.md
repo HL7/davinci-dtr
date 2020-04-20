@@ -5,6 +5,12 @@ The implementation guide is built with the [FHIR IG Publishing Tool](http://wiki
 
 Materials for this implementation guide are being developed by the HL7 Da Vinci Project in collaboration with the HL7 Clinical Decision Support Work Group.
 
+## To Build
+MacOS - $./_genonce.sh from a terminal
+
+## To View Local
+Launch output/index.html in a browser
+
 ## Viewing the Implementation Guide
 To view the actual implementation, you can visit the [Continuous Build of the DTR IG](http://build.fhir.org/ig/HL7/davinci-dtr/index.html).
 
