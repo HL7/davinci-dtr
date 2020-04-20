@@ -16,7 +16,7 @@ Consideration must also be made regarding the CQL version.
 #### Behavior when receiving malformed CQL
  If the CQL is malformed (is not syntactically correct) in any way, the app's execution engine SHALL not attempt any execution of the malformed CQL, SHALL log the error, and the user SHALL be notified with an appropriate on-screen message indicating that population did not occur and they SHALL be allowed to enter the information manually either now or at a later time. The application SHOULD log failures and ensure the maintainer of the CQL/Questionnaire package is notified. 
 
-In an effort to notify the appropriate party or maintainer that  the CQL/Questionnaire is malformed, the application developer SHOULD use FHIR resource OperationOutcome.  
+In an effort to notify the appropriate party or maintainer that  the CQL/Questionnaire is malformed, the application developer SHOULD use FHIR resource OperationOutcome.  The details property of the OperationOutcome should use `MSG_BAD_SYNTAX` to indicated syntactical errors.
 
 >Since we will use the standard that if the CQL cannot be executed by the application's CQL engine in the SMART on FHIR app or in the capable EMR then it is considered a CQL failure (the CQL author should be taking into account the capability of the app's CQL engine in designing their CQL for execution).
 

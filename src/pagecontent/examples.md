@@ -14,5 +14,5 @@ The task resource is used to capture a request for additional actions that arise
 * [DTR Task Example R4](blood-gass-panel-task-r4.html)
 
 ### DTR CQL
-The CQL resource is used to query the Electronic Health Record (EHR) FHIR server to prepopulate the DTR Questionnaire.
+The CQL resource is used to query the Electronic Medical Record (EMR) FHIR server to prepopulate the DTR Questionnaire.
 * [DTR CQL Prepopulation Example](resources__home-o2-prepopulation.html)

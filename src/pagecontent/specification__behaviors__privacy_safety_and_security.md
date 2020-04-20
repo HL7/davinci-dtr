@@ -6,16 +6,16 @@ Guidance and conformance expectations around privacy and security are provided b
 
 If the Documentation Templates and Rules (DTR) / Substitutable Medical Applications, Reusable Technologies (SMART) on FHIR application is executed using an app, the app will have access to data authorized by the organization as appropriate for use by the app, and accessible to the user. Note that, especially if a common SMART on FHIR app is used to deal with multiple prior auth decision types, and even if that is not the case, it is highly likely that the app will have the abiltiy to pull much more data than is needed. For example, if Observation.read capabilities are needed, the app will be able to pull Observations beyond what is actually needed for the prior auth.
 
-Any EHR with SMART on FHIR support should be prepared to deal with the implications of providing a client with the scopes they request.  For example, EHRs can severly limit FHIR search capabilities for clients, requiring a patient ID in any search query to ensure the client can only access resoures related to that patient.
+Any EMR with SMART on FHIR support should be prepared to deal with the implications of providing a client with the scopes they request.  For example, EMRs can severly limit FHIR search capabilities for clients, requiring a patient ID in any search query to ensure the client can only access resoures related to that patient.
 
-When meeting the DTR / SMART on FHIR application requirements using a distinct app (i.e. not within the  Electronic Health Record (EHR)), the app SHALL have a distinct client id for when it's being invoked purely as a mechanism to supplement EHR data vs. when it's being invoked to potentially share data back to the payer.
+When meeting the DTR / SMART on FHIR application requirements using a distinct app (i.e. not within the  Electronic Medical Record (EMR)), the app SHALL have a distinct client id for when it's being invoked purely as a mechanism to supplement EMR data vs. when it's being invoked to potentially share data back to the payer.
 
-This will allow the scopes to be different depending on whether data might flow to the payer. It will also allow the EHR to appropriately audit data accesses where data might flow external to the EHR.
-Additionally, there is a requirement that the data passed to a payer SHALL also be stored in the EHR where it can be audited for appropriate use.
+This will allow the scopes to be different depending on whether data might flow to the payer. It will also allow the EMR to appropriately audit data accesses where data might flow external to the EMR.
+Additionally, there is a requirement that the data passed to a payer SHALL also be stored in the EMR where it can be audited for appropriate use.
 
 It should be noted that there are multiple actors with potential access to patient information. The implementation and deployment of these actors will have an impact on if and when patient information is transmitted from a provider organization to a payer organization.
 
-It is the under control of the SMART on FHIR app or the capable EHR, based on the API access scope, what information is accessible to be included in the questionnaireResponse. The SMART on FHIR app cannot be responsible for informing the user that the information exists in the patient's record but is inaccessible to the application. This may differ depending on whether it is a native EHR application or a third-party application.
+It is the under control of the SMART on FHIR app or the capable EMR, based on the API access scope, what information is accessible to be included in the questionnaireResponse. The SMART on FHIR app cannot be responsible for informing the user that the information exists in the patient's record but is inaccessible to the application. This may differ depending on whether it is a native EMR application or a third-party application.
 
 Data retrieved by the SMART app from the provider's FHIR server may or may not be shared with or kept by the payer. Depending upon the SMART app's architecture, patient information obtained by the SMART app may or may not leave the provider's network. 
 
