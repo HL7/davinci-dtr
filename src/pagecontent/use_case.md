@@ -32,7 +32,7 @@ Within Documentation Templates and Rules (DTR), the SMART on FHIR app serves as 
 * forms and templates
 * indications of whether prior authorization is required
 
-DTR differs from CRD mostly in its ability to run rules and auto fill forms and templates.  The CRD portion of the full workflow might be responsible for verifying with the payer that a given device request requires documentation, and then consolidating the necessary links for the DTR app to be run.  In most cases, the CRD service would return a CDS hooks card populated with a SMART launch link for the DTR app, a link to a questionnaire resource, and a device request resource ID.  While CRD may verify that documentation rules are required, it does not involve any actual authorization or validation of the rule.  The DTR app or native EMR application is responsible for taking the provided rule and checking if available EMR data satisfies the requirements, as well as allowing manual population of missing data.  
+The CRD portion of the full workflow might be responsible for verifying with the payer that a given device request requires documentation, and then consolidating the necessary links for the DTR app to be run.  In most cases, the CRD service would return a CDS hooks card populated with a SMART launch link for the DTR app, a link to a questionnaire resource, and a device request resource ID.  While CRD may verify that documentation rules are required, it does not involve any actual authorization or validation of the rule.  The DTR app or native EMR application is responsible for taking the provided rule and checking if available EMR data satisfies the requirements, as well as allowing manual population of missing data.  
 
 ### Process Flow
 
