@@ -7,6 +7,8 @@ This IG leverages Clinical Quality Language (CQL) to allow payers to inspect a p
 
 Although not detailed in this IG it may be possible to achieve the same level of integration with a native EMR application instead of the SMART on FHIR app. The same payer sourced FHIR Questionnaire and CQL could be consumed by the native EMR application. The interface for exchanging data would need to be developed further in a method that achieves the same level of interoperability that the SMART on FHIR app achieves.  A native EMR application MAY play the role of the DTR app if it reduces burden.
 
+Provenance SHOULD be created and persisted with information created during the execution of the CQL and questionnaire. When the questionnaire and its associated resources are exchanged with the source of the rules appropriate provenance resource(s) SHOULD be created and exchanged.
+
 ### Content and Organization
 The implementation guide is organized into the following sections:
 * [Use Case](use_case.html) Provides examples of how this specification can be used by provider and payer organizations.
