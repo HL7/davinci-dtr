@@ -7,6 +7,7 @@ Materials for this implementation guide are being developed by the HL7 Da Vinci 
 
 ## To Build
 MacOS - `$./_genonce.sh` from a terminal
+>Note: org.hl7.fhir.publisher.jar needs to be in the input-cache folder in order to build
 
 ## To View Local
 Launch `output/index.html` in a browser
