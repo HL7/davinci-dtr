@@ -1,7 +1,7 @@
 # davinci-dtr
 This repository contains the materials to build the [HL7 Da Vinci](http://www.hl7.org/about/davinci/) Documentation Templates and Rules (DTR) Implementation Guide (IG).
 
-The implementation guide is built with the [FHIR IG Publishing Tool found here](https://www.hl7.org/fhir/downloads.html).
+The implementation guide is built with the [FHIR IG Publishing Tool](https://www.hl7.org/fhir/downloads.html).
 
 Materials for this implementation guide are being developed by the HL7 Da Vinci Project in collaboration with the HL7 Clinical Decision Support Work Group.
 
