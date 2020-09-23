@@ -1,65 +1,35 @@
 {
   "resourceType": "Questionnaire",
   "id": "home-o2-questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaire-r4"
+    ]
+  },
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This form is used to collect information from the provider on Home Oxygen Therapy.</p></div>"
   },
-  "meta": {
-    "profile": ["http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaire-r4"]
-  },
-  "title": "Home Oxygen Therapy Order Template",
-  "name": "Home-o2-questionnaire",
-  "status": "draft",
-  "subjectType": [
-    "Patient"
-  ],
-  "date": "2019-03-11",
-  "publisher": "Da Vinci DTR",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
       "valueCanonical": "todo/Library/home-oxygen-logic"
     }
   ],
-  "contained": [
-    {
-      "resourceType": "ValueSet",
-      "id": "gender",
-      "identifier": [
-        {
-          "system": "http://hl7.org/fhir/ValueSet/administrative-gender",
-          "value": "todo"
-        }
-      ],
-      "name": "Gender",
-      "status": "draft",
-      "description": "Gender",
-      "compose": {
-        "include": [
-          {
-            "system": "todo",
-            "concept": [
-              {
-                "code": "M",
-                "display": "Male"
-              },
-              {
-                "code": "F",
-                "display": "Female"
-              },
-              {
-                "code": "Other",
-                "display": "Other"
-              }
-            ]
-          }
-        ]
-      }
-    }
+  "url": "http://hl7.org/fhir/us/davinci-dtr/Questionnaire/home-o2-questionnaire",
+  "version": "0.2.0",
+  "name": "Home-o2-questionnaire",
+  "title": "Home Oxygen Therapy Order Template",
+  "status": "draft",
+  "subjectType": [
+    "Patient"
   ],
+  "date": "2019-03-11T00:00:00+00:00",
+  "publisher": "Da Vinci DTR",
   "contact": [
-    {"name": "Example Author"}
+    {
+      "name": "Example Author"
+    }
   ],
   "item": [
     {
@@ -68,10 +38,6 @@
       "type": "group",
       "item": [
         {
-          "linkId": "1.1",
-          "text": "Last Name",
-          "type": "string",
-          "required": true,
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
@@ -80,25 +46,13 @@
                 "expression": "PatientLastName"
               }
             }
-          ]
+          ],
+          "linkId": "1.1",
+          "text": "Last Name",
+          "type": "string",
+          "required": true
         },
         {
-          "linkId": "1.2",
-          "text": "First Name",
-          "type": "string",
-          "required": true,
-          "enableWhen":[
-              {
-                  "question":"1.1",
-                  "operator":"=",
-                  "answerString":"5"
-              },
-              {
-                "question":"1.3",
-                "operator":"=",
-                "answerString":"S"
-            }
-          ],
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
@@ -107,13 +61,20 @@
                 "expression": "PatientFirstName"
               }
             }
-          ]
+          ],
+          "linkId": "1.2",
+          "text": "First Name",
+          "type": "string",
+          "enableWhen": [
+            {
+              "question": "1.3",
+              "operator": "=",
+              "answerString": "S"
+            }
+          ],
+          "required": true
         },
         {
-          "linkId": "1.3",
-          "text": "Middle Initial",
-          "type": "text",
-          "required": false,
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
@@ -122,13 +83,13 @@
                 "expression": "PatientMiddleInitial"
               }
             }
-          ]
+          ],
+          "linkId": "1.3",
+          "text": "Middle Initial",
+          "type": "text",
+          "required": false
         },
         {
-          "linkId": "1.4",
-          "text": "Date Of Birth",
-          "type": "date",
-          "required": true,
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
@@ -137,14 +98,13 @@
                 "expression": "PatientDateOfBirth"
               }
             }
-          ]
+          ],
+          "linkId": "1.4",
+          "text": "Date Of Birth",
+          "type": "date",
+          "required": true
         },
         {
-          "linkId": "1.5",
-          "text": "Gender",
-          "type": "choice",
-          "required": true,
-          "answerValueSet": "#gender",
           "extension": [
             {
               "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
@@ -153,9 +113,14 @@
                 "expression": "PatientGender"
               }
             }
-          ]
+          ],
+          "linkId": "1.5",
+          "text": "Gender",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "http://hl7.org/fhir/ValueSet/administrative-gender"
         }
-        ]
-      }
+      ]
+    }
   ]
 }
