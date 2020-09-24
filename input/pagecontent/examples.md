@@ -4,7 +4,7 @@ The Questionnaire resource is used to represent the information needs that a pay
 * [DTR Questionnaire Home Oxygen Therapy Example FHIR R4](Questionnaire-home-o2-questionnaire.html)
 
 ### DTR QuestionnaireResponse
-The QuestionnaireResponse resource is used to represent a response to the Questionnaire presented by the payer. This profile uses the [author extension](http://www.hl7.org/implement/standards/fhir/extension-questionnaireresponse-author.html) when items are based on information input into the DTR application by the user.
+The QuestionnaireResponse resource is used to represent a response to the Questionnaire presented by the payer. This profile uses the [author extension](http://www.hl7.org/implement/standards/fhir/extension-questionnaireresponse-author.html) when items are based on information input into the DTR process by the user.
 
 * [DTR QuestionnaireResponse Example FHIR R4](QuestionnaireResponse-home-o2-questionnaireresponse.html)
 

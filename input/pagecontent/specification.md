@@ -1,4 +1,4 @@
-This section of the implementation guide defines the guidelines of app behavior and information on how to implement the technologies required to build a conformant app.
+This section of the IG defines the guidelines of the DTR process behavior and information on how to implement the technologies required to build a conformant app. Below are the conformance statements.
 
 * [Profiles](specification__profiles.html)
 
@@ -17,5 +17,6 @@ This section of the implementation guide defines the guidelines of app behavior 
   * [Launch outside of CRD](specification__behaviors__launch_outside_of_CRD.html)
   * [Privacy, Safety and Security](specification__behaviors__privacy_safety_and_security.html)
 
->Note: A reference implementation has been created. The code is available at [DTR GitHub](https://github.com/HL7-DaVinci/dtr). The executable is at [DTR Logical Health](https://davinci-dtr.logicahealth.org/smart/launch.html).
+>Note: A reference implementation has been created. The code is available at [DTR GitHub](https://github.com/HL7-DaVinci/dtr). The executable is at [DTR Logica Health](https://davinci-dtr.logicahealth.org/smart/launch.html).
 
+ 

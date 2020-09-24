@@ -47,7 +47,7 @@ Client systems conformant to this implementation guide SHALL also serve as a [SM
 Clinical systems SHALL use the specification and workflows defined by [Structured Data Capture (SDC)](http://hl7.org/fhir/us/sdc/) to initiate Document Template and Rule functionality with the payers. Implementers should be familiar with this specification.
 
 ### Clinical Quality Language
-Payer systems SHALL use the specification and workflows defined by [Clinical Quality Language (CQL)|https://cql.hl7.org/STU2/] to facilitate Documentation Templates and Rules functionality within clinical systems. Implementers should be familiar with this specification.
+Payer systems SHALL use the specification and workflows defined by [Clinical Quality Language CQL](https://cql.hl7.org/) to facilitate Documentation Templates and Rules functionality within clinical systems. Implementers should be familiar with this specification. Older verisons of CQL such as STU 2 can be used provided they work with FHIR R4.
 
 ### Must Support
 Da Vinci Documentation Templates and Rules implementation guide does NOT mark any elements with "mustSupport" flag ([http://hl7.org/fhir/R4/profiling.html#mustsupport)] in its own profiles.
