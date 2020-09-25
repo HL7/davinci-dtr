@@ -10,7 +10,7 @@
          "path": "http://build.fhir.org/ig/HL7/davinci-dtr",
          "status": "ci-build",
          "current": true,
-         "fhirversion": "4.0.0"
+         "fhirversion": "4.0.1"
 
       },
       {
