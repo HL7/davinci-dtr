@@ -29,6 +29,8 @@ The DTR process SHALL include a mechanism to allow a user to attest the answer t
 
 When a user provides an attestation, the DTR process SHALL record that in the corresponding QuestionnaireResponse.item. In this case, the DTR process SHALL create an `answer` property on the `item`. The `answer` SHALL have a `valueCoding` that is set to the SNOMED CT code `410515003`, known present. The `item` will also have an `author` extension property which will reference the `fhirUser` provided to the DTR process.
 
+If an answer is attested, the user should provide evidence that the attested value exists in the patient's record by including an attachment or the equivalent with the QuestionnaireResponse.
+
 >If information is privacy restricted, then we must assume that this information should be treated as if it does not exist. In this case the provider SHOULD verify with the patient if they want to share the information with the payer.
 
 ### Recording Responses
