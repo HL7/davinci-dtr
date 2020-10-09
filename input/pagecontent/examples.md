@@ -9,10 +9,10 @@ The QuestionnaireResponse resource is used to represent a response to the Questi
 * [DTR QuestionnaireResponse Example FHIR R4](QuestionnaireResponse-home-o2-questionnaireresponse.html)
 
 ### DTR Task
-The task resource is used to capture a request for additional actions that arise from the flow of DTR. This may be a request for more information from the patient or a desire to schedule a follow up treatment in order to satisfy documentation requirements.
+The task resource is used to capture a request for additional actions that arise from the DTR flow. This may be a request for more information from the patient or a desire to schedule a follow up treatment in order to satisfy documentation requirements.
 
 * [DTR Task Example R4](Task-blood-gass-panel-task-r4.html)
 
 ### DTR CQL
-The CQL resource is used to query the Electronic Medical Record (EMR) FHIR server to prepopulate the DTR Questionnaire.
+The CQL resource is used to query the Electronic Health Record (EHR) FHIR server to prepopulate the DTR Questionnaire.
 * [DTR CQL Prepopulation Example](resources__home-o2-prepopulation.html)

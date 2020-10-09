@@ -20,7 +20,7 @@ Project management and coordination:
 Technical support and guidance:
 * Lloyd McKenzie (Gevity Consulting)
 
-This implementation guide was the work of the [Da Vinci Project](http://www.hl7.org/about/davinci/index.cfm?ref=common).
+This IG was the work of the [Da Vinci Project](http://www.hl7.org/about/davinci/index.cfm?ref=common).
 
 Project participants included:
 * Aegis (Richard Ettema, Sandra Vance)
