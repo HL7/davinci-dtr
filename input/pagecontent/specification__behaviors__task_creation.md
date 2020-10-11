@@ -10,7 +10,7 @@ To facilitate this, the DTR process SHOULD allow users to create tasks. The deta
 
 The DTR process SHOULD attempt to prepopulate as much of the `Task` resource as it can based on the context of the application. `Task.description` may draw from the text available in the currently active `Questionnaire.item.text`.
 
-The questionnaire SHOULD be able to suspend completion until all tasks are completed.  How the application is suspended is left to the implementer, but the state of the questionnaire SHOULD be preserved. The DTR process launches with a unique `state` id, which could be used to preserve state until the questionnaire resumes.
+The questionnaire SHOULD be able to suspend completion until all tasks are completed.  How the application is suspended is left to the implementer, but the state of the questionnaire SHOULD be preserved. The DTR process launches with a unique `launch` id, which could be used to preserve state until the questionnaire resumes.
 
 > Note to ballot commenters:
 >
