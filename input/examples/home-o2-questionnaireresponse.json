@@ -30,8 +30,8 @@
               }
             ]
         }
-    ],
-    "questionnaire": "Questionnaire/q045",
+    ], 
+   "questionnaire": "Questionnaire/q045",
     "item": [
         {
             "linkId": "1",
@@ -79,6 +79,7 @@
                     "answer": [
                         {
                             "valueCoding": {
+                                "system": "http://hl7.org/fhir/administrative-gender",
                                 "code": "male",
                                 "display": "Male"
                             }
@@ -156,15 +157,17 @@
                     "text": "Relevant Patient Diagnoses (conditions that might be expected to improve with oxygen therapy)",
                     "answer": [
                         {
-                            "valueCoding": {
-                                "code": "COPD",
-                                "display": "COPD"
+                            "valueCoding": {   
+                                "system" : "http://snomed.info/sct",                             
+                                "code": "313296004",
+                                "display": "Mild chronic obstructive pulmonary disease"
                             }
                         },
                         {
-                            "valueCoding": {
-                                "code": "Hypoxemia",
-                                "display": "Hypoxemia"
+                            "valueCoding": {    
+                                "system" : "http://snomed.info/sct",                             
+                                "code": "389087006",
+                                "display": "Hypoxemia (disorder)"
                             }
                         }
                     ]
@@ -266,7 +269,7 @@
                     "text": "Frequency of use (choose all that apply)",
                     "answer": [
                         {
-                            "valueCoding": {
+                            "valueCoding": {                                
                                 "code": "At rest and awake",
                                 "display": "At rest and awake"
                             }
@@ -297,8 +300,8 @@
                     "text": "Type",
                     "answer": [
                         {
-                            "valueCoding": {
-                                "code": "Compressed Gas",
+                            "valueCoding": {                                
+                                "code": "E0424",
                                 "display": "Compressed Gas"
                             }
                         }
