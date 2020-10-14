@@ -6,4 +6,5 @@
   <li><a href="{{site.data.info.assets}}specification.html">Specification</a></li>
   <li><a href="{{site.data.info.assets}}resources.html">Resources</a></li>
   <li><a href="http://hl7.org/fhir/us/davinci-dtr/history.html">History</a></li>
+    <li><a href="{{site.data.info.assets}}searchform.html">Search</a></li>
 </ul>      

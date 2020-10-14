@@ -23,6 +23,23 @@
 			{
 				"id": "Questionnaire",
 				"path": "Questionnaire"
+            },
+            {
+				"id": "Questionnaire.cqf-library",
+				"path": "Questionnaire.extension",
+				"min": 1,
+				"max": "*",
+				"base" : {
+          "path" : "DomainResource.extension",
+          "min" : 0,
+          "max" : "*"
+        },
+        "type" : [
+          {
+            "code" : "Extension",
+						"profile" : ["http://hl7.org/fhir/StructureDefinition/cqf-library"]
+					}
+        ]
 			},
 			{
 				"id": "Questionnaire.status",
@@ -47,23 +64,6 @@
 				"path": "Questionnaire.contact",
 				"min": 1,
 				"max": "*"
-			},
-			{
-				"id": "Questionnaire.cqf-library",
-				"path": "Questionnaire.extension",
-				"min": 1,
-				"max": "*",
-				"base" : {
-          "path" : "DomainResource.extension",
-          "min" : 0,
-          "max" : "*"
-        },
-        "type" : [
-          {
-            "code" : "Extension",
-						"profile" : ["http://hl7.org/fhir/StructureDefinition/cqf-library"]
-					}
-        ]
 			},
 			{
 				"id": "Questionnaire.item",

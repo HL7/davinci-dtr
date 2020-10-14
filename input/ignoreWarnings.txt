@@ -1,4 +1,4 @@
-== Suppressed Warning Messages ==
+== Suppressed Messages ==
 
 # code system is not the focus of this example 
 A code with no system has no defined meaning. A system should be provided

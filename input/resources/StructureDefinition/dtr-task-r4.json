@@ -24,13 +24,6 @@
 				"id": "Task",
 				"path": "Task"
 			},
-			{
-				"id": "Task.status",
-				"path": "Task.status",
-				"min": 1,
-        "max": "1",
-        "fixedCode": "requested"
-      },
       {
 				"id": "Task.basedOn",
 				"path": "Task.basedOn",
@@ -41,6 +34,13 @@
           "targetProfile" : ["http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaire-r4",
                              "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse-r4"]
         }]
+      },
+      {
+        "id": "Task.status",
+        "path": "Task.status",
+        "min": 1,
+        "max": "1",
+        "fixedCode": "requested"
       },
       {
 				"id": "Task.for",
