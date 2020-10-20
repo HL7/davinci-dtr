@@ -28,3 +28,8 @@ The DTR process creates a QuestionnaireResponse resource through the course of n
 
 #### Interaction with Payer API
 The payer IT system should support the FHIR create interaction to allow the DTR process to send the QuestionnaireResponse resource to the payer. The FHIR endpoint for the payer may require authentication. If it is required, it SHALL follow the procedures described in [Section 4.4.1](specification__behaviors__retrieval_of_payer_resources.html#authentication-of-smart-on-fhir-application-to-payer-api) - Authentication of SMART on FHIR application to payer API.
+
+#### Pushing QuestionnaireResponse to Payer
+This IG will support the [HRex Decision point – Configured by consumer?](http://build.fhir.org/ig/HL7/davinci-ehrx/exchanging.html#configured-by-consumer) when a SMART on FHIR or native EHR app wants to push a QuestionnaireResponse to a Payer.  
+
+
