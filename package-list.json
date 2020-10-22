@@ -28,7 +28,7 @@
          "current": true,
          "fhirversion": "4.0.1"
 
-      },
+      },      
       {
          "version": "0.2.0",
          "date": "2019-09-01",
@@ -36,7 +36,7 @@
          "path": "http://hl7.org/fhir/us/davinci-dtr/2019Sep",
          "status": "ballot",
          "sequence": "STU1",
-         "fhirversion": "4.0.0"
+         "fhirversion": "4.0.1"
       },
       {
          "version": "0.1.0",
@@ -45,7 +45,8 @@
          "path": "http://hl7.org/fhir/us/davinci-dtr/2019May",
          "status": "ballot",
          "sequence": "STU1",
-         "fhirversion": "4.0.0"
+         "fhirversion": "4.0.1"
       }
-   ]
+   ],
+  "category": "Financial"
 }
