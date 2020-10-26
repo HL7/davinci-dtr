@@ -13,7 +13,7 @@
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
-      "valueCanonical": "http://hl7.org/fhir/us/davinci-dtr/Library/HomeOxygenTherapy-prepopulation"
+      "valueCanonical": "#HomeOxygenTherapy-prepopulation"
     }
   ],
   "url": "http://hl7.org/fhir/us/davinci-dtr/Questionnaire/home-o2-questionnaire",
