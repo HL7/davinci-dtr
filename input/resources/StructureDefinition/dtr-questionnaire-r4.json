@@ -69,7 +69,12 @@
 				"id": "Questionnaire.item",
 				"path": "Questionnaire.item",
 				"min": 1,
-				"max": "*"
+                "max": "*",
+                "constraint": [
+					{"key": "dtrq-1", "severity": "error",
+					 "human": "Non-group items must have the cqf-expression extension",
+					 "expression": "type = 'group' or extension.url = 'http://hl7.org/fhir/StructureDefinition/cqf-expression'"}
+				]
 			},
 			{
 				"id": "Questionnaire.item.expression",
@@ -86,11 +91,6 @@
             "code" : "Extension",
 						"profile" : ["http://hl7.org/fhir/StructureDefinition/cqf-expression"]
 					}
-				],
-				"constraint": [
-					{"key": "dtrq-1", "severity": "error",
-					 "human": "Non-group items must have the cqf-expression extension",
-					 "expression": "Questionnaire.item.where(type != 'group').extension('http://hl7.org/fhir/StructureDefinition/cqf-expression').hasValue()"}
 				]
 			}
 
