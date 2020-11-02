@@ -1,9 +1,9 @@
 # davinci-dtr
-This repository contains the materials to build the [HL7 Da Vinci](http://www.hl7.org/about/davinci/) Documentation Templates and Rules (DTR) Implementation Guide (IG).
+This repository contains the materials to build the [HL7 Da Vinci](http://www.hl7.org/about/davinci/) [Documentation Templates and Rules (DTR)](http://build.fhir.org/ig/HL7/davinci-dtr/) Implementation Guide (IG).
 
 The implementation guide is built with the [FHIR IG Publishing Tool](https://www.hl7.org/fhir/downloads.html).
 
-Materials for this implementation guide are being developed by the HL7 Da Vinci Project in collaboration with the HL7 Clinical Decision Support Work Group.
+Materials for this IG are being developed by the HL7 Da Vinci Project in collaboration with the HL7 Clinical Decision Support (CDS) Work Group.
 
 ## To Build
 MacOS - `$./_genonce.sh` from a terminal
