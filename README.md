@@ -1,5 +1,5 @@
 # davinci-dtr
-This repository contains the materials to build the [HL7 Da Vinci](http://www.hl7.org/about/davinci/) [Documentation Templates and Rules (DTR)](http://build.fhir.org/ig/HL7/davinci-dtr/) Implementation Guide (IG).
+This repository contains the materials to build the [HL7 Da Vinci](http://www.hl7.org/about/davinci/) Documentation Templates and Rules (DTR) Implementation Guide (IG).
 
 The implementation guide is built with the [FHIR IG Publishing Tool](https://www.hl7.org/fhir/downloads.html).
 
