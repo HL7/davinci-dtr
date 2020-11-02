@@ -6,14 +6,14 @@ The implementation guide is built with the [FHIR IG Publishing Tool](https://www
 Materials for this IG are being developed by the HL7 Da Vinci Project in collaboration with the HL7 Clinical Decision Support (CDS) Work Group.
 
 ## To Build
-MacOS - `$./_genonce.sh` from a terminal
->Note: org.hl7.fhir.publisher.jar needs to be in the input-cache folder in order to build
+From a MacOS terminal window: `$./_genonce.sh`
+>Note: `publisher.jar` needs to be in the `input-cache` folder in order to build
 
-## To View Local
+## To View/Run Local
 Launch `output/index.html` in a browser
 
 ## Viewing the Implementation Guide
-To view the actual implementation, you can visit the [Continuous Build of the DTR IG](http://build.fhir.org/ig/HL7/davinci-dtr/index.html).
+To view the actual IG, you can visit the [Continuous Build of the DTR IG](http://build.fhir.org/ig/HL7/davinci-dtr/index.html).
 
 ## Balloting
->This implementation guide will be a ballot as a part of the HL7 May 2021 ballot cycle. Interested parties should sign up for participation at the [HL7 Ballot Desktop](http://www.hl7.org/ctl.cfm?action=ballots.home).
+>This IG will be a ballot as a part of the HL7 May 2021 ballot cycle. Interested parties should sign up for participation at the [HL7 Ballot Desktop](http://www.hl7.org/ctl.cfm?action=ballots.home).
