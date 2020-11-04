@@ -11,8 +11,6 @@ Although not detailed in this IG it may be possible to achieve the same level of
 
 >CQL and FHIR Questionnaires SHALL be required. Even in the event the payer is NOT acting as a unique (all payer) SMART on FHIR app. For example, CQL and FHIR Questionnaires SHALL be required even when DTR is implemented within a native EHR application as opposed to a SMART on FHIR application.
 
->CQL and the FHIR Questionnaires SHOULD be allowed for other CDS Hooks (CRD) and SMART on FHIR (or native EHR) applications to accomplish the same goals.
-
 Provenance SHOULD be created and persisted with information created during the execution of the CQL and Questionnaire. Also, when the Questionnaire and its associated resources are exchanged with the source of the rules appropriate Provenance resource(s) SHOULD be created and exchanged.
 
 ### Content and Organization
