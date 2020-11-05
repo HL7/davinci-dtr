@@ -1,5 +1,5 @@
 
->Note: Although the DTR IG base profiles are listed below. The [HRex IG R4 base profile](https://build.fhir.org/ig/HL7/davinci-ehrx/toc.html) language supersedes the below base profile language.
+>Note: Although the DTR IG base profiles are listed below, the [HRex IG R4 base profile](https://build.fhir.org/ig/HL7/davinci-ehrx/toc.html) language supersedes the below base profile language.
 
 FHIR resources exchanged in the execution of a DTR process are subject to conformance requirements with the following HL7 Implementation Guides.
 
