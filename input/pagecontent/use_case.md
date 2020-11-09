@@ -65,6 +65,8 @@ This example shows an overview of how the DTR SMART on FHIR app (or equivalent n
 5. If there is missing information, the user can manually provide it to fully populate the QuestionnaireResponse. If the QuestionnaireResponse is fully populated, the Questionnaire is not shown to the user unless specifically requested.
 6. It then writes the FHIR QuestionnaireResponse back to EHR server and optionally to the payer.
 
+![Process Flow Detail](DTR_Example_Workflow.png){:style="float: none;"}
+
 > There is no need for the user to see the Questionnaire if it can be auto completed, unless they need to approve sending the result to the payer or to *sign* the information prior to submission. The application SHALL give the provider the ability, but not the requirement to review any information prior to sending it to a third party. This ability may be *turned-off* by the organization and possibly the individual provider. 
 
 > Questionnaires SHALL indicate which items are necessary using the `required` property, and the application should use that property to decide when a Questionnaire has been sufficiently auto completed.
@@ -77,4 +79,3 @@ This example shows an overview of how the DTR SMART on FHIR app (or equivalent n
 
 >DTR does not support creating new orders or changing existing orders. DTR supports documentation requirements for a device, service, and medication requests. When the required documentation cannot be populated from the EHR, DTR provides the ability to capture the missing information.
 
-![Process Flow Detail](DTR_Example_Workflow.png){:style="float: none;"}

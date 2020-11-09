@@ -1,6 +1,6 @@
 ### Retrieval of patient FHIR resources to supply to CQL execution engine
 
-The app SHALL retrieve the FHIR resources specified in the `dataRequirement` section of a `Library`, it can then pass these resources to the Clinical Quality Language (CQL) engine. 
+The app’s execution engine determines which FHIR resources to retrieve by analyzing the Clinical Quality Language (CQL).
 
 The app SHALL be provided with a token that allows it to access relevant information for the patient in question. Depending on user permissions, the app may not have access to all the data. The app developer should consider the possibility that access to some data may be restricted or prohibited(and access restrictions may happen silently (i.e. indistinguishable absent data). The app’s CQL execution engine SHOULD attempt to constrain queries as much as possible to reduce data transfer, however it MAY retrieve more data than is necessary (for example, if the CQL logic filters for medications meeting certain conditions, it is acceptable if the engine retrieves all medications for the patient, even if a more constrained query was possible).
 
