@@ -63,4 +63,5 @@ Payer systems SHALL use the specification and workflows defined by [Clinical Qua
 ### Must Support
 This IG does NOT mark any elements with the [Must Support](http://hl7.org/fhir/R4/profiling.html#mustsupport)  flag in its own profiles. 
 
-This IG also references US Core IG (section #3.2). Da Vinci DTR implementations SHALL conform to the US Core IG [Must Support](http://hl7.org/fhir/us/core/general-guidance.html#must-support) Guidance where US Core IG resources are used.
+This IG also references the [US Core IG](http://www.hl7.org/fhir/us/core/). Da Vinci DTR implementations SHALL conform to the US Core IG [Must Support](http://hl7.org/fhir/us/core/general-guidance.html#must-support) Guidance where US Core IG resources are used.
+
