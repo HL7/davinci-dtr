@@ -107,12 +107,7 @@
         <nameUrl value="index.html"/>
         <title value="Home Page"/>
         <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="background.html"/>
-        <title value="Technical Background"/>
-        <generation value="markdown"/>
-      </page>
+      </page>      
       <page>
         <nameUrl value="use_case.html"/>
         <title value="Use Case"/>
