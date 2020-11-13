@@ -1,3 +1,17 @@
+### Da Vinci
+Da Vinci is an HL7-sponsored project that brings together the U.S. payer, providers, and technology suppliers (including EHR vendors)  to help payers and providers to positively impact clinical, quality, cost, and care management outcomes using FHIR-related technologies. The project organizes meetings (face-to-face and conference calls) as well as connectathons to find ways to leverage FHIR technologies to support and integrate value-based care (VBC) data exchange across communities. Da Vinci identifies value-based care use cases of interest to its member and the community as a whole.
+
+The process that Da Vinci has adopted includes:
+1. identify business, clinical, technical and testing requirements,
+2. develop and ballot a FHIR based implementation guide (IG),
+3. develop a reference implementation (RI) that is used to demonstrate that the concepts in the IG are possible to implement,
+4. pilot the standard
+5. support the production use of the IG to enable exchange of data to support interoperability for value-based care.
+
+Additional information about Da Vinci, its members, the use cases and the implementation guides being developed can all be found on the [HL7 website](http://www.hl7.org/about/davinci). Meeting minutes and other materials can be found on the [Da Vinci Confluence page](https://confluence.hl7.org/display/DVP).
+
+{% include burdenReduction.md %}
+
 ### FHIR
 This IG uses terminology, notations and design principles that are specific to FHIR. It's important to be familiar with some of the basic principles of FHIR as well
 as general guidance on how to read FHIR specifications. Readers who are unfamiliar with FHIR are encouraged to read the following prior to reading the rest of this IG.
