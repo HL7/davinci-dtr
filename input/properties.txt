@@ -13,4 +13,4 @@ childHeadingOffset=2.2
 excludexml=Yes
 #excludejson=Yes
 excludettl=Yes
-additionalVersion=STU3
+#additionalVersion=STU3
