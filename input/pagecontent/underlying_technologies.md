@@ -1,5 +1,5 @@
 ### Da Vinci
-Da Vinci is an HL7-sponsored project that brings together the U.S. payer, providers, and technology suppliers (including EHR vendors)  to help payers and providers to positively impact clinical, quality, cost, and care management outcomes using FHIR-related technologies. The project organizes meetings (face-to-face and conference calls) as well as connectathons to find ways to leverage FHIR technologies to support and integrate value-based care (VBC) data exchange across communities. Da Vinci identifies value-based care use cases of interest to its member and the community as a whole.
+Da Vinci is an HL7-sponsored project that brings together the U.S. payer, providers, and technology suppliers (including EHR vendors)  to help payers and providers to positively impact clinical, quality, cost, and care management outcomes using FHIR-related technologies. The project organizes meetings (face-to-face and conference calls) as well as Connectathons to find ways to leverage FHIR technologies to support and integrate value-based care (VBC) data exchange across communities. Da Vinci identifies value-based care use cases of interest to its member and the community as a whole.
 
 The process that Da Vinci has adopted includes:
 1. identify business, clinical, technical and testing requirements,
@@ -33,7 +33,7 @@ This IG supports the [R4](http://hl7.org/fhir/R4/index.html) version of the FHIR
 | ------------ |
 | [FHIR R4 US Core](http://hl7.org/fhir/us/core/) |
 
-Implementers should also familarize themselves with the FHIR resources used within this IG.
+Implementers should also familiarize themselves with the FHIR resources used within this IG.
 
 | Resources |
 | ------------ |
@@ -42,23 +42,22 @@ Implementers should also familarize themselves with the FHIR resources used with
 | [Task](http://hl7.org/fhir/R4/task.html) |
 
 ### US Core
-Clinical systems SHALL use the specification and workflows defined by [US Core](http://www.hl7.org/fhir/us/core/) to initiate DTR functionality with payers. Implementers should be familiar with this specification.
+Clinical systems SHALL use the specification defined by [US Core](http://www.hl7.org/fhir/us/core/) in exchanging information with payers. Implementers should be familiar with this specification.
 
 ### Clinical Decision Support Hooks
- Clinical systems and payer systems SHALL use the specification and workflows defined by [Clinical Decision Support (CDS) Hooks](https://cds-hooks.hl7.org) to initiate DTR. Implementers should be familiar with this specification.
+Clinical systems and payer systems SHALL use the specification and workflows defined by [Clinical Decision Support (CDS) Hooks](https://cds-hooks.hl7.org) Hooks to initiate [Coverage Requirements Discovery (CRD)](http://hl7.org/fhir/us/davinci-crd/). Implementers should be familiar with this specification.
 
 ### Coverage Requirements Discovery
-Clinical systems SHALL use the specification and workflows defined by [Coverage Requirements Discovery (CRD)](http://hl7.org/fhir/us/davinci-crd/2019May/) to initiate DTR functionality with  payers. Implementers should be familiar with this specification.
+Clinical systems SHOULD use the specification and workflows defined by [Coverage Requirements Discovery (CRD)](http://hl7.org/fhir/us/davinci-crd/) to initiate DTR functionality with payers, where it is appropriate. Implementers should be familiar with this specification.
 
 ### SMART on FHIR
-If payer implementers choose to not implement DTR within a native EHR app. 
-Client systems conformant to this IG SHALL also serve as a [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) client. This is to allow DTR functionality to be invoked outside of regular clinical workflows using a SMART on FHIR app to provide a consistent way of evaluating what-if scenarios across EHR implementations. As such client implementers will also need to be familiar with the [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) specification. Because the SMART on FHIR app will interact with payer systems through the CDS Hooks interface, payer implementers only need to be familiar with the SMART on FHIR specification if they plan to develop SMART apps for launch by CDS Hooks or other purposes.
+Client systems conformant to this IG SHALL also serve as a [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) client. This is to allow DTR functionality to be invoked outside of regular EMR clinical workflows using a SMART on FHIR app to provide a consistent way of evaluating payer rules and documentation requirements across EHR implementations. As such client implementers will also need to be familiar with the [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) specification. Payer implementers only need to be familiar with the SMART on FHIR specification if they plan to develop SMART apps for launch by CDS Hooks or other purposes.
 
 ### Structured Data Capture
 Clinical systems SHALL use the specification and workflows defined by [Structured Data Capture (SDC)](http://hl7.org/fhir/us/sdc/) to initiate DTR functionality with the payers. Implementers should be familiar with this specification.
 
 ### Clinical Quality Language
-Payer systems SHALL use the specification and workflows defined by [Clinical Quality Language CQL](https://cql.hl7.org/) to facilitate DTR functionality within clinical systems. Implementers should be familiar with this specification. Older verisons of CQL such as STU 2 can be used provided they work with FHIR R4.
+Payer systems SHALL use the specification and workflows defined by [Clinical Quality Language CQL](https://cql.hl7.org/) to facilitate DTR functionality within clinical systems. Implementers should be familiar with this specification. Older versions of CQL such as STU 2 can be used provided they work with FHIR R4.
 
 ### Must Support
 This IG does NOT mark any elements with the [Must Support](http://hl7.org/fhir/R4/profiling.html#mustsupport)  flag in its own profiles. 

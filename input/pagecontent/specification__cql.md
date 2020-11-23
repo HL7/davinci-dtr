@@ -1,4 +1,4 @@
-This specification uses [Clinical Quality Language (CQL)](https://cql.hl7.org) for the expression of payer rules. By using CQL, this specification allows payers to query for patient information to check conformance with rules related to a particular treatment.
+This specification uses [Clinical Quality Language (CQL)](https://cql.hl7.org) for the expression of payer rules. By using CQL, this specification allows payers to query for patient information to verify that the patient's condition meets the requirements related to coverage of a particular treatment.
 
 Payers should construct CQL to gather information needed and test expected conditions about a patient. The DTR process will provide the CQL access to FHIR resources for the patient in question. This CQL will be executed and the resulting information will be made available for further use by the DTR process. Mainly, this information will be used to populate a Questionnaire that is also supplied by the payer.
 
