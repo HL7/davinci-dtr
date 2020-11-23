@@ -1,5 +1,5 @@
 
->Note: The DTR IG base profiles are listed below where appropriate, the HRex IG R4 base profiles may be utilized.
+>Note: The DTR IG base profiles are listed below where appropriate, the [HRex IG R4 base profiles](https://build.fhir.org/ig/HL7/davinci-ehrx/toc.html) may be utilized.
 
 FHIR resources exchanged in the execution of a DTR process are subject to conformance requirements with the following HL7 Implementation Guides.
 

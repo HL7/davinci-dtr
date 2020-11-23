@@ -37,7 +37,6 @@ In an effort to notify the appropriate party or maintainer that the CQL/Question
 If any errors are encountered during execution, the app’s engine SHALL NOT attempt any further execution, and the user SHALL be notified with an appropriate on-screen error message. The app SHALL log failures and ensure the maintainer of the CQL/Questionnaire package is notified. The user should have the option to complete the Questionnaire if possible, despite the error.
 
 In an effort to notify the appropriate party or maintainer that the CQL/Questionnaire is malformed, the app developer SHOULD use FHIR resource OperationOutcome. The destination of the OperationOutcome should be the endpoint the malformed CQL/Questionnaire was retrieved from.
-Note: A query for data that returns no results is never considered a failure.
 
 >Note: A query for data that returns no results is never considered a failure.
 
