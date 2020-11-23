@@ -1,5 +1,5 @@
 ### Comparing CQL Execution Results to Questionnaire
-While Structured Data Capture provides methods for Questionnaire (form) population, this IG relies on the approach that has been created within [Clinical Reasoning Module](http://hl7.org/fhir/R4/clinicalreasoning-module.html) of the FHIR specification. The [Documentation Template](http://hl7.org/fhir/R4/clinicalreasoning-knowledge-artifact-representation.html#documentation-template) concept is a good fit for the use case being addressed by this IG.
+While Structured Data Capture (SDC) provides methods for Questionnaire population, this IG relies on the approach that has been created within [Clinical Reasoning Module](http://hl7.org/fhir/R4/clinicalreasoning-module.html) of the FHIR specification. The [Documentation Template](http://hl7.org/fhir/R4/clinicalreasoning-knowledge-artifact-representation.html#documentation-template) concept is a good fit for the use case being addressed by this IG.
 
 As an example, given the following Clinical Quality Language (CQL) fragment:
 

@@ -20,7 +20,7 @@ Using the SMART App Launch Framework IG, the DTR process should request [scopes 
 The EHR's authorization server MUST support the `openid` and `fhirUser` scopes, due to the importance of the `fhirUser` element in the QuestionnaireResponse resource..
 
 ### Usage Sessions
-The DTR process is initially launched in response to a Coverage Requirements Discovery (CRD) request. This request is for a given set of orders for a particular patient.
+The DTR process MAY be initially launched in response to a Coverage Requirements Discovery (CRD) request. CRD is launched in response to a provider's request for a given set of orders for a particular patient.
 
 The DTR process usage session binds this set of orders and patient to a particular user. When persisting application state, it is the responsibility of the DTR process to record the relationship between the orders, patient and user.
 

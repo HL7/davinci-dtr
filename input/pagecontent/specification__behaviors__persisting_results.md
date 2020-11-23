@@ -9,14 +9,9 @@ The information that is collected (via the Questionnaire interaction with the us
 
  If the EHR has the capability to render a QuestionnaireResponse, it SHOULD save the QuestionnaireResponse as part of the patient record. If EHR does not have ability to render the QuestionnaireResponse, then the EHR should support saving the QuestionnaireResponse information as whichever supported structure produces the least impact on users.
 
-The DTR process SHOULD support transforming a DTR-QuestionnaireResponse resource into a [Portable Document Format](https://www.iso.org/standard/63534.html) (PDF) representation. DTR processs SHOULD ensure that the document indicates whether data was entered by the provider in reponse to the questionnaire or retrieved from the EHR directly.
+The DTR process SHOULD support transforming a DTR-QuestionnaireResponse resource into a [Portable Document Format](https://www.iso.org/standard/63534.html) (PDF) representation. DTR process SHOULD ensure that the document indicates whether data was entered by the provider in response to the questionnaire or retrieved from the EHR directly.
 
 The DTR process SHALL store this information in the EHR - either as a [DocumentReference](https://build.fhir.org/ig/HL7/US-Core-R4/StructureDefinition-new-us-core-documentreference.html) resource conforming to the US Core profile or in another EHR-appropriate, human-readable form. Implementers are strongly encouraged to use the most reusable, discrete form of data they can.  If necessary, a PDF can be generated to store the information if other options are not possible.  The generated PDF SHOULD be recorded in `DocumentReference.content.attachment.data`. `DocumentReference.content.attachment.contentType` SHOULD be `application/pdf`
-
-> Note to ballot commenters
->
-> This is an area the project is explicitly seeking comments on. Please provide any
-> details on constraints that should be applied to the document generation process.
 
 #### Interaction with EHR
 EHR systems that conform to [US Core](http://www.hl7.org/fhir/us/core/) allow for the creation of DocumentationReference resources through a FHIR API. As such, the DTR process should use the typical [FHIR create](http://hl7.org/fhir/R4/http.html#create) interaction to write the documentation into the EHR.

@@ -12,15 +12,15 @@ When `item`s meet the conditions stated above, they SHALL be presented to the us
 #### Structured Data Capture
 Payers may have requirements on how questions are presented to users. To allow for this, payers MAY supply Questionnaire resources that conform to the [Advanced Rendering Questionnaire Profile](http://hl7.org/fhir/uv/sdc/2019May/sdc-questionnaire-render.html) as defined in Structure Data Capture.
 
-The purpose of this extension is to indicate that it is not SAFE to render the form if the styles indicated in the Questionnaire are not followed. If the system is not capable of rendering the form as the Questionnaire dictates, then it cannot display the form.  Note the use of this flag should be extremely rare in DTR processs.
+The purpose of this extension is to indicate that it is not SAFE to render the form if the styles indicated in the Questionnaire are not followed. If the system is not capable of rendering the form as the Questionnaire dictates, then it cannot display the form.  Note the use of this flag should be extremely rare in DTR.
 
 If the `rendering-styleSensitive` extension property is not present or `false` the DTR process SHOULD use `rendering-style` and `rendering-xhtml` properties.
 
 #### Rendering Questionnaire items without specified styles
-Payers are not required to provide Questionnaires that conform to the Advanced Rendering Questionnaire Profile. When a Questionnaire is provided that does not conform to this profile, it is at the discretion of the DTR process to chose a reasonable presentation of the questions that require user input. The DTR process SHALL use the appropriate input mechanism depending on the `item.type`. When working with a FHIR R4 Questionnaire, the DTR process SHALL support `item.answerValueSet`, `item.answerOption`, and `item.initial` if provided.
+Payers are not required to provide Questionnaires that conform to the Advanced Rendering Questionnaire Profile. When a Questionnaire is provided that does not conform to this profile, it is at the discretion of the DTR process to choose a reasonable presentation of the questions that require user input. The DTR process SHALL use the appropriate input mechanism depending on the `item.type`. When working with a FHIR R4 Questionnaire, the DTR process SHALL support `item.answerValueSet`, `item.answerOption`, and `item.initial` if provided.
 
 #### Rendering multiple items
-This IG does not place any requirements on the DTR process to display multiple `Questionnaire.item`s to a user at a time or only a single `item`.  Implementers should decide which method of displaying questions makes the most sense within the end user workflow. We encourage Questionnaire designs that minimize the number of questions that are necessary to view/complete (e.g. if an answer obviates the need to complete a section, then the section should not appear for completion, unless local workflow(s) determine a need for editing or review).
+This IG does not place any requirements on the DTR process to display multiple `Questionnaire.item`s to a user at a time or only a single `item`.  Implementers should decide which method of displaying questions makes the most sense within the end user workflow. We encourage Questionnaire designs that minimize the number of questions that are necessary to view/complete (e.g., if an answer obviates the need to complete a section, then the section should not appear for completion, unless local workflow(s) determine a need for editing or review).
 
 ### Provider Attestation
 There may be cases where the CQL provided by a payer was unable to locate information for a patient that is present in the Electronic Health Record (EHR) system. This may be due to the information existing in unstructured notes or in locations the CQL did not expect. To reduce the burden on the users of the application, DTR provides a mechanism for the user to attest that the information exists in the patient’s record, without specifying the exact value or location of the information. This will not require the user to reenter the missing information.
@@ -29,7 +29,7 @@ The DTR process SHALL include a mechanism to allow a user to attest the answer t
 
 When a user provides an attestation, the DTR process SHALL record that in the corresponding QuestionnaireResponse.item. In this case, the DTR process SHALL create an `answer` property on the `item`. The `answer` SHALL have a `valueCoding` that is set to the SNOMED CT code `410515003`, known present. The `item` will also have an `author` extension property which will reference the `fhirUser` provided to the DTR process.
 
-If an answer is attested, the user should provide evidence that the attested value exists in the patient's record by including an attachment or the equivalent with the QuestionnaireResponse.
+If an answer is attested, the user should provide evidence that the attested value exists in the patient’s record by including an attachment or the equivalent with the QuestionnaireResponse.
 
 >If information is privacy restricted, the information SHOULD be treated as if it does not exist. The provider SHOULD ask the patient if they want to share the information with the payer.
 
