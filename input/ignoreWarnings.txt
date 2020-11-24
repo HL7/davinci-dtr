@@ -1,5 +1,3 @@
 == Suppressed Messages ==
-# enableWhen order is not required
-The target of this enableWhen rule (1.3) comes after the question itself
-# this happens because the Questionnaire resource is not included in this example
+# This happens because the Questionnaire resource is not included in this example
 The questionnaire '#Questionnaire/q045' could not be resolved, so no validation can be performed against the base questionnaire
