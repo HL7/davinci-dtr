@@ -24,7 +24,7 @@ If information required to complete the Questionnaire is not available to the SM
 > Electronic Health Record (EHR) is used in this IG and can be considered equivalent to Electronic Medical Record (EMR) or a Practice Management System (PMS).
 
 #### DTR compliant SMART on FHIR app
-Within DTR, the SMART on FHIR app (or equivalent native EHR app) serves as a middleware layer easing payer and provider integrations. Specifically, the relatively low adoption of [CQL](https://cql.hl7.org//) and [FHIR](https://www.hl7.org/fhir/) by payers and providers can be eased through the use of a third-party "app". This functionality enables DTR to gather Questionnaire resources, retrieve FHIR resources from EHRs, and run rules (CQL) to reduce the time involved in looking up documentation requirements.
+Within DTR, the SMART on FHIR app (or equivalent native EHR app) serves as a middleware layer easing payer and provider integrations. This functionality enables DTR to gather Questionnaire resources, retrieve FHIR resources from EHRs, and run rules (CQL) to reduce the time involved in looking up documentation requirements.
 
 ### Relation to Coverage Requirements Discovery (CRD)
 The [Coverage Requirements Discovery (CRD)](http://hl7.org/fhir/us/davinci-crd/) service portion of the workflow is responsible for verifying with the payer a given item, certain medications, procedure or other service requires documentation and/or Prior Authorization. It then provides the necessary links for the app to be launched and run. In most cases, the CRD service will return a CDS card populated with an app launch link for the DTR process, a link to a resource, and a DeviceRequest, MedicationRequest, or ServiceRequest resource ID. The app launch link can be used in a user interface in order to launch the app. While CRD may verify that documentation and/or prior authorization is required, it does not manage completion of documentation, prior authorization, or validation of rules.
@@ -39,12 +39,13 @@ help implementers with more concrete examples.
  
 As an example, a clinician might order, “Home Oxygen Therapy”
 * Arrows 1-4 represent the workflow processing to determine if there are documentation and/or prior authorization requirements (CRD)
-  * The EHR would allow for the ordering of DME (Durable Medical Equipment) device “Home Oxygen Therapy” (arrow 1). 
+  * The EHR would allow for the ordering of DME (Durable Medical Equipment) device “Home Oxygen Therapy” (arrow 1).
   * The EHR would then compose a FHIR based message to be used when calling the CDS Service (CRD) (arrow 2)
-  * CRD then retrieves information from a repository to determine if there are documentation and/or prior authorization requirements for a requested device,    service, or medication. The repository API and repository are shown in the Payer box. (repository API arrow and arrow 3)
+  * CRD then retrieves information from a repository to determine if there are documentation and/or prior authorization requirements for a requested device, service, or medication. The repository API and repository are shown in the Payer box. (repository API arrow and arrow 3)
   * In this scenario a response is sent back to the EHR/clinician in the form of a CDS card (arrow 4), indicating there are documentation requirements.
 	
 * Arrows 4 and 5 represent the workflow processing to populate the template/questionnaire (DTR)   
+  * In the CDS Hooks card, there may be a link that allows the clinician to launch the DTR SMART on FHIR app (or equivalent native EHR app) shown in the DTR Process area.
   * DTR will retrieve the appropriate Questionnaire(s) and rule(s) from the repository via a repository API.
   * The clinician would click the SMART app/DTR (or equivalent native EHR app) link which pre-populates a FHIR based Questionnaire with data from the EHR.
   * In the event data is known to be available but does not yet exist in the EHR the clinician could attest the data in question exists in the EHR.
@@ -69,11 +70,11 @@ This example shows an overview of how the DTR SMART on FHIR app (or equivalent n
 
 > Questionnaires SHALL indicate which items are necessary using the `required` property, and the application should use that property to decide when a Questionnaire has been sufficiently auto completed.
 
- > If the resulting information is to be sent to a third party (e.g., payer), the DTR SMART on FHIR App (or equivalent native app) SHOULD include a configurable step to allow the provider to review and grant permission to send the information gathered in the QuestionnaireResponse before sending. 
+ > If the resulting information is to be sent to a third  party (e.g., payer), the DTR SMART on FHIR App (or equivalent native app) SHOULD include a configurable step to allow  the provider to review and grant permission to send the information gathered in the QuestionnaireResponse before sending.
  
  However, this SHOULD be configurable on a site or provider basis.
 
->If the resulting information is to be sent to a third party (e.g., payer) see section [Section 4.4.5.1](specification__behaviors__persisting_application_state.html#smart-on-fhir-applications-and-servers)
+>If the resulting information is to be sent to a third party (e.g., payer) see [Section 4.4.5.1](specification__behaviors__persisting_application_state.html#smart-on-fhir-applications-and-servers)
 
 >DTR does not support creating new orders or changing existing orders. DTR supports documentation requirements for a device, service, and medication requests. When the required documentation cannot be populated from the EHR, DTR provides the ability to capture the missing information.
 

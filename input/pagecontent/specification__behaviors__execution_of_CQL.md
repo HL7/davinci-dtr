@@ -14,7 +14,7 @@ The app SHOULD retrieve the FHIR resources specified in the `dataRequirement` se
     },
 ```
 
-The app SHALL be provided with a token that allows it to access relevant information for the patient in question. Depending on user permissions, the app may not have access to all the data. The app developer should consider the possibility that access to some data may be restricted or prohibited(and access restrictions may happen silently (i.e. indistinguishable absent data). The app’s CQL execution engine SHOULD attempt to constrain queries as much as possible to reduce data transfer, however it MAY retrieve more data than is necessary (for example, if the CQL logic filters for medications meeting certain conditions. It is acceptable if the engine retrieves all medications for the patient, even if a more constrained query was possible).
+The app SHALL be provided with a token that allows it to access relevant information for the patient in question. Depending on user permissions, the app may not have access to all the data. The app developer should consider the possibility that access to some data may be restricted or prohibited(and access restrictions may happen silently (i.g., indistinguishable absent data). The app’s CQL execution engine SHOULD attempt to constrain queries as much as possible to reduce data transfer, however it MAY retrieve more data than is necessary (for example, if the CQL logic filters for medications meeting certain conditions. It is acceptable if the engine retrieves all medications for the patient, even if a more constrained query was possible).
 
 As discussed in the Execution Results section below, it’s possible not every CQL statement will be executed (for example some questions may only be relevant given certain answers to prior questions). In order to reduce data transfers and increase overall speed, data MAY be fetched as needed. However, the app’s execution engine MAY be implemented using a different strategy (for example by doing bulk fetches before starting execution).
 
@@ -31,7 +31,7 @@ Consideration must also be made regarding the CQL version.
 
 In an effort to notify the appropriate party or maintainer that the CQL/Questionnaire is malformed, the app developer SHOULD use FHIR resource OperationOutcome. The details property of the OperationOutcome should use `MSG_BAD_SYNTAX` to indicate syntactical errors. The destination of the OperationOutcome should be the endpoint the malformed CQL/Questionnaire was retrieved from.
 
->It is a CQL failure if the CQL cannot be executed by the app's CQL engine in the SMART on FHIR app or in a capabile EHR. The CQL author should take the capability of the app's CQL engine into account when designing their CQL. 
+>It is a CQL failure if the CQL cannot be executed by the app's CQL engine in the SMART on FHIR app or in a capable EHR. The CQL author should take the capability of the app's CQL engine into account when designing their CQL. 
 
 #### Behavior when encountering execution errors
 If any errors are encountered during execution, the app’s engine SHALL NOT attempt any further execution, and the user SHALL be notified with an appropriate on-screen error message. The app SHALL log failures and ensure the maintainer of the CQL/Questionnaire package is notified. The user should have the option to complete the Questionnaire if possible, despite the error.
