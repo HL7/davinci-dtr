@@ -1,16 +1,5 @@
 == Suppressed Messages ==
-
-# code system is not the focus of this example 
-A code with no system has no defined meaning. A system should be provided
-
-# order is not required for enableWhen
+# enableWhen order is not required
 The target of this enableWhen rule (1.3) comes after the question itself
-
-#  
-que-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]
-
-# 
+# this happens because the Questionnaire resource is not included in this example
 The questionnaire '#Questionnaire/q045' could not be resolved, so no validation can be performed against the base questionnaire
-
-
-

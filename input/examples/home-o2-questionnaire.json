@@ -17,8 +17,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/us/davinci-dtr/Questionnaire/home-o2-questionnaire",
-  "version": "0.2.0",
-  "name": "Home-o2-questionnaire",
+  "version": "0.2.0",  
   "title": "Home Oxygen Therapy Order Template",
   "status": "draft",
   "subjectType": [
