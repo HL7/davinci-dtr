@@ -1,3 +1,3 @@
 == Suppressed Messages ==
-# This happens because the Questionnaire resource is not included in this example
+# This happens because the Questionnaire resource is not included in this example, which was the intention of the DTR IG author.
 The questionnaire '#Questionnaire/q045' could not be resolved, so no validation can be performed against the base questionnaire
