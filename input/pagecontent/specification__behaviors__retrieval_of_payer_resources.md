@@ -11,7 +11,7 @@ The DTR process will need to retrieve resources from a payer IT system to operat
 This IG will support the [HRex Decision point - REST searchable?](http://build.fhir.org/ig/HL7/davinci-ehrx/exchanging.html#rest-searchable) when using RESTful endpoints to get payer resources (e.g., CQL rules and templates).
 
 ### Authentication of SMART on FHIR application to payer API
-Payers SHALL require the DTR process to authenticate in order to retrieve resources when PHI is exchanged and MAY required authentication in other situations. In the case that authentication is required, the following JSON structure SHALL be populated by the payer system. This JSON is based on the structure for [FHIR Authorization in CDS Hooks](https://cds-hooks.hl7.org/1.0/#fhir-resource-access).
+Payers SHALL require the DTR process to authenticate in order to retrieve resources when PHI is exchanged, and MAY required authentication in other situations. In the case that authentication is required, the following JSON structure SHALL be populated by the payer system. This JSON is based on the structure for [FHIR Authorization in CDS Hooks](https://cds-hooks.hl7.org/1.0/#fhir-resource-access).
 
 | Field | Optionality | Type | Description |
 | ----- | ----------- | ---- | ----------- |

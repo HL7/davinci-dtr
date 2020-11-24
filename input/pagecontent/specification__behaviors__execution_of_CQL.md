@@ -31,7 +31,7 @@ Consideration must also be made regarding the CQL version.
 
 In an effort to notify the appropriate party or maintainer that the CQL/Questionnaire is malformed, the app developer SHOULD use FHIR resource OperationOutcome. The details property of the OperationOutcome should use `MSG_BAD_SYNTAX` to indicate syntactical errors. The destination of the OperationOutcome should be the endpoint the malformed CQL/Questionnaire was retrieved from.
 
->It is a CQL failure if the CQL cannot be executed by the app's CQL engine in the SMART on FHIR app or in a capabile EHR. The CQL author should take the capability of the app's CQL engine into account when designing their CQL. 
+>It is a CQL failure if the CQL cannot be executed by the app's CQL engine in the SMART on FHIR app or in a capable EHR. The CQL author should take the capability of the app's CQL engine into account when designing their CQL. 
 
 #### Behavior when encountering execution errors
 If any errors are encountered during execution, the app’s engine SHALL NOT attempt any further execution, and the user SHALL be notified with an appropriate on-screen error message. The app SHALL log failures and ensure the maintainer of the CQL/Questionnaire package is notified. The user should have the option to complete the Questionnaire if possible, despite the error.
