@@ -9,7 +9,7 @@ The DTR / SMART on FHIR application will have access to the scope of data author
 
 Any EHR with SMART on FHIR support should be prepared to deal with the implications of providing a client with the scopes they request. For example, EHRs SHOULD limit FHIR search capabilities for clients, requiring a patient ID in any search query to ensure the client can only access resources related to that patient.
 
-When meeting the DTR / SMART on FHIR app requirements using a distinct app (e.g., not within the EHR), the app SHALL have a distinct client id for when it’s being invoked purely as a mechanism to supplement EHR data vs. when it is being invoked to share data back to the payer.
+When meeting the DTR / SMART on FHIR app requirements using a distinct app (i.e., not within the EHR), the app SHALL have a distinct client id for when it’s being invoked purely as a mechanism to supplement EHR data vs. when it is being invoked to share data back to the payer.
 
 Note: CRD and DTR are designed to function without use case Prior Authorization Support (PAS). For example, to augment the documentation of medical necessity. Since not all orders require Prior Authorization some only require documentation therefore not all QuestionnaireResponses will need to be sent to a payer or PAS service.
 
