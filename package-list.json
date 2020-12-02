@@ -30,6 +30,15 @@
 
       },      
       {
+         "version": "1.0.0",
+         "date": "2020-12-01",
+         "desc": "STU1 publish for FHIR R4 (4.0.1)",
+         "path": "http://hl7.org/fhir/us/davinci-dtr/STU1",
+         "status": "trial-use",
+         "sequence": "STU 1",
+         "fhirversion": "4.0.1"
+      },
+      {
          "version": "0.2.0",
          "date": "2019-09-01",
          "desc": "STU1 Ballot for FHIR R4",
