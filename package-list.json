@@ -32,7 +32,7 @@
       {
          "version": "1.0.0",
          "date": "2020-12-01",
-         "desc": "STU1 publish for FHIR R4 (4.0.1)",
+         "desc": "STU1 Trial Use for FHIR R4",
          "path": "http://hl7.org/fhir/us/davinci-dtr/STU1",
          "status": "trial-use",
          "sequence": "STU 1",
