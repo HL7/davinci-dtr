@@ -1,3 +1,24 @@
 == Suppressed Messages ==
-# This happens because the Questionnaire resource is not included in this example, which was the intention of the DTR IG author.
+# This happens because the Questionnaire resource is not included in this example
 The questionnaire '#Questionnaire/q045' could not be resolved, so no validation can be performed against the base questionnaire
+
+# Process Info messages suppressed per FHIR Management Group (FMG) 
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
+Validate resource against profile http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-task-r4
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/ServiceRequest
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/Questionnaire
+Validate resource against profile http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaire-r4 - listed in meta
+Validate resource against profile http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse-r4
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+
+
+
+
+
+
+
