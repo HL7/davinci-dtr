@@ -7,16 +7,16 @@
       "hl7.fhir.r4.core": "4.0.1"
    },
    "keywords": [
-     "DTR",
-     "Documentation Templates and Rules"
+      "DTR",
+      "Documentation Templates and Rules"
    ],
    "language": "en",
    "author": "MITRE Dev Team",
    "maintainers": [
-     {
-       "name": "Larry Decelles",
-       "email": "ldecelles@mitre.org"
-     }
+      {
+         "name": "Larry Decelles",
+         "email": "ldecelles@mitre.org"
+      }
    ],
    "license": "CC0-1.0",
    "list": [
@@ -27,8 +27,7 @@
          "status": "ci-build",
          "current": true,
          "fhirversion": "4.0.1"
-
-      },      
+      },
       {
          "version": "1.0.0",
          "date": "2020-12-01",
@@ -57,5 +56,5 @@
          "fhirversion": "4.0.1"
       }
    ],
-  "category": "Financial"
+   "category": "Financial"
 }
