@@ -251,5 +251,9 @@
       <code value="show-inherited-invariants"/>
       <value value="false"/>
     </parameter>
+    <parameter>
+      <code value="path-expansion-params"/>
+      <value value="terminology-settings.json"/>
+    </parameter>
   </definition>
 </ImplementationGuide>
