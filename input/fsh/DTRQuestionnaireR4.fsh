@@ -17,10 +17,7 @@ Description:    "The Questionnaire resource is used to represent the information
 * ^date = "2020-12-23T02:27:35+00:00"
 
 * extension 1..*
-//// NOTE: temporarily commented this line to avoid this erroneous compiler error:
-//// "Sushi: error Type constraint on extension would eliminate all types on slice Questionnaire.extension:library"
-//// Once the compiler bug is fixed, will need to uncomment the line
-//* extension only $CQFLIB
+* extension only $CQFLIB
 * extension ^base.path = "DomainResource.extension"
 * extension ^base.min = 0
 * extension ^base.max = "*"
