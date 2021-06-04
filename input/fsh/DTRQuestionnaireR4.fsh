@@ -22,8 +22,6 @@ Description:    "The Questionnaire resource is used to represent the information
 * extension ^base.min = 0
 * extension ^base.max = "*"
 
-* status 1..1
-
 * experimental 0..0
 
 * date 1..1
