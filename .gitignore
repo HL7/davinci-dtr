@@ -1,7 +1,7 @@
-/output
-/temp
-*.dropbox
 .DS_Store
 Thumbs.db
-[Dd]esktop.ini
-input-cache/publisher.jar
+/fsh-generated
+/input-cache
+/output
+/temp
+/template
