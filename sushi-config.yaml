@@ -1,0 +1,30 @@
+# ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: hl7.fhir.us.davinci-dtr
+canonical: http://hl7.org/fhir/us/davinci-dtr
+name: davinci-dtr
+title: "Documentation Templates and Rules"
+description: "The Documentation Templates and Rules (DTR) Implementation Guide (IG) specifies how payer rules can be executed in a provider context to ensure that documentation requirements are met. The IG is a companion to the Coverage Requirements Discovery (CRD) IG, which uses CDS Hooks to query payers to determine if there are documentation requirements for a proposed medication, procedure or other service."
+status: draft
+license: CC0-1.0
+version: 1.0.0
+fhirVersion: 4.0.1
+copyrightYear: 2020+
+releaseLabel: ci-build
+publisher:
+  name: HL7 Clinical Decision Support Work Group
+  url: http://www.hl7.org/Special/committees/dss
+jurisdiction: urn:iso:std:iso:3166#US
+
+parameters:
+  excludexml: true
+  excludettl: true
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+# menu:
+#   Home: index.html
+#   Artifacts: artifacts.html
