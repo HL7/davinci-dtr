@@ -15,6 +15,8 @@ This section of the IG defines the guidelines of the DTR process behavior and in
   * [Persisting Results](specification__behaviors__persisting_results.html)
   * [Task Creation](specification__behaviors__task_creation.html)
   * [Launch outside of CRD](specification__behaviors__launch_outside_of_CRD.html)
+  * [Value Set and Code System Guidance](specification_value_set_code_system_guidance.html)
+  * [Best Practices](specification__behaviors__best_practices.html)
   * [Privacy, Safety and Security](specification__behaviors__privacy_safety_and_security.html)
 
 >Note: A reference implementation has been created. The code is available at [DTR GitHub](https://github.com/HL7-DaVinci/dtr). The executable is at [DTR Logica Health](https://davinci-dtr.logicahealth.org/smart/launch.html).

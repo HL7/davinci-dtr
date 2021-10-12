@@ -182,6 +182,16 @@
             <generation value="markdown"/>
           </page>
           <page>
+            <nameUrl value="specification_value_set_code_system_guidance.html"/>
+            <title value="Value Set and Code System Guidance"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="specification__behaviors__best_practices.html"/>
+            <title value="Best Practices"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
             <nameUrl value="specification__behaviors__privacy_safety_and_security.html"/>
             <title value="Privacy, Safety and Security"/>
             <generation value="markdown"/>
