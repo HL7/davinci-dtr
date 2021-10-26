@@ -6,4 +6,7 @@
 * [Persisting Results](specification__behaviors__persisting_results.html)
 * [Task Creation](specification__behaviors__task_creation.html)
 * [Launch outside of CRD](specification__behaviors__launch_outside_of_CRD.html)
+* [Value Set and Code System Guidance](specification_value_set_code_system_guidance.html)
+* [Best Practices](specification__behaviors__best_practices.html)
+* [SDC Adaptive Forms](specification__behaviors__sdc_adaptive_forms.html)
 * [Privacy, Safety and Security](specification__behaviors__privacy_safety_and_security.html)
