@@ -1,3 +1,9 @@
+<blockquote class="stu-note">
+<p>
+Note: Best Practices is tentative because it has not been voted on yet. For more details regarding the status see: <a href="https://jira.hl7.org/browse/FHIR-34077">FHIR-34077</a>
+</p>
+</blockquote>
+<br>
 ### The use of OIDs
 
 If OIDs are used they SHALL be prefixed with urn:oid: per the [OID primitive datatype definition](https://www.hl7.org/fhir/datatypes.html#oid).

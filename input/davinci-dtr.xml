@@ -192,6 +192,11 @@
             <generation value="markdown"/>
           </page>
           <page>
+            <nameUrl value="specification__behaviors__sdc_adaptive_forms.html"/>
+            <title value="SDC Adaptive Forms"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
             <nameUrl value="specification__behaviors__privacy_safety_and_security.html"/>
             <title value="Privacy, Safety and Security"/>
             <generation value="markdown"/>
