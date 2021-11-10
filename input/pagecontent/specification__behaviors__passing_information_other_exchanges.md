@@ -20,7 +20,7 @@ The PAO Bundle linkId should be used for attached bundles containing resourced n
 
 <blockquote class="stu-note">
 <p>
-Note: At this time SMART Web Messaging is in at draft status. Therefore implementing Updating the Order as described below is not required to be conformant with this IG.</p>
+Note: At this time <a href="http://hl7.org/fhir/uv/smart-web-messaging/2020Sep/">SMART Web Messaging</a> is at draft status. Therefore implementing the "Updating the Order" functionality as described below is not required to be conformant with this IG.</p>
 </blockquote>
 
 DTR implementations using a SMART on FHIR application SHALL support [SMART Web Messaging](http://hl7.org/fhir/uv/smart-web-messaging/2020Sep/) for updating the relevant order. After storing the completed QuestionnaireResponse, SMART Web Messaging will be used to ask the EHR to update the order to add the QuestionnaireResponse as a ‘supportingInfo’ link. DTR implementations not relying on SMART on FHIR but instead using a native application SHALL support similar functionality. 
