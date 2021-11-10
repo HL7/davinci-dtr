@@ -172,6 +172,11 @@
             <generation value="markdown"/>
           </page>
           <page>
+            <nameUrl value="specification__behaviors__passing_information_other_exchanges.html"/>
+            <title value="How DTR passes information to PAS, PAO or other exchange IG"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
             <nameUrl value="specification__behaviors__task_creation.html"/>
             <title value="Task Creation"/>
             <generation value="markdown"/>
