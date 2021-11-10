@@ -2,7 +2,44 @@ Users of the DTR process are likely to be performing many tasks to support patie
 
 The DTR process should anticipate that users may not always be able to complete a full interaction between launch from a CDS Hooks Card to provide a response back to the payer. It is recommended that DTR conformant [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) (or native) applications preserve state automatically as a user interacts with it. In this manner, the user does not need to explicitly take action to save their state.
 
-The exact mechanisms for saving state are outside the scope of this IG. The following sections describe some mechanisms that a DTR process may use to establish the data necessary to store and retrieve state.
+### How DTR Saves Context of DTR for a Relaunch
+
+
+<blockquote class="stu-note">
+<p>
+Note: How DTR Saves Context of DTR for a Relaunch is tentative because it has not been voted on yet. For more details regarding the status see: <a href="https://jira.hl7.org/browse/FHIR-33223">FHIR-33223</a></p>
+</blockquote>
+<br>
+The DTR app should provide the option to save context for a relaunch. At any point prior to completion the app should be able to save the session, and then relaunch it later. If an EHR system performs DTR functionality internally, it may save session information however it likes. Guidance below does not apply in this scenario. 
+ 
+The DTR app shall save context in the DocumentReference resource. The following information should be contained inside the DocumentReference: 
+•   date/time the session was saved 
+•   app context 
+•   patient 
+•   organization that launched the app 
+•   practitioner 
+•   QuestionnaireResponse 
+ 
+All this information is readily available to the DTR app when launched. The app can provide a button or alert to allow the user to manually save progress, or automatically save progress in the background. The app should save the QuestionnaireResponse as a contained resource on the DocumentReference to preserve progress in answering questions. 
+ 
+When launching the app and restoring a saved session, DTR should re-run the CQL pre-population and override currently filled out answers in the QuestionnaireResponse with the latest information from the EHR.
+ 
+The DocumentReference resources should be saved to the server responsible for the DTR app. The system responsible for the DTR app should provide a FHIR endpoint for saving session information. The DTR app should be registered with these systems out-of-band, and the information needed to identify which endpoint to reach out to should be included in the app context. 
+ 
+<blockquote class="stu-note">
+<p>
+Note: It’s not clear if the DTR app is saving its context to a single payer which is responsible for maintaining the app, or it is saving it to any payer server it wants to that uses that app. How the DTR server gains access to the payer server is an open question right now. But is just a black box. It doesn’t particularly matter how it gets done. 
+
+We welcome feedback on how this process should or could work.</p>
+</blockquote>
+<br>
+When launched with context of the organization, patient, and user, the app should display a list of open or “in-progress” DocumentReferences for the user to select from, scoped to the patient that is in context. When launched in standalone mode, the app should provide the user the option to select which payer and patient they would like to search for open sessions against.   
+
+Since a patient won’t be in context, the app will need to provide a selection of patients that you can choose from. But this would be from the EHR, currently. Another option would be to let the user select which payer they want and then select a patient from the saved DocumentReferences.
+ 
+The DTR app shall only be scoped to one patient and be prohibited from accessing resources aside from the ones the EHR has authorized it to gain access to. The payer system shall only provide DocumentReferences for usage by the DTR app if it is scoped to a specific patient. The DTR app should not be allowed to query all in-progress QuestionnaireResponses without specifying a patient to limit the search.  
+
+The system responsible for saving the sessions should prune old sessions by checking the date on the DocumentReference resource. The system can decide how long to wait before deleting an old session. The DocumentReference shall be deleted if the QuestionnaireResponse is saved to the EHR and the session finishes. 
 
 ### SMART on FHIR applications and Servers
 SMART on FHIR applications must be launched by a host that is accessible to the launching Electronic Health Record (EHR) System. Once launched, a SMART on FHIR application may communicate with the host that it was initially launched from. This may be to retrieve data to assist in the functionality of the SMART on FHIR application, or it may be to record actions taken by the application user.
