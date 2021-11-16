@@ -22,6 +22,9 @@ parameters:
   excludexml: true
   excludettl: true
 
+dependencies:
+  hl7.fhir.uv.sdc: 2.7.0
+
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
