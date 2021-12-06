@@ -6,7 +6,7 @@ Note: Best Practices is tentative because it has not been voted on yet. For more
 <br>
 ### The use of OIDs
 
-If OIDs are used they SHALL be prefixed with urn:oid: per the [OID primitive datatype definition](https://www.hl7.org/fhir/datatypes.html#oid).
+If OIDs are used they SHALL be prefixed with `urn:oid:` per the [OID primitive datatype definition](https://www.hl7.org/fhir/datatypes.html#oid).
 
 ### Referencing value sets in Questionnaires
 
@@ -20,15 +20,15 @@ When referencing expressions in libraries such as a CQL library, the name of the
 
 e.g., "expression": "\\"LowerLimbProsthesis\\".PhysicalExaminationType"
 
-In this example above LowerLimbProsthesis is the library name and PhysicalExaminationType is the expression name.
+In this example above `LowerLimbProsthesis` is the `library name` and `PhysicalExaminationType` is the `expression name`.
 
 ### FHIR Library and included CQL
 
-When developing FHIR Libraries that depend on CQL content, the content element SHALL include the data element. Note: The use of the data element requires it to contain a base-64 encoded string per the attachment specification.  
+When developing FHIR Libraries that depend on CQL content, the content element SHALL include the `data` element. Note: The use of the `data` element requires it to contain a base-64 encoded string per the [attachment specification](https://www.hl7.org/fhir/datatypes.html#Attachment).  
 
 For example, see the below snippet from a FHIR Library:
 
-![FHIR Librbrary snippet](FHIR_Library_snippet.png){:style="float: none;"}
+![FHIR Library snippet](FHIR_Library_snippet.png){:style="float: none;"}
 
-Note: Although the use of url in the content element is valid, using data element should be more interoperable.
+Note: Although the use of `url` in the content element is valid, using the `data` element should be more interoperable.
 
