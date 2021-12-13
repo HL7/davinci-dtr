@@ -24,4 +24,4 @@ The IG is organized into the following sections:
 ### Downloads
 * The full [DTR Implementation Guide](full-ig.zip)
 * [FHIR R4 DTR Resource Definitions](definitions.json.zip)
-* [FHIR R4 DTR IG Validator Pack](validator-davinci-dtr.pack)
+* [FHIR R4 DTR IG Validator Pack](validator-hl7.fhir.us.davinci-dtr.pack)
