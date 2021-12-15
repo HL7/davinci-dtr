@@ -1,3 +1,6 @@
+Alias: $cqf-expression = http://hl7.org/fhir/StructureDefinition/cqf-expression
+Alias: $questionnaire-constraint = http://hl7.org/fhir/StructureDefinition/questionnaire-constraint
+
 Profile: DTRSDCQuestionnaire
 Parent: sdc-questionnaire
 Id: dtr-sdc-questionnaire
@@ -13,13 +16,13 @@ Description: "The DTR SDC Questionnaire R4 resource profile"
 * ^date = "2021-11-12T02:27:35+00:00"
 
 /////////////////////////
-// Rendering extensions
 * extension contains http://hl7.org/fhir/StructureDefinition/rendering-styleSensitive named styleSensitive 0..1
 * extension[styleSensitive].valueBoolean = false
 * title.extension contains http://hl7.org/fhir/StructureDefinition/rendering-style named titleRenderingStyle 0..1
 * text.extension contains http://hl7.org/fhir/StructureDefinition/rendering-style named textRenderingStyle 0..1
 * item.prefix.extension contains http://hl7.org/fhir/StructureDefinition/rendering-style named itemPrefixRenderingStyle 0..1
 * item.text.extension contains http://hl7.org/fhir/StructureDefinition/rendering-style named itemTextRenderingStyle 0..1
+* item.text.extension contains $cqf-expression named itemTextCqfExpression 0..1
 * title.extension contains http://hl7.org/fhir/StructureDefinition/rendering-xhtml named titleRenderingXhtml 0..1
 * text.extension contains http://hl7.org/fhir/StructureDefinition/rendering-xhtml named textRenderingXhtml 0..1
 * item.prefix.extension contains http://hl7.org/fhir/StructureDefinition/rendering-xhtml named itemPrefixRenderingXhtml 0..1
@@ -34,6 +37,13 @@ Description: "The DTR SDC Questionnaire R4 resource profile"
 * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-width named width 0..*
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-sliderStepValue named sliderStepValue 0..*
 * item.extension contains http://hl7.org/fhir/StructureDefinition/entryFormat named entryFormat 0..*
+// * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemMedia named itemMedia 0..1
+* item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-optionalDisplay named optionalDisplay 0..0
+//* item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-shortText named shortText 0..*
+//* item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/questionnaire-sdc-openLabel named openLabel 0..*
+// * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-collapsible named collapsible 0..1
+// * item.answerOption.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemAnswerMedia named itemAnswerMedia 0..*
+
 
 /////////////////////////
 // Behavior extensions
@@ -47,6 +57,7 @@ Description: "The DTR SDC Questionnaire R4 resource profile"
 //* extension[cqf-library].value[x] only http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-library
 * extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext named launchContex 0..* MS
 * extension contains http://hl7.org/fhir/StructureDefinition/variable named variable 0..* MS
+// * extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext named itemPopulationContext 0..* 
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-usageMode named usageMode 0..*
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs named minOccurs 0..* 
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs named maxOccurs 0..*
@@ -65,11 +76,24 @@ Description: "The DTR SDC Questionnaire R4 resource profile"
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-constraint named itemConstraint 0..*
 * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression named initialExpression 0..* MS
 * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression named calculatedExpression 0..* MS
+* item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-signatureRequired named itemSignatureRequired 0..*
+// * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression named enableWhenExpression 0..* MS
+// * item.answerOption.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive named optionExclusive 0..1 MS
+// * item.answerOption.extension contains http://hl7.org/fhir/StructureDefinition/ordinalValue named ordinalValue 0..*
+
 * item.enableWhen 0..* MS
 * item.enableBehavior 0..1 MS
-* item.text 0..1
-* item.repeats 0..1
-* item.readOnly 0..1
+* item.required.value ^mustSupport = false
+* item.required.value.extension contains $cqf-expression named requiredExpression 0..1 MS
+* item.repeats.value ^mustSupport = false
+* item.repeats.value.extension contains $cqf-expression named repeatsExpression 0..1 MS
+* item.readOnly.value ^mustSupport = false
+* item.readOnly.value.extension contains $cqf-expression named readOnlyExpression 0..1 MS
+* item.answerValueSet.value ^mustSupport = false
+* item.answerValueSet.value.extension contains $cqf-expression named answerValueSetExpression 0..1 MS
+* item.answerOption.value[x] 1..1 MS
+* item.answerOption.value[x].extension contains http://hl7.org/fhir/StructureDefinition/rendering-xhtml named answerOptionRenderingXhtml 0..1 MS
+
 
 /////////////////////////
 // Populate extensions
@@ -77,4 +101,3 @@ Description: "The DTR SDC Questionnaire R4 resource profile"
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-unit named unit 0..*
 * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-candidateExpression named candidateExpression 0..* MS
 * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-contextExpression named contextExpression 0..* MS
-
