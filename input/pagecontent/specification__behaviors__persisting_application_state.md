@@ -1,6 +1,6 @@
 Users of the DTR process are likely to be performing many tasks to support patient care or administration of the provider organization. As such, it should be expected that users may need to halt interaction with the DTR process and resume at a later time.
 
-The DTR process should anticipate that users may not always be able to complete a full interaction between launch from a CDS Hooks Card to provide a response back to the payer. It is recommended that DTR conformant [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) (or native) applications preserve state automatically as a user interacts with it. In this manner, the user does not need to explicitly take action to save their state.
+The DTR process should anticipate that users may not always be able to complete a full interaction between launching from a CDS Hooks Card to providing a response back to the payer. It is recommended that DTR conformant [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) (or native) applications preserve state automatically as a user interacts with it. In this manner, the user does not need to explicitly take action to save their state.
 
 ### How DTR Saves Context of DTR for a Relaunch
 
@@ -10,22 +10,32 @@ The DTR process should anticipate that users may not always be able to complete 
 Note: How DTR Saves Context of DTR for a Relaunch is tentative because it has not been voted on yet. For more details regarding the status see: <a href="https://jira.hl7.org/browse/FHIR-33223">FHIR-33223</a></p>
 </blockquote>
 <br>
-The DTR app should provide the option to save context for a relaunch. At any point prior to completion the app should be able to save the session, and then relaunch it later. If an EHR system performs DTR functionality internally, it may save session information however it likes. Guidance below does not apply in this scenario. 
- 
-The DTR app shall save context in the DocumentReference resource. The following information should be contained inside the DocumentReference: 
-•   date/time the session was saved 
-•   app context 
-•   patient 
-•   organization that launched the app 
-•   practitioner 
-•   QuestionnaireResponse 
- 
-All this information is readily available to the DTR app when launched. The app can provide a button or alert to allow the user to manually save progress, or automatically save progress in the background. The app should save the QuestionnaireResponse as a contained resource on the DocumentReference to preserve progress in answering questions. 
- 
-When launching the app and restoring a saved session, DTR should re-run the CQL pre-population and override currently filled out answers in the QuestionnaireResponse with the latest information from the EHR.
- 
-The DocumentReference resources should be saved to the server responsible for the DTR app. The system responsible for the DTR app should provide a FHIR endpoint for saving session information. The DTR app should be registered with these systems out-of-band, and the information needed to identify which endpoint to reach out to should be included in the app context. 
- 
+
+At any point prior to completion the app should be able to save the session, and then relaunch it later. If an EHR system performs DTR functionality internally, it may save session information however it likes. Guidance below does not apply in this scenario. 
+
+Context for the DTR app is made up of the QuestionnaireResponse, the Questionnaire, the prepopulation CQL and its supporting files, the order(s), the coverage, and the patient.  The QuestionnaireResponse resource contains reference to the patient in the `subject` field, and the order(s) and coverage in the `context` extension.  From the coverage and order, the DTR app can determine the payer and retrieve the CQL, Questionnaire, and other files from a standard endpoint on the payer server.  
+
+If the DTR app recieves a QuestionnaireResponse resource in the app context, it shall reload the session information from that QuestionnaireResponse using its associated order and coverage.  If the DTR app does not recieve a QuestionnaireResponse, it shall first search the EHR for QuestionnaireResponses associated with the order included in the app context.  Depending on the result of the search, the app will either offer an option to reload context from a found QuestionnaireResponse or launch normally and create a new QuestionnaireResponse.
+
+The EHR should be able to associate orders with the QuestionnaireResponses they pertain to by linking their FHIR IDs internally.  This means that even if the ID of an order changes, the EHR should be capable of updating the QuestionnaireResponse to reference the new ID.  This way, even if the DTR recieves the updated orders, it will still be able to search the EHR for the associated QuestionnaireResponse.  
+
+The EHR is responsible for storing and updating the QuestionnaireResponse, as well as providing the user a way to choose sessions to relaunch.  Additionally, the app context may need to be altered by the EHR to include relevant QuestionnaireResponses.  
+
+For EHRs that cannot support this protocol, the data will be stored on the payer server in a DocumentReference resource.  Data stored in this way shall only be available for supporting the DTR workflow.  Additionally, the DocumentReference may only be accessed by the app which created them.  Smart apps and payer systems should be registered such that the payer system can establish identity of the smart app prior to granting access to the DocumentReference.  When registering, the DTR app should be given a shared client secret and a public key, which can be used to prove its identity.
+
+The following information should be contained inside the DocumentReference: 
+    DocumentReference.subject.reference -         EHR Patient URL
+    DocumentReference.subject.identifier -        Payer member identifier
+    DocumentReference.author -                    Provider organization reference
+    DocumentReference.date -                      Current date
+    DocumentReference.meta.lastUpdated -          Date of last change
+    DocumentReference.content.attachment -        PDF containing the QuestionnaireResponse 
+
+The PDF may also include prior authorization information, if appropriate.  The order and coverage can be retrieved from the QuestionnaireResponse as normal.  
+
+ When searching the DocumentReference, the DTR app shall pass the access token it recieved from the EHR to the payer system.  Before allowing access to the DocumentReferences, the payer shall ensure that the token was signed by a trusted EHR which corresponds to the organization referenced in the DocumentReference and is scoped for the same patient which the DTR app is requesting.  The payer system shall NOT use the token for anything other than validation.  
+
+
 <blockquote class="stu-note">
 <p>
 Note: It’s not clear if the DTR app is saving its context to a single payer which is responsible for maintaining the app, or it is saving it to any payer server it wants to that uses that app. How the DTR server gains access to the payer server is an open question right now. But is just a black box. It doesn’t particularly matter how it gets done. 
