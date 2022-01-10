@@ -6,11 +6,14 @@ The provider SHOULD have the option to continue with the order directly and deal
 
 When a questionnaire is suspended the application SHOULD give the user the ability to restart the DTR process (e.g., execute all rules and questionnaire). If this is done, the implementer SHOULD implement a mechanism to copy any user entered data to the new version without reentry.
 
-To facilitate this, the DTR process SHOULD allow users to create tasks. The details of the task SHOULD be represented by a FHIR `Task` resource. The DTR process SHOULD communicate the task information to the EHR system using the FHIR create interaction. The `Task` resource is meant to act as a "TODO" item for the clinician or their staff, not substitute an actual order. The ability to create tasks is one way the clinician or their staff can delegate tasks but SHOULD not be considered the only way to delegate tasks. How the task workflow is managed is left to the implementer.  
+The ability to create tasks or TODOs is outside of the scope of DTR and should be supported by the EHR implementation. Note: Implementers may want to consider using SMART Web messaging to communicate the specific tasks to the EHR.
 
-The DTR process SHOULD attempt to prepopulate as much of the `Task` resource as it can based on the context of the application. `Task.description` may draw from the text available in the currently active `Questionnaire.item.text`.
+<blockquote class="stu-note">
+<p>
+Note: At this time SMART Web Messaging is in a draft status.</p>
+</blockquote>
 
-The questionnaire SHOULD be able to suspend completion until all tasks are completed.  How the application is suspended is left to the implementer, but the state of the questionnaire SHOULD be preserved. The DTR process launches with a unique `launch id`, which could be used to preserve state until the questionnaire resumes.
+The questionnaire SHOULD be able to suspend completion until all tasks are completed. How the application is suspended is left to the implementer, but the state of the questionnaire SHOULD be preserved. 
 
 
 
