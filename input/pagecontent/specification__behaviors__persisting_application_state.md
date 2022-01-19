@@ -31,9 +31,7 @@ The following information should be contained inside the DocumentReference:
     DocumentReference.meta.lastUpdated -          Date of last change
     DocumentReference.content.attachment -        PDF containing the QuestionnaireResponse 
 
-The PDF may also include prior authorization information, if appropriate.  The order and coverage can be retrieved from the QuestionnaireResponse as normal.  
-
- When searching the DocumentReference, the DTR app shall pass the access token it recieved from the EHR to the payer system.  Before allowing access to the DocumentReferences, the payer shall ensure that the token was signed by a trusted EHR which corresponds to the organization referenced in the DocumentReference and is scoped for the same patient which the DTR app is requesting.  The payer system shall NOT use the token for anything other than validation.  
+The PDF may also include prior authorization information, if appropriate.  Information in the PDF is not machine readable, and association with the order or prior authorization request must be done by hand. 
 
 
 <blockquote class="stu-note">
@@ -43,9 +41,11 @@ Note: It’s not clear if the DTR app is saving its context to a single payer wh
 We welcome feedback on how this process should or could work.</p>
 </blockquote>
 <br>
-When launched with context of the organization, patient, and user, the app should display a list of open or “in-progress” DocumentReferences for the user to select from, scoped to the patient that is in context. When launched in standalone mode, the app should provide the user the option to select which payer and patient they would like to search for open sessions against.   
+When launched with context of the organization, patient, and user, the app should display a list of open or “in-progress” QuestionnaireResponses or DocumentReferences for the user to select from, scoped to the patient that is in context. The DTR app should check both the EHR and the payer server for stored sessions.  The QuestionnaireResponses on the EHR and the DocumentReferences on the payer server have reference to the order which they are linked to, which can be used to search for the correct resource.  
 
-Since a patient won’t be in context, the app will need to provide a selection of patients that you can choose from. But this would be from the EHR, currently. Another option would be to let the user select which payer they want and then select a patient from the saved DocumentReferences.
+When launched in standalone mode, the app should provide the user the option to select which payer and patient they would like to search for open sessions against.   
+
+Since a patient won’t be in context, the app will need to provide a selection of patients that the user can choose from. But this would be from the EHR, currently. Another option would be to let the user select which payer they want and then select a patient from the saved DocumentReferences.
  
 The DTR app shall only be scoped to one patient and be prohibited from accessing resources aside from the ones the EHR has authorized it to gain access to. The payer system shall only provide DocumentReferences for usage by the DTR app if it is scoped to a specific patient. The DTR app should not be allowed to query all in-progress QuestionnaireResponses without specifying a patient to limit the search.  
 
