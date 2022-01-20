@@ -2,7 +2,8 @@ Instance: home-o2-sdc-adaptive-questionnaire
 InstanceOf: DTRSDCQuestionnaireAdapt
 Usage: #example
 Description: "Example Adaptive SDC questionnaire for Home Oxygen Therapy"
-* url = "http://hl7.org/fhir/us/davinci-dtr/Questionnaire/home-o2-sdc-adaptive-questionnaire"
+
+// * url = "http://hl7.org/fhir/us/davinci-dtr/Questionnaire/home-o2-sdc-adaptive-questionnaire"
 * version = "0.1.0"
 * name = "HomeOxygenTherapyAdaptiveSDCQuestionnaire"
 * title = "Adaptive Home Oxygen Therapy Order Template (SDC)"
@@ -14,8 +15,9 @@ Description: "Example Adaptive SDC questionnaire for Home Oxygen Therapy"
 * publisher = "Da Vinci DTR"
 * contact.name = "Example Author"
 
+* derivedFrom = "http://example/basequestionnaire"
 * extension[cqf-library].valueCanonical = "http://example.com/Library/HomeOxygenTherapy-prepopulation"
-
+* extension[sdc-questionnaire-questionnaireAdaptive].valueBoolean = true
 * item.linkId = "1"
 * item[=].text = "SQ-1.4.a: Relevant Patient Diagnoses (conditions that might be expected to improve with oxygen therapy)"
 * item[=].type = #open-choice
