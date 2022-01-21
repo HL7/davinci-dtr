@@ -3,7 +3,6 @@ InstanceOf: DTRSDCQuestionnaireAdapt
 Usage: #example
 Description: "Example Adaptive SDC questionnaire for Home Oxygen Therapy"
 
-// * url = "http://hl7.org/fhir/us/davinci-dtr/Questionnaire/home-o2-sdc-adaptive-questionnaire"
 * version = "0.1.0"
 * name = "HomeOxygenTherapyAdaptiveSDCQuestionnaire"
 * title = "Adaptive Home Oxygen Therapy Order Template (SDC)"
