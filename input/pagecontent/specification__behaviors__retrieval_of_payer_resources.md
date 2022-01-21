@@ -7,8 +7,7 @@ The DTR process will need to retrieve resources from a payer IT system to operat
 | request  | OPTIONAL    | *string* | The canonical URL of or copy of the draft request resource for which documentation requirements are being gathered.  |
 | response  | OPTIONAL    | *string* | The canonical URL of the QuestionnaireResponse representing the session which should be relaunched  |
 
-
- The request resource created during the CRD workflow should be saved to the EHR FHIR server for retrieval by the DTR process, if possible. This might, for example, be the ServiceRequest resource that is sent in the CDS hook to the CRD server. Additionally, a tight integration between the CRD service and the DTR process should enable the DTR process to access FHIR resources received by the CRD service that are not available from the EHR's FHIR server.
+The request resource created during the CRD workflow should be saved to the EHR FHIR server for retrieval by the DTR process, if possible. This might, for example, be the ServiceRequest resource that is sent in the CDS hook to the CRD server. Additionally, a tight integration between the CRD service and the DTR process should enable the DTR process to access FHIR resources received by the CRD service that are not available from the EHR's FHIR server.
 
 This IG will support the [HRex Decision point - REST searchable?](http://build.fhir.org/ig/HL7/davinci-ehrx/exchanging.html#rest-searchable) when using RESTful endpoints to get payer resources (e.g., CQL rules and templates).
 
@@ -24,7 +23,7 @@ Payers SHALL require the DTR process to authenticate in order to retrieve resour
 | subject | REQUIRED | *string* | The OAuth 2.0 client identifier of the DTR process, as registered with the payer's authorization server. |
 
 ### Questionnaire
-The DTR process SHALL use the URL provided in the `template` property of the `appContext` to retrieve a Questionnaire resource. The payer SHALL provide this as a FHIR resource, such that the DTR process will be executing a FHIR read interaction on the payer's server. The returned Questionnaire resource SHALL conform to the [CQF-Questionnaire Profile](http://hl7.org/fhir/R4/cqf-questionnaire.html)  and MAY conform to [Structured Data Capture (SDC) Advanced Rendering Profile](http://hl7.org/fhir/uv/sdc/2019May/rendering.html).
+The DTR process SHALL use the URL provided in the `template` property of the `appContext` to retrieve a Questionnaire resource. The payer SHALL provide this as a FHIR resource, such that the DTR process will be executing a FHIR read interaction on the payer's server. The returned Questionnaire resource SHALL conform to the [CQF-Questionnaire Profile](http://hl7.org/fhir/R4/cqf-questionnaire.html) and MAY conform to [Structured Data Capture (SDC) Advanced Rendering Profile](http://hl7.org/fhir/uv/sdc/2019May/rendering.html).
 
 The Questionnaire SHALL have a `cqf-library` extension property specified. That property SHALL provide the location of one or more CQL libraries needed to execute the payer rules.
 
@@ -34,7 +33,6 @@ The DTR process SHALL use the URL provided in the `cqf-library` extension to ret
 ### Relaunch Session
 The DTR app shall support usage of two new scopes to alter the launch context: `launch/request` and `launch/response`.  If the `request` scope is included when launching, the access token bundle should return with the `request` field of the `appContext` filled.  If the `request` scope is included, it should return with the `response` field of the `appContext` filled.  
 
-At least one of the two fields `request` or `response` must be filled in order for the DTR app to successfully launch.  In the case that `response` is filled but `request` is empty, the DTR process SHALL use the URL provided in the `response` property of the `appContext` to retrieve the referenced QuestionnaireResponse. The QuestionnaireResponse can be used to discover the request through the `context` extension.   The app should allow the user to relaunch the deferred usage session defined by the QuestionnaireResponse. 
+At least one of the two fields `request` or `response` must be filled in order for the DTR app to successfully launch. In the case that `response` is filled but `request` is empty, the DTR process SHALL use the URL provided in the `response` property of the `appContext` to retrieve the referenced QuestionnaireResponse. The QuestionnaireResponse can be used to discover the request through the `context` extension. The app should allow the user to relaunch the deferred usage session defined by the QuestionnaireResponse. 
 
- If the `response` field is empty, the DTR app shall check the EHR for QuestionnaireResponses and the payer system for DocumentReferences which are linked to the `request`.  The QuestionnaireResponse will have all the information required to request the Questionnaire and CQL from the payer server, and allow relaunch of the session with previously answered questions already filled out.
-
+If the `response` field is empty, the DTR app shall check the EHR for QuestionnaireResponses and the payer system for DocumentReferences which are linked to the `request`. The QuestionnaireResponse will have all the information required to request the Questionnaire and CQL from the payer server and allow relaunch of the session with previously answered questions already filled out.
