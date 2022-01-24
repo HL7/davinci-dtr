@@ -9,7 +9,8 @@ Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patien
 Validate resource against profile http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse-r4
 Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 
-
+# Example code system in the example
+Code System URI 'http://example.org' is unknown so the code cannot be validated
 
 
 
