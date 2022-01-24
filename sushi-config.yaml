@@ -23,7 +23,7 @@ parameters:
   excludettl: true
 
 dependencies:
-  hl7.fhir.uv.sdc: 2.7.0
+  hl7.fhir.uv.sdc: current
 
 pages:
   index.md:
