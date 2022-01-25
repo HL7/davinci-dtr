@@ -1,9 +1,3 @@
-<blockquote class="stu-note">
-<p>
-Note: Value Set and Code System Guidance is tentative because it has not been voted on yet. For more details regarding the status see: <a href="https://jira.hl7.org/browse/FHIR-34077">FHIR-34077</a>
-</p>
-</blockquote>
-<br>
 The table below is guidance that SHOULD be used when using values sets and code systems in DTR. This can also be considered a best practice.
 
 <table border="1">
