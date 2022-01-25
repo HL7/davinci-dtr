@@ -16,7 +16,7 @@ Description:    "The QuestionnaireResponse resource is used to represent a respo
 * ^status = #draft
 * ^date = "2020-12-23T02:27:35+00:00"
 
-* extension contains QuestionnaireResponseContext named context 0..* MS
+* extension only QuestionnaireResponseContext
 
 * basedOn 0..0
 * partOf 0..0
