@@ -4,14 +4,6 @@ The DTR process should anticipate that users may not always be able to complete 
 
 ### How DTR Saves Context of DTR for a Relaunch
 
-<blockquote class="stu-note">
-<p>
-Note: How DTR Saves Context of DTR for a Relaunch is tentative because it has not been voted on yet. For more details regarding the status see: 
-<a href="https://jira.hl7.org/browse/FHIR-34291">FHIR-34291</a>, and 
-<a href="https://jira.hl7.org/browse/FHIR-34128">FHIR-34128</a>, and 
-<a href="https://jira.hl7.org/browse/FHIR-34121">FHIR-34121</a>
-</p>
-</blockquote>
 <br>
 At any point prior to completion the app should be able to save the session, and then relaunch it later. If an EHR system performs DTR functionality internally, it may save session information however it likes. Guidance below does not apply in this scenario. 
 
@@ -37,7 +29,7 @@ The PDF may also include prior authorization information, if appropriate. Inform
 
 <blockquote class="stu-note">
 <p>
-Note: It’s not clear if the DTR app is saving its context to a single payer which is responsible for maintaining the app, or it is saving it to any payer server it wants to that uses that app. How the DTR server gains access to the payer server is an open question right now. But is just a black box. It doesn’t particularly matter how it gets done. 
+Note: It is not clear if the DTR app is saving its context to a single payer which is responsible for maintaining the app, or is it saving it to any payer server it wants to that uses that app. How the DTR server gains access to the payer server is an open question right now. But is just a black box. It doesn’t particularly matter how it gets done. 
 
 We welcome feedback on how this process should or could work.</p>
 </blockquote>

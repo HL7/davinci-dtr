@@ -1,9 +1,3 @@
-<blockquote class="stu-note">
-<p>
-Note: SDC Adaptive forms support is tentative because it has not been voted on yet. For more details regarding the status see: <a href="https://jira.hl7.org/browse/FHIR-33224">FHIR-33224</a> and
-<a href="https://jira.hl7.org/browse/FHIR-33151">FHIR-33151</a></p>
-</blockquote>
-<br>
 ### General Adaptive Form Support
 
 [SDC Adaptive Forms](http://build.fhir.org/ig/HL7/sdc/adaptive.html) define an alternative way to dynamically interact with the user. DTR support for adaptive forms would help in the following scenarios:

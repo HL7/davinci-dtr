@@ -1,9 +1,4 @@
 
-<blockquote class="stu-note">
-<p>
-Note: How DTR passes information to PAS, PAO or other exchange IG is tentative because it has not been voted on yet. For more details regarding the status see: <a href="https://jira.hl7.org/browse/FHIR-33226">FHIR-33226</a></p>
-</blockquote>
-<br>
 ### How DTR passes information to PAS, PAO or other exchanges
 
 The DTR application shall save the QuestionnaireResponse to the EHR upon completion (see section Persisting Results). The next step after completing the Questionnaire may include sending a Claim to a PAS [(Prior Auth Support)](http://build.fhir.org/ig/HL7/davinci-pas/) server for or an Order to PAO [(Post-Acute Orders)](http://build.fhir.org/ig/HL7/dme-orders/) for ordering. Specifications on required resources can be found in the Implementation Guides for each of those use cases.  
