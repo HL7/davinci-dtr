@@ -29,7 +29,7 @@ Description: "Example Adaptive SDC questionnaire for Home Oxygen Therapy"
 * item[=].text = "Order Reason"
 * item[=].type = #choice
 * item[=].required = true
-* item[=].answerOption[0].valueCoding.code = #"Initial or original order for certification"
-* item[=].answerOption[+].valueCoding.code = #"Change in status"
-* item[=].answerOption[+].valueCoding.code = #"Revision or change in equipment"
-* item[=].answerOption[+].valueCoding.code = #Replacement
+* item[=].answerOption[0].valueCoding = http://example.org#1 "Initial or original order for certification"
+* item[=].answerOption[+].valueCoding = http://example.org#2 "Change in status"
+* item[=].answerOption[+].valueCoding = http://example.org#3 "Revision or change in equipment"
+* item[=].answerOption[+].valueCoding = http://example.org#4 "Replacement"
