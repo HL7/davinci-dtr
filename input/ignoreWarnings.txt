@@ -12,8 +12,7 @@ Validate resource against profile http://hl7.org/fhir/StructureDefinition/Struct
 # Example code system in the example
 Code System URI 'http://example.org' is unknown so the code cannot be validated
 
-
-
-
+# Issue opened for IG publisher: https://github.com/HL7/fhir-ig-publisher/issues/381
+Questionnaire.url: max allowed = 0, but found 1 (from http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire-adapt)
 
 
