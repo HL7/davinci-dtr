@@ -9,9 +9,9 @@ Description: "Example QuestionnaireResponse for Home Oxygen Therapy"
 * contained = example1
 * questionnaire = "#Questionnaire/q045"
 * extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/context"
-* extension[=].valueReference.reference = "Coverage/1234"
+* extension[=].valueReference = Reference(coverage1001)
 * extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/context"
-* extension[=].valueReference.reference = "DeviceRequest/5678"
+* extension[=].valueReference = Reference(deviceRequest0001)
 * item[0].linkId = "1"
 * item[=].text = "Patient Information"
 * item[=].item[0].linkId = "1.1"
