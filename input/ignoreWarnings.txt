@@ -4,15 +4,18 @@ The questionnaire '#Questionnaire/q045' could not be resolved, so no validation 
 
 # Process Info messages suppressed per FHIR Management Group (FMG) 
 Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
-Validate resource against profile http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-task-r4
 Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
 Validate resource against profile http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse-r4
 Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 
+# Adaptive questionnaire should be contained in a QuestionnaireResponse. there is an example for the QuestionnnaireResponse for an adaptive questionnaire
+The Implementation Guide contains no explicitly linked examples for this profile
+
+# Example open choice is prepopulated
+Cannot validate string answer option because no option list is provided
+Code System URI 'https://bluebutton.cms.gov/resources/codesystem/hcpcs' is unknown so the code cannot be validated
+
 # Example code system in the example
 Code System URI 'http://example.org' is unknown so the code cannot be validated
-
-# Issue opened for IG publisher: https://github.com/HL7/fhir-ig-publisher/issues/381
-Questionnaire.url: max allowed = 0, but found 1 (from http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire-adapt)
 
 
