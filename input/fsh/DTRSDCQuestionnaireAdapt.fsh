@@ -2,7 +2,7 @@ Profile: DTRSDCQuestionnaireAdapt
 Parent: sdc-questionnaire-adapt
 Id: dtr-sdc-questionnaire-adapt
 Title: "DTR SDC Questionnaire for adaptive form"
-Description: "The DTR SDC Questionnaire for adaptive form resource profile"
+Description: "The DTR SDC adaptive Questionnaire is used to represent an adaptive Questionnaire."
 
 * ^meta.versionId = "1"
 * ^meta.lastUpdated = "2021-11-12T17:01:59.000+00:00"

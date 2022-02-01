@@ -1,7 +1,7 @@
 Instance: home-o2-sdc-adaptive-questionnaire
 InstanceOf: DTRSDCQuestionnaireAdapt
 Usage: #inline
-Description: "Example Adaptive SDC questionnaire for Home Oxygen Therapy"
+Description: "An example Adaptive SDC questionnaire for Home Oxygen Therapy."
 
 * version = "0.1.0"
 * name = "HomeOxygenTherapyAdaptiveSDCQuestionnaire"
@@ -37,7 +37,7 @@ Description: "Example Adaptive SDC questionnaire for Home Oxygen Therapy"
 Instance: home-o2-sdc-adaptive-questionnaireresponse
 InstanceOf: QuestionnaireResponse
 Usage: #example
-Description: "Example QuestionnaireResponse for Adaptive Questionnaire"
+Description: "An example QuestionnaireResponse for Adaptive Questionnaire."
 * contained[0] = home-o2-sdc-adaptive-questionnaire
 * questionnaire = "#home-o2-sdc-adaptive-questionnaire"
 * status = #completed

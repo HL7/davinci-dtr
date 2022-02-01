@@ -18,7 +18,7 @@ In this example above `LowerLimbProsthesis` is the `library name` and `PhysicalE
 
 ### FHIR Library and included CQL
 
-When developing FHIR Libraries that depend on CQL content, the content element SHALL include the `data` element. Note: The use of the `data` element requires it to contain a base-64 encoded string per the [attachment specification](https://www.hl7.org/fhir/datatypes.html#Attachment).  
+When developing FHIR Libraries that depend on CQL content, the content element SHALL include the `data` element. Note: The use of the `data` element requires it to contain a base-64 encoded string that represents the CQL file per the [attachment specification](https://www.hl7.org/fhir/datatypes.html#Attachment).  
 
 For example, see the below snippet from a FHIR Library:
 

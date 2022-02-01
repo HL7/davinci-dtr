@@ -18,12 +18,15 @@ The EHR is responsible for storing and updating the QuestionnaireResponse, as we
 For EHRs that cannot support this protocol, the data will be stored on the payer server in a DocumentReference resource. Data stored in this way shall only be available for supporting the DTR workflow. Additionally, the DocumentReference may only be accessed by the app which created them. Smart apps and payer systems should be registered such that the payer system can establish identity of the smart app prior to granting access to the DocumentReference. When registering, the DTR app should be given a shared client secret and a public key, which can be used to prove its identity.
 
 The following information should be contained inside the DocumentReference: 
-    DocumentReference.subject.reference -         EHR Patient URL
-    DocumentReference.subject.identifier -        Payer member identifier
-    DocumentReference.author -                    Provider organization reference
-    DocumentReference.date -                      Current date
-    DocumentReference.meta.lastUpdated -          Date of last change
-    DocumentReference.content.attachment -        PDF containing the QuestionnaireResponse 
+
+| Element | Description |
+| ----- | ----------- |
+| DocumentReference.subject.reference | EHR Patient URL|
+| DocumentReference.subject.identifier | Payer member identifier|
+| DocumentReference.author | Provider organization reference|
+| DocumentReference.date | Current date |
+| DocumentReference.meta.lastUpdated | Date of last change|
+| DocumentReference.content.attachment | PDF containing the QuestionnaireResponse |
 
 The PDF may also include prior authorization information, if appropriate. Information in the PDF is not machine readable, and association with the order or prior authorization request must be done by hand. 
 
@@ -49,7 +52,7 @@ SMART on FHIR applications must be launched by a host that is accessible to the 
 
 In the case of DTR, the SMART on FHIR application may be launched from a number of locations. A likely scenario is that the DTR conformant SMART on FHIR application will be hosted by a payer IT system.
 
-The DTR process may send information back to the host it was launched from in order to save application state. As mentioned in the previous section, the services and formats used to communicate state information are outside the scope of this IG.   
+The DTR process may send information back to the host it was launched from or send the information on another server (e.g. payer server) in order to save application state. As mentioned in the previous section, the services and formats used to communicate state information are outside the scope of this IG.   
 
 ### Requesting User Identity
 To persist application state, the DTR process will need to know who is currently using the application. SMART on FHIR provides methods for the application to obtain this information.

@@ -1,6 +1,6 @@
 ### General Adaptive Form Support
 
-[SDC Adaptive Forms](http://build.fhir.org/ig/HL7/sdc/adaptive.html) define an alternative way to dynamically interact with the user. DTR support for adaptive forms would help in the following scenarios:
+[SDC Adaptive Forms](http://build.fhir.org/ig/HL7/sdc/adaptive.html) define an alternative way to dynamically interact with the user. DTR support for adaptive forms helps in the following scenarios:
 
 1. Support for complex decision trees without the need for the Questionnaire and rules (CQL) to cover all the possibilities. This is enabled by supporting the request for a small number of questions (and the ability to prepopulate the questions from the EHR), returning the results to the Payer to "prune" the decision tree, and repeat the process until complete.
 

@@ -5,7 +5,7 @@ Profile: DTRSDCQuestionnaire
 Parent: sdc-questionnaire
 Id: dtr-sdc-questionnaire
 Title: "DTR SDC Questionnaire"
-Description: "The DTR SDC Questionnaire R4 resource profile"
+Description: "The DTR SDC Questionnaire represents a Questionnaire which follows SDC profile."
 
 * ^meta.versionId = "1"
 * ^meta.lastUpdated = "2021-11-12T17:01:59.000+00:00"

@@ -1,7 +1,7 @@
 Instance: home-o2-questionnaire
 InstanceOf: Questionnaire
 Usage: #example
-Description: "Example questionnaire for Home Oxygen Therapy"
+Description: "An example questionnaire for Home Oxygen Therapy."
 * meta.profile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaire-r4"
 * extension.url = "http://hl7.org/fhir/StructureDefinition/cqf-library"
 * extension.valueCanonical = "#HomeOxygenTherapy-prepopulation"

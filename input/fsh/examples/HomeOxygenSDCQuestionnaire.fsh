@@ -1,7 +1,7 @@
 Instance: home-o2-sdc-questionnaire
 InstanceOf: DTRSDCQuestionnaire
 Usage: #example
-Description: "Example SDC questionnaire for Home Oxygen Therapy"
+Description: "An example SDC questionnaire for Home Oxygen Therapy."
 
 * url = "http://hl7.org/fhir/us/davinci-dtr/Questionnaire/home-o2-sdc-questionnaire"
 * version = "0.1.0"

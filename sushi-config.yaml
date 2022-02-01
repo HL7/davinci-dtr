@@ -35,40 +35,42 @@ pages:
     title: Technical Background and Underlying Technologies
   specification.md:
     title: Formal Specification
-  specification__cds_hooks.md:
-    title: CDS Hooks
-  specification__behaviors.md:
-    title: Behaviors
-  specification__profiles.md:
-    title: Profiles
-  specification__cql.md:
-    title: CQL 
-  specification__behaviors__retrieval_of_payer_resources.md:
-    title: Retrieval of Payer Resources 
-  specification__behaviors__execution_of_CQL.md:
-    title: Execution of CQL
-  specification__behaviors__requesting_additional_information_from_the_user.md:
-    title: Requesting Additional Information from the User
-  specification__behaviors__questionnaire_evaluation.md:
-    title: Questionnaire Evaluation
-  specification__behaviors__persisting_application_state.md:
-    title: Persisting Application State
-  specification__behaviors__persisting_results.md:
-    title: Persisting Results
-  specification__behaviors__passing_information_other_exchanges.md:
-    title: How DTR passes information to PAS, PAO or other exchanges
-  specification__behaviors__task_creation.md:
-    title: Task Creation
-  specification__behaviors__launch_outside_of_CRD.md:
-    title: Launch outside of CRD
-  specification_value_set_code_system_guidance.md:
-    title: Value Set and Code System Guidance
-  specification__behaviors__best_practices.md:
-    title: Best Practices
-  specification__behaviors__sdc_adaptive_forms.md:
-    title: SDC Adaptive Forms
-  specification__behaviors__privacy_safety_and_security.md:
-    title: Privacy, Safety and Security
+    specification__cds_hooks.md:
+      title: CDS Hooks
+    specification__behaviors.md:
+      title: Behaviors
+    specification__profiles.md:
+      title: Profiles
+    specification__cql.md:
+      title: CQL 
+    specification__behaviors__retrieval_of_payer_resources.md:
+      title: Retrieval of Payer Resources 
+    specification__behaviors__execution_of_CQL.md:
+      title: Execution of CQL
+    specification__behaviors__questionnaire_evaluation.md:
+      title: Questionnaire Evaluation
+    specification__behaviors__requesting_additional_information_from_the_user.md:
+      title: Requesting Additional Information from the User
+    specification__behaviors__persisting_application_state.md:
+      title: Persisting Application State
+    specification__behaviors__persisting_results.md:
+      title: Persisting Results
+    specification__behaviors__passing_information_other_exchanges.md:
+      title: How DTR passes information to PAS, PAO or other exchanges
+    specification__behaviors__task_creation.md:
+      title: Task Creation
+    specification__behaviors__launch_outside_of_CRD.md:
+      title: Launch outside of CRD
+    specification_value_set_code_system_guidance.md:
+      title: Value Set and Code System Guidance
+    specification__behaviors__best_practices.md:
+      title: Best Practices
+    specification__behaviors__sdc_adaptive_forms.md:
+      title: SDC Adaptive Forms
+    specification__behaviors__privacy_safety_and_security.md:
+      title: Privacy, Safety and Security
+  artifacts.html:
+    title: Artifacts Summary
   credits.md:
     title: Credits
 
@@ -78,8 +80,8 @@ menu:
   Table of Contents: toc.html
 
   DTR Specification:
-    Technical Background and Underlying Technologies: underlying_technologies.html
     Overview and Use Cases: use_cases.html
+    Technical Background and Underlying Technologies: underlying_technologies.html
     Formal Specification: specification.html       
     Downloads: index.html#downloads
     Credits: credits.html

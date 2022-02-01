@@ -1,7 +1,7 @@
 Instance: home-o2-questionnaireresponse
 InstanceOf: QuestionnaireResponse
 Usage: #example
-Description: "Example QuestionnaireResponse for Home Oxygen Therapy"
+Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * meta.profile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse-r4"
 * authored = "2019-07-18"
 * status = #completed

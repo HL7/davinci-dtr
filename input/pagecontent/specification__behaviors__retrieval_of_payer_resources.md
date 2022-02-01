@@ -2,6 +2,7 @@ The DTR process will need to retrieve resources from a payer IT system to operat
 
 | Field    | Optionality | Type     | Description |
 | -------- | ----------- | -------- | ----------- |
+| fhirPath | OPTIONAL    | *string* | The path used to retrieve the questionnaire and related CQL resources. |
 | filePath | OPTIONAL    | *string* | The base URL used to retrieve the questionnaire and related CQL resources. If left blank the app should use a default base URL. |
 | template | OPTIONAL    | *string* | The canonical URL of the Questionnaire for the DTR process to use for execution. |
 | request  | OPTIONAL    | *string* | The canonical URL of or copy of the draft request resource for which documentation requirements are being gathered.  |
@@ -31,8 +32,8 @@ The Questionnaire SHALL have a `cqf-library` extension property specified. That 
 The DTR process SHALL use the URL provided in the `cqf-library` extension to retrieve the CQL necessary to execute the payer rules. Metadata about the rules will be represented as a FHIR Library resource. The payer SHALL provide this as a FHIR resource, such that the DTR process will be executing a FHIR read interaction on the payer's server.
 
 ### Relaunch Session
-The DTR app shall support usage of two new scopes to alter the launch context: `launch/request` and `launch/response`.  If the `request` scope is included when launching, the access token bundle should return with the `request` field of the `appContext` filled.  If the `request` scope is included, it should return with the `response` field of the `appContext` filled.  
+The DTR app shall support usage of two new scopes to alter the launch context: `launch/request` and `launch/response`.  If the `request` scope is included when launching, the access token bundle should return with the `request` field of the `appContext` filled.  If the `response` scope is included, it should return with the `response` field of the `appContext` filled.  
 
 At least one of the two fields `request` or `response` must be filled in order for the DTR app to successfully launch. In the case that `response` is filled but `request` is empty, the DTR process SHALL use the URL provided in the `response` property of the `appContext` to retrieve the referenced QuestionnaireResponse. The QuestionnaireResponse can be used to discover the request through the `context` extension. The app should allow the user to relaunch the deferred usage session defined by the QuestionnaireResponse. 
 
-If the `response` field is empty, the DTR app shall check the EHR for QuestionnaireResponses and the payer system for DocumentReferences which are linked to the `request`. The QuestionnaireResponse will have all the information required to request the Questionnaire and CQL from the payer server and allow relaunch of the session with previously answered questions already filled out.
+If the `response` field is empty, the DTR app shall check the EHR for QuestionnaireResponses and the payer system for DocumentReferences which are linked to the `request`. The QuestionnaireResponse will have all the information required to request the Questionnaire and CQL from the payer server and allow relaunch of the session with previously answered questions already filled out. [Save Context for Relaunch](specification__behaviors__persisting_application_state.html#how-dtr-saves-context-of-dtr-for-a-relaunch)

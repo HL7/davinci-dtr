@@ -6,7 +6,7 @@ As a part of a CDS Hooks response, if there is a need for further information th
 A payer may secure endpoints from which the DTR process will retrieve additional artifacts to support execution. If the payer does require authentication, the DTR process requests an OAuth token using SMART backend services and then uses that second access token to authenticate against the payer FHIR server.
 
 ### Establish Patient Context
-When the DTR process is being launched from a CDS card Link, the Electronic Health Record (EHR) system and DTR process will follow the procedures established by the [SMART App Launch Framework](http://hl7.org/fhir/smart-app-launch). More specially the EHR and DTR process SHALL follow the SMART App Launch Framework [EHR launch sequence](http://hl7.org/fhir/smart-app-launch/#ehr-launch-sequence). 
+When the DTR process is being launched from a CDS card Link, the Electronic Health Record (EHR) system and DTR process will follow the procedures established by the [SMART App Launch Framework](http://hl7.org/fhir/smart-app-launch). More specifically the EHR and DTR process SHALL follow the SMART App Launch Framework [EHR launch sequence](http://hl7.org/fhir/smart-app-launch/#ehr-launch-sequence). 
 
 In [Step 1 of the launch sequence](http://hl7.org/fhir/smart-app-launch/#step-1-app-asks-for-authorization), the DTR process SHALL request the `patient/Patient.read` scope. The DTR process MAY request other scopes to retrieve FHIR resources to evaluate payer rules. The DTR process MAY also request the `openid` and `fhirUser` scopes to establish a user session. Greater detail on this can be found in [Section 4.4.5.2](specification__behaviors__persisting_application_state.html#requesting-user-identity) - Requesting User Identity.
 

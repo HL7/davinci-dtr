@@ -1,6 +1,6 @@
 Instance: example1
 InstanceOf: Patient
-Description: "Example patient"
+Description: "An example patient used in the example resources."
 * gender = #male
 * birthDate = "1996-12-23"
 * address.use = #home
@@ -9,7 +9,7 @@ Description: "Example patient"
 
 Instance: example2
 InstanceOf: Practitioner
-Description: "Example practitioner"
+Description: "An example practitioner referred by the example resources."
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"
 * identifier.value = "1122334455"
 * name.family = "Doe"
@@ -31,7 +31,7 @@ Usage: #inline
 
 Instance: org1001
 InstanceOf: Organization
-Description: "An instance of Organization as a payer"
+Description: "An instance of Organization as a payer used in the example resources."
 * type = http://terminology.hl7.org/CodeSystem/organization-type#pay "Payer"
 * name = "Insurance Company"
 * active = true
@@ -46,7 +46,7 @@ Description: "An instance of Organization as a payer"
 
 Instance: coverage1001
 InstanceOf: Coverage
-Description: "An instance of Coverage"
+Description: "An instance of Coverage used in the example resources."
 * subscriber = Reference(example1)
 * beneficiary = Reference(example1)
 * status = #active
@@ -54,7 +54,7 @@ Description: "An instance of Coverage"
 
 Instance: deviceRequest0001
 InstanceOf: DeviceRequest
-Description: "Example device request"
+Description: "An example device request used in the example resources."
 * status = #active
 * intent = #original-order
 * codeCodeableConcept = https://bluebutton.cms.gov/resources/codesystem/hcpcs#E0424 "Stationary Compressed Gaseous Oxygen System, Rental"
