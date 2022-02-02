@@ -18,4 +18,4 @@ Launch`output/index.html`in a browser
 To view the actual IG, you can visit the [Continuous Build of the DTR IG](http://build.fhir.org/ig/HL7/davinci-dtr/index.html).
 
 ## Balloting
->This IG will be a ballot as a part of the HL7 May 2021 ballot cycle. Interested parties should sign up for participation at the [HL7 Ballot Desktop](http://www.hl7.org/ctl.cfm?action=ballots.home).
+>This IG will be a ballot as a part of the early HL7 May 2022 ballot cycle. Interested parties should sign up for participation at the [HL7 Ballot Desktop](http://www.hl7.org/ctl.cfm?action=ballots.home).
