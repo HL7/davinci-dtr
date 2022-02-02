@@ -6,7 +6,7 @@ The implementation guide is built with the [FHIR IG Publishing Tool](https://www
 Materials for this IG are being developed by the HL7 Da Vinci Project in collaboration with the HL7 Clinical Decision Support (CDS) Work Group.
 
 ## To Build
-From a MacOS terminal window:`$./_genonce.sh`
+From a MacOS terminal window:`$./_genonce.sh`<br>
 From a Windows terminal window:`$./_genonce.bat`
 
 >Note: For local builds `publisher.jar` needs to be in the `input-cache` folder
