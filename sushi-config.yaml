@@ -71,6 +71,8 @@ pages:
       title: Privacy, Safety and Security
   artifacts.html:
     title: Artifacts Summary
+  changehistory.md:
+    title: Change History
   credits.md:
     title: Credits
 
@@ -84,6 +86,7 @@ menu:
     Technical Background and Underlying Technologies: underlying_technologies.html
     Formal Specification: specification.html       
     Downloads: index.html#downloads
+    Change History: changehistory.html
     Credits: credits.html
 
   FHIR Artifacts:
