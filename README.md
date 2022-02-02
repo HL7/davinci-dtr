@@ -12,7 +12,8 @@ From a Windows terminal window:`$./_genonce.bat`
 >Note: For local builds [`publisher.jar`](https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar) needs to be in the `input-cache` folder
 
 ## To View/Run Local
-Launch`output/index.html`in a browser (Assuming you are using a web server e.g. [`Live Server`](https://github.com/ritwickdey/live-server-web-extension))
+Launch`output/index.html`in a browser.<br> 
+> Note: This assumes you are using a web server e.g. [`Live Server`](https://github.com/ritwickdey/live-server-web-extension))
 
 ## Viewing the Implementation Guide
 To view the actual IG, you can visit the [Continuous Build of the DTR IG](http://build.fhir.org/ig/HL7/davinci-dtr/index.html).
