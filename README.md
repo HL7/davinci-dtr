@@ -7,6 +7,8 @@ Materials for this IG are being developed by the HL7 Da Vinci Project in collabo
 
 ## To Build
 From a MacOS terminal window:`$./_genonce.sh`
+From a Windows terminal window:`$./_genonce.bat`
+
 >Note: For local builds `publisher.jar` needs to be in the `input-cache` folder
 
 ## To View/Run Local
