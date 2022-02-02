@@ -9,7 +9,7 @@ Materials for this IG are being developed by the HL7 Da Vinci Project in collabo
 From a MacOS terminal window:`$./_genonce.sh`<br>
 From a Windows terminal window:`$./_genonce.bat`
 
->Note: For local builds `publisher.jar` needs to be in the `input-cache` folder
+>Note: For local builds [`publisher.jar`](https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar) needs to be in the `input-cache` folder
 
 ## To View/Run Local
 Launch`output/index.html`in a browser
