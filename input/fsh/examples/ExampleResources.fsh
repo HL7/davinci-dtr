@@ -57,7 +57,7 @@ InstanceOf: DeviceRequest
 Description: "An example device request used in the example resources."
 * status = #active
 * intent = #original-order
-* codeCodeableConcept = https://bluebutton.cms.gov/resources/codesystem/hcpcs#E0424 "Stationary Compressed Gaseous Oxygen System, Rental"
+* codeCodeableConcept = http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets#E0424 "Stationary Compressed Gaseous Oxygen System, Rental"
 * subject = Reference(example1)
 * occurrenceDateTime = "2022-01-08T09:33:27+07:00"
 * requester = Reference(example2) "Dr. Jane Doe"

@@ -13,7 +13,7 @@ The Implementation Guide contains no explicitly linked examples for this profile
 
 # Example open choice is prepopulated
 Cannot validate string answer option because no option list is provided
-Code System URI 'https://bluebutton.cms.gov/resources/codesystem/hcpcs' is unknown so the code cannot be validated
+Code System URI 'http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets' is unknown so the code cannot be validated
 
 # Example code system in the example
 Code System URI 'http://example.org' is unknown so the code cannot be validated
