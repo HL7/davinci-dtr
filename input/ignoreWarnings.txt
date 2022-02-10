@@ -23,5 +23,5 @@ The element Questionnaire.item.enableWhen.answer[x] has a binding, and has multi
 The element Questionnaire.item.initial.value[x] has a binding, and has multiple types ([date, dateTime, boolean, string, Coding, Reference, Quantity, Attachment, integer, time, decimal, uri]). The binding will apply to all the types
 The element QuestionnaireResponse.item.answer.value[x] has a binding, and has multiple types ([date, dateTime, boolean, string, Coding, Reference, Quantity, Attachment, integer, time, decimal, uri]). The binding will apply to all the types
 
-
-
+# QuestionnaireResponse.questionnaire is a cannonical URL which points to the actual Questionnaire, but in the example, the Questionnaire is not published anywhere
+The questionnaire 'http://example.come/Questionnaire/referred-questionnaire' could not be resolved, so no validation can be performed against the base questionnaire

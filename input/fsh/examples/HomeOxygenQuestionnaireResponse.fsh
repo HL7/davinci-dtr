@@ -1,11 +1,10 @@
-Instance: contained-questionnaire
+Instance: referred-questionnaire
 InstanceOf: Questionnaire
 Usage: #inline
 Description: "Inline Questionnaire for QuestionnaireResponse"
-
 * version = "0.1.0"
-* name = "Contained Questionnaire for QuestionnaireResponse"
-* title = "Contained Questionnaire for QuestionnaireResponse"
+* name = "referred-questionnaire"
+* title = "Referred Questionnaire for QuestionnaireResponse"
 * status = #draft
 * subjectType = #Patient
 * text.status = #generated
@@ -13,9 +12,7 @@ Description: "Inline Questionnaire for QuestionnaireResponse"
 * date = "2020-01-16T00:00:00+00:00"
 * publisher = "Da Vinci DTR"
 * contact.name = "Example Author"
-
 * derivedFrom = "http://example/basequestionnaire"
-* extension[cqf-library].valueCanonical = "http://example.com/Library/HomeOxygenTherapy-prepopulation"
 * extension[sdc-questionnaire-questionnaireAdaptive].valueBoolean = true
 * item[0].linkId = "1"
 * item[=].text = "Patient Information"
@@ -63,6 +60,8 @@ Description: "Inline Questionnaire for QuestionnaireResponse"
 * item[=].item[0].linkId = "3.1"
 * item[=].item[=].text = "Relevant Patient Diagnoses (conditions that might be expected to improve with oxygen therapy)"
 * item[=].item[=].type = #choice
+* item[=].item[=].answerOption[0].valueCoding = http://snomed.info/sct#313296004 "Mild chronic obstructive pulmonary disease"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#389087006 "Hypoxemia (disorder)"
 * item[=].item[+].linkId = "3.2"
 * item[=].item[=].text = "Arterial oxygen saturation (Patient on room air while at rest and awake when tested)"
 * item[=].item[=].type = #quantity
@@ -76,7 +75,6 @@ Description: "Inline Questionnaire for QuestionnaireResponse"
 * item[=].item[=].type = #quantity
 * item[=].item[=].text = "Arterial Partial Pressure of Oxygen (PO2) (Patient tested during exercise)"
 * item[=].item[+].linkId = "3.6"
-* item[=].item[=].type = #quantity
 * item[=].item[=].text = "Is there a documented improvement of hypoxemia during exercise with oxygen?"
 * item[=].item[=].type = #boolean
 * item[+].linkId = "4"
@@ -87,9 +85,18 @@ Description: "Inline Questionnaire for QuestionnaireResponse"
 * item[=].item[=].type = #date
 * item[=].item[+].linkId = "4.2"
 * item[=].item[=].text = "Length of need: (months) (99 = lifetime)"
-* item[=].item[=].type = #integer
-* item[=].item[+].linkId = "4.4"
+* item[=].item[=].type = #quantity
+* item[=].item[+].linkId = "4.3"
 * item[=].item[=].text = "Peak Flow Rate"
+* item[=].item[=].type = #group
+* item[=].item[=].item[0].linkId = "4.3.1"
+* item[=].item[=].item[=].text = "LPM"
+* item[=].item[=].item[=].type = #quantity
+* item[=].item[=].item[+].linkId = "4.3.2"
+* item[=].item[=].item[=].text = "oxygen %"
+* item[=].item[=].item[=].type = #quantity
+* item[=].item[+].linkId = "4.4"
+* item[=].item[=].text = "Average Flow Rate"
 * item[=].item[=].type = #group
 * item[=].item[=].item[0].linkId = "4.4.1"
 * item[=].item[=].item[=].text = "LPM"
@@ -98,15 +105,6 @@ Description: "Inline Questionnaire for QuestionnaireResponse"
 * item[=].item[=].item[=].text = "oxygen %"
 * item[=].item[=].item[=].type = #quantity
 * item[=].item[+].linkId = "4.5"
-* item[=].item[=].text = "Average Flow Rate"
-* item[=].item[=].type = #group
-* item[=].item[=].item[0].linkId = "4.5.1"
-* item[=].item[=].item[=].text = "LPM"
-* item[=].item[=].item[=].type = #quantity
-* item[=].item[=].item[+].linkId = "4.5.2"
-* item[=].item[=].item[=].text = "oxygen %"
-* item[=].item[=].item[=].type = #quantity
-* item[=].item[+].linkId = "4.6"
 * item[=].item[=].text = "Frequency of use (choose all that apply)"
 * item[=].item[=].type = #text
 * item[+].linkId = "5"
@@ -114,19 +112,26 @@ Description: "Inline Questionnaire for QuestionnaireResponse"
 * item[=].type = #group
 * item[=].item[0].linkId = "5.1"
 * item[=].item[=].text = "Current Order Description"
-* item[=].item[=].type = #choice
+* item[=].item[=].type = #text
 * item[=].item[+].linkId = "5.1b"
 * item[=].item[=].text = "Current Order Is For A Portable Device"
 * item[=].item[=].type = #boolean
 * item[=].item[+].linkId = "5.2"
 * item[=].item[=].text = "Type"
 * item[=].item[=].type = #choice
+* item[=].item[=].answerOption[0].valueCoding = http://example.org#121 "Liquid"
+* item[=].item[=].answerOption[+].valueCoding = http://example.org#122 "Compressed Gas"
+* item[=].item[=].answerOption[+].valueCoding = http://example.org#123 "Concentrator"
 * item[=].item[+].linkId = "5.3"
 * item[=].item[=].text = "Means of oxygen delivery and accessories"
 * item[=].item[=].type = #choice
-* item[=].item[+].linkId = "5.4"
-* item[=].item[=].text = "Type of order"
-* item[=].item[=].type = #choice
+* item[=].item[=].answerOption[0].valueCoding = http://example.org#131 "Nasal cannula"
+* item[=].item[=].answerOption[+].valueCoding = http://example.org#132 "Non-rebreather"
+* item[=].item[=].answerOption[+].valueCoding = http://example.org#133 "Ventilator"
+* item[=].item[=].answerOption[+].valueCoding = http://example.org#134 "Mask"
+* item[=].item[=].answerOption[+].valueCoding = http://example.org#135 "PAP bleed in"
+* item[=].item[=].answerOption[+].valueCoding = http://example.org#136 "Oxygen conserving device"
+* item[=].item[=].answerOption[+].valueCoding = http://example.org#137 "High flow oxygen therapy"
 
 
 Instance: home-o2-questionnaireresponse
@@ -137,8 +142,7 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * authored = "2019-07-18"
 * status = #completed
 * subject = Reference(example1) "Vlad"
-* contained = contained-questionnaire
-* questionnaire = "#contained-questionnaire"
+* questionnaire = "http://example.come/Questionnaire/referred-questionnaire"
 * extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/context"
 * extension[=].valueReference = Reference(coverage1001)
 * extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/context"
@@ -188,14 +192,19 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[=].answer[+].valueCoding = http://snomed.info/sct#389087006 "Hypoxemia (disorder)"
 * item[=].item[+].linkId = "3.2"
 * item[=].item[=].text = "Arterial oxygen saturation (Patient on room air while at rest and awake when tested)"
+* item[=].item[=].answer.valueQuantity = 95 'mm[Hg]'
 * item[=].item[+].linkId = "3.3"
 * item[=].item[=].text = "Arterial Partial Pressure of Oxygen (PO2) (Patient on room air while at rest and awake when tested)"
+* item[=].item[=].answer.valueQuantity = 83 'mm[Hg]'
 * item[=].item[+].linkId = "3.4"
 * item[=].item[=].text = "Arterial oxygen saturation (Patient tested during exercise)"
+* item[=].item[=].answer.valueQuantity = 95 'mm[Hg]'
 * item[=].item[+].linkId = "3.5"
+* item[=].item[=].answer.valueQuantity = 78 'mm[Hg]'
 * item[=].item[=].text = "Arterial Partial Pressure of Oxygen (PO2) (Patient tested during exercise)"
 * item[=].item[+].linkId = "3.6"
 * item[=].item[=].text = "Is there a documented improvement of hypoxemia during exercise with oxygen?"
+* item[=].item[=].answer.valueBoolean = true
 * item[+].linkId = "4"
 * item[=].text = "Prescribed Use"
 * item[=].item[0].linkId = "4.1"
@@ -203,24 +212,24 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[=].answer.valueDate = "2019-07-18"
 * item[=].item[+].linkId = "4.2"
 * item[=].item[=].text = "Length of need: (months) (99 = lifetime)"
-* item[=].item[=].answer.valueInteger = 99
-* item[=].item[+].linkId = "4.4"
+* item[=].item[=].answer.valueQuantity.value = 99
+* item[=].item[+].linkId = "4.3"
 * item[=].item[=].text = "Peak Flow Rate"
+* item[=].item[=].item[0].linkId = "4.3.1"
+* item[=].item[=].item[=].text = "LPM"
+* item[=].item[=].item[=].answer.valueInteger = 2
+* item[=].item[=].item[+].linkId = "4.3.2"
+* item[=].item[=].item[=].text = "oxygen %"
+* item[=].item[=].item[=].answer.valueInteger = 98
+* item[=].item[+].linkId = "4.4"
+* item[=].item[=].text = "Average Flow Rate"
 * item[=].item[=].item[0].linkId = "4.4.1"
 * item[=].item[=].item[=].text = "LPM"
 * item[=].item[=].item[=].answer.valueInteger = 2
 * item[=].item[=].item[+].linkId = "4.4.2"
 * item[=].item[=].item[=].text = "oxygen %"
-* item[=].item[=].item[=].answer.valueInteger = 98
-* item[=].item[+].linkId = "4.5"
-* item[=].item[=].text = "Average Flow Rate"
-* item[=].item[=].item[0].linkId = "4.5.1"
-* item[=].item[=].item[=].text = "LPM"
-* item[=].item[=].item[=].answer.valueInteger = 2
-* item[=].item[=].item[+].linkId = "4.5.2"
-* item[=].item[=].item[=].text = "oxygen %"
 * item[=].item[=].item[=].answer.valueInteger = 97
-* item[=].item[+].linkId = "4.6"
+* item[=].item[+].linkId = "4.5"
 * item[=].item[=].text = "Frequency of use (choose all that apply)"
 * item[=].item[=].answer.valueCoding = #"At rest and awake" "At rest and awake"
 * item[+].linkId = "5"
@@ -232,11 +241,7 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[=].text = "Current Order Is For A Portable Device"
 * item[=].item[+].linkId = "5.2"
 * item[=].item[=].text = "Type"
-* item[=].item[=].answer.valueCoding = #E0424 "Compressed Gas"
+* item[=].item[=].answer.valueCoding = http://example.org#122 "Compressed Gas"
 * item[=].item[+].linkId = "5.3"
 * item[=].item[=].text = "Means of oxygen delivery and accessories"
-* item[=].item[=].answer[0].valueCoding = #Mask "Mask"
-* item[=].item[=].answer[+].valueCoding = #Ventilator "Ventilator"
-* item[=].item[+].linkId = "5.4"
-* item[=].item[=].text = "Type of order"
-* item[=].item[=].answer.valueCoding = #"Initial or original order for certification" "Initial or original order for certification"
+* item[=].item[=].answer[0].valueCoding = http://example.org#134 "Mask"
