@@ -15,16 +15,11 @@ Description: "An example Adaptive SDC questionnaire for Home Oxygen Therapy."
 * contact.name = "Example Author"
 
 * derivedFrom = "http://example/basequestionnaire"
-* extension[cqf-library].valueCanonical = "http://example.com/Library/HomeOxygenTherapy-prepopulation"
 * extension[sdc-questionnaire-questionnaireAdaptive].valueBoolean = true
 * item.linkId = "1"
-* item[=].text = "SQ-1.4.a: Relevant Patient Diagnoses (conditions that might be expected to improve with oxygen therapy)"
-* item[=].type = #open-choice
+* item[=].text = "Relevant Patient Diagnoses (conditions that might be expected to improve with oxygen therapy)"
+* item[=].type = #text
 * item[=].required = true
-* item[=].repeats = true
-* item[=].extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression"
-* item[=].extension.valueExpression.language = #text/cql
-* item[=].extension.valueExpression.expression = "\"HomeOxygenTherapyPrepopulation\".RelevantDiagnoses"
 * item[+].linkId = "2"
 * item[=].text = "Order Reason"
 * item[=].type = #choice
@@ -45,7 +40,7 @@ Description: "An example QuestionnaireResponse for Adaptive Questionnaire."
 * authored = "2022-01-26T20:36:57.544Z"
 * author = Reference(example2)
 * item.linkId = "1"
-* item[=].text = "SQ-1.4.a: Relevant Patient Diagnoses (conditions that might be expected to improve with oxygen therapy)"
+* item[=].text = "Relevant Patient Diagnoses (conditions that might be expected to improve with oxygen therapy)"
 * item[=].answer.valueString = "diagnosis"
 * item[+].linkId = "2"
 * item[=].text = "Order Reason"
