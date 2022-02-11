@@ -15,7 +15,7 @@ Usage: #definition
 * resource = #Patient
 * system = false
 * type = true
-* instance = false
+* instance = true
 
 // in
 * parameter[0].name = #coverage
