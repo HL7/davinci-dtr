@@ -12,41 +12,30 @@ Usage: #definition
 * code = #Questionnaire-for-Order
 * base = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/Questionnaire-for-Order"
 
-// Coverage
-* resource = #Coverage
+* resource = #Patient
 * system = false
 * type = true
 * instance = false
-* parameter[0].name = #resource
-* parameter[0].use = #in
-* parameter[0].min = 1
-* parameter[0].max = "1"
-* parameter[0].documentation = "Coverage resource instance."
-* parameter[0].type = #Resource
 
-// Order
-* resource = #Any 
-* system = false
-* type = true
-* instance = false
-* parameter[1].name = #resource
-* parameter[1].use = #in
-* parameter[1].min = 1
-* parameter[1].max = "1"
-* parameter[1].documentation = "Order resource instance. e.g., DeviceRequest, ServiceRequest, MedicationRequest, or other..."
-* parameter[1].type = #Resource
+// in
+* parameter[0].name = #coverage
+* parameter[=].use = #in
+* parameter[=].documentation = "One or more Coverage resource instances."
+* parameter[=].type = #Coverage
+* parameter[=].min = 1
+* parameter[=].max = "*"
+
+* parameter[+].name = #order
+* parameter[=].use = #in
+* parameter[=].documentation = "One or more Order resource instances. e.g., DeviceRequest, ServiceRequest, MedicationRequest, ... Encounter, Appointment, or prior-auth Claim, etc. (Note: This could also be de-identified)"
+* parameter[=].type = #Any
+* parameter[=].min = 1
+* parameter[=].max = "*"
 
 // return
-* resource = #Bundle
-* system = false
-* type = true
-* instance = false
-* parameter[2].name = #return
-* parameter[2].use = #out
-* parameter[2].min = 1
-* parameter[2].max = "1"
-* parameter[2].documentation = "A bundle with Questionnaire, Library/CQL, and value set(s). (Note: This could be a searchable Adaptive Questionnaire that just provides the next-question operation URL.)"
-* parameter[2].type = #Bundle
-
-
-
+* parameter[+].name = #return
+* parameter[=].use = #out
+* parameter[=].min = 1
+* parameter[=].max = "*"
+* parameter[=].documentation = "1 or more bundles each with a Questionnaire, Library/CQL, and value set(s). (Note: This could be a searchable Adaptive Questionnaire that just provides the next-question operation URL.)"
+* parameter[=].type = #Bundle
