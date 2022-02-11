@@ -90,8 +90,10 @@ menu:
     Credits: credits.html
 
   FHIR Artifacts:
-    Profiles: artifacts.html#1
-    Examples: artifacts.html#2
+    Operations: artifacts.html#1
+    Profiles: artifacts.html#2
+    Extensions: artifacts.html#3
+    Examples: artifacts.html#4
 
   Base Specs:
     FHIR R4 Spec: new-tab {{site.data.fhir.path}}
