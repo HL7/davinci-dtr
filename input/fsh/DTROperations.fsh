@@ -20,7 +20,7 @@ Usage: #definition
 // in
 * parameter[0].name = #coverage
 * parameter[=].use = #in
-* parameter[=].documentation = "One or more Coverage resource instances."
+* parameter[=].documentation = "One or more Coverage resource instances. (Note: This could also be de-identified)"
 * parameter[=].type = #Coverage
 * parameter[=].min = 1
 * parameter[=].max = "*"
