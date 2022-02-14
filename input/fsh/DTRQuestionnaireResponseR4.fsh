@@ -24,7 +24,7 @@ Description:    "The QuestionnaireResponse resource is used to represent a respo
 * questionnaire 1..1
 
 * subject 1..1
-* subject only Reference(Resource)
+* subject only Reference(Patient)
 
 * item 1..*
 * item.extension only $QRAUTHOR

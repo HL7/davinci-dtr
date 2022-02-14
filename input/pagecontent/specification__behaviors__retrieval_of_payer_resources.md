@@ -1,12 +1,26 @@
-The DTR process will need to retrieve resources from a payer IT system to operate properly. This application will need to obtain a FHIR Questionnaire and associated Clinical Quality Language (CQL) logic files in order to execute. The information needed to obtain the required resources will be provided as escaped JSON in the `appContext` property of the Clinical Decision Support (CDS) Hooks Card Link object, as described in [Section 4.2.1](specification__cds_hooks.html#use-of-cardlinks). That object will have the following properties:
+The DTR process will need to retrieve resources from a payer IT system to operate properly. This application will need to obtain a FHIR Questionnaire and associated Clinical Quality Language (CQL) logic files in order to execute. The information needed to obtain the required resources will be provided as escaped JSON in the `appContext` property of the Clinical Decision Support (CDS) Hooks Card Link object, as described in [Section 4.2.1](specification__cds_hooks.html#use-of-cardlinks). When launched in context of CRD and a CDS Hook, that object will have the following properties:
 
-| Field    | Optionality | Type     | Description |
-| -------- | ----------- | -------- | ----------- |
-| fhirPath | OPTIONAL    | *string* | The path used to retrieve the questionnaire and related CQL resources. |
-| filePath | OPTIONAL    | *string* | The base URL used to retrieve the questionnaire and related CQL resources. If left blank the app should use a default base URL. |
-| template | OPTIONAL    | *string* | The canonical URL of the Questionnaire for the DTR process to use for execution. |
-| request  | OPTIONAL    | *string* | The canonical URL of or copy of the draft request resource for which documentation requirements are being gathered.  |
-| response  | OPTIONAL    | *string* | The canonical URL of the QuestionnaireResponse representing the session which should be relaunched  |
+| Field    | Optionality | Cardinality | Type  | Description |
+| -------- | ----------- | ------      | -------- | ----------- |
+| questionnaire | OPTIONAL    |0..*| *string* | The canonical URL of the Questionnaire(s).  Required if "response" is not adaptive.  |
+| order  | OPTIONAL    |0..*| *string* | The EHR local URL or JSON encoded content of the order(s) in context.  Prefer EHR local URL when available. |
+| response  | OPTIONAL    |0..*| *object* | The QuestionnaireResponse resource(s) that DTR should load data from |
+| coverage  | OPTIONAL    |0..*| *string* | Local reference to relevant coverage resource(s) on EHR |
+
+When launched without the context of a CDS Hook, but within context from an EHR, the token returned from the auth server should still include an appContext.  The token bundle is required to have a patient in context.  The appContext should have the following properties:
+
+| Field    | Optionality | Cardinality | Type  | Description |
+| -------- | ----------- | ------      | -------- | ----------- |
+| order  | OPTIONAL    |0..*| *string* | Local reference to the order or claim in context. |
+| response  | OPTIONAL    |0..*| *string* | Local reference to a QuestionnaireResponse stored on the EHR |
+
+If the QuestionnaireResponse is not present, but the order is, the QuestionnaireResponse can be searched for using the order.  Alternativaly, the QuestionnaireResponse can be replaced by a DocumentReference on the payer server.  
+
+If the order is not present, then it can be retrieved from the QuestionnaireResponse or DocumentReference.  
+
+If neither is present, the user should be prompted to select a DocumentReference or QuestionnaireResponse based on the patient that is in context.
+
+The coverage may have an extension, `endpoint`, which is the payer endpoint for retrieving CQL and Questionnaire resources.  If the extension is not present, the user should be prompted to select a payer and populate the extension with the app-known payer URL.  The app should register this information out-of-band beforehand with relevant payers.  
 
 The request resource created during the CRD workflow should be saved to the EHR FHIR server for retrieval by the DTR process, if possible. This might, for example, be the ServiceRequest resource that is sent in the CDS hook to the CRD server. Additionally, a tight integration between the CRD service and the DTR process should enable the DTR process to access FHIR resources received by the CRD service that are not available from the EHR's FHIR server.
 
