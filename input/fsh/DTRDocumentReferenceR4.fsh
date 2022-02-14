@@ -3,7 +3,7 @@ NOTE: Aliases are defined in GlobalAliasList.fsh
 **********/
 
 Profile:        DTRDocumentReference
-Parent:         DocumentReference
+Parent:         us-core-documentreference
 Id:             dtr-documentreference-r4
 Title:          "DTR Document Reference R4"
 Description:    "The DocumentReference resource is used to represent a saved DTR session waiting for relaunch."
@@ -17,8 +17,8 @@ Description:    "The DocumentReference resource is used to represent a saved DTR
 * ^date = "2022-02-11T02:27:35+00:00"
 
 * subject 1..1
-* subject only Reference(Patient)
-
-* author only Reference(Organization)
+* subject only Reference(USCorePatientProfile)
+* type 1..1
+* author only Reference(USCoreOrganizationProfile)
 
 
