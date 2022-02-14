@@ -5,7 +5,7 @@ Usage: #definition
 
 * id = "Questionnaire-for-Order"
 * url = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/Questionnaire-for-Order"
-* name = "Questionnaire-for-Order"
+* name = "QuestionnaireForOrder"
 * title = "Get Questionnaire for given order"
 * status = #draft
 * kind = #operation
