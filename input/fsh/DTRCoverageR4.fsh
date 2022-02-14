@@ -17,7 +17,6 @@ Description:    "The Coverage resource is used to identify the payer."
 * ^date = "2022-02-11T02:27:35+00:00"
 
 
-//* extension only PayerEndpoint
-* extension contains PayerEndpoint named payerEndpoint 0..* 
+* extension only PayerEndpoint
 
 
