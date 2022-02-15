@@ -29,6 +29,15 @@
          "fhirversion": "4.0.1"
       },
       {
+         "version": "1.1.0",
+         "date": "2022-02-21",
+         "desc": "STU2 Ballot for FHIR R4",
+         "path": "http://hl7.org/fhir/us/davinci-dtr/2022Feb",
+         "status": "ballot",
+         "sequence": "STU2",
+         "fhirversion": "4.0.1"
+      },
+      {
          "version": "1.0.0",
          "date": "2020-12-01",
          "desc": "STU1 Trial Use for FHIR R4",
