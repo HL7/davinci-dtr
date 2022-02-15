@@ -1,6 +1,4 @@
 == Suppressed Messages ==
-# This happens because the Questionnaire resource is not included in this example
-# The questionnaire '#Questionnaire/q045' could not be resolved, so no validation can be performed against the base questionnaire
 
 # Process Info messages suppressed per FHIR Management Group (FMG) 
 Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
@@ -8,7 +6,10 @@ Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patien
 Validate resource against profile http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse-r4
 Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 
-# Adaptive questionnaire should be contained in a QuestionnaireResponse. there is an example for the QuestionnnaireResponse for an adaptive questionnaire
+# QuestionnaireResponse.questionnaire is a cannonical URL which points to the actual Questionnaire, but in the example, the Questionnaire is not published anywhere
+The questionnaire 'http://example.com/Questionnaire/referred-questionnaire' could not be resolved, so no validation can be performed against the base questionnaire
+
+# Adaptive questionnaire should be contained in a QuestionnaireResponse, there is an example for the QuestionnnaireResponse for an adaptive questionnaire.
 The Implementation Guide contains no explicitly linked examples for this profile
 
 # Unable to validate HCPCS code system 
@@ -16,12 +17,3 @@ Code System URI 'http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets' is unk
 
 # Example code system in the example
 Code System URI 'http://example.org' is unknown so the code cannot be validated
-
-# Suppress Information messages
-The element Questionnaire.item.answerOption.value[x] has a binding, and has multiple types ([date, string, Coding, Reference, integer, time]). The binding will apply to all the types
-The element Questionnaire.item.enableWhen.answer[x] has a binding, and has multiple types ([date, dateTime, boolean, string, Coding, Reference, Quantity, integer, time, decimal]). The binding will apply to all the types
-The element Questionnaire.item.initial.value[x] has a binding, and has multiple types ([date, dateTime, boolean, string, Coding, Reference, Quantity, Attachment, integer, time, decimal, uri]). The binding will apply to all the types
-The element QuestionnaireResponse.item.answer.value[x] has a binding, and has multiple types ([date, dateTime, boolean, string, Coding, Reference, Quantity, Attachment, integer, time, decimal, uri]). The binding will apply to all the types
-
-# QuestionnaireResponse.questionnaire is a cannonical URL which points to the actual Questionnaire, but in the example, the Questionnaire is not published anywhere
-The questionnaire 'http://example.come/Questionnaire/referred-questionnaire' could not be resolved, so no validation can be performed against the base questionnaire
