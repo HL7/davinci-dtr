@@ -23,7 +23,7 @@ parameters:
   excludettl: true
 
 dependencies:
-  hl7.fhir.uv.sdc: current
+  hl7.fhir.uv.sdc: 3.0.0-preview
   hl7.fhir.us.core: 3.1.1
 
 pages:
