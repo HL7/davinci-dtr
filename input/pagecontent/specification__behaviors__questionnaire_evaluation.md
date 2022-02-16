@@ -28,7 +28,7 @@ This will create a CQL expression named `DateOfBirth`. The expression can then b
 },
 ```
 
-Using the `cqf-expresion` extension, the `item` SHALL refer to the named expression in the CQL rules that contains the desired information.
+Using the `cqf-expression` extension, the `item` SHALL refer to the named expression in the CQL rules that contains the desired information.
 
 ### Generation of QuestionnaireResponse
 The DTR process is responsible for iterating through all of the `Questionnaire.item` elements and checking the `cqf-expression` for values to populate a QuestionnaireResponse. The DTR process SHALL create a QuestionnaireResponse resource. For each `Questionnaire.item`, there SHALL be a corresponding `QuestionnaireResponse.item`. When the `cqf-expression` is not `null`, the value of the expression SHALL be used as the answer in the QuestionnaireResponse. The following JSON fragment shows an example representation of `item` in the QuestionnaireResponse based on the example above.

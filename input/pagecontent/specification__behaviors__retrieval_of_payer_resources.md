@@ -14,7 +14,7 @@ When launched without the context of a CDS Hook, but within context from an EHR,
 | order  | OPTIONAL    |0..*| *string* | Local reference to the order or claim in context. |
 | response  | OPTIONAL    |0..*| *string* | Local reference to a QuestionnaireResponse stored on the EHR |
 
-If the QuestionnaireResponse is not present, but the order is, the QuestionnaireResponse can be searched for using the order.  Alternativaly, the QuestionnaireResponse can be replaced by a DocumentReference on the payer server.  
+If the QuestionnaireResponse is not present, but the order is, the QuestionnaireResponse can be searched for using the order. Alternatively, the QuestionnaireResponse can be replaced by a DocumentReference on the payer server.  
 
 If the order is not present, then it can be retrieved from the QuestionnaireResponse or DocumentReference.  
 
