@@ -84,7 +84,7 @@ define RelevantDiagnoses:
 define OtherDiagnoses: DTR.CodesFromConditions(CDS.Confirmed(CDS.ActiveOrRecurring([Condition] except "RelevantConditions")))
 
 // Arterial Oxygen Saturation - Definitions to display most recent observation on patient health record
-define "VerifiedArterialOxygenSatuation": CDS.Verified(CDS.ObservationLookBack([Observation: "Arterial_oxygen_saturation_Codes"], 3 months))
+define "VerifiedArterialOxygenSaturation": CDS.Verified(CDS.ObservationLookBack([Observation: "Arterial_oxygen_saturation_Codes"], 3 months))
 define ArterialOxygenSaturation: DTR.LowestObservation(CDS.WithUnit(CDS.Verified(CDS.ObservationLookBack([Observation: "Arterial_oxygen_saturation_Codes"], 3 months)), '%'))
 define "VerifiedArterialPartialPressureOfOxygen": CDS.Verified(CDS.ObservationLookBack([Observation: "Arterial_partial_pressure_of_oxygen_Codes"], 3 months))
 define ArterialPartialPressureOfOxygen: DTR.LowestObservation(CDS.WithUnit(CDS.Verified(CDS.ObservationLookBack([Observation: "Arterial_partial_pressure_of_oxygen_Codes"], 3 months)), 'mm[Hg]'))
@@ -166,7 +166,7 @@ define "FrequencyOfUse":
 define "BloodGasOrderedAndEvaluated": "ArterialOxygenSaturation" is not null or "ArterialPartialPressureOfOxygen" is not null or "ArterialOxygenSaturationExercise" is not null
 
 // Check for Blood Test Observation
-define "BloodTestObservations": "VerifiedArterialOxygenSatuation" union "VerifiedArterialPartialPressureOfOxygen" union "VerifiedArterialOxygenSaturationExercise"
+define "BloodTestObservations": "VerifiedArterialOxygenSaturation" union "VerifiedArterialPartialPressureOfOxygen" union "VerifiedArterialOxygenSaturationExercise"
 
 /// Find the observation date for the blood gas test
 define "BloodGasTestDate": CDS.FindDate(CDS.MostRecent("BloodTestObservations"))

@@ -21,10 +21,16 @@ jurisdiction: urn:iso:std:iso:3166#US
 parameters:
   excludexml: true
   excludettl: true
+  show-inherited-invariants: false
 
 dependencies:
+<<<<<<< HEAD
   hl7.fhir.uv.sdc: 3.0.0-preview
   hl7.fhir.us.core: 3.1.1
+=======
+  hl7.fhir.uv.sdc: current
+  hl7.fhir.us.core: 3.1.1 
+>>>>>>> 0614048f3ee067c81896585e481291b2feddde32
 
 pages:
   index.md:
