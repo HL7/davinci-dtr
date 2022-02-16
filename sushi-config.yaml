@@ -11,8 +11,8 @@ status: draft
 license: CC0-1.0
 version: 1.1.0-ballot
 fhirVersion: 4.0.1
-copyrightYear: 2020+
-releaseLabel: STU 2
+copyrightYear: 2022+
+releaseLabel: STU 1.1
 publisher:
   name: HL7 Clinical Decision Support Work Group
   url: http://www.hl7.org/Special/committees/dss

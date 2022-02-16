@@ -1,10 +1,5 @@
 == Suppressed Messages ==
 
-# Information messages suppressed per FHIR Management Group (FMG) 
-Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
-Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
-Validate resource against profile http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse-r4
-Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 
 # QuestionnaireResponse.questionnaire is a cannonical URL which points to the actual Questionnaire, but in the example the Questionnaire is not published anywhere
 The questionnaire 'http://example.com/Questionnaire/referred-questionnaire' could not be resolved, so no validation can be performed against the base questionnaire
