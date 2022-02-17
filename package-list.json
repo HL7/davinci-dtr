@@ -31,7 +31,7 @@
       {
          "version": "1.1.0-ballot",
          "date": "2022-02-21",
-         "desc": "STU2 Ballot for FHIR R4",
+         "desc": "STU 1.1 Ballot for FHIR R4",
          "path": "http://hl7.org/fhir/us/davinci-dtr/2022May",
          "status": "ballot",
          "sequence": "STU 1.1",
