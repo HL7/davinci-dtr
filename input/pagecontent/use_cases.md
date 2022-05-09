@@ -13,7 +13,7 @@ In this specification payer rules are [CQL statements](https://cql.hl7.org//) us
 A healthcare provider organization contains medical providers such as hospitals, doctors, etc.
 
 #### EHR System
-The Electronic Health Record (EHR) system shall be the primary system used to initiate the DTR process. The [SMART App Launch](http://hl7.org/fhir/smart-app-launch) will typically be initiated from within the EHR.
+The Electronic Health Record (EHR) system SHALL be the primary system used to initiate the DTR process. The [SMART App Launch](http://hl7.org/fhir/smart-app-launch) will typically be initiated from within the EHR.
 
 The goal of DTR is to collect clinical documentation and/or to encourage the completion of documentation that demonstrates medical necessity for ordered items or services. 
 

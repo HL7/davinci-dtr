@@ -1,4 +1,3 @@
-### Credits
 <br>
 **Primary Authors:**  
 * Larry Decelles (The MITRE Corporation)
