@@ -1,5 +1,5 @@
 ### Da Vinci
-Da Vinci is an HL7-sponsored project that brings together the U.S. payer, providers, and technology suppliers (including EHR vendors)  to help payers and providers to positively impact clinical, quality, cost, and care management outcomes using FHIR-related technologies. The project organizes meetings (face-to-face and conference calls) as well as Connectathons to find ways to leverage FHIR technologies to support and integrate value-based care (VBC) data exchange across communities. Da Vinci identifies value-based care use cases of interest to its member and the community as a whole.
+Da Vinci is an HL7-sponsored project that brings together the U.S. payer, providers, and technology suppliers (including EHR vendors)  to help payers and providers to positively impact clinical, quality, cost, and care management outcomes using FHIR-related technologies. The project organizes meetings (face-to-face and conference calls) as well as Connectathons to find ways to leverage FHIR technologies to support and integrate value-based care (VBC) data exchange across communities. Da Vinci identifies value-based care use cases of interest to its members and the community as a whole.
 
 The process that Da Vinci has adopted includes:
 1. identify business, clinical, technical and testing requirements.
@@ -13,7 +13,7 @@ Additional information about Da Vinci, its members, the use cases and the implem
 {% include burdenReduction.md %}
 
 ### FHIR
-This IG uses terminology, notations and design principles that are specific to FHIR. It's important to be familiar with some of the basic principles of FHIR as well
+This IG uses terminology, notations, and design principles that are specific to FHIR. It's important to be familiar with some of the basic principles of FHIR as well
 as general guidance on how to read FHIR specifications. Readers who are unfamiliar with FHIR are encouraged to read the following prior to reading the rest of this IG.
 
 * [FHIR overview]({{site.data.fhir.path}}overview.html)
@@ -57,7 +57,7 @@ Client systems conformant to this IG SHALL also serve as a [SMART on FHIR](http:
 Clinical systems SHALL use the specification and workflows defined by [Structured Data Capture (SDC)](http://hl7.org/fhir/us/sdc/) to initiate DTR functionality with the payers. Implementers should be familiar with this specification.
 
 ### Clinical Quality Language
-Payer systems SHALL use the specification and workflows defined by [Clinical Quality Language CQL](https://cql.hl7.org/) to facilitate DTR functionality within clinical systems. Implementers should be familiar with this specification. Older versions of CQL such as STU 2 can be used provided they work with FHIR R4.
+Payer systems SHALL use the specification and workflows defined by [Clinical Quality Language CQL](https://cql.hl7.org/) to facilitate DTR functionality within clinical systems. Implementers should be familiar with this specification. Older versions of CQL, such as STU 2 can be used provided they work with FHIR R4.
 
 ### Must Support
 This IG does NOT mark any elements with the [Must Support](http://hl7.org/fhir/R4/profiling.html#mustsupport)  flag in its own profiles. 
