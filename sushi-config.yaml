@@ -29,7 +29,7 @@ dependencies:
 
 pages:
   index.md:
-    title: Documentation Templates Rules Implementation Guide Home Page
+    title: Documentation Templates and Rules Implementation Guide Home Page
   use_cases.md:
     title: Use Cases and Overview
   underlying_technologies.md:
@@ -57,11 +57,11 @@ pages:
     specification__behaviors__persisting_results.md:
       title: Persisting Results
     specification__behaviors__passing_information_other_exchanges.md:
-      title: How DTR passes information to PAS, PAO or other exchanges
+      title: How DTR Passes Information to PAS, PAO or Other Exchanges
     specification__behaviors__task_creation.md:
       title: Task Creation
     specification__behaviors__launch_outside_of_CRD.md:
-      title: Launch outside of CRD
+      title: Launch Outside of CRD
     specification_value_set_code_system_guidance.md:
       title: Value Set and Code System Guidance
     specification__behaviors__best_practices.md:

@@ -1,8 +1,8 @@
 
 <div class="stu-note">
 <h3>Changes for STU2 (since V1.0.0)</h3>
-<p>This ballot addresses several additions, modifications, technical corrections, errata, clarifications listed below. They have been reviewed
-and voted on by the members of the <a href="http://www.hl7.org/Special/committees/dss/">HL7 Clinical Decision Support WorkGroup</a> which is sponsoring this ballot release and reconciliation of the comments.</p>
+<p>This ballot addresses several additions, modifications, technical corrections, errata, and clarifications listed below. They have been reviewed
+and voted on by the members of the <a href="http://www.hl7.org/Special/committees/dss/">HL7 Clinical Decision Support WorkGroup</a>, which is sponsoring this ballot release and reconciliation of the comments.</p>
 
 <p><b>The following issues are addressed in this ballot:</b></p>
 
