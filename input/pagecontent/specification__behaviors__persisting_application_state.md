@@ -29,6 +29,7 @@ The following information should be contained inside the DocumentReference:
 | DocumentReference.date | Current date |
 | DocumentReference.meta.lastUpdated | Date of last change|
 | DocumentReference.content.attachment | PDF containing the QuestionnaireResponse |
+{: .grid } 
 
 The PDF may also include prior authorization information, if appropriate. Information in the PDF is not machine readable, and association with the order or prior authorization request must be done by hand. 
 

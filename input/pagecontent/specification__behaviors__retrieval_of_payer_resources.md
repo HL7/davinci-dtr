@@ -6,6 +6,7 @@ The DTR process will need to retrieve resources from a payer IT system to operat
 | order  | OPTIONAL    |0..*| *string* | The EHR local URL or JSON encoded content of the order(s) in context.  Prefer EHR local URL when available. |
 | response  | OPTIONAL    |0..*| *object* | The QuestionnaireResponse resource(s) that DTR should load data from |
 | coverage  | OPTIONAL    |0..*| *string* | Local reference to relevant coverage resource(s) on EHR |
+{: .grid } 
 
 When launched without the context of a CDS Hook, but within context from an EHR, the token returned from the auth server should still include an appContext.  The token bundle is required to have a patient in context.  The appContext should have the following properties:
 
@@ -13,6 +14,7 @@ When launched without the context of a CDS Hook, but within context from an EHR,
 | -------- | ----------- | ------      | -------- | ----------- |
 | order  | OPTIONAL    |0..*| *string* | Local reference to the order or claim in context. |
 | response  | OPTIONAL    |0..*| *string* | Local reference to a QuestionnaireResponse stored on the EHR |
+{: .grid } 
 
 If the QuestionnaireResponse is not present, but the order is, the QuestionnaireResponse can be searched for using the order. Alternatively, the QuestionnaireResponse can be replaced by a DocumentReference on the payer server.  
 
@@ -36,6 +38,7 @@ Payers SHALL require the DTR process to authenticate in order to retrieve resour
 | expires_in | REQUIRED | *integer* | The lifetime of the access token in seconds. |
 | scope | REQUIRED | *string* | Fixed value: `user/Questionnaire.read user/Library.read`. |
 | subject | REQUIRED | *string* | The OAuth 2.0 client identifier of the DTR process, as registered with the payer's authorization server. |
+{: .grid } 
 
 ### Questionnaire
 The DTR process SHALL use the URL provided in the `template` property of the `appContext` to retrieve a Questionnaire resource. The payer SHALL provide this as a FHIR resource, such that the DTR process will be executing a FHIR read interaction on the payer's server. The returned Questionnaire resource SHALL conform to the [CQF-Questionnaire Profile](http://hl7.org/fhir/R4/cqf-questionnaire.html) and MAY conform to [Structured Data Capture (SDC) Advanced Rendering Profile]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/rendering.html).
