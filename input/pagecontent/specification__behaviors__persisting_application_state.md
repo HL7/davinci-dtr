@@ -19,8 +19,8 @@ When the DTR app receives a QuestionnaireResponse but does not receive a Questio
 
 For EHRs that cannot support this protocol, the data will be stored on the payer server in a DocumentReference resource. 
 - Data stored in this way SHALL only be available for supporting the DTR workflow. 
-- Only the app which created a DocumentReference may access that DocumentReference. 
-- Smart apps and payer systems should be registered such that the payer system can establish identity of the smart app prior to granting access to the DocumentReference according to the SMART App Launch [Backend Services Implementation Guide](https://hl7.org/fhir/smart-app-launch/backend-services.html). 
+- Only the DTR app which created a DocumentReference may access that DocumentReference. 
+- The DTR app and payer system should be registered such that the payer system can establish identity of the app prior to granting access to the DocumentReference according to the SMART App Launch [Backend Services Implementation Guide](https://hl7.org/fhir/smart-app-launch/backend-services.html). 
 - The DTR app should use a key pair to prove its identity.
 
 The following information should be contained inside the DocumentReference: 
