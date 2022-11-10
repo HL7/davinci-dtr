@@ -48,7 +48,7 @@ As an example, a clinician might order, “Home Oxygen Therapy”
   * In the CDS Hooks card, there may be a link that allows the clinician to launch the DTR SMART on FHIR app (or equivalent native EHR app) shown in the DTR Process area.
   * DTR will retrieve the appropriate Questionnaire(s) and rule(s) from the repository via a repository API.
   * The clinician would click the SMART app/DTR (or equivalent native EHR app) link which pre-populates a FHIR based Questionnaire with data from the EHR.
-  * In the event data is known to be available but does not yet exist in the EHR, the clinician could attest the data in question exists in the EHR.
+  * In the event data is known to be available but does not exist in the EHR the clinician could attest to the data in question.
   * The clinician populates the fields that were not populated with data from the EHR. When the documentation is complete (or partially complete) the clinician would save the QuestionnaireResponse. DTR writes the FHIR based QuestionnaireResponse to the EHR. At this point the QuestionnaireResponse could also be sent to any ancillary service.
   * In the event the QuestionnaireResponse was incomplete, a Task could be created to allow for the QuestionnaireResponse to be completed at a later time. The QuestionnaireResponse itself could also be used to relaunch an incomplete session.
 
@@ -67,8 +67,6 @@ This example shows an overview of how the DTR SMART on FHIR app (or equivalent n
 ![Process Flow Detail](DTR_Example_Workflow.png){:style="float: none;"}
 
 > There is no need for the user to see the Questionnaire if it can be auto completed, unless they need to approve sending the result to the payer or to *sign* the information prior to submission. The application SHALL give the provider the ability, but not the requirement to review any information prior to sending it to a third party. This ability may be *turned-off* by the organization and possibly the individual provider. 
-
-> Questionnaires SHALL indicate which items are necessary using the `required` property, and the application should use that property to decide when a Questionnaire has been sufficiently auto completed.
 
  > If the resulting information is to be sent to a third  party (e.g., payer), the DTR SMART on FHIR App (or equivalent native app) SHOULD include a configurable step to allow  the provider to review and grant permission to send the information gathered in the QuestionnaireResponse before sending.
  

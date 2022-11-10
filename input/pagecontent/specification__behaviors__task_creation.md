@@ -2,11 +2,9 @@ Through interactions with the DTR process, a user may be prompted with a questio
 
 The provider can confirm that the sleep study has not yet been conducted and generate a task for office staff to schedule a sleep study directly in the questionnaire interface. Alternatively, the provider could attest that the sleep study was performed or is already scheduled to be performed, either at this provider or another provider. Attestation by the provider can prevent duplicate tests in the case that the patient's electronic record is incomplete.
 
-The provider SHOULD have the option to continue with the order directly and deal with the completion of the questionnaire as a separate task or suspend the order and complete both as part of the task execution. 
+The ability to create tasks or todos is outside of the scope of DTR and should be supported by the EHR implementation. Note: Implementers may want to consider using SMART Web messaging to communicate the specific tasks to the EHR.
 
-When a questionnaire is suspended the application SHOULD give the user the ability to restart the DTR process (e.g., execute all rules and questionnaire). If this is done, the implementer SHOULD implement a mechanism to copy any user entered data to the new version without reentry.
-
-The ability to create tasks or TODOs is outside of the scope of DTR and should be supported by the EHR implementation. Note: Implementers may want to consider using SMART Web messaging to communicate the specific tasks to the EHR.
+The questionnaire SHOULD be able to suspend completion until all tasks are completed. How the application is suspended is left to the implementer, but the state of the questionnaire SHOULD be preserved.
 
 <blockquote class="stu-note">
 <p>

@@ -29,7 +29,7 @@ It is likely that different versions of CQL will need to be created for differen
 Consideration must also be made regarding the CQL version.
 
 #### Behavior when receiving malformed CQL
- If the CQL is malformed (is not syntactically correct) in any way, the app’s execution engine SHALL NOT attempt any execution of the malformed CQL, the app SHALL log the error, and the user SHALL be notified with an appropriate on-screen message indicating that population did not occur and they SHALL be allowed to enter the information manually either now or at a later time. The app SHOULD log failures and ensure the maintainer of the CQL/Questionnaire package is notified. 
+If the CQL is malformed (is not syntactically correct) in any way, the app’s execution engine SHALL NOT attempt any execution of the malformed CQL, the app SHALL log the error, and the user SHALL be notified with an appropriate message indicating that population did not occur and they SHALL be allowed to enter the information manually either now or at a later time. The app SHOULD log failures and ensure the maintainer of the CQL/Questionnaire package is notified. 
 
 In an effort to notify the appropriate party or maintainer that the CQL/Questionnaire is malformed, the app developer SHOULD use FHIR resource OperationOutcome. The details property of the OperationOutcome should use `MSG_BAD_SYNTAX` to indicate syntactical errors. The destination of the OperationOutcome should be the endpoint the malformed CQL/Questionnaire was retrieved from.
 
