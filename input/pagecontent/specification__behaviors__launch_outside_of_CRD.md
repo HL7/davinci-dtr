@@ -10,6 +10,9 @@ The DTR process will then allow the user to restore a session. The possible sess
 
 When DTR processes are launched in this manner, in [Step 3 of the launch sequence](http://hl7.org/fhir/smart-app-launch/#step-3-app-exchanges-authorization-code-for-access-token), in the case where the EHR system is returning a response with an access token, the system will not provide a `template` property, which would point to a Questionnaire resource. This is an indication to the DTR process that it has been launched outside of the Coverage Requirements Discovery workflow.
 
+### Requesting User Identity
+To persist application state, the DTR process will need to know who is currently using the application. SMART on FHIR provides methods for the application to obtain this information.
+
 ### Standalone launch
 DTR process SHALL support the [Standalone launch sequence](http://hl7.org/fhir/smart%2Dapp%2Dlaunch/#standalone-launch-sequence). In this case, the DTR process SHALL establish the user's identity following the procedures in [Section 4.4.5.2](specification__behaviors__persisting_application_state.html#requesting-user-identity).
 

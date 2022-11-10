@@ -5,7 +5,6 @@ Description: "This extension contains references for DTR relaunch context."
 * value[x] ^definition = "This contains references to the order and coverage resources."
 * value[x] only Reference(Coverage or DeviceRequest or MedicationRequest or ServiceRequest or NutritionOrder or Claim)
 
-
 Extension: PayerEndpoint
 Id: endpoint
 Description: "This extension contains the endpoint for payer services."

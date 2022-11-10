@@ -33,7 +33,7 @@ If the CQL is malformed (is not syntactically correct) in any way, the app’s e
 
 In an effort to notify the appropriate party or maintainer that the CQL/Questionnaire is malformed, the app developer SHOULD use FHIR resource OperationOutcome. The details property of the OperationOutcome should use `MSG_BAD_SYNTAX` to indicate syntactical errors. The destination of the OperationOutcome should be the endpoint the malformed CQL/Questionnaire was retrieved from.
 
->It is a CQL failure if the CQL cannot be executed by the app's CQL engine in the SMART on FHIR app or in a capable EHR. The CQL author should take the capability of the app's CQL engine into account when designing their CQL. 
+>It is a CQL failure if the CQL cannot be executed by the app's CQL engine in the SMART on FHIR app or in a capable EHR.  
 
 #### Behavior when encountering execution errors
 If any errors are encountered during execution, the app’s engine SHALL NOT attempt any further execution, and the user SHALL be notified with an appropriate on-screen error message. The app SHALL log failures and ensure the maintainer of the CQL/Questionnaire package is notified. The user should have the option to complete the Questionnaire if possible, despite the error.
@@ -44,4 +44,4 @@ In an effort to notify the appropriate party or maintainer that the CQL/Question
 
 ### Execution Results
 
-The flow of execution of the CQL will be determined by the associated Questionnaire. The app will proceed through the Questionnaire, and for any question that is associated with the result of a CQL statement, that specific CQL statement will be executed. The app’s engine will use result caching so that each statement should be executed either zero or one time.
+The flow of execution of the CQL will be determined by the associated Questionnaire. The app will proceed through the Questionnaire, and for any question that is associated with the result of a CQL statement, that specific CQL statement will be executed. The DTR application will use result caching so that results that are already available will be reused without requesting them again.

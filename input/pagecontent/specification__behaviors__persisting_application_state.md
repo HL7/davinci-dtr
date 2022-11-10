@@ -15,7 +15,7 @@ The EHR should be able to associate orders with the QuestionnaireResponses they 
 
 The EHR is responsible for storing and updating the QuestionnaireResponse, as well as providing the user a way to choose sessions to relaunch. Additionally, the app context may need to be altered by the EHR to include relevant QuestionnaireResponses.  
 
-When the DTR app receives a QuestionnaireResponse but does not receive a Questionnaire URL, it should check the QuestionnaireResponse for the context extension.  The contents of the extension can be sent to the payer server using the [questionnaire-for-order operation](http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/Questionnaire-for-Order).  The payer server SHALL return a Questionnaire upon receiving a valid coverage and order.
+The contents of the extension can be sent to the payer server using the [questionnaire-for-order operation](http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/Questionnaire-for-Order).  The payer server SHALL return a Questionnaire upon receiving a valid coverage and order.
 
 For EHRs that cannot support this protocol, the data will be stored on the payer server in a DocumentReference resource. Data stored in this way SHALL only be available for supporting the DTR workflow. Additionally, the DocumentReference may only be accessed by the app which created them. Smart apps and payer systems should be registered such that the payer system can establish identity of the smart app prior to granting access to the DocumentReference. When registering, the DTR app should be given a shared client secret and a public key, which can be used to prove its identity.
 
@@ -33,13 +33,6 @@ The following information should be contained inside the DocumentReference:
 
 The PDF may also include prior authorization information, if appropriate. Information in the PDF is not machine readable, and association with the order or prior authorization request must be done by hand. 
 
-<blockquote class="stu-note">
-<p>
-Note: It is not clear if the DTR app is saving its context to a single payer which is responsible for maintaining the app, or is it saving it to any payer server it wants to that uses that app. How the DTR server gains access to the payer server is an open question right now. But is just a black box. It doesn’t particularly matter how it gets done. 
-
-We welcome feedback on how this process should or could work.</p>
-</blockquote>
-<br>
 When launched with context of the organization, patient, and user, the app should display a list of open or “in-progress” QuestionnaireResponses or DocumentReferences for the user to select from, scoped to the patient that is in context. The DTR app should check both the EHR and the payer server for stored sessions.  The QuestionnaireResponses on the EHR and the DocumentReferences on the payer server have reference to the order which they are linked to, which can be used to search for the correct resource.  
 
 When launched in standalone mode, the app should provide the user the option to select which payer and patient they would like to search for open sessions against.   
@@ -49,16 +42,6 @@ Since a patient won’t be in context, the app will need to provide a selection 
 The DTR app SHALL only be scoped to one patient and be prohibited from accessing resources aside from the ones the EHR has authorized it to gain access to. The payer system SHALL only provide DocumentReferences for usage by the DTR app if it is scoped to a specific patient. The DTR app should not be allowed to query all in-progress QuestionnaireResponses without specifying a patient to limit the search.  
 
 The system responsible for saving the sessions should prune old sessions by checking the date on the DocumentReference resource. The system can decide how long to wait before deleting an old session. The DocumentReference SHALL be deleted if the QuestionnaireResponse is saved to the EHR and the session finishes. 
-
-### SMART on FHIR applications and Servers
-SMART on FHIR applications must be launched by a host that is accessible to the launching Electronic Health Record (EHR) System. Once launched, a SMART on FHIR application may communicate with the host that it was initially launched from. This may be to retrieve data to assist in the functionality of the SMART on FHIR application, or it may be to record actions taken by the application user.
-
-In the case of DTR, the SMART on FHIR application may be launched from a number of locations. A likely scenario is that the DTR conformant SMART on FHIR application will be hosted by a payer IT system.
-
-The DTR process may send information back to the host it was launched from or send the information on another server (e.g. payer server) in order to save application state. As mentioned in the previous section, the services and formats used to communicate state information are outside the scope of this IG.   
-
-### Requesting User Identity
-To persist application state, the DTR process will need to know who is currently using the application. SMART on FHIR provides methods for the application to obtain this information.
 
 #### SMART App Launch Framework IG
 Using the SMART App Launch Framework IG, the DTR process should request [scopes for requesting identity data](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context/index.html#scopes-for-requesting-identity-data), namely `openid` and `fhirUser`. The DTR process can then retrieve the FHIR resource representing the current person and extract whatever identifiers it deems necessary for the persistance of application state.
