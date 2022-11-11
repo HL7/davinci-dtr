@@ -62,7 +62,7 @@ Usage: #definition
 * parameter[=].use = #out
 * parameter[=].min = 1
 * parameter[=].max = "*"
-* parameter[=].documentation = "1 or more bundles each with a Questionnaire, Library/CQL, and value set(s). (Note: This could be a searchable Adaptive Questionnaire that just provides the next-question operation URL.)"
+* parameter[=].documentation = "1 or more bundles each with a Questionnaire, Library/CQL, and value set(s)."
 * parameter[=].type = #Bundle
 
 * parameter[+].name = #outcome

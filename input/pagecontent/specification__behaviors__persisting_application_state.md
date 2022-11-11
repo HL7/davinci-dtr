@@ -56,7 +56,6 @@ The DTR process usage session binds this set of orders and patient to a particul
 The DTR process may be launched outside the context of a CRD request, at which point, it must be able to restore a usage session. This will be covered in detail in [Section 4.4.8](specification__behaviors__launch_outside_of_CRD.html) - Launch outside of CRD
 
 #### Visibility of Usage Sessions to Other Users
-Depending on workflows within an organization, it may be desirable for one user to start a usage session, but for it to be completed by another user. Rules for which users of a DTR process should be authorized to see information on a particular set of patients are outside the scope of this IG.
  
 The [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) and FHIR specification provide methods for discovering information about the user and how that user fits into the provider organization. With this information, the DTR process, possibly consulting with the payer and provider IT systems, can decide which usage sessions to expose to a given user.
 

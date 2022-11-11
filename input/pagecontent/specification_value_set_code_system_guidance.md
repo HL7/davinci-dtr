@@ -25,7 +25,7 @@ The table below is guidance that SHOULD be used when using values sets and code 
   <tr>
     <td>4</td>
     <td>Value set reference and recipient need to retrieve the value set and run expand or invoke a terminology server somewhere else to run the expansion. </td>
-    <td>You don't have the value set (e.g., probably because of licensing issues) - you need to look for it on a registry/terminology server, resolve the canonical URL to retrieve it, then cache the value set(s) if allowed by the code system(s). Also, once you get the value set, you might still need to expand it like scenario (3) above. </td>    
+    <td>You don't have the value set (e.g., probably because of licensing issues) - you need to look for it on a registry/terminology server, resolve the canonical URL to retrieve it, then cache the value set(s) if allowed by the code system(s). For some code systems, you may need to license the data file first in order to retrieve codes and descriptors by browser or API. Also, once you get the value set, you might still need to expand it like scenario (3) above. </td>    
   </tr>
 </table>
 

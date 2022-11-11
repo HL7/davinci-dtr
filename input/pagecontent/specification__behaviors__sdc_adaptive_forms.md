@@ -23,7 +23,7 @@ Note: At this time SMART Web Messaging is in a draft status. Therefore implement
 
 #### Adaptive Forms and Prior Authorization
 
-When a prior authorization comes back while using an Adaptive Form, the SMART app needs to:
+When a prior authorization comes back while using an Adaptive Form, the SMART app SHALL:
 1. Store the ClaimResponse on the EHR with a simple create, and 
 
 2. Update the "in-memory" request (e.g., ServiceRequest) to have a supportingInfo reference to the ClaimResponse. This is done using [SMART Web Messaging](http://hl7.org/fhir/uv/smart-web-messaging/2020Sep/). 

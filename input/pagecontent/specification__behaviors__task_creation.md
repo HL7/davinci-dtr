@@ -4,7 +4,7 @@ The provider can confirm that the sleep study has not yet been conducted and gen
 
 The ability to create tasks or todos is outside of the scope of DTR and should be supported by the EHR implementation. 
 
-The questionnaire SHOULD be able to suspend completion until all tasks are completed. How the application is suspended is left to the implementer, but the state of the questionnaire SHOULD be preserved.
+The questionnaire SHALL be able to suspend completion until all tasks are completed. How the application is suspended is left to the implementer, but the state of the questionnaire SHALL be preserved.
 
 The questionnaire SHOULD be able to suspend completion until all tasks are completed. How the application is suspended is left to the implementer, but the state of the questionnaire SHOULD be preserved. 
 
