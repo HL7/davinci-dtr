@@ -99,5 +99,3 @@ menu:
   Base Specs:
     FHIR R4 Spec: new-tab {{site.data.fhir.path}}
     SDC: new-tab {{site.data.fhir.ver.hl7_fhir_uv_sdc}}
-
-  History: http://hl7.org/fhir/us/davinci-dtr/history.html
