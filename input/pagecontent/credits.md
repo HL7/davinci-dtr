@@ -1,11 +1,11 @@
 <br>
 **Primary Authors:**  
 * Larry Decelles (The MITRE Corporation)
+* Jeff Brown (Lantana Consulting Group)
 * Keeyan Ghoreshi (The MITRE Corporation)
 * Yolanda Liu (The MITRE Corporation)
 * Andy Gregorowicz (The MITRE Corporation)
 * Cole Springate-Combs (The MITRE Corporation)
-* Jeff Brown (Lantana Consulting Group)
 
 **Technical Editing:**
 * Pat LaRocque (The MITRE Corporation)
