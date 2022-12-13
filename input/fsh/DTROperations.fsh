@@ -11,6 +11,7 @@ Usage: #definition
 * kind = #operation
 * code = #Questionnaire-for-Order
 * base = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/Questionnaire-for-Order"
+* description = "This operation is used to retrieve one or more Bundle resources containing relevant Questionnaire, Library/CQL, and value sets from a Payer system."
 
 * resource = #Patient
 * system = false
