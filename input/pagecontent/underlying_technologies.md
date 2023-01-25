@@ -56,11 +56,24 @@ Client systems conformant to this IG SHALL also serve as a [SMART on FHIR](http:
 ### Structured Data Capture
 Clinical systems SHALL use the specification and workflows defined by [Structured Data Capture (SDC)](http://hl7.org/fhir/us/sdc/) to initiate DTR functionality with the payers. Implementers should be familiar with this specification.
 
+[SDC Adaptive forms](http://build.fhir.org/ig/HL7/sdc/adaptive.html) defines an alternative way to dynamically interact with the user. DTR support for adaptive forms would help in the following scenarios:
+
+1) Support for complex decision trees without the need for the Questionnaire and rules (CQL) to cover all of the possibilities. This is enabled by supporting the request for a small number of questions (and the ability to prepopulate the questions from the EHR), returning the results to the Payer to "prune" the decision tree, and repeat the process until complete.
+2) Allowing the payer to only expose the relevant guideline logic for the clinical situation at hand.
+3) Support for complex logic that depends on information available to the payer (e.g. prior services) to be part of the decision logic to evaluate the medical necessity and appropriateness of the planned service.
+4) Enabling the potential for a final response from the payer including prior authorization information as part of the interactive exchange. 
+5) Provide flexibility to EHR venders to adopt DTR. The adaptive form can be used as an alternative to more complex SDC form behavior, e.g., enableWhen.
+6) Supports both payer side prior authorization and the ability to request specific additional information as part of the PAS exchange process
+
+The DTR app SHALL support loading and rendering the adaptive form developed by the payer following the SDC adaptive form workflow. If there is CQL embedded in the questionnaire or the associated library, the DTR app should be able to execute the CQL based on the questions loaded in the questionnaire.
+
+For performance, the DTR application may save the results of prior execution of the CQL where it is the same for addressing the current question(s).
+
 ### Clinical Quality Language
-Payer systems SHALL use the specification and workflows defined by [Clinical Quality Language CQL](https://cql.hl7.org/) to facilitate DTR functionality within clinical systems. Implementers should be familiar with this specification. Older versions of CQL, such as STU 2 can be used provided they work with FHIR R4.
+Payer systems SHALL use the specification and workflows defined by [Clinical Quality Language CQL](https://cql.hl7.org/) to facilitate DTR functionality within clinical systems. Implementers should be familiar with this specification. This specification supports the [current release of CQL](http://cql.hl7.org/N1/), however older versions of CQL, such as STU 2 can be used provided they work with FHIR R4.
 
 ### Must Support
-This IG does NOT mark any elements with the [Must Support](http://hl7.org/fhir/R4/profiling.html#mustsupport)  flag in its own profiles. 
+This IG does NOT mark any additional elements with the [Must Support](http://hl7.org/fhir/R4/profiling.html#mustsupport) flag in its own profiles. However, note that this guide does profile on top of US Core profiles where Must Support has been defined on certain elements (i.e. [DTR Document Reference](https://build.fhir.org/ig/HL7/davinci-dtr/StructureDefinition-dtr-documentreference-r4.html) profiles [USCoreDocumentReferenceProfile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-documentreference.html)). The FHIR specification makes it clear that when profiling another profile, a MustSupport flag can be constrained further (i.e., taken from 'false' to 'true') but cannot be loosened (i.e., changed from 'true' to 'false').  See [US Core Must Support Guidance](http://hl7.org/fhir/us/core/must-support.html#must-support-elements).
 
 This IG also references the [US Core IG](http://www.hl7.org/fhir/us/core/). Da Vinci DTR implementations SHALL conform to the US Core IG [Must Support](http://hl7.org/fhir/us/core/general-guidance.html#must-support) Guidance where US Core IG resources are used.
 

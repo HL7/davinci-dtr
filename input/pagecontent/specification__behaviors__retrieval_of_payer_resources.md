@@ -22,14 +22,14 @@ If the order is not present, then it can be retrieved from the QuestionnaireResp
 
 If neither is present, the user should be prompted to select a DocumentReference or QuestionnaireResponse based on the patient that is in context.
 
-The coverage may have an extension, `endpoint`, which is the payer endpoint for retrieving CQL and Questionnaire resources.  If the extension is not present, the user should be prompted to select a payer and populate the extension with the app-known payer URL.  The app should register this information out-of-band beforehand with relevant payers.  
+Remove the `endpoint` extension from the coverage resource. The app should always know the payer URL since it will have been registered with the payer prior to being able to access that particular payer. The app should register this information out-of-band beforehand with relevant payers.  
 
 The request resource created during the CRD workflow should be saved to the EHR FHIR server for retrieval by the DTR process, if possible. This might, for example, be the ServiceRequest resource that is sent in the CDS hook to the CRD server. Additionally, a tight integration between the CRD service and the DTR process should enable the DTR process to access FHIR resources received by the CRD service that are not available from the EHR's FHIR server.
 
 This IG will support the [HRex Decision point - REST searchable?](http://build.fhir.org/ig/HL7/davinci-ehrx/exchanging.html#rest-searchable) when using RESTful endpoints to get payer resources (e.g., CQL rules and templates).
 
 ### Authentication of SMART on FHIR application to payer API
-Payers SHALL require the DTR process to authenticate in order to retrieve resources when PHI is exchanged, and MAY required authentication in other situations. In the case that authentication is required, the following JSON structure SHALL be populated by the payer system. This JSON is based on the structure for [FHIR Authorization in CDS Hooks](https://cds-hooks.hl7.org/1.0/#fhir-resource-access).
+Payers SHALL require the DTR process to authenticate in order to retrieve resources when PHI is exchanged, and SHOULD required authentication in other situations. In the case that authentication is required, the following JSON structure SHALL be populated by the payer system. This JSON is based on the structure for [FHIR Authorization in CDS Hooks](https://cds-hooks.hl7.org/1.0/#fhir-resource-access).
 
 | Field | Optionality | Type | Description |
 | ----- | ----------- | ---- | ----------- |
@@ -41,12 +41,14 @@ Payers SHALL require the DTR process to authenticate in order to retrieve resour
 {: .grid } 
 
 ### Questionnaire
-The DTR process SHALL use the URL provided in the `template` property of the `appContext` to retrieve a Questionnaire resource. The payer SHALL provide this as a FHIR resource, such that the DTR process will be executing a FHIR read interaction on the payer's server. The returned Questionnaire resource SHALL conform to the [CQF-Questionnaire Profile](http://hl7.org/fhir/R4/cqf-questionnaire.html) and MAY conform to [Structured Data Capture (SDC) Advanced Rendering Profile]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/rendering.html).
+The DTR process SHALL use the URL provided in the `questionnaire` property of the `appContext` to retrieve a Questionnaire resource. The payer SHALL provide this as a FHIR resource, such that the DTR process will be executing a FHIR read interaction on the payer's server. The returned Questionnaire resource SHALL conform to the [CQF-Questionnaire Profile](http://hl7.org/fhir/R4/cqf-questionnaire.html) and MAY conform to [Structured Data Capture (SDC) Advanced Rendering Profile]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/rendering.html).
 
 The Questionnaire SHALL have a `cqf-library` extension property specified. That property SHALL provide the location of one or more CQL libraries needed to execute the payer rules.
 
+Questionnaires and ValueSets SHALL be version specific to address the possibility of breaking changes between differing versions.
+
 ### CQL Rules
-The DTR process SHALL use the URL provided in the `cqf-library` extension to retrieve the CQL necessary to execute the payer rules. Metadata about the rules will be represented as a FHIR Library resource. The payer SHALL provide this as a FHIR resource, such that the DTR process will be executing a FHIR read interaction on the payer's server.
+CQL can either be embedded inline as part of an expression or referenced in a library.  All libraries needed by a questionnaire SHALL be referenced by the cqf-library extension which SHALL be resolvable by the SMART app. Metadata about the rules will be represented as a FHIR Library resource. The payer SHALL provide this as a FHIR resource, such that the DTR process will be executing a FHIR read interaction on the payer's server.
 
 ### Relaunch Session
 The DTR app SHALL support usage of two new scopes to alter the launch context: `launch/request` and `launch/response`.  If the `request` scope is included when launching, the access token bundle should return with the `request` field of the `appContext` filled.  If the `response` scope is included, it should return with the `response` field of the `appContext` filled.  

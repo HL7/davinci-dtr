@@ -13,6 +13,3 @@ Payers have documentation requirements and rules that must be satisfied as part 
 
 ### SDC
 The [Structured Data Capture Implementation Guide](http://hl7.org/fhir/us/sdc/index.html) is used to allow payers to declare information needs and provide the DTR process with a means of obtaining this data from a user.
-
-### CQF Questionnaire
-Payers will describe their information needs through the FHIR Questionnaire resource. These resources SHALL conform to the [CQF Questionnaire Profile](http://hl7.org/fhir/R4/cqf.html). This profile allows the Questionnaire to be associated with the Clinical Quality Language (CQL) used to find the desired information within a patient's data. Further, it allows each individual item in the Questionnaire to be associated with an expression in the CQL. 

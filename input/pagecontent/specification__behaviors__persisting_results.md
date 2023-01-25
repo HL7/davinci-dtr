@@ -1,4 +1,4 @@
-When the DTR process has collected all of the necessary information, it must save the results of the data collection to the patient record. This IG describes two methods for saving the collected information: a text block in the Electronic Health Record (EHR) System and a QuestionnaireResponse.
+When the DTR process has collected all of the necessary information, it SHALL save the results of the data collection to the patient record. This IG describes two methods for saving the collected information: a text block in the Electronic Health Record (EHR) System and a QuestionnaireResponse.
 
 ### Text Block
 Many EHR Systems do not currently support writing a QuestionnaireResponse into a FHIR server. However, The US Core Implementation Guide (IG) now includes a [DocumentReference Profile](https://hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html), which allows clients, like the DTR process, to write notes into the EHR (or EHR) system's FHIR server. The following section describes how the QuestionnaireResponse that is generated through the processes described in Section 4.4.3 and Section 4.4.4 can be transformed into text such that it may be saved as a note in the EHR system.
@@ -19,7 +19,7 @@ EHR systems that conform to [US Core](http://www.hl7.org/fhir/us/core/) allow fo
 ### QuestionnaireResponse
 The DTR process creates a QuestionnaireResponse resource through the course of normal operation. This resource SHOULD be saved to the patient record in the EHR system of the healthcare provider if supported. It may also be transmitted to the payer IT system.
 
->Reusing QuestionnaireResponses may save time and effort. In the case of a QuestionnaireResponse being reused. The data in the QuestionnaireResponse should be refreshed where possible with the latest data from the EHR system when being reused. 
+>Updating work-in-progress (WIP) QuestionnaireResponses may save time and effort. In cases of QuestionnaireResponse updates, the App SHALL have the ability to continue, SHOULD allow the ability to start over, and MAY, for non-adaptive forms, provide the ability to ability to refresh and retain or discard provider entered information during a refresh. The data in the QuestionnaireResponse SHOULD be refreshed where possible with the latest data from the EHR system. 
 
 #### Interaction with Payer API
 The payer IT system should support the FHIR create interaction to allow the DTR process to send the QuestionnaireResponse resource to the payer. The FHIR endpoint for the payer may require authentication. If it is required, it SHALL follow the procedures described in [Section 4.4.1](specification__behaviors__retrieval_of_payer_resources.html#authentication-of-smart-on-fhir-application-to-payer-api) - Authentication of SMART on FHIR application to payer API.

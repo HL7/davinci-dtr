@@ -5,7 +5,7 @@ Guidance and conformance expectations around privacy and security are provided b
 * SMART on FHIR: [SMART App Launch Framework](http://www.hl7.org/fhir/smart-app-launch)
 * Da Vinci HRex: [Privacy and Security](http://build.fhir.org/ig/HL7/davinci-ehrx/security.html)
 
-The DTR / SMART on FHIR application will have access to the scope of data authorized by the organization as appropriate for use by the app, and accessible to the user. This scope granted may provide the  SMART on FHIR application  access to more data than is needed for the specific situation. For example, if Observation.read capabilities are needed, the app will have access to all observations for that patient.
+The DTR / SMART on FHIR application will have access to the scope of data authorized by the organization as appropriate for use by the app, and accessible to the user. This scope granted may provide the  SMART on FHIR application  access to more data than is needed for the specific situation. For example, if Observation.read capabilities are needed, the app will have access to all observations for that patient. For compliance with HIPAA Minimum Necessary, the CQL SHALL limit requests for information from the EHR's API to only items that are relevant to the documentation requirements for which DTR was launched (e.g., documentation requirements for a service that requires prior authorization).
 
 Any EHR with SMART on FHIR support should be prepared to deal with the implications of providing a client with the scopes they request. For example, EHRs SHOULD limit FHIR search capabilities for clients, requiring a patient ID in any search query to ensure the client can only access resources related to that patient.
 

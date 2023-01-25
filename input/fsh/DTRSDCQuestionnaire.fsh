@@ -5,7 +5,11 @@ Profile: DTRSDCQuestionnaire
 Parent: sdc-questionnaire
 Id: dtr-sdc-questionnaire
 Title: "DTR SDC Questionnaire"
-Description: "The DTR SDC Questionnaire represents a Questionnaire which follows SDC profile."
+Description: "Takes a subset of extensions and constraints from the SDC [rendering], [behavior], and [population] profiles, reflecting agreed expectations around which data elements might be relevant as well as which must be supported for DTR purposes.
+
+Elements that are not mustSupport are presented here as elements that may be of interest to certain payers, but can only be used if the payer is aware the EHR or SMART App can support them.
+
+Further guidance on the use of these elements should be found in the underlying [SDC] specification.[SDC]"
 
 * ^meta.versionId = "1"
 * ^meta.lastUpdated = "2021-11-12T17:01:59.000+00:00"
