@@ -1,13 +1,14 @@
 <br>
 **Primary Authors:**  
 * Larry Decelles (The MITRE Corporation)
-* Keeyan Ghoreshi (The MITRE Corporation)
-* Yolanda Liu (The MITRE Corporation)
+* Jeff Brown (Lantana Consulting Group)
 * Andy Gregorowicz (The MITRE Corporation)
 * Cole Springate-Combs (The MITRE Corporation)
 
 **Technical Editing:**
 * Pat LaRocque (The MITRE Corporation)
+* Keeyan Ghoreshi (The MITRE Corporation)
+* Yolanda Liu (The MITRE Corporation)
 * Robi Scalfani (The MITRE Corporation)
 
 **Technical Support and Guidance:** 
@@ -31,7 +32,7 @@ This IG was developed under the auspices of the Clinical Decision Support work g
 Special thanks goes to the numerous Da Vinci members and community who have participated on conference calls, provided reviews and feedback, supported sample data gathering, reference implementation development, and testing including, but not limited to:
 * FHIR Shorthand Team (The MITRE Corporation) 
 * Carie Hammond and Ryan Moehrke (Aegis)
-* Matt Varghese and Kyle Johnson (Epic)
+* Matt Varghese, Kyle Johnson, and Spencer Utley (Epic)
 * Sreekanth Puram (Mettle Solutions)
 * Sreenivas Reddy Mallipeddi (MCG)
 

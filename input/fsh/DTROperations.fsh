@@ -27,6 +27,7 @@ Usage: #definition
 * title = "Get Questionnaire for given order"
 * status = #draft
 * kind = #operation
+
 * code = #questionnaire-package
 * base = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package"
 
@@ -62,6 +63,7 @@ Usage: #definition
 * parameter[=].use = #out
 * parameter[=].min = 1
 * parameter[=].max = "*"
+
 * parameter[=].documentation = "1 or more bundles each with a Questionnaire, Library/CQL, and value set(s)."
 * parameter[=].type = #Bundle
 
@@ -71,3 +73,4 @@ Usage: #definition
 * parameter[=].max = "1"
 * parameter[=].documentation = "This OperationOutcome satisfies the definition of this operation"
 * parameter[=].type = #OperationOutcome
+
