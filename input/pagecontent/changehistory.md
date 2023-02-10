@@ -323,13 +323,6 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
 </ul>
 <ul> 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-36624">FHIR-36624</a>:
-  attestation concern
-  <a href="use_cases.html#crd-and-dtr-workflow">(CRD and DTR Workflow)</a>
-  </li>
-</ul>
-<ul> 
-  <li>
   <a href="https://jira.hl7.org/browse/FHIR-34121">FHIR-34121</a>:
   Provide a mechanism for Template to specify what to do when DTR ends
   <a href="use_cases.html#crd-and-dtr-workflow">(QuestionnaireResponse)</a>
