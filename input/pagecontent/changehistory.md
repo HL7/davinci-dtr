@@ -356,7 +356,53 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
   <a href="specification__behaviors__persisting_application_state.html#session-expiration">(Session Exploration)</a>
   </li>
 </ul>
-
-
-
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36478">FHIR-36478</a>:
+  SDC questionnaire responses will always have a Questionnaire url somewhere
+  <a href="specification__behaviors__persisting_application_state.html#how-dtr-saves-context-of-dtr-for-a-relaunch">(How DTR Saves Context of DTR for a Relaunch)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36527">FHIR-36527</a>:
+  refine language 
+  <a href="specification__cds_hooks.html">(CDS Hooks)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36483">FHIR-36483</a>:
+  Need to clarify pruning expectations
+  <a href="specification__behaviors__persisting_application_state.html#how-dtr-saves-context-of-dtr-for-a-relaunch">(How DTR Saves Context of DTR for a Relaunch)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36276">FHIR-36276</a>:
+  Security review of SDC Adaptive Forms in DTR
+  <a href="specification__behaviors__sdc_adaptive_forms.html">(SDC Adaptive Forms)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36390">FHIR-36390</a>:
+  Launch instructions need correction/clarification
+  <a href="specification__cds_hooks.html#establish-patient-context">(Establish Patient Context)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36491">FHIR-36491</a>:
+  Drop section on "usage sessions"
+  <a href="specification__behaviors__persisting_application_state.html#usage-sessions">(Resuming Work in Progress)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36385">FHIR-36385</a>:
+  Drop section on "usage sessions"
+  <a href="specification__cds_hooks.html#use-of-cardlinks">(Use of Card.links)</a>
+  </li>
+</ul>
 </div>
