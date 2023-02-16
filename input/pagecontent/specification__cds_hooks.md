@@ -1,9 +1,7 @@
 ### Use of Card.links
 One entry point into the DTR process is launching from a [Clinical Decision Support (CDS) Hooks Card](https://cds-hooks.hl7.org/1.0/#card-attributes). 
 
-As a part of a CDS Hooks response, if there is a need for further information then the payer IT system SHALL return a Card object with at least one Link object populated in the Card.links property. Otherwise no Link object would be provided. The Link object SHALL have a type property set to smart. The Link object SHALL have a URL property set to the launch URL of the DTR process.
-
-The DTR App requests an OAuth token using SMART backend services and then uses that second access token to authenticate against the payer FHIR server.
+Details of the DTR launch process from CRD can be found [here](https://build.fhir.org/ig/HL7/davinci-crd/hooks.html#launch-smart-application)
 
 ### Establish Patient Context
 When the DTR process is being launched from a CDS card Link, the Electronic Health Record (EHR) system and DTR process will follow the procedures established by the [SMART App Launch Framework](http://hl7.org/fhir/smart-app-launch). More specifically the EHR and DTR process SHALL follow the SMART App Launch Framework [EHR launch sequence](http://hl7.org/fhir/smart-app-launch/#ehr-launch-sequence). 

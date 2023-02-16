@@ -7,6 +7,8 @@ The DTR process should anticipate that users may not always be able to complete 
 <br>
 At any point prior to completion the app should be able to save the session, and then relaunch it later. If an EHR system performs DTR functionality internally, it may save session information however it likes. Guidance below does not apply in this scenario. 
 
+Providers may go days to weeks before completing questionnaires and may go many months to a year before completing paperwork and Prior Authorization ot claim submission. Therefore, the time span between the creation of a Questionnaire to the completion of QuestionnaireResponse should be accounted for accordingly.
+
 Context for the DTR app is made up of the QuestionnaireResponse, the Questionnaire, the prepopulation CQL and its supporting files, the order(s), the coverage, and the patient. The QuestionnaireResponse resource contains a reference to the patient in the `subject` field, and the order(s) and coverage in the `context` extension. From the coverage and order, the DTR app can determine the payer and retrieve the CQL, Questionnaire, and other files from a standard endpoint on the payer server.  
 
 If the DTR app receives a QuestionnaireResponse resource in the app context, it SHALL reload the session information from that QuestionnaireResponse using its associated order and coverage.  If the DTR app does not receive a QuestionnaireResponse, it SHALL first search the EHR for QuestionnaireResponses associated with the order included in the app context.  Depending on the result of the search, the app will either offer an option to reload context from a found QuestionnaireResponse or launch normally and create a new QuestionnaireResponse.
@@ -48,12 +50,11 @@ Using the SMART App Launch Framework IG, the DTR process should request [scopes 
 
 The EHR's authorization server MUST support the `openid` and `fhirUser` scopes, due to the importance of the `fhirUser` element in the QuestionnaireResponse resource.
 
-### Usage Sessions
-The DTR process MAY be initially launched in response to a Coverage Requirements Discovery (CRD) request. CRD is launched in response to a provider's request for a given set of orders for a particular patient.
-
-The DTR process usage session binds this set of orders and patient to a particular user. When persisting application state, it is the responsibility of the DTR process to record the relationship between the orders, patient, and user.
-
-The DTR process may be launched outside the context of a CRD request, at which point, it must be able to restore a usage session. This will be covered in detail in [Section 4.4.8](specification__behaviors__launch_outside_of_CRD.html) - Launch outside of CRD
+### Resuming Work in Progress
+In order to resume a work in progress that has been persisted, there are three basic requirements:
+- The user must be from the same organization
+- The user must have authority to access the patient (i.e. launch from patient context)
+- The user must have authority to use DTR
 
 #### Visibility of Usage Sessions to Other Users
  
