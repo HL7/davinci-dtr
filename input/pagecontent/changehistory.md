@@ -401,7 +401,7 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
 <ul> 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36385">FHIR-36385</a>:
-  Drop section on "usage sessions"
+  No guidance on CRD
   <a href="specification__cds_hooks.html#use-of-cardlinks">(Use of Card.links)</a>
   </li>
 </ul>
