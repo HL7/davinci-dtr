@@ -25,13 +25,13 @@ as general guidance on how to read FHIR specifications. Readers who are unfamili
 * [How to read resource & profile definitions]({{site.data.fhir.path}}formats.html)
 * [Base resource]({{site.data.fhir.path}}resource.html)
 
-This IG leverages and builds on the [US Core](http://hl7.org/fhir/us/core/) IG defined by HL7 for sharing human EHR data in the US.  Implementers need to familiarize themselves with the profiles in [US Core](http://hl7.org/fhir/us/core/). 
+This IG leverages and builds on the [US Core](http://hl7.org/fhir/us/core/STU3.1.1/) IG defined by HL7 for sharing human EHR data in the US.  Implementers need to familiarize themselves with the profiles in [US Core](http://hl7.org/fhir/us/core/STU3.1.1/). 
 
 This IG supports the [R4](http://hl7.org/fhir/R4/index.html) version of the FHIR standard.
 
 | FHIR Version |
 | ------------ |
-| [FHIR R4 US Core](http://hl7.org/fhir/us/core/) |
+| [FHIR R4 US Core](http://hl7.org/fhir/us/core/STU3.1.1/) |
 
 Implementers should also familiarize themselves with the FHIR resources used within this IG.
 
@@ -42,7 +42,7 @@ Implementers should also familiarize themselves with the FHIR resources used wit
 | [Task](http://hl7.org/fhir/R4/task.html) |
 
 ### US Core
-Clinical systems SHALL use the specification defined by [US Core](http://www.hl7.org/fhir/us/core/) in exchanging information with payers. Implementers should be familiar with this specification.
+Clinical systems SHALL use the specification defined by [US Core](http://hl7.org/fhir/us/core/STU3.1.1/) in exchanging information with payers. Implementers should be familiar with this specification.
 
 ### Clinical Decision Support Hooks
 Clinical systems and payer systems SHALL use the specification and workflows defined by [Clinical Decision Support (CDS) Hooks](https://cds-hooks.hl7.org) to initiate [CRD](http://hl7.org/fhir/us/davinci-crd/). Implementers should be familiar with this specification.
