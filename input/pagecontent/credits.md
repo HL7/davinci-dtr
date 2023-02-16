@@ -1,7 +1,7 @@
 <br>
 **Primary Authors:**  
-* Larry Decelles (The MITRE Corporation)
 * Jeff Brown (Lantana Consulting Group)
+* Larry Decelles (The MITRE Corporation)
 * Andy Gregorowicz (The MITRE Corporation)
 * Cole Springate-Combs (The MITRE Corporation)
 
@@ -18,6 +18,7 @@
 * Robert Dieterle (EnableCare, LLC)
 * Viet Nguyen (Stratametrics, LLC)
 * Vanessa Candelora (Point-of-Care Partners)
+* Crystal Kallem (Point of Care Partners)
 * Jocelyn Keegan (Point-of-Care Partners)
 * Dana Marcelonis (Point of Care Partners)
 
