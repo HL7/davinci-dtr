@@ -3,7 +3,7 @@ When creating orders, booking appointments, admitting patients, etc. there's oft
 
 The Da Vinci Documentation Templates and Rules (DTR) implementation guide provides a mechanism for payers to express their documentation requirements computably in a way that supports clinicians and other EHR users to navigate and quickly specify the needed information in a context-specific way.  The guide allows rules to be written in a way that automatically extracts existing EHR information for review/confirmation and adjusting the information prompted for based on what data is already known or entered, minimizing impact on provider time, while expediting subsequent payer interactions.
 
-DTR leverages FHIR [Questionnaires] combined with embedded [CQL] logic and associated [value sets] to retrieve existing information, prompt for additional relevant information, and manage the logic process of determining which questions need to be answered (and what answer choices are relevant).  The function of rendering these Questionnaires and capturing the information in patient-specific QuestionnaireResponses can occur either through [SMART on FHIR applications] or through functionality embedded directly into the EHR.
+DTR leverages FHIR [Questionnaires] combined with embedded [CQL] logic and associated [value sets] to retrieve existing information, prompt for additional relevant information, and manage the logic process of determining which questions need to be answered (and what answer choices are relevant).  The function of rendering these Questionnaires and capturing the information in patient-specific QuestionnaireResponses can occur either through [SMART on FHIR applications] or through functionality embedded directly into the EHR.   
 
 ### Boundaries and Relationships
 
@@ -46,3 +46,5 @@ The IG is organized into the following sections:
 * The full [DTR Implementation Guide](full-ig.zip)
 * [FHIR R4 DTR Resource Definitions](definitions.json.zip)
 * [FHIR R4 DTR IG Validator Pack](validator-hl7.fhir.us.davinci-dtr.pack)
+
+
