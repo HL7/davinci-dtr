@@ -31,7 +31,7 @@ The [Coverage Requirements Discovery (CRD)](http://hl7.org/fhir/us/davinci-crd/)
 
 The DTR process is responsible for accessing Questionnaire resources and rules (CQL), then prepopulating the questionnaire with EHR data and finally checking if the available EHR data satisfies requirements, as well as allowing for the manual population of any missing data.
 
-### CRD and DTR Workflow
+#### CRD and DTR Workflow
 The graphic shows a high-level overview of CRD and DTR (DTR is the SMART on FHIR app or equivalent native EHR app).
 
 Note: This workflow is just one example used to help illustrate the CRD and DTR APIs. It is expected that a supplemental guide will be produced moving forward to 
@@ -54,7 +54,7 @@ As an example, a clinician might order, “Home Oxygen Therapy”
 
 ![CRD DTR Flow](CRD_DTR_Flow.png){:style="float: none;"}
 
-### Home Oxygen Therapy Ordering - DTR Workflow Details
+#### Home Oxygen Therapy Ordering - DTR Workflow Details
 This example shows an overview of how the DTR SMART on FHIR app (or equivalent native EHR app) fits into a workflow when ordering Home Oxygen Therapy. 
    
 1. It is determined that documentation and/or prior authorization is required for coverage.
@@ -76,3 +76,6 @@ This example shows an overview of how the DTR SMART on FHIR app (or equivalent n
 
 >DTR does not support creating new orders or changing existing orders. DTR supports documentation requirements for device, service, and medication requests. When the required documentation cannot be populated from the EHR, DTR provides the ability to capture the missing information.
 
+### Relation to Clinical Data Exchange (CDex)
+
+The [Clinical Data Exchange (CDex)](https://hl7.org/fhir/us/davinci-cdex/index.html) IG specifies the use of DTR to [request attachments using questionnaires](https://hl7.org/fhir/us/davinci-cdex/requesting-attachments-questionnaire.html).
