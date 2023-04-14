@@ -48,7 +48,7 @@ Usage: #definition
 * parameter[=].use = #in
 * parameter[=].documentation = "One or more Order resource instances. e.g., DeviceRequest, ServiceRequest, MedicationRequest, ... Encounter, Appointment, or prior-auth Claim, etc. (Note: This could also be de-identified)"
 * parameter[=].type = #Any
-* parameter[=].min = 1
+* parameter[=].min = 0
 * parameter[=].max = "*"
 
 * parameter[+].name = #changedsince

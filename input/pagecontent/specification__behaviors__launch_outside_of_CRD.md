@@ -1,5 +1,7 @@
 The DTR process may be launched outside of the workflow of Coverage Requirements Discovery. This is likely to be the case if a user is resuming a previous session. Depending on the context of the Electronic Health Record (EHR) system, the interaction with the DTR process will vary.
 
+The [Clinical Data Exchange (CDex)] implementation guide also uses DTR functionality to [request attachments using questionnaires](https://hl7.org/fhir/us/davinci-cdex/requesting-attachments-questionnaire.html).  See the [CDex Task Data Request Profile](https://hl7.org/fhir/us/davinci-cdex/StructureDefinition-cdex-task-data-request.html).
+
 ### Launch Context
 The launch context, which comes to the DTR app through the access token bundle, can be used to include necessary information when launching. When launched outside the context of CRD, the DTR app should add the `launch/order` scope, to indicate that the EHR should include the order currently in context when it returns an access token.  The EHR should provide a local reference, which the DTR app can use to retrieve the request, from which it can relaunch the associated usage session. The requests SHALL have an identifier, with type "placer", which remains consistent over the resources lifetime and can be used to search for them despite changes to their `id`.  
 

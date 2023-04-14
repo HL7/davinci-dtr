@@ -27,4 +27,6 @@ The payer IT system should support the FHIR create interaction to allow the DTR 
 #### Pushing QuestionnaireResponse to Payer
 This IG will support the [HRex Decision point – Configured by consumer?](http://build.fhir.org/ig/HL7/davinci-ehrx/exchanging.html#configured-by-consumer) when a SMART on FHIR or native EHR app wants to push a QuestionnaireResponse to a Payer.  
 
+Note: Other IGs might provide additional mechanisms for transmitting results of the completed QuestionnaireResponse to the payer.  The client that launches DTR is responsible for understanding the context of the launch, and thus for what to do with any QuestionnaireResponses that are persisted as a result of that launch.
+
 

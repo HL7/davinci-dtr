@@ -11,7 +11,7 @@ This IG is a companion to the Da Vinci Coverage Requirements Discovery (CRD) and
 
 While designed to work with these other IGs, DTR can be implemented stand-alone.  Further details on the relationships between these three implementation guides can be found [here] (point to the background section that incorporates the standard relationship blurb).
 
-The third Da Vinci IG that is relevant to DTR is the [Health Record Exchange (HRex)] implementation guide, which defines a number of shared profiles and other shared content used across Da Vincie IGs - including this one.
+A third Da Vinci IG that is relevant to DTR is the [Health Record Exchange (HRex)] implementation guide, which defines a number of shared profiles and other shared content used across Da Vinci IGs - including this one.  And a fourth relevant Da Vinci IG is [Clinical Data Exchange (CDex)], which uses DTR functionality for requesting attachments using questionnaires.
 
 This guide also depends on a number of non-Da Vinci specifications:
 
