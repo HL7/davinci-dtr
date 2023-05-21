@@ -3,7 +3,7 @@ When creating orders, booking appointments, admitting patients, etc. there's oft
 
 The Da Vinci Documentation Templates and Rules (DTR) implementation guide provides a mechanism for payers to express their documentation requirements computably in a way that supports clinicians and other EHR users to navigate and quickly specify the needed information in a context-specific way.  The guide allows rules to be written in a way that automatically extracts existing EHR information for review/confirmation and adjusting the information prompted for based on what data is already known or entered, minimizing impact on provider time, while expediting subsequent payer interactions.
 
-DTR leverages FHIR [Questionnaires] combined with embedded [CQL] logic and associated [value sets] to retrieve existing information, prompt for additional relevant information, and manage the logic process of determining which questions need to be answered (and what answer choices are relevant).  The function of rendering these Questionnaires and capturing the information in patient-specific QuestionnaireResponses can occur either through [SMART on FHIR applications] or through functionality embedded directly into the EHR.   
+DTR leverages FHIR [Questionnaires] combined with embedded [CQL] logic and associated [value sets] to retrieve existing information, prompt for additional relevant information, and manage the logic process of determining which questions need to be answered (and what answer choices are relevant).  The function of rendering these Questionnaires and capturing the information in patient-specific QuestionnaireResponses can occur either through [SMART on FHIR applications] or through functionality embedded directly into the EHR.
 
 ### Boundaries and Relationships
 
@@ -11,7 +11,7 @@ This IG is a companion to the Da Vinci Coverage Requirements Discovery (CRD) and
 
 While designed to work with these other IGs, DTR can be implemented stand-alone.  Further details on the relationships between these three implementation guides can be found [here] (point to the background section that incorporates the standard relationship blurb).
 
-A third Da Vinci IG that is relevant to DTR is the [Health Record Exchange (HRex)] implementation guide, which defines a number of shared profiles and other shared content used across Da Vinci IGs - including this one.  And a fourth relevant Da Vinci IG is [Clinical Data Exchange (CDex)], which uses DTR functionality for requesting attachments using questionnaires.
+The third Da Vinci IG that is relevant to DTR is the [Health Record Exchange (HRex)] implementation guide, which defines a number of shared profiles and other shared content used across Da Vincie IGs - including this one.
 
 This guide also depends on a number of non-Da Vinci specifications:
 
@@ -41,10 +41,3 @@ The IG is organized into the following sections:
 * [Specification](specification.html) Provides the technical conformance details for the specification.
 * [Resources](artifacts.html) Introduces and provides links to the FHIR profiles.
 * [Credits](credits.html) Identifies the individuals and organizations involved in developing this IG.
-
-### Downloads
-* The full [DTR Implementation Guide](full-ig.zip)
-* [FHIR R4 DTR Resource Definitions](definitions.json.zip)
-* [FHIR R4 DTR IG Validator Pack](validator-hl7.fhir.us.davinci-dtr.pack)
-
-

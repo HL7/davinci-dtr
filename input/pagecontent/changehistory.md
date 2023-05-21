@@ -405,4 +405,25 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
   <a href="specification__cds_hooks.html#use-of-cardlinks">(Use of Card.links)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36365">FHIR-36365</a>:
+  Downloads should be a separate page
+  <a href="downloads.html">(Downloads)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36394">FHIR-36394</a>:
+  CQL logic guidance is misleading
+  <a href="specification__cql.html#guidance-on-structure-of-cql-logic">(Guidance on Structure of CQL Logic)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36367">FHIR-36367</a>:
+  Talk about DTR before you talk about CRD
+  <a href="use_cases.html#crd-and-dtr-workflow">(CRD and DTR Workflow)</a>
+  </li>
+</ul>
 </div>

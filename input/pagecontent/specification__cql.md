@@ -7,6 +7,12 @@ One of the core purposes of this specification is to automate the retrieval of d
 ### Guidance on Structure of CQL Logic
 Like many other programming languages, CQL allows for statements to be nested within conditional logic. This creates instances where some statements may not be executed due to a prior condition being met. This behavior should be used intentionally by payers creating CQL.
 
+Data retrieval is highly dependent on the *enableWhen* attribute/element:
+
+1. Questionnaires should be designed with appropriate use of *enableWhen* such that questions are only displayed when needed.
+
+2. CQL logic should be partitioned to be specific to groups/questions/etc. when doing so will allow it to be more efficient - though consideration should also be given to whether performing significant data gathering at the outset (even if the data is unneeded) will produce a more positive experience than intermittent data retrieval 'on demand', when such retrieval may introduce user-interface delays
+
 This pattern of logic structure is referred to by several names, including *eager quitting*, *early return* or, *short circuiting*. The goal is to avoid the execution of statements if they will not be relevant given other information available to the logic. This is done to streamline workflow and allow the user to focus on relevant input fields.
 
 As an example, a payer may have a set of rules or specific information that must be gathered on a patient only if they have diabetes. This information may be gathered through a series of CQL statements. When constructing this CQL for DTR, these statements should be nested in conditionals to first check if the patient has diabetes before checking for information dependent on that condition.
