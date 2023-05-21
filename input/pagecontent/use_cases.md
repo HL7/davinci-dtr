@@ -53,7 +53,7 @@ This example shows an overview of how the DTR SMART on FHIR app (or equivalent n
 
 >DTR does not support creating new orders or changing existing orders. DTR supports documentation requirements for device, service, and medication requests. When the required documentation cannot be populated from the EHR, DTR provides the ability to capture the missing information.
 
-### Relation to Clinical Data Exchange (CDex)
+#### Relation to Clinical Data Exchange (CDex)
 
 The [Clinical Data Exchange (CDex)](https://hl7.org/fhir/us/davinci-cdex/index.html) IG specifies the use of DTR to [request attachments using questionnaires](https://hl7.org/fhir/us/davinci-cdex/requesting-attachments-questionnaire.html).
 
