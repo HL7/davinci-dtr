@@ -74,6 +74,8 @@ pages:
     title: Artifacts Summary
   changehistory.md:
     title: Change History
+  downloads.md:
+    title: Downloads
   credits.md:
     title: Credits
 
@@ -86,7 +88,7 @@ menu:
     Overview and Use Cases: use_cases.html
     Technical Background and Underlying Technologies: underlying_technologies.html
     Formal Specification: specification.html       
-    Downloads: index.html#downloads
+    Downloads: downloads.html
     Change History: changehistory.html
     Credits: credits.html
 
