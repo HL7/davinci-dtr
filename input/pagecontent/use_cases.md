@@ -4,7 +4,7 @@
 A Payer is an entity who pays for the service of providers. The majority of payers here are also referred to as health insurance companies.
 
 #### Payer IT System
-The payer IT system SHALL be the primary system responding to DTR queries.
+The payer IT systems (in-house or out-sourced services) are the primary systems responding to DTR queries for questionnaire's CQL and supporting artifacts.
 
 #### Payer Rules
 In this specification, payer rules are [CQL statements](https://cql.hl7.org//) used in a provider context to facilitate meeting documentation requirements.   

@@ -426,4 +426,39 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
   <a href="use_cases.html#crd-and-dtr-workflow">(CRD and DTR Workflow)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-40549">FHIR-40549</a>:
+  Guidance regarding the Endpoint for adaptive form next question
+  <a href="specification__behaviors__sdc_adaptive_forms.html#general-adaptive-form-support">(General Adaptive Form Support)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36470">FHIR-36470</a>:
+  Fix guidance on saving state
+  <a href="specification__behaviors__persisting_application_state.html#persisting-application-state">(Persisting Application State)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36434">FHIR-36434</a>:
+  Revamp endpoint description a bit
+  <a href="specification__behaviors__retrieval_of_payer_resources.html">(Retrieval of Payer Resources)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36369">FHIR-36369</a>:
+  Payer
+  <a href="use_cases.html#payer-it-system">(Payer IT System)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36376">FHIR-36376</a>:
+  Fix wording on SDC
+  <a href="underlying_technologies.html">(Technical Background and Underlying Technologies)</a>
+  </li>
+</ul>
 </div>

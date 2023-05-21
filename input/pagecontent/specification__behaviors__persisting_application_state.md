@@ -1,6 +1,6 @@
 Users of the DTR process are likely to be performing many tasks to support patient care or administration of the provider organization. As such, it should be expected that users may need to halt interaction with the DTR process and resume it at a later time.
 
-The DTR process should anticipate that users may not always be able to complete a full interaction between launching from a CDS Hooks Card to providing a response back to the payer. It is recommended that DTR conformant [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) (or native) applications preserve state automatically as a user interacts with it. In this manner, the user does not need to explicitly take action to save their state.
+The DTR process should not assume that users will be able to fully complete their questionnaire response and save it in a single session. It is recommended that DTR conformant [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) (or native) applications preserve state automatically as a user interacts with it. In this manner, the user does not need to explicitly take action to save their state.
 
 ### How DTR Saves Context of DTR for a Relaunch
 

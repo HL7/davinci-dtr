@@ -53,22 +53,6 @@ Clinical systems SHOULD use the specification and workflows defined by [Coverage
 ### SMART on FHIR
 Client systems conformant to this IG SHALL also serve as a [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) client. This is to allow DTR functionality to be invoked outside of regular EHR clinical workflows using a SMART on FHIR app to provide a consistent way of evaluating payer rules and documentation requirements across EHR implementations. As such client implementers will also need to be familiar with the [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) specification. Payer implementers only need to be familiar with the SMART on FHIR specification if they plan to develop SMART apps for launch by CDS Hooks or other purposes.
 
-### Structured Data Capture
-Clinical systems SHALL use the specification and workflows defined by [Structured Data Capture (SDC)](http://hl7.org/fhir/us/sdc/) to initiate DTR functionality with the payers. Implementers should be familiar with this specification.
-
-[SDC Adaptive forms](http://build.fhir.org/ig/HL7/sdc/adaptive.html) defines an alternative way to dynamically interact with the user. DTR support for adaptive forms would help in the following scenarios:
-
-1) Support for complex decision trees without the need for the Questionnaire and rules (CQL) to cover all of the possibilities. This is enabled by supporting the request for a small number of questions (and the ability to prepopulate the questions from the EHR), returning the results to the Payer to "prune" the decision tree, and repeat the process until complete.
-2) Allowing the payer to only expose the relevant guideline logic for the clinical situation at hand.
-3) Support for complex logic that depends on information available to the payer (e.g. prior services) to be part of the decision logic to evaluate the medical necessity and appropriateness of the planned service.
-4) Enabling the potential for a final response from the payer including prior authorization information as part of the interactive exchange. 
-5) Provide flexibility to EHR venders to adopt DTR. The adaptive form can be used as an alternative to more complex SDC form behavior, e.g., enableWhen.
-6) Supports both payer side prior authorization and the ability to request specific additional information as part of the PAS exchange process
-
-The DTR app SHALL support loading and rendering the adaptive form developed by the payer following the SDC adaptive form workflow. If there is CQL embedded in the questionnaire or the associated library, the DTR app should be able to execute the CQL based on the questions loaded in the questionnaire.
-
-For performance, the DTR application may save the results of prior execution of the CQL where it is the same for addressing the current question(s).
-
 ### Clinical Quality Language
 Payer systems SHALL use the specification and workflows defined by [Clinical Quality Language CQL](https://cql.hl7.org/) to facilitate DTR functionality within clinical systems. Implementers should be familiar with this specification. This specification supports the [current release of CQL](http://cql.hl7.org/N1/), however older versions of CQL, such as STU 2 can be used provided they work with FHIR R4.
 
