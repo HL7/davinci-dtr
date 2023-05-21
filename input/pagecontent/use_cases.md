@@ -31,29 +31,6 @@ The [Coverage Requirements Discovery (CRD)](http://hl7.org/fhir/us/davinci-crd/)
 
 The DTR process is responsible for accessing Questionnaire resources and rules (CQL), then prepopulating the questionnaire with EHR data and finally checking if the available EHR data satisfies requirements, as well as allowing for the manual population of any missing data.
 
-#### CRD and DTR Workflow
-The graphic shows a high-level overview of CRD and DTR (DTR is the SMART on FHIR app or equivalent native EHR app).
-
-Note: This workflow is just one example used to help illustrate the CRD and DTR APIs. It is expected that a supplemental guide will be produced moving forward to 
-help implementers with more concrete examples.
- 
-As an example, a clinician might order, “Home Oxygen Therapy”
-* Arrows 1-4 represent the workflow processing to determine if there are documentation and/or prior authorization requirements (CRD)
-  * The EHR would allow for the ordering of a DME (Durable Medical Equipment) device “Home Oxygen Therapy” (arrow 1).
-  * The EHR would then compose a FHIR based message to be used when calling the CDS Service (CRD) (arrow 2).
-  * CRD then retrieves information from a repository to determine if there are documentation and/or prior authorization requirements for a requested device, service, or medication. The repository API and repository are shown in the Payer box. (repository API arrow and arrow 3).
-  * In this scenario a response is sent back to the EHR/clinician in the form of a CDS card (arrow 4), indicating there are documentation requirements.
-	
-* Arrows 4 and 5 represent the workflow processing to populate the template/questionnaire (DTR)   
-  * In the CDS Hooks card, there may be a link that allows the clinician to launch the DTR SMART on FHIR app (or equivalent native EHR app) shown in the DTR Process area.
-  * DTR will retrieve the appropriate Questionnaire(s) and rule(s) from the repository via a repository API.
-  * The clinician would click the SMART app/DTR (or equivalent native EHR app) link which pre-populates a FHIR based Questionnaire with data from the EHR.
-  * In the event information is known to be available but does not currently exist in the EHR, the clinician could attest the data in question exists.
-  * The clinician populates the fields that were not populated with data from the EHR. When the documentation is complete (or partially complete) the clinician would save the QuestionnaireResponse. DTR writes the FHIR based QuestionnaireResponse to the EHR. At this point the QuestionnaireResponse could also be sent to any ancillary service.
-  * In the event the QuestionnaireResponse was incomplete, a Task could be created to allow for the QuestionnaireResponse to be completed at a later time. The QuestionnaireResponse itself could also be used to relaunch an incomplete session.
-
-![CRD DTR Flow](CRD_DTR_Flow.png){:style="float: none;"}
-
 #### Home Oxygen Therapy Ordering - DTR Workflow Details
 This example shows an overview of how the DTR SMART on FHIR app (or equivalent native EHR app) fits into a workflow when ordering Home Oxygen Therapy. 
    
@@ -79,3 +56,26 @@ This example shows an overview of how the DTR SMART on FHIR app (or equivalent n
 ### Relation to Clinical Data Exchange (CDex)
 
 The [Clinical Data Exchange (CDex)](https://hl7.org/fhir/us/davinci-cdex/index.html) IG specifies the use of DTR to [request attachments using questionnaires](https://hl7.org/fhir/us/davinci-cdex/requesting-attachments-questionnaire.html).
+
+#### CRD and DTR Workflow
+The graphic shows a high-level overview of CRD and DTR (DTR is the SMART on FHIR app or equivalent native EHR app).
+
+Note: This workflow is just one example used to help illustrate the CRD and DTR APIs. It is expected that a supplemental guide will be produced moving forward to 
+help implementers with more concrete examples.
+ 
+As an example, a clinician might order, “Home Oxygen Therapy”
+* Arrows 1-4 represent the workflow processing to determine if there are documentation and/or prior authorization requirements (CRD)
+  * The EHR would allow for the ordering of a DME (Durable Medical Equipment) device “Home Oxygen Therapy” (arrow 1).
+  * The EHR would then compose a FHIR based message to be used when calling the CDS Service (CRD) (arrow 2).
+  * CRD then retrieves information from a repository to determine if there are documentation and/or prior authorization requirements for a requested device, service, or medication. The repository API and repository are shown in the Payer box. (repository API arrow and arrow 3).
+  * In this scenario a response is sent back to the EHR/clinician in the form of a CDS card (arrow 4), indicating there are documentation requirements.
+	
+* Arrows 4 and 5 represent the workflow processing to populate the template/questionnaire (DTR)   
+  * In the CDS Hooks card, there may be a link that allows the clinician to launch the DTR SMART on FHIR app (or equivalent native EHR app) shown in the DTR Process area.
+  * DTR will retrieve the appropriate Questionnaire(s) and rule(s) from the repository via a repository API.
+  * The clinician would click the SMART app/DTR (or equivalent native EHR app) link which pre-populates a FHIR based Questionnaire with data from the EHR.
+  * In the event information is known to be available but does not currently exist in the EHR, the clinician could attest the data in question exists.
+  * The clinician populates the fields that were not populated with data from the EHR. When the documentation is complete (or partially complete) the clinician would save the QuestionnaireResponse. DTR writes the FHIR based QuestionnaireResponse to the EHR. At this point the QuestionnaireResponse could also be sent to any ancillary service.
+  * In the event the QuestionnaireResponse was incomplete, a Task could be created to allow for the QuestionnaireResponse to be completed at a later time. The QuestionnaireResponse itself could also be used to relaunch an incomplete session.
+
+![CRD DTR Flow](CRD_DTR_Flow.png){:style="float: none;"}
