@@ -32,7 +32,9 @@ Although not detailed in this IG, it may be possible to achieve the same level o
 
 Provenance SHOULD be created and persisted with information created during the execution of the CQL and Questionnaire. Also, when the QuestionnaireResponse and its associated resources are exchanged with the source of the rules, appropriate Provenance resource(s) SHOULD be created and exchanged.
 
-> CQL and FHIR Questionnaires SHALL be required. For example, CQL and FHIR Questionnaires SHALL be required even when DTR is implemented within a native EHR application as opposed to a SMART on FHIR application.
+> All DTR applications SHALL support rendering according to the extensions supported in the DTR Questionnaire profile as well as executing all CQL found within Questionnaire extensions. Payers SHALL craft their Questionnaires such that they include CQL that attempts to pre-populate QuestionnaireResponse answers where such population can be accomplished using discrete data returned by EHR FHIR APIs that are required as part of current regulation (including simple calculations there-on - e.g. age from birthdate). Translation between standard codes SHOULD be supported where possible. 
+> 
+> For example, CQL and FHIR Questionnaires SHALL be required even when DTR is implemented within a native EHR application as opposed to a SMART on FHIR application.
 
 ### Content and Organization
 The IG is organized into the following sections:

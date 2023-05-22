@@ -24,8 +24,6 @@ If neither is present, the user should be prompted to select a DocumentReference
 
 Remove the `endpoint` extension from the coverage resource. The app should always know the payer URL since it will have been registered with the payer prior to being able to access that particular payer. The app should register this information out-of-band beforehand with relevant payers.  
 
-The request resource created during the CRD workflow should be saved to the EHR FHIR server for retrieval by the DTR process, if possible. This might, for example, be the ServiceRequest resource that is sent in the CDS hook to the CRD server. Additionally, a tight integration between the CRD service and the DTR process should enable the DTR process to access FHIR resources received by the CRD service that are not available from the EHR's FHIR server.
-
 This IG will support the [HRex Decision point - REST searchable?](http://build.fhir.org/ig/HL7/davinci-ehrx/exchanging.html#rest-searchable) when using RESTful endpoints to get payer resources (e.g., CQL rules and templates).
 
 ### Authentication of SMART on FHIR application to payer API

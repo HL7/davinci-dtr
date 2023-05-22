@@ -406,6 +406,9 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
   </li>
 </ul>
 <ul> 
+  <li> ... </li>
+</ul>
+<ul> 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36365">FHIR-36365</a>:
   Downloads should be a separate page
@@ -459,6 +462,36 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
   <a href="https://jira.hl7.org/browse/FHIR-36376">FHIR-36376</a>:
   Fix wording on SDC
   <a href="underlying_technologies.html">(Technical Background and Underlying Technologies)</a>
+  </li>
+</ul>
+
+
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36374">FHIR-36374</a>:
+  Should be no conformance rules around CDS Hooks or CRD
+  <a href="underlying_technologies.html">(Technical Background and Underlying Technologies)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36377">FHIR-36377</a>:
+  Clarify language on CQL
+  <a href="underlying_technologies.html">(Technical Background and Underlying Technologies)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36435">FHIR-36435</a>:
+  Remove CRD paragraph
+  <a href="specification__behaviors__retrieval_of_payer_resources.html#retrieval-of-payer-resources">(Retrieval of Payer Resources)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36362">FHIR-36362</a>:
+  "CQL and FHIR Questionnaires SHALL be required" is unclear
+  <a href="index.html#boundaries-and-relationships">(Boundaries and Relationships)</a>
   </li>
 </ul>
 </div>

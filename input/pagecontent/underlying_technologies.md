@@ -44,17 +44,8 @@ Implementers should also familiarize themselves with the FHIR resources used wit
 ### US Core
 Clinical systems SHALL use the specification defined by [US Core](http://hl7.org/fhir/us/core/STU3.1.1/) in exchanging information with payers. Implementers should be familiar with this specification.
 
-### Clinical Decision Support Hooks
-Clinical systems and payer systems SHALL use the specification and workflows defined by [Clinical Decision Support (CDS) Hooks](https://cds-hooks.hl7.org) to initiate [CRD](http://hl7.org/fhir/us/davinci-crd/). Implementers should be familiar with this specification.
-
-### Coverage Requirements Discovery
-Clinical systems SHOULD use the specification and workflows defined by [Coverage Requirements Discovery (CRD)](http://hl7.org/fhir/us/davinci-crd/) to initiate DTR functionality with payers, where it is appropriate. Implementers should be familiar with this specification.
-
 ### SMART on FHIR
 Client systems conformant to this IG SHALL also serve as a [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) client. This is to allow DTR functionality to be invoked outside of regular EHR clinical workflows using a SMART on FHIR app to provide a consistent way of evaluating payer rules and documentation requirements across EHR implementations. As such client implementers will also need to be familiar with the [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) specification. Payer implementers only need to be familiar with the SMART on FHIR specification if they plan to develop SMART apps for launch by CDS Hooks or other purposes.
-
-### Clinical Quality Language
-Payer systems SHALL use the specification and workflows defined by [Clinical Quality Language CQL](https://cql.hl7.org/) to facilitate DTR functionality within clinical systems. Implementers should be familiar with this specification. This specification supports the [current release of CQL](http://cql.hl7.org/N1/), however older versions of CQL, such as STU 2 can be used provided they work with FHIR R4.
 
 ### Must Support
 This IG does NOT mark any additional elements with the [Must Support](http://hl7.org/fhir/R4/profiling.html#mustsupport) flag in its own profiles. However, note that this guide does profile on top of US Core profiles where Must Support has been defined on certain elements (i.e. [DTR Document Reference](https://build.fhir.org/ig/HL7/davinci-dtr/StructureDefinition-dtr-documentreference-r4.html) profiles [USCoreDocumentReferenceProfile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-documentreference.html)). The FHIR specification makes it clear that when profiling another profile, a MustSupport flag can be constrained further (i.e., taken from 'false' to 'true') but cannot be loosened (i.e., changed from 'true' to 'false').  See [US Core Must Support Guidance](https://hl7.org/fhir/us/core/STU3.1.1/general-guidance.html#must-support).
