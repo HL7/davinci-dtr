@@ -491,9 +491,6 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
   <a href="index.html#boundaries-and-relationships">(Boundaries and Relationships)</a>
   </li>
 </ul>
-
-
-
 <ul> 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-39504">FHIR-39504</a>:
@@ -527,5 +524,35 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
   <a href="https://jira.hl7.org/browse/FHIR-36386">FHIR-36386</a>:
   DTR to payer security doesn't belong in CRD links section
   <a href="changehistory.html">(CDS Hooks)</a>
+  </li>
+</ul>
+
+
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-38837">FHIR-38837</a>:
+  Specific issues related to sensitive or patient restricted information
+  <a href="specification__behaviors__requesting_additional_information_from_the_user.html#provider-attestation">(Provider Attestation)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36138">FHIR-36138</a>:
+  Clarify what information is in scope for FHIR CQL support
+  <a href="specification__cql.html">(CQL)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36430">FHIR-36430</a>:
+  Clarify expectations on missing context
+  <a href="specification__behaviors__retrieval_of_payer_resources.html#retrieval-of-payer-resources">(Retrieval of Payer Resources)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36300">FHIR-36300</a>:
+  Who is responsible for provision of the token
+  <a href="specification__behaviors__execution_of_CQL.html#retrieval-of-patient-fhir-resources-to-supply-to-cql-execution-engine">(Retrieval of patient FHIR resources to supply to CQL execution engine)</a>
   </li>
 </ul>

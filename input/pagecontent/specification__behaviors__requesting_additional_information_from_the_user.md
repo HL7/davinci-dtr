@@ -31,7 +31,7 @@ When a user provides an attestation, the DTR process SHALL record that in the co
 
 If an answer is attested, the user should provide evidence that the attested value exists in the patient’s record by including an attachment or the equivalent with the QuestionnaireResponse.
 
->If information is privacy restricted, the information SHOULD be treated as if it does not exist. The provider SHOULD ask the patient if they want to share the information with the payer.
+>Compliant questionnaires SHALL NOT include hidden or read-only questions unless the information is populated by the payer or their out-sourced service.  If information is privacy restricted, the information SHOULD be treated as if it does not exist. The provider SHOULD ask the patient if they want to share the information with the payer.
 
 ### Recording Responses
 The DTR process SHALL take input from the user and record the provided information. As with provider attestation, the DTR process SHALL record that in the corresponding QuestionnaireResponse.item. In this case, the DTR process SHALL create an `answer` property on the `item`. The `answer` SHALL have an appropriate `value[x]` depending on the corresponding `type` in the `Questionnaire.item`. Again, similar to attestations, the `item` will have an `author` extension property which will reference the `fhirUser` provided to the DTR process.

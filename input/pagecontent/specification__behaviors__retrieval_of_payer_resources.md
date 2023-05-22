@@ -18,9 +18,14 @@ When launched without the context of a CDS Hook, but within context from an EHR,
 
 If the QuestionnaireResponse is not present, but the order is, the QuestionnaireResponse can be searched for using the order. Alternatively, the QuestionnaireResponse can be replaced by a DocumentReference on the payer server.  
 
-If the order is not present, then it can be retrieved from the QuestionnaireResponse or DocumentReference.  
+If the order is not present, then it can be retrieved from the QuestionnaireResponse.
 
-If neither is present, the user should be prompted to select a DocumentReference or QuestionnaireResponse based on the patient that is in context.
+If neither is present, the user should be prompted to select a QuestionnaireResponse based on the patient that is in context.
+
+>A DTR app is allowed to throw an error if not launched within one and only one of the following contexts:
+>1. QuestionnaireResponse
+>2. Task
+>3. Order
 
 Remove the `endpoint` extension from the coverage resource. The app should always know the payer URL since it will have been registered with the payer prior to being able to access that particular payer. The app should register this information out-of-band beforehand with relevant payers.  
 

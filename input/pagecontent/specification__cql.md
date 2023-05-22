@@ -4,6 +4,8 @@ Payers should construct CQL to gather information needed and test expected condi
 
 One of the core purposes of this specification is to automate the retrieval of documentation required by the payer in a manner that reduces provider burden. Authors of DTR questionnaires SHOULD include CQL to auto-populate the questionnaire as much as possible. Due to differences in workflows or information systems, clinical information may be represented in different FHIR resources or with different codes or code systems. Therefore, payer CQL may have to examine different resources or use value sets to find patient information. It is preferable to have more extensive CQL or value sets than require a user to input values that the rules were unable to find.
 
+In general CQL SHALL be used when pre-populating anything exposed in the FHIR based patient data access API (The 21st Century Cures Act API).
+
 ### Guidance on Structure of CQL Logic
 Like many other programming languages, CQL allows for statements to be nested within conditional logic. This creates instances where some statements may not be executed due to a prior condition being met. This behavior should be used intentionally by payers creating CQL.
 
