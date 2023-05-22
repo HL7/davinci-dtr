@@ -554,9 +554,6 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
   <a href="specification__behaviors__execution_of_CQL.html#retrieval-of-patient-fhir-resources-to-supply-to-cql-execution-engine">(Retrieval of patient FHIR resources to supply to CQL execution engine)</a>
   </li>
 </ul>
-
-
-
 <ul> 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36482">FHIR-36482</a>:
@@ -576,5 +573,21 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
   <a href="https://jira.hl7.org/browse/FHIR-36479">FHIR-36479</a>:
   Provide proper details on authentication
   <a href="specification__behaviors__persisting_application_state.html#how-dtr-saves-context-of-dtr-for-a-relaunch">(How DTR Saves Context of DTR for a Relaunch)</a>
+  </li>
+</ul>
+
+
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36392">FHIR-36392</a>:
+  Guidance on CQL isn't quite right
+  <a href="specification__cql.html#cql">(CQL)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36379">FHIR-36379</a>:
+  Spec *MUST* use mustSupport in its profiles
+  <a href="underlying_technologies.html#must-support">(Must Support)</a>
   </li>
 </ul>
