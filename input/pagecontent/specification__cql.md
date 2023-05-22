@@ -31,6 +31,6 @@ DTR makes use of the identifier names within the CQL. The DTR process will exami
 >The resulting value is used to satisfy documentation requirements. If the value is `null`, the user will be prompted to supply a value
 
 ### CQL Constraints
-CQL for use in DTR SHALL have a `context` of `Patient`.
+CQL for use in DTR SHALL have a `context` of `Patient`.  Within the Questionnaire, CQL SHALL follow SDC rules for determining context.  Specifically, CQL definitions and variables defined on ancestor elements or preceding expression extensions within the same Questionnaire item are 'in scope' for referencing in descendant/following expressions.
 
 CQL must be version [CQL STU2](https://cql.hl7.org/STU2/index.html) or later.

@@ -1,5 +1,4 @@
 
-<div class="stu-note">
 <br/>
 <p>This ballot addresses several additions, modifications, technical corrections, errata, and clarifications listed below. They have been reviewed
 and voted on by the members of the <a href="http://www.hl7.org/Special/committees/dss/">HL7 Clinical Decision Support WorkGroup</a>, which is sponsoring this ballot release and reconciliation of the comments.</p>
@@ -464,8 +463,6 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
   <a href="underlying_technologies.html">(Technical Background and Underlying Technologies)</a>
   </li>
 </ul>
-
-
 <ul> 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36374">FHIR-36374</a>:
@@ -494,4 +491,41 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
   <a href="index.html#boundaries-and-relationships">(Boundaries and Relationships)</a>
   </li>
 </ul>
-</div>
+
+
+
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-39504">FHIR-39504</a>:
+  Add guidance on endpoint discovery/configuration
+  <a href="use_cases.html#use-cases-and-overview">(Use Cases and Overview)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36539">FHIR-36539</a>:
+  DTR QuestionnaireResponse should be based on SDC
+  <a href="StructureDefinition-dtr-questionnaireresponse-r4.html">(Resource Profile: DTR Questionnaire Response R4)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36395">FHIR-36395</a>:
+  Context needs to talk about hierarchy of expression too.
+  <a href="specification__cql.html#cql-constraints">(CQL Constraints)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36380">FHIR-36380</a>:
+  Why is change history wrapped in an STU note?
+  <a href="specification__cql.html#cql-constraints">(Change History)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36386">FHIR-36386</a>:
+  DTR to payer security doesn't belong in CRD links section
+  <a href="changehistory.html">(CDS Hooks)</a>
+  </li>
+</ul>
