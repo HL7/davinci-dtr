@@ -19,7 +19,7 @@ The EHR is responsible for storing and updating the QuestionnaireResponse, as we
 
 The contents of the extension can be sent to the payer server using the [questionnaire-for-order operation](http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/Questionnaire-for-Order).  The payer server SHALL return a Questionnaire upon receiving a valid coverage and order.
 
-For EHRs that cannot support this protocol, the data will be stored on the payer server in a DocumentReference resource. Data stored in this way SHALL only be available for supporting the DTR workflow. Additionally, the DocumentReference may only be accessed by the app which created them. Smart apps and payer systems should be registered such that the payer system can establish identity of the smart app prior to granting access to the DocumentReference. When registering, the DTR app should be given a shared client secret and a public key, which can be used to prove its identity.
+If the app is a SMART app (and not a native application) that it SHALL use SMART backend authentication and will also provide a link to the SMART backend authentication process which provides the full protocol and details. 
 
 The following information should be contained inside the DocumentReference: 
 
@@ -37,7 +37,7 @@ The PDF may also include prior authorization information, if appropriate. Inform
 
 When launched with context of the organization, patient, and user, the app should display a list of open or “in-progress” QuestionnaireResponses or DocumentReferences for the user to select from, scoped to the patient that is in context. The DTR app should check both the EHR and the payer server for stored sessions.  The QuestionnaireResponses on the EHR and the DocumentReferences on the payer server have reference to the order which they are linked to, which can be used to search for the correct resource.  
 
-When launched in standalone mode, the app should provide the user the option to select which payer and patient they would like to search for open sessions against.   
+When launched in standalone mode, the app should include the `launch/patient` scope to indicate that the EHR needs to provide patient context. The app can use the returned patient to search for relevant unfinished sessions. 
 
 Since a patient won’t be in context, the app will need to provide a selection of patients that the user can choose from. But this would be from the EHR, currently. Another option would be to let the user select which payer they want and then select a patient from the saved DocumentReferences.
  

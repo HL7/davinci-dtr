@@ -526,8 +526,6 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
   <a href="changehistory.html">(CDS Hooks)</a>
   </li>
 </ul>
-
-
 <ul> 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-38837">FHIR-38837</a>:
@@ -554,5 +552,29 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
   <a href="https://jira.hl7.org/browse/FHIR-36300">FHIR-36300</a>:
   Who is responsible for provision of the token
   <a href="specification__behaviors__execution_of_CQL.html#retrieval-of-patient-fhir-resources-to-supply-to-cql-execution-engine">(Retrieval of patient FHIR resources to supply to CQL execution engine)</a>
+  </li>
+</ul>
+
+
+
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36482">FHIR-36482</a>:
+  Patient must always be in context
+  <a href="specification__behaviors__persisting_application_state.html#how-dtr-saves-context-of-dtr-for-a-relaunch">(ow DTR Saves Context of DTR for a Relaunch)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-21006">FHIR-21006</a>:
+  DTR should point to SDC, not CQIF Questionnaire
+  <a href="artifacts.html#structures-resource-profiles">(Structures: Resource Profiles)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36479">FHIR-36479</a>:
+  Provide proper details on authentication
+  <a href="specification__behaviors__persisting_application_state.html#how-dtr-saves-context-of-dtr-for-a-relaunch">(How DTR Saves Context of DTR for a Relaunch)</a>
   </li>
 </ul>
