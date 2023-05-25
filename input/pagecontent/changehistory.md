@@ -1,4 +1,3 @@
-
 <br/>
 <p>This ballot addresses several additions, modifications, technical corrections, errata, and clarifications listed below. They have been reviewed
 and voted on by the members of the <a href="http://www.hl7.org/Special/committees/dss/">HL7 Clinical Decision Support WorkGroup</a>, which is sponsoring this ballot release and reconciliation of the comments.</p>
@@ -336,13 +335,6 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
 </ul>
 <ul> 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-36390">FHIR-36390</a>:
-  Launch instructions need correction/clarification
-  <a href="specification__cds_hooks.html#establish-patient-context">(Establish Patient Conext)</a>
-  </li>
-</ul>
-<ul> 
-  <li>
   <a href="https://jira.hl7.org/browse/FHIR-36276">FHIR-36276</a>:
   Security review of SDC Adaptive Forms in DTR
   <a href="specification__behaviors__sdc_adaptive_forms.html">(SDC Adaptive Forms)</a>
@@ -405,8 +397,32 @@ and voted on by the members of the <a href="http://www.hl7.org/Special/committee
   </li>
 </ul>
 <ul> 
-  <li> ... </li>
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-40438">FHIR-40438</a>:
+  Section on DTR use of US Core has link which points to general US Core page instead of 3.1.1
+  <a href="underlying_technologies.html#us-core">(SMART on FHIR)</a>
+  </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-24581">FHIR-24581</a>:
+  Identify the subject extension. - DTR #15
+  <a href="specification__behaviors__requesting_additional_information_from_the_user.html#structured-data-capture">(Structured Data Capture)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36151">FHIR-36151</a>:
+  Again, DTR <-> Payer should use SMART backend services
+  <a href="specification__behaviors__persisting_application_state.html#how-dtr-saves-context-of-dtr-for-a-relaunch">(How DTR Saves Context of DTR for a Relaunch)</a>
+  </li>
+</ul>
+
+<ul> 
+  <li> ............ </li>
+</ul>
+
+
 <ul> 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36365">FHIR-36365</a>:
