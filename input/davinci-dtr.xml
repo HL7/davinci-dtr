@@ -119,120 +119,25 @@
         <generation value="markdown"/>
       </page>
       <page>
-        <nameUrl value="specification.html"/>
-        <title value="Specification"/>
+        <nameUrl value="formal_specification.html"/>
+        <title value="Formal Specification"/>
         <generation value="markdown"/>
-        <page>
-          <nameUrl value="specification__profiles.html"/>
-          <title value="Profiles"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="specification__cds_hooks.html"/>
-          <title value="CDS Hooks"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="specification__cql.html"/>
-          <title value="CQL"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="specification__behaviors.html"/>
-          <title value="Expectations of Application Behavior"/>
-          <generation value="markdown"/>
-          <page>
-            <nameUrl value="specification__behaviors__retrieval_of_payer_resources.html"/>
-            <title value="Retrieval of Payer Resources"/>
-            <generation value="markdown"/>
-          </page>
-          <page>
-            <nameUrl value="specification__behaviors__execution_of_CQL.html"/>
-            <title value="Execution of CQL"/>
-            <generation value="markdown"/>
-          </page>
-          <page>
-            <nameUrl value="specification__behaviors__questionnaire_evaluation.html"/>
-            <title value="Questionnaire Evaluation"/>
-            <generation value="markdown"/>
-          </page>
-          <page>
-            <nameUrl value="specification__behaviors__requesting_additional_information_from_the_user.html"/>
-            <title value="Requesting Additional Information from the User"/>
-            <generation value="markdown"/>
-          </page>
-          <page>
-            <nameUrl value="specification__behaviors__persisting_application_state.html"/>
-            <title value="Persisting Application State"/>
-            <generation value="markdown"/>
-          </page>
-          <page>
-            <nameUrl value="specification__behaviors__persisting_results.html"/>
-            <title value="Persisting Results"/>
-            <generation value="markdown"/>
-          </page>
-          <page>
-            <nameUrl value="specification__behaviors__passing_information_other_exchanges.html"/>
-            <title value="How DTR passes information to PAS, PAO or other exchange IG"/>
-            <generation value="markdown"/>
-          </page>
-          <page>
-            <nameUrl value="specification__behaviors__task_creation.html"/>
-            <title value="Task Creation"/>
-            <generation value="markdown"/>
-          </page>
-          <page>
-            <nameUrl value="specification__behaviors__launch_outside_of_CRD.html"/>
-            <title value="Launch outside of CRD"/>
-            <generation value="markdown"/>
-          </page>
-          <page>
-            <nameUrl value="specification_value_set_code_system_guidance.html"/>
-            <title value="Value Set and Code System Guidance"/>
-            <generation value="markdown"/>
-          </page>
-          <page>
-            <nameUrl value="specification__behaviors__best_practices.html"/>
-            <title value="Best Practices"/>
-            <generation value="markdown"/>
-          </page>
-          <page>
-            <nameUrl value="specification__behaviors__sdc_adaptive_forms.html"/>
-            <title value="SDC Adaptive Forms"/>
-            <generation value="markdown"/>
-          </page>
-          <page>
-            <nameUrl value="specification__behaviors__privacy_safety_and_security.html"/>
-            <title value="Privacy, Safety and Security"/>
-            <generation value="markdown"/>
-          </page>
-        </page>
+	  </page>
+	  <page>
+		<nameUrl value="specification__privacy_safety_and_security.html"/>
+		<title value="Privacy, Safety and Security"/>
+	    <generation value="markdown"/>
+	  </page>
+      <page>
+        <nameUrl value="specification__cds_hooks.html"/>
+        <title value="CDS Hooks"/>
+        <generation value="markdown"/>
       </page>
       <page>
-        <nameUrl value="resources.html"/>
-        <title value="Resources"/>
-        <generation value="markdown"/>
-        <page>
-          <nameUrl value="StructureDefinition-dtr-questionnaire-r4.html"/>
-          <title value="DTR Questionnaire Profile R4"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="StructureDefinition-dtr-questionnaireresponse-r4.html"/>
-          <title value="DTR QuestionnaireResponse Profile R4"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="StructureDefinition-dtr-task-r4.html"/>
-          <title value="DTR Task Profile R4"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="resources__home-o2-prepopulation.html"/>
-          <title value="Home Oxygen Therapy Questionnaire Prepopulation CQL"/>
-          <generation value="markdown"/>
-        </page>
-      </page>
+		<nameUrl value="specification__best_practices.html"/>
+		<title value="Best Practices"/>
+		<generation value="markdown"/>
+	  </page>
       <page>
         <nameUrl value="examples.html"/>
         <title value="Examples"/>
