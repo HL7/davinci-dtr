@@ -562,3 +562,10 @@
   <a href="index.html">(Home Page)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36465">FHIR-36465</a>:
+  DTR is repeating guidance better covered in SDC
+  <a href="formal_specification.html#questionnaire-rendering">(Questionnaire Rendering)</a>
+  </li>
+</ul>
