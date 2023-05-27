@@ -52,7 +52,7 @@ pages:
     title: Credits
 
 menu:
-  IG Home: index.html
+  Home: index.html
 
   Table of Contents: toc.html
 
