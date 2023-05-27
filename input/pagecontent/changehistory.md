@@ -131,6 +131,7 @@
   <a href="https://jira.hl7.org/browse/FHIR-36530">FHIR-36530</a>:
   refine verbiage 
   <a href="formal_specification.html">(Formal Specification)</a>
+  </li>
 </ul>
 <ul> 
   <li>
@@ -299,12 +300,6 @@
   Need to clarify pruning expectations
   <a href="formal_specification.html">(Formal Specification)</a>
   </li>
-</ul>
-<ul> 
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-36276">FHIR-36276</a>:
-  Security review of SDC Adaptive Forms in DTR
-  <a href="formal_specification.html">(Formal Specification)</a>
 </ul>
 <ul> 
   <li>
