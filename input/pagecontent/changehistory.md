@@ -560,3 +560,10 @@
   <a href="formal_specification.html#questionnaire">(Formal Specification)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36364">FHIR-36364</a>:
+  Home page should appear on the menu
+  <a href="index.html">(Home Page)</a>
+  </li>
+</ul>
