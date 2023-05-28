@@ -604,3 +604,31 @@
   <a href="index.html">(Home)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-40421">FHIR-40421</a>:
+  Guidance on this page needs to be rewritten
+  <a href="formal_specification.html#how-dtr-passes-information-to-pas-pao-or-other-exchanges">(How DTR passes information to PAS, PAO or Other Exchanges)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36450">FHIR-36450</a>:
+  Goal is overstated and user input always required
+  <a href="formal_specification.html#requesting-additional-information-from-the-user">(Requesting Additional Information from the User)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36349">FHIR-36349</a>:
+  Split menu into background and spec
+  <a href="index.html">(Home)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36149">FHIR-36149</a>:
+  appContext should be a black box to EHR, use SMART launch param's instead
+  <a href="formal_specification.html#how-dtr-saves-context-of-dtr-for-a-relaunch">(How DTR Saves Context of DTR for a Relaunch)</a>
+  </li>
+</ul>

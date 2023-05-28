@@ -207,7 +207,7 @@ If the DTR app receives a QuestionnaireResponse resource in the app context, it 
 
 The EHR should be able to associate orders with the QuestionnaireResponses they pertain to by linking their FHIR IDs internally. This means that even if the ID of an order changes, the EHR should be capable of updating the QuestionnaireResponse to reference the new ID. This way, even if DTR receives the updated orders, it will still be able to search the EHR for the associated QuestionnaireResponse.  
 
-The EHR is responsible for storing and updating the QuestionnaireResponse, as well as providing the user a way to choose sessions to relaunch. Additionally, the app context may need to be altered by the EHR to include relevant QuestionnaireResponses.  
+The EHR is responsible for storing and updating the QuestionnaireResponse, as well as providing the user a way to choose sessions to relaunch. Additionally, the EHR SHOULD pass the QR as a [SMART launch parameter](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#app-launch-scopes-and-launch-context)
 
 The contents of the extension can be sent to the payer server using the [questionnaire-for-order operation](http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/Questionnaire-for-Order).  The payer server SHALL return a Questionnaire upon receiving a valid coverage and order.
 
@@ -298,7 +298,7 @@ Note: Other IGs might provide additional mechanisms for transmitting results of 
 ### How DTR passes information to PAS, PAO or Other Exchanges
 The DTR application shall save the QuestionnaireResponse to the EHR upon completion (see section [Persisting Results](formal_specification.html#persisting-results)). The next step after completing the Questionnaire may include sending a Claim to a PAS [(Prior Auth Support)](http://build.fhir.org/ig/HL7/davinci-pas/) server for or an Order to PAO [(Post-Acute Orders)](http://build.fhir.org/ig/HL7/dme-orders/) for ordering. Specifications on required resources can be found in the Implementation Guides for each of those use cases.  
  
-The QuestionnaireResponse may include groups (items with specific linkIds) that contain references to resources to include. These may be attachments needed by either PAS or PAO. 
+The QuestionnaireResponse may include groups (items with specific linkIds) that contain references to resources to include. These may be attachments needed by either PAS or PAO. Also  subject, author, and source will be included.
  
 #### Prior Authorization Support (PAS) 
 The PAS Bundle linkId should be used for attached bundles containing resources needed for PAS. All of the referenced resources needed for PAS shall be stored as contained resources within the QuestionnaireResponse for easier reference. These resources should include the resources collected by DTR to complete the QuestionnaireResponse, as well as the Claim sent to PAS. If the ClaimResponse has already been received from a PAS request, this shall be stored in the QuestionnaireResponse with a reference to it in the items list as well. 
@@ -450,20 +450,20 @@ The flow of execution of the CQL will be determined by the associated Questionna
 
 ---------------------
 ### Requesting Additional Information from the User
-While the goal of DTR is to automatically gather all of the necessary information to satisfy payer rules and documentation requirements without interrupting the user, this is not possible in all cases. When the execution of Clinical Quality Language (CQL) is unable to obtain the required data, it is necessary to prompt the user for more input.
+While the goal of DTR is to automatically gather all of the necessary information to satisfy payer rules and documentation requirements without interrupting the user, this is not possible in all cases. 
+
+It is likely that at least some answers will not be able to be gleaned from the EHR, due to missing data, data that is not computable, or data that is not represented in a standardized way.  Also, even where answers are determined automatically, users may wish to review them for accuracy and completeness.  Therefore, the system acting as a form filler is responsible for displaying all 'enabled' questions, groups and display items to the end user - for completion and/or review
+
+When the execution of Clinical Quality Language (CQL) is unable to obtain the required data, it is necessary to prompt the user for more input.
 
 #### Questionnaire Rendering
-SDC (and the base Questionnaire spec) set the rules for things like items being in the same order and hierarchical nesting, linkIds matching, dealing with groups vs. questions vs. display items, handling repeating questions and groups, etc.  We shouldn't be repeating any of that guidance in DTR.  Instead, point to the specification (or portions there-of) where it's already well-defined.  As it is, we're doing things like talking about enableWhen, but not talking about enableWhenExpression (which is mustSupport).  We say that DTR doesn't set expectations around whether questions are displayed one at a time or all at once - but we have mustSupport on the 'entryMode' extension, which does exactly that.
-
-My recommendation is to replace this whole page with the following:
-
 "DTR leverages a subset of extensions and capabilities defined by the SDC implementation guide to support control over rendering, flow logic, and population and calculation of answers.  The [DTR SDC Questionnaire profile](StructureDefinition-dtr-sdc-questionnaire.html) and [DTR Adaptive Questionnaire profile](StructureDefinition-dtr-sdc-questionnaire-adapt.html) identify the set of core elements and extensions that must be supported by 'full' EHRs and DTR solutions in terms of rendering and processing Questionnaires and their associated responses - and the elements that payers can count on being supported in the Questionnaires they expose.
 
 Two different profiles are used to support two different approaches to managing questionnaire logic and two different levels of engagement between the form filling interface and the payer.
 
-With the [DTR SDC Questionnaire], all logic around what questions should be displayed, what answers are available, etc. is embedded in the Questionnaire (or in libraries linked to from the Questionnaire).  The only interaction with the payer is to retrieve the Questionnaire appropriate for a particular order or set of orders for a given set of patient coverage.  The only possible result from the DTR process is a completed QuestionnaireResponse.
+With the [DTR SDC Questionnaire](StructureDefinition-dtr-sdc-questionnaire.html), all logic around what questions should be displayed, what answers are available, etc. is embedded in the Questionnaire (or in libraries linked to from the Questionnaire).  The only interaction with the payer is to retrieve the Questionnaire appropriate for a particular order or set of orders for a given set of patient coverage.  The only possible result from the DTR process is a completed QuestionnaireResponse.
 
-With the [DTR Adaptive Questionnaire](StructureDefinition-dtr-sdc-questionnaire-adapt.html), the logic around what questions should be displayed and what answers are available is managed within software maintained by the payer.  The only CQL needed in the Questionnaire is that needed to support populating question answers.  The form filling process interacts with the payer continuously during the process of filling out the QuestionnaireResponse.  This interactivity means that it is possible for a payer to provide an unsolicited prior authorization along with the QuestionnaireResponse.
+With the [DTR Adaptive Questionnaire](StructureDefinition-dtr-sdc-questionnaire-adapt.html), the logic around what questions should be displayed and what answers are available is managed within software maintained by the payer.  The only CQL needed in the Questionnaire is that needed to support populating question answers.  The form filling process interacts with the payer continuously during the process of filling out the QuestionnaireResponse.  This interactivity means that it is possible for a payer to provide a Service Coverage Determination along with the QuestionnaireResponse.
 
 Implementers should review the [advanced rendering]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/rendering.html), [advanced behavior]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/behavior.html), [population]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/populate.html) and [adaptive forms]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/adaptive.html) portions of the SDC implementation guide, focusing on the elements and extensions included in the DTR profiles.  Implementers should also be familiar with the documentation about the [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html) and [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) resources from the core FHIR specification.  Conformance with DTR requires conformance with the relevant portions of the SDC implementation guide"
 
