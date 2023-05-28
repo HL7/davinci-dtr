@@ -620,6 +620,13 @@
 </ul>
 <ul> 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36476">FHIR-36476</a>:
+  Refactor relaunch documentation
+  <a href="formal_specification.html#retrieval-of-payer-resources-and-smart-launch">(Retrieval of payer resources and SMART Launch)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-36349">FHIR-36349</a>:
   Split menu into background and spec
   <a href="index.html">(Home)</a>
@@ -644,5 +651,12 @@
   <a href="https://jira.hl7.org/browse/FHIR-36517">FHIR-36517</a>:
   Clarification on Tasks
   <a href="formal_specification.html">(Formal Specification)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36531">FHIR-36531</a>:
+  Change SHOULD to SHALL and delete the MAY sentence that follows
+  <a href="formal_specification.html#execution-of-cql">(Execution of CQL)</a>
   </li>
 </ul>
