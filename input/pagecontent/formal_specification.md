@@ -85,9 +85,7 @@ When launched without the context of a CDS Hook, but within context from an EHR,
 | response  | OPTIONAL    |0..*| *string* | Local reference to a QuestionnaireResponse stored on the EHR |
 {: .grid } 
 
-If the QuestionnaireResponse is not present, but the order is, the QuestionnaireResponse can be searched for using the order. Alternatively, the QuestionnaireResponse can be replaced by a DocumentReference on the payer server.  
-
-If the order is not present, then it can be retrieved from the QuestionnaireResponse.
+If the QuestionnaireResponse is not present, but the order is, the QuestionnaireResponse can be searched for using the order.  If the order is not present, then it can be retrieved from the QuestionnaireResponse.
 
 If neither is present, the user should be prompted to select a QuestionnaireResponse based on the patient that is in context.
 
@@ -137,7 +135,7 @@ The DTR app SHALL support usage of two new scopes to alter the launch context: `
 
 At least one of the two fields `request` or `response` must be filled in order for the DTR app to successfully launch. In the case that `response` is filled but `request` is empty, the DTR process SHALL use the URL provided in the `response` property of the `appContext` to retrieve the referenced QuestionnaireResponse. The QuestionnaireResponse can be used to discover the request through the `context` extension. The app should allow the user to relaunch the deferred usage session defined by the QuestionnaireResponse. 
 
-If the `response` field is empty, the DTR app SHALL check the EHR for QuestionnaireResponses and the payer system for DocumentReferences which are linked to the `request`. The QuestionnaireResponse will have all the information required to request the Questionnaire and CQL from the payer server and allow relaunch of the session with previously answered questions already filled out. [Save Context for Relaunch](formal_specification.html#persisting-application-state)
+The QuestionnaireResponse will have all the information required to request the Questionnaire and CQL from the payer server and allow relaunch of the session with previously answered questions already filled out. [Save Context for Relaunch](formal_specification.html#persisting-application-state)
 
 ---------------------
 ### Determination of Payers Supported by a DTR App
@@ -233,7 +231,7 @@ When launched with context of the organization, patient, and user, the app shoul
 
 When launched in standalone mode, the app should include the `launch/patient` scope to indicate that the EHR needs to provide patient context. The app can use the returned patient to search for relevant unfinished sessions. 
 
-Since a patient won’t be in context, the app will need to provide a selection of patients that the user can choose from. But this would be from the EHR, currently. Another option would be to let the user select which payer they want and then select a patient from the saved DocumentReferences.
+Since a patient won’t be in context, the app will need to provide a selection of patients that the user can choose from. But this would be from the EHR, currently. 
  
 The DTR app SHALL only be scoped to one patient and be prohibited from accessing resources aside from the ones the EHR has authorized it to gain access to. The payer system SHALL only provide DocumentReferences for usage by the DTR app if it is scoped to a specific patient. The DTR app should not be allowed to query all in-progress QuestionnaireResponses without specifying a patient to limit the search.  
 

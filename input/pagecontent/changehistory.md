@@ -590,3 +590,17 @@
   <a href="formal_specification.html#retrieval-of-payer-data-and-smart-launch">(Retrieval of Payer Data and SMART Launch)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36356">FHIR-36356</a>:
+  Adjust note to implementers
+  <a href="index.html#boundaries-and-relationships">(Boundaries and Relationships)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-37949">FHIR-37949</a>:
+  Remove all notion of storing work-in-progress on payer
+  <a href="index.html">(Home)</a>
+  </li>
+</ul>

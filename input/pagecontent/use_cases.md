@@ -37,7 +37,7 @@ This example shows an overview of how the DTR SMART on FHIR app (or equivalent n
 3. The DTR SMART on FHIR app (or equivalent native EHR app) fetches CQL (rules) and a FHIR Questionnaire from the payer server.
 4. The engine then extracts as many answers as it can in order to pre-populate a FHIR QuestionnaireResponse with FHIR-based EHR data.
 5. If there is missing information, the user can manually provide it to fully populate the QuestionnaireResponse. If the QuestionnaireResponse is fully populated, the Questionnaire is not shown to the user unless specifically requested.
-6. It then writes the FHIR QuestionnaireResponse back to the EHR server and optionally to the payer.
+6. It then writes the FHIR QuestionnaireResponse back to the EHR server.
 
 ![Process Flow Detail](DTR_Example_Workflow.png){:style="float: none;"}
 
