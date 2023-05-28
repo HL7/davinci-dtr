@@ -66,8 +66,8 @@ When a prior authorization comes back while using an Adaptive Form, the SMART ap
 Although not detailed in this IG, it may be possible to achieve the same level of integration with a native EHR app instead of a SMART on FHIR app. The same payer sourced FHIR Questionnaire and CQL could be consumed by the native EHR app. The interface for exchanging data would need to be developed further in a method that achieves the same level of interoperability that the SMART on FHIR app achieves. A native EHR app MAY play the role of the DTR process if it reduces burden. Because of this, when the SMART on FHIR app is mentioned in this IG, native EHR app, app (application), or DTR process also applies.
 
 ---------------------
-### Retrieval of Payer Resources
-The DTR process will need to retrieve resources from a payer IT system to operate properly. This application will need to obtain a FHIR Questionnaire and associated Clinical Quality Language (CQL) logic files in order to execute. The information needed to obtain the required resources will be provided as escaped JSON in the `appContext` property of the Clinical Decision Support (CDS) Hooks Card Link object, as described in [Section 4.2.1](specification__cds_hooks.html#use-of-cardlinks). When launched in context of CRD and a CDS Hook, that object will have the following properties:
+### Retrieval of Payer Data and SMART Launch
+The DTR process will need to retrieve resources from a payer IT system to operate properly. This application will need to obtain a FHIR Questionnaire and associated Clinical Quality Language (CQL) logic files in order to execute. The information needed to obtain the required resources will be provided as escaped JSON in the `appContext` property of the Clinical Decision Support (CDS) Hooks Card Link object, as described in [CDS Hooks](specification__cds_hooks.html#use-of-cardlinks). When launched in context of CRD and a CDS Hook, that object will have the following properties:
 
 | Field    | Optionality | Cardinality | Type  | Description |
 | -------- | ----------- | ------      | -------- | ----------- |
@@ -123,7 +123,7 @@ Questionnaires and ValueSets SHALL be version specific to address the possibilit
 
 > There is no need for the user to see the Questionnaire if it can be auto completed, unless they need to approve sending the result to the payer or to *sign* the information prior to submission. The application SHALL give the provider the ability, but not the requirement to review any information prior to sending it to a third party. This ability may be *turned-off* by the organization and possibly the individual provider. 
 >
-> If the resulting information is to be sent to a third  party (e.g., payer), the DTR SMART on FHIR App (or equivalent native app) SHALL include a configurable step to allow  the provider to review and grant permission to send the information gathered in the QuestionnaireResponse before sending.  If the resulting information is to be sent to a third party (e.g., payer) see [Section 4.4.5.1](specification__behaviors__persisting_application_state.html#smart-on-fhir-applications-and-servers)
+> If the resulting information is to be sent to a third  party (e.g., payer), the DTR SMART on FHIR App (or equivalent native app) SHALL include a configurable step to allow  the provider to review and grant permission to send the information gathered in the QuestionnaireResponse before sending. 
 >
 > However, this SHOULD be configurable on a site or provider basis.
 
@@ -137,7 +137,7 @@ The DTR app SHALL support usage of two new scopes to alter the launch context: `
 
 At least one of the two fields `request` or `response` must be filled in order for the DTR app to successfully launch. In the case that `response` is filled but `request` is empty, the DTR process SHALL use the URL provided in the `response` property of the `appContext` to retrieve the referenced QuestionnaireResponse. The QuestionnaireResponse can be used to discover the request through the `context` extension. The app should allow the user to relaunch the deferred usage session defined by the QuestionnaireResponse. 
 
-If the `response` field is empty, the DTR app SHALL check the EHR for QuestionnaireResponses and the payer system for DocumentReferences which are linked to the `request`. The QuestionnaireResponse will have all the information required to request the Questionnaire and CQL from the payer server and allow relaunch of the session with previously answered questions already filled out. [Save Context for Relaunch](specification__behaviors__persisting_application_state.html#how-dtr-saves-context-of-dtr-for-a-relaunch)
+If the `response` field is empty, the DTR app SHALL check the EHR for QuestionnaireResponses and the payer system for DocumentReferences which are linked to the `request`. The QuestionnaireResponse will have all the information required to request the Questionnaire and CQL from the payer server and allow relaunch of the session with previously answered questions already filled out. [Save Context for Relaunch](formal_specification.html#persisting-application-state)
 
 ---------------------
 ### Determination of Payers Supported by a DTR App
@@ -163,7 +163,7 @@ The launch context, which comes to the DTR app through the access token bundle, 
 #### When the EHR is in a patient context
 When the user of the EHR is working in the context of an individual patient and the EHR system allows the launch of a [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) application, launching of a DTR compliant application SHOULD follow the [EHR launch sequence](http://hl7.org/fhir/smart-app-launch/#ehr-launch-sequence) as described in [Section 4.2.2](specification__cds_hooks.html#establish-patient-context) which will allow the DTR process to establish the patient of interest. When the user of the EHR is not working in the context of an individual patient and the EHR system allows the launch of a SMART on FHIR application, the DTR process should allow the user to select a usage session from all of the sessions available.
 
-The DTR process will then allow the user to restore a session. The possible sessions to restore SHALL be based on the user's identity and patient that has been established. Further information on establishing user identity and sessions is available in [Section 4.4.5](specification__behaviors__persisting_application_state.html).
+The DTR process will then allow the user to restore a session. The possible sessions to restore SHALL be based on the user's identity and patient that has been established. Further information on establishing user identity and sessions is available in [Persisting Application State](formal_specification.html#persisting-application-state).
 
 When DTR processes are launched in this manner, in [Step 3 of the launch sequence](http://hl7.org/fhir/smart-app-launch/#step-3-app-exchanges-authorization-code-for-access-token), in the case where the EHR system is returning a response with an access token, the system will not provide a `template` property, which would point to a Questionnaire resource. This is an indication to the DTR process that it has been launched outside of the Coverage Requirements Discovery workflow.
 
@@ -171,7 +171,7 @@ When DTR processes are launched in this manner, in [Step 3 of the launch sequenc
 To persist application state, the DTR process will need to know who is currently using the application. SMART on FHIR provides methods for the application to obtain this information.
 
 #### Standalone launch
-DTR process SHALL support the [Standalone launch sequence](http://hl7.org/fhir/smart%2Dapp%2Dlaunch/#standalone-launch-sequence). In this case, the DTR process SHALL establish the user's identity following the procedures in [Section 4.4.5.2](specification__behaviors__persisting_application_state.html#requesting-user-identity).
+DTR process SHALL support the [Standalone launch sequence](http://hl7.org/fhir/smart%2Dapp%2Dlaunch/#standalone-launch-sequence). In this case, the DTR process SHALL establish the user's identity following the procedures in [Requesting User Identity](formal_specification.html#requesting-user-identity).
 
 Once user identity has been established, the DTR process should allow the user to select a usage session from all of the sessions available to that particular user.
 
@@ -289,7 +289,7 @@ The DTR process creates a QuestionnaireResponse resource through the course of n
 >Updating work-in-progress (WIP) QuestionnaireResponses may save time and effort. In cases of QuestionnaireResponse updates, the App SHALL have the ability to continue, SHOULD allow the ability to start over, and MAY, for non-adaptive forms, provide the ability to ability to refresh and retain or discard provider entered information during a refresh. The data in the QuestionnaireResponse SHOULD be refreshed where possible with the latest data from the EHR system. 
 
 ##### Interaction with Payer API
-The payer IT system should support the FHIR create interaction to allow the DTR process to send the QuestionnaireResponse resource to the payer. The FHIR endpoint for the payer may require authentication. If it is required, it SHALL follow the procedures described in [Section 4.4.1](specification__behaviors__retrieval_of_payer_resources.html#authentication-of-smart-on-fhir-application-to-payer-api) - Authentication of SMART on FHIR application to payer API.
+The payer IT system should support the FHIR create interaction to allow the DTR process to send the QuestionnaireResponse resource to the payer. The FHIR endpoint for the payer may require authentication. If it is required, it SHALL follow the procedures described in [Authentication of SMART on FHIR application to payer API](formal_specification.html#authentication-of-smart-on-fhir-application-to-payer-api) - Authentication of SMART on FHIR application to payer API.
 
 ##### Pushing QuestionnaireResponse to Payer
 This IG will support the [HRex Decision point – Configured by consumer?](http://build.fhir.org/ig/HL7/davinci-ehrx/exchanging.html#configured-by-consumer) when a SMART on FHIR or native EHR app wants to push a QuestionnaireResponse to a Payer.  
@@ -298,7 +298,7 @@ Note: Other IGs might provide additional mechanisms for transmitting results of 
 
 ---------------------
 ### How DTR passes information to PAS, PAO or Other Exchanges
-The DTR application shall save the QuestionnaireResponse to the EHR upon completion (see section [Persisting Results](specification__behaviors__persisting_results.html)). The next step after completing the Questionnaire may include sending a Claim to a PAS [(Prior Auth Support)](http://build.fhir.org/ig/HL7/davinci-pas/) server for or an Order to PAO [(Post-Acute Orders)](http://build.fhir.org/ig/HL7/dme-orders/) for ordering. Specifications on required resources can be found in the Implementation Guides for each of those use cases.  
+The DTR application shall save the QuestionnaireResponse to the EHR upon completion (see section [Persisting Results](formal_specification.html#persisting-results)). The next step after completing the Questionnaire may include sending a Claim to a PAS [(Prior Auth Support)](http://build.fhir.org/ig/HL7/davinci-pas/) server for or an Order to PAO [(Post-Acute Orders)](http://build.fhir.org/ig/HL7/dme-orders/) for ordering. Specifications on required resources can be found in the Implementation Guides for each of those use cases.  
  
 The QuestionnaireResponse may include groups (items with specific linkIds) that contain references to resources to include. These may be attachments needed by either PAS or PAO. 
  

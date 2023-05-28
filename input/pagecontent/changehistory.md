@@ -583,3 +583,10 @@
   <a href="formal_specification.html#questionnaire">(Formal Specification)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36410">FHIR-36410</a>:
+  Title and content don't jive
+  <a href="formal_specification.html#retrieval-of-payer-data-and-smart-launch">(Retrieval of Payer Data and SMART Launch)</a>
+  </li>
+</ul>
