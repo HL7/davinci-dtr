@@ -660,3 +660,31 @@
   <a href="formal_specification.html#execution-of-cql">(Execution of CQL)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36146">FHIR-36146</a>:
+  Clarify that DTR app should authenticate to payer with SMART Backend Services
+  <a href="formal_specification.html#authentication-of-smart-on-fhir-application-to-payer-api">(Authentication of SMART on FHIR application to payer API)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36441">FHIR-36441</a>:
+  Remove FHIR version discussion
+  <a href="formal_specification.html#engine-execution">(Engine Execution)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36298">FHIR-36298</a>:
+  CRD linking to website versus a DTR solution
+  <a href="underlying_technologies.html#da-vinci-burden-reduction">(Da Vinci Burden Reduction)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36429">FHIR-36429</a>:
+  No appContext on stand-alone launch
+  <a href="formal_specification.html#retrieval-of-payer-resources-and-smart-launch">(Retrieval of Payer resources and SMART Launch)</a>
+  </li>
+</ul>

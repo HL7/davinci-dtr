@@ -89,6 +89,8 @@ If neither is present, the user should be prompted to select a QuestionnaireResp
 >2. Task
 >3. Order
 
+The resources corresponding to this context (if any) SHALL be passed in the fhirContext element.  As part of configuration during app enablement process the app SHOULD also always ask for the launch/patient and the openId and fhirUser contexts.
+
 #### App Relaunch 
 The DTR app SHALL support usage of two new scopes to alter the launch context: `launch/request` and `launch/response`.  If the `request` scope is included when launching, the access token bundle should return with the `request` field of the `appContext` filled.  If the `response` scope is included, it should return with the `response` field of the `appContext` filled.  
 
@@ -101,7 +103,7 @@ This IG will support the [HRex Decision point - REST searchable?](http://build.f
 #### Authentication of SMART on FHIR application to payer API
 The Electronic Health Record (EHR) system SHALL be the primary system used to initiate the DTR process. The [SMART App Launch](http://hl7.org/fhir/smart-app-launch) will typically be initiated from within the EHR.  
   
-Payers SHALL require the DTR process to authenticate in order to retrieve resources when PHI is exchanged, and SHOULD required authentication in other situations. In the case that authentication is required, the following JSON structure SHALL be populated by the payer system. This JSON is based on the structure for [FHIR Authorization in CDS Hooks](https://cds-hooks.hl7.org/1.0/#fhir-resource-access).
+Payers SHALL require the DTR process to authenticate in order to retrieve resources when PHI is exchanged, and SHOULD required authentication in other situations. The app is required to register and obtain a client id to register and authenticate via SMART Backend services.
 
 | Field | Optionality | Type | Description |
 | ----- | ----------- | ---- | ----------- |
@@ -413,8 +415,6 @@ As discussed in the Execution Results section below, it’s possible not every C
 ##### Engine Execution
 
 The FHIR Library containing/referencing a CQL logic file can reference other needed CQL files (e.g., helper libraries) using the `relatedArtifact` field and a `RelatedArtifact` with a `type` of `depends-on`. The engine SHALL make available to the execution context all such referenced CQL libraries. If the Questionnaire has multiple `cqf-library` fields, then any `valueExpression` must specify the library name as well as the statement name as follows: `"LibraryName".statementName`.
-
-It is likely that different versions of CQL will need to be created for different FHIR versions, as the same information could be in a different resource. The app will have access to the FHIR endpoint, it should check the version and then retrieve the package that has been created for the correct FHIR version.
 
 Consideration must also be made regarding the CQL version.
 
