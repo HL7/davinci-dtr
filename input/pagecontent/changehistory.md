@@ -702,3 +702,17 @@
   <a href="StructureDefinition-dtr-sdc-questionnaire.html">(DTR SDC Questionnaire)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36383">FHIR-36383</a>:
+  Are you using SDC or CQF?
+  <a href="formal_specification.html#profiles">(Profiles)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36361">FHIR-36361</a>:
+  Provenance expectations need more clarity
+  <a href="formal_specification.html#provenance">(Provenance)</a>
+  </li>
+</ul>

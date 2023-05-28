@@ -58,7 +58,7 @@ When a prior authorization comes back while using an Adaptive Form, the SMART ap
 
 2. Update the "in-memory" request (e.g., ServiceRequest) to have a supportingInfo reference to the ClaimResponse. 
 
-Although not detailed in this IG, it may be possible to achieve the same level of integration with a native EHR app instead of a SMART on FHIR app. The same payer sourced FHIR Questionnaire and CQL could be consumed by the native EHR app. The interface for exchanging data would need to be developed further in a method that achieves the same level of interoperability that the SMART on FHIR app achieves. A native EHR app MAY play the role of the DTR process if it reduces burden. Because of this, when the SMART on FHIR app is mentioned in this IG, native EHR app, app (application), or DTR process also applies.
+Although not detailed in this IG, it may be possible to achieve the same level of integration with a DTR Native App instead of a DTR SMART app. The same payer sourced FHIR Questionnaire and CQL could be consumed by the DTR Native App. The interface for exchanging data would need to be developed further in a method that achieves the same level of interoperability that the SMART on FHIR app achieves. A DTR Native App MAY play the role of the DTR process if it reduces burden. Because of this, when the DTR SMART app is mentioned in this IG, DTR Native App, app (application), or DTR process also applies.
 
 ---------------------
 ### Retrieval of Payer resources and SMART Launch
@@ -123,7 +123,7 @@ Questionnaires and ValueSets SHALL be version specific to address the possibilit
 
 > There is no need for the user to see the Questionnaire if it can be auto completed, unless they need to approve sending the result to the payer or to *sign* the information prior to submission. The application SHALL give the provider the ability, but not the requirement to review any information prior to sending it to a third party. This ability may be *turned-off* by the organization and possibly the individual provider. 
 >
-> If the resulting information is to be sent to a third  party (e.g., payer), the DTR SMART on FHIR App (or equivalent native app) SHALL include a configurable step to allow  the provider to review and grant permission to send the information gathered in the QuestionnaireResponse before sending. 
+> If the resulting information is to be sent to a third  party (e.g., payer), the DTR SMART App (or equivalent DTR Native App) SHALL include a configurable step to allow  the provider to review and grant permission to send the information gathered in the QuestionnaireResponse before sending. 
 >
 > However, this SHOULD be configurable on a site or provider basis.
 
@@ -204,7 +204,7 @@ The EHR is responsible for storing and updating the QuestionnaireResponse, as we
 
 The contents of the extension can be sent to the payer server using the [questionnaire-for-order operation](http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/Questionnaire-for-Order).  The payer server SHALL return a Questionnaire upon receiving a valid coverage and order.
 
-If the app is a SMART app (and not a native application) that it SHALL use SMART backend authentication and will also provide a link to the SMART backend authentication process which provides the full protocol and details. 
+If the app is a DTR SMART app (and not a DTR Native App) that it SHALL use SMART backend authentication and will also provide a link to the SMART backend authentication process which provides the full protocol and details. 
 
 The following information should be contained inside the DocumentReference: 
 
@@ -283,7 +283,7 @@ The DTR process creates a QuestionnaireResponse resource through the course of n
 The payer IT system should support the FHIR create interaction to allow the DTR process to send the QuestionnaireResponse resource to the payer. The FHIR endpoint for the payer may require authentication. If it is required, it SHALL follow the procedures described in [Authentication of SMART on FHIR application to payer API](formal_specification.html#authentication-of-smart-on-fhir-application-to-payer-api) - Authentication of SMART on FHIR application to payer API.
 
 ##### Pushing QuestionnaireResponse to Payer
-This IG will support the [HRex Decision point – Configured by consumer?](http://build.fhir.org/ig/HL7/davinci-ehrx/exchanging.html#configured-by-consumer) when a SMART on FHIR or native EHR app wants to push a QuestionnaireResponse to a Payer.  
+This IG will support the [HRex Decision point – Configured by consumer?](http://build.fhir.org/ig/HL7/davinci-ehrx/exchanging.html#configured-by-consumer) when a DTR SMART App or DTR Native App wants to push a QuestionnaireResponse to a Payer.  
 
 Note: Other IGs might provide additional mechanisms for transmitting results of the completed QuestionnaireResponse to the payer.  The client that launches DTR is responsible for understanding the context of the launch, and thus for what to do with any QuestionnaireResponses that are persisted as a result of that launch.
 
@@ -311,7 +311,7 @@ Provenance SHOULD be created and persisted with information created during the e
 
 > All DTR applications SHALL support rendering according to the extensions supported in the DTR Questionnaire profile as well as executing all CQL found within Questionnaire extensions. Payers SHALL craft their Questionnaires such that they include CQL that attempts to pre-populate QuestionnaireResponse answers where such population can be accomplished using discrete data returned by EHR FHIR APIs that are required as part of current regulation (including simple calculations there-on - e.g. age from birthdate). Translation between standard codes SHOULD be supported where possible. 
 > 
-> For example, CQL and FHIR Questionnaires SHALL be required even when DTR is implemented within a native EHR application as opposed to a SMART on FHIR application.
+> For example, CQL and FHIR Questionnaires SHALL be required even when DTR is implemented within a DTR Native App as opposed to a DTR SMART App.
 
 ---------------------
 ### Value Set and Code System Guidance
