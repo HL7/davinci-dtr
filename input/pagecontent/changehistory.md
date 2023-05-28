@@ -720,6 +720,13 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36507">FHIR-36507</a>:
   Correct and re-organize this section
+  <a href="formal_specification.html#persisting-results">(Persisting Results)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36533">FHIR-36533</a>:
+  Issues with lack of guidance on storage
   <a href="formal_specification.html#persisting-application-state">(Persisting Application State)</a>
   </li>
 </ul>
