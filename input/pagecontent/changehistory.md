@@ -716,3 +716,10 @@
   <a href="formal_specification.html#provenance">(Provenance)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36507">FHIR-36507</a>:
+  Correct and re-organize this section
+  <a href="formal_specification.html#persisting-application-state">(Persisting Application State)</a>
+  </li>
+</ul>

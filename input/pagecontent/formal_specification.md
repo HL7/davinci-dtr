@@ -206,29 +206,17 @@ The contents of the extension can be sent to the payer server using the [questio
 
 If the app is a DTR SMART app (and not a DTR Native App) that it SHALL use SMART backend authentication and will also provide a link to the SMART backend authentication process which provides the full protocol and details. 
 
-The following information should be contained inside the DocumentReference: 
-
-| Element | Description |
-| ----- | ----------- |
-| DocumentReference.subject.reference | EHR Patient URL|
-| DocumentReference.subject.identifier | Payer member identifier|
-| DocumentReference.author | Provider organization reference|
-| DocumentReference.date | Current date |
-| DocumentReference.meta.lastUpdated | Date of last change|
-| DocumentReference.content.attachment | PDF containing the QuestionnaireResponse |
-{: .grid } 
-
 The PDF may also include prior authorization information, if appropriate. Information in the PDF is not machine readable, and association with the order or prior authorization request must be done by hand. 
 
-When launched with context of the organization, patient, and user, the app should display a list of open or “in-progress” QuestionnaireResponses or DocumentReferences for the user to select from, scoped to the patient that is in context. The DTR app should check both the EHR and the payer server for stored sessions.  The QuestionnaireResponses on the EHR and the DocumentReferences on the payer server have reference to the order which they are linked to, which can be used to search for the correct resource.  
+When launched with context of the organization, patient, and user, the app should display a list of open or “in-progress” QuestionnaireResponses for the user to select from, scoped to the patient that is in context. The DTR app should check both the EHR and the payer server for stored sessions.  The QuestionnaireResponses on the EHR has a reference to the order which it is linked to, which can be used to search for the correct resource.  
 
 When launched in standalone mode, the app should include the `launch/patient` scope to indicate that the EHR needs to provide patient context. The app can use the returned patient to search for relevant unfinished sessions. 
 
 Since a patient won’t be in context, the app will need to provide a selection of patients that the user can choose from. But this would be from the EHR, currently. 
  
-The DTR app SHALL only be scoped to one patient and be prohibited from accessing resources aside from the ones the EHR has authorized it to gain access to. The payer system SHALL only provide DocumentReferences for usage by the DTR app if it is scoped to a specific patient. The DTR app should not be allowed to query all in-progress QuestionnaireResponses without specifying a patient to limit the search.  
+The DTR app SHALL only be scoped to one patient and be prohibited from accessing resources aside from the ones the EHR has authorized it to gain access to. The DTR app should not be allowed to query all in-progress QuestionnaireResponses without specifying a patient to limit the search.  
 
-The system responsible for saving the sessions should prune old sessions by checking the date on the DocumentReference resource. The system can decide how long to wait before deleting an old session. The DocumentReference SHALL be deleted if the QuestionnaireResponse is saved to the EHR and the session finishes. 
+The system can decide how long to wait before deleting an old session. 
 
 ##### SMART App Launch Framework IG
 Using the SMART App Launch Framework IG, the DTR process should request [scopes for requesting identity data](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context/index.html#scopes-for-requesting-identity-data), namely `openid` and `fhirUser`. The DTR process can then retrieve the FHIR resource representing the current person and extract whatever identifiers it deems necessary for the persistance of application state.
@@ -258,18 +246,11 @@ Payers SHOULD use the `Questionnaire.effectivePeriod` element to describe the pe
 ### Persisting Results
 When the DTR process has collected all of the necessary information, it SHALL save the results of the data collection to the patient record. This IG describes two methods for saving the collected information: a text block in the Electronic Health Record (EHR) System and a QuestionnaireResponse.
 
-#### Text Block
-Many EHR Systems do not currently support writing a QuestionnaireResponse into a FHIR server. However, The US Core Implementation Guide (IG) now includes a [DocumentReference Profile](https://hl7.org/fhir/us/core/StructureDefinition-us-core-documentreference.html), which allows clients, like the DTR process, to write notes into the EHR (or EHR) system's FHIR server. The following section describes how the QuestionnaireResponse that is generated through the processes described in Section 4.4.3 and Section 4.4.4 can be transformed into text such that it may be saved as a note in the EHR system.
-
 ##### QuestionnaireResponse transformation process
 
 The information that is collected (via the Questionnaire interaction with the user) SHOULD be written to the EHR via the available FHIR API. The results of the QuestionnaireResponse SHALL be saved as the FHIR resource and/or as a human readable format that is supported by the EHR.
 
-If the EHR has the capability to render a QuestionnaireResponse, it SHOULD save the QuestionnaireResponse as part of the patient record. If the EHR does not have ability to render the questionnaireResponse, then the EHR should support saving the QuestionnaireResponse information as whichever supported structure produces the least impact on users.
-
-The DTR process SHALL store this information in the EHR - either as a [DocumentReference](https://build.fhir.org/ig/HL7/US-Core-R4/StructureDefinition-new-us-core-documentreference.html) resource conforming to the US Core profile or in another EHR-appropriate, human-readable form. Implementers are strongly encouraged to use the most reusable, discrete form of data they can. 
-
->If necessary, a PDF can be generated to store the information if other options are not possible. The generated PDF SHOULD be recorded in `DocumentReference.content.attachment.data`. `DocumentReference.content.attachment.contentType` SHOULD be `application/pdf`
+If the EHR has the capability to render a QuestionnaireResponse, it SHOULD save the QuestionnaireResponse as part of the patient record. If the EHR does not have ability to render the questionnaireResponse, then the EHR should support saving the QuestionnaireResponse information as whichever supported structure produces the least impact on users.  Implementers are strongly encouraged to use the most reusable, discrete form of data they can. 
 
 ##### Interaction with EHR
 EHR systems that conform to [US Core](http://www.hl7.org/fhir/us/core/) allow for the creation of DocumentationReference resources through a FHIR API. As such, the DTR process should use the typical [FHIR create](http://hl7.org/fhir/R4/http.html#create) interaction to write the documentation into the EHR.
