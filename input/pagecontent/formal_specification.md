@@ -63,40 +63,7 @@ When a prior authorization comes back while using an Adaptive Form, the SMART ap
 
 2. Update the "in-memory" request (e.g., ServiceRequest) to have a supportingInfo reference to the ClaimResponse. This is done using [SMART Web Messaging](http://hl7.org/fhir/uv/smart-web-messaging/2020Sep/). 
 
----------------------
-### Value Set and Code System Guidance
-The table below is guidance that SHOULD be used when using values sets and code systems in DTR. This can also be considered a best practice.
-
-<table border="1">
-  <tr>
-    <th></th>
-    <th>CQL and Questionnaire terminology usage</th>
-    <th>Comment</th>    
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>No value set, embed the codes. </td>
-    <td>This is OK if there is no need to reuse the codes. </td>   
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Pass a value set in the package with the expansion already in place. </td>
-    <td>You've got the value set in-line with an expansion if the set of the codes is reasonably small. So, no need for a terminology service. </td>    
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Pass value set in place, but recipient needs to run the expansion or ask a terminology server to do the expansion. </td>
-    <td>You've got a composed value set, but no expansion (probably because the value set is too large to embed/expand inline). So, you need to ask a terminology service to find out what the set of codes are. By providing the filters to limit the size of codes returned for the value sets. 
-    </td>    
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>Value set reference and recipient need to retrieve the value set and run expand or invoke a terminology server somewhere else to run the expansion. </td>
-    <td>You don't have the value set (e.g., probably because of licensing issues) - you need to look for it on a registry/terminology server, resolve the canonical URL to retrieve it, then cache the value set(s) if allowed by the code system(s). For some code systems, you may need to license the data file first in order to retrieve codes and descriptors by browser or API. Also, once you get the value set, you might still need to expand it like scenario (3) above. </td>    
-  </tr>
-</table>
-
-Note: According to the [ValueSet Identification](https://www.hl7.org/fhir/valueset.html#ident), it is common practice to copy (cache) value sets locally, most references to value sets use the canonical URL. 
+Although not detailed in this IG, it may be possible to achieve the same level of integration with a native EHR app instead of a SMART on FHIR app. The same payer sourced FHIR Questionnaire and CQL could be consumed by the native EHR app. The interface for exchanging data would need to be developed further in a method that achieves the same level of interoperability that the SMART on FHIR app achieves. A native EHR app MAY play the role of the DTR process if it reduces burden. Because of this, when the SMART on FHIR app is mentioned in this IG, native EHR app, app (application), or DTR process also applies.
 
 ---------------------
 ### Retrieval of Payer Resources
@@ -134,6 +101,8 @@ Remove the `endpoint` extension from the coverage resource. The app should alway
 This IG will support the [HRex Decision point - REST searchable?](http://build.fhir.org/ig/HL7/davinci-ehrx/exchanging.html#rest-searchable) when using RESTful endpoints to get payer resources (e.g., CQL rules and templates).
 
 #### Authentication of SMART on FHIR application to payer API
+The Electronic Health Record (EHR) system SHALL be the primary system used to initiate the DTR process. The [SMART App Launch](http://hl7.org/fhir/smart-app-launch) will typically be initiated from within the EHR.  
+  
 Payers SHALL require the DTR process to authenticate in order to retrieve resources when PHI is exchanged, and SHOULD required authentication in other situations. In the case that authentication is required, the following JSON structure SHALL be populated by the payer system. This JSON is based on the structure for [FHIR Authorization in CDS Hooks](https://cds-hooks.hl7.org/1.0/#fhir-resource-access).
 
 | Field | Optionality | Type | Description |
@@ -152,6 +121,14 @@ The Questionnaire SHALL have a `cqf-library` extension property specified. That 
 
 Questionnaires and ValueSets SHALL be version specific to address the possibility of breaking changes between differing versions.
 
+> There is no need for the user to see the Questionnaire if it can be auto completed, unless they need to approve sending the result to the payer or to *sign* the information prior to submission. The application SHALL give the provider the ability, but not the requirement to review any information prior to sending it to a third party. This ability may be *turned-off* by the organization and possibly the individual provider. 
+>
+> If the resulting information is to be sent to a third  party (e.g., payer), the DTR SMART on FHIR App (or equivalent native app) SHALL include a configurable step to allow  the provider to review and grant permission to send the information gathered in the QuestionnaireResponse before sending.  If the resulting information is to be sent to a third party (e.g., payer) see [Section 4.4.5.1](specification__behaviors__persisting_application_state.html#smart-on-fhir-applications-and-servers)
+>
+> However, this SHOULD be configurable on a site or provider basis.
+
+DTR does not support creating new orders or changing existing orders. DTR supports documentation requirements for device, service, and medication requests. When the required documentation cannot be populated from the EHR, DTR SHOULD provide the ability to capture the missing information.
+
 #### CQL Rules
 CQL can either be embedded inline as part of an expression or referenced in a library.  All libraries needed by a questionnaire SHALL be referenced by the cqf-library extension which SHALL be resolvable by the SMART app. Metadata about the rules will be represented as a FHIR Library resource. The payer SHALL provide this as a FHIR resource, such that the DTR process will be executing a FHIR read interaction on the payer's server.
 
@@ -161,6 +138,18 @@ The DTR app SHALL support usage of two new scopes to alter the launch context: `
 At least one of the two fields `request` or `response` must be filled in order for the DTR app to successfully launch. In the case that `response` is filled but `request` is empty, the DTR process SHALL use the URL provided in the `response` property of the `appContext` to retrieve the referenced QuestionnaireResponse. The QuestionnaireResponse can be used to discover the request through the `context` extension. The app should allow the user to relaunch the deferred usage session defined by the QuestionnaireResponse. 
 
 If the `response` field is empty, the DTR app SHALL check the EHR for QuestionnaireResponses and the payer system for DocumentReferences which are linked to the `request`. The QuestionnaireResponse will have all the information required to request the Questionnaire and CQL from the payer server and allow relaunch of the session with previously answered questions already filled out. [Save Context for Relaunch](specification__behaviors__persisting_application_state.html#how-dtr-saves-context-of-dtr-for-a-relaunch)
+
+---------------------
+### Determination of Payers Supported by a DTR App
+It is possible that the apps used to provide DTR functionality to an app will not support all payers the EHR might have "DTR requests" for - either from CRD or CDex.  It is important for the EHR to know what payers their app supports so that they only allow their users to launch the DTR app in the context of payers the app will be able to support.  (Launching an app only to be told "this payer isn't supported" is an unpleasant user experience.)
+
+Where an EHR uses a third-party app rather than implementing DTR app functionality internally, the developer of the app SHALL define an endpoint maintaining a list of payers currently supported by that app and EHRs using external DTR apps SHALL support accessing the endpoint.  The EHR will be configured with knowledge of which endpoint to hit for a given app as part of the process of configuring support for that app within the EHR.  Different endpoints will be defined for different versions of the application in situations where support for payers varies by application version.
+
+Accessing the endpoint will by a simple GET with an Accept header of "application/json" and SHALL be performed over TLS as described elsewhere in this guide.  The returned JSON object will contain a "payers" property referring to an array of objects.  Each object will have an "id" and "name" property, both with string values.  It is possible that additional properties may be supported in the future.
+
+EHRs will typically retrieve the list of supported payers for the app once per day and will use this information to determine whether to expose the ability to launch DTR for orders associated with coverages for that payer.
+
+> **NOTE:** Standardization of payer ids is still an open issue.
 
 ---------------------
 ### Launch Outside of CRD
@@ -327,6 +316,49 @@ Note: At this time <a href="http://hl7.org/fhir/uv/smart-web-messaging/2020Sep/"
 </blockquote>
 
 DTR implementations using a SMART on FHIR application SHALL support [SMART Web Messaging](http://hl7.org/fhir/uv/smart-web-messaging/2020Sep/) for updating the relevant order. After storing the completed QuestionnaireResponse, SMART Web Messaging will be used to ask the EHR to update the order to add the QuestionnaireResponse as a ‘supportingInfo’ link. DTR implementations not relying on SMART on FHIR but instead using a native application SHALL support similar functionality. 
+
+---------------------
+### Provenance
+Provenance SHOULD be created and persisted with information created during the execution of the CQL and Questionnaire. Also, when the QuestionnaireResponse and its associated resources are exchanged with the source of the rules, appropriate Provenance resource(s) SHOULD be created and exchanged.
+
+> All DTR applications SHALL support rendering according to the extensions supported in the DTR Questionnaire profile as well as executing all CQL found within Questionnaire extensions. Payers SHALL craft their Questionnaires such that they include CQL that attempts to pre-populate QuestionnaireResponse answers where such population can be accomplished using discrete data returned by EHR FHIR APIs that are required as part of current regulation (including simple calculations there-on - e.g. age from birthdate). Translation between standard codes SHOULD be supported where possible. 
+> 
+> For example, CQL and FHIR Questionnaires SHALL be required even when DTR is implemented within a native EHR application as opposed to a SMART on FHIR application.
+
+---------------------
+### Value Set and Code System Guidance
+The table below is guidance that SHOULD be used when using values sets and code systems in DTR. This can also be considered a best practice.
+
+<table border="1">
+  <tr>
+    <th></th>
+    <th>CQL and Questionnaire terminology usage</th>
+    <th>Comment</th>    
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>No value set, embed the codes. </td>
+    <td>This is OK if there is no need to reuse the codes. </td>   
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Pass a value set in the package with the expansion already in place. </td>
+    <td>You've got the value set in-line with an expansion if the set of the codes is reasonably small. So, no need for a terminology service. </td>    
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Pass value set in place, but recipient needs to run the expansion or ask a terminology server to do the expansion. </td>
+    <td>You've got a composed value set, but no expansion (probably because the value set is too large to embed/expand inline). So, you need to ask a terminology service to find out what the set of codes are. By providing the filters to limit the size of codes returned for the value sets. 
+    </td>    
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Value set reference and recipient need to retrieve the value set and run expand or invoke a terminology server somewhere else to run the expansion. </td>
+    <td>You don't have the value set (e.g., probably because of licensing issues) - you need to look for it on a registry/terminology server, resolve the canonical URL to retrieve it, then cache the value set(s) if allowed by the code system(s). For some code systems, you may need to license the data file first in order to retrieve codes and descriptors by browser or API. Also, once you get the value set, you might still need to expand it like scenario (3) above. </td>    
+  </tr>
+</table>
+
+Note: According to the [ValueSet Identification](https://www.hl7.org/fhir/valueset.html#ident), it is common practice to copy (cache) value sets locally, most references to value sets use the canonical URL. 
 
 ---------------------
 ### CQL 

@@ -569,3 +569,17 @@
   <a href="formal_specification.html#questionnaire-rendering">(Questionnaire Rendering)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36360">FHIR-36360</a>:
+  Conformance statements don't belong on the home page
+  <a href="formal_specification.html">(Formal Specification)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36368">FHIR-36368</a>:
+  Conformance language doesn't belong on use-case page
+  <a href="formal_specification.html#questionnaire">(Formal Specification)</a>
+  </li>
+</ul>

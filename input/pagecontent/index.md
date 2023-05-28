@@ -28,18 +28,10 @@ This IG leverages Clinical Quality Language (CQL) to allow payers to inspect a p
 
 Since this IG does not describe a FHIR server, there is no Capability Statement.
 
-Although not detailed in this IG, it may be possible to achieve the same level of integration with a native EHR app instead of a SMART on FHIR app. The same payer sourced FHIR Questionnaire and CQL could be consumed by the native EHR app. The interface for exchanging data would need to be developed further in a method that achieves the same level of interoperability that the SMART on FHIR app achieves. A native EHR app MAY play the role of the DTR process if it reduces burden. Because of this, when the SMART on FHIR app is mentioned in this IG, native EHR app, app (application), or DTR process also applies.
-
-Provenance SHOULD be created and persisted with information created during the execution of the CQL and Questionnaire. Also, when the QuestionnaireResponse and its associated resources are exchanged with the source of the rules, appropriate Provenance resource(s) SHOULD be created and exchanged.
-
-> All DTR applications SHALL support rendering according to the extensions supported in the DTR Questionnaire profile as well as executing all CQL found within Questionnaire extensions. Payers SHALL craft their Questionnaires such that they include CQL that attempts to pre-populate QuestionnaireResponse answers where such population can be accomplished using discrete data returned by EHR FHIR APIs that are required as part of current regulation (including simple calculations there-on - e.g. age from birthdate). Translation between standard codes SHOULD be supported where possible. 
-> 
-> For example, CQL and FHIR Questionnaires SHALL be required even when DTR is implemented within a native EHR application as opposed to a SMART on FHIR application.
-
 ### Content and Organization
 The IG is organized into the following sections:
 * [Use Cases](use_cases.html) Provides examples of how this specification can be used by provider and payer organizations.
 * [Underlying Technologies](underlying_technologies.html) Describes the underlying technologies this specification builds upon.
-* [Specification](specification.html) Provides the technical conformance details for the specification.
+* [Specification](formal_specification.html) Provides the technical conformance details for the specification.
 * [Resources](artifacts.html) Introduces and provides links to the FHIR profiles.
 * [Credits](credits.html) Identifies the individuals and organizations involved in developing this IG.

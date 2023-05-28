@@ -13,9 +13,7 @@ In this specification, payer rules are [CQL statements](https://cql.hl7.org//) u
 A healthcare provider organization contains medical providers such as hospitals, doctors, etc.
 
 #### EHR System
-The Electronic Health Record (EHR) system SHALL be the primary system used to initiate the DTR process. The [SMART App Launch](http://hl7.org/fhir/smart-app-launch) will typically be initiated from within the EHR.
-
-The goal of DTR is to collect clinical documentation and/or to encourage the completion of documentation that demonstrates medical necessity for ordered items or services. The completion of documentation for ordered items or services are required by payers for prior authorization or other coverage requirements.
+The goal of DTR is to collect clinical documentation and/or to encourage the completion of documentation that demonstrates medical necessity for ordered items or services. The completion of documentation for ordered items or services are required by payers for prior authorization or other coverage requirements.  This information gathering is done in conjunction with the Electronic Health Record (EHR) system.
 
 It is possible to have a process where the focus is on the interaction with the EHR and an external application. Examples of external systems are administrative, payment, practice management, scheduling, and other applications.
 
@@ -25,17 +23,6 @@ If information required to complete the Questionnaire is not available to the SM
 
 #### DTR Compliant SMART on FHIR app
 Within DTR, the SMART on FHIR app (or equivalent native EHR app) serves as a middleware layer easing payer and provider integrations. This functionality enables DTR to gather Questionnaire resources, retrieve FHIR resources from EHRs, and run rules (CQL) to reduce the time involved in looking up documentation requirements.
-
-### Determination of Payers Supported by a DTR App
-It is possible that the apps used to provide DTR functionality to an app will not support all payers the EHR might have "DTR requests" for - either from CRD or CDex.  It is important for the EHR to know what payers their app supports so that they only allow their users to launch the DTR app in the context of payers the app will be able to support.  (Launching an app only to be told "this payer isn't supported" is an unpleasant user experience.)
-
-Where an EHR uses a third-party app rather than implementing DTR app functionality internally, the developer of the app SHALL define an endpoint maintaining a list of payers currently supported by that app and EHRs using external DTR apps SHALL support accessing the endpoint.  The EHR will be configured with knowledge of which endpoint to hit for a given app as part of the process of configuring support for that app within the EHR.  Different endpoints will be defined for different versions of the application in situations where support for payers varies by application version.
-
-Accessing the endpoint will by a simple GET with an Accept header of "application/json" and SHALL be performed over TLS as described elsewhere in this guide.  The returned JSON object will contain a "payers" property referring to an array of objects.  Each object will have an "id" and "name" property, both with string values.  It is possible that additional properties may be supported in the future.
-
-EHRs will typically retrieve the list of supported payers for the app once per day and will use this information to determine whether to expose the ability to launch DTR for orders associated with coverages for that payer.
-
-NOTE: Standardization of payer ids is still an open issue.
 
 ### Relation to Coverage Requirements Discovery (CRD)
 The [Coverage Requirements Discovery (CRD)](http://hl7.org/fhir/us/davinci-crd/) service portion of the workflow is responsible for verifying with the payer that a given item, certain medications, procedure or other service requires documentation and/or Prior Authorization. It then provides the necessary links for the app to be launched and run. In most cases, the CRD service will return a CDS card populated with an app launch link for the DTR process, a link to a resource, and a DeviceRequest, MedicationRequest, or ServiceRequest resource ID. The app launch link can be used in a user interface in order to launch the app. While CRD may verify that documentation and/or prior authorization is required, it does not manage completion of documentation, prior authorization, or validation of rules.
@@ -53,16 +40,6 @@ This example shows an overview of how the DTR SMART on FHIR app (or equivalent n
 6. It then writes the FHIR QuestionnaireResponse back to the EHR server and optionally to the payer.
 
 ![Process Flow Detail](DTR_Example_Workflow.png){:style="float: none;"}
-
-> There is no need for the user to see the Questionnaire if it can be auto completed, unless they need to approve sending the result to the payer or to *sign* the information prior to submission. The application SHALL give the provider the ability, but not the requirement to review any information prior to sending it to a third party. This ability may be *turned-off* by the organization and possibly the individual provider. 
-
- > If the resulting information is to be sent to a third  party (e.g., payer), the DTR SMART on FHIR App (or equivalent native app) SHALL include a configurable step to allow  the provider to review and grant permission to send the information gathered in the QuestionnaireResponse before sending.
- 
- However, this SHOULD be configurable on a site or provider basis.
-
->If the resulting information is to be sent to a third party (e.g., payer) see [Section 4.4.5.1](specification__behaviors__persisting_application_state.html#smart-on-fhir-applications-and-servers)
-
->DTR does not support creating new orders or changing existing orders. DTR supports documentation requirements for device, service, and medication requests. When the required documentation cannot be populated from the EHR, DTR provides the ability to capture the missing information.
 
 #### Relation to Clinical Data Exchange (CDex)
 
