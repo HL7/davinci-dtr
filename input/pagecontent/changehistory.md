@@ -632,3 +632,17 @@
   <a href="formal_specification.html#how-dtr-saves-context-of-dtr-for-a-relaunch">(How DTR Saves Context of DTR for a Relaunch)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36440">FHIR-36440</a>:
+  Remove the 'relaunch' section
+  <a href="formal_specification.html#app-relaunch">(App Relaunch)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36517">FHIR-36517</a>:
+  Clarification on Tasks
+  <a href="formal_specification.html">(Formal Specification)</a>
+  </li>
+</ul>

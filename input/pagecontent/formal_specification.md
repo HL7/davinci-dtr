@@ -51,22 +51,17 @@ A payer wishing to use Adaptive Forms will return a questionnaire instance compl
 
 The DTR app SHALL support loading and rendering the adaptive form developed by the payer following the SDC adaptive form workflow. If there is CQL embedded in the questionnaire or the associated library, the DTR app should be able to execute the CQL based on the questions loaded in the questionnaire. For performance, the DTR application may save the results of prior execution of the CQL where it is the same for addressing the current question(s).
 
-<blockquote class="stu-note">
-<p>
-Note: At this time SMART Web Messaging is in a draft status. Therefore implementing Adaptive Forms and Prior Authorization as described below is not required to be conformant with this IG.</p>
-</blockquote>
-
 ##### Adaptive Forms and Prior Authorization
 
 When a prior authorization comes back while using an Adaptive Form, the SMART app SHALL:
 1. Store the ClaimResponse on the EHR with a simple create, and 
 
-2. Update the "in-memory" request (e.g., ServiceRequest) to have a supportingInfo reference to the ClaimResponse. This is done using [SMART Web Messaging](http://hl7.org/fhir/uv/smart-web-messaging/2020Sep/). 
+2. Update the "in-memory" request (e.g., ServiceRequest) to have a supportingInfo reference to the ClaimResponse. 
 
 Although not detailed in this IG, it may be possible to achieve the same level of integration with a native EHR app instead of a SMART on FHIR app. The same payer sourced FHIR Questionnaire and CQL could be consumed by the native EHR app. The interface for exchanging data would need to be developed further in a method that achieves the same level of interoperability that the SMART on FHIR app achieves. A native EHR app MAY play the role of the DTR process if it reduces burden. Because of this, when the SMART on FHIR app is mentioned in this IG, native EHR app, app (application), or DTR process also applies.
 
 ---------------------
-### Retrieval of Payer Data and SMART Launch
+### Retrieval of Payer resources and SMART Launch
 The DTR process will need to retrieve resources from a payer IT system to operate properly. This application will need to obtain a FHIR Questionnaire and associated Clinical Quality Language (CQL) logic files in order to execute. The information needed to obtain the required resources will be provided as escaped JSON in the `appContext` property of the Clinical Decision Support (CDS) Hooks Card Link object, as described in [CDS Hooks](specification__cds_hooks.html#use-of-cardlinks). When launched in context of CRD and a CDS Hook, that object will have the following properties:
 
 | Field    | Optionality | Cardinality | Type  | Description |
@@ -94,7 +89,12 @@ If neither is present, the user should be prompted to select a QuestionnaireResp
 >2. Task
 >3. Order
 
-Remove the `endpoint` extension from the coverage resource. The app should always know the payer URL since it will have been registered with the payer prior to being able to access that particular payer. The app should register this information out-of-band beforehand with relevant payers.  
+#### App Relaunch 
+The DTR app SHALL support usage of two new scopes to alter the launch context: `launch/request` and `launch/response`.  If the `request` scope is included when launching, the access token bundle should return with the `request` field of the `appContext` filled.  If the `response` scope is included, it should return with the `response` field of the `appContext` filled.  
+
+At least one of the two fields `request` or `response` must be filled in order for the DTR app to successfully launch. In the case that `response` is filled but `request` is empty, the DTR process SHALL use the URL provided in the `response` property of the `appContext` to retrieve the referenced QuestionnaireResponse. The QuestionnaireResponse can be used to discover the request through the `context` extension. The app should allow the user to relaunch the deferred usage session defined by the QuestionnaireResponse. 
+
+The QuestionnaireResponse will have all the information required to request the Questionnaire and CQL from the payer server and allow relaunch of the session with previously answered questions already filled out. [Save Context for Relaunch](formal_specification.html#persisting-application-state)  
 
 This IG will support the [HRex Decision point - REST searchable?](http://build.fhir.org/ig/HL7/davinci-ehrx/exchanging.html#rest-searchable) when using RESTful endpoints to get payer resources (e.g., CQL rules and templates).
 
@@ -129,13 +129,6 @@ DTR does not support creating new orders or changing existing orders. DTR suppor
 
 #### CQL Rules
 CQL can either be embedded inline as part of an expression or referenced in a library.  All libraries needed by a questionnaire SHALL be referenced by the cqf-library extension which SHALL be resolvable by the SMART app. Metadata about the rules will be represented as a FHIR Library resource. The payer SHALL provide this as a FHIR resource, such that the DTR process will be executing a FHIR read interaction on the payer's server.
-
-#### Relaunch Session
-The DTR app SHALL support usage of two new scopes to alter the launch context: `launch/request` and `launch/response`.  If the `request` scope is included when launching, the access token bundle should return with the `request` field of the `appContext` filled.  If the `response` scope is included, it should return with the `response` field of the `appContext` filled.  
-
-At least one of the two fields `request` or `response` must be filled in order for the DTR app to successfully launch. In the case that `response` is filled but `request` is empty, the DTR process SHALL use the URL provided in the `response` property of the `appContext` to retrieve the referenced QuestionnaireResponse. The QuestionnaireResponse can be used to discover the request through the `context` extension. The app should allow the user to relaunch the deferred usage session defined by the QuestionnaireResponse. 
-
-The QuestionnaireResponse will have all the information required to request the Questionnaire and CQL from the payer server and allow relaunch of the session with previously answered questions already filled out. [Save Context for Relaunch](formal_specification.html#persisting-application-state)
 
 ---------------------
 ### Determination of Payers Supported by a DTR App
@@ -174,7 +167,7 @@ DTR process SHALL support the [Standalone launch sequence](http://hl7.org/fhir/s
 Once user identity has been established, the DTR process should allow the user to select a usage session from all of the sessions available to that particular user.
 
 #### DTR Task
-The task resource is used to capture a request for additional actions that arise from the DTR flow. This may be a request for more information from the patient or a desire to schedule a follow up treatment in order to satisfy documentation requirements.
+The task resource is used to capture a request for additional actions that arise from the DTR flow. This may be a request for more information from the patient or a desire to schedule a follow up treatment in order to satisfy documentation requirements. 
 
 Through interactions with the DTR process, a user may be prompted with a question that leads to the discovery of a needed action for the desired treatment to proceed. For example, a healthcare provider may be preparing an order for a Continuous Positive Airway Pressure (CPAP) device. In this example, the payer requires that the provider conduct a sleep study that shows a diagnosis of obstructive sleep apnea. While using the DTR process, it prompts the provider that the CQL/Questionnaire execution was unable to find a sleep study in the Electronic Health Record (EHR) system for the patient. 
 
@@ -185,8 +178,6 @@ The ability to create tasks or todos is outside of the scope of DTR and should b
 The questionnaire SHALL be able to suspend completion until all tasks are completed. How the application is suspended is left to the implementer, but the state of the questionnaire SHALL be preserved.
 
 The questionnaire SHOULD be able to suspend completion until all tasks are completed. How the application is suspended is left to the implementer, but the state of the questionnaire SHOULD be preserved. 
-
-* [DTR Task FHIR R4](StructureDefinition-dtr-task-r4.html) - [Example](Task-blood-gas-panel-task-r4.html)
 
 ---------------------
 ### Persisting Application State
@@ -306,14 +297,11 @@ The PAS Bundle linkId should be used for attached bundles containing resources n
 #### Post-Acute Orders (PAO) 
 The PAO Bundle linkId should be used for attached bundles containing resources needed for Post-Acute Orders. All the referenced resources needed for PAO shall be stored as contained resources within the QuestionnaireResponse for easier reference. These resources should include the resources collected by DTR to complete the QuestionnaireResponse, as well as the Order sent to PAO. If a response has already been received from a PAO request, this shall be stored in the QuestionnaireResponse with a reference to it in the items list as well. 
 
-#### Updating the Order
+#### Additional Workflow
 
-<blockquote class="stu-note">
-<p>
-Note: At this time <a href="http://hl7.org/fhir/uv/smart-web-messaging/2020Sep/">SMART Web Messaging</a> is at draft status. Therefore implementing the "Updating the Order" functionality as described below is not required to be conformant with this IG.</p>
-</blockquote>
+In a QuestionnaireResponse, this will be a 'repeating' question with one or more answers with a linkId of "DTR_TASK".  The question type will be 'Reference' and will refer to contained Task instances that describe workflow actions that need to occur, such as the creation of additional companion orders, pre-execution testing, follow-up orders, etc. These are created when the completion of the questionnaire has made evident that certain workflow steps necessary to satisfy payer requirements were confirmed missing by the user.  The EHR should add 'to do' items to the user's task list that correspond to the actions described within the Task instances.
 
-DTR implementations using a SMART on FHIR application SHALL support [SMART Web Messaging](http://hl7.org/fhir/uv/smart-web-messaging/2020Sep/) for updating the relevant order. After storing the completed QuestionnaireResponse, SMART Web Messaging will be used to ask the EHR to update the order to add the QuestionnaireResponse as a ‘supportingInfo’ link. DTR implementations not relying on SMART on FHIR but instead using a native application SHALL support similar functionality. 
+> **NOTE:** It may be appropriate to re-execute the DTR process once the specified tasks have been completed, as the DTR results may change.
 
 ---------------------
 ### Provenance
