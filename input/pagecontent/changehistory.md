@@ -688,3 +688,17 @@
   <a href="formal_specification.html#retrieval-of-payer-resources-and-smart-launch">(Retrieval of Payer resources and SMART Launch)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36547">FHIR-36547</a>:
+  data SHOULD NOT be stored on the payer server
+  <a href="formal_specification.html#app-relaunch">(App Relaunch)</a>
+  </li>
+</ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36540">FHIR-36540</a>:
+  Improve description of SDC Questionnaire profile
+  <a href="StructureDefinition-dtr-sdc-questionnaire.html">(DTR SDC Questionnaire)</a>
+  </li>
+</ul>
