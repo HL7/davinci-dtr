@@ -765,3 +765,10 @@
   <a href="formal_specification.html">(Formal Specification)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36253">FHIR-36253</a>:
+  DTR Spec needs a way to pass a questionnaire / response across organizations
+  <a href="formal_specification.html#questionnaire">(Questionnaire)</a>
+  </li>
+</ul>

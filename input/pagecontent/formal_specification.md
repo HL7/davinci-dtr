@@ -23,6 +23,8 @@ Note that elements with example bindings or missing bindings will not be used.
 > * [Form Behavior and Calculation](http://hl7.org/fhir/uv/sdc/STU3/behavior.html)  
 > * [Advanced Form Rendering](http://hl7.org/fhir/uv/sdc/STU3/rendering.html)
 
+##### Extension Usage
+With current EHR capabilities with respect to updating 'request' resources, there is no mechanism to revise the 'request' resource to have its "supportingInfo" (or "insurance") element point to the QuestionnaireResponse/Bundle/ClaimResponse that results from the DTR process. Instead, extensions are used to reference the relevant order. DTR clients SHOULD update their 'request' resources with the appropriate "supportingInfo" or "insurance" link to the relevant resource.
 
 #### Questionnaire Response
 The QuestionnaireResponse resource is used to represent a response to the Questionnaire presented by the payer. This profile uses the [author extension](http://www.hl7.org/implement/standards/fhir/extension-questionnaireresponse-author.html) when items are based on information input into the DTR process by the user.
@@ -269,7 +271,7 @@ The QuestionnaireResponse may include groups (items with specific linkIds) that 
 The PAS Bundle linkId should be used for attached bundles containing resources needed for PAS. All of the referenced resources needed for PAS shall be stored as contained resources within the QuestionnaireResponse for easier reference. These resources should include the resources collected by DTR to complete the QuestionnaireResponse, as well as the Claim sent to PAS. If the ClaimResponse has already been received from a PAS request, this shall be stored in the QuestionnaireResponse with a reference to it in the items list as well. 
  
 #### Post-Acute Orders (PAO) 
-The PAO Bundle linkId should be used for attached bundles containing resources needed for Post-Acute Orders. All the referenced resources needed for PAO shall be stored as contained resources within the QuestionnaireResponse for easier reference. These resources should include the resources collected by DTR to complete the QuestionnaireResponse, as well as the Order sent to PAO. If a response has already been received from a PAO request, this shall be stored in the QuestionnaireResponse with a reference to it in the items list as well. 
+The PAO Bundle linkId should be used for attached bundles containing resources needed for Post-Acute Orders. All the referenced resources needed for PAO shall be stored as contained resources within the QuestionnaireResponse for easier reference. These resources should include the resources collected by DTR to complete the QuestionnaireResponse, as well as the Order sent to PAO. If a response has already been received from a PAO request, this shall be stored in the QuestionnaireResponse with a reference to it in the items list as well. (See the [Post-Acute Orders Implementation Guide](http://build.fhir.org/ig/HL7/dme-orders/))
 
 #### Additional Workflow
 
