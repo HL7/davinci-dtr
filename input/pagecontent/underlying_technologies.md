@@ -54,6 +54,8 @@ This IG marks elements with the Must Support flag in its profiles.  Implementati
 
 This IG also references the [US Core IG](http://hl7.org/fhir/us/core/STU3.1.1/). Da Vinci DTR implementations SHALL conform to the US Core IG [Must Support](https://hl7.org/fhir/us/core/STU3.1.1/general-guidance.html#must-support) Guidance where US Core IG resources are used.
 
+This implementation guide will adopt by reference the following [HRex Conformance Requirements](http://build.fhir.org/ig/HL7/davinci-ehrx/conformance.html)  In addition, systems SHALL comply with additional requirements called out in IG text and Profile definitions.
+
 <div markdown="1" class="new-content">
 ### Impact on payer processes
 Information passed to DTR will typically contain clinical terminologies, might not contain billing terminologies, and will generally not include billing modifier codes or similar information typically included in prior authorization requests. Services will also need to consider that the mapping they perform between clinical terminologies and billing codes may be different than the bill coding process performed by the client system when claims are eventually submitted. This may mean that assertions about coverage or prior authorization requirements will need to be expressed conditionally. e.g., “Provided this service is billed as X, Y or Z, then prior authorization is not needed”.  

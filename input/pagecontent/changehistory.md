@@ -786,3 +786,10 @@
   <a href="underlying_technologies.html#impact-on-payer-processes">(Impact on Payer Systems)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36119">FHIR-36119</a>:
+  DTR SDC Questionnaire For Adaptive Form Profile Inappropriately Marks Elements As Must Support
+  <a href="underlying_technologies.html#must-support">(Must Support)</a>
+  </li>
+</ul>
