@@ -807,3 +807,10 @@
   <a href="formal_specification.html#cql">(CQL)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36466">FHIR-36466</a>:
+  Provider Attestation guidance needs fixing
+  <a href="formal_specification.html#provider-attestation">(Provider Attestation)</a>
+  </li>
+</ul>
