@@ -20,7 +20,6 @@ Description:    "The NutritionOrder resource is used for requesting oral diets, 
 * ^date = "2023-05-29T02:27:35+00:00"
 
 * status MS
-
 * intent MS
 
 * patient only Reference(us-core-patient)
