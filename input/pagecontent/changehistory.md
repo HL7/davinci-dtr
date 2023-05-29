@@ -793,3 +793,10 @@
   <a href="underlying_technologies.html#must-support">(Must Support)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36373">FHIR-36373</a>:
+  Clarify US Core expectations
+  <a href="underlying_technologies.html#fhir">(FHIR)</a>
+  </li>
+</ul>

@@ -33,9 +33,9 @@ This IG supports the [R4](http://hl7.org/fhir/R4/index.html) version of the FHIR
 
 | FHIR Version |
 | ------------ |
-| [FHIR R4 US Core](http://hl7.org/fhir/us/core/STU3.1.1/) |
+| [FHIR R4 US Core](http://hl7.org/fhir/us/core/STU3.1.1/) |  
 
-Implementers should also familiarize themselves with the FHIR resources used within this IG.
+Implementers will need the knowledge of [US Core](http://hl7.org/fhir/us/core/STU3.1.1/) to access information for pre population via CQL calls to *21st Century* compliant FHIR APIs. The light client should import the US Core Server capability statement.  
 
 | Resources |
 | ------------ |
@@ -43,8 +43,6 @@ Implementers should also familiarize themselves with the FHIR resources used wit
 | [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) |
 | [Task](http://hl7.org/fhir/R4/task.html) |
 
-### US Core
-Clinical systems SHALL use the specification defined by [US Core](http://hl7.org/fhir/us/core/STU3.1.1/) in exchanging information with payers. Implementers should be familiar with this specification.
 
 ### SMART on FHIR
 Client systems conformant to this IG SHALL also serve as a [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) client. This is to allow DTR functionality to be invoked outside of regular EHR clinical workflows using a SMART on FHIR app to provide a consistent way of evaluating payer rules and documentation requirements across EHR implementations. As such client implementers will also need to be familiar with the [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) specification. Payer implementers only need to be familiar with the SMART on FHIR specification if they plan to develop SMART apps for launch by CDS Hooks or other purposes.
