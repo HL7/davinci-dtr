@@ -758,3 +758,10 @@
   <a href="formal_specification.html#retrieval-of-payer-resources-and-smart-launch">(Retrieval of Payer resources and SMART Launch)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36537">FHIR-36537</a>:
+  DocumentReference profile isn't sufficient
+  <a href="formal_specification.html">(Formal Specification)</a>
+  </li>
+</ul>
