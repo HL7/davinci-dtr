@@ -751,3 +751,10 @@
   <a href="use_cases.html#system-actors">(System Actors)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36438">FHIR-36438</a>:
+  Questionnaire guidance is incorrect
+  <a href="formal_specification.html#retrieval-of-payer-resources-and-smart-launch">(Retrieval of Payer resources and SMART Launch)</a>
+  </li>
+</ul>

@@ -117,21 +117,6 @@ Payers SHALL require the DTR process to authenticate in order to retrieve resour
 | subject | REQUIRED | *string* | The OAuth 2.0 client identifier of the DTR process, as registered with the payer's authorization server. |
 {: .grid } 
 
-#### Questionnaire
-The DTR process SHALL use the URL provided in the `questionnaire` property of the `appContext` to retrieve a Questionnaire resource. The payer SHALL provide this as a FHIR resource, such that the DTR process will be executing a FHIR read interaction on the payer's server. The returned Questionnaire resource SHALL conform to the [CQF-Questionnaire Profile](http://hl7.org/fhir/R4/cqf-questionnaire.html) and MAY conform to [Structured Data Capture (SDC) Advanced Rendering Profile]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/rendering.html).
-
-The Questionnaire SHALL have a `cqf-library` extension property specified. That property SHALL provide the location of one or more CQL libraries needed to execute the payer rules.
-
-Questionnaires and ValueSets SHALL be version specific to address the possibility of breaking changes between differing versions.
-
-> There is no need for the user to see the Questionnaire if it can be auto completed, unless they need to approve sending the result to the payer or to *sign* the information prior to submission. The application SHALL give the provider the ability, but not the requirement to review any information prior to sending it to a third party. This ability may be *turned-off* by the organization and possibly the individual provider. 
->
-> If the resulting information is to be sent to a third  party (e.g., payer), the DTR SMART App (or equivalent DTR Native App) SHALL include a configurable step to allow  the provider to review and grant permission to send the information gathered in the QuestionnaireResponse before sending. 
->
-> However, this SHOULD be configurable on a site or provider basis.
-
-DTR does not support creating new orders or changing existing orders. DTR supports documentation requirements for device, service, and medication requests. When the required documentation cannot be populated from the EHR, DTR SHOULD provide the ability to capture the missing information.
-
 #### CQL Rules
 CQL can either be embedded inline as part of an expression or referenced in a library.  All libraries needed by a questionnaire SHALL be referenced by the cqf-library extension which SHALL be resolvable by the SMART app. Metadata about the rules will be represented as a FHIR Library resource. The payer SHALL provide this as a FHIR resource, such that the DTR process will be executing a FHIR read interaction on the payer's server.
 
