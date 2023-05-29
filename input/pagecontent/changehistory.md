@@ -737,3 +737,10 @@
   <a href="formal_specification.html#launch-outside-of-crd">(Launch Outside of CRD)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36988">FHIR-36988</a>:
+  Not clear where to get Requester Organization when creating PAS request
+  <a href="formal_specification.html#requesting-provider-and-organization">(Requesting Provider and Organization)</a>
+  </li>
+</ul>

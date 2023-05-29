@@ -60,6 +60,9 @@ When a prior authorization comes back while using an Adaptive Form, the SMART ap
 
 Although not detailed in this IG, it may be possible to achieve the same level of integration with a DTR Native App instead of a DTR SMART app. The same payer sourced FHIR Questionnaire and CQL could be consumed by the DTR Native App. The interface for exchanging data would need to be developed further in a method that achieves the same level of interoperability that the SMART on FHIR app achieves. A DTR Native App MAY play the role of the DTR process if it reduces burden. Because of this, when the DTR SMART app is mentioned in this IG, DTR Native App, app (application), or DTR process also applies.
 
+##### Requesting Provider and Organization
+To provide a mechanism to support Prior Authorization bundle creation for submission, this guide provides multiple request/order profiles that enable the requesting provider and organization to be accessible:  [DTR Service Request](StructureDefinition-dtr-servicerequest.html), [DTR Device Request](StructureDefinition-dtr-devicerequest.html), [DTR Medication Request](StructureDefinition-dtr-medicationrequest.html), and [DTR Nutrition Order](StructureDefinition-dtr-nutritionorder.html)
+
 ---------------------
 ### Retrieval of Payer resources and SMART Launch
 The DTR process will need to retrieve resources from a payer IT system to operate properly. This application will need to obtain a FHIR Questionnaire and associated Clinical Quality Language (CQL) logic files in order to execute. The information needed to obtain the required resources will be provided as escaped JSON in the `appContext` property of the Clinical Decision Support (CDS) Hooks Card Link object, as described in [CDS Hooks](specification__cds_hooks.html#use-of-cardlinks). When launched in context of CRD and a CDS Hook, that object will have the following properties:
