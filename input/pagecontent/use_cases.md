@@ -1,18 +1,20 @@
 ### System Actors
+DTR Fundamentally supports four different system actors:
 
-#### Payers
-A Payer is an entity who pays for the service of providers. The majority of payers here are also referred to as health insurance companies.
+> **1. Light DTR EHRs**  
+> EHR systems which leverage a SMART app to manage data capture and rules execution, but which must be able to launch the SMART app, respond to app queries, and store the final documentation results
+>
+> **2. Full DTR EHRs**  
+> EHR systems which manage DTR data capture and execution directly and also allow the rules to access other data and store final documentation results
+>
+> **3. DTR Smart Apps**  
+> SMART on FHIR applications that take context from an EHR, retrieve questionnaires and rule sets from a DTR Payer server, render the Questionnaires and capture data, and store the results on payer and/or EHR systems 
+>
+> **4. DTR Payer Servers**  
+> Responds to operations requesting Questionnaires, serve as a temporary repository for in-progress QuestionnaireResponses, and (optionally) help in the processing of adaptive questionnaires.  In this specification, payer rules are [CQL statements](https://cql.hl7.org//) used in a provider context to facilitate meeting documentation requirements.   
+>
 
-#### Payer IT System
-The payer IT systems (in-house or out-sourced services) are the primary systems responding to DTR queries for questionnaire's CQL and supporting artifacts.
-
-#### Payer Rules
-In this specification, payer rules are [CQL statements](https://cql.hl7.org//) used in a provider context to facilitate meeting documentation requirements.   
-
-#### Healthcare Provider Organization
-A healthcare provider organization contains medical providers such as hospitals, doctors, etc.
-
-#### EHR System
+### EHR System
 The goal of DTR is to collect clinical documentation and/or to encourage the completion of documentation that demonstrates medical necessity for ordered items or services. The completion of documentation for ordered items or services are required by payers for prior authorization or other coverage requirements.  This information gathering is done in conjunction with the Electronic Health Record (EHR) system.
 
 It is possible to have a process where the focus is on the interaction with the EHR and an external application. Examples of external systems are administrative, payment, practice management, scheduling, and other applications.

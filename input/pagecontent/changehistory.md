@@ -744,3 +744,10 @@
   <a href="formal_specification.html#requesting-provider-and-organization">(Requesting Provider and Organization)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36366">FHIR-36366</a>:
+  Actors are unclear and in wrong place
+  <a href="use_cases.html#system-actors">(System Actors)</a>
+  </li>
+</ul>
