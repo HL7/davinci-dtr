@@ -779,3 +779,10 @@
   <a href="formal_specification.html">(Formal Specification)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-39443">FHIR-39443</a>:
+  Add expectations about terminology mapping
+  <a href="underlying_technologies.html#impact-on-payer-processes">(Impact on Payer Systems)</a>
+  </li>
+</ul>
