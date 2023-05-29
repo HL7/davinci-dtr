@@ -54,3 +54,11 @@ This IG marks elements with the Must Support flag in its profiles.  Implementati
 
 This IG also references the [US Core IG](http://hl7.org/fhir/us/core/STU3.1.1/). Da Vinci DTR implementations SHALL conform to the US Core IG [Must Support](https://hl7.org/fhir/us/core/STU3.1.1/general-guidance.html#must-support) Guidance where US Core IG resources are used.
 
+<div markdown="1" class="new-content">
+### Impact on payer processes
+Information passed to DTR will typically contain clinical terminologies, might not contain billing terminologies, and will generally not include billing modifier codes or similar information typically included in prior authorization requests. Services will also need to consider that the mapping they perform between clinical terminologies and billing codes may be different than the bill coding process performed by the client system when claims are eventually submitted. This may mean that assertions about coverage or prior authorization requirements will need to be expressed conditionally. e.g., “Provided this service is billed as X, Y or Z, then prior authorization is not needed”.  
+
+In situations where DTR is aware of the likely billing codes at the time of ordering, they MAY send these codes as additional CodeableConcept.coding repetitions to assist in server processing. If CPT is used, note the ability to convey CPT modifier codes via post-coordination as described in the [Using CPT](https://terminology.hl7.org/CPT.html) page on terminology.hl7.org.  
+
+It is more efficient if mappings can be shared across payers and providers. This implementation guide encourages industry participants to cooperate on the development of shared mappings and/or to work with terminology developers (e.g. AMA for CPT codes) to develop shared mappings as part of their code maintenance process.
+</div>
