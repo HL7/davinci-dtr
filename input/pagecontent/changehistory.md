@@ -772,3 +772,10 @@
   <a href="formal_specification.html#questionnaire">(Questionnaire)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-34151">FHIR-34151</a>:
+  Need an ability for DTR to store prior authorization
+  <a href="formal_specification.html">(Formal Specification)</a>
+  </li>
+</ul>
