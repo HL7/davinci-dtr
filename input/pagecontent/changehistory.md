@@ -800,3 +800,10 @@
   <a href="underlying_technologies.html#fhir">(FHIR)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36299">FHIR-36299</a>:
+  Mapping CQLs to PA criteria
+  <a href="formal_specification.html#cql">(CQL)</a>
+  </li>
+</ul>

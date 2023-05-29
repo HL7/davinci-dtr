@@ -412,7 +412,7 @@ The flow of execution of the CQL will be determined by the associated Questionna
 
 ---------------------
 ### Requesting Additional Information from the User
-While the goal of DTR is to automatically gather all of the necessary information to satisfy payer rules and documentation requirements without interrupting the user, this is not possible in all cases. 
+While the goal of DTR is to automatically gather all of the necessary information to satisfy documentation requirements without interrupting the user, this is not possible in all cases. 
 
 It is likely that at least some answers will not be able to be gleaned from the EHR, due to missing data, data that is not computable, or data that is not represented in a standardized way.  Also, even where answers are determined automatically, users may wish to review them for accuracy and completeness.  Therefore, the system acting as a form filler is responsible for displaying all 'enabled' questions, groups and display items to the end user - for completion and/or review
 
