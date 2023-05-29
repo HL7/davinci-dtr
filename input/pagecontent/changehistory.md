@@ -730,3 +730,10 @@
   <a href="formal_specification.html#persisting-application-state">(Persisting Application State)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36129">FHIR-36129</a>:
+  Initial DTR Launches should not be restricted to CDS Hooks Cards within the CRD workflow.
+  <a href="formal_specification.html#launch-outside-of-crd">(Launch Outside of CRD)</a>
+  </li>
+</ul>
