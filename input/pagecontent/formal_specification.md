@@ -24,7 +24,7 @@ Note that elements with example bindings or missing bindings will not be used.
 > * [Advanced Form Rendering](http://hl7.org/fhir/uv/sdc/STU3/rendering.html)
 
 ##### Extension Usage
-With current EHR capabilities with respect to updating 'request' resources, there is no mechanism to revise the 'request' resource to have its "supportingInfo" (or "insurance") element point to the QuestionnaireResponse/Bundle/ClaimResponse that results from the DTR process. Instead, extensions are used to reference the relevant order. DTR clients SHOULD update their 'request' resources with the appropriate "supportingInfo" or "insurance" link to the relevant resource.
+With current EHR capabilities with respect to updating 'request' resources, there is no mechanism to revise the 'request' resource to have its "supportingInfo" (or "insurance") element point to the QuestionnaireResponse/Bundle/[ClaimResponse](http://hl7.org/fhir/us/davinci-hrex/STU1/StructureDefinition-hrex-claimresponse.html) that results from the DTR process. Instead, extensions are used to reference the relevant order. DTR clients SHOULD update their 'request' resources with the appropriate "supportingInfo" or "insurance" link to the relevant resource.
 
 #### Questionnaire Response
 The QuestionnaireResponse resource is used to represent a response to the Questionnaire presented by the payer. This profile uses the [author extension](http://www.hl7.org/implement/standards/fhir/extension-questionnaireresponse-author.html) when items are based on information input into the DTR process by the user.
@@ -56,9 +56,9 @@ The DTR app SHALL support loading and rendering the adaptive form developed by t
 ##### Adaptive Forms and Prior Authorization
 
 When a prior authorization comes back while using an Adaptive Form, the SMART app SHALL:
-1. Store the ClaimResponse on the EHR with a simple create, and 
+1. Store the [ClaimResponse](http://hl7.org/fhir/us/davinci-hrex/STU1/StructureDefinition-hrex-claimresponse.html) on the EHR with a simple create, and 
 
-2. Update the "in-memory" request (e.g., ServiceRequest) to have a supportingInfo reference to the ClaimResponse. 
+2. Update the "in-memory" request (e.g., ServiceRequest) to have a supportingInfo reference to the [ClaimResponse](http://hl7.org/fhir/us/davinci-hrex/STU1/StructureDefinition-hrex-claimresponse.html). 
 
 Although not detailed in this IG, it may be possible to achieve the same level of integration with a DTR Native App instead of a DTR SMART app. The same payer sourced FHIR Questionnaire and CQL could be consumed by the DTR Native App. The interface for exchanging data would need to be developed further in a method that achieves the same level of interoperability that the SMART on FHIR app achieves. A DTR Native App MAY play the role of the DTR process if it reduces burden. Because of this, when the DTR SMART app is mentioned in this IG, DTR Native App, app (application), or DTR process also applies.
 
@@ -277,7 +277,7 @@ The QuestionnaireResponse may include groups (items with specific linkIds) that 
 
  
 #### Prior Authorization Support (PAS) 
-The PAS Bundle linkId should be used for attached bundles containing resources needed for PAS. All of the referenced resources needed for PAS shall be stored as contained resources within the QuestionnaireResponse for easier reference. These resources should include the resources collected by DTR to complete the QuestionnaireResponse, as well as the Claim sent to PAS. If the ClaimResponse has already been received from a PAS request, this shall be stored in the QuestionnaireResponse with a reference to it in the items list as well. 
+The PAS Bundle linkId should be used for attached bundles containing resources needed for PAS. All of the referenced resources needed for PAS shall be stored as contained resources within the QuestionnaireResponse for easier reference. These resources should include the resources collected by DTR to complete the QuestionnaireResponse, as well as the Claim sent to PAS. If the [ClaimResponse](http://hl7.org/fhir/us/davinci-hrex/STU1/StructureDefinition-hrex-claimresponse.html) has already been received from a PAS request, this shall be stored in the QuestionnaireResponse with a reference to it in the items list as well. (All references to a ClaimResponse SHALL refer to the [HRex Prior Authorization profile of ClaimResponse](http://hl7.org/fhir/us/davinci-hrex/STU1/StructureDefinition-hrex-claimresponse.html))
  
 #### Post-Acute Orders (PAO) 
 The PAO Bundle linkId should be used for attached bundles containing resources needed for Post-Acute Orders. All the referenced resources needed for PAO shall be stored as contained resources within the QuestionnaireResponse for easier reference. These resources should include the resources collected by DTR to complete the QuestionnaireResponse, as well as the Order sent to PAO. If a response has already been received from a PAO request, this shall be stored in the QuestionnaireResponse with a reference to it in the items list as well. (See the [Post-Acute Orders Implementation Guide](http://build.fhir.org/ig/HL7/dme-orders/))

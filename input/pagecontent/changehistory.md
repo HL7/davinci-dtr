@@ -835,3 +835,10 @@
   <a href="specification__cds_hooks.html#use-of-cardlinks">(Use of Card.links)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36004">FHIR-36004</a>:
+  Change to use the CRD unsolicited prior auth profile
+  <a href="formal_specification.html#prior-authorization-support-pas">(Prior Authorization Support (PAS))</a>
+  </li>
+</ul>
