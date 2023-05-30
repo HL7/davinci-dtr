@@ -267,7 +267,7 @@ The DTR application shall save the QuestionnaireResponse to the EHR upon complet
  
 The QuestionnaireResponse may include groups (items with specific linkIds) that contain references to resources to include. These may be attachments needed by either PAS or PAO. Also  subject, author, and source will be included.
 
-> There are some expectations for how DTR will pass this information:  
+> There are some expectations around how DTR will pass this information:  
 > 
 > * Save the QuestionnaireResponse (only) on the EHR once it is complete   
 >    
