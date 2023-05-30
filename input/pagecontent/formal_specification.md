@@ -269,11 +269,11 @@ The QuestionnaireResponse may include groups (items with specific linkIds) that 
 
 > There are some expectations for how DTR will pass this information:  
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp; **1**. Save the QuestionnaireResponse (only) on the EHR once it is complete  
+> * Save the QuestionnaireResponse (only) on the EHR once it is complete   
 >    
-> &nbsp;&nbsp;&nbsp;&nbsp; **2**. The QuestionnaireResponse may include groups (with magic linkIds) that contain references to resources to include, for example,as attachments in PAS, in claim submission or as attachments to the order (e.g. PAO)  
+> * The QuestionnaireResponse may include groups (with magic linkIds) that contain references to resources to include, for example,as attachments in PAS, in claim submission or as attachments to the order (e.g. PAO)   
 >   
-> &nbsp;&nbsp;&nbsp;&nbsp; **3**. There SHOULD be a magic linkId that includes the order id of the order the   QuestionnaireResponse is associated with that an EHR could use after-the-fact to establishing a link (if the temporary id of the in-memory order is retained/meaningful)  
+> * There SHOULD be a magic linkId that includes the order id of the order the   QuestionnaireResponse is associated with that an EHR could use after-the-fact to establishing a link (if the temporary id of the in-memory order is retained/meaningful)   
 
  
 #### Prior Authorization Support (PAS) 
