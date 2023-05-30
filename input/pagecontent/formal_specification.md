@@ -274,7 +274,7 @@ There is an expected methodology for how DTR will pass this information:
 2) The QuestionnaireResponse may include groups (with magic linkIds) that contain references to resources to include, for example,as attachments in PAS, in claim submission or as attachments to the order (e.g. PAO)  
    
 3) There SHOULD be a magic linkId that includes the order id of the order the   QuestionnaireResponse is associated with that an EHR could use after-the-fact to establishing a link (if the temporary id of the in-memory order is retained/meaningful)  
-4) 
+
  
 #### Prior Authorization Support (PAS) 
 The PAS Bundle linkId should be used for attached bundles containing resources needed for PAS. All of the referenced resources needed for PAS shall be stored as contained resources within the QuestionnaireResponse for easier reference. These resources should include the resources collected by DTR to complete the QuestionnaireResponse, as well as the Claim sent to PAS. If the ClaimResponse has already been received from a PAS request, this shall be stored in the QuestionnaireResponse with a reference to it in the items list as well. 
