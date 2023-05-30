@@ -38,8 +38,6 @@ pages:
     title: Formal Specification
   specification__best_practices.md:
     title: Best Practices
-  specification__privacy_safety_and_security.md:
-    title: Privacy, Safety and Security
   specification__cds_hooks.md:
     title: CDS Hooks
   artifacts.html:
