@@ -821,3 +821,10 @@
   <a href="artifacts.html#structures-resource-profiles">(Resource Profiles)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-33226">FHIR-33226</a>:
+  Formalize how DTR passes information to PAS, PAO or other exchange IG
+  <a href="aformal_specification.html#how-dtr-passes-information-to-pas-pao-or-other-exchanges">(How DTR passes information to PAS, PAO or Other Exchanges)</a>
+  </li>
+</ul>
