@@ -1,6 +1,8 @@
 ### Use of Card.links
 One entry point into the DTR process is launching from a [Clinical Decision Support (CDS) Hooks Card](https://cds-hooks.hl7.org/1.0/#card-attributes). 
 
+> **NOTE**: As a part of a CDS Hooks response, if there is a need for further information then the payer IT system MAY return a Card object with a Link object populated in the Card.links property. If the Link object has a URL property set to the launch URL of a DTR process, this can still be overridden by the EHR or Provider's preferred DTR application. 
+
 Details of the DTR launch process from CRD can be found [here](https://build.fhir.org/ig/HL7/davinci-crd/hooks.html#launch-smart-application)
 
 ### Establish Patient Context
