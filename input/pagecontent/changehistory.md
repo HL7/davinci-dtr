@@ -814,3 +814,10 @@
   <a href="formal_specification.html#provider-attestation">(Provider Attestation)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-34103">FHIR-34103</a>:
+  Clarify minimum Questionnaire capabilities
+  <a href="artifacts.html#structures-resource-profiles">(Resource Profiles)</a>
+  </li>
+</ul>
