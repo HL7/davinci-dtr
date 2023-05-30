@@ -842,3 +842,10 @@
   <a href="formal_specification.html#prior-authorization-support-pas">(Prior Authorization Support (PAS))</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36467">FHIR-36467</a>:
+  Need a section on privacy/security
+  <a href="formal_specification.html#privacy-safety-and-security">(Privacy, Safety and Security)</a>
+  </li>
+</ul>
