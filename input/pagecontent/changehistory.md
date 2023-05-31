@@ -832,7 +832,7 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36219">FHIR-36219</a>:
   The CDS Hooks Card Link object should not require a DTR launch URL
-  <a href="specification__cds_hooks.html#use-of-cardlinks">(Use of Card.links)</a>
+  <a href="formal_specification.html#use-of-cardlinks">(Use of Card.links)</a>
   </li>
 </ul>
 <ul> 
