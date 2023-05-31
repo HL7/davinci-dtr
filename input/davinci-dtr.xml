@@ -65,24 +65,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/dtr-task-r4"/>
-      </reference>
-      <name value="DTR Task - R4"/>
-      <description value="The Task resource is used to allow users to generate requests for information during the flow of DTR"/>
-      <exampleBoolean value="false"/>
-      <groupingId value="profiles"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="Task/blood-gass-panel-task-r4"/>
-      </reference>
-      <name value="DTR Task Example - R4"/>
-      <description value="An example task to request the creation of a blood gass panel"/>
-      <exampleCanonical value="http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-task-r4"/>
-      <groupingId value="examples"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/dtr-questionnaireresponse-r4"/>
       </reference>
       <name value="DTR QuestionnaireResponse - R4"/>
@@ -109,8 +91,8 @@
         <generation value="markdown"/>
       </page>      
       <page>
-        <nameUrl value="use_case.html"/>
-        <title value="Use Case"/>
+        <nameUrl value="use_cases.html"/>
+        <title value="Use Cases"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -122,11 +104,6 @@
         <nameUrl value="formal_specification.html"/>
         <title value="Formal Specification"/>
         <generation value="markdown"/>
-	  </page>
-	  <page>
-		<nameUrl value="specification__privacy_safety_and_security.html"/>
-		<title value="Privacy, Safety and Security"/>
-	    <generation value="markdown"/>
 	  </page>
       <page>
         <nameUrl value="specification__cds_hooks.html"/>
