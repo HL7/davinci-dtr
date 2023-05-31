@@ -53,7 +53,7 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36355">FHIR-36355</a>:
   Refactor the overview
-  <a href="index.html">(Overview)</a>
+  <a href="use_cases.html">(Overview)</a>
   </li>
 </ul>
 <ul> 
@@ -137,14 +137,14 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36532">FHIR-36532</a>:
   Operation needs a detailed description
-  <a href="artifacts.html#behavior-operation-definitions">(DTRQuestionnaireOperation)</a>
+  <a href="OperationDefinition-questionnaire-package.html">(DTRQuestionnairePackageOperation)</a>
   </li>
 </ul>
 <ul> 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36492">FHIR-36492</a>:
   Handling updates to Questionnaire.effectivePeriod
-  <a href="OperationDefinition-questionnaire-package.html">(OperationDefinition: DTRQuestionnaireOperation)</a>
+  <a href="OperationDefinition-questionnaire-package.html">(DTRQuestionnairePackageOperation)</a>
   </li>
 </ul>
 <ul> 
@@ -200,7 +200,7 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36542">FHIR-36542</a>:
   Context extension needs more definition
-  <a href="StructureDefinition-context.html">(Extension: QuestionnaireResponseContext)</a>
+  <a href="artifacts.html#artifacts-summary">(Artifacts Summary)</a>
   </li>
 </ul>
 <ul> 
@@ -256,14 +256,14 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-34121">FHIR-34121</a>:
   Provide a mechanism for Template to specify what to do when DTR ends
-  <a href="use_cases.html#crd-and-dtr-workflow">(QuestionnaireResponse)</a>
+  <a href="StructureDefinition-dtr-questionnaireresponse-r4.html">(QuestionnaireResponse)</a>
   </li>
 </ul>
 <ul> 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-33224">FHIR-33224</a>:
   Add support for SDC Adaptive forms
-  <a href="underlying_technologies.html#structured-data-capture">(Structured Data Capture)</a>
+  <a href="http://build.fhir.org/ig/HL7/sdc/adaptive.html">(Structured Data Capture)</a>
   </li>
 </ul>
 <ul> 
@@ -305,7 +305,7 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36390">FHIR-36390</a>:
   Launch instructions need correction/clarification
-  <<a href="formal_specification.html">(Formal Specification)</a>
+  <a href="formal_specification.html">(Formal Specification)</a>
   </li>
 </ul>
 <ul> 
