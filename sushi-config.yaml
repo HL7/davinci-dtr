@@ -36,10 +36,6 @@ pages:
     title: Technical Background and Underlying Technologies
   formal_specification.md:
     title: Formal Specification
-  specification__best_practices.md:
-    title: Best Practices
-  specification__cds_hooks.md:
-    title: CDS Hooks
   artifacts.html:
     title: Artifacts Summary
   changehistory.md:
