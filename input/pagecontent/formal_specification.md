@@ -91,7 +91,7 @@ For cases where the DTR process is being launched outside the context of Coverag
 
 ---------------------
 ### Retrieval of Payer resources and SMART Launch
-The DTR process will need to retrieve resources from a payer IT system to operate properly. This application will need to obtain a FHIR Questionnaire and associated Clinical Quality Language (CQL) logic files in order to execute. The information needed to obtain the required resources will be provided as escaped JSON in the `appContext` property of the Clinical Decision Support (CDS) Hooks Card Link object, as described in [CDS Hooks](formal_specification.html##use-of-cardlinks). When launched in context of CRD and a CDS Hook, that object will have the following properties:
+The DTR process will need to retrieve resources from a payer IT system to operate properly. This application will need to obtain a FHIR Questionnaire and associated Clinical Quality Language (CQL) logic files in order to execute. The information needed to obtain the required resources will be provided as escaped JSON in the `appContext` property of the Clinical Decision Support (CDS) Hooks Card Link object, as described in [CDS Hooks](formal_specification.html#use-of-cardlinks). When launched in context of CRD and a CDS Hook, that object will have the following properties:
 
 | Field    | Optionality | Cardinality | Type  | Description |
 | -------- | ----------- | ------      | -------- | ----------- |

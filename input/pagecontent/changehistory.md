@@ -67,7 +67,7 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36378">FHIR-36378</a>:
   Clarify CQL version expectations
-  <a href="underlying_technologies.html#clinical-quality-language">(Clinical Quality Language)</a>
+  <a href="formal_specification.html#cql">(Clinical Quality Language)</a>
   </li>
 </ul>
 <ul> 
@@ -326,7 +326,7 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-40438">FHIR-40438</a>:
   Section on DTR use of US Core has link which points to general US Core page instead of 3.1.1
-  <a href="underlying_technologies.html#us-core">(SMART on FHIR)</a>
+  <a href="underlying_technologies.html">(Technical Background and Underlying Technologies)</a>
   </li>
 </ul>
 <ul> 
@@ -395,7 +395,7 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36369">FHIR-36369</a>:
   Payer
-  <a href="use_cases.html#payer-it-system">(Payer IT System)</a>
+  <a href="use_cases.html#system-actors">(Payer IT System)</a>
   </li>
 </ul>
 <ul> 
@@ -587,7 +587,7 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36410">FHIR-36410</a>:
   Title and content don't jive
-  <a href="formal_specification.html#retrieval-of-payer-data-and-smart-launch">(Retrieval of Payer Data and SMART Launch)</a>
+  <a href="formal_specification.html#retrieval-of-payer-resources-and-smart-launch">(Retrieval of Payer Data and SMART Launch)</a>
   </li>
 </ul>
 <ul> 
@@ -832,7 +832,7 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36219">FHIR-36219</a>:
   The CDS Hooks Card Link object should not require a DTR launch URL
-  <a href="formal_specification.html#use-of-cardlinks">(Use of Card.links)</a>
+  <a href="formal_specification.html#cds-hooks">(Use of Card.links)</a>
   </li>
 </ul>
 <ul> 
