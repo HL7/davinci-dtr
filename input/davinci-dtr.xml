@@ -106,16 +106,6 @@
         <generation value="markdown"/>
 	  </page>
       <page>
-        <nameUrl value="specification__cds_hooks.html"/>
-        <title value="CDS Hooks"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
-		<nameUrl value="specification__best_practices.html"/>
-		<title value="Best Practices"/>
-		<generation value="markdown"/>
-	  </page>
-      <page>
         <nameUrl value="examples.html"/>
         <title value="Examples"/>
         <generation value="markdown"/>
