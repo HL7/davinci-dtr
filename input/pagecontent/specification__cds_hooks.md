@@ -18,4 +18,4 @@ Even after an application has been successfully registered, payers and EHRs SHOU
 
 In [Step 3 of the launch sequence](http://hl7.org/fhir/smart-app-launch/#step-3-app-exchanges-authorization-code-for-access-token), in the case where the EHR system is returning a response with an access token, the system SHALL also provide a patient property set to the subject patient identifier of this interaction.
 
-For cases where the DTR process is being launched outside the context of Coverage Requirements Discovery workflow, please see [Section 4.4.8](specification__behaviors__launch_outside_of_CRD.html).
+For cases where the DTR process is being launched outside the context of Coverage Requirements Discovery workflow, please see [Launch Outside of CRD](formal_specification.html#launch-outside-of-crd).

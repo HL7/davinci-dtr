@@ -147,7 +147,7 @@ The launch context, which comes to the DTR app through the access token bundle, 
 To start a new session outside of the context of the CRD workflow, a user or EHR should initiate the launch and pass DTR a fhirContext with the “Order” and “Coverage” fields filled. The DTR app SHALL use this information to invoke the `$questionnaire-package` operation on the payer server, which should return a Questionnaire and associated CQL resources. If the base endpoint of the payer server is contained in the `Coverage` resource extension, then the app can be automatically launched. Otherwise, a user will have to manually select which payer to interact with.
 
 #### When the EHR is in a patient context
-When the user of the EHR is working in the context of an individual patient and the EHR system allows the launch of a [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) application, launching of a DTR compliant application SHOULD follow the [EHR launch sequence](http://hl7.org/fhir/smart-app-launch/#ehr-launch-sequence) as described in [Section 4.2.2](specification__cds_hooks.html#establish-patient-context) which will allow the DTR process to establish the patient of interest. When the user of the EHR is not working in the context of an individual patient and the EHR system allows the launch of a SMART on FHIR application, the DTR process should allow the user to select a usage session from all of the sessions available.
+When the user of the EHR is working in the context of an individual patient and the EHR system allows the launch of a [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) application, launching of a DTR compliant application SHOULD follow the [EHR launch sequence](http://hl7.org/fhir/smart-app-launch/#ehr-launch-sequence) as described in [Establish Patient Context](specification__cds_hooks.html#establish-patient-context) which will allow the DTR process to establish the patient of interest. When the user of the EHR is not working in the context of an individual patient and the EHR system allows the launch of a SMART on FHIR application, the DTR process should allow the user to select a usage session from all of the sessions available.
 
 The DTR process will then allow the user to restore a session. The possible sessions to restore SHALL be based on the user's identity and patient that has been established. Further information on establishing user identity and sessions is available in [Persisting Application State](formal_specification.html#persisting-application-state).
 
@@ -195,7 +195,7 @@ The EHR should be able to associate orders with the QuestionnaireResponses they 
 
 The EHR is responsible for storing and updating the QuestionnaireResponse, as well as providing the user a way to choose sessions to relaunch. Additionally, the EHR SHOULD pass the QR as a [SMART launch parameter](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#app-launch-scopes-and-launch-context)
 
-The contents of the extension can be sent to the payer server using the [questionnaire-for-order operation](http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/Questionnaire-for-Order).  The payer server SHALL return a Questionnaire upon receiving a valid coverage and order.
+The contents of the extension can be sent to the payer server using the [questionnaire-package operation](OperationDefinition-questionnaire-package.html).  The payer server SHALL return a Questionnaire upon receiving a valid coverage and order.
 
 If the app is a DTR SMART app (and not a DTR Native App) that it SHALL use SMART backend authentication and will also provide a link to the SMART backend authentication process which provides the full protocol and details. 
 
@@ -212,14 +212,14 @@ The DTR app SHALL only be scoped to one patient and be prohibited from accessing
 The system can decide how long to wait before deleting an old session. 
 
 ##### SMART App Launch Framework IG
-Using the SMART App Launch Framework IG, the DTR process should request [scopes for requesting identity data](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context/index.html#scopes-for-requesting-identity-data), namely `openid` and `fhirUser`. The DTR process can then retrieve the FHIR resource representing the current person and extract whatever identifiers it deems necessary for the persistance of application state.
+Using the SMART App Launch Framework IG, the DTR process should request [scopes for requesting identity data](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#scopes-for-requesting-identity-data), namely `openid` and `fhirUser`. The DTR process can then retrieve the FHIR resource representing the current person and extract whatever identifiers it deems necessary for the persistance of application state.
 
 The EHR's authorization server MUST support the `openid` and `fhirUser` scopes, due to the importance of the `fhirUser` element in the QuestionnaireResponse resource.
 
 #### Resuming Work in Progress
 In order to resume a work in progress that has been persisted, there are three basic requirements:
 - The user must be from the same organization
-- The user must have authority to access the patient (i.e. launch from patient context)
+- The user must have authority to access the patient (i.e., launch from patient context)
 - The user must have authority to use DTR
 
 ##### Visibility of Usage Sessions to Other Users
@@ -271,7 +271,7 @@ The QuestionnaireResponse may include groups (items with specific linkIds) that 
 > 
 > * Save the QuestionnaireResponse (only) on the EHR once it is complete   
 >    
-> * The QuestionnaireResponse may include groups (with magic linkIds) that contain references to resources to include, for example,as attachments in PAS, in claim submission or as attachments to the order (e.g. PAO)   
+> * The QuestionnaireResponse may include groups (with magic linkIds) that contain references to resources to include, for example,as attachments in PAS, in claim submission or as attachments to the order (e.g., PAO)   
 >   
 > * There SHOULD be a magic linkId that includes the order id of the order the   QuestionnaireResponse is associated with that an EHR could use after-the-fact to establishing a link (if the temporary id of the in-memory order is retained/meaningful)   
 
@@ -292,7 +292,7 @@ In a QuestionnaireResponse, this will be a 'repeating' question with one or more
 ### Provenance
 Provenance SHOULD be created and persisted with information created during the execution of the CQL and Questionnaire. Also, when the QuestionnaireResponse and its associated resources are exchanged with the source of the rules, appropriate Provenance resource(s) SHOULD be created and exchanged.
 
-> All DTR applications SHALL support rendering according to the extensions supported in the DTR Questionnaire profile as well as executing all CQL found within Questionnaire extensions. Payers SHALL craft their Questionnaires such that they include CQL that attempts to pre-populate QuestionnaireResponse answers where such population can be accomplished using discrete data returned by EHR FHIR APIs that are required as part of current regulation (including simple calculations there-on - e.g. age from birthdate). Translation between standard codes SHOULD be supported where possible. 
+> All DTR applications SHALL support rendering according to the extensions supported in the DTR Questionnaire profile as well as executing all CQL found within Questionnaire extensions. Payers SHALL craft their Questionnaires such that they include CQL that attempts to pre-populate QuestionnaireResponse answers where such population can be accomplished using discrete data returned by EHR FHIR APIs that are required as part of current regulation (including simple calculations there-on - e.g., age from birthdate). Translation between standard codes SHOULD be supported where possible. 
 > 
 > For example, CQL and FHIR Questionnaires SHALL be required even when DTR is implemented within a DTR Native App as opposed to a DTR SMART App.
 
@@ -359,9 +359,7 @@ CQL allows for the gathering of information through the use of `define` statemen
 
 DTR makes use of the identifier names within the CQL. The DTR process will examine the payer supplied Questionnaire resource. 
 
-* This resource SHALL conform to the [CQF Questionnaire Profile](http://hl7.org/fhir/R4/cqf.html) 
-  *  The DTR process will examine each `Questionnaire.item` to find a `valueExpression` 
-
+* This resource SHALL conform to the [DTR SDC Questionnaire](StructureDefinition-dtr-sdc-questionnaire.html)  
   * Resources are retrieved from the EHR FHIR server with RESTful queries and CQL is executed to extract relevant information
   * Values extracted from the FHIR resources are assigned identifier strings and the DTR process will then use these statement identifiers to retrieve a value from the CQL execution 
   
@@ -388,8 +386,6 @@ The app SHOULD retrieve the FHIR resources specified in the `dataRequirement` se
       ]
     },
 ```
-
->For further guidance and details implementers are encouraged to reference the [FHIR Clinical Guidelines IG - Library Resources section](http://build.fhir.org/ig/HL7/cqf-recommendations/libraries.html#library-resources). 
 
 The app SHALL be provided with a token that allows it to access relevant information for the patient in question. The token is provided by the EHR or the application that controls access to the patient's record. Depending on user permissions, the app may not have access to all the data. The app developer should consider the possibility that access to some data may be restricted or prohibited(and access restrictions may happen silently (i.g., indistinguishable absent data). The app’s CQL execution engine SHOULD constrain queries to reduce data retrieval overhead. (for example, if the CQL logic filters for medications meeting certain conditions. It is acceptable if the engine retrieves all medications for the patient, even if a more constrained query was possible).
 
