@@ -1,4 +1,4 @@
-Instance: DTRQuestionnaireOperation
+Instance: DTRQuestionnairePackageOperation
 InstanceOf: OperationDefinition
 Description: "This operation returns 1 or more [collection] Bundles each consisting of a single Questionnaire resource as well as any dependency Library and ValueSet instances needed to allow a renderer to fully render and otherwise process the Questionnaire.
 
