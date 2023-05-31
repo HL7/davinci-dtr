@@ -66,8 +66,32 @@ Although not detailed in this IG, it may be possible to achieve the same level o
 To provide a mechanism to support Prior Authorization bundle creation for submission, this guide provides multiple request/order profiles that enable the requesting provider and organization to be accessible:  [DTR Service Request](StructureDefinition-dtr-servicerequest.html), [DTR Device Request](StructureDefinition-dtr-devicerequest.html), [DTR Medication Request](StructureDefinition-dtr-medicationrequest.html), and [DTR Nutrition Order](StructureDefinition-dtr-nutritionorder.html)
 
 ---------------------
+### CDS Hooks
+#### Use of Card.links
+One entry point into the DTR process is launching from a [Clinical Decision Support (CDS) Hooks Card](https://cds-hooks.hl7.org/1.0/#card-attributes). 
+
+> **NOTE**: As a part of a CDS Hooks response, if there is a need for further information then the payer IT system MAY return a Card object with a Link object populated in the Card.links property. If the Link object has a URL property set to the launch URL of a DTR process, this can still be overridden by the EHR or Provider's preferred DTR application. 
+
+Details of the DTR launch process from CRD can be found [here](https://build.fhir.org/ig/HL7/davinci-crd/hooks.html#launch-smart-application)
+
+#### Establish Patient Context
+When the DTR process is being launched from a CDS card Link, the Electronic Health Record (EHR) system and DTR process will follow the procedures established by the [SMART App Launch Framework](http://hl7.org/fhir/smart-app-launch). More specifically the EHR and DTR process SHALL follow the SMART App Launch Framework [EHR launch sequence](http://hl7.org/fhir/smart-app-launch/#ehr-launch-sequence). 
+
+In [Step 1 of the launch sequence](http://hl7.org/fhir/smart-app-launch/#step-1-app-asks-for-authorization), the DTR process SHALL request the `patient/Patient.read` scope. DTR apps are expected to be technically able to run against any EHR and work with any payer.  However, for a DTR app to be used, it needs to be trusted appropriately manage access to personal health information by the EHRs and payers.  EHRs will choose which DTR apps they will trust and support.  Similarly, all DTR apps must be registered with the payer systems with which they communicate.  This registration process will ensure the following:
+
+- The DTR app is 'trusted' by the payer to deal with patient-identifiable data
+- The DTR app knows the relevant endpoints to use to access Questionnaires, DocumentReferences and other relevant information
+- The DTR app has a shared secret allowing secure access to the payer endpoints
+
+Even after an application has been successfully registered, payers and EHRs SHOULD monitor the application behavior and MAY suspend an application's access if it is suspected of malicious behavior. The app will need to ask for scope sufficient to execute any CQL that the payer may provide as part of the questionnaires."  provide link to the payer registration section and add to payer registration that: "the payer should indicate the scopes required by their questionnaires.
+
+In [Step 3 of the launch sequence](http://hl7.org/fhir/smart-app-launch/#step-3-app-exchanges-authorization-code-for-access-token), in the case where the EHR system is returning a response with an access token, the system SHALL also provide a patient property set to the subject patient identifier of this interaction.
+
+For cases where the DTR process is being launched outside the context of Coverage Requirements Discovery workflow, please see [Launch Outside of CRD](formal_specification.html#launch-outside-of-crd).
+
+---------------------
 ### Retrieval of Payer resources and SMART Launch
-The DTR process will need to retrieve resources from a payer IT system to operate properly. This application will need to obtain a FHIR Questionnaire and associated Clinical Quality Language (CQL) logic files in order to execute. The information needed to obtain the required resources will be provided as escaped JSON in the `appContext` property of the Clinical Decision Support (CDS) Hooks Card Link object, as described in [CDS Hooks](specification__cds_hooks.html#use-of-cardlinks). When launched in context of CRD and a CDS Hook, that object will have the following properties:
+The DTR process will need to retrieve resources from a payer IT system to operate properly. This application will need to obtain a FHIR Questionnaire and associated Clinical Quality Language (CQL) logic files in order to execute. The information needed to obtain the required resources will be provided as escaped JSON in the `appContext` property of the Clinical Decision Support (CDS) Hooks Card Link object, as described in [CDS Hooks](formal_specification.html##use-of-cardlinks). When launched in context of CRD and a CDS Hook, that object will have the following properties:
 
 | Field    | Optionality | Cardinality | Type  | Description |
 | -------- | ----------- | ------      | -------- | ----------- |
@@ -147,7 +171,7 @@ The launch context, which comes to the DTR app through the access token bundle, 
 To start a new session outside of the context of the CRD workflow, a user or EHR should initiate the launch and pass DTR a fhirContext with the “Order” and “Coverage” fields filled. The DTR app SHALL use this information to invoke the `$questionnaire-package` operation on the payer server, which should return a Questionnaire and associated CQL resources. If the base endpoint of the payer server is contained in the `Coverage` resource extension, then the app can be automatically launched. Otherwise, a user will have to manually select which payer to interact with.
 
 #### When the EHR is in a patient context
-When the user of the EHR is working in the context of an individual patient and the EHR system allows the launch of a [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) application, launching of a DTR compliant application SHOULD follow the [EHR launch sequence](http://hl7.org/fhir/smart-app-launch/#ehr-launch-sequence) as described in [Establish Patient Context](specification__cds_hooks.html#establish-patient-context) which will allow the DTR process to establish the patient of interest. When the user of the EHR is not working in the context of an individual patient and the EHR system allows the launch of a SMART on FHIR application, the DTR process should allow the user to select a usage session from all of the sessions available.
+When the user of the EHR is working in the context of an individual patient and the EHR system allows the launch of a [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) application, launching of a DTR compliant application SHOULD follow the [EHR launch sequence](http://hl7.org/fhir/smart-app-launch/#ehr-launch-sequence) as described in [Establish Patient Context](formal_specification.html#establish-patient-context) which will allow the DTR process to establish the patient of interest. When the user of the EHR is not working in the context of an individual patient and the EHR system allows the launch of a SMART on FHIR application, the DTR process should allow the user to select a usage session from all of the sessions available.
 
 The DTR process will then allow the user to restore a session. The possible sessions to restore SHALL be based on the user's identity and patient that has been established. Further information on establishing user identity and sessions is available in [Persisting Application State](formal_specification.html#persisting-application-state).
 
@@ -540,6 +564,7 @@ Finally, if the user did not supply a value, but provided an attestation that th
 For the sake of information systems processing a QuestionnnaireResponse generated,
 the DTR process SHALL populate the `QuestionnaireResponse.item` with the `author` extension property if the item was created by user input. If the `author` property is not present, then the information was gathered through the execution of CQL.
 
+---------------------
 ### Privacy, Safety and Security
 
 Guidance and conformance expectations around privacy and security are provided by all three specifications this IG relies on. Implementers SHALL be familiar with and adhere primarily to any security and privacy rules defined by Da Vinci [HRex Privacy and Security](http://build.fhir.org/ig/HL7/davinci-ehrx/security.html).  
@@ -568,11 +593,35 @@ It is important for implementers to be aware that data is going to be auto-popul
 Payer systems SHALL use information received during execution of DTR solely for the purpose for which the documentation template was created (typically processing of a specific claim or prior authorization request) and SHALL NOT use information received over the DTR interfaces for any additional purposes other than audit.
 
 ---------------------
-### Related Information 
-   
-* [CDS Hooks](specification__cds_hooks.html)
-  
-* [Best Practices](specification__best_practices.html)
+### Best Practices 
+
+#### The use of OIDs
+
+If OIDs are used they SHALL be prefixed with `urn:oid:` per the [OID primitive datatype definition](https://www.hl7.org/fhir/datatypes.html#oid).
+
+#### Referencing value sets in Questionnaires
+
+When remote value sets are referenced in Questionnaires, full URLs are recommended. If you are using local value sets a relative path is recommended. 
+
+Note: Expanding a large value set at run time, may slow down your DTR app. In other words having your value set already expanded could give the user a better client side experience.  
+
+#### Questionnaires and expressions
+
+When referencing expressions in libraries such as a CQL library, the name of the library should be included.  
+
+e.g., "expression": "\\"LowerLimbProsthesis\\".PhysicalExaminationType"
+
+In this example above `LowerLimbProsthesis` is the `library name` and `PhysicalExaminationType` is the `expression name`.
+
+#### FHIR Library and included CQL
+
+When developing FHIR Libraries that depend on CQL content, the content element SHALL include the `data` element. Note: The use of the `data` element requires it to contain a base-64 encoded string that represents the CQL file per the [attachment specification](https://www.hl7.org/fhir/datatypes.html#Attachment).  
+
+For example, see the below snippet from a FHIR Library:
+
+![FHIR Library snippet](FHIR_Library_snippet.png){:style="float: none;"}
+
+Note: Although the use of `url` in the content element is valid, using the `data` element should be more interoperable.
   
 >Note: A reference implementation has been created. The code is available at [DTR GitHub](https://github.com/HL7-DaVinci/dtr). The executable is at [DTR Logica Health](https://davinci-dtr.logicahealth.org/smart/launch.html).
 
