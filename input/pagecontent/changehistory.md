@@ -60,7 +60,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   </li>
 </ul>
 
-<!-- ****************************************************************************** -->
+<!-- ====================================================================================== -->
 <div markdown="1" class="new-content">
 
 ### STU 1.1.0 Ballot Reconciliation Changes
@@ -360,7 +360,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="formal_specification.html">(Formal Specification)</a>
   </li>
 
-  <li> ........................... </li>
+  <li> ................................................... </li>
 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36365">FHIR-36365</a>:
@@ -793,6 +793,13 @@ This ballot addresses several additions, modifications, technical corrections, e
   Add 'support' menu item
   <a href="index.html">(Home)</a>
   </li>
-</ul>
+   
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36118">FHIR-36118</a>:
+  DTR SDC Questionnaire Profile Inappropriately Marks Elements As Must Support
+  <a href="underlying_technologies.html#must-support">(Must Support)</a>
+  </li>
+ 
+ </ul>
 
 </div>
