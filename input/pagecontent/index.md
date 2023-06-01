@@ -9,7 +9,7 @@ DTR leverages FHIR [Questionnaires](http://hl7.org/fhir/R4/questionnaire.html) c
 
 This IG is a companion to the Da Vinci [Coverage Requirements Discovery (CRD)](https://build.fhir.org/ig/HL7/davinci-crd/) and [Prior Authorization Support (PAS)](http://build.fhir.org/ig/HL7/davinci-pas/) IGs.  The former allows a provider to be alerted that DTR is relevant for a particular order/appointment/etc. and optionally allows that provider to directly launch DTR (either as a SMART application or embedded EHR functionality), or hand off to back office staff for additional processing.  The latter allows the information returned by DTR to be packaged as part of a FHIR-based prior authorization request.  DTR functions in the 'middle' of these two IGs to capture the needed documentation.
 
-While designed to work with these other IGs, DTR can be implemented stand-alone.  Further details on the relationships between these three implementation guides can be found [here](underlying_technologies.html#da-vinci-burden-reduction).
+While designed to work with these other IGs, DTR can be implemented stand-alone.  Further details on the relationships between these three implementation guides can be found [here](background.html#da-vinci-burden-reduction).
 
 The third Da Vinci IG that is relevant to DTR is the [Health Record Exchange (HRex)](http://hl7.org/fhir/us/davinci-hrex/STU1/) implementation guide, which defines a number of shared profiles and other shared content used across Da Vincie IGs - including this one.
 
@@ -26,8 +26,8 @@ This IG leverages [Clinical Quality Language (CQL)](https://cql.hl7.org/) to all
 
 ### Content and Organization
 The IG is organized into the following sections:
-* [Use Cases and Overview](use_cases.html) Provides examples of how this specification can be used by provider and payer organizations.
-* [Technical Background and Underlying Technologies](underlying_technologies.html) Describes the underlying technologies this specification builds upon.
-* [Formal Specification](formal_specification.html) Provides the technical conformance details for the specification.
+* [Use Cases and Overview](usecases.html) Provides examples of how this specification can be used by provider and payer organizations.
+* [Technical Background and Underlying Technologies](background.html) Describes the underlying technologies this specification builds upon.
+* [Formal Specification](specification.html) Provides the technical conformance details for the specification.
 * [Artifacts Summary](artifacts.html) Introduces and provides links to the FHIR profiles, operations, extensions, as well as examples.
 * [Credits](credits.html) Identifies the individuals and organizations involved in developing this IG.
