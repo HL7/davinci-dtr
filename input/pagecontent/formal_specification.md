@@ -23,6 +23,9 @@ Note that elements with example bindings or missing bindings will not be used.
 > * [Form Behavior and Calculation](http://hl7.org/fhir/uv/sdc/STU3/behavior.html)  
 > * [Advanced Form Rendering](http://hl7.org/fhir/uv/sdc/STU3/rendering.html)
 
+##### Pre-Population
+DTR will automatically populate the answers to certain questions based on existing EHR data.  In some cases, it may populate all answers to the Questionnaire.  The DTR application SHALL provide the ability, but not requirement, for providers to review pre-populated answers prior to saving the resulting response for subsequent use within the EHR.  
+
 ##### Extension Usage
 With current EHR capabilities with respect to updating 'request' resources, there is no mechanism to revise the 'request' resource to have its "supportingInfo" (or "insurance") element point to the QuestionnaireResponse/Bundle/[ClaimResponse](http://hl7.org/fhir/us/davinci-hrex/STU1/StructureDefinition-hrex-claimresponse.html) that results from the DTR process. Instead, extensions are used to reference the relevant order. DTR clients SHOULD update their 'request' resources with the appropriate "supportingInfo" or "insurance" link to the relevant resource.
 

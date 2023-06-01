@@ -799,7 +799,19 @@ This ballot addresses several additions, modifications, technical corrections, e
   DTR SDC Questionnaire Profile Inappropriately Marks Elements As Must Support
   <a href="underlying_technologies.html#must-support">(Must Support)</a>
   </li>
- 
+    
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36370">FHIR-36370</a>:
+  Clarify expectations on QR approval
+  <a href="formal_specification.html#pre-population">(Pre-Population)</a>
+  </li>
+    
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36372">FHIR-36372</a>:
+  Do we need a CRD & DTR section here?
+  <a href="underlying_technologies.html#crd-and-dtr-workflow">(CRD and DTR Workflow)</a>
+  </li>
+
  </ul>
 
 </div>
