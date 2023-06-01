@@ -1,6 +1,6 @@
 This ballot addresses several additions, modifications, technical corrections, errata, and clarifications listed below. They have been reviewed and voted on by the members of the <a href="http://www.hl7.org/Special/committees/dss/">HL7 Clinical Decision Support WorkGroup</a>, which is sponsoring this ballot release and reconciliation of the comments.
 
-<h3>STU 1.1.0 Ballot Changes</h3>
+### STU 1.1.0 Ballot Changes
 
 <p><b>The following issues are addressed for this ballot:</b></p>
 
@@ -63,7 +63,7 @@ This ballot addresses several additions, modifications, technical corrections, e
 <!-- ****************************************************************************** -->
 <div markdown="1" class="new-content">
 
-<h3>STU 1.1.0 Ballot Reconciliation Changes</h3>
+### STU 1.1.0 Ballot Reconciliation Changes
 <p><b>The following issues are addressed resulting from this ballot:</b></p>
 <ul>
   <li>
