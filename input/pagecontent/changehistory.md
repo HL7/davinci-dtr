@@ -849,3 +849,10 @@
   <a href="formal_specification.html#privacy-safety-and-security">(Privacy, Safety and Security)</a>
   </li>
 </ul>
+<ul> 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36346">FHIR-36346</a>:
+  Add 'support' menu item
+  <a href="index.html">(Home)</a>
+  </li>
+</ul>
