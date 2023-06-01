@@ -37,7 +37,7 @@ The QuestionnaireResponse resource is used to represent a response to the Questi
 
 [SDC Adaptive Forms](http://build.fhir.org/ig/HL7/sdc/adaptive.html) define an alternative way to dynamically interact with the user. DTR support for adaptive forms helps in the following scenarios:
 
-1. Support for complex decision trees without the need for the Questionnaire and rules (CQL) to cover all the possibilities. This is enabled by supporting the request for a small number of questions (and the ability to prepopulate the questions from the EHR), returning the results to the Payer to "prune" the decision tree, and repeat the process until complete.
+1. Support for complex decision trees without the need for the Questionnaire and rules (CQL) to cover all the possibilities. This is enabled by supporting the request for a small number of questions (and the ability to pre-populate the questions from the EHR), returning the results to the Payer to "prune" the decision tree, and repeat the process until complete.
 
 2. Allowing the payer to only expose the relevant guideline logic for the clinical situation at hand.
 
@@ -192,7 +192,7 @@ Through interactions with the DTR process, a user may be prompted with a questio
 
 The provider can confirm that the sleep study has not yet been conducted and generate a task for office staff to schedule a sleep study directly in the questionnaire interface. Alternatively, the provider could attest that the sleep study was performed or is already scheduled to be performed, either at this provider or another provider. Attestation by the provider can prevent duplicate tests in the case that the patient's electronic record is incomplete.
 
-The ability to create tasks or todos is outside of the scope of DTR and should be supported by the EHR implementation. 
+The ability to create tasks or 'to-dos' is outside of the scope of DTR and should be supported by the EHR implementation. 
 
 The questionnaire SHALL be able to suspend completion until all tasks are completed. How the application is suspended is left to the implementer, but the state of the questionnaire SHALL be preserved.
 
@@ -209,9 +209,9 @@ The DTR process should not assume that users will be able to fully complete thei
 <br>
 At any point prior to completion the app should be able to save the session, and then relaunch it later. If an EHR system performs DTR functionality internally, it may save session information however it likes. Guidance below does not apply in this scenario. 
 
-Providers may go days to weeks before completing questionnaires and may go many months to a year before completing paperwork and Prior Authorization ot claim submission. Therefore, the time span between the creation of a Questionnaire to the completion of QuestionnaireResponse should be accounted for accordingly.
+Providers may go days to weeks before completing questionnaires and may go many months to a year before completing paperwork and Prior Authorization to claim submission. Therefore, the time span between the creation of a Questionnaire to the completion of QuestionnaireResponse should be accounted for accordingly.
 
-Context for the DTR app is made up of the QuestionnaireResponse, the Questionnaire, the prepopulation CQL and its supporting files, the order(s), the coverage, and the patient. The QuestionnaireResponse resource contains a reference to the patient in the `subject` field, and the order(s) and coverage in the `context` extension. From the coverage and order, the DTR app can determine the payer and retrieve the CQL, Questionnaire, and other files from a standard endpoint on the payer server.  
+Context for the DTR app is made up of the QuestionnaireResponse, the Questionnaire, the pre-population CQL and its supporting files, the order(s), the coverage, and the patient. The QuestionnaireResponse resource contains a reference to the patient in the `subject` field, and the order(s) and coverage in the `context` extension. From the coverage and order, the DTR app can determine the payer and retrieve the CQL, Questionnaire, and other files from a standard endpoint on the payer server.  
 
 If the DTR app receives a QuestionnaireResponse resource in the app context, it SHALL reload the session information from that QuestionnaireResponse using its associated order and coverage.  If the DTR app does not receive a QuestionnaireResponse, it SHALL first search the EHR for QuestionnaireResponses associated with the order included in the app context.  Depending on the result of the search, the app will either offer an option to reload context from a found QuestionnaireResponse or launch normally and create a new QuestionnaireResponse.
 
@@ -236,12 +236,12 @@ The DTR app SHALL only be scoped to one patient and be prohibited from accessing
 The system can decide how long to wait before deleting an old session. 
 
 ##### SMART App Launch Framework IG
-Using the SMART App Launch Framework IG, the DTR process should request [scopes for requesting identity data](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#scopes-for-requesting-identity-data), namely `openid` and `fhirUser`. The DTR process can then retrieve the FHIR resource representing the current person and extract whatever identifiers it deems necessary for the persistance of application state.
+Using the SMART App Launch Framework IG, the DTR process should request [scopes for requesting identity data](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#scopes-for-requesting-identity-data), namely `openid` and `fhirUser`. The DTR process can then retrieve the FHIR resource representing the current person and extract whatever identifiers it deems necessary for the persistence of application state.
 
 The EHR's authorization server MUST support the `openid` and `fhirUser` scopes, due to the importance of the `fhirUser` element in the QuestionnaireResponse resource.
 
-#### Resuming Work in Progress
-In order to resume a work in progress that has been persisted, there are three basic requirements:
+#### Resuming Work in-Progress
+In order to resume a work in-progress that has been persisted, there are three basic requirements:
 - The user must be from the same organization
 - The user must have authority to access the patient (i.e., launch from patient context)
 - The user must have authority to use DTR
@@ -252,7 +252,7 @@ The [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) and FHIR specification
 
 As an example, the DTR process may retrieve a Practitioner resource by retrieving the URL supplied in the `fhirUser` claim. The DTR process may then query the CareTeam or PractitionerRole resources to determine their relationship to other staff in the provider organization and determine if their usage sessions should also be made available.
 
-Furthermore, the notion of workflows and multiple users could get extended to work queues. The EHR could maintain a list of in progress FHIR Questionnaires and store a reference to each of these within the EHR for the clinicians and other employees within the organization to continue working on. There could be built in mechanisms to assign FHIR Tasks for the work to the queues of other employees. Specific details surrounding this type of work queue implementation are out of the scope for this IG.
+Furthermore, the notion of workflows and multiple users could get extended to work queues. The EHR could maintain a list of in-progress FHIR Questionnaires and store a reference to each of these within the EHR for the clinicians and other employees within the organization to continue working on. There could be built in mechanisms to assign FHIR Tasks for the work to the queues of other employees. Specific details surrounding this type of work queue implementation are out of the scope for this IG.
 
 #### Session Expiration
 While a user may need to suspend interaction with the DTR process, there may be a limit on the amount of time that a set of documentation templates and rules is valid. For example, it is unreasonable to resume the DTR process for an order that was started five years in the past.
@@ -295,7 +295,7 @@ The QuestionnaireResponse may include groups (items with specific linkIds) that 
 > 
 > * Save the QuestionnaireResponse (only) on the EHR once it is complete   
 >    
-> * The QuestionnaireResponse may include groups (with magic linkIds) that contain references to resources to include, for example,as attachments in PAS, in claim submission or as attachments to the order (e.g., PAO)   
+> * The QuestionnaireResponse may include groups (with magic linkIds) that contain references to resources to include, for example, as attachments in PAS, in claim submission or as attachments to the order (e.g., PAO)   
 >   
 > * There SHOULD be a magic linkId that includes the order id of the order the   QuestionnaireResponse is associated with that an EHR could use after-the-fact to establishing a link (if the temporary id of the in-memory order is retained/meaningful)   
 
@@ -357,7 +357,7 @@ Note: According to the [ValueSet Identification](https://www.hl7.org/fhir/values
 
 ---------------------
 ### CQL 
-Clinical Quality Language (CQL) is used to query the Electronic Health Record (EHR) FHIR server to prepopulate the DTR Questionnaire.
+Clinical Quality Language (CQL) is used to query the Electronic Health Record (EHR) FHIR server to pre-populate the DTR Questionnaire.
   
 As part of the SDC Questionnaires that define the information payers require to be captured, CQL is used to support automatic population of answers from existing EHR data and, occasionally, to enforce complex logic around what questions should be displayed.  For example, whether answers are required, what answers should be enabled, etc.  This CQL may query for patient observations, conditions, or other discrete information within the EHR to use as part of the population process or logic.  The SDC specification provides guidance about how CQL expressions can be used for different purposes, as well as how information gathered by CQL in one portion of the Questionnaire can be made available in other portions of the Questionnaire.  See [Using expressions].
 
@@ -411,7 +411,7 @@ The app SHOULD retrieve the FHIR resources specified in the `dataRequirement` se
     },
 ```
 
-The app SHALL be provided with a token that allows it to access relevant information for the patient in question. The token is provided by the EHR or the application that controls access to the patient's record. Depending on user permissions, the app may not have access to all the data. The app developer should consider the possibility that access to some data may be restricted or prohibited and access restrictions may happen silently (i.g., indistinguishable absent data). The app’s CQL execution engine SHOULD constrain queries to reduce data retrieval overhead. (for example, if the CQL logic filters for medications meeting certain conditions. It is acceptable if the engine retrieves all medications for the patient, even if a more constrained query was possible).
+The app SHALL be provided with a token that allows it to access relevant information for the patient in question. The token is provided by the EHR or the application that controls access to the patient's record. Depending on user permissions, the app may not have access to all the data. The app developer should consider the possibility that access to some data may be restricted or prohibited and access restrictions may happen silently (e.g., indistinguishable absent data). The app’s CQL execution engine SHOULD constrain queries to reduce data retrieval overhead. (for example, if the CQL logic filters for medications meeting certain conditions. It is acceptable if the engine retrieves all medications for the patient, even if a more constrained query was possible).
 
 As discussed in the Execution Results section below, it’s possible not every CQL statement will be executed (for example some questions may only be relevant given certain answers to prior questions). In order to reduce data transfers and increase overall speed, data MAY be fetched as needed. However, the app’s execution engine MAY be implemented using a different strategy (for example by doing bulk fetches before starting execution).
 
