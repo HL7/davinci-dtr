@@ -802,7 +802,12 @@ This ballot addresses several additions, modifications, technical corrections, e
   Do we need a CRD & DTR section here?
   <a href="background.html#crd-and-dtr-workflow">(CRD and DTR Workflow)</a>
   </li>
-
+    
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36393">FHIR-36393</a>:
+  Page names are overly long
+  <a href="index.html">(Home)</a>
+  </li>
  </ul>
 
 </div>
