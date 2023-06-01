@@ -91,18 +91,23 @@
         <generation value="markdown"/>
       </page>      
       <page>
-        <nameUrl value="use_cases.html"/>
+        <nameUrl value="usecases.html"/>
         <title value="Use Cases"/>
         <generation value="markdown"/>
       </page>
       <page>
-        <nameUrl value="underlying_technologies.html"/>
+        <nameUrl value="background.html"/>
         <title value="Underlying Technologies"/>
         <generation value="markdown"/>
       </page>
       <page>
-        <nameUrl value="formal_specification.html"/>
+        <nameUrl value="specification.html"/>
         <title value="Formal Specification"/>
+        <generation value="markdown"/>
+	  </page>
+      <page>
+        <nameUrl value="changehistory.html"/>
+        <title value="Change History"/>
         <generation value="markdown"/>
 	  </page>
       <page>
