@@ -51,8 +51,6 @@ Description: "An example SDC questionnaire for Home Oxygen Therapy."
 * item[=].type = #decimal
 * item[+].extension[0].url = "http://hl7.org/fhir/StructureDefinition/mimeType"
 * item[=].extension[=].valueCode = #image/jpeg
-* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/mimeType"
-* item[=].extension[=].valueCode = #application/pdf
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxSize"
 * item[=].extension[=].valueDecimal = 1048576
 * item[=].linkId = "1.6"

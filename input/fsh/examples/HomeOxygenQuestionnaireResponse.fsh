@@ -143,10 +143,10 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * status = #completed
 * subject = Reference(example1) "Vlad"
 * questionnaire = "http://example.com/Questionnaire/referred-questionnaire"
-* extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/context"
-* extension[=].valueReference = Reference(coverage1001)
-* extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/context"
-* extension[=].valueReference = Reference(deviceRequest0001)
+// * extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/context"
+// * extension[=].valueReference = Reference(coverage1001)
+// * extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/context"
+// * extension[=].valueReference = Reference(deviceRequest0001)
 * item[0].linkId = "1"
 * item[=].text = "Patient Information"
 * item[=].item[0].linkId = "1.1"
