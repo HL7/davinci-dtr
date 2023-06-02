@@ -808,6 +808,13 @@ This ballot addresses several additions, modifications, technical corrections, e
   Page names are overly long
   <a href="index.html">(Home)</a>
   </li>
+    
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36432">FHIR-36432</a>:
+  Are DTR Questionnaire valuesets pre-expanded?
+  <a href="specification.html#value-set-and-code-system-guidance">(Value Set and Code System Guidance)</a>
+  </li>
+
  </ul>
 
 </div>
