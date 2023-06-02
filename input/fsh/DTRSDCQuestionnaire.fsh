@@ -23,6 +23,7 @@ Further guidance on the use of these elements should be found in the underlying 
 // Rendering extensions 
 * extension contains http://hl7.org/fhir/StructureDefinition/rendering-styleSensitive named styleSensitive 0..1
 * extension[styleSensitive].valueBoolean = false
+* extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer named preferredTerminologyServer 0..1 MS
 * title.extension contains http://hl7.org/fhir/StructureDefinition/rendering-style named titleRenderingStyle 0..1
 * text 1..1 MS
 * text.extension contains http://hl7.org/fhir/StructureDefinition/rendering-style named textRenderingStyle 0..1
