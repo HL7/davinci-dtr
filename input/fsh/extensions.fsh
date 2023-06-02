@@ -15,8 +15,8 @@ Alias: $dtr-servicerequest = http://hl7.org/fhir/us/davinci-dtr/StructureDefinit
 /**************************************************************************************************************/
 Extension: Context
 Id: context
-Description: "This extension contains the context for QuestionnaireResponse."
-* value[x] ^short = "THe URL of the payer endpoint."
-* value[x] ^definition = "This contains the canonical url for the payer endpoint, for retrieval of payer resources like the Questionnaire and CQL."
+Description: "This extension contains a DTR launch context connected with a QuestionnaireResponse."
+* value[x] ^short = "THe launch context connected with a QuestionnaireResponse."
+* value[x] ^definition = "This contains the reference to a coverage or 'order' that is tied to the QuestionnaireResponse"
 * value[x] 1..
 * value[x] only Reference($dtr-coverage or $dtr-devicerequest or $dtr-medicationrequest or $dtr-nutritionorder or $dtr-servicerequest)
