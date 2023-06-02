@@ -815,6 +815,18 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="specification.html#value-set-and-code-system-guidance">(Value Set and Code System Guidance)</a>
   </li>
 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36524">FHIR-36524</a>:
+  remove references to manual alternatives/solutions that do not leverage the specs
+  <a href="background.html#burden-reduction-goals">(Burden Reduction Goals)</a>
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-34291">FHIR-34291</a>:
+  Deferring and relaunching DTR App
+  <a href="specification.html#app-relaunch">(App Relaunch)</a>
+  </li>
+
  </ul>
 
 </div>

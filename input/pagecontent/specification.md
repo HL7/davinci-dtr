@@ -116,17 +116,25 @@ If the QuestionnaireResponse is not present, but the order is, the Questionnaire
 
 If neither is present, the user should be prompted to select a QuestionnaireResponse based on the patient that is in context.
 
->A DTR app is allowed to throw an error if not launched within one and only one of the following contexts:
->1. QuestionnaireResponse
->2. Task
->3. Order
+> A DTR app is allowed to throw an error if not launched within one and only one of the following contexts:
+> 1. QuestionnaireResponse
+> 2. Task
+> 3. Order
 
 The resources corresponding to this context (if any) SHALL be passed in the fhirContext element.  As part of configuration during app enablement process the app SHOULD also always ask for the launch/patient and the openId and fhirUser contexts.
 
 #### App Relaunch 
-The DTR app SHALL support usage of two new scopes to alter the launch context: `launch/request` and `launch/response`.  If the `request` scope is included when launching, the access token bundle should return with the `request` field of the `appContext` filled.  If the `response` scope is included, it should return with the `response` field of the `appContext` filled.  
+The DTR app SHALL support usage of the following new scopes to alter the launch context: 
+* `launch/request` 
+* `launch/response`
+* `launch/currentorder`  
+* `launch/currentqr`
+  
+If the `request` scope is included when launching, the access token bundle should return with the `request` field of the `appContext` filled.  If the `response` scope is included, it should return with the `response` field of the `appContext` filled.
 
 At least one of the two fields `request` or `response` must be filled in order for the DTR app to successfully launch. In the case that `response` is filled but `request` is empty, the DTR process SHALL use the URL provided in the `response` property of the `appContext` to retrieve the referenced QuestionnaireResponse. The QuestionnaireResponse can be used to discover the request through the `context` extension. The app should allow the user to relaunch the deferred usage session defined by the QuestionnaireResponse. 
+
+When launching with the `currentorder` or `currentqr` scopes, if no QuestionnaireResponse is passed, SMART app will query the EHR to try to find the QuestionnaireResponses linked to that order by the [context extension](StructureDefinition-context.html).  If there are multiple QuestionnaireResponses for an order, will need to investigate whether it's possible to pass multiple responses as a launch context.  
 
 The QuestionnaireResponse will have all the information required to request the Questionnaire and CQL from the payer server and allow relaunch of the session with previously answered questions already filled out. [Save Context for Relaunch](specification.html#persisting-application-state)  
 
@@ -148,18 +156,6 @@ Payers SHALL require the DTR process to authenticate in order to retrieve resour
 
 #### CQL Rules
 CQL can either be embedded inline as part of an expression or referenced in a library.  All libraries needed by a questionnaire SHALL be referenced by the cqf-library extension which SHALL be resolvable by the SMART app. Metadata about the rules will be represented as a FHIR Library resource. The payer SHALL provide this as a FHIR resource, such that the DTR process will be executing a FHIR read interaction on the payer's server.
-
----------------------
-### Determination of Payers Supported by a DTR App
-It is possible that the apps used to provide DTR functionality to an app will not support all payers the EHR might have "DTR requests" for - either from CRD or CDex.  It is important for the EHR to know what payers their app supports so that they only allow their users to launch the DTR app in the context of payers the app will be able to support.  (Launching an app only to be told "this payer isn't supported" is an unpleasant user experience.)
-
-Where an EHR uses a third-party app rather than implementing DTR app functionality internally, the developer of the app SHALL define an endpoint maintaining a list of payers currently supported by that app and EHRs using external DTR apps SHALL support accessing the endpoint.  The EHR will be configured with knowledge of which endpoint to hit for a given app as part of the process of configuring support for that app within the EHR.  Different endpoints will be defined for different versions of the application in situations where support for payers varies by application version.
-
-Accessing the endpoint will by a simple GET with an Accept header of "application/json" and SHALL be performed over TLS as described elsewhere in this guide.  The returned JSON object will contain a "payers" property referring to an array of objects.  Each object will have an "id" and "name" property, both with string values.  It is possible that additional properties may be supported in the future.
-
-EHRs will typically retrieve the list of supported payers for the app once per day and will use this information to determine whether to expose the ability to launch DTR for orders associated with coverages for that payer.
-
-> **NOTE:** Standardization of payer ids is still an open issue.
 
 ---------------------
 ### Launch Outside of CRD
@@ -200,6 +196,18 @@ The ability to create tasks or 'to-dos' is outside of the scope of DTR and shoul
 The questionnaire SHALL be able to suspend completion until all tasks are completed. How the application is suspended is left to the implementer, but the state of the questionnaire SHALL be preserved.
 
 The questionnaire SHOULD be able to suspend completion until all tasks are completed. How the application is suspended is left to the implementer, but the state of the questionnaire SHOULD be preserved. 
+
+---------------------
+### Determination of Payers Supported by a DTR App
+It is possible that the apps used to provide DTR functionality to an app will not support all payers the EHR might have "DTR requests" for - either from CRD or CDex.  It is important for the EHR to know what payers their app supports so that they only allow their users to launch the DTR app in the context of payers the app will be able to support.  (Launching an app only to be told "this payer isn't supported" is an unpleasant user experience.)
+
+Where an EHR uses a third-party app rather than implementing DTR app functionality internally, the developer of the app SHALL define an endpoint maintaining a list of payers currently supported by that app and EHRs using external DTR apps SHALL support accessing the endpoint.  The EHR will be configured with knowledge of which endpoint to hit for a given app as part of the process of configuring support for that app within the EHR.  Different endpoints will be defined for different versions of the application in situations where support for payers varies by application version.
+
+Accessing the endpoint will by a simple GET with an Accept header of "application/json" and SHALL be performed over TLS as described elsewhere in this guide.  The returned JSON object will contain a "payers" property referring to an array of objects.  Each object will have an "id" and "name" property, both with string values.  It is possible that additional properties may be supported in the future.
+
+EHRs will typically retrieve the list of supported payers for the app once per day and will use this information to determine whether to expose the ability to launch DTR for orders associated with coverages for that payer.
+
+> **NOTE:** Standardization of payer ids is still an open issue.
 
 ---------------------
 ### Persisting Application State
