@@ -356,7 +356,7 @@ The table below is guidance that SHOULD be used when using values sets and code 
   </tr>
 </table>
 
-**Note:** According to the [ValueSet Identification](https://www.hl7.org/fhir/valueset.html#ident), it is common practice to copy (cache) value sets locally, most references to value sets use the canonical URL. This IG specifies that the DTR application SHALL support the [$expand](https://hl7.org/fhir/R4/valueset-operation-expand.html) operation, and the [Preferred Terminology Server](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-preferredTerminologyServer.html) extension.
+**Note:** According to the [ValueSet Identification](https://www.hl7.org/fhir/valueset.html#ident), it is common practice to copy (cache) value sets locally, most references to value sets use the canonical URL. This IG specifies that the DTR application SHALL support the [$expand](https://hl7.org/fhir/R4/valueset-operation-expand.html) operation, as well as the [Preferred Terminology Server](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-preferredTerminologyServer.html) extension.
 
 ---------------------
 ### CQL 
