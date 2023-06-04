@@ -145,14 +145,7 @@ The Electronic Health Record (EHR) system SHALL be the primary system used to in
   
 Payers SHALL require the DTR process to authenticate in order to retrieve resources when PHI is exchanged, and SHOULD required authentication in other situations. The app is required to register and obtain a client id to register and authenticate via SMART Backend services.
 
-| Field | Optionality | Type | Description |
-| ----- | ----------- | ---- | ----------- |
-| access_token | REQUIRED | *string* | The OAuth 2 access token that provides access to the payer FHIR server. |
-| token_type | REQUIRED | *string* | Fixed value: `Bearer`. |
-| expires_in | REQUIRED | *integer* | The lifetime of the access token in seconds. |
-| scope | REQUIRED | *string* | Fixed value: `user/Questionnaire.read user/Library.read`. |
-| subject | REQUIRED | *string* | The OAuth 2.0 client identifier of the DTR process, as registered with the payer's authorization server. |
-{: .grid } 
+> Payers must be cautious about prepopulating Questionnaires with sensitive information, because there are rare situations where a malicious application could attempt to access information that was not authorized by the EHR.
 
 #### CQL Rules
 CQL can either be embedded inline as part of an expression or referenced in a library.  All libraries needed by a questionnaire SHALL be referenced by the cqf-library extension which SHALL be resolvable by the SMART app. Metadata about the rules will be represented as a FHIR Library resource. The payer SHALL provide this as a FHIR resource, such that the DTR process will be executing a FHIR read interaction on the payer's server.

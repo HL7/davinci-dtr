@@ -827,6 +827,12 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="specification.html#app-relaunch">(App Relaunch)</a>
   </li>
 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-37270">FHIR-37270</a>:
+  Access Token must not be included in appContext
+  <a href="specification.html#authentication-of-smart-on-fhir-application-to-payer-api">(Authentication of SMART on FHIR application to payer API)</a>
+  </li>
+
  </ul>
 
 </div>
