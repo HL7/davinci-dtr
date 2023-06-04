@@ -16,7 +16,7 @@ Description:    "Enforces DTR requirements on a completed or partially completed
 * ^status = #draft
 * ^date = "2020-12-23T02:27:35+00:00"
 
-* extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/context named Context 0..* MS
+* extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/context named Context 0..1 MS
 
 * basedOn 0..0
 * partOf 0..0
