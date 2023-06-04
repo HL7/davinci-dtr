@@ -29,13 +29,13 @@ Description: "This extension contains a DTR launch context connected with a Ques
     coverage 0..1 and
     order 0..1
 * extension[coverage] only Extension
-* extension[coverage] ^short = "Coverage Resource associated with the QuestionnaireResponse"
-* extension[coverage] ^definition = "The Coverage connected with a QuestionnaireResponse"
+* extension[coverage] ^short = "Coverage associated with the QuestionnaireResponse"
+* extension[coverage] ^definition = "The coverage context associated with a QuestionnaireResponse"
 * extension[coverage].value[x] 1..1
 * extension[coverage].value[x] only Reference($dtr-coverage)
 
 * extension[order] only Extension
-* extension[order] ^short = "An 'order-related' Resource associated with the QuestionnaireResponse"
-* extension[order] ^definition = "The order connected with a QuestionnaireResponse"
+* extension[order] ^short = "Order associated with the QuestionnaireResponse"
+* extension[order] ^definition = "The order context associated with a QuestionnaireResponse"
 * extension[order].value[x] 1..1
 * extension[order].value[x] only Reference($dtr-devicerequest or $dtr-medicationrequest or $dtr-nutritionorder or $dtr-servicerequest)
