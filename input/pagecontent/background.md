@@ -59,7 +59,7 @@ This IG supports the [R4](http://hl7.org/fhir/R4/index.html) version of the FHIR
 | ------------ |
 | [FHIR R4 US Core](http://hl7.org/fhir/us/core/STU3.1.1/) |  
 
-Implementers will need the knowledge of [US Core](http://hl7.org/fhir/us/core/STU3.1.1/) to access information for pre population via CQL calls to *21st Century* compliant FHIR APIs. The light client should import the US Core Server capability statement.  
+Implementers will need the knowledge of [US Core](http://hl7.org/fhir/us/core/STU3.1.1/) to access information for pre population via CQL calls to *21st Century* compliant FHIR APIs. The light client **SHOULD** import the US Core Server capability statement.  
 
 | Resources |
 | ------------ |
@@ -69,20 +69,21 @@ Implementers will need the knowledge of [US Core](http://hl7.org/fhir/us/core/ST
 
 
 ### SMART on FHIR
-Client systems conformant to this IG SHALL also serve as a [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) client. This is to allow DTR functionality to be invoked outside of regular EHR clinical workflows using a SMART on FHIR app to provide a consistent way of evaluating payer rules and documentation requirements across EHR implementations. As such client implementers will also need to be familiar with the [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) specification. Payer implementers only need to be familiar with the SMART on FHIR specification if they plan to develop SMART apps for launch by CDS Hooks or other purposes.
+Client systems conformant to this IG **SHALL** also serve as a [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) client. This is to allow DTR functionality to be invoked outside of regular EHR clinical workflows using a SMART on FHIR app to provide a consistent way of evaluating payer rules and documentation requirements across EHR implementations. As such client implementers will also need to be familiar with the [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) specification. Payer implementers only need to be familiar with the SMART on FHIR specification if they plan to develop SMART apps for launch by CDS Hooks or other purposes.
 
 ### Must Support
-This IG marks elements with the Must Support flag in its profiles.  Implementation of Must Support SHALL be compliant with HRex. However, note that this guide does profile on top of US Core profiles where Must Support has been defined on certain elements (i.e., [DTR Document Reference](https://build.fhir.org/ig/HL7/davinci-dtr/StructureDefinition-dtr-documentreference-r4.html) profiles [USCoreDocumentReferenceProfile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-documentreference.html)). The FHIR specification makes it clear that when profiling another profile, a MustSupport flag can be constrained further (i.e., taken from 'false' to 'true') but cannot be loosened (i.e., changed from 'true' to 'false').  See [US Core Must Support Guidance](https://hl7.org/fhir/us/core/STU3.1.1/general-guidance.html#must-support).
+This IG marks elements with the Must Support flag in its profiles.  Implementation of Must Support **SHALL** be compliant with HRex. However, note that this guide does profile on top of US Core profiles where Must Support has been defined on certain elements (i.e., [DTR Document Reference](https://build.fhir.org/ig/HL7/davinci-dtr/StructureDefinition-dtr-documentreference-r4.html) profiles [USCoreDocumentReferenceProfile](http://hl7.org/fhir/us/core/STU3.1.1/StructureDefinition-us-core-documentreference.html)). The FHIR specification makes it clear that when profiling another profile, a MustSupport flag can be constrained further (i.e., taken from 'false' to 'true') but cannot be loosened (i.e., changed from 'true' to 'false').  See [US Core Must Support Guidance](https://hl7.org/fhir/us/core/STU3.1.1/general-guidance.html#must-support).
 
-This IG also references the [US Core IG](http://hl7.org/fhir/us/core/STU3.1.1/). Da Vinci DTR implementations SHALL conform to the US Core IG [Must Support](https://hl7.org/fhir/us/core/STU3.1.1/general-guidance.html#must-support) Guidance where US Core IG resources are used.
+This IG also references the [US Core IG](http://hl7.org/fhir/us/core/STU3.1.1/). Da Vinci DTR implementations **SHALL** conform to the US Core IG [Must Support](https://hl7.org/fhir/us/core/STU3.1.1/general-guidance.html#must-support) Guidance where US Core IG resources are used.
 
-This implementation guide will adopt by reference the following [HRex Conformance Requirements](http://build.fhir.org/ig/HL7/davinci-ehrx/conformance.html)  In addition, systems SHALL comply with additional requirements called out in IG text and Profile definitions.
+This implementation guide will adopt by reference the following [HRex Conformance Requirements](http://build.fhir.org/ig/HL7/davinci-ehrx/conformance.html)  In addition, systems **SHALL** comply with additional requirements called out in IG text and Profile definitions.
 
 <div markdown="1" class="new-content">
+
 ### Impact on payer processes
 Information passed to DTR will typically contain clinical terminologies, might not contain billing terminologies, and will generally not include billing modifier codes or similar information typically included in prior authorization requests. Services will also need to consider that the mapping they perform between clinical terminologies and billing codes may be different than the bill coding process performed by the client system when claims are eventually submitted. This may mean that assertions about coverage or prior authorization requirements will need to be expressed conditionally. e.g., “Provided this service is billed as X, Y or Z, then prior authorization is not needed”.  
 
-In situations where DTR is aware of the likely billing codes at the time of ordering, they MAY send these codes as additional CodeableConcept.coding repetitions to assist in server processing. If CPT is used, note the ability to convey CPT modifier codes via post-coordination as described in the [Using CPT](https://terminology.hl7.org/CPT.html) page on terminology.hl7.org.  
+In situations where DTR is aware of the likely billing codes at the time of ordering, they **MAY** send these codes as additional CodeableConcept.coding repetitions to assist in server processing. If CPT is used, note the ability to convey CPT modifier codes via post-coordination as described in the [Using CPT](https://terminology.hl7.org/CPT.html) page on terminology.hl7.org.  
 
 It is more efficient if mappings can be shared across payers and providers. This implementation guide encourages industry participants to cooperate on the development of shared mappings and/or to work with terminology developers (e.g., AMA for CPT codes) to develop shared mappings as part of their code maintenance process.
 </div>

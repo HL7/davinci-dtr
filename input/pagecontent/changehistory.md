@@ -833,6 +833,12 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="specification.html#authentication-of-smart-on-fhir-application-to-payer-api">(Authentication of SMART on FHIR application to payer API)</a>
   </li>
 
- </ul>
+   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36443">FHIR-36443</a>:
+  How does an app notify the payer system
+  <a href="OperationDefinition-log-questionnaire-cql-errors.html">(DTRLogQuestionnaireCQLErrors)</a>
+  </li>
+
+</ul>
 
 </div>
