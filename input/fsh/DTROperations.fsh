@@ -78,7 +78,7 @@ Usage: #definition
 
 Instance: DTRLogQuestionnaireCQLErrors
 InstanceOf: OperationDefinition
-Description: "The DTR system SHALL store as meta data the timestamp of the last time it checked for changes."
+Description: "The operation will pass the Questionnaire and an OperationOutcome detailing the issue(s) including where the error occurred back to the originating Payer."
 Usage: #definition
 
 * id = "log-questionnaire-cql-errors"
