@@ -74,3 +74,52 @@ Usage: #definition
 * parameter[=].documentation = "This OperationOutcome satisfies the definition of this operation"
 * parameter[=].type = #OperationOutcome
 
+/**************************************************************************************************************/
+
+Instance: DTRLogQuestionnaireCQLErrors
+InstanceOf: OperationDefinition
+Description: "The DTR system SHALL store as meta data the timestamp of the last time it checked for changes."
+Usage: #definition
+
+* id = "log-questionnaire-cql-errors"
+* url = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/log-questionnaire-cql-errors"
+* name = "LogQuestionnaireCQLErrors"
+* title = "Log errors resulting from a specific Questionnaire and/or CQL to the originating Payer"
+* status = #draft
+* kind = #operation
+* description = "This operation **SHOULD** be supported by payers and DTR applications and allows submission of issues encountered when working with these DTR-provided artifacts.  The operation will pass the Questionnaire and an OperationOutcome detailing the issue(s) including where the error occurred.    
+
+The input OperationOutcome resource **SHOULD** include information on the DTR application identity and version, date-time with time-zone offset, as well as the provider endpoint during which the error occurred, and it **SHALL NOT** contain information about the response or information retrieved from FHIR APIs that could potentially include PHI."
+
+* code = #log-questionnaire-cql-errors
+* base = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/log-questionnaire-cql-errors"
+
+// * inputProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire"
+
+* resource = #Questionnaire
+* system = false
+* type = true
+* instance = false
+
+// -------------------------- Input --------------------------
+* parameter[0].name = #Questionnaire
+* parameter[=].use = #in
+* parameter[=].documentation = "The Questionnaire which generated the errors"
+* parameter[=].type = #Questionnaire
+* parameter[=].min = 1
+* parameter[=].max = "1"
+
+* parameter[+].name = #OperationOutcome
+* parameter[=].use = #in
+* parameter[=].documentation = "The OperationOutcome documenting the Questionnaire/CQL errors and their location"
+* parameter[=].type = #OperationOutcome
+* parameter[=].min = 1
+* parameter[=].max = "1"
+
+// -------------------------- Return --------------------------
+// * parameter[+].name = #outcome
+// * parameter[=].use = #out
+// * parameter[=].min = 0
+// * parameter[=].max = "1"
+// * parameter[=].documentation = "The OperationOutcome representing the completion of this operation"
+// * parameter[=].type = #OperationOutcome
