@@ -44,7 +44,6 @@
 <page key="changehistory" name="Change History"/>
 <page key="credits" name="Credits"/>
 <page key="index" name="Documentation Templates and Rules Implementation Guide Home Page"/>
-<page key="downloads" name="Downloads"/>
 <page deprecated="true" key="examples" name="Examples"/>
 <page key="specification__behaviors__execution_of_CQL" name="Execution of CQL"/>
 <page key="specification" name="Formal Specification"/>

@@ -11,11 +11,11 @@
       "Documentation Templates and Rules"
    ],
    "language": "en",
-   "author": "Lantana Consulting Group",
+   "author": "MITRE Dev Team",
    "maintainers": [
       {
-         "name": "Jeff Brown",
-         "email": "jeff.brown@lantanagroup.com"
+         "name": "Larry Decelles",
+         "email": "ldecelles@mitre.org"
       }
    ],
    "license": "CC0-1.0",
