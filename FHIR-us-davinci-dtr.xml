@@ -10,24 +10,30 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
+<artifact id="StructureDefinition/context" key="StructureDefinition-context" name="Context"/>
 <artifact id="StructureDefinition/dtr-coverage-r4" key="StructureDefinition-dtr-coverage-r4" name="DTR Coverage R4"/>
-<artifact id="StructureDefinition/dtr-documentreference-r4" key="StructureDefinition-dtr-documentreference-r4" name="DTR Document Reference R4"/>
+<artifact id="StructureDefinition/dtr-devicerequest" key="StructureDefinition-dtr-devicerequest" name="DTR Device Request"/>
+<artifact deprecated="true" id="StructureDefinition/dtr-documentreference-r4" key="StructureDefinition-dtr-documentreference-r4" name="DTR Document Reference R4"/>
+<artifact id="StructureDefinition/dtr-medicationrequest" key="StructureDefinition-dtr-medicationrequest" name="DTR Medication Request"/>
+<artifact id="StructureDefinition/dtr-nutritionorder" key="StructureDefinition-dtr-nutritionorder" name="DTR Nutrition Order"/>
 <artifact deprecated="true" id="StructureDefinition/dtr-questionnaire-r4" key="StructureDefinition-dtr-questionnaire-r4" name="DTR Questionnaire R4"/>
 <artifact id="StructureDefinition/dtr-questionnaireresponse-r4" key="StructureDefinition-dtr-questionnaireresponse-r4" name="DTR Questionnaire Response R4"/>
 <artifact id="StructureDefinition/dtr-sdc-questionnaire" key="StructureDefinition-dtr-sdc-questionnaire" name="DTR SDC Questionnaire"/>
 <artifact id="StructureDefinition/dtr-sdc-questionnaire-adapt" key="StructureDefinition-dtr-sdc-questionnaire-adapt" name="DTR SDC Questionnaire for adaptive form"/>
+<artifact id="StructureDefinition/dtr-servicerequest" key="StructureDefinition-dtr-servicerequest" name="DTR Service Request"/>
 <artifact deprecated="true" id="StructureDefinition/dtr-task-r4" key="StructureDefinition-dtr-task-r4" name="DTR Task - R4"/>
 <artifact deprecated="true" id="Task/blood-gass-panel-task-r4" key="Task-blood-gass-panel-task-r4" name="DTR Task Example - R4"/>
 <artifact id="Coverage/DTRCoverage1002" key="Coverage-DTRCoverage1002" name="DTRCoverage1002"/>
-<artifact id="OperationDefinition/questionnaire-package" key="OperationDefinition-Questionnaire-for-Order" name="DTRQuestionnaireOperation"/>
+<artifact id="OperationDefinition/log-questionnaire-cql-errors" key="OperationDefinition-log-questionnaire-cql-errors" name="DTRLogQuestionnaireCQLErrors"/>
+<artifact deprecated="true" id="OperationDefinition/Questionnaire-for-Order" key="OperationDefinition-Questionnaire-for-Order" name="DTRQuestionnaireOperation"/>
+<artifact id="OperationDefinition/questionnaire-package" key="OperationDefinition-questionnaire-package" name="DTRQuestionnairePackageOperation"/>
 <artifact id="StructureDefinition/endpoint" key="StructureDefinition-endpoint" name="PayerEndpoint"/>
-<artifact deprecated="true" id="StructureDefinition/context" key="StructureDefinition-context" name="QuestionnaireResponseContext"/>
 <artifact id="Contract/contract1001" key="Contract-contract1001" name="contract1001"/>
 <artifact id="Coverage/coverage1001" key="Coverage-coverage1001" name="coverage1001"/>
 <artifact id="DeviceRequest/deviceRequest0001" key="DeviceRequest-deviceRequest0001" name="deviceRequest0001"/>
 <artifact id="Patient/example1" key="Patient-example1" name="example1"/>
 <artifact id="Practitioner/example2" key="Practitioner-example2" name="example2"/>
-<artifact id="DocumentReference/home-o2-documentreference" key="DocumentReference-home-o2-documentreference" name="home-o2-documentreference"/>
+<artifact deprecated="true" id="DocumentReference/home-o2-documentreference" key="DocumentReference-home-o2-documentreference" name="home-o2-documentreference"/>
 <artifact deprecated="true" id="Questionnaire/home-o2-questionnaire" key="Questionnaire-home-o2-questionnaire" name="home-o2-questionnaire"/>
 <artifact id="QuestionnaireResponse/home-o2-questionnaireresponse" key="QuestionnaireResponse-home-o2-questionnaireresponse" name="home-o2-questionnaireresponse"/>
 <artifact id="QuestionnaireResponse/home-o2-sdc-adaptive-questionnaireresponse" key="QuestionnaireResponse-home-o2-sdc-adaptive-questionnaireresponse" name="home-o2-sdc-adaptive-questionnaireresponse"/>
@@ -37,33 +43,34 @@
 <page key="many" name="(many)"/>
 <page deprecated="true" key="profiles" name="(profiles)"/>
 <page key="artifacts" name="Artifacts Summary"/>
-<page key="specification__behaviors" name="Behaviors"/>
-<page key="specification__behaviors__best_practices" name="Best Practices"/>
-<page key="specification__cds_hooks" name="CDS Hooks"/>
-<page key="specification__cql" name="CQL"/>
+<page deprecated="true" key="specification__behaviors" name="Behaviors"/>
+<page deprecated="true" key="specification__behaviors__best_practices" name="Best Practices"/>
+<page deprecated="true" key="specification__cds_hooks" name="CDS Hooks"/>
+<page deprecated="true" key="specification__cql" name="CQL"/>
 <page key="changehistory" name="Change History"/>
 <page key="credits" name="Credits"/>
 <page key="index" name="Documentation Templates and Rules Implementation Guide Home Page"/>
+<page key="downloads" name="Downloads"/>
 <page deprecated="true" key="examples" name="Examples"/>
-<page key="specification__behaviors__execution_of_CQL" name="Execution of CQL"/>
+<page deprecated="true" key="specification__behaviors__execution_of_CQL" name="Execution of CQL"/>
 <page key="specification" name="Formal Specification"/>
 <page deprecated="true" key="resources__home-o2-prepopulation" name="Home Oxygen Therapy Questionnaire Prepopulation CQL"/>
-<page key="specification__behaviors__passing_information_other_exchanges" name="How DTR Passes Information to PAS, PAO or Other Exchanges"/>
-<page key="specification__behaviors__launch_outside_of_CRD" name="Launch Outside of CRD"/>
-<page key="specification__behaviors__persisting_application_state" name="Persisting Application State"/>
-<page key="specification__behaviors__persisting_results" name="Persisting Results"/>
-<page key="specification__behaviors__privacy_safety_and_security" name="Privacy, Safety and Security"/>
-<page key="specification__profiles" name="Profiles"/>
-<page key="specification__behaviors__questionnaire_evaluation" name="Questionnaire Evaluation"/>
-<page key="specification__behaviors__requesting_additional_information_from_the_user" name="Requesting Additional Information from the User"/>
+<page deprecated="true" key="specification__behaviors__passing_information_other_exchanges" name="How DTR passes information to PAS, PAO or other exchanges"/>
+<page deprecated="true" key="specification__behaviors__launch_outside_of_CRD" name="Launch outside of CRD"/>
+<page deprecated="true" key="specification__behaviors__persisting_application_state" name="Persisting Application State"/>
+<page deprecated="true" key="specification__behaviors__persisting_results" name="Persisting Results"/>
+<page deprecated="true" key="specification__behaviors__privacy_safety_and_security" name="Privacy, Safety and Security"/>
+<page deprecated="true" key="specification__profiles" name="Profiles"/>
+<page deprecated="true" key="specification__behaviors__questionnaire_evaluation" name="Questionnaire Evaluation"/>
+<page deprecated="true" key="specification__behaviors__requesting_additional_information_from_the_user" name="Requesting Additional Information from the User"/>
 <page deprecated="true" key="resources" name="Resources"/>
-<page key="specification__behaviors__retrieval_of_payer_resources" name="Retrieval of Payer Resources"/>
-<page key="specification__behaviors__sdc_adaptive_forms" name="SDC Adaptive Forms"/>
+<page deprecated="true" key="specification__behaviors__retrieval_of_payer_resources" name="Retrieval of Payer Resources"/>
+<page deprecated="true" key="specification__behaviors__sdc_adaptive_forms" name="SDC Adaptive Forms"/>
 <page key="toc" name="Table of Contents"/>
-<page key="specification__behaviors__task_creation" name="Task Creation"/>
+<page deprecated="true" key="specification__behaviors__task_creation" name="Task Creation"/>
 <page key="underlying_technologies" name="Technical Background and Underlying Technologies"/>
 <page deprecated="true" key="use_case" name="Use Case"/>
 <page key="use_cases" name="Use Cases and Overview"/>
-<page key="specification_value_set_code_system_guidance" name="Value Set and Code System Guidance"/>
+<page deprecated="true" key="specification_value_set_code_system_guidance" name="Value Set and Code System Guidance"/>
 <page deprecated="true" key="administration-module" name="administration-module"/>
 </specification>
