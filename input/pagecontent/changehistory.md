@@ -351,7 +351,9 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="specification.html">(Formal Specification)</a>
   </li>
 
-...............................................................................................................................................
+...................................................................................................................................................................
+<br><br>
+    
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36365">FHIR-36365</a>:
   Downloads should be a separate page
