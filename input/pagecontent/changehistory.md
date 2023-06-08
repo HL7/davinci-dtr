@@ -839,6 +839,12 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="OperationDefinition-log-questionnaire-cql-errors.html">(DTRLogQuestionnaireCQLErrors)</a>
   </li>
 
+   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36520">FHIR-36520</a>:
+  Change operation invocation
+  <a href="OperationDefinition-questionnaire-package.html">(DTRQuestionnairePackageOperation)</a>
+  </li>
+
 </ul>
 
 </div>
