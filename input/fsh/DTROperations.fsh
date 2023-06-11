@@ -34,7 +34,7 @@ Usage: #definition
 * resource = #Questionnaire
 * system = false
 * type = true
-* instance = true
+* instance = false
 
 // in
 * parameter[0].name = #coverage
