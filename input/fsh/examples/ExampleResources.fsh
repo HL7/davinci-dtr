@@ -80,11 +80,3 @@ Description: "An instance of DTRCoverage"
 * costToBeneficiary.valueQuantity.value = 20.00
 * contract = Reference(contract1001)
 * extension[PayerEndpoint].valueUrl = "http://payer.com"
-
-Instance: contract1001
-InstanceOf: Contract
-Description: "An instance of Contract"
-* applies.start = "2022-01-01"
-* applies.end = "2023-01-01"
-* subject = Reference(example1)
-* type = CONTRACTTYPE#healthinsurance "Health Insurance"
