@@ -78,5 +78,4 @@ Description: "An instance of DTRCoverage"
 * subscriberId = "PFP123450000"
 * costToBeneficiary.type = COPAYTYPE#copaypct "Copay Percentage"
 * costToBeneficiary.valueQuantity.value = 20.00
-* contract = Reference(contract1001)
 * extension[PayerEndpoint].valueUrl = "http://payer.com"
