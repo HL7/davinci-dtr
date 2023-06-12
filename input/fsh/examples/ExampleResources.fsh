@@ -1,11 +1,3 @@
-Instance: example1
-InstanceOf: Patient
-Description: "An example patient used in the example resources."
-* gender = #male
-* birthDate = "1996-12-23"
-* address.use = #home
-* address.type = #both
-* address.state = "MA"
 
 Instance: example2
 InstanceOf: Practitioner
@@ -80,11 +72,3 @@ Description: "An instance of DTRCoverage"
 * costToBeneficiary.valueQuantity.value = 20.00
 * contract = Reference(contract1001)
 * extension[PayerEndpoint].valueUrl = "http://payer.com"
-
-Instance: contract1001
-InstanceOf: Contract
-Description: "An instance of Contract"
-* applies.start = "2022-01-01"
-* applies.end = "2023-01-01"
-* subject = Reference(example1)
-* type = CONTRACTTYPE#healthinsurance "Health Insurance"
