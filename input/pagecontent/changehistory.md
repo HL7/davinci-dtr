@@ -240,7 +240,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36549">FHIR-36549</a>:
   relaunch for other users
-  <a href="specification.html">(Formal Specification)</a>
+  <a href="specification.html#visibility-of-usage-sessions-to-other-users">(Visibility of Usage Sessions to Other Users)</a>
   </li>
   
   <li>
