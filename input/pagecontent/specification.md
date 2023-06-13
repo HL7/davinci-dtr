@@ -4,6 +4,8 @@ This section of the IG defines the guidelines of the DTR process behavior and in
 ### Profiles
 
 #### Questionnaire
+Payers have documentation requirements and rules that must be satisfied as part of their typical operations when reimbursing for care for certain services requiring authorization or documentation.
+
 The Questionnaire resource is used to represent the information needs that a payer has to satisfy for their documentation requirements and/or rules. Payers **SHALL** gather data needed to satisfy their rules using FHIR Questionnaires that comply with either the [DTR SDC Questionnaire profile](StructureDefinition-dtr-sdc-questionnaire.html) or the [DTR Adaptive Questionnaire profile](StructureDefinition-dtr-sdc-questionnaire-adapt.html).  
 
 These Questionnaires **SHALL** include logic that supports population from the EHR where possible.  Such logic **SHOULD** rely exclusively on data elements and search parameters defined either in US Core or HRex.  Logic **SHALL** work if only the current version (required by ONC) is available.  These Questionnaires **SHOULD** also include logic that ensures that only 'relevant' questions are displayed, based on what answers have already been provided/populated.  When using 'expression' elements within Questionnaires, all logic **SHALL** be written in CQL.
