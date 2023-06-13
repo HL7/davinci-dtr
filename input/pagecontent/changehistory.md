@@ -306,7 +306,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36527">FHIR-36527</a>:
   refine language 
-  <a href="specification.html">(Formal Specification)</a>
+  <a href="specification.html#questionnaire">(Questionnaire)</a>
   </li>
   
   <li>
