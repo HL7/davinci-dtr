@@ -348,7 +348,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36151">FHIR-36151</a>:
   Again, DTR <-> Payer should use SMART backend services
-  <a href="specification.html">(Formal Specification)</a>
+  <a href="specification.html#authentication-of-smart-on-fhir-application-to-payer-api">(Authentication of SMART on FHIR application to payer API)</a>
   </li>
 
 .....................................................................................................................................................................................................  

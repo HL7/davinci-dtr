@@ -151,7 +151,9 @@ The Electronic Health Record (EHR) system **SHALL** be the primary system used t
   
 Payers **SHALL** require the DTR process to authenticate in order to retrieve resources when PHI is exchanged, and **SHOULD** required authentication in other situations. The app is required to register and obtain a client id to register and authenticate via SMART Backend services.
 
-> Payers must be cautious about prepopulating Questionnaires with sensitive information, because there are rare situations where a malicious application could attempt to access information that was not authorized by the EHR.
+> SMART Backend Services provides a flow that authorizes a system to connect to a FHIR server where no user needs to be involved in the authorization process, and allows systems like EHRs to easily interact with pre-authorized defined scopes of access. For additional information, see [SMART on FHIR Backend Services](https://build.fhir.org/ig/HL7/smart-app-launch/backend-services.html).
+
+NOTE: Payers must be cautious about prepopulating Questionnaires with sensitive information, because there are rare situations where a malicious application could attempt to access information that was not authorized by the EHR.
 
 #### CQL Rules
 CQL can either be embedded inline as part of an expression or referenced in a library.  All libraries needed by a questionnaire **SHALL** be referenced by the cqf-library extension which **SHALL** be resolvable by the SMART app. Metadata about the rules will be represented as a FHIR Library resource. The payer **SHALL** provide this as a FHIR resource, such that the DTR process will be executing a FHIR read interaction on the payer's server.
