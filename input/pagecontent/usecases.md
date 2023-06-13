@@ -43,6 +43,8 @@ This example shows an overview of how the DTR SMART on FHIR app (or equivalent n
 
 ![Process Flow Detail](DTR_Example_Workflow.png){:style="float: none;"}
 
+> If the resulting information is to be sent to a third party (e.g., payer), the DTR SMART on FHIR App (or equivalent native app) **SHALL** include a configurable step to allow the provider to review and grant permission to send the information gathered in the QuestionnaireResponse before sending.
+
 
 ### Relation to Clinical Data Exchange (CDex)  
 
