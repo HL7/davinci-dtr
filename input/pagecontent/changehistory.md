@@ -186,7 +186,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36139">FHIR-36139</a>:
   More clarity around how UM Payer multi party arangements are handled
-  <a href="index.html#overview">(Overview)</a>
+  <a href="specification.html#retrieval-of-payer-resources-and-smart-launch">(Retrieval of Payer resources and SMART Launch)</a>
   </li>
   
   <li>
