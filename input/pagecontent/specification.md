@@ -96,6 +96,8 @@ For cases where the DTR process is being launched outside the context of Coverag
 ### Retrieval of Payer resources and SMART Launch
 The DTR process will need to retrieve resources from a payer IT system to operate properly. This application will need to obtain a FHIR Questionnaire and associated Clinical Quality Language (CQL) logic files in order to execute. Where ever the questionnaires, CQL, and value sets are made available.  The Payer can specify the endpoint to be a Payer's, a third party, Utilization Management Organization, or Business Association. 
 
+All Questionnaires and valuesets retrieved **SHALL** be version specific, as breaking changes may occur between versions and would likely cause failures or inconsistent data.
+
 The information needed to obtain the required resources will be provided as escaped JSON in the `appContext` property of the Clinical Decision Support (CDS) Hooks Card Link object, as described in [CDS Hooks](specification.html#use-of-cardlinks). When launched in context of CRD and a CDS Hook, that object will have the following properties:
 
 | Field    | Optionality | Cardinality | Type  | Description |
@@ -253,7 +255,9 @@ In order to resume a work in-progress that has been persisted, there are three b
 - The user must have authority to use DTR
 
 ##### Visibility of Usage Sessions to Other Users
- 
+
+Depending on workflows within an organization, implementations **SHALL** allow for one authorized user to start a session, and have it completed by another authorized user. 
+
 The [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) and FHIR specification provide methods for discovering information about the user and how that user fits into the provider organization. With this information, the DTR process, possibly consulting with the payer and provider IT systems, can decide which usage sessions to expose to a given user.
 
 As an example, the DTR process may retrieve a Practitioner resource by retrieving the URL supplied in the `fhirUser` claim. The DTR process may then query the CareTeam or PractitionerRole resources to determine their relationship to other staff in the provider organization and determine if their usage sessions should also be made available.
