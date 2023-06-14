@@ -429,7 +429,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-39504">FHIR-39504</a>:
   Add guidance on endpoint discovery/configuration
-  <a href="usecases.html#use-cases-and-overview">(Use Cases and Overview)</a>
+  <a href="specification.html#determination-of-payers-supported-by-a-dtr-app">(Determination of Payers Supported by a DTR App)</a>
   </li>
   
   <li>
