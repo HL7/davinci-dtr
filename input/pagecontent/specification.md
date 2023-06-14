@@ -202,8 +202,6 @@ The ability to create tasks or 'to-dos' is outside of the scope of DTR and shoul
 
 The questionnaire **SHALL** be able to suspend completion until all tasks are completed. How the application is suspended is left to the implementer, but the state of the questionnaire **SHALL** be preserved.
 
-The questionnaire **SHOULD** be able to suspend completion until all tasks are completed. How the application is suspended is left to the implementer, but the state of the questionnaire **SHOULD** be preserved. 
-
 ---------------------
 ### Determination of Payers Supported by a DTR App
 It is possible that the apps used to provide DTR functionality to an app will not support all payers the EHR might have "DTR requests" for - either from CRD or CDex.  It is important for the EHR to know what payers their app supports so that they only allow their users to launch the DTR app in the context of payers the app will be able to support.  (Launching an app only to be told "this payer isn't supported" is an unpleasant user experience.)
