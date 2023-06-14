@@ -2,6 +2,10 @@ This section of the IG defines the guidelines of the DTR process behavior and in
 
 ---------------------
 ### Profiles
+This implementation guide will adopt by reference the following [HRex Conformance Requirements](http://build.fhir.org/ig/HL7/davinci-ehrx/conformance.html)
+
+In addition, systems **SHALL** comply with additional requirements called out in IG text and Profile definitions.
+
 
 #### Questionnaire
 Payers have documentation requirements and rules that must be satisfied as part of their typical operations when reimbursing for care for certain services requiring authorization or documentation.
