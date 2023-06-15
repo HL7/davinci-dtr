@@ -497,7 +497,6 @@ Some payers may require that attestations or other answers be 'signed' (the elec
 
 Questionnaires may also support attaching reports or other supporting documentation (e.g., images, pathology reports, etc.) where providing question answers is not sufficient.  The 'attachment' question type can be used to support this.  Attachments might be found by searching for DocumentReference, DiagnosticReport or Media instances, or by the provider directly uploading something to the Questionnaire rendering tool.  
 
->Compliant questionnaires **SHALL NOT** include hidden or read-only questions unless the information is populated by the payer or their out-sourced service.  If information is privacy restricted, the information **SHOULD** be treated as if it does not exist. The provider **SHOULD** ask the patient if they want to share the information with the payer.
 
 #### Recording Responses
 The DTR process **SHALL** take input from the user and record the provided information. As with provider attestation, the DTR process **SHALL** record that in the corresponding QuestionnaireResponse.item. In this case, the DTR process **SHALL** create an `answer` property on the `item`. The `answer` **SHALL** have an appropriate `value[x]` depending on the corresponding `type` in the `Questionnaire.item`. Again, similar to attestations, the `item` will have an `author` extension property which will reference the `fhirUser` provided to the DTR process.
@@ -594,8 +593,9 @@ Implementers **SHALL** also adhere to the security guidelines defined in:
 * CDS Hooks: [Security & Safety](https://cds-hooks.hl7.org/1.0/#security-and-safety)
 * SMART on FHIR: [SMART App Launch Framework](http://www.hl7.org/fhir/smart-app-launch)
 
-
 The DTR / SMART on FHIR application will have access to the scope of data authorized by the organization as appropriate for use by the app, and accessible to the user. This scope granted may provide the  SMART on FHIR application  access to more data than is needed for the specific situation. For example, if Observation.read capabilities are needed, the app will have access to all observations for that patient. For compliance with HIPAA Minimum Necessary, the CQL **SHALL** limit requests for information from the EHR's API to only items that are relevant to the documentation requirements for which DTR was launched (e.g., documentation requirements for a service that requires prior authorization).
+
+>Compliant questionnaires **SHALL NOT** include hidden or read-only questions unless the information is populated by the payer or their out-sourced service.  If information is privacy restricted, the information **SHOULD** be treated as if it does not exist. The provider **SHOULD** ask the patient if they want to share the information with the payer.
 
 Any EHR with SMART on FHIR support should be prepared to deal with the implications of providing a client with the scopes they request. For example, EHRs **SHOULD** limit FHIR search capabilities for clients, requiring a patient ID in any search query to ensure the client can only access resources related to that patient.
 
