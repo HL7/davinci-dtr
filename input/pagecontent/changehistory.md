@@ -351,7 +351,8 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="specification.html#authentication-of-smart-on-fhir-application-to-payer-api">(Authentication of SMART on FHIR application to payer API)</a>
   </li>
 
-.....................................................................................................................................................................................................  
+................................................................................................................................................................................................  
+  
 <br><br>
     
   <li>
