@@ -856,7 +856,7 @@ This ballot addresses several additions, modifications, technical corrections, e
    <li>
   <a href="https://jira.hl7.org/browse/FHIR-39492">FHIR-39492</a>:
   Allow DTR to be used from CDex
-  <a href="specification.html#launch-outside-of-crd">(Launch of DTR by CDex)</a>
+  <a href="specification.html#launch-of-dtr-by-cdex">(Launch of DTR by CDex)</a>
   </li>
 </ul>
 
