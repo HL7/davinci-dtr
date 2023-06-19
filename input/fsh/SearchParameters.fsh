@@ -1,7 +1,7 @@
 Instance: dtr-context
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://hl7.org/fhir/us/core/SearchParameter/dtr-context"
+* url = "http://hl7.org/fhir/us/davinci-dtr/SearchParameter/dtr-context"
 * version = "1.0.0"
 * name = "DTRcontext"
 * status = #active
@@ -10,4 +10,4 @@ Usage: #definition
 * code = #context
 * base = #QuestionnaireResponse
 * type = #reference
-* expression = "QuestionnaireResponse.extension.where(url = 'http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-context').extension.value"
+* expression = "QuestionnaireResponse.extension.where(url = 'http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/context').extension.value"
