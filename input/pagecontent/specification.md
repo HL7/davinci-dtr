@@ -189,8 +189,10 @@ DTR process **SHALL** support the [Standalone launch sequence](http://hl7.org/fh
 
 Once user identity has been established, the DTR process should allow the user to select a usage session from all of the sessions available to that particular user.
 
-#### CDex Launch of DTR
+#### Launch of DTR by CDex
 The [Clinical Data Exchange (CDex)](https://hl7.org/fhir/us/davinci-cdex/index.html) implementation guide also uses DTR functionality to [request attachments using questionnaires](https://hl7.org/fhir/us/davinci-cdex/requesting-attachments-questionnaire.html).  See the [CDex Task Data Request Profile](https://hl7.org/fhir/us/davinci-cdex/StructureDefinition-cdex-task-data-request.html).
+
+It is important to note that other IGs might provide additional mechanisms for transmitting the results of the completed QuestionnaireResponse, and the client that launches DTR is responsible for understanding the context of the launch, and thus what to do with any QuestionnaireResponses persisted as a result of that launch.
 
 #### DTR Task
 The task resource is used to capture a request for additional actions that arise from the DTR flow. This may be a request for more information from the patient or a desire to schedule a follow up treatment in order to satisfy documentation requirements. 
