@@ -10,4 +10,4 @@ Usage: #definition
 * code = #context
 * base = #QuestionnaireResponse
 * type = #reference
-* expression = "QuestionnaireResponse.extension.where(url = 'http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/context').extension.value"
+* expression = "QuestionnaireResponse.extension.where(url = 'http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-context').extension.value"
