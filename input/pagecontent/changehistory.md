@@ -858,6 +858,12 @@ This ballot addresses several additions, modifications, technical corrections, e
   Allow DTR to be used from CDex
   <a href="specification.html#launch-of-dtr-by-cdex">(Launch of DTR by CDex)</a>
   </li>
+
+   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36543">FHIR-36543</a>:
+  Need a search parameter for new context extension
+  <a href="SearchParameter-dtr-context.html">(SearchParameter: dtr-context)</a>
+  </li>
 </ul>
 
 </div>
