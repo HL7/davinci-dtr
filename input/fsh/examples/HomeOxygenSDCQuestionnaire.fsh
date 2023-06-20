@@ -14,10 +14,8 @@ Description: "An example SDC questionnaire for Home Oxygen Therapy."
 * date = "2020-01-13T00:00:00+00:00"
 * publisher = "Da Vinci DTR"
 * contact.name = "Example Author"
-
 * extension[rendering-styleSensitive].valueBoolean = false
 * extension[sdc-questionnaire-entryMode].valueCode = #sequential
-
 * item.linkId = "1"
 * item.text = "Patient Information"
 * item.type = #group
