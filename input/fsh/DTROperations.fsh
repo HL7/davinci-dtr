@@ -51,6 +51,13 @@ Usage: #definition
 * parameter[=].min = 0
 * parameter[=].max = "*"
 
+* parameter[+].name = #questionnaire
+* parameter[=].use = #in
+* parameter[=].documentation = "One or more Questionnaire resource instances."
+* parameter[=].type = #Questionnaire
+* parameter[=].min = 0
+* parameter[=].max = "*"
+
 * parameter[+].name = #changedsince
 * parameter[=].use = #in
 * parameter[=].documentation = "If present, the package will only contain the questionnaire or associated artifact that have changes since the specified timestamp.  If there are no changed artifacts the operation will simply return a 200 Ok indicating that nothing has changed since the specified timestamp."
