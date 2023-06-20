@@ -10,7 +10,7 @@ Description: "An example SDC questionnaire for Home Oxygen Therapy."
 * status = #draft
 * subjectType = #Patient
 * text.status = #generated
-* text.div = "<div></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Example Questionnaire</div>"
 * date = "2020-01-13T00:00:00+00:00"
 * publisher = "Da Vinci DTR"
 * contact.name = "Example Author"

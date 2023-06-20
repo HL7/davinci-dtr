@@ -78,3 +78,16 @@ Description: "An instance of DTRCoverage"
 * subscriberId = "PFP123450000"
 * costToBeneficiary.type = COPAYTYPE#copaypct "Copay Percentage"
 * costToBeneficiary.valueQuantity.value = 20.00
+
+Instance: DTRParametersExample
+InstanceOf: Parameters
+Description: "An example Parameters resource for DTRQuestionnairePackageOperation"
+Usage: #example
+* parameter[0].name = "coverage"
+* parameter[=].resource = DTRCoverage1002
+* parameter[+].name = "order"
+* parameter[=].resource = deviceRequest0001
+* parameter[+].name = "questionnaire"
+* parameter[=].resource = home-o2-sdc-questionnaire
+* parameter[+].name = "changedsince"
+* parameter[=].valueDateTime = "2023-04-20T00:00:00+00:00"
