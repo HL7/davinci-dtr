@@ -864,6 +864,11 @@ This ballot addresses several additions, modifications, technical corrections, e
   Need a search parameter for new context extension
   <a href="SearchParameter-dtr-context.html">(SearchParameter: dtr-context)</a>
   </li>
-</ul>
+
+   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36534">FHIR-36534</a>:
+  Correct operation adaptive expectations
+  <a href="OperationDefinition-questionnaire-package.html">(DTRQuestionnairePackageOperation)</a>
+  </li></ul>
 
 </div>
