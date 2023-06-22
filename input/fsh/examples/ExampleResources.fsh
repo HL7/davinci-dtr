@@ -1,4 +1,4 @@
-Instance: example1
+Instance: PatientExample1
 InstanceOf: Patient
 Description: "An example patient used in the example resources."
 * gender = #male
@@ -7,7 +7,7 @@ Description: "An example patient used in the example resources."
 * address.type = #both
 * address.state = "MA"
 
-Instance: example2
+Instance: PractitionerExample1
 InstanceOf: Practitioner
 Description: "An example practitioner referred by the example resources."
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"
@@ -16,20 +16,19 @@ Description: "An example practitioner referred by the example resources."
 * name.given = "Jane"
 * name.prefix = "Dr."
 
-
-Instance: example4
+Instance: ServiceRequestExample1
 InstanceOf: ServiceRequest
 Usage: #inline
 * status = #active
 * intent = #original-order
 * code = http://loinc.org#24338-6
 * code.text = "Gas panel - Blood"
-* subject = Reference(example1)
+* subject = Reference(PatientExample1)
 * occurrenceDateTime = "2019-05-08T09:33:27+07:00"
-* requester = Reference(example2) "Dr. Jane Doe"
+* requester = Reference(PractitionerExample1) "Dr. Jane Doe"
 * reasonCode.text = "Check for O2 blood saturation levels"
 
-Instance: org1001
+Instance: OrgExample1
 InstanceOf: Organization
 Description: "An instance of Organization as a payer used in the example resources."
 * type = http://terminology.hl7.org/CodeSystem/organization-type#pay "Payer"
@@ -44,29 +43,29 @@ Description: "An instance of Organization as a payer used in the example resourc
 * address.postalCode = "06155"
 * address.country = "US"
 
-Instance: coverage1001
+Instance: CoverageExample1
 InstanceOf: Coverage
 Description: "An instance of Coverage used in the example resources."
-* subscriber = Reference(example1)
-* beneficiary = Reference(example1)
+* subscriber = Reference(PatientExample1)
+* beneficiary = Reference(PatientExample1)
 * status = #active
-* payor = Reference(org1001)
+* payor = Reference(OrgExample1)
 
-Instance: deviceRequest0001
+Instance: DeviceRequestExample1
 InstanceOf: DeviceRequest
 Description: "An example device request used in the example resources."
 * status = #active
 * intent = #original-order
 * codeCodeableConcept = http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets#E0424 "Stationary Compressed Gaseous Oxygen System, Rental"
-* subject = Reference(example1)
+* subject = Reference(PatientExample1)
 * occurrenceDateTime = "2022-01-08T09:33:27+07:00"
-* requester = Reference(example2) "Dr. Jane Doe"
+* requester = Reference(PractitionerExample1) "Dr. Jane Doe"
 
-Instance: DTRCoverage1002
+Instance: DTRCoverageExample1
 InstanceOf: DTRCoverage
 Description: "An instance of DTRCoverage"
-* subscriber = Reference(example1)
-* beneficiary = Reference(example1)
+* subscriber = Reference(PatientExample1)
+* beneficiary = Reference(PatientExample1)
 * relationship = RELATE#self "Self"
 * status = #active
 * class.name = "Premim Family Plus Plan"
@@ -74,7 +73,7 @@ Description: "An instance of DTRCoverage"
 * class.value = "Premim Family Plus"
 * period.start = "2022-01-01"
 * period.end = "2023-01-01"
-* payor = Reference(org1001)
+* payor = Reference(OrgExample1)
 * subscriberId = "PFP123450000"
 * costToBeneficiary.type = COPAYTYPE#copaypct "Copay Percentage"
 * costToBeneficiary.valueQuantity.value = 20.00
@@ -84,9 +83,9 @@ InstanceOf: Parameters
 Description: "An example Parameters resource for DTRQuestionnairePackageOperation"
 Usage: #example
 * parameter[0].name = "coverage"
-* parameter[=].resource = DTRCoverage1002
+* parameter[=].resource = DTRCoverageExample1
 * parameter[+].name = "order"
-* parameter[=].resource = deviceRequest0001
+* parameter[=].resource = DeviceRequestExample1
 * parameter[+].name = "questionnaire"
 * parameter[=].resource = home-o2-sdc-questionnaire
 * parameter[+].name = "changedsince"

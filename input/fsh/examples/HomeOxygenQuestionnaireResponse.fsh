@@ -141,7 +141,7 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * meta.profile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse-r4"
 * authored = "2019-07-18"
 * status = #completed
-* subject = Reference(example1) "Vlad"
+* subject = Reference(PatientExample1) "Vlad"
 * questionnaire = "http://example.com/Questionnaire/referred-questionnaire"
 // * extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/context"
 // * extension[=].valueReference = Reference(coverage1001)
