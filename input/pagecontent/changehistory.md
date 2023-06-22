@@ -869,6 +869,14 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="https://jira.hl7.org/browse/FHIR-36534">FHIR-36534</a>:
   Correct operation adaptive expectations
   <a href="OperationDefinition-questionnaire-package.html">(DTRQuestionnairePackageOperation)</a>
-  </li></ul>
+  </li>
+ 
+   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-40605">FHIR-40605</a>:
+  Update Questionnaire package operation per discussions
+  <a href="OperationDefinition-questionnaire-package.html">(DTRQuestionnairePackageOperation)</a>
+  </li>
+ 
+  </ul>
 
 </div>
