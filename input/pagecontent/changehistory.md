@@ -876,7 +876,13 @@ This ballot addresses several additions, modifications, technical corrections, e
   Update Questionnaire package operation per discussions
   <a href="OperationDefinition-questionnaire-package.html">(DTRQuestionnairePackageOperation)</a>
   </li>
- 
+  
+   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36431">FHIR-36431</a>:
+  Inconsistency in how value sets & libraries are returned
+  <a href="OperationDefinition-questionnaire-package.html">(DTRQuestionnairePackageOperation)</a>
+  </li>
+
   </ul>
 
 </div>
