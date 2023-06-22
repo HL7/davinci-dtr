@@ -9,4 +9,4 @@ Expression: "type = 'group' or extension.url = 'http://hl7.org/fhir/StructureDef
 Invariant:  dtr-1
 Description: "Either an Order or a Questionnaire, or both, SHALL be present"
 Severity:   #error
-Expression: "order.exists() or questionnaire.exists()"
+Expression: "parameter[order].exists() or parameter[questionnaire].exists()"

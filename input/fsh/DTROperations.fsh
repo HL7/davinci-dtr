@@ -19,7 +19,9 @@ All references will will be resolved on a version-specific basis if version is d
 
 If any of the dependencies cannot be retrieved or value sets expanded, a warning will be included in the 'outcome'.  Each Library and ValueSet will only appear once, even if it is referenced multiple places.  The only exception is if more than one version of a Library or ValueSet are referenced.  Multiple versions of a ValueSet will be returned.  Multiple versions of a Library MAY be treated as an error, or MAY be handled by returning the 'most recent' version of the referenced versions.
 
-NOTE: for adaptive questionnaires, there will be no ValueSets and may not be any Libraries as CQL is typically in-line and questions - when they appear - will only provide answerOptions, not value sets.  When resuming a work in progress questionnaire response the DTR client **SHALL** invoke the operation with the timestamp to see if the questionnaire package has changed since it was last retrieved.  The DTR system **SHALL** store as meta data the timestamp of the last time it checked for changes."
+NOTE: for adaptive questionnaires, there will be no ValueSets and may not be any Libraries as CQL is typically in-line and questions - when they appear - will only provide answerOptions, not value sets.  When resuming a work in progress questionnaire response the DTR client **SHALL** invoke the operation with the timestamp to see if the questionnaire package has changed since it was last retrieved.  The DTR system **SHALL** store as meta data the timestamp of the last time it checked for changes.
+
+If both questionnaire and order parameters are present, both will be sent to the payer without any expectation that the list of questionnaires is a complete list."
 
 Usage: #definition
 
@@ -37,6 +39,8 @@ Usage: #definition
 * system = false
 * type = true
 * instance = false
+
+* inputProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-parameters"
 
 // in
 * parameter[0].name = #coverage
@@ -89,6 +93,16 @@ Usage: #definition
 * parameter[=].max = "1"
 * parameter[=].documentation = "This OperationOutcome satisfies the definition of this operation"
 * parameter[=].type = #OperationOutcome
+
+/**************************************************************************************************************/
+
+Profile:        DTRParameters
+Parent:         Parameters
+Id:             dtr-parameters
+Title:          "DTR Operation Parameters"
+Description:    "The Parameters profile used by the 'questionnaire-package' operation."
+
+* obeys dtr-1
 
 /**************************************************************************************************************/
 
