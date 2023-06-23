@@ -171,6 +171,14 @@ The DTR process may be launched outside of the workflow of Coverage Requirements
 #### Launch Context
 The launch context, which comes to the DTR app through the access token bundle, can be used to include necessary information when launching. When launched outside the context of CRD, the DTR app **SHOULD** add the `launch/order` scope, to indicate that the EHR should include the order currently in context when it returns an access token.  The EHR should provide a local reference, which the DTR app can use to retrieve the request, from which it can relaunch the associated usage session. The requests **SHALL** have an identifier, with type "placer", which remains consistent over the resources lifetime and can be used to search for them despite changes to their `id`.  
 
+The launch SHALL occur in the context of a specific patient and **SHOULD** occur in the context of a specific encounter and ideally a specific order.  DTR will check to see if there is already work-in-progress by looking for an existing QuestionnaireResponse (on the EHR) for the specified order.  If no order is specified, DTR will allow the user to select one of the existing "work-in-progress" sessions.  
+
+If an order was selected and there was no work in progress:
+* If there are multiple coverages whose payers are supported by the DTR app, the app will allow the user to select the coverage(s) to use DTR for.  (Each coverage selected would result in a separate QuestionnaireResponse.)
+* The DTR app will hit an operation endpoint on the payer (likely similar to that used internally by the CRD service) passing the order and coverage to determine the DTR ruleset.  
+
+> Note: this operation will not have a token allowing the payer to access any information other than what's in the order.  This means that the ruleset will often be broader (i.e., more questions and more questionnaire logic) than when the ruleset is determined within CRD.
+
 #### Starting a New Session
 To start a new session outside of the context of the CRD workflow, a user or EHR should initiate the launch and pass DTR a fhirContext with the “Order” and “Coverage” fields filled. The DTR app **SHALL** use this information to invoke the `$questionnaire-package` operation on the payer server, which should return a Questionnaire and associated CQL resources. If the base endpoint of the payer server is contained in the `Coverage` resource extension, then the app can be automatically launched. Otherwise, a user will have to manually select which payer to interact with.
 

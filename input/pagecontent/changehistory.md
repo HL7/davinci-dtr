@@ -889,6 +889,12 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="specification.html#persisting-application-state">(Persisting Application State)</a>
   </li>
 
-  </ul>
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-34128">FHIR-34128</a>:
+  Allow passing 'order' context when launching DTR
+  <a href="specification.html#launch-context">(Launch Context)</a>
+  </li>
+
+ </ul>
 
 </div>
