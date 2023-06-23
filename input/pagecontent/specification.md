@@ -223,6 +223,8 @@ Users of the DTR process are likely to be performing many tasks to support patie
 
 The DTR process **SHOULD NOT** assume that users will be able to fully complete their questionnaire response and save it in a single session. It is recommended that DTR conformant [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) (or native) applications preserve state automatically as a user interacts with it. In this manner, the user does not need to explicitly take action to save their state.
 
+When the provider system can support storage of work in progress, it **SHALL** be stored exclusively on the provider's system.  If the provider cannot store work in progress, then work in progress is stored in encrypted form on payer's system until a time it is considered complete and then at that point it will be stored unencrypted. 
+
 #### How DTR Saves Context of DTR for a Relaunch
 
 <br>

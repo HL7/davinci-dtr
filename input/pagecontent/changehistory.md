@@ -877,10 +877,16 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="OperationDefinition-questionnaire-package.html">(DTRQuestionnairePackageOperation)</a>
   </li>
   
-   <li>
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-36431">FHIR-36431</a>:
   Inconsistency in how value sets & libraries are returned
   <a href="OperationDefinition-questionnaire-package.html">(DTRQuestionnairePackageOperation)</a>
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36625">FHIR-36625</a>:
+  please clarify data access by payer
+  <a href="specification.html#persisting-application-state">(Persisting Application State)</a>
   </li>
 
   </ul>
