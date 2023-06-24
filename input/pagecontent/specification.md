@@ -150,8 +150,6 @@ When launching with the `currentorder` or `currentqr` scopes, if no Questionnair
 
 The QuestionnaireResponse will have all the information required to request the Questionnaire and CQL from the payer server and allow relaunch of the session with previously answered questions already filled out. [Save Context for Relaunch](specification.html#persisting-application-state)  
 
-This IG will support the [HRex Decision point - REST searchable?](http://build.fhir.org/ig/HL7/davinci-ehrx/exchanging.html#rest-searchable) when using RESTful endpoints to get payer resources (e.g., CQL rules and templates).
-
 #### Authentication of SMART on FHIR application to payer API
 The Electronic Health Record (EHR) system **SHALL** be the primary system used to initiate the DTR process. The [SMART App Launch](http://hl7.org/fhir/smart-app-launch) will typically be initiated from within the EHR.  
   

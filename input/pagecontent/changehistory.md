@@ -835,43 +835,43 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="specification.html#authentication-of-smart-on-fhir-application-to-payer-api">(Authentication of SMART on FHIR application to payer API)</a>
   </li>
 
-   <li>
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-36443">FHIR-36443</a>:
   How does an app notify the payer system
   <a href="OperationDefinition-log-questionnaire-cql-errors.html">(DTRLogQuestionnaireCQLErrors)</a>
   </li>
 
-   <li>
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-36520">FHIR-36520</a>:
   Change operation invocation
   <a href="OperationDefinition-questionnaire-package.html">(DTRQuestionnairePackageOperation)</a>
   </li>
 
-   <li>
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-36391">FHIR-36391</a>:
   Need more launch details
   <a href="specification.html#establish-patient-context">(Establish Patient Context)</a>
   </li>
 
-   <li>
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-39492">FHIR-39492</a>:
   Allow DTR to be used from CDex
   <a href="specification.html#launch-of-dtr-by-cdex">(Launch of DTR by CDex)</a>
   </li>
 
-   <li>
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-36543">FHIR-36543</a>:
   Need a search parameter for new context extension
   <a href="SearchParameter-dtr-context.html">(SearchParameter: dtr-context)</a>
   </li>
 
-   <li>
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-36534">FHIR-36534</a>:
   Correct operation adaptive expectations
   <a href="OperationDefinition-questionnaire-package.html">(DTRQuestionnairePackageOperation)</a>
   </li>
  
-   <li>
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-40605">FHIR-40605</a>:
   Update Questionnaire package operation per discussions
   <a href="OperationDefinition-questionnaire-package.html">(DTRQuestionnairePackageOperation)</a>
@@ -895,6 +895,11 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="specification.html#launch-context">(Launch Context)</a>
   </li>
 
- </ul>
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36436">FHIR-36436</a>:
+  Do better job of explaining HRex decision points
+  <a href="specification.html#authentication-of-smart-on-fhir-application-to-payer-api">(Authentication of SMART on FHIR application to payer API)</a>
+  </li>
 
+ </ul>
 </div>
