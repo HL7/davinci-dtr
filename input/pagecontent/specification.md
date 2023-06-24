@@ -448,7 +448,7 @@ As discussed in the Execution Results section below, it’s possible not every C
 
 The FHIR Library containing/referencing a CQL logic file can reference other needed CQL files (e.g., helper libraries) using the `relatedArtifact` field and a `RelatedArtifact` with a `type` of `depends-on`. The engine **SHALL** make available to the execution context all such referenced CQL libraries. If the Questionnaire has multiple `cqf-library` fields, then any `valueExpression` must specify the library name as well as the statement name as follows: `"LibraryName".statementName`.
 
-Consideration must also be made regarding the CQL version.
+This Implementation Guide's use of CQL **SHALL** be [CQL version 1](http://cql.hl7.org/N1/).
 
 ##### Behavior when receiving malformed CQL
 If the CQL is malformed (is not syntactically correct) in any way, the app’s execution engine **SHALL NOT** attempt any execution of the malformed CQL, the app **SHALL** log the error, and the user **SHALL** be notified with an appropriate message indicating that population did not occur and they **SHALL** be allowed to enter the information manually either now or at a later time. The app **SHOULD** log failures and ensure the maintainer of the CQL/Questionnaire package is notified. 
