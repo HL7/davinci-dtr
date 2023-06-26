@@ -316,7 +316,7 @@ Note: Other IGs might provide additional mechanisms for transmitting results of 
 
 ---------------------
 ### How DTR passes information to PAS, PAO or Other Exchanges
-The DTR application shall save the QuestionnaireResponse to the EHR upon completion (see section [Persisting Results](specification.html#persisting-results)). The next step after completing the Questionnaire may include sending a Claim to a PAS [(Prior Auth Support)](http://build.fhir.org/ig/HL7/davinci-pas/) server for or an Order to PAO [(Post-Acute Orders)](http://build.fhir.org/ig/HL7/dme-orders/) for ordering. Specifications on required resources can be found in the Implementation Guides for each of those use cases.  
+The DTR application **SHALL** save the QuestionnaireResponse to the EHR upon completion (see section [Persisting Results](specification.html#persisting-results)). The next step after completing the Questionnaire may include sending a Claim to a PAS [(Prior Auth Support)](http://build.fhir.org/ig/HL7/davinci-pas/) server for or an Order to PAO [(Post-Acute Orders)](http://build.fhir.org/ig/HL7/dme-orders/) for ordering. Specifications on required resources can be found in the Implementation Guides for each of those use cases.  
  
 The QuestionnaireResponse may include groups (items with specific linkIds) that contain references to resources to include. These may be attachments needed by either PAS or PAO. Also  subject, author, and source will be included.
 
@@ -330,10 +330,10 @@ The QuestionnaireResponse may include groups (items with specific linkIds) that 
 
  
 #### Prior Authorization Support (PAS) 
-The PAS Bundle linkId should be used for attached bundles containing resources needed for PAS. All of the referenced resources needed for PAS shall be stored as contained resources within the QuestionnaireResponse for easier reference. These resources should include the resources collected by DTR to complete the QuestionnaireResponse, as well as the Claim sent to PAS. If the [ClaimResponse](http://hl7.org/fhir/us/davinci-hrex/STU1/StructureDefinition-hrex-claimresponse.html) has already been received from a PAS request, this shall be stored in the QuestionnaireResponse with a reference to it in the items list as well. (All references to a ClaimResponse **SHALL** refer to the [HRex Prior Authorization profile of ClaimResponse](http://hl7.org/fhir/us/davinci-hrex/STU1/StructureDefinition-hrex-claimresponse.html))
+The PAS Bundle linkId **SHOULD** be used for attached bundles containing resources needed for PAS. All of the referenced resources needed for PAS **SHALL** be stored as contained resources within the QuestionnaireResponse for easier reference. These resources should include the resources collected by DTR to complete the QuestionnaireResponse, as well as the Claim sent to PAS. If the [ClaimResponse](http://hl7.org/fhir/us/davinci-hrex/STU1/StructureDefinition-hrex-claimresponse.html) has already been received from a PAS request, this **SHALL** be stored in the QuestionnaireResponse with a reference to it in the items list as well. (All references to a ClaimResponse **SHALL** refer to the [HRex Prior Authorization profile of ClaimResponse](http://hl7.org/fhir/us/davinci-hrex/STU1/StructureDefinition-hrex-claimresponse.html))
  
 #### Post-Acute Orders (PAO) 
-The PAO Bundle linkId should be used for attached bundles containing resources needed for Post-Acute Orders. All the referenced resources needed for PAO shall be stored as contained resources within the QuestionnaireResponse for easier reference. These resources should include the resources collected by DTR to complete the QuestionnaireResponse, as well as the Order sent to PAO. If a response has already been received from a PAO request, this shall be stored in the QuestionnaireResponse with a reference to it in the items list as well. (See the [Post-Acute Orders Implementation Guide](http://build.fhir.org/ig/HL7/dme-orders/))
+The PAO Bundle linkId should be used for attached bundles containing resources needed for Post-Acute Orders. All the referenced resources needed for PAO **SHALL** be stored as contained resources within the QuestionnaireResponse for easier reference. These resources should include the resources collected by DTR to complete the QuestionnaireResponse, as well as the Order sent to PAO. If a response has already been received from a PAO request, this **SHALL** be stored in the QuestionnaireResponse with a reference to it in the items list as well. (See the [Post-Acute Orders Implementation Guide](http://build.fhir.org/ig/HL7/dme-orders/))
 
 #### Additional Workflow
 
@@ -399,7 +399,7 @@ Like many other programming languages, CQL allows for statements to be nested wi
 
 Data retrieval is highly dependent on the *enableWhen* attribute/element:
 
-1. Questionnaires should be designed with appropriate use of *enableWhen* such that questions are only displayed when needed.
+1. Questionnaires **SHOULD** be designed with appropriate use of *enableWhen* such that questions are only displayed when needed.
 
 2. CQL logic should be partitioned to be specific to groups/questions/etc. when doing so will allow it to be more efficient - though consideration should also be given to whether performing significant data gathering at the outset (even if the data is unneeded) will produce a more positive experience than intermittent data retrieval 'on demand', when such retrieval may introduce user-interface delays
 
