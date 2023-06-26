@@ -143,14 +143,16 @@ Description: "A 2nd instance of DTRCoverage used in examples"
 
 Instance: DTRParametersComplexExample
 InstanceOf: DTRParameters
-Description: "An example Parameters resource for DTRQuestionnairePackageOperation showing all parameters"
+Description: "An example Parameters resource for DTRQuestionnairePackageOperation showing all parameters with multiple Coverage and Order parameters"
 Usage: #example
 * parameter[coverage][0].name = "coverage"
 * parameter[coverage][=].resource = DTRCoverageExample1
 * parameter[coverage][+].name = "coverage"
 * parameter[coverage][=].resource = DTRCoverageExample2
-* parameter[order].name = "order"
-* parameter[order].resource = DeviceRequestExample1
+* parameter[order][0].name = "order"
+* parameter[order][=].resource = DeviceRequestExample1
+* parameter[order][+].name = "order"
+* parameter[order][=].resource = ServiceRequestExample1
 * parameter[questionnaire].name = "questionnaire"
 * parameter[questionnaire].valueCanonical = "http://hl7.org/fhir/us/davinci-dtr/Questionnaire/home-o2-sdc-questionnaire"
 * parameter[context].name = "context"

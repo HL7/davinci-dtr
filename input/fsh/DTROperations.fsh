@@ -120,6 +120,7 @@ Description:    "The Parameters profile used by the 'questionnaire-package' oper
 * parameter[coverage].resource only DTRCoverage
 * parameter[order].name = "order"
 * parameter[order].resource 1..1 MS
+* parameter[order].resource only Appointment or AppointmentResponse or CarePlan or Claim or CommunicationRequest or CoverageEligibilityRequest or DeviceRequest or EnrollmentRequest or ImmunizationRecommendation or MedicationRequest or NutritionOrder or ServiceRequest or SupplyRequest or VisionPrescription
 * parameter[order].resource ^short = "One or more Order resource instances. e.g., DeviceRequest, ServiceRequest, MedicationRequest, ... Encounter, Appointment, or prior-auth Claim, etc. (Note: This could also be de-identified)"
 * parameter[questionnaire].name = "questionnaire"
 * parameter[questionnaire].value[x] 1..1 MS
