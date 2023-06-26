@@ -80,7 +80,7 @@ Description: "An instance of DTRCoverage"
 
 Instance: DTRParametersExample
 InstanceOf: DTRParameters
-Description: "An example Parameters resource for DTRQuestionnairePackageOperation"
+Description: "An example Parameters resource for DTRQuestionnairePackageOperation showing all parameters"
 Usage: #example
 * parameter[coverage].name = "coverage"
 * parameter[coverage].resource = DTRCoverageExample1
@@ -92,3 +92,22 @@ Usage: #example
 * parameter[context].valueString = "EXAMPLE_CRD_CONTEXT_ID"
 * parameter[changedsince].name = "changedsince"
 * parameter[changedsince].valueDateTime = "2023-04-20T00:00:00+00:00"
+
+Instance: DTRParametersSimpleQuestionnaireExample
+InstanceOf: DTRParameters
+Description: "An example Parameters resource for DTRQuestionnairePackageOperation with Coverage and a Questionnaire"
+Usage: #example
+* parameter[coverage].name = "coverage"
+* parameter[coverage].resource = DTRCoverageExample1
+* parameter[questionnaire].name = "questionnaire"
+* parameter[questionnaire].valueCanonical = "http://hl7.org/fhir/us/davinci-dtr/Questionnaire/home-o2-sdc-questionnaire"
+
+Instance: DTRParametersSimpleOrderExample
+InstanceOf: DTRParameters
+Description: "An example Parameters resource for DTRQuestionnairePackageOperation with Coverage and an Order"
+Usage: #example
+* parameter[coverage].name = "coverage"
+* parameter[coverage].resource = DTRCoverageExample1
+* parameter[order].name = "order"
+* parameter[order].resource = DeviceRequestExample1
+
