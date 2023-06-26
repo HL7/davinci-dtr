@@ -79,7 +79,7 @@ Description: "An instance of DTRCoverage"
 * costToBeneficiary.valueQuantity.value = 20.00
 
 Instance: DTRParametersExample
-InstanceOf: Parameters
+InstanceOf: DTRParameters
 Description: "An example Parameters resource for DTRQuestionnairePackageOperation"
 Usage: #example
 * parameter[0].name = "coverage"
@@ -88,5 +88,7 @@ Usage: #example
 * parameter[=].resource = DeviceRequestExample1
 * parameter[+].name = "questionnaire"
 * parameter[=].resource = home-o2-sdc-questionnaire
+* parameter[+].name = "context"
+* parameter[=].valueString = "EXAMPLE_CRD_CONTEXT_ID"
 * parameter[+].name = "changedsince"
 * parameter[=].valueDateTime = "2023-04-20T00:00:00+00:00"

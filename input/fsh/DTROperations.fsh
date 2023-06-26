@@ -103,6 +103,23 @@ Title:          "DTR Operation Parameters"
 Description:    "The Parameters profile used by the 'questionnaire-package' operation."
 
 * obeys dtr-1
+* parameter ^slicing.discriminator.type = #pattern
+* parameter ^slicing.discriminator.path = "name"
+* parameter ^slicing.rules = #open
+* parameter ^slicing.ordered = false   // can be omitted, since false is the default
+* parameter ^slicing.description = "Slice based on $this pattern"
+* parameter 1..* MS
+* parameter contains 
+	coverage 1..* MS and
+    order 0..* MS and
+    questionnaire 0..* MS and
+	context 0..1 MS and
+	changedsince 0..1 MS
+* parameter[coverage].name = "coverage"
+* parameter[order].name = "order"
+* parameter[questionnaire].name = "questionnaire"
+* parameter[context].name = "context"
+* parameter[changedsince].name = "changedsince"
 
 /**************************************************************************************************************/
 
