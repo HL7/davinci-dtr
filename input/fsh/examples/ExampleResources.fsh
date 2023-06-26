@@ -82,13 +82,13 @@ Instance: DTRParametersExample
 InstanceOf: DTRParameters
 Description: "An example Parameters resource for DTRQuestionnairePackageOperation"
 Usage: #example
-* parameter[0].name = "coverage"
-* parameter[=].resource = DTRCoverageExample1
-* parameter[+].name = "order"
-* parameter[=].resource = DeviceRequestExample1
-* parameter[+].name = "questionnaire"
-* parameter[=].resource = home-o2-sdc-questionnaire
-* parameter[+].name = "context"
-* parameter[=].valueString = "EXAMPLE_CRD_CONTEXT_ID"
-* parameter[+].name = "changedsince"
-* parameter[=].valueDateTime = "2023-04-20T00:00:00+00:00"
+* parameter[coverage].name = "coverage"
+* parameter[coverage].resource = DTRCoverageExample1
+* parameter[order].name = "order"
+* parameter[order].resource = DeviceRequestExample1
+* parameter[questionnaire].name = "questionnaire"
+* parameter[questionnaire].valueCanonical = "http://hl7.org/fhir/us/davinci-dtr/Questionnaire/home-o2-sdc-questionnaire"
+* parameter[context].name = "context"
+* parameter[context].valueString = "EXAMPLE_CRD_CONTEXT_ID"
+* parameter[changedsince].name = "changedsince"
+* parameter[changedsince].valueDateTime = "2023-04-20T00:00:00+00:00"

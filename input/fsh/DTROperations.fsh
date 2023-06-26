@@ -60,7 +60,7 @@ Usage: #definition
 * parameter[+].name = #questionnaire
 * parameter[=].use = #in
 * parameter[=].documentation = "One or more Questionnaire resource instances."
-* parameter[=].type = #Questionnaire
+* parameter[=].type = #canonical
 * parameter[=].min = 0
 * parameter[=].max = "*"
 
@@ -116,10 +116,20 @@ Description:    "The Parameters profile used by the 'questionnaire-package' oper
 	context 0..1 MS and
 	changedsince 0..1 MS
 * parameter[coverage].name = "coverage"
+* parameter[coverage].resource 1..1 MS
+* parameter[coverage].resource only DTRCoverage
 * parameter[order].name = "order"
+* parameter[order].resource 1..1 MS
+* parameter[order].resource ^short = "One or more Order resource instances. e.g., DeviceRequest, ServiceRequest, MedicationRequest, ... Encounter, Appointment, or prior-auth Claim, etc. (Note: This could also be de-identified)"
 * parameter[questionnaire].name = "questionnaire"
+* parameter[questionnaire].value[x] 1..1 MS
+* parameter[questionnaire].value[x] only canonical
 * parameter[context].name = "context"
+* parameter[context].value[x] 1..1 MS
+* parameter[context].value[x] only string
 * parameter[changedsince].name = "changedsince"
+* parameter[changedsince].value[x] 1..1 MS
+* parameter[changedsince].value[x] only dateTime
 
 /**************************************************************************************************************/
 
