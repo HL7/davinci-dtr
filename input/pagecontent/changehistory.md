@@ -907,5 +907,11 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="specification.html#questionnaire-response">(Questionnaire Response)</a>
   </li>
 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36535">FHIR-36535</a>:
+  We need examples for operation inputs and outputs
+  <a href="artifacts.html#5">(Example Instances)</a>
+  </li>
+
  </ul>
 </div>
