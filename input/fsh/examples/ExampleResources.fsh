@@ -178,3 +178,17 @@ Usage: #example
 * parameter[order].name = "order"
 * parameter[order].resource = DeviceRequestExample1
 
+
+///////////////////////////////////////////
+
+Instance: DTRQuestionnairePackageOperationResultSimple
+InstanceOf: Bundle
+Description: "And example of DTRQuestionnairePackageOperation returning a Bundle with only a single adaptive questionnaire"
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:90404930-204a-4127-9c40-997b2ed7f767"
+* type = #collection
+* timestamp = "2023-04-20T00:00:00+05:00"
+* entry[0].fullUrl = "http://example.org/fhir/Questionnaire/home-o2-sdc-adaptive-questionnaire"
+* entry[0].id = "home-o2-sdc-adaptive-questionnaire"
+* entry[0].resource = home-o2-sdc-adaptive-questionnaire
+
