@@ -192,3 +192,21 @@ Description: "And example of DTRQuestionnairePackageOperation returning a Bundle
 * entry[0].id = "home-o2-sdc-adaptive-questionnaire"
 * entry[0].resource = home-o2-sdc-adaptive-questionnaire
 
+
+///////////////////////////////////////////
+Instance: library-quick-model-definition
+InstanceOf: Library
+Description: "A sample library from the FHIR core spec to include in other examples in this IG to demonstrate the use of Library resources"
+Usage: #example
+* identifier.use = #official
+* identifier.value = "QUICK"
+* url = "http://example.org/fhir/Library/quick"
+* version = "1.0.0"
+* title = "QUICK Model Definition"
+* status = #draft
+* type.coding.code = #model-definition
+* date = "2016-07-08"
+* description = "Model definition for the QUICK Logical Model"
+* topic.text = "QUICK"
+* content.contentType = #application/xml
+* content.url = "http://cqlrepository.org/quick-modelinfo.xml"
