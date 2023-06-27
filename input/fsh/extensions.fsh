@@ -1,3 +1,11 @@
+Alias: $dtr-coverage = http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-coverage-r4
+Alias: $dtr-devicerequest = http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-devicerequest
+Alias: $dtr-medicationrequest = http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-medicationrequest
+Alias: $dtr-nutritionorder = http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-nutritionorder
+Alias: $dtr-servicerequest = http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-servicerequest
+Alias: $us-core-encounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+
+/**************************************************************************************************************/
 Extension: PayerEndpoint
 Id: endpoint
 Description: "This extension contains the endpoint for payer services."
@@ -5,14 +13,6 @@ Description: "This extension contains the endpoint for payer services."
 * value[x] ^definition = "This contains the canonical url for the payer endpoint, for retrieval of payer resources like the Questionnaire and CQL."
 * value[x] only url
 * value[x] 1..1
-
-/**************************************************************************************************************/
-Alias: $dtr-coverage = http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-coverage-r4
-Alias: $dtr-devicerequest = http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-devicerequest
-Alias: $dtr-medicationrequest = http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-medicationrequest
-Alias: $dtr-nutritionorder = http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-nutritionorder
-Alias: $dtr-servicerequest = http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-servicerequest
-Alias: $us-core-encounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
 
 /**************************************************************************************************************/
 Extension: Context
@@ -32,3 +32,25 @@ Description: "Identifies the orders, coverages, and or other resources associate
 * extension[order] ^definition = "The order context associated with a QuestionnaireResponse"
 * extension[order].value[x] 1..1
 * extension[order].value[x] only Reference($dtr-devicerequest or $dtr-medicationrequest or $dtr-nutritionorder or $dtr-servicerequest or $us-core-encounter or Appointment)
+
+/**************************************************************************************************************/
+Extension: InformationOrigin
+Id: information-origin
+Description: "Identifies the origin of the information entered in the answer and how it came to be. If source is 'auto-with-override' or 'manual' then an author **SHALL** be supplied."
+* ^context[0].type = #element
+* ^context[=].expression = "QuestionnaireResponse.item.answer"
+* extension contains
+    source 1..1 and
+    author 0..1
+* extension[source] only Extension
+* extension[source] ^short = "The origination of information"
+* extension[source] ^definition = "The origination of information"
+* extension[source].value[x] 1..1
+* extension[source].value[x] from OriginationValueSet (required)
+* extension[source].value[x] only code
+
+* extension[author] only Extension
+* extension[author] ^short = "The final human who authored the information adjustment"
+* extension[author] ^definition = "The final human who authored the information adjustment"
+* extension[author].value[x] 1..1
+* extension[author].value[x] only Reference(Practitioner)

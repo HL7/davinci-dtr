@@ -28,3 +28,5 @@ Description:    "Enforces DTR requirements on a completed or partially completed
 
 * item 1..*
 * item.extension only $QRAUTHOR
+
+* item.answer.extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin named Origination 0..1 MS
