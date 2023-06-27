@@ -901,5 +901,11 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="specification.html#authentication-of-smart-on-fhir-application-to-payer-api">(Authentication of SMART on FHIR application to payer API)</a>
   </li>
 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36468">FHIR-36468</a>:
+  What's the point of distinguishing CQL vs. human-authored?
+  <a href="specification.html#questionnaire-response">(Questionnaire Response)</a>
+  </li>
+
  </ul>
 </div>
