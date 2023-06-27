@@ -44,8 +44,6 @@ The [InformationOrigin extension](StructureDefinition-information-origin.html) i
 
 This process **SHALL** be automatic and populated without human intervention by the DTR application.
 
- This profile uses the [author extension](http://www.hl7.org/implement/standards/fhir/extension-questionnaireresponse-author.html) when items are based on information input into the DTR process by the user.
-
 * [DTR QuestionnaireResponse R4](StructureDefinition-dtr-questionnaireresponse-r4.html) - [Example](QuestionnaireResponse-home-o2-questionnaireresponse.html)
 
 #### SDC Adaptive Forms
