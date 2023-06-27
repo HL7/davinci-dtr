@@ -1,7 +1,7 @@
 //////////////////////////////
 // Code Systems and Value Sets
 //////////////////////////////
-Alias: $local = http://hl7.org/fhir/us/davinci-dtr/
+Alias: $local = http://hl7.org/fhir/ValueSet/
 
 ValueSet: OriginationValueSet
 Id: Origination-vs
