@@ -36,7 +36,7 @@ Description: "Identifies the orders, coverages, and or other resources associate
 /**************************************************************************************************************/
 Extension: InformationOrigin
 Id: information-origin
-Description: "Identifies the origin of the information entered in the answer and how it came to be. If source is 'auto-with-override' or 'manual' then an author **SHALL** be supplied."
+Description: "Identifies the origin of the information entered in the answer and how it came to be. If source is 'override' or 'manual' then an author **SHALL** be supplied."
 * ^context[0].type = #element
 * ^context[=].expression = "QuestionnaireResponse.item.answer"
 * extension contains
@@ -46,7 +46,7 @@ Description: "Identifies the origin of the information entered in the answer and
 * extension[source] ^short = "The origination of information"
 * extension[source] ^definition = "The origination of information"
 * extension[source].value[x] 1..1
-* extension[source].value[x] from OriginationValueSet (required)
+* extension[source].value[x] from OriginValueSet (required)
 * extension[source].value[x] only code
 
 * extension[author] only Extension
