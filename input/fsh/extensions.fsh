@@ -39,9 +39,11 @@ Id: information-origin
 Description: "Identifies the origin of the information entered in the answer and how it came to be. If source is 'override' or 'manual' then an author **SHALL** be supplied."
 * ^context[0].type = #element
 * ^context[=].expression = "QuestionnaireResponse.item.answer"
+
 * extension contains
     source 1..1 and
     author 0..1
+
 * extension[source] only Extension
 * extension[source] ^short = "The origination of information"
 * extension[source] ^definition = "The origination of information"
