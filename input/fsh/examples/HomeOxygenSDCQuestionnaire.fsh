@@ -16,6 +16,7 @@ Description: "An example SDC questionnaire for Home Oxygen Therapy."
 * contact.name = "Example Author"
 * extension[rendering-styleSensitive].valueBoolean = false
 * extension[sdc-questionnaire-entryMode].valueCode = #sequential
+* extension[cqf-library].valueCanonical = "http://example.org/fhir/Library/quick"
 * item.linkId = "1"
 * item.text = "Patient Information"
 * item.type = #group
@@ -33,6 +34,14 @@ Description: "An example SDC questionnaire for Home Oxygen Therapy."
 * item.item[=].text = "Middle Name"
 * item.item[=].type = #string
 * item.item[=].required = false
+
+* item.item[+].linkId = "1.gender"
+* item.item[=].definition = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-question-library#Demographics.sex"
+* item.item[=].text = "What is this person's gender?"
+* item.item[=].type = #choice
+* item.item[=].required = true
+* item.item[=].answerValueSet = "http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype"
+
 * item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/regex"
 * item[=].extension.valueString = "[A-Z][0-9][A-Z] [0-9][A-Z][0-9]"
 * item[=].linkId = "1.4"

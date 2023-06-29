@@ -103,6 +103,34 @@ Title:          "DTR Operation Parameters"
 Description:    "The Parameters profile used by the 'questionnaire-package' operation."
 
 * obeys dtr-1
+* parameter ^slicing.discriminator.type = #pattern
+* parameter ^slicing.discriminator.path = "name"
+* parameter ^slicing.rules = #open
+* parameter ^slicing.ordered = false   // can be omitted, since false is the default
+* parameter ^slicing.description = "Slice based on $this pattern"
+* parameter 1..* MS
+* parameter contains 
+	coverage 1..* MS and
+    order 0..* MS and
+    questionnaire 0..* MS and
+	context 0..1 MS and
+	changedsince 0..1 MS
+* parameter[coverage].name = "coverage"
+* parameter[coverage].resource 1..1 MS
+* parameter[coverage].resource only DTRCoverage
+* parameter[order].name = "order"
+* parameter[order].resource 1..1 MS
+* parameter[order].resource only Appointment or AppointmentResponse or CarePlan or Claim or CommunicationRequest or CoverageEligibilityRequest or DeviceRequest or EnrollmentRequest or ImmunizationRecommendation or MedicationRequest or NutritionOrder or ServiceRequest or SupplyRequest or VisionPrescription
+* parameter[order].resource ^short = "One or more Order resource instances. e.g., DeviceRequest, ServiceRequest, MedicationRequest, ... Encounter, Appointment, or prior-auth Claim, etc. (Note: This could also be de-identified)"
+* parameter[questionnaire].name = "questionnaire"
+* parameter[questionnaire].value[x] 1..1 MS
+* parameter[questionnaire].value[x] only canonical
+* parameter[context].name = "context"
+* parameter[context].value[x] 1..1 MS
+* parameter[context].value[x] only string
+* parameter[changedsince].name = "changedsince"
+* parameter[changedsince].value[x] 1..1 MS
+* parameter[changedsince].value[x] only dateTime
 
 /**************************************************************************************************************/
 
