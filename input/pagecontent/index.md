@@ -8,10 +8,10 @@ DTR leverages FHIR [Questionnaires](http://hl7.org/fhir/R4/questionnaire.html) c
 ### Expected Systems
 This Implementation Guide has expectations defined for four types of systems that can be involved (with corresponding Capability Statements):
 
-- [DTR - EHRs that use SMART apps](CapabilityStatement-DTR-Smart-client.html)
-- [EHRs that don't use SMART apps](CapabilityStatement-DTR-Native-client.html)
-- [SMART apps with payer systems](CapabilityStatement-DTR-Payer-App.html)
-- [Intermediary systems with defined functionality has been defined](CapabilityStatement-DTR-Intermediary-System.html)
+- [DTR - EHRs that use SMART apps](CapabilityStatement-dtr-smart-client.html)
+- [EHRs that don't use SMART apps](CapabilityStatement-dtr-native-client.html)
+- [SMART apps with payer systems](CapabilityStatement-dtr-payer-app.html)
+- [Intermediary systems with defined functionality has been defined](CapabilityStatement-dtr-intermediary-system.html)
 
 ### Boundaries and Relationships
 
