@@ -913,5 +913,11 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="artifacts.html#5">(Example Instances)</a>
   </li>
 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36437">FHIR-36437</a>:
+  Revamp payer authorization language
+  <a href="specification.html#authentication-of-smart-on-fhir-application-to-payer-api">(Authentication of SMART on FHIR application to payer API)</a>
+  </li>
+
  </ul>
 </div>
