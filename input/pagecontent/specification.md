@@ -404,7 +404,7 @@ One of the core purposes of this specification is to automate the retrieval of d
 In general CQL **SHALL** be used when pre-populating anything exposed in the FHIR based patient data access API (The 21st Century Cures Act API).
 
 #### Guidance on Structure of CQL Logic
-Like many other programming languages, CQL allows for statements to be nested within conditional logic. This creates instances where some statements may not be executed due to a prior condition being met. This behavior should be used intentionally by payers creating CQL.
+Like many other programming languages, CQL allows for statements to be nested within conditional logic. This creates instances where some statements may not be executed due to a prior condition being met. This behavior should be used intentionally by payers creating CQL.  This implementation guide does not support authorization logic in the CQL.
 
 Data retrieval is highly dependent on the *enableWhen* attribute/element:
 
@@ -415,6 +415,8 @@ Data retrieval is highly dependent on the *enableWhen* attribute/element:
 This pattern of logic structure is referred to by several names, including *eager quitting*, *early return* or, *short circuiting*. The goal is to avoid the execution of statements if they will not be relevant given other information available to the logic. This is done to streamline workflow and allow the user to focus on relevant input fields.
 
 As an example, a payer may have a set of rules or specific information that must be gathered on a patient only if they have diabetes. This information may be gathered through a series of CQL statements. When constructing this CQL for DTR, these statements should be nested in conditionals to first check if the patient has diabetes before checking for information dependent on that condition.
+
+> Note: Implementers could use [Adaptive Forms](specification.html#sdc-adaptive-forms) to minimize the need for any CQL that provides conditional informational retrieval.  
 
 #### Expression Naming Conventions
 CQL allows for the gathering of information through the use of `define` statements. These statements are given an identifier. When CQL execution is complete, a context will be created where these identifiers are populated with the results of the statement execution.

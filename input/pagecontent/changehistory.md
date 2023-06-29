@@ -919,5 +919,11 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="specification.html#authentication-of-smart-on-fhir-application-to-payer-api">(Authentication of SMART on FHIR application to payer API)</a>
   </li>
 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36455">FHIR-36455</a>:
+  Utilization of CQL
+  <a href="specification.html#cql">(CQL)</a>
+  </li>
+
  </ul>
 </div>
