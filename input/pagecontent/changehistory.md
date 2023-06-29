@@ -925,5 +925,11 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="specification.html#cql">(CQL)</a>
   </li>
 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36375">FHIR-36375</a>:
+  Loosen rules on SMART
+  <a href="background.html#smart-on-fhir-and-native-applications">(SMART on FHIR and Native Applications)</a>
+  </li>
+
  </ul>
 </div>

@@ -22,14 +22,13 @@ Payers **MAY** also supply Questionnaire resources that conform to the [Structur
 
 DTR conformant [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) applications **SHALL** support the SDC Advanced Rendering Profile.
 
-Note that elements with example bindings or missing bindings will not be used.
+NOTE: Elements with example bindings or missing bindings will not be used.  
 
-* [DTR SDC Questionnaire](StructureDefinition-dtr-sdc-questionnaire.html) - [Example](Questionnaire-home-o2-sdc-questionnaire.html)
-
-> More information regarding Questionnaires, workflow, and behaviors in the Structured Data Capture Implementation Guide:
-> * [Basic SDC Workflow](http://hl7.org/fhir/uv/sdc/STU3/workflow.html)  
-> * [Form Behavior and Calculation](http://hl7.org/fhir/uv/sdc/STU3/behavior.html)  
-> * [Advanced Form Rendering](http://hl7.org/fhir/uv/sdc/STU3/rendering.html)
+More information regarding Questionnaires, workflow, and behaviors in the Structured Data Capture Implementation Guide:
+- [Basic SDC Workflow](http://hl7.org/fhir/uv/sdc/STU3/workflow.html)  
+- [Form Behavior and Calculation](http://hl7.org/fhir/uv/sdc/STU3/behavior.html)  
+- [Advanced Form Rendering](http://hl7.org/fhir/uv/sdc/STU3/rendering.html)
+- [DTR SDC Questionnaire](StructureDefinition-dtr-sdc-questionnaire.html) - [Example](Questionnaire-home-o2-sdc-questionnaire.html)
 
 ##### Pre-Population
 DTR will automatically populate the answers to certain questions based on existing EHR data.  In some cases, it may populate all answers to the Questionnaire.  The DTR application **SHALL** provide the ability, but not requirement, for providers to review pre-populated answers prior to saving the resulting response for subsequent use within the EHR.  
