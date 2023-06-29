@@ -931,5 +931,11 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="background.html#smart-on-fhir-and-native-applications">(SMART on FHIR and Native Applications)</a>
   </li>
 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36359">FHIR-36359</a>:
+  Need CapabilityStatements
+  <a href="index.html#expected-systems">(Expected Systems)</a>
+  </li>
+
  </ul>
 </div>

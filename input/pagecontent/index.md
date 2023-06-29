@@ -5,6 +5,14 @@ The Da Vinci Documentation Templates and Rules (DTR) implementation guide provid
 
 DTR leverages FHIR [Questionnaires](http://hl7.org/fhir/R4/questionnaire.html) combined with embedded [CQL](https://cql.hl7.org/) logic and associated value sets to retrieve existing information, prompt for additional relevant information, and manage the logic process of determining which questions need to be answered (and what answer choices are relevant).  The function of rendering these Questionnaires and capturing the information in patient-specific QuestionnaireResponses can occur either through [SMART on FHIR applications](http://hl7.org/fhir/smart-app-launch/index.html) or through functionality embedded directly into the EHR.
 
+### Expected Systems
+This Implementation Guide has defined expectations of four types of systems that can be involved (with corresponding Capability Statements):
+
+- [DTR - EHRs that use SMART apps](CapabilityStatement-DTR-Smart-client.html)
+- [EHRs that don't use SMART apps](CapabilityStatement-DTR-Native-client.html)
+- [SMART apps with payer systems](CapabilityStatement-DTR-Payer-App.html)
+- [Intermediary systems with defined functionality has been defined](CapabilityStatement-DTR-Intermediary-System.html)
+
 ### Boundaries and Relationships
 
 This IG is a companion to the Da Vinci [Coverage Requirements Discovery (CRD)](https://build.fhir.org/ig/HL7/davinci-crd/) and [Prior Authorization Support (PAS)](http://build.fhir.org/ig/HL7/davinci-pas/) IGs.  The former allows a provider to be alerted that DTR is relevant for a particular order/appointment/etc. and optionally allows that provider to directly launch DTR (either as a SMART application or embedded EHR functionality), or hand off to back office staff for additional processing.  The latter allows the information returned by DTR to be packaged as part of a FHIR-based prior authorization request.  DTR functions in the 'middle' of these two IGs to capture the needed documentation.
