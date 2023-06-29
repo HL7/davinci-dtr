@@ -45,21 +45,21 @@ Usage: #definition
 // in
 * parameter[0].name = #coverage
 * parameter[=].use = #in
-* parameter[=].documentation = "One or more Coverage resource instances. (Note: This could also be de-identified)"
+* parameter[=].documentation = "Coverage resource instances. (Note: This could also be de-identified)"
 * parameter[=].type = #Coverage
-* parameter[=].min = 1
+* parameter[=].min = 0
 * parameter[=].max = "*"
 
 * parameter[+].name = #order
 * parameter[=].use = #in
-* parameter[=].documentation = "One or more Order resource instances. e.g., DeviceRequest, ServiceRequest, MedicationRequest, ... Encounter, Appointment, or prior-auth Claim, etc. (Note: This could also be de-identified)"
+* parameter[=].documentation = "Order resource instances. e.g., DeviceRequest, ServiceRequest, MedicationRequest, ... Encounter, Appointment, or prior-auth Claim, etc. (Note: This could also be de-identified)"
 * parameter[=].type = #Any
 * parameter[=].min = 0
 * parameter[=].max = "*"
 
 * parameter[+].name = #questionnaire
 * parameter[=].use = #in
-* parameter[=].documentation = "One or more Questionnaire resource instances."
+* parameter[=].documentation = "Canonical url for Questionnaire(s)."
 * parameter[=].type = #canonical
 * parameter[=].min = 0
 * parameter[=].max = "*"
@@ -163,7 +163,7 @@ The input OperationOutcome resource **SHOULD** include information on the DTR ap
 * parameter[0].name = #Questionnaire
 * parameter[=].use = #in
 * parameter[=].documentation = "The Questionnaire which generated the errors"
-* parameter[=].type = #Questionnaire
+* parameter[=].type = #canonical
 * parameter[=].min = 1
 * parameter[=].max = "1"
 
