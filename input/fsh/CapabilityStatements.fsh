@@ -1,7 +1,7 @@
-Instance: DTR-Smart-client
+Instance: dtr-smart-client
 InstanceOf: CapabilityStatement
 Usage: #definition
-* url = "http://hl7.org/fhir/us/davinci-crd/CapabilityStatement/dtr-smart-client"
+* url = "http://hl7.org/fhir/us/davinci-dtr/CapabilityStatement/dtr-smart-client"
 * version = "1.1.0-ci-build"
 * name = "DTRSmartClient"
 * title = "DTR SMART on FHIR Client"
@@ -70,7 +70,8 @@ Usage: #definition
 * rest.resource[=].interaction.code = #read
 
 * rest.resource[+].type = #Questionnaire
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire"
+* rest.resource[=].supportedProfile[0] = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire"
+* rest.resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire-adapt"
 * rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction.extension.valueCode = #SHOULD
 * rest.resource[=].interaction.code = #read
@@ -87,17 +88,11 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Allows retrieving QuestionnaireResponse for a context"
 
-* rest.resource[+].type = #Questionnaire
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire-adapt"
-* rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].interaction.extension.valueCode = #SHOULD
-* rest.resource[=].interaction.code = #read
-
 /*************************************************************************************************************/
-Instance: DTR-Native-client
+Instance: dtr-native-client
 InstanceOf: CapabilityStatement
 Usage: #definition
-* url = "http://hl7.org/fhir/us/davinci-crd/CapabilityStatement/dtr-native-client"
+* url = "http://hl7.org/fhir/us/davinci-dtr/CapabilityStatement/dtr-native-client"
 * version = "1.1.0-ci-build"
 * name = "DTRNativeClient"
 * title = "DTR Native Client"
@@ -166,7 +161,8 @@ Usage: #definition
 * rest.resource[=].interaction.code = #read
 
 * rest.resource[+].type = #Questionnaire
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire"
+* rest.resource[=].supportedProfile[0] = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire"
+* rest.resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire-adapt"
 * rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction.extension.valueCode = #SHOULD
 * rest.resource[=].interaction.code = #read
@@ -183,18 +179,11 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Allows retrieving QuestionnaireResponse for a context"
 
-* rest.resource[+].type = #Questionnaire
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire-adapt"
-* rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].interaction.extension.valueCode = #SHOULD
-* rest.resource[=].interaction.code = #read
-
-
 /*************************************************************************************************************/
-Instance: DTR-Payer-App
+Instance: dtr-payer-app
 InstanceOf: CapabilityStatement
 Usage: #definition
-* url = "http://hl7.org/fhir/us/davinci-crd/CapabilityStatement/dtr-payer-app"
+* url = "http://hl7.org/fhir/us/davinci-dtr/CapabilityStatement/dtr-payer-app"
 * version = "1.1.0-ci-build"
 * name = "DTRPayerApp"
 * title = "DTR Payer App"
@@ -263,7 +252,8 @@ Usage: #definition
 * rest.resource[=].interaction.code = #read
 
 * rest.resource[+].type = #Questionnaire
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire"
+* rest.resource[=].supportedProfile[0] = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire"
+* rest.resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire-adapt"
 * rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction.extension.valueCode = #SHOULD
 * rest.resource[=].interaction.code = #read
@@ -280,30 +270,24 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Allows retrieving QuestionnaireResponse for a context"
 
-* rest.resource[+].type = #Questionnaire
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire-adapt"
-* rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].interaction.extension.valueCode = #SHOULD
-* rest.resource[=].interaction.code = #read
-
 /*************************************************************************************************************/
-Instance: DTR-Intermediary-System
+Instance: dtr-intermediary-system
 InstanceOf: CapabilityStatement
 Usage: #definition
-* url = "http://hl7.org/fhir/us/davinci-crd/CapabilityStatement/dtr-intermediary-system"
+* url = "http://hl7.org/fhir/us/davinci-dtr/CapabilityStatement/dtr-intermediary-system"
 * version = "1.1.0-ci-build"
 * name = "DTRIntermediarySystem"
 * title = "DTR Intermediary System"
 * status = #active
 * experimental = false
 * date = "2023-06-29"
-* description = "This statement defines the expected capabilities of payer systems wishing to conform to the ''DTR Intermediary System'' role."
+* description = "This statement defines the expected capabilities of intermediary systems wishing to conform to the ''DTR Intermediary System'' role."
 * kind = #requirements
 * imports = "http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server"
 * fhirVersion = #4.0.1
 * format = #json
 * rest.mode = #server
-* rest.documentation = "A DTR Payer App provides an SMART on FHIR application"
+* rest.documentation = "A DTR intermediary system provides an SMART on FHIR application"
 * rest.security.description = "Implementations **SHALL** meet the general security requirements documented in the [[http://hl7.org/fhir/us/davinci-hrex/STU1/security.html|HRex implementation guide]]."
 
 * rest.resource[+].type = #Coverage
@@ -359,7 +343,8 @@ Usage: #definition
 * rest.resource[=].interaction.code = #read
 
 * rest.resource[+].type = #Questionnaire
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire"
+* rest.resource[=].supportedProfile[0] = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire"
+* rest.resource[=].supportedProfile[+] = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire-adapt"
 * rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction.extension.valueCode = #SHOULD
 * rest.resource[=].interaction.code = #read
@@ -375,9 +360,3 @@ Usage: #definition
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/us/davinci-dtr/SearchParameter/dtr-context"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "Allows retrieving QuestionnaireResponse for a context"
-
-* rest.resource[+].type = #Questionnaire
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire-adapt"
-* rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].interaction.extension.valueCode = #SHOULD
-* rest.resource[=].interaction.code = #read
