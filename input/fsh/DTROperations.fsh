@@ -59,7 +59,7 @@ Usage: #definition
 
 * parameter[+].name = #questionnaire
 * parameter[=].use = #in
-* parameter[=].documentation = "Questionnaire canonical urls."
+* parameter[=].documentation = "Canonical url for Questionnaire(s)."
 * parameter[=].type = #canonical
 * parameter[=].min = 0
 * parameter[=].max = "*"
