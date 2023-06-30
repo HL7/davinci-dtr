@@ -935,6 +935,12 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="https://jira.hl7.org/browse/FHIR-36359">FHIR-36359</a>:
   Need CapabilityStatements
   <a href="index.html#expected-systems">(Expected Systems)</a>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36331">FHIR-36331</a>:
+  Revamp expectations around launch parameters
+  <a href="specification.html#launch-context">(Launch Context)</a>
+  </li>
   </li>
 
  </ul>

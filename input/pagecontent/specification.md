@@ -165,7 +165,7 @@ Payers **SHALL** require the DTR process to authenticate in order to retrieve re
  
 These are sufficient to invoke the DTR Questionnaire operations `$next-question` and `ValueSet/$expand`, as well as retrieval of libraries and value sets.  
 
-NOTE: Payers must be cautious about prepopulating Questionnaires with sensitive information, because there are rare situations where a malicious application could attempt to access information that was not authorized by the EHR.
+> NOTE: Payers must be cautious about prepopulating Questionnaires with sensitive information, because there are rare situations where a malicious application could attempt to access information that was not authorized by the EHR.
 
 #### CQL Rules
 CQL can either be embedded inline as part of an expression or referenced in a library.  All libraries needed by a questionnaire **SHALL** be referenced by the cqf-library extension which **SHALL** be resolvable by the SMART app. Metadata about the rules will be represented as a FHIR Library resource. The payer **SHALL** provide this as a FHIR resource, such that the DTR process will be executing a FHIR read interaction on the payer's server.
@@ -176,6 +176,8 @@ The DTR process may be launched outside of the workflow of Coverage Requirements
 
 #### Launch Context
 The launch context, which comes to the DTR app through the access token bundle, can be used to include necessary information when launching. When launched outside the context of CRD, the DTR app **SHOULD** add the `launch/order` scope, to indicate that the EHR should include the order currently in context when it returns an access token.  The EHR should provide a local reference, which the DTR app can use to retrieve the request, from which it can relaunch the associated usage session. The requests **SHALL** have an identifier, with type "placer", which remains consistent over the resources lifetime and can be used to search for them despite changes to their `id`.  
+
+> NOTE: Any new parameters defined by this Implementation Guide should not be confused for generic resource-specific launch parameters (which are handled as 'mandatory' and will cause the EHR to prompt the user for them if they're not already in active context).  For detailed guidance on the latest specifics of SMART launch context, refer to the [App Launch: Scopes and Launch Context](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#app-launch-scopes-and-launch-context) section of the SMART App Launch Implementation Guide.
 
 The launch **SHALL** occur in the context of a specific patient and **SHOULD** occur in the context of a specific encounter and ideally a specific order.  DTR will check to see if there is already work-in-progress by looking for an existing QuestionnaireResponse (on the EHR) for the specified order.  If no order is specified, DTR will allow the user to select one of the existing "work-in-progress" sessions.  
 
