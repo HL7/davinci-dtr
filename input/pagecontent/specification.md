@@ -63,7 +63,7 @@ This process **SHALL** be automatic and populated without human intervention by 
 
 6. Supports both payer side prior authorization and the ability to request specific additional information as part of the PAS exchange process.
 
-A payer wishing to use Adaptive Forms will return a questionnaire instance compliant with the SDC AdaptiveQuestionnaire-Search profile (http://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire-adapt-srch.html).  This instance will include the QuestionnaireAdaptive extension which will identify the endpoint the DTR app is to call to receive the "next question".
+A payer wishing to use Adaptive Forms will return a questionnaire instance compliant with the [SDC AdaptiveQuestionnaire-Search profile](http://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire-adapt-srch.html).  This instance will include the QuestionnaireAdaptive extension which will identify the endpoint the DTR app is to call to receive the "next question".
 
 The DTR app **SHALL** support loading and rendering the adaptive form developed by the payer following the SDC adaptive form workflow. If there is CQL embedded in the questionnaire or the associated library, the DTR app should be able to execute the CQL based on the questions loaded in the questionnaire. For performance, the DTR application may save the results of prior execution of the CQL where it is the same for addressing the current question(s).
 
