@@ -37,7 +37,7 @@ DTR will automatically populate the answers to certain questions based on existi
 With current EHR capabilities with respect to updating 'request' resources, there is no mechanism to revise the 'request' resource to have its "supportingInfo" (or "insurance") element point to the QuestionnaireResponse/Bundle/[ClaimResponse](http://hl7.org/fhir/us/davinci-hrex/STU1/StructureDefinition-hrex-claimresponse.html) that results from the DTR process. Instead, extensions are used to reference the relevant order. DTR clients **SHOULD** update their 'request' resources with the appropriate "supportingInfo" or "insurance" link to the relevant resource.
 
 #### Questionnaire Response
-The QuestionnaireResponse resource is used to represent a response to the Questionnaire presented by the payer. The source of the data is important for both providers and payers to attribute the information to a particular source and provide feedback on the design and use of the questionnaire and the implications regarding provider burden.  Information pulled from the medical record by CQL needs to be clearly identified as should the information entered by a provider or office staff.  As an example, if information is not found in the medical record and needs to be manually entered, or if it is "found" and needs to be changed, then the questionnaire needs to be updated to better utilize the information available in the record where possible. In addition, understanding who is entering the information, will help to optimize questionnaires to focus provider interactions on information that only they can realistically provide.
+The QuestionnaireResponse resource is used to represent a response to the Questionnaire presented by the payer. The source of the data is important for both providers and payers to attribute the information to a particular source and provide feedback on the design and use of the questionnaire and the implications regarding provider burden.  Information pulled from the medical record by CQL needs to be clearly identified as should the information entered by a provider or office staff.  As an example, if information is not found in the medical record and needs to be manually entered, or if it is "found" and needs to be changed, then the questionnaire needs to be updated to better utilize the information available in the record where possible. In addition, understanding who is entering the information, will help to optimize questionnaires to focus provider interactions on information that only they can realistically provide.  Any `QuestionnaireResponse` provided **SHALL** either be an adaptive form or must correspond to a specified Questionnaire (See the [DTR profiles](artifacts.html#structures-resource-profiles))
 
 The [InformationOrigin extension](StructureDefinition-information-origin.html) is intended for inclusion on each answer to identify how the information originated - auto-populated, auto-populated and overridden, or manually entered.  (If the origin source is 'auto-populated and overridden' or 'manually entered', then an information author **SHALL** be supplied). 
 
@@ -82,9 +82,13 @@ To provide a mechanism to support Prior Authorization bundle creation for submis
 ---------------------
 ### CDS Hooks
 #### Use of Card.links
-One entry point into the DTR process is launching from a [Clinical Decision Support (CDS) Hooks Card](https://cds-hooks.hl7.org/1.0/#card-attributes). 
+One entry point into the DTR process is launching from a [Clinical Decision Support (CDS) Hooks Card](https://cds-hooks.hl7.org/1.0/#card-attributes).  The use of this standard specification enables an EHR to swap the SMART app which is used, or even choose to use the information from a CDS Hooks service for a local DTR app implementation.  
+
+In most cases, a card that results in the launch of DTR will deal with only one patient coverage, multiple orders, one Questionnaire and (possibly) one initial QuestionnaireResponse.  However, there may be edge cases where more than one of these is possible.
 
 > **NOTE**: As a part of a CDS Hooks response, if there is a need for further information then the payer IT system **MAY** return a Card object with a Link object populated in the Card.links property. If the Link object has a URL property set to the launch URL of a DTR process, this can still be overridden by the EHR or Provider's preferred DTR application. 
+
+DTR **SHALL** receive the full order in those cases where the order isn't yet persisted and available on the RESTful interface.
 
 Details of the DTR launch process from CRD can be found [here](https://build.fhir.org/ig/HL7/davinci-crd/hooks.html#launch-smart-application)
 

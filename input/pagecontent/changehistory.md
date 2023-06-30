@@ -949,5 +949,11 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="specification.html#questionnaire">(Questionnaire)</a>
   </li>
 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36412">FHIR-36412</a>:
+  Need more guidance on CDS Hooks launch
+  <a href="specification.html#cds-hooks">(CDS Hooks)</a>
+  </li>
+
  </ul>
 </div>
