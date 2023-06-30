@@ -79,6 +79,8 @@ Although not detailed in this IG, it may be possible to achieve the same level o
 ##### Requesting Provider and Organization
 To provide a mechanism to support Prior Authorization bundle creation for submission, this guide provides multiple request/order profiles that enable the requesting provider and organization to be accessible:  [DTR Service Request](StructureDefinition-dtr-servicerequest.html), [DTR Device Request](StructureDefinition-dtr-devicerequest.html), [DTR Medication Request](StructureDefinition-dtr-medicationrequest.html), and [DTR Nutrition Order](StructureDefinition-dtr-nutritionorder.html)
 
+[[Top]](specification.html)  
+
 ---------------------
 ### CDS Hooks
 #### Use of Card.links
@@ -106,6 +108,8 @@ Even after an application has been successfully registered, payers and EHRs **SH
 In [Step 3 of the launch sequence](http://hl7.org/fhir/smart-app-launch/#step-3-app-exchanges-authorization-code-for-access-token), in the case where the EHR system is returning a response with an access token, the system **SHALL** also provide a patient property set to the subject patient identifier of this interaction.
 
 For cases where the DTR process is being launched outside the context of Coverage Requirements Discovery workflow, please see [Launch Outside of CRD](specification.html#launch-outside-of-crd).
+
+[[Top]](specification.html)
 
 ---------------------
 ### Retrieval of Payer resources and SMART Launch
@@ -135,10 +139,10 @@ If the QuestionnaireResponse is not present, but the order is, the Questionnaire
 
 If neither is present, the user **SHOULD** be prompted to select a QuestionnaireResponse based on the patient that is in context.
 
-> A DTR app is allowed to throw an error if not launched within one and only one of the following contexts:
-> 1. QuestionnaireResponse
-> 2. Task
-> 3. Order
+A DTR app is allowed to throw an error if not launched within one and only one of the following contexts:
+1. QuestionnaireResponse
+2. Task
+3. Order
 
 The resources corresponding to this context (if any) **SHALL** be passed in the fhirContext element.  As part of configuration during app enablement process the app **SHOULD** also always ask for the launch/patient and the openId and fhirUser contexts.
 
@@ -173,6 +177,8 @@ These are sufficient to invoke the DTR Questionnaire operations `$next-question`
 
 #### CQL Rules
 CQL can either be embedded inline as part of an expression or referenced in a library.  All libraries needed by a questionnaire **SHALL** be referenced by the cqf-library extension which **SHALL** be resolvable by the SMART app. Metadata about the rules will be represented as a FHIR Library resource. The payer **SHALL** provide this as a FHIR resource, such that the DTR process will be executing a FHIR read interaction on the payer's server.
+
+[[Top]](specification.html)
 
 ---------------------
 ### Launch Outside of CRD
@@ -225,6 +231,8 @@ The ability to create tasks or 'to-dos' is outside of the scope of DTR and shoul
 
 The questionnaire **SHALL** be able to suspend completion until all tasks are completed. How the application is suspended is left to the implementer, but the state of the questionnaire **SHALL** be preserved.
 
+[[Top]](specification.html)
+
 ---------------------
 ### Determination of Payers Supported by a DTR App
 It is possible that the apps used to provide DTR functionality to an app will not support all payers the EHR might have "DTR requests" for - either from CRD or CDex.  It is important for the EHR to know what payers their app supports so that they only allow their users to launch the DTR app in the context of payers the app will be able to support.  (Launching an app only to be told "this payer isn't supported" is an unpleasant user experience.)
@@ -236,6 +244,8 @@ Accessing the endpoint will by a simple GET with an Accept header of "applicatio
 EHRs will typically retrieve the list of supported payers for the app once per day and will use this information to determine whether to expose the ability to launch DTR for orders associated with coverages for that payer.
 
 > **NOTE:** Standardization of payer ids is still an open issue.
+
+[[Top]](specification.html)
 
 ---------------------
 ### Persisting Application State
@@ -302,6 +312,8 @@ While a user may need to suspend interaction with the DTR process, there may be 
 
 Payers **SHOULD** use the `Questionnaire.effectivePeriod` element to describe the period over which the documentation templates and rules are valid. The DTR process **SHALL NOT** allow completion of a usage session if the current time has exceeded the end of the `effectivePeriod`.
 
+[[Top]](specification.html)
+
 ---------------------
 ### Persisting Results
 When the DTR process has collected all of the necessary information, it **SHALL** save the results of the data collection to the patient record. This IG describes two methods for saving the collected information: a text block in the Electronic Health Record (EHR) System and a QuestionnaireResponse.
@@ -327,6 +339,8 @@ The payer IT system should support the FHIR create interaction to allow the DTR 
 This IG will support the [HRex Decision point – Configured by consumer?](http://build.fhir.org/ig/HL7/davinci-ehrx/exchanging.html#configured-by-consumer) when a DTR SMART App or DTR Native App wants to push a QuestionnaireResponse to a Payer.  
 
 > **NOTE:** Other IGs might provide additional mechanisms for transmitting results of the completed QuestionnaireResponse to the payer.  The client that launches DTR is responsible for understanding the context of the launch, and thus for what to do with any QuestionnaireResponses that are persisted as a result of that launch.
+
+[[Top]](specification.html)
 
 ---------------------
 ### How DTR passes information to PAS, PAO or Other Exchanges
@@ -355,13 +369,17 @@ In a QuestionnaireResponse, this will be a 'repeating' question with one or more
 
 > **NOTE:** It may be appropriate to re-execute the DTR process once the specified tasks have been completed, as the DTR results may change.
 
+[[Top]](specification.html)
+
 ---------------------
 ### Provenance
 Provenance **SHOULD** be created and persisted with information created during the execution of the CQL and Questionnaire. Also, when the QuestionnaireResponse and its associated resources are exchanged with the source of the rules, appropriate Provenance resource(s) **SHOULD** be created and exchanged.
 
-> All DTR applications **SHALL** support rendering according to the extensions supported in the DTR Questionnaire profile as well as executing all CQL found within Questionnaire extensions. Payers **SHALL** craft their Questionnaires such that they include CQL that attempts to pre-populate QuestionnaireResponse answers where such population can be accomplished using discrete data returned by EHR FHIR APIs that are required as part of current regulation (including simple calculations there-on - e.g., age from birthdate). Translation between standard codes **SHOULD** be supported where possible. 
+All DTR applications **SHALL** support rendering according to the extensions supported in the DTR Questionnaire profile as well as executing all CQL found within Questionnaire extensions. Payers **SHALL** craft their Questionnaires such that they include CQL that attempts to pre-populate QuestionnaireResponse answers where such population can be accomplished using discrete data returned by EHR FHIR APIs that are required as part of current regulation (including simple calculations there-on - e.g., age from birthdate). Translation between standard codes **SHOULD** be supported where possible. 
 > 
 > For example, CQL and FHIR Questionnaires **SHALL** be required even when DTR is implemented within a DTR Native App as opposed to a DTR SMART App.
+
+[[Top]](specification.html)
 
 ---------------------
 ### Value Set and Code System Guidance
@@ -396,7 +414,9 @@ The table below is guidance that **SHOULD** be used when using values sets and c
   </tr>
 </table>
 
-> **NOTE:** According to the [ValueSet Identification](https://www.hl7.org/fhir/valueset.html#ident), it is common practice to copy (cache) value sets locally, most references to value sets use the canonical URL. This IG specifies that the DTR application **SHALL** support the [$expand](https://hl7.org/fhir/R4/valueset-operation-expand.html) operation, as well as the [Preferred Terminology Server](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-preferredTerminologyServer.html) extension.
+According to the [ValueSet Identification](https://www.hl7.org/fhir/valueset.html#ident), it is common practice to copy (cache) value sets locally, most references to value sets use the canonical URL. This IG specifies that the DTR application **SHALL** support the [$expand](https://hl7.org/fhir/R4/valueset-operation-expand.html) operation, as well as the [Preferred Terminology Server](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-preferredTerminologyServer.html) extension.
+
+[[Top]](specification.html)
 
 ---------------------
 ### CQL 
@@ -484,6 +504,8 @@ In an effort to notify the appropriate party or maintainer that the CQL/Question
 ##### Execution Results
 
 The flow of execution of the CQL will be determined by the associated Questionnaire. The app will proceed through the Questionnaire, and for any question that is associated with the result of a CQL statement, that specific CQL statement will be executed. The DTR application will use result caching so that results that are already available will be reused without requesting them again.
+
+[[Top]](specification.html)
 
 ---------------------
 ### Requesting Additional Information from the User
@@ -609,6 +631,8 @@ Finally, if the user did not supply a value, but provided an attestation that th
 For the sake of information systems processing a QuestionnnaireResponse generated,
 the DTR process **SHALL** populate the `QuestionnaireResponse.item` with the `author` extension property if the item was created by user input. If the `author` property is not present, then the information was gathered through the execution of CQL.
 
+[[Top]](specification.html)
+
 ---------------------
 ### Privacy, Safety and Security
 
@@ -637,6 +661,8 @@ It is under the control of the SMART on FHIR app or the capable EHR, based on th
 It is important for implementers to be aware that data is going to be auto-populated that may be sensitive - so there will likely be a need for a human to review and confirm that the information is appropriate to be shared (and be able to remove it without risk of it being put back if they wish).  Also the app may not have access to certain data for retrieval because of security considerations
 
 Payer systems **SHALL** use information received during execution of DTR solely for the purpose for which the documentation template was created (typically processing of a specific claim or prior authorization request) and **SHALL NOT** use information received over the DTR interfaces for any additional purposes other than audit.
+
+[[Top]](specification.html)
 
 ---------------------
 ### Best Practices 
