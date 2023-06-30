@@ -22,7 +22,7 @@ Payers **MAY** also supply Questionnaire resources that conform to the [Structur
 
 DTR conformant [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) applications **SHALL** support the SDC Advanced Rendering Profile.
 
-NOTE: Elements with example bindings or missing bindings will not be used.  
+> **NOTE:** Elements with example bindings or missing bindings will not be used.  
 
 More information regarding Questionnaires, workflow, and behaviors in the Structured Data Capture Implementation Guide:
 - [Basic SDC Workflow](http://hl7.org/fhir/uv/sdc/STU3/workflow.html)  
@@ -165,7 +165,7 @@ Payers **SHALL** require the DTR process to authenticate in order to retrieve re
  
 These are sufficient to invoke the DTR Questionnaire operations `$next-question` and `ValueSet/$expand`, as well as retrieval of libraries and value sets.  
 
-> NOTE: Payers must be cautious about prepopulating Questionnaires with sensitive information, because there are rare situations where a malicious application could attempt to access information that was not authorized by the EHR.
+> **NOTE:** Payers must be cautious about prepopulating Questionnaires with sensitive information, because there are rare situations where a malicious application could attempt to access information that was not authorized by the EHR.
 
 #### CQL Rules
 CQL can either be embedded inline as part of an expression or referenced in a library.  All libraries needed by a questionnaire **SHALL** be referenced by the cqf-library extension which **SHALL** be resolvable by the SMART app. Metadata about the rules will be represented as a FHIR Library resource. The payer **SHALL** provide this as a FHIR resource, such that the DTR process will be executing a FHIR read interaction on the payer's server.
@@ -177,7 +177,7 @@ The DTR process may be launched outside of the workflow of Coverage Requirements
 #### Launch Context
 The launch context, which comes to the DTR app through the access token bundle, can be used to include necessary information when launching. When launched outside the context of CRD, the DTR app **SHOULD** add the `launch/order` scope, to indicate that the EHR should include the order currently in context when it returns an access token.  The EHR should provide a local reference, which the DTR app can use to retrieve the request, from which it can relaunch the associated usage session. The requests **SHALL** have an identifier, with type "placer", which remains consistent over the resources lifetime and can be used to search for them despite changes to their `id`.  
 
-> NOTE: Any new parameters defined by this Implementation Guide should not be confused for generic resource-specific launch parameters (which are handled as 'mandatory' and will cause the EHR to prompt the user for them if they're not already in active context).  For detailed guidance on the latest specifics of SMART launch context, refer to the [App Launch: Scopes and Launch Context](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#app-launch-scopes-and-launch-context) section of the SMART App Launch Implementation Guide.
+> **NOTE:** Any new parameters defined by this Implementation Guide should not be confused for generic resource-specific launch parameters (which are handled as 'mandatory' and will cause the EHR to prompt the user for them if they're not already in active context).  For detailed guidance on the latest specifics of SMART launch context, refer to the [App Launch: Scopes and Launch Context](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#app-launch-scopes-and-launch-context) section of the SMART App Launch Implementation Guide.
 
 The launch **SHALL** occur in the context of a specific patient and **SHOULD** occur in the context of a specific encounter and ideally a specific order.  DTR will check to see if there is already work-in-progress by looking for an existing QuestionnaireResponse (on the EHR) for the specified order.  If no order is specified, DTR will allow the user to select one of the existing "work-in-progress" sessions.  
 
@@ -185,7 +185,7 @@ If an order was selected and there was no work in progress:
 * If there are multiple coverages whose payers are supported by the DTR app, the app will allow the user to select the coverage(s) to use DTR for.  (Each coverage selected would result in a separate QuestionnaireResponse.)
 * The DTR app will hit an operation endpoint on the payer (likely similar to that used internally by the CRD service) passing the order and coverage to determine the DTR ruleset.  
 
-> Note: this operation will not have a token allowing the payer to access any information other than what's in the order.  This means that the ruleset will often be broader (i.e., more questions and more questionnaire logic) than when the ruleset is determined within CRD.
+> **NOTE:** this operation will not have a token allowing the payer to access any information other than what's in the order.  This means that the ruleset will often be broader (i.e., more questions and more questionnaire logic) than when the ruleset is determined within CRD.
 
 #### Starting a New Session
 To start a new session outside of the context of the CRD workflow, a user or EHR should initiate the launch and pass DTR a fhirContext with the “Order” and “Coverage” fields filled. The DTR app **SHALL** use this information to invoke the `$questionnaire-package` operation on the payer server, which should return a Questionnaire and associated CQL resources. If the base endpoint of the payer server is contained in the `Coverage` resource extension, then the app can be automatically launched. Otherwise, a user will have to manually select which payer to interact with.
@@ -322,7 +322,7 @@ The payer IT system should support the FHIR create interaction to allow the DTR 
 ##### Pushing QuestionnaireResponse to Payer
 This IG will support the [HRex Decision point – Configured by consumer?](http://build.fhir.org/ig/HL7/davinci-ehrx/exchanging.html#configured-by-consumer) when a DTR SMART App or DTR Native App wants to push a QuestionnaireResponse to a Payer.  
 
-Note: Other IGs might provide additional mechanisms for transmitting results of the completed QuestionnaireResponse to the payer.  The client that launches DTR is responsible for understanding the context of the launch, and thus for what to do with any QuestionnaireResponses that are persisted as a result of that launch.
+> **NOTE:** Other IGs might provide additional mechanisms for transmitting results of the completed QuestionnaireResponse to the payer.  The client that launches DTR is responsible for understanding the context of the launch, and thus for what to do with any QuestionnaireResponses that are persisted as a result of that launch.
 
 ---------------------
 ### How DTR passes information to PAS, PAO or Other Exchanges
@@ -392,7 +392,7 @@ The table below is guidance that **SHOULD** be used when using values sets and c
   </tr>
 </table>
 
-**Note:** According to the [ValueSet Identification](https://www.hl7.org/fhir/valueset.html#ident), it is common practice to copy (cache) value sets locally, most references to value sets use the canonical URL. This IG specifies that the DTR application **SHALL** support the [$expand](https://hl7.org/fhir/R4/valueset-operation-expand.html) operation, as well as the [Preferred Terminology Server](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-preferredTerminologyServer.html) extension.
+> **NOTE:** According to the [ValueSet Identification](https://www.hl7.org/fhir/valueset.html#ident), it is common practice to copy (cache) value sets locally, most references to value sets use the canonical URL. This IG specifies that the DTR application **SHALL** support the [$expand](https://hl7.org/fhir/R4/valueset-operation-expand.html) operation, as well as the [Preferred Terminology Server](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-preferredTerminologyServer.html) extension.
 
 ---------------------
 ### CQL 
@@ -417,7 +417,7 @@ This pattern of logic structure is referred to by several names, including *eage
 
 As an example, a payer may have a set of rules or specific information that must be gathered on a patient only if they have diabetes. This information may be gathered through a series of CQL statements. When constructing this CQL for DTR, these statements should be nested in conditionals to first check if the patient has diabetes before checking for information dependent on that condition.
 
-> Note: Implementers could use [Adaptive Forms](specification.html#sdc-adaptive-forms) to minimize the need for any CQL that provides conditional informational retrieval.  
+> **NOTE:** Implementers could use [Adaptive Forms](specification.html#sdc-adaptive-forms) to minimize the need for any CQL that provides conditional informational retrieval.  
 
 #### Expression Naming Conventions
 CQL allows for the gathering of information through the use of `define` statements. These statements are given an identifier. When CQL execution is complete, a context will be created where these identifiers are populated with the results of the statement execution.
@@ -472,7 +472,7 @@ In an effort to notify the appropriate party or maintainer that the CQL/Question
 ##### Behavior when encountering execution errors
 If any errors are encountered during execution, the app’s engine **SHALL NOT** attempt any further execution, and the user **SHALL** be notified with an appropriate on-screen error message. The app **SHALL** log failures and ensure the maintainer of the CQL/Questionnaire package is notified. The user should have the option to complete the Questionnaire if possible, despite the error.
 
->Note: A query for data that returns no results is never considered a failure.
+> **NOTE:** A query for data that returns no results is never considered a failure.
 
 ##### Logging Errors and Failures
 In an effort to notify the appropriate party or maintainer that the CQL/Questionnaire produces errors, this IG includes the [Log Questionnaire CQL Errors](OperationDefinition-log-questionnaire-cql-errors.html) operation that allows submission of issues encountered when working with these DTR-provided artifacts. This operation **SHOULD** be supported by payers and DTR applications. This operation will pass in the Questionnaire and an OperationOutcome detailing the issue(s) including where the error occurred. The input OperationOutcome **SHOULD** include information on the DTR application identity and version, date-time with time-zone offset, as well as the provider endpoint during which the error occurred, and it **SHALL NOT** contain information about the response or information retrieved from FHIR APIs that could potentially include PHI.
@@ -645,7 +645,7 @@ If OIDs are used they **SHALL** be prefixed with `urn:oid:` per the [OID primiti
 
 When remote value sets are referenced in Questionnaires, full URLs are recommended. If you are using local value sets a relative path is recommended. 
 
-Note: Expanding a large value set at run time, may slow down your DTR app. In other words having your value set already expanded could give the user a better client side experience.  
+> **NOTE:** Expanding a large value set at run time, may slow down your DTR app. In other words having your value set already expanded could give the user a better client side experience.  
 
 #### Questionnaires and expressions
 
@@ -657,14 +657,16 @@ In this example above `LowerLimbProsthesis` is the `library name` and `PhysicalE
 
 #### FHIR Library and included CQL
 
-When developing FHIR Libraries that depend on CQL content, the content element **SHALL** include the `data` element. Note: The use of the `data` element requires it to contain a base-64 encoded string that represents the CQL file per the [attachment specification](https://www.hl7.org/fhir/datatypes.html#Attachment).  
+When developing FHIR Libraries that depend on CQL content, the content element **SHALL** include the `data` element. 
+
+> **NOTE:** The use of the `data` element requires it to contain a base-64 encoded string that represents the CQL file per the [attachment specification](https://www.hl7.org/fhir/datatypes.html#Attachment).  
 
 For example, see the below snippet from a FHIR Library:
 
 ![FHIR Library snippet](FHIR_Library_snippet.png){:style="float: none;"}
 
-Note: Although the use of `url` in the content element is valid, using the `data` element should be more interoperable.
-  
->Note: A reference implementation has been created. The code is available at [DTR GitHub](https://github.com/HL7-DaVinci/dtr). The executable is at [DTR Logica Health](https://davinci-dtr.logicahealth.org/smart/launch.html).
+> **NOTE:** Although the use of `url` in the content element is valid, using the `data` element should be more interoperable.
+ 
+A reference implementation has been created. The code is available at [DTR GitHub](https://github.com/HL7-DaVinci/dtr). The executable is at [DTR Logica Health](https://davinci-dtr.logicahealth.org/smart/launch.html).
 
  
