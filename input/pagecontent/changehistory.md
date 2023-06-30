@@ -955,5 +955,11 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="specification.html#cds-hooks">(CDS Hooks)</a>
   </li>
 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36544">FHIR-36544</a>:
+  Examples are incomplete and have extras
+  <a href="artifacts.html#example-example-instances">(Example Instances)</a>
+  </li>
+
  </ul>
 </div>
