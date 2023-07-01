@@ -961,5 +961,18 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="artifacts.html#example-example-instances">(Example Instances)</a>
   </li>
 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36409">FHIR-36409</a>:
+  EHR and DTR initiation
+  <a href="index.html#ehr-and-dtr-initiation">(EHR and DTR Initiation)</a>
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-36411">FHIR-36411</a>:
+  Organize interactions along likely HIT modules
+  <a href="index.html#ehr-and-dtr-initiation">(EHR and DTR Initiation)</a>
+  </li>
+
+
  </ul>
 </div>
