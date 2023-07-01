@@ -78,7 +78,7 @@ Although not detailed in this IG, it may be possible to achieve the same level o
 ##### Requesting Provider and Organization
 To provide a mechanism to support Prior Authorization bundle creation for submission, this guide provides multiple request/order profiles that enable the requesting provider and organization to be accessible:  [DTR Service Request](StructureDefinition-dtr-servicerequest.html), [DTR Device Request](StructureDefinition-dtr-devicerequest.html), [DTR Medication Request](StructureDefinition-dtr-medicationrequest.html), and [DTR Nutrition Order](StructureDefinition-dtr-nutritionorder.html)
 
-[![ToTop](TopOfPage.png){:style="float: none;"}](specification.html "Back to top of page")
+[![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
 ---------------------
 ### CDS Hooks
@@ -108,7 +108,7 @@ In [Step 3 of the launch sequence](http://hl7.org/fhir/smart-app-launch/#step-3-
 
 For cases where the DTR process is being launched outside the context of Coverage Requirements Discovery workflow, please see [Launch Outside of CRD](specification.html#launch-outside-of-crd).
 
-[![ToTop](TopOfPage.png){:style="float: none;"}](specification.html "Back to top of page")
+[![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
 ---------------------
 ### Retrieval of Payer resources and SMART Launch
@@ -177,7 +177,7 @@ These are sufficient to invoke the DTR Questionnaire operations `$next-question`
 #### CQL Rules
 CQL can either be embedded inline as part of an expression or referenced in a library.  All libraries needed by a questionnaire **SHALL** be referenced by the cqf-library extension which **SHALL** be resolvable by the SMART app. Metadata about the rules will be represented as a FHIR Library resource. The payer **SHALL** provide this as a FHIR resource, such that the DTR process will be executing a FHIR read interaction on the payer's server.
 
-[![ToTop](TopOfPage.png){:style="float: none;"}](specification.html "Back to top of page")
+[![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
 ---------------------
 ### Launch Outside of CRD
@@ -230,7 +230,7 @@ The ability to create tasks or 'to-dos' is outside of the scope of DTR and shoul
 
 The questionnaire **SHALL** be able to suspend completion until all tasks are completed. How the application is suspended is left to the implementer, but the state of the questionnaire **SHALL** be preserved.
 
-[![ToTop](TopOfPage.png){:style="float: none;"}](specification.html "Back to top of page")
+[![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
 ---------------------
 ### Determination of Payers Supported by a DTR App
@@ -244,7 +244,7 @@ EHRs will typically retrieve the list of supported payers for the app once per d
 
 > **NOTE:** Standardization of payer ids is still an open issue.
 
-[![ToTop](TopOfPage.png){:style="float: none;"}](specification.html "Back to top of page")
+[![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
 ---------------------
 ### Persisting Application State
@@ -311,7 +311,7 @@ While a user may need to suspend interaction with the DTR process, there may be 
 
 Payers **SHOULD** use the `Questionnaire.effectivePeriod` element to describe the period over which the documentation templates and rules are valid. The DTR process **SHALL NOT** allow completion of a usage session if the current time has exceeded the end of the `effectivePeriod`.
 
-[![ToTop](TopOfPage.png){:style="float: none;"}](specification.html "Back to top of page")
+[![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
 ---------------------
 ### Persisting Results
@@ -339,7 +339,7 @@ This IG will support the [HRex Decision point – Configured by consumer?](http:
 
 > **NOTE:** Other IGs might provide additional mechanisms for transmitting results of the completed QuestionnaireResponse to the payer.  The client that launches DTR is responsible for understanding the context of the launch, and thus for what to do with any QuestionnaireResponses that are persisted as a result of that launch.
 
-[![ToTop](TopOfPage.png){:style="float: none;"}](specification.html "Back to top of page")
+[![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
 ---------------------
 ### How DTR passes information to PAS, PAO or Other Exchanges
@@ -368,7 +368,7 @@ In a QuestionnaireResponse, this will be a 'repeating' question with one or more
 
 > **NOTE:** It may be appropriate to re-execute the DTR process once the specified tasks have been completed, as the DTR results may change.
 
-[![ToTop](TopOfPage.png){:style="float: none;"}](specification.html "Back to top of page")
+[![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
 ---------------------
 ### Provenance
@@ -378,7 +378,7 @@ All DTR applications **SHALL** support rendering according to the extensions sup
 > 
 > For example, CQL and FHIR Questionnaires **SHALL** be required even when DTR is implemented within a DTR Native App as opposed to a DTR SMART App.
 
-[![ToTop](TopOfPage.png){:style="float: none;"}](specification.html "Back to top of page")
+[![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
 ---------------------
 ### Value Set and Code System Guidance
@@ -504,7 +504,7 @@ In an effort to notify the appropriate party or maintainer that the CQL/Question
 
 The flow of execution of the CQL will be determined by the associated Questionnaire. The app will proceed through the Questionnaire, and for any question that is associated with the result of a CQL statement, that specific CQL statement will be executed. The DTR application will use result caching so that results that are already available will be reused without requesting them again.
 
-[![ToTop](TopOfPage.png){:style="float: none;"}](specification.html "Back to top of page")
+[![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
 ---------------------
 ### Requesting Additional Information from the User
@@ -630,7 +630,7 @@ Finally, if the user did not supply a value, but provided an attestation that th
 For the sake of information systems processing a QuestionnnaireResponse generated,
 the DTR process **SHALL** populate the `QuestionnaireResponse.item` with the `author` extension property if the item was created by user input. If the `author` property is not present, then the information was gathered through the execution of CQL.
 
-[![ToTop](TopOfPage.png){:style="float: none;"}](specification.html "Back to top of page")
+[![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
 ---------------------
 ### Privacy, Safety and Security
@@ -661,7 +661,7 @@ It is important for implementers to be aware that data is going to be auto-popul
 
 Payer systems **SHALL** use information received during execution of DTR solely for the purpose for which the documentation template was created (typically processing of a specific claim or prior authorization request) and **SHALL NOT** use information received over the DTR interfaces for any additional purposes other than audit.
 
-[![ToTop](TopOfPage.png){:style="float: none;"}](specification.html "Back to top of page")
+[![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
 ---------------------
 ### Best Practices 
