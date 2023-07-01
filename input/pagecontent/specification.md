@@ -6,7 +6,6 @@ This implementation guide will adopt by reference the following [HRex Conformanc
 
 In addition, systems **SHALL** comply with additional requirements called out in IG text and Profile definitions.
 
-
 #### Questionnaire
 Payers have documentation requirements and rules that must be satisfied as part of their typical operations when reimbursing for care for certain services requiring authorization or documentation.
 
@@ -187,7 +186,7 @@ The DTR process may be launched outside of the workflow of Coverage Requirements
 #### Launch Context
 The launch context, which comes to the DTR app through the access token bundle, can be used to include necessary information when launching. When launched outside the context of CRD, the DTR app **SHOULD** add the `launch/order` scope, to indicate that the EHR should include the order currently in context when it returns an access token.  The EHR should provide a local reference, which the DTR app can use to retrieve the request, from which it can relaunch the associated usage session. The requests **SHALL** have an identifier, with type "placer", which remains consistent over the resources lifetime and can be used to search for them despite changes to their `id`.  
 
-> **NOTE:** Any new parameters defined by this Implementation Guide should not be confused for generic resource-specific launch parameters (which are handled as 'mandatory' and will cause the EHR to prompt the user for them if they're not already in active context).  For detailed guidance on the latest specifics of SMART launch context, refer to the [App Launch: Scopes and Launch Context](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#app-launch-scopes-and-launch-context) section of the SMART App Launch Implementation Guide.
+> **NOTE:** Any new parameters defined by this Implementation Guide should not be confused for generic resource-specific SMART launch parameters (which are handled as 'mandatory' and will cause the EHR to prompt the user for them if they're not already in active context).  For detailed guidance on the latest specifics of SMART launch context, refer to the [App Launch: Scopes and Launch Context](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#app-launch-scopes-and-launch-context) section of the SMART App Launch Implementation Guide.
 
 The launch **SHALL** occur in the context of a specific patient and **SHOULD** occur in the context of a specific encounter and ideally a specific order.  DTR will check to see if there is already work-in-progress by looking for an existing QuestionnaireResponse (on the EHR) for the specified order.  If no order is specified, DTR will allow the user to select one of the existing "work-in-progress" sessions.  
 
