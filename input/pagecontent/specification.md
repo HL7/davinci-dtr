@@ -528,9 +528,7 @@ Implementers should review the [advanced rendering]({{site.data.fhir.ver.hl7_fhi
 #### Structured Data Capture
 Payers may have requirements on how questions are presented to users. To allow for this, payers **MAY** supply Questionnaire resources that conform to the [Advanced Rendering Questionnaire Profile]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/rendering.html) as defined in Structured Data Capture.
 
-The purpose of this extension is to indicate that it is not SAFE to render the form if the styles indicated in the Questionnaire are not followed. If the system is not capable of rendering the form as the Questionnaire dictates, then it cannot display the form.  Note the use of this flag should be extremely rare in DTR.
-
-If the `rendering-styleSensitive` extension property is not present or `false` the DTR process **SHOULD** use `rendering-style` and `rendering-xhtml` properties.
+If the `rendering-styleSensitive` extension property is not present or `false` the DTR process **SHOULD** use `rendering-style` and `rendering-xhtml` properties.  The purpose of this extension is to indicate that it is not SAFE to render the form if the styles indicated in the Questionnaire are not followed. If the system is not capable of rendering the form as the Questionnaire dictates, then it cannot display the form.  Note the use of this flag should be extremely rare in DTR.
 
 ##### Rendering Questionnaire items without specified styles
 Payers are not required to provide Questionnaires that conform to the Advanced Rendering Questionnaire Profile. When a Questionnaire is provided that does not conform to this profile, it is at the discretion of the DTR process to choose a reasonable presentation of the questions that require user input. The DTR process **SHALL** use the appropriate input mechanism depending on the `item.type`. When working with a FHIR R4 Questionnaire, the DTR process **SHALL** support `item.answerValueSet`, `item.answerOption`, and `item.initial` if provided.
