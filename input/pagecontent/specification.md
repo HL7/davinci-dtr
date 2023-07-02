@@ -415,7 +415,7 @@ The table below is guidance that **SHOULD** be used when using values sets and c
 
 According to the [ValueSet Identification](https://www.hl7.org/fhir/valueset.html#ident), it is common practice to copy (cache) value sets locally, most references to value sets use the canonical URL. This IG specifies that the DTR application **SHALL** support the [$expand](https://hl7.org/fhir/R4/valueset-operation-expand.html) operation, as well as the [Preferred Terminology Server](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-preferredTerminologyServer.html) extension.
 
-[[Top]](specification.html) "Back to top of page"
+[![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
 ---------------------
 ### CQL 
@@ -541,10 +541,9 @@ This IG does not place any requirements on the DTR process to display multiple `
 #### Provider Attestation
 In some cases, if there isn't specific data that can be retrieved computably from the EHR, it may be sufficient for a payer to merely have an attestation by the provider that certain documentation exists, that a certain patient condition exists, or that certain actions have been completed.  This can be represented in a Questionnaire as a simple boolean or choice question where the text describes what the user is attesting to.  Payers **SHOULD** design questionnaires to support attestation rather than discrete data where this is sufficient for the business requirements.
 
-Some payers may require that attestations or other answers be 'signed' (the electronic equivalent of 'initialing' the answer.  The [signatureRequired] extension on the Questionnaire item and the [signature] extension on the QuestionnaireResponse
+Some payers may require that attestations or other answers be 'signed' (the electronic equivalent of 'initialing' the answer).  This would be identified by means of the [signatureRequired](https://hl7.org/fhir/extensions/StructureDefinition-questionnaire-signatureRequired.html) extension on the Questionnaire item and the [signature](https://hl7.org/fhir/extensions/StructureDefinition-questionnaireresponse-signature.html) extension on the QuestionnaireResponse
 
 Questionnaires may also support attaching reports or other supporting documentation (e.g., images, pathology reports, etc.) where providing question answers is not sufficient.  The 'attachment' question type can be used to support this.  Attachments might be found by searching for DocumentReference, DiagnosticReport or Media instances, or by the provider directly uploading something to the Questionnaire rendering tool.  
-
 
 #### Recording Responses
 The DTR process **SHALL** take input from the user and record the provided information. As with provider attestation, the DTR process **SHALL** record that in the corresponding QuestionnaireResponse.item. In this case, the DTR process **SHALL** create an `answer` property on the `item`. The `answer` **SHALL** have an appropriate `value[x]` depending on the corresponding `type` in the `Questionnaire.item`. Again, similar to attestations, the `item` will have an `author` extension property which will reference the `fhirUser` provided to the DTR process.
