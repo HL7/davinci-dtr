@@ -121,8 +121,8 @@ The information needed to obtain the required resources will be provided as esca
 <style>
 table, th, td 
 {
-  border: 1px solid Silver; 
-  padding: 1px
+  border: 1px solid Gainsboro; 
+  padding: 1px Azure;
 }
 th {
   background: Azure; 
