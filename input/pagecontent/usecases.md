@@ -54,8 +54,4 @@ CDex supports the launch of DTR to gather documentation through the [CDex Task D
 - The [`data-request-questionnaire` Task.code](http://build.fhir.org/ig/HL7/davinci-ecdx/ValueSet-cdex-data-request-task-code.html) - Indicates the provider system uses DTR to complete the Questionnaire referenced in the `questionnaire` input parameter.  
 <br><br>
 
-<!-- <img src="CDexToDTR.png" width="200" height="400" href="CDexToDTR.png"> -->
-
 [![CDex To DTR](CDexToDTR.png){:style="float: none;width:800px;height:1600px"}](CDexToDTR.png "View Larger")
-
-<!-- [![CDex To DTR](CDexDTR.png){:style="float: none;"}](http://build.fhir.org/ig/HL7/davinci-ecdx/task-based-approach.html#using-da-vinci-dtr-to-complete-the-questionnaire "CDex - Using Da Vinci DTR to Complete the Questionnaire") -->
