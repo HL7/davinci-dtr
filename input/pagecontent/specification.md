@@ -118,6 +118,17 @@ All Questionnaires and valuesets retrieved **SHALL** be version specific, as bre
 
 The information needed to obtain the required resources will be provided as escaped JSON in the `appContext` property of the Clinical Decision Support (CDS) Hooks Card Link object, as described in [CDS Hooks](specification.html#use-of-cardlinks). When launched in context of CRD and a CDS Hook, that object will have the following properties:
 
+<style>
+table, th, td 
+{
+  border: 1px solid Silver; 
+  padding: 1px
+}
+th {
+  background: Azure; 
+}
+</style>
+
 | Field    | Optionality | Cardinality | Type  | Description |
 | -------- | ----------- | ------      | -------- | ----------- |
 | questionnaire | OPTIONAL    |0..*| *string* | The canonical URL of the Questionnaire(s).  Required if "response" is not adaptive.  |

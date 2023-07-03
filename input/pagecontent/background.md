@@ -54,22 +54,18 @@ as general guidance on how to read FHIR specifications. Readers who are unfamili
 * [How to read resource & profile definitions]({{site.data.fhir.path}}formats.html)
 * [Base resource]({{site.data.fhir.path}}resource.html)
 
-This IG leverages and builds on the [US Core](http://hl7.org/fhir/us/core/STU3.1.1/) IG defined by HL7 for sharing human EHR data in the US.  Implementers need to familiarize themselves with the profiles in [US Core](http://hl7.org/fhir/us/core/STU3.1.1/). 
-
 This IG supports the [R4](http://hl7.org/fhir/R4/index.html) version of the FHIR standard.
 
-| FHIR Version |
-| ------------ |
-| [FHIR R4 US Core](http://hl7.org/fhir/us/core/STU3.1.1/) |  
+This IG leverages and builds on the [US Core](http://hl7.org/fhir/us/core/STU3.1.1/) IG defined by HL7 for sharing human EHR data in the US.  Implementers need to familiarize themselves with the profiles in [US Core](http://hl7.org/fhir/us/core/STU3.1.1/). 
 
 Implementers will need the knowledge of [US Core](http://hl7.org/fhir/us/core/STU3.1.1/) to access information for pre population via CQL calls to *21st Century* compliant FHIR APIs. The light client **SHOULD** import the US Core Server capability statement.  
 
-| Resources |
-| ------------ |
-| [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html) |
-| [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) |
-| [Task](http://hl7.org/fhir/R4/task.html) |
-
+> | **FHIR Version:** | [FHIR R4 US Core (Release 3.1.1)](http://hl7.org/fhir/us/core/STU3.1.1/)   |
+> |                   |                                                                            |
+> | **Resources:**    | [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html)                 |
+> |                   | [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) |
+> |                   | [Task](http://hl7.org/fhir/R4/task.html)                                   |
+    
 
 ### SMART on FHIR and Native Applications
 Guidance is being provided to allow DTR functionality to be invoked outside of regular EHR clinical workflows using a SMART on FHIR app or an EHR-based "Native" app to provide a consistent way of evaluating payer rules and documentation requirements across EHR implementations. As such client implementers creating a SMART App will also need to be familiar with the [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) specification. (Payer implementers only need to be familiar with the SMART on FHIR specification if they plan to develop SMART apps for launch by CDS Hooks or other purposes.)  These applications **SHALL** conform to the requirements defined in their respective [Capability Statements](artifacts.html#behavior-capability-statements).
