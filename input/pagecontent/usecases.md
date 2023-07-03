@@ -47,6 +47,8 @@ If the resulting information is to be sent to a third party (e.g., payer), the D
 
 ### Relation to Clinical Data Exchange (CDex)  
 
-DTR can be invoked for purposes other than specific Burden Reduction use-cases, specifically the guidance provided within the [Clinical Data Exchange (CDex)](https://hl7.org/fhir/us/davinci-cdex/index.html) Implementation Guide.  CDex specifies the use of DTR to [request attachments using questionnaires](https://hl7.org/fhir/us/davinci-cdex/requesting-attachments-questionnaire.html).
+DTR can be invoked for purposes other than specific Burden Reduction use-cases, specifically the guidance provided within the [Clinical Data Exchange (CDex)](https://hl7.org/fhir/us/davinci-cdex/index.html) Implementation Guide.  CDex specifies the use of DTR to [request attachments using questionnaires](https://hl7.org/fhir/us/davinci-cdex/requesting-attachments-questionnaire.html).  
+
+CDex provides for the launch of DTR to gather documentation utilizing the [CDex Task Data Request Profile](http://build.fhir.org/ig/HL7/davinci-ecdx/StructureDefinition-cdex-task-data-request.html).  This profile supports DTR through enhanced properties, such as the [`data-request-questionnaire` Task.code](http://build.fhir.org/ig/HL7/davinci-ecdx/ValueSet-cdex-data-request-task-code.html), as well as a `questionnaire` Task.input element to communicate to the provider a URL of a data request FHIR Questionnaire.
 
 [![CDex To DTR](CDexDTR.png){:style="float: none;"}](http://build.fhir.org/ig/HL7/davinci-ecdx/task-based-approach.html#using-da-vinci-dtr-to-complete-the-questionnaire "CDex - Using Da Vinci DTR to Complete the Questionnaire")
