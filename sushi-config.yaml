@@ -51,7 +51,7 @@ menu:
   Home: index.html
 
   Background:
-    Overview and Use Cases: usecases.html
+    Use Cases and Overview: usecases.html
     Technical Background: background.html
     Credits: credits.html
     Change History: changehistory.html
