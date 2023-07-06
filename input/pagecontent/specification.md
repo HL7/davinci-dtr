@@ -167,9 +167,9 @@ The information needed to obtain the required resources will be provided as esca
     <td>Local reference to relevant coverage resource(s) on EHR</td>   
   </tr>
 </table>
-
+<br>
 When launched without the context of a CDS Hook, but within context from an EHR, the token returned from the auth server **SHOULD** still include an appContext.  The token bundle is required to have a patient in context.  The appContext **SHOULD** have the following properties:
-
+  
 <table border="1">
   <tr>
     <th>Field</th>
