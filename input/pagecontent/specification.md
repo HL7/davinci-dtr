@@ -128,9 +128,6 @@ The information needed to obtain the required resources will be provided as esca
     padding-left: 3px;
     padding-right: 3px;
   }
-  th.2 {
-    font-style: italic;
-  }
 </style>
 
 <table border="1">
