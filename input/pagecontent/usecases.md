@@ -52,6 +52,11 @@ DTR can be invoked for purposes other than specific Burden Reduction use-cases, 
 CDex supports the launch of DTR to gather documentation through the [CDex Task Data Request Profile](http://build.fhir.org/ig/HL7/davinci-ecdx/StructureDefinition-cdex-task-data-request.html), which provides these necessary properties:
 - The [`questionnaire` Task.input](http://build.fhir.org/ig/HL7/davinci-ecdx/StructureDefinition-cdex-task-data-request-definitions.html#diff_Task.input:questionnaire) reference - Communicates to the provider a URL of a data request FHIR Questionnaire  
 - The [`data-request-questionnaire` Task.code](http://build.fhir.org/ig/HL7/davinci-ecdx/ValueSet-cdex-data-request-task-code.html) - Indicates the provider system uses DTR to complete the Questionnaire referenced in the `questionnaire` input parameter.  
-<br><br>
+<br>
 
-[![CDex To DTR](CDexToDTR.png){:style="float: none;width:800px;height:1600px"}](CDexToDTR.png "View Larger")
+**Questionnaire as Task Input Sequence Diagram**
+[![CDex To DTR](http://build.fhir.org/ig/HL7/davinci-ecdx/taskbased-task-Q-summary.svg){:style="float: none;width:980px;height:560px"}](http://build.fhir.org/ig/HL7/davinci-ecdx/task-based-approach.html#using-questionnaire-as-task-input "Opens CDex Implementation Guide")
+
+
+**Using DTR to Complete the Questionnaire**  
+[![CDex To DTR](http://build.fhir.org/ig/HL7/davinci-ecdx/taskbased-task-Q-sequencediagram.svg){:style="float: none;width:400px;height:800px"}](http://build.fhir.org/ig/HL7/davinci-ecdx/taskbased-task-Q-sequencediagram.svg "View Image Larger")
