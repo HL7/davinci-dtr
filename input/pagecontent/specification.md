@@ -119,31 +119,83 @@ All Questionnaires and valuesets retrieved **SHALL** be version specific, as bre
 The information needed to obtain the required resources will be provided as escaped JSON in the `appContext` property of the Clinical Decision Support (CDS) Hooks Card Link object, as described in [CDS Hooks](specification.html#use-of-cardlinks). When launched in context of CRD and a CDS Hook, that object will have the following properties:
 
 <style>
-table, th, td 
-{
-  border: 1px solid Gainsboro; 
-  padding: 1px Azure;
-}
-th {
-  background: Azure; 
-}
+  table, th, td 
+  {
+    border: 1px solid gainsboro; 
+  }
+  th {
+    background: rgb(230, 200, 110, 0.12); 
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+  th.2 {
+    font-style: italic;
+  }
 </style>
 
-| Field    | Optionality | Cardinality | Type  | Description |
-| -------- | ----------- | ------      | -------- | ----------- |
-| questionnaire | OPTIONAL    |0..*| *string* | The canonical URL of the Questionnaire(s).  Required if "response" is not adaptive.  |
-| order  | OPTIONAL    |0..*| *string* | The EHR local URL or JSON encoded content of the order(s) in context.  Prefer EHR local URL when available. |
-| response  | OPTIONAL    |0..*| *object* | The QuestionnaireResponse resource(s) that DTR should load data from |
-| coverage  | OPTIONAL    |0..*| *string* | Local reference to relevant coverage resource(s) on EHR |
-{: .grid } 
+<table border="1">
+  <tr>
+    <th>Field</th>
+    <th>Optionality</th>
+    <th>Cardinality</th>  
+    <th>Type</th>  
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>questionnaire</td>
+    <td>OPTIONAL</td>
+    <td>0..*</td>   
+    <td><em>string</em></td>   
+    <td>The canonical URL of the Questionnaire(s).  Required if "response" is not adaptive.</td>   
+  </tr>
+  <tr>
+    <td>order</td>
+    <td>OPTIONAL</td>
+    <td>0..*</td>   
+    <td><em>string</em></td>   
+    <td>The EHR local URL or JSON encoded content of the order(s) in context.  Prefer EHR local URL when available.</td>   
+  </tr>
+  <tr>
+    <td>response</td>
+    <td>OPTIONAL</td>
+    <td>0..*</td>   
+    <td><em>object</em></td>   
+    <td>The QuestionnaireResponse resource(s) that DTR should load data from</td>   
+   </tr>
+  <tr>
+    <td>coverage</td>
+    <td>OPTIONAL </td>
+    <td>0..*</td>   
+    <td><em>string</em></td>   
+    <td>Local reference to relevant coverage resource(s) on EHR</td>   
+  </tr>
+</table>
 
 When launched without the context of a CDS Hook, but within context from an EHR, the token returned from the auth server **SHOULD** still include an appContext.  The token bundle is required to have a patient in context.  The appContext **SHOULD** have the following properties:
 
-| Field    | Optionality | Cardinality | Type  | Description |
-| -------- | ----------- | ------      | -------- | ----------- |
-| order  | OPTIONAL    |0..*| *string* | Local reference to the order or claim in context. |
-| response  | OPTIONAL    |0..*| *string* | Local reference to a QuestionnaireResponse stored on the EHR |
-{: .grid } 
+<table border="1">
+  <tr>
+    <th>Field</th>
+    <th>Optionality</th>
+    <th>Cardinality</th>  
+    <th>Type</th>  
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>order</td>
+    <td>OPTIONAL</td>
+    <td>0..*</td>   
+    <td><em>string</em></td>   
+    <td>Local reference to the order or claim in context.</td>   
+  </tr>
+  <tr>
+    <td>response</td>
+    <td>OPTIONAL</td>
+    <td>0..*</td>   
+    <td><em>string</em></td>   
+    <td>Local reference to a QuestionnaireResponse stored on the EHR</td>   
+  </tr>
+</table>
 
 If the QuestionnaireResponse is not present, but the order is, the QuestionnaireResponse can be searched for using the order.  If the order is not present, then it can be retrieved from the QuestionnaireResponse.
 
