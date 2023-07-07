@@ -11,7 +11,7 @@ This Implementation Guide has expectations defined for four types of systems tha
 - [DTR - EHRs that use SMART apps](CapabilityStatement-dtr-smart-client.html)
 - [EHRs that don't use SMART apps](CapabilityStatement-dtr-native-client.html)
 - [SMART apps with payer systems](CapabilityStatement-dtr-payer-app.html)
-- [Intermediary systems with defined functionality has been defined](CapabilityStatement-dtr-intermediary-system.html)
+- [Intermediary systems with defined functionality has been defined](CapabilityStatement-dtr-intermediary-system.html) 
 
 ### Boundaries and Relationships
 
@@ -23,12 +23,28 @@ The third Da Vinci IG that is relevant to DTR is the [Health Record Exchange (HR
 
 This guide also depends on a number of non-Da Vinci specifications:
 
-> DTR leverages profiles and capabilities defined in the Structured Data Capture (SDC) implementation guide to define the forms used to gather information, how they're displayed, flow control log, and mechanisms to automatically populate answers.  It also describes how to support Adaptive Forms.  The general capabilities of the SDC guide are further constrained in DTR to reflect the capabilities that payers can count on EHRs and/or DTR smart applications to have for managing forms - and thus the constraints that need to be adhered to when defining the questionnaires to be used.
+<style>
+.pbox{
+    background-color: rgb(230, 230, 210, 0.3); 
+    border-style: solid; 
+    border-width: thin;  
+    padding: 10px; 
+    border-radius: 10px; 
+    border-color: gainsboro;
+ }
+</style>
 
+<p markdown="1" class="pbox">
+    DTR leverages profiles and capabilities defined in the <em>Structured Data Capture (SDC)</em> implementation guide to define the forms used to gather information, how they're displayed, flow control log, and mechanisms to automatically populate answers.  It also describes how to support <em>Adaptive Forms</em>.  The general capabilities of the SDC guide are further constrained in DTR to reflect the capabilities that payers can count on EHRs and/or DTR smart applications to have for managing forms - and thus the constraints that need to be adhered to when defining the questionnaires to be used.
+</p>
+<br>
 Within the SDC Questionnaires, the logic that handles population and occasionally the flow control of forms is written using [Clinical Quality Language (CQL)](https://cql.hl7.org/).  This is a language specifically designed to encode decision support logic.  It can operate against data structures independent of their syntax (e.g., XML or JSON).  It is heavily used throughout the FHIR decision support community.
 
-> In turn, DTR relies on the various EHR FHIR interfaces that comply with the US Core implementation guide.  These interfaces allow the CQL embedded in Questionnaires to retrieve data from the EHR to help populate answers and/or to guide what questions are necessary. 
-> Because the DTR functionality is expected, at least in the early stages, to be performed by SMART on FHIR systems, this implementation guide also provides explicit guidance around the use of SMART launch to manage DTR functionality.
+<p markdown="1" class="pbox">
+    In turn, DTR relies on the various EHR FHIR interfaces that comply with the US Core implementation guide.  These interfaces allow the CQL embedded in Questionnaires to retrieve data from the EHR to help populate answers and/or to guide what questions are necessary. 
+    <br>
+    Because the DTR functionality is expected, at least in the early stages, to be performed by SMART on FHIR systems, this implementation guide also provides explicit guidance around the use of SMART launch to manage DTR functionality.
+</p>
 
 This IG leverages [Clinical Quality Language (CQL)](https://cql.hl7.org/) to allow payers to inspect a patient’s record for the necessary information related to the required documentation for a proposed item, certain medications, procedure, or other service. This IG details the use of a payer provided Questionnaire resource and results from CQL execution to generate a QuestionnaireResponse resource containing the appropriate and necessary information. This IG also provides methods to persist the QuestionnaireResponse in the provider’s Electronic Health Record (EHR) system and “optionally” send the QuestionnaireResponse to the payer. The payer can specify the endpoint to be a payer's, third party, Utilization Management Organization, or Business Association; the endpoint pertains to the location where Questionnaires, CQL, and ValueSets are made available.
 
@@ -37,7 +53,10 @@ The current [CRD](https://build.fhir.org/ig/HL7/davinci-crd/), DTR, [PAS](http:/
 
 [ONC](https://www.healthit.gov/) should support certification where certified software can use generic (or generically referenced) relied-upon software to meet certain requirements and can clearly specify the capabilities they rely on without the need to assert each permutation of relied-upon software with which they support the ePA workflow.  Further guidance is needed for the interactions necessary within each of the provider and payer HIT configurations based on the functions/roles of those HIT solutions, and requires the relied upon software approach using predictable, standards-based capabilities to participate in an ePA workflow and for HIT that provides full support for ePA workflow through its certified HIT. 
 
-> This community requests Da Vinci seek adequate financial support to accelerate the process described here.
+<div markdown="1" class="stu-note">
+<br>
+This community requests that Da Vinci seek adequate financial support to accelerate the process described here.
+</div>
 
 ### Content and Organization
 The IG is organized into the following sections:
