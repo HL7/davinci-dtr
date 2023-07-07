@@ -749,7 +749,7 @@ When developing FHIR Libraries that depend on CQL content, the content element *
 
 For example, see the below snippet from a FHIR Library:
 
-![FHIR Library snippet](FHIR_Library_snippet.png){:style="float: none;"}
+[![FHIR Library snippet](FHIR_Library_snippet.png){:style="float: none;width:837px;height:235px"}](FHIR_Library_snippet.png "View Image")
 
 > **NOTE:** Although the use of `url` in the content element is valid, using the `data` element should be more interoperable.
  
