@@ -63,6 +63,8 @@
     <li>Richard Abercrombie (Palmetto GBA)</li>
     <li>Tom Kakanowski (Smile Digital Health)</li>
     <li>Sreenivas Reddy Mallipeddi (MCG)</li>
+    <li>Mike Gould (ZeOmega)</li>
+    <li>Rob Brull, Brian Lind (Infor)</li>
 </ul>
 </div>
 <br>
