@@ -55,10 +55,14 @@
 <br>To the numerous Da Vinci members and community who have participated on conference calls, provided reviews and feedback, supported sample data gathering, reference implementation development, and testing including, but not limited to:
 <ul>
     <li>Andy Gregorowicz, Cole Springate-Combs, Pat LaRocque, Keeyan Ghoreshi, Yolanda Liu, Robi Scalfani, and the FHIR Shorthand Team (The MITRE Corporation) </li>
-    <li>Carie Hammond and Ryan Moehrke (Aegis)</li>
+    <li>Carie Hammond and Ryan Moehrke (AEGIS)</li>
     <li>Matt Varghese, Kyle Johnson, and Spencer Utley (Epic)</li>
     <li>Sreekanth Puram (Mettle Solutions)</li>
     <li>Sreenivas Reddy Mallipeddi (MCG)</li>
+    <li>Anup Mahansaria, Peni Moxim (Evernorth)</li>
+    <li>Brian Poteet (Edifecs)</li>
+    <li>Richard Abercrombie (Palmetto GBA)</li>
+    <li>Tom Kakanowski (Smile Digital Health)
 </ul>
 </div>
 <br>
