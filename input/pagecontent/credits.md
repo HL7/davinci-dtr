@@ -62,7 +62,7 @@
     <li>Anup Mahansaria, Peni Moxim (Evernorth)</li>
     <li>Brian Poteet (Edifecs)</li>
     <li>Richard Abercrombie (Palmetto GBA)</li>
-    <li>Tom Kakanowski (Smile Digital Health)
+    <li>Tom Kakanowski (Smile Digital Health)</li>
 </ul>
 </div>
 <br>
