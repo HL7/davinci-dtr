@@ -603,7 +603,7 @@ Some payers may require that attestations or other answers be 'signed' (the elec
 Questionnaires may also support attaching reports or other supporting documentation (e.g., images, pathology reports, etc.) where providing question answers is not sufficient.  The 'attachment' question type can be used to support this.  Attachments might be found by searching for DocumentReference, DiagnosticReport or Media instances, or by the provider directly uploading something to the Questionnaire rendering tool.  
 
 #### Recording Responses
-The DTR process **SHALL** take input from the user and record the provided information. As with provider attestation, the DTR process **SHALL** record that in the corresponding QuestionnaireResponse.item. In this case, the DTR process **SHALL** create an `answer` property on the `item`. The `answer` **SHALL** have an appropriate `value[x]` depending on the corresponding `type` in the `Questionnaire.item`. Again, similar to attestations, the `item` will have an `author` extension property which will reference the `fhirUser` provided to the DTR process.
+The DTR process **SHALL** take input from the user and record the provided information. As with provider attestation, the DTR process **SHALL** record that in the corresponding QuestionnaireResponse.item. In this case, the DTR process **SHALL** create an `answer` property on the `item`. The `answer` **SHALL** have an appropriate `value[x]` depending on the corresponding `type` in the `Questionnaire.item`. Again, similar to attestations, the `item` will have an [`author` extension](https://hl7.org/fhir/extensions/StructureDefinition-questionnaireresponse-author.html) property which will reference the `fhirUser` provided to the DTR process.
 
 ##### QuestionnaireResponse
 The DTR process **SHALL** create a QuestionnaireResponse resource based on all of the information collected. 
@@ -682,7 +682,7 @@ Finally, if the user did not supply a value, but provided an attestation that th
 
 ##### Separating user provided information from CQL retrieved information
 For the sake of information systems processing a QuestionnnaireResponse generated,
-the DTR process **SHALL** populate the `QuestionnaireResponse.item.answer` with the `author` property of the `InformationOrigin` extension if the item was created by user input. If the `author` property is not present, then the information was gathered through the execution of CQL (see the [`InformationOrigin`](StructureDefinition-information-origin.html) extension for specific requirements).
+the DTR process **SHALL** populate the `QuestionnaireResponse.item.answer` with the `author` property of the `InformationOrigin` extension if the item was created by user input. If the `author` property is not present, then the information was gathered through the execution of CQL (see the [`InformationOrigin`](StructureDefinition-information-origin.html) extension for specific options and requirements).
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
