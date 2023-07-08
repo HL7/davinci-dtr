@@ -64,7 +64,7 @@ Any `QuestionnaireResponse` provided **SHALL** either be an adaptive form or mus
 
 A payer wishing to use Adaptive Forms will return a questionnaire instance compliant with the [SDC AdaptiveQuestionnaire-Search profile](http://build.fhir.org/ig/HL7/sdc/StructureDefinition-sdc-questionnaire-adapt-srch.html).  This instance will include the QuestionnaireAdaptive extension which will identify the endpoint the DTR app is to call to receive the "next question".
 
-The DTR app **SHALL** support loading and rendering the adaptive form developed by the payer following the SDC adaptive form workflow. If there is CQL embedded in the questionnaire or the associated library, the DTR app should be able to execute the CQL based on the questions loaded in the questionnaire. For performance, the DTR application may save the results of prior execution of the CQL where it is the same for addressing the current question(s).
+The DTR app **SHALL** support loading and rendering the adaptive form developed by the payer following the SDC adaptive form workflow. If there is CQL embedded in the questionnaire or the associated library, the DTR app should be able to execute the CQL based on the questions loaded in the questionnaire. For performance, the DTR application **MAY** save the results of prior execution of the CQL where it is the same for addressing the current question(s).
 
 ##### Adaptive Forms and Prior Authorization
 
@@ -241,7 +241,7 @@ CQL can either be embedded inline as part of an expression or referenced in a li
 
 ---------------------
 ### Launch Outside of CRD
-The DTR process may be launched outside of the workflow of Coverage Requirements Discovery. This is likely to be the case if a user is resuming a previous session. Depending on the context of the Electronic Health Record (EHR) system, the interaction with the DTR process will vary.
+The DTR process **MAY** be launched outside of the workflow of Coverage Requirements Discovery. This is likely to be the case if a user is resuming a previous session. Depending on the context of the Electronic Health Record (EHR) system, the interaction with the DTR process will vary.
 
 #### Launch Context
 The launch context, which comes to the DTR app through the access token bundle, can be used to include necessary information when launching. When launched outside the context of CRD, the DTR app **SHOULD** add the `launch/order` scope, to indicate that the EHR should include the order currently in context when it returns an access token.  The EHR should provide a local reference, which the DTR app can use to retrieve the request, from which it can relaunch the associated usage session. The requests **SHALL** have an identifier, with type "placer", which remains consistent over the resources lifetime and can be used to search for them despite changes to their `id`.  
@@ -286,7 +286,7 @@ Through interactions with the DTR process, a user may be prompted with a questio
 
 The provider can confirm that the sleep study has not yet been conducted and generate a task for office staff to schedule a sleep study directly in the questionnaire interface. Alternatively, the provider could attest that the sleep study was performed or is already scheduled to be performed, either at this provider or another provider. Attestation by the provider can prevent duplicate tests in the case that the patient's electronic record is incomplete.
 
-The ability to create tasks or 'to-dos' is outside of the scope of DTR and should be supported by the EHR implementation. 
+The ability to create tasks or 'to-dos' is outside of the scope of DTR and **SHOULD** be supported by the EHR implementation. 
 
 The questionnaire **SHALL** be able to suspend completion until all tasks are completed. How the application is suspended is left to the implementer, but the state of the questionnaire **SHALL** be preserved.
 
@@ -315,9 +315,8 @@ The DTR process **SHOULD NOT** assume that users will be able to fully complete 
 When the provider system can support storage of work in progress, it **SHALL** be stored exclusively on the provider's system.  If the provider cannot store work in progress, then work in progress is stored in encrypted form on payer's system until a time it is considered complete and then at that point it will be stored unencrypted. 
 
 #### How DTR Saves Context of DTR for a Relaunch
-
-<br>
-At any point prior to completion the app should be able to save the session, and then relaunch it later. If an EHR system performs DTR functionality internally, it may save session information however it likes. Guidance below does not apply in this scenario. 
+  
+At any point prior to completion the app **SHOULD** be able to save the session, and then relaunch it later. If an EHR system performs DTR functionality internally, it may save session information however it likes. Guidance below does not apply in this scenario. 
 
 Providers may go days to weeks before completing questionnaires and may go many months to a year before completing paperwork and Prior Authorization to claim submission. Therefore, the time span between the creation of a Questionnaire to the completion of QuestionnaireResponse should be accounted for accordingly.
 
@@ -325,7 +324,7 @@ Context for the DTR app is made up of the QuestionnaireResponse, the Questionnai
 
 If the DTR app receives a QuestionnaireResponse resource in the app context, it **SHALL** reload the session information from that QuestionnaireResponse using its associated order and coverage.  If the DTR app does not receive a QuestionnaireResponse, it **SHALL** first search the EHR for QuestionnaireResponses associated with the order included in the app context.  Depending on the result of the search, the app will either offer an option to reload context from a found QuestionnaireResponse or launch normally and create a new QuestionnaireResponse.
 
-The EHR should be able to associate orders with the QuestionnaireResponses they pertain to by linking their FHIR IDs internally. This means that even if the ID of an order changes, the EHR should be capable of updating the QuestionnaireResponse to reference the new ID. This way, even if DTR receives the updated orders, it will still be able to search the EHR for the associated QuestionnaireResponse.  
+The EHR **SHOULD** be able to associate orders with the QuestionnaireResponses they pertain to by linking their FHIR IDs internally. This means that even if the ID of an order changes, the EHR **SHOULD** be capable of updating the QuestionnaireResponse to reference the new ID. This way, even if DTR receives the updated orders, it will still be able to search the EHR for the associated QuestionnaireResponse.  
 
 The EHR is responsible for storing and updating the QuestionnaireResponse, as well as providing the user a way to choose sessions to relaunch. Additionally, the EHR **SHOULD** pass the QR as a [SMART launch parameter](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#app-launch-scopes-and-launch-context).
 
@@ -333,11 +332,11 @@ The contents of the extension can be sent to the payer server using the [questio
 
 If the app is a DTR SMART app (and not a DTR Native App) that it **SHALL** use SMART backend authentication and will also provide a link to the SMART backend authentication process which provides the full protocol and details. 
 
-The PDF may also include prior authorization information, if appropriate. Information in the PDF is not machine readable, and association with the order or prior authorization request must be done by hand. 
+The PDF **MAY**  include prior authorization information, if appropriate. Information in the PDF is not machine readable, and association with the order or prior authorization request must be done by hand. 
 
-When launched with context of the organization, patient, and user, the app should display a list of open or “in-progress” QuestionnaireResponses for the user to select from, scoped to the patient that is in context. The DTR app should check both the EHR and the payer server for stored sessions.  The QuestionnaireResponses on the EHR has a reference to the order which it is linked to, which can be used to search for the correct resource.  
+When launched with context of the organization, patient, and user, the app **SHOULD** display a list of open or “in-progress” QuestionnaireResponses for the user to select from, scoped to the patient that is in context. The DTR app should check both the EHR and the payer server for stored sessions.  The QuestionnaireResponses on the EHR has a reference to the order which it is linked to, which can be used to search for the correct resource.  
 
-When launched in standalone mode, the app should include the `launch/patient` scope to indicate that the EHR needs to provide patient context. The app can use the returned patient to search for relevant unfinished sessions. 
+When launched in standalone mode, the app **SHOULD** include the `launch/patient` scope to indicate that the EHR needs to provide patient context. The app can use the returned patient to search for relevant unfinished sessions. 
 
 Since a patient won’t be in context, the app will need to provide a selection of patients that the user can choose from. But this would be from the EHR, currently. 
  
@@ -346,7 +345,7 @@ The DTR app **SHALL** only be scoped to one patient and be prohibited from acces
 The system can decide how long to wait before deleting an old session. 
 
 ##### SMART App Launch Framework IG
-Using the SMART App Launch Framework IG, the DTR process should request [scopes for requesting identity data](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#scopes-for-requesting-identity-data), namely `openid` and `fhirUser`. The DTR process can then retrieve the FHIR resource representing the current person and extract whatever identifiers it deems necessary for the persistence of application state.
+Using the SMART App Launch Framework IG, the DTR process **SHOULD** request [scopes for requesting identity data](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#scopes-for-requesting-identity-data), namely `openid` and `fhirUser`. The DTR process can then retrieve the FHIR resource representing the current person and extract whatever identifiers it deems necessary for the persistence of application state.
 
 The EHR's authorization server MUST support the `openid` and `fhirUser` scopes, due to the importance of the `fhirUser` element in the QuestionnaireResponse resource.
 
@@ -367,7 +366,7 @@ As an example, the DTR process may retrieve a Practitioner resource by retrievin
 Furthermore, the notion of workflows and multiple users could get extended to work queues. The EHR could maintain a list of in-progress FHIR Questionnaires and store a reference to each of these within the EHR for the clinicians and other employees within the organization to continue working on. There could be built in mechanisms to assign FHIR Tasks for the work to the queues of other employees. Specific details surrounding this type of work queue implementation are out of the scope for this IG.
 
 #### Session Expiration
-While a user may need to suspend interaction with the DTR process, there may be a limit on the amount of time that a set of documentation templates and rules is valid. For example, it is unreasonable to resume the DTR process for an order that was started five years in the past.
+While a user might need to suspend interaction with the DTR process, there could possibly be a limit on the amount of time that a set of documentation templates and rules is valid. For example, it is unreasonable to resume the DTR process for an order that was started five years in the past.
 
 Payers **SHOULD** use the `Questionnaire.effectivePeriod` element to describe the period over which the documentation templates and rules are valid. The DTR process **SHALL NOT** allow completion of a usage session if the current time has exceeded the end of the `effectivePeriod`.
 
@@ -381,18 +380,18 @@ When the DTR process has collected all of the necessary information, it **SHALL*
 
 The information that is collected (via the Questionnaire interaction with the user) **SHOULD** be written to the EHR via the available FHIR API. The results of the QuestionnaireResponse **SHALL** be saved as the FHIR resource and/or as a human readable format that is supported by the EHR.
 
-If the EHR has the capability to render a QuestionnaireResponse, it **SHOULD** save the QuestionnaireResponse as part of the patient record. If the EHR does not have ability to render the questionnaireResponse, then the EHR should support saving the QuestionnaireResponse information as whichever supported structure produces the least impact on users.  Implementers are strongly encouraged to use the most reusable, discrete form of data they can. 
+If the EHR has the capability to render a QuestionnaireResponse, it **SHOULD** save the QuestionnaireResponse as part of the patient record. If the EHR does not have ability to render the questionnaireResponse, then the EHR **SHOULD** support saving the QuestionnaireResponse information as whichever supported structure produces the least impact on users.  Implementers are strongly encouraged to use the most reusable, discrete form of data they can. 
 
 ##### Interaction with EHR
 EHR systems that conform to [US Core](http://www.hl7.org/fhir/us/core/) allow for the creation of DocumentationReference resources through a FHIR API. As such, the DTR process should use the typical [FHIR create](http://hl7.org/fhir/R4/http.html#create) interaction to write the documentation into the EHR.
 
 #### QuestionnaireResponse
-The DTR process creates a QuestionnaireResponse resource through the course of normal operation. This resource **SHOULD** be saved to the patient record in the EHR system of the healthcare provider if supported. It may also be transmitted to the payer IT system.
+The DTR process creates a QuestionnaireResponse resource through the course of normal operation. This resource **SHOULD** be saved to the patient record in the EHR system of the healthcare provider if supported. It **MAY** also be transmitted to the payer IT system.
 
 >Updating work-in-progress (WIP) QuestionnaireResponses may save time and effort. In cases of QuestionnaireResponse updates, the App **SHALL** have the ability to continue, **SHOULD** allow the ability to start over, and **MAY**, for non-adaptive forms, provide the ability to ability to refresh and retain or discard provider entered information during a refresh. The data in the QuestionnaireResponse **SHOULD** be refreshed where possible with the latest data from the EHR system. 
 
 ##### Interaction with Payer API
-The payer IT system should support the FHIR create interaction to allow the DTR process to send the QuestionnaireResponse resource to the payer. The FHIR endpoint for the payer may require authentication. If it is required, it **SHALL** follow the procedures described in [Authentication of SMART on FHIR application to payer API](specification.html#authentication-of-smart-on-fhir-application-to-payer-api) - Authentication of SMART on FHIR application to payer API.
+The payer IT system should support the FHIR create interaction to allow the DTR process to send the QuestionnaireResponse resource to the payer. The FHIR endpoint for the payer **MAY** require authentication. If it is required, it **SHALL** follow the procedures described in [Authentication of SMART on FHIR application to payer API](specification.html#authentication-of-smart-on-fhir-application-to-payer-api) - Authentication of SMART on FHIR application to payer API.
 
 ##### Pushing QuestionnaireResponse to Payer
 This IG will support the [HRex Decision point – Configured by consumer?](http://build.fhir.org/ig/HL7/davinci-ehrx/exchanging.html#configured-by-consumer) when a DTR SMART App or DTR Native App wants to push a QuestionnaireResponse to a Payer.  
@@ -607,9 +606,10 @@ Questionnaires may also support attaching reports or other supporting documentat
 The DTR process **SHALL** take input from the user and record the provided information. As with provider attestation, the DTR process **SHALL** record that in the corresponding QuestionnaireResponse.item. In this case, the DTR process **SHALL** create an `answer` property on the `item`. The `answer` **SHALL** have an appropriate `value[x]` depending on the corresponding `type` in the `Questionnaire.item`. Again, similar to attestations, the `item` will have an `author` extension property which will reference the `fhirUser` provided to the DTR process.
 
 ##### QuestionnaireResponse
-The DTR process **SHALL** create a QuestionnaireResponse resource based on all of the information collected. Given the following JSON fragment representing a `Questionnaire.item`:
-
-```
+The DTR process **SHALL** create a QuestionnaireResponse resource based on all of the information collected. 
+  
+Given the following JSON fragment representing a `Questionnaire.item`:
+```json
 {
   "extension": [
     {
@@ -631,10 +631,9 @@ The DTR process **SHALL** create a QuestionnaireResponse resource based on all o
   "type": "quantity"
 }
 ```
-
+<br>
 The following `QuestionnaireResponse.item` JSON fragment would be created assuming that the patient's age is 65 years old and that this information was gathered through CQL execution.
-
-```
+```json
 {
   "linkId": "age",
   "answer": {
@@ -642,10 +641,9 @@ The following `QuestionnaireResponse.item` JSON fragment would be created assumi
   }
 }
 ```
-
+<br>
 If the value was supplied by the user, the `author` extension property will be set. The following `QuestionnaireResponse.item` JSON fragment provides an example of this:
-
-```
+```json
 {
   "extension": [
     {
@@ -661,10 +659,9 @@ If the value was supplied by the user, the `author` extension property will be s
   }
 }
 ```
-
+<br>
 Finally, if the user did not supply a value, but provided an attestation that the information exists in the patient's record, it would be represented by the following  `QuestionnaireResponse.item` JSON fragment:
-
-```
+```json
 {
   "extension": [
     {
@@ -685,7 +682,7 @@ Finally, if the user did not supply a value, but provided an attestation that th
 
 ##### Separating user provided information from CQL retrieved information
 For the sake of information systems processing a QuestionnnaireResponse generated,
-the DTR process **SHALL** populate the `QuestionnaireResponse.item` with the `author` extension property if the item was created by user input. If the `author` property is not present, then the information was gathered through the execution of CQL.
+the DTR process **SHALL** populate the `QuestionnaireResponse.item.answer` with the `author` property of the `InformationOrigin` extension if the item was created by user input. If the `author` property is not present, then the information was gathered through the execution of CQL (see the [`InformationOrigin`](StructureDefinition-information-origin.html) extension for specific requirements).
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
@@ -700,11 +697,11 @@ Implementers **SHALL** also adhere to the security guidelines defined in:
 * CDS Hooks: [Security & Safety](https://cds-hooks.hl7.org/1.0/#security-and-safety)
 * SMART on FHIR: [SMART App Launch Framework](http://www.hl7.org/fhir/smart-app-launch)
 
-The DTR / SMART on FHIR application will have access to the scope of data authorized by the organization as appropriate for use by the app, and accessible to the user. This scope granted may provide the  SMART on FHIR application  access to more data than is needed for the specific situation. For example, if Observation.read capabilities are needed, the app will have access to all observations for that patient. For compliance with HIPAA Minimum Necessary, the CQL **SHALL** limit requests for information from the EHR's API to only items that are relevant to the documentation requirements for which DTR was launched (e.g., documentation requirements for a service that requires prior authorization).
+The DTR / SMART on FHIR application will have access to the scope of data authorized by the organization as appropriate for use by the app, and accessible to the user. This scope granted may provide the  SMART on FHIR application  access to more data than is needed for the specific situation. For example, if `Observation.read` capabilities are needed, the app will have access to all observations for that patient. For compliance with HIPAA Minimum Necessary, the CQL **SHALL** limit requests for information from the EHR's API to only items that are relevant to the documentation requirements for which DTR was launched (e.g., documentation requirements for a service that requires prior authorization).
 
->Compliant questionnaires **SHALL NOT** include hidden or read-only questions unless the information is populated by the payer or their out-sourced service.  If information is privacy restricted, the information **SHOULD** be treated as if it does not exist. The provider **SHOULD** ask the patient if they want to share the information with the payer.
+> Compliant questionnaires **SHALL NOT** include hidden or read-only questions unless the information is populated by the payer or their out-sourced service.  If information is privacy restricted, the information **SHOULD** be treated as if it does not exist. The provider **SHOULD** ask the patient if they want to share the information with the payer.
 
-Any EHR with SMART on FHIR support should be prepared to deal with the implications of providing a client with the scopes they request. For example, EHRs **SHOULD** limit FHIR search capabilities for clients, requiring a patient ID in any search query to ensure the client can only access resources related to that patient.
+Any EHR with SMART on FHIR support **SHOULD** be prepared to deal with the implications of providing a client with the scopes they request. For example, EHRs **SHOULD** limit FHIR search capabilities for clients, requiring a patient ID in any search query to ensure the client can only access resources related to that patient.
 
 When meeting the DTR / SMART on FHIR app requirements using a distinct app (i.e., not within the EHR), the app **SHALL** have a distinct client id for when it’s being invoked purely as a mechanism to supplement EHR data vs. when it is being invoked to share data back to the payer.
 
@@ -714,7 +711,7 @@ This will allow the scopes to be different depending on whether data is expected
 
 It is under the control of the SMART on FHIR app or the capable EHR, based on the API access scope, what information is accessible to be included in the QuestionnaireResponse. The SMART on FHIR app cannot be responsible for informing the user that the information exists in the patient’s record but is inaccessible to the application. This may differ depending on whether it is a native EHR application or a third-party application.
 
-It is important for implementers to be aware that data is going to be auto-populated that may be sensitive - so there will likely be a need for a human to review and confirm that the information is appropriate to be shared (and be able to remove it without risk of it being put back if they wish).  Also the app may not have access to certain data for retrieval because of security considerations.
+It is important for implementers to be aware that data is going to be auto-populated that could be considered sensitive - so there will likely be a need for a human to review and confirm that the information is appropriate to be shared (and be able to remove it without risk of it being put back if they wish).  Also the app may not have access to certain data for retrieval because of security considerations.
 
 Payer systems **SHALL** use information received during execution of DTR solely for the purpose for which the documentation template was created (typically processing of a specific claim or prior authorization request) and **SHALL NOT** use information received over the DTR interfaces for any additional purposes other than audit.
 
@@ -731,7 +728,7 @@ If OIDs are used they **SHALL** be prefixed with `urn:oid:` per the [OID primiti
 
 When remote value sets are referenced in Questionnaires, full URLs are recommended. If you are using local value sets a relative path is recommended. 
 
-> **NOTE:** Expanding a large value set at run time, may slow down your DTR app. In other words having your value set already expanded could give the user a better client side experience.  
+> **NOTE:** Expanding a large value set at run time, may slow down the DTR app. In other words, having the value set already expanded could give the user a better client side experience.  
 
 #### Questionnaires and expressions
 
