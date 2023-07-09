@@ -1,4 +1,4 @@
-<!-- == Stylesheet Formatting ===================================== -->
+<!-- ============ Formatting ===================================== -->
 <style>
 .pbox{
     background-color: rgb(230, 230, 210, 0.3); 
@@ -10,7 +10,7 @@
  }
 
 .notebox{
-    background-color: rgb(230, 230, 230, 0.4); 
+    background-color: rgb(240, 248, 255, 0.7); 
     border-left: double silver;
     border-radius: 5px; 
     padding-left: 15px; 
@@ -22,7 +22,7 @@
     border: 1px solid gainsboro; 
   }
   th {
-    background: rgb(230, 200, 110, 0.12); 
+    background: ivory; 
     padding-left: 3px;
     padding-right: 3px;
   }
@@ -53,7 +53,7 @@ Payers **MAY** also supply Questionnaire resources that conform to the [Structur
 DTR conformant [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) applications **SHALL** support the SDC Advanced Rendering Profile.  
 
 <div markdown="1" class="notebox">
- <b>NOTE:</b>&nbsp;&nbsp;Elements with example bindings or missing bindings will not be used.  
+ <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;Elements with example bindings or missing bindings will not be used.  
 </div>
 
 More information regarding Questionnaires, workflow, and behaviors in the Structured Data Capture Implementation Guide:
@@ -121,7 +121,7 @@ One entry point into the DTR process is launching from a [Clinical Decision Supp
 In most cases, a card that results in the launch of DTR will deal with only one patient coverage, multiple orders, one Questionnaire and (possibly) one initial QuestionnaireResponse.  However, there may be edge cases where more than one of these is possible.
 
 <div markdown="1" class="notebox">
- <b>NOTE:</b>&nbsp;&nbsp;As a part of a CDS Hooks response, if there is a need for further information then the payer IT system <b>MAY</b> return a Card object with a Link object populated in the Card.links property. If the Link object has a URL property set to the launch URL of a DTR process, this can still be overridden by the EHR or Provider's preferred DTR application.
+ <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;As a part of a CDS Hooks response, if there is a need for further information then the payer IT system <b>MAY</b> return a Card object with a Link object populated in the Card.links property. If the Link object has a URL property set to the launch URL of a DTR process, this can still be overridden by the EHR or Provider's preferred DTR application.
 </div>
 
 DTR **SHALL** receive the full order in those cases where the order isn't yet persisted and available on the RESTful interface.
@@ -256,7 +256,7 @@ Payers **SHALL** require the DTR process to authenticate in order to retrieve re
 These are sufficient to invoke the DTR Questionnaire operations `$next-question` and `ValueSet/$expand`, as well as retrieval of libraries and value sets.  
 
 <div markdown="1" class="notebox">
- <b>NOTE:</b>&nbsp;&nbsp;Payers must be cautious about prepopulating Questionnaires with sensitive information, because there are rare situations where a malicious application could attempt to access information that was not authorized by the EHR.  
+ <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;Payers must be cautious about prepopulating Questionnaires with sensitive information, because there are rare situations where a malicious application could attempt to access information that was not authorized by the EHR.  
 </div>
 
 #### CQL Rules
@@ -272,7 +272,7 @@ The DTR process **MAY** be launched outside of the workflow of Coverage Requirem
 The launch context, which comes to the DTR app through the access token bundle, can be used to include necessary information when launching. When launched outside the context of CRD, the DTR app **SHOULD** add the `launch/order` scope, to indicate that the EHR should include the order currently in context when it returns an access token.  The EHR should provide a local reference, which the DTR app can use to retrieve the request, from which it can relaunch the associated usage session. The requests **SHALL** have an identifier, with type "placer", which remains consistent over the resources lifetime and can be used to search for them despite changes to their `id`.  
 
 <div markdown="1" class="notebox">
- <b>NOTE:</b>&nbsp;&nbsp;Any new parameters defined by this Implementation Guide should not be confused for generic resource-specific SMART launch parameters (which are handled as 'mandatory' and will cause the EHR to prompt the user for them if they're not already in active context).  For detailed guidance on the latest specifics of SMART launch context, refer to the <a href="http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#app-launch-scopes-and-launch-context">App Launch: Scopes and Launch Context</a> section of the SMART App Launch Implementation Guide. 
+ <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;Any new parameters defined by this Implementation Guide should not be confused for generic resource-specific SMART launch parameters (which are handled as 'mandatory' and will cause the EHR to prompt the user for them if they're not already in active context).  For detailed guidance on the latest specifics of SMART launch context, refer to the <a href="http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#app-launch-scopes-and-launch-context">App Launch: Scopes and Launch Context</a> section of the SMART App Launch Implementation Guide. 
 </div>
 
 The launch **SHALL** occur in the context of a specific patient and **SHOULD** occur in the context of a specific encounter and ideally a specific order.  DTR will check to see if there is already work-in-progress by looking for an existing QuestionnaireResponse (on the EHR) for the specified order.  If no order is specified, DTR will allow the user to select one of the existing "work-in-progress" sessions.  
@@ -282,7 +282,7 @@ If an order was selected and there was no work in progress:
 * The DTR app will hit an operation endpoint on the payer (likely similar to that used internally by the CRD service) passing the order and coverage to determine the DTR ruleset.  
 
 <div markdown="1" class="notebox">
- <b>NOTE:</b>&nbsp;&nbsp;this operation will not have a token allowing the payer to access any information other than what's in the order.  This means that the ruleset will often be broader (i.e., more questions and more questionnaire logic) than when the ruleset is determined within CRD.
+ <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;this operation will not have a token allowing the payer to access any information other than what's in the order.  This means that the ruleset will often be broader (i.e., more questions and more questionnaire logic) than when the ruleset is determined within CRD.
 </div>
 
 #### Starting a New Session
@@ -331,8 +331,9 @@ Accessing the endpoint will by a simple GET with an Accept header of "applicatio
 
 EHRs will typically retrieve the list of supported payers for the app once per day and will use this information to determine whether to expose the ability to launch DTR for orders associated with coverages for that payer.
 
-<div markdown="1" class="notebox">
- <b>NOTE:</b>&nbsp;&nbsp;Standardization of payer ids is still an open issue.
+<div markdown="1" class="stu-note">
+<br>
+ &nbsp;&nbsp;&nbsp;Standardization of payer ids is still an open issue.
 </div>
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
@@ -428,7 +429,7 @@ The payer IT system should support the FHIR create interaction to allow the DTR 
 This IG will support the [HRex Decision point – Configured by consumer?](http://build.fhir.org/ig/HL7/davinci-ehrx/exchanging.html#configured-by-consumer) when a DTR SMART App or DTR Native App wants to push a QuestionnaireResponse to a Payer.  
 
 <div markdown="1" class="notebox">
- <b>NOTE:</b>&nbsp;&nbsp;Other IGs might provide additional mechanisms for transmitting results of the completed QuestionnaireResponse to the payer.  The client that launches DTR is responsible for understanding the context of the launch, and thus for what to do with any QuestionnaireResponses that are persisted as a result of that launch.
+ <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;Other IGs might provide additional mechanisms for transmitting results of the completed QuestionnaireResponse to the payer.  The client that launches DTR is responsible for understanding the context of the launch, and thus for what to do with any QuestionnaireResponses that are persisted as a result of that launch.
 </div>
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
@@ -455,7 +456,7 @@ The PAO Bundle linkId should be used for attached bundles containing resources n
 In a QuestionnaireResponse, this will be a 'repeating' question with one or more answers with a linkId of "DTR_TASK".  The question type will be 'Reference' and will refer to contained Task instances that describe workflow actions that need to occur, such as the creation of additional companion orders, pre-execution testing, follow-up orders, etc. These are created when the completion of the questionnaire has made evident that certain workflow steps necessary to satisfy payer requirements were confirmed missing by the user.  The EHR should add 'to do' items to the user's task list that correspond to the actions described within the Task instances.
 
 <div markdown="1" class="notebox">
- <b>NOTE:</b>&nbsp;&nbsp;It may be appropriate to re-execute the DTR process once the specified tasks have been completed, as the DTR results may change.
+ <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;It may be appropriate to re-execute the DTR process once the specified tasks have been completed, as the DTR results may change.
 </div>
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
@@ -531,7 +532,7 @@ This pattern of logic structure is referred to by several names, including *eage
 As an example, a payer may have a set of rules or specific information that must be gathered on a patient only if they have diabetes. This information may be gathered through a series of CQL statements. When constructing this CQL for DTR, these statements should be nested in conditionals to first check if the patient has diabetes before checking for information dependent on that condition.  
   
 <div markdown="1" class="notebox">
- <b>NOTE:</b>&nbsp;&nbsp;Implementers could use <a href="specification.html#sdc-adaptive-forms">Adaptive Forms</a> to minimize the need for any CQL that provides conditional informational retrieval. 
+ <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;Implementers could use <a href="specification.html#sdc-adaptive-forms">Adaptive Forms</a> to minimize the need for any CQL that provides conditional informational retrieval. 
 </div>
 
 #### Expression Naming Conventions
@@ -588,7 +589,7 @@ It is a CQL failure if the CQL cannot be executed by the app's CQL engine in the
 If any errors are encountered during execution, the app’s engine **SHALL NOT** attempt any further execution, and the user **SHALL** be notified with an appropriate on-screen error message. The app **SHALL** log failures and ensure the maintainer of the CQL/Questionnaire package is notified. The user should have the option to complete the Questionnaire if possible, despite the error.
 
 <div markdown="1" class="notebox">
-<b>NOTE:</b>&nbsp;&nbsp;A query for data that returns no results <b>SHALL</b> never be considered a failure.
+<b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;A query for data that returns no results <b>SHALL</b> never be considered a failure.
 </div>
 
 ##### Logging Errors and Failures
@@ -741,7 +742,7 @@ Any EHR with SMART on FHIR support **SHOULD** be prepared to deal with the impli
 When meeting the DTR / SMART on FHIR app requirements using a distinct app (i.e., not within the EHR), the app **SHALL** have a distinct client id for when it’s being invoked purely as a mechanism to supplement EHR data vs. when it is being invoked to share data back to the payer.
 
 <div markdown="1" class="notebox">
- <b>NOTE:</b>&nbsp;&nbsp;CRD and DTR are designed to function without use case Prior Authorization Support (PAS). For example, to augment the documentation of medical necessity. Since not all orders require Prior Authorization some only require documentation therefore not all QuestionnaireResponses will need to be sent to a payer or PAS service.
+ <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;CRD and DTR are designed to function without use case Prior Authorization Support (PAS). For example, to augment the documentation of medical necessity. Since not all orders require Prior Authorization some only require documentation therefore not all QuestionnaireResponses will need to be sent to a payer or PAS service.
 </div>
 <br>
 This will allow the scopes to be different depending on whether data is expected to flow to the payer. It will also allow the EHR to appropriately audit data accesses where data will flow external to the EHR. Additionally, there is a requirement that the data passed to a payer **SHALL** also be stored in the EHR where it can be audited for appropriate use.
@@ -766,7 +767,7 @@ If OIDs are used they **SHALL** be prefixed with `urn:oid:` per the [OID primiti
 When remote value sets are referenced in Questionnaires, full URLs are recommended. If you are using local value sets a relative path is recommended. 
 
 <div markdown="1" class="notebox">
-<b>NOTE:</b>&nbsp;&nbsp;Expanding a large value set at run time, may slow down the DTR app. In other words, having the value set already expanded could give the user a better client side experience.
+<b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;Expanding a large value set at run time, may slow down the DTR app. In other words, having the value set already expanded could give the user a better client side experience.
 </div>
 
 #### Questionnaires and expressions
@@ -782,7 +783,7 @@ In this example above `LowerLimbProsthesis` is the `library name` and `PhysicalE
 When developing FHIR Libraries that depend on CQL content, the content element **SHALL** include the `data` element. 
 
 <div markdown="1" class="notebox">
-<b>NOTE:</b>&nbsp;&nbsp;The use of the `data` element requires it to contain a base-64 encoded string that represents the CQL file per the <a href="https://www.hl7.org/fhir/datatypes.html#Attachment">attachment specification</a>.
+<b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;The use of the `data` element requires it to contain a base-64 encoded string that represents the CQL file per the <a href="https://www.hl7.org/fhir/datatypes.html#Attachment">attachment specification</a>.
 </div>
 <br>
 
@@ -791,7 +792,7 @@ For example, see the below snippet from a FHIR Library:
 [![FHIR Library snippet](FHIR_Library_snippet.png){:style="float: none;width:837px;height:235px"}](FHIR_Library_snippet.png "View Image")
   
 <div markdown="1" class="notebox">
-<b>NOTE:</b>&nbsp;&nbsp;Although the use of `url` in the content element is valid, using the `data` element should be more interoperable.
+<b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;Although the use of `url` in the content element is valid, using the `data` element should be more interoperable.
 </div>
 
 A reference implementation has been created. The code is available at [DTR GitHub](https://github.com/HL7-DaVinci/dtr). The executable is at [DTR Logica Health](https://davinci-dtr.logicahealth.org/smart/launch.html).

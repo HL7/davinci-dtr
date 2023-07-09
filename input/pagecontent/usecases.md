@@ -1,3 +1,34 @@
+<!-- ============ Formatting ===================================== -->
+<style>
+.pbox{
+    background-color: rgb(230, 230, 210, 0.3); 
+    border-style: solid; 
+    border-width: thin;  
+    padding: 10px; 
+    border-radius: 10px; 
+    border-color: gainsboro;
+ }
+
+.notebox{
+    background-color: rgb(240, 248, 255, 0.7); 
+    border-left: double silver;
+    border-radius: 5px; 
+    padding-left: 15px; 
+    padding-top: 10px;
+ }
+
+  table, th, td 
+  {
+    border: 1px solid gainsboro; 
+  }
+  th {
+    background: ivory; 
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+</style>
+<!-- ============================================================== -->
+
 ### System Actors
 DTR Fundamentally supports four different system actors:
 
@@ -20,7 +51,9 @@ It is possible to have a process where the focus is on the interaction with the 
 
 If information required to complete the Questionnaire is not available to the SMART on FHIR application, then the application will need to prompt the provider to enter the missing information. Ultimately, the solution is to provide greater integration between the EHR and other supporting applications(e.g., Quality measures may also require this type of integration)
 
-> Electronic Health Record (EHR) is used in this IG and can be considered equivalent to Electronic Medical Record (EMR) or a Practice Management System (PMS).
+<div markdown="1" class="notebox">
+ <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;The term Electronic Health Record (EHR) is used in this IG and can be considered equivalent to Electronic Medical Record (EMR) or a Practice Management System (PMS).
+</div>
 
 #### DTR Compliant SMART on FHIR app
 Within DTR, the SMART on FHIR app (or equivalent native EHR app) serves as a middleware layer easing payer and provider integrations. This functionality enables DTR to gather Questionnaire resources, retrieve FHIR resources from EHRs, and run rules (CQL) to reduce the time involved in looking up documentation requirements.

@@ -1,4 +1,4 @@
-<!-- == Stylesheet Formatting ===================================== -->
+<!-- ============ Formatting ===================================== -->
 <style>
 .pbox{
     background-color: rgb(230, 230, 210, 0.3); 
@@ -9,17 +9,26 @@
     border-color: gainsboro;
  }
 
+.notebox{
+    background-color: rgb(240, 248, 255, 0.7); 
+    border-left: double silver;
+    border-radius: 5px; 
+    padding-left: 15px; 
+    padding-top: 10px;
+ }
+
   table, th, td 
   {
     border: 1px solid gainsboro; 
   }
   th {
-    background: rgb(230, 200, 110, 0.12); 
+    background: ivory; 
     padding-left: 3px;
     padding-right: 3px;
   }
 </style>
 <!-- ============================================================== -->
+
 
 <div markdown="1" class="pbox">
 <b>Primary Authors:</b>  
