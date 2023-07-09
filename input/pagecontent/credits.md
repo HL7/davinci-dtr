@@ -1,3 +1,4 @@
+<!-- == Stylesheet Formatting ===================================== -->
 <style>
 .pbox{
     background-color: rgb(230, 230, 210, 0.3); 
@@ -7,8 +8,19 @@
     border-radius: 10px; 
     border-color: gainsboro;
  }
+
+  table, th, td 
+  {
+    border: 1px solid gainsboro; 
+  }
+  th {
+    background: rgb(230, 200, 110, 0.12); 
+    padding-left: 3px;
+    padding-right: 3px;
+  }
 </style>
-<!-- ***************************************************** -->
+<!-- ============================================================== -->
+
 <div markdown="1" class="pbox">
 <b>Primary Authors:</b>  
 <ul>
@@ -52,7 +64,7 @@
 
 <div markdown="1" class="pbox">
 <b>Special Thanks...</b>
-<br>To the numerous Da Vinci members and community who have participated on conference calls, provided reviews and feedback, supported sample data gathering, reference implementation development, and testing including, but not limited to:
+<br><br>To the numerous Da Vinci members and community who have participated on conference calls, provided reviews and feedback, supported sample data gathering, reference implementation development, and testing including, but not limited to:
 <ul>
     <li>Andy Gregorowicz, Cole Springate-Combs, Pat LaRocque, Keeyan Ghoreshi, Yolanda Liu, Robi Scalfani, and the FHIR Shorthand Team (The MITRE Corporation) </li>
     <li>Carie Hammond and Ryan Moehrke (AEGIS)</li>
@@ -72,5 +84,5 @@
 This IG was developed under the auspices of the Clinical Decision Support work group.
 
 ----
-If you are interested in participating in the DTR project and Da Vinci: information about our calls, minutes of past discussions, and other information can be found [here]( https://confluence.hl7.org/display/DVP/Da+Vinci+Use+Cases) on our HL7 Confluence page.
+If you are interested in participating in the DTR project and Da Vinci: information about our calls, minutes of past discussions, and other information can be found on our [HL7 Da Vinci Confluence page]( https://confluence.hl7.org/display/DVP/Da+Vinci+Use+Cases).
 
