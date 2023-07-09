@@ -543,7 +543,7 @@ DTR makes use of the identifier names within the CQL. The DTR process will exami
   * Resources are retrieved from the EHR FHIR server with RESTful queries and CQL is executed to extract relevant information.
   * Values extracted from the FHIR resources are assigned identifier strings and the DTR process will then use these statement identifiers to retrieve a value from the CQL execution. 
   
->The resulting value is used to satisfy documentation requirements. If the value is `null`, the user will be prompted to supply a value.
+The resulting value is used to satisfy documentation requirements. If the value is `null`, the user will be prompted to supply a value.
 
 #### CQL Constraints
 CQL for use in DTR **SHALL** have a `context` of `Patient`.  Within the Questionnaire, CQL **SHALL** follow SDC rules for determining context.  Specifically, CQL definitions and variables defined on ancestor elements or preceding expression extensions within the same Questionnaire item are 'in scope' for referencing in descendant/following expressions.
