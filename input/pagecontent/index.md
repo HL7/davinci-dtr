@@ -12,9 +12,13 @@
 .notebox{
     background-color: rgb(240, 248, 255, 0.6); 
     border-left: double silver;
+    border-top: solid 1px whitesmoke;
+    border-right: solid 1px whitesmoke;
+    border-bottom: solid 1px whitesmoke;
     border-radius: 5px; 
     padding-left: 15px; 
     padding-top: 10px;
+    padding-bottom: 10px;
  }
 
   table, th, td 
@@ -45,10 +49,9 @@ This Implementation Guide has expectations defined for four types of systems tha
 - [Intermediary systems with defined functionality has been defined](CapabilityStatement-dtr-intermediary-system.html) 
 
 
-
-<div markdown="1" class="notebox">
+<p markdown="1" class="notebox">
  <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;The term Electronic Health Record (EHR) is used in this IG and can be considered equivalent to Electronic Medical Record (EMR) or a Practice Management System (PMS).
-</div>
+</p>
 
 ### Boundaries and Relationships
 

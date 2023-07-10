@@ -12,9 +12,13 @@
 .notebox{
     background-color: rgb(240, 248, 255, 0.6); 
     border-left: double silver;
+    border-top: solid 1px whitesmoke;
+    border-right: solid 1px whitesmoke;
+    border-bottom: solid 1px whitesmoke;
     border-radius: 5px; 
     padding-left: 15px; 
     padding-top: 10px;
+    padding-bottom: 10px;
  }
 
   table, th, td 

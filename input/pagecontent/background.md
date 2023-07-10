@@ -12,9 +12,13 @@
 .notebox{
     background-color: rgb(240, 248, 255, 0.6); 
     border-left: double silver;
+    border-top: solid 1px whitesmoke;
+    border-right: solid 1px whitesmoke;
+    border-bottom: solid 1px whitesmoke;
     border-radius: 5px; 
     padding-left: 15px; 
     padding-top: 10px;
+    padding-bottom: 10px;
  }
 
   table, th, td 
@@ -49,11 +53,11 @@ The goal of the Burden Reduction IGs is to move from Telephone, FAX, Portal, and
 ### CRD and DTR Workflow
 The graphic shows a high-level overview of CRD and DTR (DTR is the SMART on FHIR app or equivalent native EHR app).
 
-<div markdown="1" class="notebox">
+<p markdown="1" class="notebox">
  <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;This workflow is just one example used to help illustrate the CRD and DTR APIs. It is expected that a supplemental guide will be produced moving forward to 
 help implementers with more concrete examples.
-</div>
-<br>
+</p>
+  
 As an example, a clinician might order, “Home Oxygen Therapy”:
 
 ![CRD DTR Flow](CRD_DTR_Flow.png){:style="float: none;"}
