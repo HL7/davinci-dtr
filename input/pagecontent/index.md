@@ -1,37 +1,4 @@
-<!-- ============ Formatting ===================================== -->
-<style>
-.pbox{
-    background-color: rgb(230, 230, 210, 0.4); 
-    border-style: solid; 
-    border-width: thin;  
-    padding: 10px; 
-    border-radius: 10px; 
-    border-color: gainsboro;
- }
-
-.notebox{
-    background-color: rgb(240, 248, 255, 0.6); 
-    border-left: double silver;
-    border-top: solid 1px whitesmoke;
-    border-right: solid 1px whitesmoke;
-    border-bottom: solid 1px whitesmoke;
-    border-radius: 5px; 
-    padding-left: 15px; 
-    padding-top: 10px;
-    padding-bottom: 10px;
- }
-
-  table, th, td 
-  {
-    border: 1px solid gainsboro; 
-  }
-  th {
-    background: ivory; 
-    padding-left: 3px;
-    padding-right: 3px;
-  }
-</style>
-<!-- ============================================================== -->
+<link rel="stylesheet" type="text/css" href="formatting.css" />
 
 ### Overview
 When creating orders, booking appointments, admitting patients, etc. there's often an expectation that certain types of documentation are captured that will subsequently be used for payer processing.  This might be information needed for determining prior authorization (or even whether prior authorization is necessary), for inclusion as part of claims submission, or even for retention as documentation of 'clinical necessity' in the event of a future audit.  Each payer has rules for what documentation is necessary and in what form it needs to exist.  Failure to capture appropriate documentation or to represent it in the correct manner can delay the processing of authorization requests and claims, result in denial of requests, or result in other penalties or hardships for both the provider and their patients.

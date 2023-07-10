@@ -1,37 +1,4 @@
-<!-- ============ Formatting ===================================== -->
-<style>
-.pbox{
-    background-color: rgb(230, 230, 210, 0.3); 
-    border-style: solid; 
-    border-width: thin;  
-    padding: 10px; 
-    border-radius: 10px; 
-    border-color: gainsboro;
- }
-
-.notebox{
-    background-color: rgb(240, 248, 255, 0.6); 
-    border-left: double silver;
-    border-top: solid 1px whitesmoke;
-    border-right: solid 1px whitesmoke;
-    border-bottom: solid 1px whitesmoke;
-    border-radius: 5px; 
-    padding-left: 15px; 
-    padding-top: 10px;
-    padding-bottom: 10px;
- }
-
-  table, th, td 
-  {
-    border: 1px solid gainsboro; 
-  }
-  th {
-    background: ivory; 
-    padding-left: 3px;
-    padding-right: 3px;
-  }
-</style>
-<!-- ============================================================== -->
+<link rel="stylesheet" type="text/css" href="formatting.css" />
 
 ### Da Vinci
 Da Vinci is an HL7-sponsored project that brings together the U.S. payer, providers, and technology suppliers (including EHR vendors)  to help payers and providers to positively impact clinical, quality, cost, and care management outcomes using FHIR-related technologies. The project organizes meetings (face-to-face and conference calls) as well as Connectathons to find ways to leverage FHIR technologies to support and integrate value-based care (VBC) data exchange across communities. Da Vinci identifies value-based care use cases of interest to its members and the community as a whole.
