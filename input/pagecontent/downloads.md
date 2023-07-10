@@ -44,3 +44,4 @@ This implementation guide is web-based and is intended to be browsed online.  Ho
     <li><a href="validator-hl7.fhir.us.davinci-dtr.pack">FHIR R4 DTR IG Validator Pack</a></li>
 </ul>
 </div>
+<br>
