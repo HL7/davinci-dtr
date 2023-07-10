@@ -10,7 +10,7 @@
  }
 
 .notebox{
-    background-color: rgb(240, 248, 255, 0.7); 
+    background-color: rgb(240, 248, 255, 0.6); 
     border-left: double silver;
     border-radius: 5px; 
     padding-left: 15px; 

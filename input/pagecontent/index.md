@@ -1,7 +1,7 @@
 <!-- ============ Formatting ===================================== -->
 <style>
 .pbox{
-    background-color: rgb(230, 230, 210, 0.3); 
+    background-color: rgb(230, 230, 210, 0.4); 
     border-style: solid; 
     border-width: thin;  
     padding: 10px; 
@@ -10,7 +10,7 @@
  }
 
 .notebox{
-    background-color: rgb(240, 248, 255, 0.7); 
+    background-color: rgb(240, 248, 255, 0.6); 
     border-left: double silver;
     border-radius: 5px; 
     padding-left: 15px; 
@@ -44,6 +44,12 @@ This Implementation Guide has expectations defined for four types of systems tha
 - [SMART apps with payer systems](CapabilityStatement-dtr-payer-app.html)
 - [Intermediary systems with defined functionality has been defined](CapabilityStatement-dtr-intermediary-system.html) 
 
+
+
+<div markdown="1" class="notebox">
+ <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;The term Electronic Health Record (EHR) is used in this IG and can be considered equivalent to Electronic Medical Record (EMR) or a Practice Management System (PMS).
+</div>
+
 ### Boundaries and Relationships
 
 This IG is a companion to the Da Vinci [Coverage Requirements Discovery (CRD)](https://build.fhir.org/ig/HL7/davinci-crd/) and [Prior Authorization Support (PAS)](http://build.fhir.org/ig/HL7/davinci-pas/) IGs.  The former allows a provider to be alerted that DTR is relevant for a particular order/appointment/etc. and optionally allows that provider to directly launch DTR (either as a SMART application or embedded EHR functionality), or hand off to back office staff for additional processing.  The latter allows the information returned by DTR to be packaged as part of a FHIR-based prior authorization request.  DTR functions in the 'middle' of these two IGs to capture the needed documentation.
@@ -53,21 +59,26 @@ While designed to work with these other IGs, DTR can be implemented stand-alone.
 The third Da Vinci IG that is relevant to DTR is the [Health Record Exchange (HRex)](http://hl7.org/fhir/us/davinci-hrex/STU1/) implementation guide, which defines a number of shared profiles and other shared content used across Da Vincie IGs - including this one.
 
 This guide also depends on a number of non-Da Vinci specifications:
-
-
-<p markdown="1" class="pbox">
-    DTR leverages profiles and capabilities defined in the <em>Structured Data Capture (SDC)</em> implementation guide to define the forms used to gather information, how they're displayed, flow control log, and mechanisms to automatically populate answers.  It also describes how to support <em>Adaptive Forms</em>.  The general capabilities of the SDC guide are further constrained in DTR to reflect the capabilities that payers can count on EHRs and/or DTR smart applications to have for managing forms - and thus the constraints that need to be adhered to when defining the questionnaires to be used.
-</p>
-<br>
-Within the SDC Questionnaires, the logic that handles population and occasionally the flow control of forms is written using [Clinical Quality Language (CQL)](https://cql.hl7.org/).  This is a language specifically designed to encode decision support logic.  It can operate against data structures independent of their syntax (e.g., XML or JSON).  It is heavily used throughout the FHIR decision support community.
-
-<p markdown="1" class="pbox">
-    In turn, DTR relies on the various EHR FHIR interfaces that comply with the US Core implementation guide.  These interfaces allow the CQL embedded in Questionnaires to retrieve data from the EHR to help populate answers and/or to guide what questions are necessary. 
+<div markdown="1" class="pbox">
+<ul>
+    <li>
+        DTR leverages profiles and capabilities defined in the <a href="http://hl7.org/fhir/uv/sdc/STU3/"><em>Structured Data Capture (SDC)</em></a> implementation guide to define the forms used to gather information, how they're displayed, flow control log, and mechanisms to automatically populate answers.  It also describes how to support Adaptive Forms.  The general capabilities of the SDC guide are further constrained in DTR to reflect the capabilities that payers can count on EHRs and/or DTR smart applications to have for managing forms - and thus the constraints that need to be adhered to when defining the questionnaires to be used.
+        <br><br>
+        Within the SDC Questionnaires, the logic that handles population and occasionally the flow control of forms is written using <a href="https://cql.hl7.org/"><em>Clinical Quality Language (CQL)</em></a>.  This is a language specifically designed to encode decision support logic.  It can operate against data structures independent of their syntax (e.g., XML or JSON).  It is heavily used throughout the FHIR decision support community.
+    </li>
     <br>
-    Because the DTR functionality is expected, at least in the early stages, to be performed by SMART on FHIR systems, this implementation guide also provides explicit guidance around the use of SMART launch to manage DTR functionality.
-</p>
-
-This IG leverages [Clinical Quality Language (CQL)](https://cql.hl7.org/) to allow payers to inspect a patient’s record for the necessary information related to the required documentation for a proposed item, certain medications, procedure, or other service. This IG details the use of a payer provided Questionnaire resource and results from CQL execution to generate a QuestionnaireResponse resource containing the appropriate and necessary information. This IG also provides methods to persist the QuestionnaireResponse in the provider’s Electronic Health Record (EHR) system and “optionally” send the QuestionnaireResponse to the payer. The payer can specify the endpoint to be a payer's, third party, Utilization Management Organization, or Business Association; the endpoint pertains to the location where Questionnaires, CQL, and ValueSets are made available.
+    <li>
+        In turn, DTR relies on the various EHR FHIR interfaces that comply with the <a href="http://hl7.org/fhir/us/core/STU3.1.1/index.html"><em>US Core implementation guide</em></a>.  These interfaces allow the CQL embedded in Questionnaires to retrieve data from the EHR to help populate answers and/or to guide what questions are necessary. 
+        <br>
+        Because the DTR functionality is expected, at least in the early stages, to be performed by <a href="http://hl7.org/fhir/smart-app-launch/index.html"><em>SMART on FHIR</em></a> systems, this implementation guide also provides explicit guidance around the use of SMART launch to manage DTR functionality.
+    </li>
+    <br>
+    <li>
+        This IG leverages <a href="https://cql.hl7.org/"><em>Clinical Quality Language (CQL)</em></a> to allow payers to inspect a patient’s record for the necessary information related to the required documentation for a proposed item, certain medications, procedure, or other service. This IG details the use of a payer provided Questionnaire resource and results from CQL execution to generate a QuestionnaireResponse resource containing the appropriate and necessary information. This IG also provides methods to persist the QuestionnaireResponse in the provider’s Electronic Health Record (EHR) system and “optionally” send the QuestionnaireResponse to the payer. The payer can specify the endpoint to be a payer's, third party, Utilization Management Organization, or Business Association; the endpoint pertains to the location where Questionnaires, CQL, and ValueSets are made available.
+    </li>
+</ul>
+</div>
+<br>
 
 ### Content and Organization
 The IG is organized into the following sections:
@@ -81,7 +92,7 @@ The IG is organized into the following sections:
 ### Dependencies
 
 {% include dependency-table-short.xhtml %}
-  
+
 This implementation guide defines additional constraints and usage expectations above and beyond the information found in these base specifications.
 
 ### Intellectual Property Considerations

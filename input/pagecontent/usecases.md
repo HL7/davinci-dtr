@@ -10,7 +10,7 @@
  }
 
 .notebox{
-    background-color: rgb(240, 248, 255, 0.7); 
+    background-color: rgb(240, 248, 255, 0.6); 
     border-left: double silver;
     border-radius: 5px; 
     padding-left: 15px; 
@@ -50,10 +50,6 @@ The goal of DTR is to collect clinical documentation and/or to encourage the com
 It is possible to have a process where the focus is on the interaction with the EHR and an external application. Examples of external systems are administrative, payment, practice management, scheduling, and other applications.
 
 If information required to complete the Questionnaire is not available to the SMART on FHIR application, then the application will need to prompt the provider to enter the missing information. Ultimately, the solution is to provide greater integration between the EHR and other supporting applications(e.g., Quality measures may also require this type of integration)
-
-<div markdown="1" class="notebox">
- <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;The term Electronic Health Record (EHR) is used in this IG and can be considered equivalent to Electronic Medical Record (EMR) or a Practice Management System (PMS).
-</div>
 
 #### EHR and DTR Initiation
 The current [CRD](https://build.fhir.org/ig/HL7/davinci-crd/), DTR, [PAS](http://build.fhir.org/ig/HL7/davinci-pas/), and [CDex](http://build.fhir.org/ig/HL7/davinci-ecdx/) supporting the ePA workflow only focuses on the interactions between the provider HIT in total and the payer HIT in total, not the necessary interactions among the respective HIT solutions that make up the provider and payer HIT environment that need to participate in the ePA workflow.
