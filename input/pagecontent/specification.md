@@ -410,11 +410,11 @@ There are some expectations around how DTR will pass this information:
 The PAS Bundle linkId **SHOULD** be used for attached bundles containing resources needed for PAS. All of the referenced resources needed for PAS **SHALL** be stored as contained resources within the QuestionnaireResponse for easier reference. These resources should include the resources collected by DTR to complete the QuestionnaireResponse, as well as the Claim sent to PAS. If the [ClaimResponse](http://hl7.org/fhir/us/davinci-hrex/STU1/StructureDefinition-hrex-claimresponse.html) has already been received from a PAS request, this **SHALL** be stored in the QuestionnaireResponse with a reference to it in the items list as well. (All references to a ClaimResponse **SHALL** refer to the [HRex Prior Authorization profile of ClaimResponse](http://hl7.org/fhir/us/davinci-hrex/STU1/StructureDefinition-hrex-claimresponse.html))
  
 #### Post-Acute Orders (PAO) 
-The PAO Bundle linkId should be used for attached bundles containing resources needed for Post-Acute Orders. All the referenced resources needed for PAO **SHALL** be stored as contained resources within the QuestionnaireResponse for easier reference. These resources should include the resources collected by DTR to complete the QuestionnaireResponse, as well as the Order sent to PAO. If a response has already been received from a PAO request, this **SHALL** be stored in the QuestionnaireResponse with a reference to it in the items list as well. (See the [Post-Acute Orders Implementation Guide](http://build.fhir.org/ig/HL7/dme-orders/))
+The PAO Bundle linkId should be used for attached bundles containing resources needed for Post-Acute Orders. All the referenced resources needed for PAO **SHALL** be stored as contained resources within the QuestionnaireResponse for easier reference. These resources should include the resources collected by DTR to complete the QuestionnaireResponse, as well as the Order sent to PAO. If a response has already been received from a PAO request, this **SHALL** be stored in the QuestionnaireResponse with a reference to it in the items list as well. (See the [Post-Acute Orders Implementation Guide](http://build.fhir.org/ig/HL7/dme-orders/) for more details)
 
 #### Additional Workflow
 
-In a QuestionnaireResponse, this will be a 'repeating' question with one or more answers with a linkId of "DTR_TASK".  The question type will be 'Reference' and will refer to contained Task instances that describe workflow actions that need to occur, such as the creation of additional companion orders, pre-execution testing, follow-up orders, etc. These are created when the completion of the questionnaire has made evident that certain workflow steps necessary to satisfy payer requirements were confirmed missing by the user.  The EHR should add 'to do' items to the user's task list that correspond to the actions described within the Task instances.
+In a QuestionnaireResponse, this will be a 'repeating' question with one or more answers with a linkId of "DTR_TASK".  The question type will be 'Reference' and will refer to contained Task instances that describe workflow actions that need to occur, such as the creation of additional companion orders, pre-execution testing, follow-up orders, etc. These are created when the completion of the questionnaire has made evident that certain workflow steps necessary to satisfy payer requirements were confirmed missing by the user.  The EHR **SHOULD** add 'to do' items to the user's task list that correspond to the actions described within the Task instances.
 
 <p markdown="1" class="notebox">
  <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;It may be appropriate to re-execute the DTR process once the specified tasks have been completed, as the DTR results may change.
@@ -426,15 +426,13 @@ In a QuestionnaireResponse, this will be a 'repeating' question with one or more
 ### Provenance
 Provenance **SHOULD** be created and persisted with information created during the execution of the CQL and Questionnaire. Also, when the QuestionnaireResponse and its associated resources are exchanged with the source of the rules, appropriate Provenance resource(s) **SHOULD** be created and exchanged.
 
-All DTR applications **SHALL** support rendering according to the extensions supported in the DTR Questionnaire profile as well as executing all CQL found within Questionnaire extensions. Payers **SHALL** craft their Questionnaires such that they include CQL that attempts to pre-populate QuestionnaireResponse answers where such population can be accomplished using discrete data returned by EHR FHIR APIs that are required as part of current regulation (including simple calculations there-on - e.g., age from birthdate). Translation between standard codes **SHOULD** be supported where possible.   
-
-For example, CQL and FHIR Questionnaires **SHALL** be required even when DTR is implemented within a DTR Native App as opposed to a DTR SMART App.
+All DTR applications **SHALL** support rendering according to the extensions supported in the DTR Questionnaire profile as well as executing all CQL found within Questionnaire extensions. Payers **SHALL** craft their Questionnaires such that they include CQL that attempts to pre-populate QuestionnaireResponse answers where such population can be accomplished using discrete data returned by EHR FHIR APIs that are required as part of current regulation (including simple calculations there-on - e.g., age from birthdate). Translation between standard codes **SHOULD** be supported where possible.  CQL and FHIR Questionnaires **SHALL** be required even when DTR is implemented within a DTR Native App as opposed to a DTR SMART App.
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
 ---------------------
 ### Value Set and Code System Guidance
-The table below is guidance that **SHOULD** be used when using values sets and code systems in DTR. This can also be considered a best practice.
+The table below is guidance that **SHOULD** be used when using values sets and code systems in DTR, and can also be considered a best practice.
 
 <table border="1">
   <tr>
@@ -473,24 +471,24 @@ According to the [ValueSet Identification](https://www.hl7.org/fhir/valueset.htm
 ### CQL 
 Clinical Quality Language (CQL) is used to query the Electronic Health Record (EHR) FHIR server to pre-populate the DTR Questionnaire.
   
-As part of the SDC Questionnaires that define the information payers require to be captured, CQL is used to support automatic population of answers from existing EHR data and, occasionally, to enforce complex logic around what questions should be displayed.  For example, whether answers are required, what answers should be enabled, etc.  This CQL may query for patient observations, conditions, or other discrete information within the EHR to use as part of the population process or logic.  The SDC specification provides guidance about how CQL expressions can be used for different purposes, as well as how information gathered by CQL in one portion of the Questionnaire can be made available in other portions of the Questionnaire.  
+As part of the SDC Questionnaires that define the information payers require to be captured, CQL is used to support automatic population of answers from existing EHR data and, occasionally, to enforce complex logic around what questions should be displayed.  For example, whether answers are required, what answers should be enabled, etc.  This CQL may query for patient observations, conditions, or other discrete information within the EHR to use as part of the population process or logic.  The SDC specification provides guidance about how [CQL expressions](http://build.fhir.org/ig/HL7/sdc/expressions.html#using-expressions) can be used for different purposes, as well as how information gathered by CQL in one portion of the Questionnaire can be made available in other portions of the Questionnaire.  
 
 One of the core purposes of this specification is to automate the retrieval of documentation required by the payer in a manner that reduces provider burden. Authors of DTR questionnaires **SHOULD** include CQL to auto-populate the questionnaire as much as possible. Due to differences in workflows or information systems, clinical information may be represented in different FHIR resources or with different codes or code systems. Therefore, payer CQL may have to examine different resources or use value sets to find patient information. It is preferable to have more extensive CQL or value sets than require a user to input values that the rules were unable to find.
 
-In general CQL **SHALL** be used when pre-populating anything exposed in the FHIR based patient data access API (The 21st Century Cures Act API).
+In general CQL **SHALL** be used when pre-populating anything exposed in the FHIR based patient data access API ([The 21st Century Cures Act API](https://www.congress.gov/bill/114th-congress/house-bill/34/text?q=%7B%22search%22%3A%5B%22HR+34%22%5D%7D&r=1)).
 
 #### Guidance on Structure of CQL Logic
 Like many other programming languages, CQL allows for statements to be nested within conditional logic. This creates instances where some statements may not be executed due to a prior condition being met. This behavior should be used intentionally by payers creating CQL.  This implementation guide does not support authorization logic in the CQL.
 
-Data retrieval is highly dependent on the *enableWhen* attribute/element:
+Data retrieval is highly dependent on the `enableWhen`` attribute/element:
 
-1. Questionnaires **SHOULD** be designed with appropriate use of *enableWhen* such that questions are only displayed when needed.
+1. Questionnaires **SHOULD** be designed with appropriate use of `enableWhen`*` such that questions are only displayed when needed.
 
 2. CQL logic should be partitioned to be specific to groups/questions/etc. when doing so will allow it to be more efficient - though consideration should also be given to whether performing significant data gathering at the outset (even if the data is unneeded) will produce a more positive experience than intermittent data retrieval 'on demand', when such retrieval may introduce user-interface delays.
 
 This pattern of logic structure is referred to by several names, including *eager quitting*, *early return* or, *short circuiting*. The goal is to avoid the execution of statements if they will not be relevant given other information available to the logic. This is done to streamline workflow and allow the user to focus on relevant input fields.
 
-As an example, a payer may have a set of rules or specific information that must be gathered on a patient only if they have diabetes. This information may be gathered through a series of CQL statements. When constructing this CQL for DTR, these statements should be nested in conditionals to first check if the patient has diabetes before checking for information dependent on that condition.  
+As an example, a payer may have a set of rules or specific information that must be gathered on a patient only if they have diabetes. This information may be gathered through a series of CQL statements. When constructing this CQL for DTR, these statements **SHOULD** be nested in conditionals to first check if the patient has diabetes before checking for information dependent on that condition.  
   
 <p markdown="1" class="notebox">
  <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;Implementers could use <a href="specification.html#sdc-adaptive-forms">Adaptive Forms</a> to minimize the need for any CQL that provides conditional informational retrieval. 
@@ -501,16 +499,14 @@ CQL allows for the gathering of information through the use of `define` statemen
 
 DTR makes use of the identifier names within the CQL. The DTR process will examine the payer supplied Questionnaire resource. 
 
-* This resource **SHALL** conform to the [DTR SDC Questionnaire](StructureDefinition-dtr-sdc-questionnaire.html):  
+This resource **SHALL** conform to the [DTR SDC Questionnaire](StructureDefinition-dtr-sdc-questionnaire.html):  
   * Resources are retrieved from the EHR FHIR server with RESTful queries and CQL is executed to extract relevant information.
   * Values extracted from the FHIR resources are assigned identifier strings and the DTR process will then use these statement identifiers to retrieve a value from the CQL execution. 
   
 The resulting value is used to satisfy documentation requirements. If the value is `null`, the user will be prompted to supply a value.
 
 #### CQL Constraints
-CQL for use in DTR **SHALL** have a `context` of `Patient`.  Within the Questionnaire, CQL **SHALL** follow SDC rules for determining context.  Specifically, CQL definitions and variables defined on ancestor elements or preceding expression extensions within the same Questionnaire item are 'in scope' for referencing in descendant/following expressions.
-
-CQL must be version [CQL STU2](https://cql.hl7.org/STU2/index.html) or later.
+CQL for use in DTR **SHALL** have a `context` of "Patient".  Within the Questionnaire, CQL **SHALL** follow SDC rules for determining context.  Specifically, CQL definitions and variables defined on ancestor elements or preceding expression extensions within the same Questionnaire item are in scope for referencing in descendant/following expressions.  The CQL **SHALL** be version [CQL STU2](https://cql.hl7.org/STU2/index.html) or later.
 
 #### Execution of CQL
 ##### Retrieval of patient FHIR resources to supply to CQL execution engine
