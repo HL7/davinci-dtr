@@ -198,6 +198,19 @@ Usage: #definition
 * rest.mode = #server
 * rest.documentation = "A DTR Payer App provides an SMART on FHIR application"
 * rest.security.description = "Implementations **SHALL** meet the general security requirements documented in the [[http://hl7.org/fhir/us/davinci-hrex/STU1/security.html|HRex implementation guide]]."
+* rest.operation[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.operation[=].extension.valueCode = #SHALL
+* rest.operation[=].name = "QuestionnairePackage"
+* rest.operation[=].definition = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package"
+* rest.operation[=].documentation = "This operation returns 1 or more 'collection' Bundles each consisting of a single Questionnaire resource as well as any dependency Library and ValueSet instances needed to allow a renderer to fully render and otherwise process the Questionnaire.  
+The operation SHALL take in either:
+(1) one or more canonicals specifying the URL and, (optionally) the version of the Questionnaire(s) to retrieve; or (2) a CRD Context ID - or both."
+* rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.operation[=].extension.valueCode = #SHOULD
+* rest.operation[=].name = "log-questionnaire-errors"
+* rest.operation[=].definition = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/log-questionnaire-errors"
+* rest.operation[=].documentation = "This operation **SHOULD** be supported by payers and DTR applications and allows submission of issues encountered when working with these DTR-provided artifacts. The operation will pass the Questionnaire and an OperationOutcome detailing the issue(s) including where the error occurred. 
+The input OperationOutcome resource **SHOULD** include information on the DTR application identity and version, date-time with time-zone offset, as well as the provider endpoint during which the error occurred, and it **SHALL NOT** contain information about the response or information retrieved from FHIR APIs that could potentially include PHI."
 
 * rest.resource[+].type = #Coverage
 * rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-coverage-r4"
@@ -289,6 +302,19 @@ Usage: #definition
 * rest.mode = #server
 * rest.documentation = "A DTR intermediary system provides an SMART on FHIR application"
 * rest.security.description = "Implementations **SHALL** meet the general security requirements documented in the [[http://hl7.org/fhir/us/davinci-hrex/STU1/security.html|HRex implementation guide]]."
+* rest.operation[0].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.operation[=].extension.valueCode = #SHALL
+* rest.operation[=].name = "QuestionnairePackage"
+* rest.operation[=].definition = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package"
+* rest.operation[=].documentation = "This operation returns 1 or more 'collection' Bundles each consisting of a single Questionnaire resource as well as any dependency Library and ValueSet instances needed to allow a renderer to fully render and otherwise process the Questionnaire.  
+The operation SHALL take in either:
+(1) one or more canonicals specifying the URL and, (optionally) the version of the Questionnaire(s) to retrieve; or (2) a CRD Context ID - or both."
+* rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.operation[=].extension.valueCode = #SHOULD
+* rest.operation[=].name = "log-questionnaire-errors"
+* rest.operation[=].definition = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/log-questionnaire-errors"
+* rest.operation[=].documentation = "This operation **SHOULD** be supported by payers and DTR applications and allows submission of issues encountered when working with these DTR-provided artifacts. The operation will pass the Questionnaire and an OperationOutcome detailing the issue(s) including where the error occurred. 
+The input OperationOutcome resource **SHOULD** include information on the DTR application identity and version, date-time with time-zone offset, as well as the provider endpoint during which the error occurred, and it **SHALL NOT** contain information about the response or information retrieved from FHIR APIs that could potentially include PHI."
 
 * rest.resource[+].type = #Coverage
 * rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-coverage-r4"
