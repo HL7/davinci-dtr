@@ -249,9 +249,8 @@ If an order was selected and there was no work in progress:
 * If there are multiple coverages whose payers are supported by the DTR app, the app will allow the user to select the coverage(s) to use DTR for.  (Each coverage selected would result in a separate QuestionnaireResponse.)
 * The DTR app will hit an operation endpoint on the payer (likely similar to that used internally by the CRD service) passing the order and coverage to determine the DTR ruleset.  
 
-<p markdown="1" class="notebox">
- <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;This operation will not have a token allowing the payer to access any information other than what's in the order.  This means that the ruleset will often be broader (i.e., more questions and more questionnaire logic) than when the ruleset is determined within CRD.
-</p>
+This operation will not have a token allowing the payer to access any information other than what's in the order.  This means that the ruleset will often be broader (i.e., more questions and more questionnaire logic) than when the ruleset is determined within CRD.
+
 
 #### Starting a New Session
 To start a new session outside of the context of the CRD workflow, a user or EHR should initiate the launch and pass DTR a fhirContext with the “Order” and “Coverage” fields filled. The DTR app **SHALL** use this information to invoke the `$questionnaire-package` operation on the payer server, which should return a Questionnaire and associated CQL resources. If the base endpoint of the payer server is contained in the `Coverage` resource extension, then the app can be automatically launched. Otherwise, a user will have to manually select which payer to interact with at that point.
@@ -482,7 +481,7 @@ Like many other programming languages, CQL allows for statements to be nested wi
 
 Data retrieval is highly dependent on the `enableWhen`` attribute/element:
 
-1. Questionnaires **SHOULD** be designed with appropriate use of `enableWhen`*` such that questions are only displayed when needed.
+1. Questionnaires **SHOULD** be designed with appropriate use of `enableWhen` such that questions are only displayed when needed.
 
 2. CQL logic should be partitioned to be specific to groups/questions/etc. when doing so will allow it to be more efficient - though consideration should also be given to whether performing significant data gathering at the outset (even if the data is unneeded) will produce a more positive experience than intermittent data retrieval 'on demand', when such retrieval may introduce user-interface delays.
 
@@ -546,7 +545,7 @@ It is a CQL failure if the CQL cannot be executed by the app's CQL engine in the
 If any errors are encountered during execution, the app’s engine **SHALL NOT** attempt any further execution, and the user **SHALL** be notified with an appropriate on-screen error message. The app **SHALL** log failures and ensure the maintainer of the CQL/Questionnaire package is notified. The user should have the option to complete the Questionnaire if possible, despite the error.
 
 <p markdown="1" class="notebox">
-<b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;A query for data that returns no results <b>SHALL</b> never be considered a failure.
+<b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;A query for data that returns no results <b>SHALL NOT</b> be considered a failure.
 </p>
 
 ##### Logging Errors and Failures
@@ -562,19 +561,19 @@ The flow of execution of the CQL will be determined by the associated Questionna
 ### Requesting Additional Information from the User
 While the goal of DTR is to automatically gather all of the necessary information to satisfy documentation requirements without interrupting the user, this is not possible in all cases. 
 
-It is likely that at least some answers will not be able to be gleaned from the EHR, due to missing data, data that is not computable, or data that is not represented in a standardized way.  Also, even where answers are determined automatically, users may wish to review them for accuracy and completeness.  Therefore, the system acting as a form filler is responsible for displaying all 'enabled' questions, groups and display items to the end user - for completion and/or review
+It is likely that at least some answers will not be able to be gleaned from the EHR, due to missing data, data that is not computable, or data that is not represented in a standardized way.  Also, even where answers are determined automatically, users may wish to review them for accuracy and completeness.  Therefore, the system acting as a form filler is responsible for displaying all 'enabled' questions, groups and display items to the end user for completion and/or review
 
 When the execution of Clinical Quality Language (CQL) is unable to obtain the required data, it is necessary to prompt the user for more input.
 
 #### Questionnaire Rendering
-"DTR leverages a subset of extensions and capabilities defined by the SDC implementation guide to support control over rendering, flow logic, and population and calculation of answers.  The [DTR SDC Questionnaire profile](StructureDefinition-dtr-sdc-questionnaire.html) and [DTR Adaptive Questionnaire profile](StructureDefinition-dtr-sdc-questionnaire-adapt.html) identify the set of core elements and extensions that must be supported by 'full' EHRs and DTR solutions in terms of rendering and processing Questionnaires and their associated responses - and the elements that payers can count on being supported in the Questionnaires they expose.
+DTR leverages a subset of extensions and capabilities defined by the SDC implementation guide to support control over rendering, flow logic, and population and calculation of answers.  The [DTR SDC Questionnaire profile](StructureDefinition-dtr-sdc-questionnaire.html) and [DTR Adaptive Questionnaire profile](StructureDefinition-dtr-sdc-questionnaire-adapt.html) identify the set of core elements and extensions that must be supported by 'full' EHRs and DTR solutions in terms of rendering and processing Questionnaires and their associated responses - and the elements that payers can count on being supported in the Questionnaires they expose.
 
-Two different profiles are used to support two different approaches to managing questionnaire logic and two different levels of engagement between the form filling interface and the payer.
+Two different profiles are used to support two different approaches to managing questionnaire logic and two different levels of engagement between the form filling interface and the payer:
 
-With the [DTR SDC Questionnaire](StructureDefinition-dtr-sdc-questionnaire.html), all logic around what questions should be displayed, what answers are available, etc. is embedded in the Questionnaire (or in libraries linked to from the Questionnaire).  The only interaction with the payer is to retrieve the Questionnaire appropriate for a particular order or set of orders for a given set of patient coverage.  The only possible result from the DTR process is a completed QuestionnaireResponse.
+* [DTR SDC Questionnaire](StructureDefinition-dtr-sdc-questionnaire.html) - all logic around what questions should be displayed, what answers are available, etc. is embedded in the Questionnaire (or in libraries linked to from the Questionnaire).  The only interaction with the payer is to retrieve the Questionnaire appropriate for a particular order or set of orders for a given set of patient coverage.  The only possible result from the DTR process is a completed QuestionnaireResponse.
 
-With the [DTR Adaptive Questionnaire](StructureDefinition-dtr-sdc-questionnaire-adapt.html), the logic around what questions should be displayed and what answers are available is managed within software maintained by the payer.  The only CQL needed in the Questionnaire is that needed to support populating question answers.  The form filling process interacts with the payer continuously during the process of filling out the QuestionnaireResponse.  This interactivity means that it is possible for a payer to provide a Service Coverage Determination along with the QuestionnaireResponse.
-
+* [DTR Adaptive Questionnaire](StructureDefinition-dtr-sdc-questionnaire-adapt.html) - the logic around what questions should be displayed and what answers are available is managed within software maintained by the payer.  The only CQL needed in the Questionnaire is that needed to support populating question answers.  The form filling process interacts with the payer continuously during the process of filling out the QuestionnaireResponse.  This interactivity means that it is possible for a payer to provide a Service Coverage Determination along with the QuestionnaireResponse.  
+  
 Implementers should review the [advanced rendering]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/rendering.html), [advanced behavior]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/behavior.html), [population]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/populate.html) and [adaptive forms]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/adaptive.html) portions of the SDC implementation guide, focusing on the elements and extensions included in the DTR profiles.  Implementers should also be familiar with the documentation about the [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html) and [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) resources from the core FHIR specification.  Conformance with DTR requires conformance with the relevant portions of the SDC implementation guide".
 
 #### Structured Data Capture
