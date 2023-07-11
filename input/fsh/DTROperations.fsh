@@ -134,14 +134,14 @@ Description:    "The Parameters profile used by the 'questionnaire-package' oper
 
 /**************************************************************************************************************/
 
-Instance: DTRLogQuestionnaireCQLErrors
+Instance: DTRLogQuestionnaireErrors
 InstanceOf: OperationDefinition
 Description: "The operation will pass the Questionnaire and an OperationOutcome detailing the issue(s) including where the error occurred back to the originating Payer."
 Usage: #definition
 
-* id = "log-questionnaire-cql-errors"
-* url = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/log-questionnaire-cql-errors"
-* name = "LogQuestionnaireCQLErrors"
+* id = "log-questionnaire-errors"
+* url = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/log-questionnaire-errors"
+* name = "LogQuestionnaireErrors"
 * title = "Log errors resulting from a specific Questionnaire and/or CQL to the originating Payer"
 * status = #draft
 * kind = #operation
@@ -149,10 +149,8 @@ Usage: #definition
 
 The input OperationOutcome resource **SHOULD** include information on the DTR application identity and version, date-time with time-zone offset, as well as the provider endpoint during which the error occurred, and it **SHALL NOT** contain information about the response or information retrieved from FHIR APIs that could potentially include PHI."
 
-* code = #log-questionnaire-cql-errors
-* base = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/log-questionnaire-cql-errors"
-
-// * inputProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire"
+* code = #log-questionnaire-errors
+* base = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/log-questionnaire-errors"
 
 * resource = #Questionnaire
 * system = false
