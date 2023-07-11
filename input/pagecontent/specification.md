@@ -292,9 +292,9 @@ The questionnaire **SHALL** be able to suspend completion until all tasks are co
 
 ---------------------
 ### Determination of Payers Supported by a DTR App
-It is possible that the apps used to provide DTR functionality will not support all payers the EHR might have "DTR requests" for - either from CRD or CDex.  It is important for the EHR to know what payers their app supports so that they only allow their users to launch the DTR app in the context of payers the app will be able to support.  (Launching an app only to be told "this payer isn't supported" is an unpleasant user experience.)
+It is possible that the apps used to provide DTR functionality will not support all payers the EHR might have "DTR requests" for, either from CRD or CDex.  It is important for the EHR to know what payers their app supports so that they only allow their users to launch the DTR app in the context of payers the app will be able to support.  (Launching an app only to be told "this payer isn't supported" is an unpleasant user experience.)
 
-Where an EHR uses a third-party app rather than implementing DTR app functionality internally, the developer of the app **SHALL** define an endpoint maintaining a list of payers currently supported by that app and EHRs using external DTR apps **SHALL** support accessing the endpoint.  The EHR will be configured with knowledge of which endpoint to hit for a given app as part of the process of configuring support for that app within the EHR.  Different endpoints will be defined for different versions of the application in situations where support for payers varies by application version.
+Where an EHR uses a third-party app rather than implementing DTR app functionality internally, the developer of the app **SHALL** define an endpoint maintaining a list of payers currently supported by that app and EHRs using external DTR apps **SHALL** support accessing the endpoint.  The EHR will be configured with knowledge of which endpoint to hit for a given app as part of the process of configuring support for that app within the EHR.  Different endpoints **SHALL** be defined for different versions of the application in situations where support for payers varies by application version.
 
 Accessing the endpoint will be by a simple `GET` with an Accept header of `application/json` and **SHALL** be performed over [TLS](http://hl7.org/fhir/R4/security.html#http).  The returned JSON object will contain a "payers" property referring to an array of objects.  Each object will have an `id` and `name` property, both with string values.  It is possible that additional properties may be supported in the future.
 
@@ -311,11 +311,11 @@ EHRs will typically retrieve the list of supported payers for the app once per d
 ### Persisting Application State
 Users of the DTR process are likely to be performing many tasks to support patient care or administration of the provider organization. As such, it should be expected that users may need to halt interaction with the DTR process and resume it at a later time.
 
-When the provider system can support storage of work in progress, it **SHALL** be stored exclusively on the provider's system.  If the provider cannot store work in progress, then work in progress is stored in encrypted form on payer's system until a time it is considered complete and then at that point it will be stored unencrypted. 
+When the provider system can support storage of work in progress, it **SHALL** be stored exclusively on the provider's system.  If the provider cannot store work in progress, then work in progress **SHALL** be stored on the payer's system, in encrypted form, until a time it is considered complete and then at that point it will be stored unencrypted. 
 
 #### How DTR Saves Context of DTR for a Relaunch
   
-At any point prior to completion the app **SHOULD** be able to save the session, and then relaunch it later. If an EHR system performs DTR functionality internally, it may save session information however it likes. Guidance below does not apply in this scenario. 
+At any point prior to completion the app **SHOULD** be able to save the session, and then relaunch it later. If an EHR system performs DTR functionality internally, it may save session information however it likes. The guidance below does NOT apply in this scenario. 
 
 Providers may go days to weeks before completing questionnaires and may go many months to a year before completing paperwork and Prior Authorization to claim submission. Therefore, the time span between the creation of a Questionnaire to the completion of QuestionnaireResponse should be accounted for accordingly.
 
