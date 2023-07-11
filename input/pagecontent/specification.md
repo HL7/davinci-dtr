@@ -549,10 +549,9 @@ If any errors are encountered during execution, the app’s engine **SHALL NOT**
 </p>
 
 ##### Logging Errors and Failures
-In an effort to notify the appropriate party or maintainer that the CQL/Questionnaire produces errors, this IG includes the [Log Questionnaire CQL Errors](OperationDefinition-log-questionnaire-cql-errors.html) operation that allows submission of issues encountered when working with these DTR-provided artifacts. This operation **SHOULD** be supported by payers and DTR applications. This operation will pass in the Questionnaire and an OperationOutcome detailing the issue(s) including where the error occurred. The input OperationOutcome **SHOULD** include information on the DTR application identity and version, date-time with time-zone offset, as well as the provider endpoint during which the error occurred, and it **SHALL NOT** contain information about the response or information retrieved from FHIR APIs that could potentially include PHI.
+In an effort to notify the appropriate party or maintainer that the Questionnaire/CQL produces errors, this IG includes the [Log Questionnaire Errors](OperationDefinition-log-questionnaire-errors.html) operation that allows submission of issues encountered when working with these DTR-provided artifacts. This operation **SHOULD** be supported by payers and DTR applications. This operation will pass in the Questionnaire and an OperationOutcome detailing the issue(s) including where the error occurred. The input OperationOutcome **SHOULD** include information on the DTR application identity and version, date-time with time-zone offset, as well as the provider endpoint during which the error occurred, and it **SHALL NOT** contain information about the response or information retrieved from FHIR APIs that could potentially include PHI.
 
 ##### Execution Results
-
 The flow of execution of the CQL will be determined by the associated Questionnaire. The app will proceed through the Questionnaire, and for any question that is associated with the result of a CQL statement, that specific CQL statement will be executed. The DTR application will use result caching so that results that are already available will be reused without requesting them again.
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
@@ -748,7 +747,7 @@ For example, see the below snippet from a FHIR Library:
 [![FHIR Library snippet](FHIR_Library_snippet.png){:style="float: none;width:837px;height:235px"}](FHIR_Library_snippet.png "View Image")
   
 <p markdown="1" class="notebox">
-<b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;Although the use of `url` in the content element is valid, using the `data` element should be more interoperable.
+<b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;Although the use of `url` in the content element is valid, using the `data` element will likely be more interoperable.
 </p>
 
 A reference implementation has been created. The code is available at [DTR GitHub](https://github.com/HL7-DaVinci/dtr). The executable is at [DTR Logica Health](https://davinci-dtr.logicahealth.org/smart/launch.html).

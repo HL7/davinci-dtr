@@ -838,7 +838,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36443">FHIR-36443</a>:
   How does an app notify the payer system
-  <a href="OperationDefinition-log-questionnaire-cql-errors.html">(DTRLogQuestionnaireCQLErrors)</a>
+  <a href="OperationDefinition-log-questionnaire-errors.html">(DTRLogQuestionnaireCQLErrors)</a>
   </li>
 
   <li>
