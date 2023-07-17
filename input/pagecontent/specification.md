@@ -468,9 +468,8 @@ According to the [ValueSet Identification](https://www.hl7.org/fhir/valueset.htm
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
 ---------------------
-### CQL 
-Clinical Quality Language (CQL) is used to query the Electronic Health Record (EHR) FHIR server to pre-populate the DTR Questionnaire.
-  
+
+### Use of CQL 
 As part of the SDC Questionnaires that define the information payers require to be captured, CQL is used to support automatic population of answers from existing EHR data and, occasionally, to enforce complex logic around what questions should be displayed.  For example, whether answers are required, what answers should be enabled, etc.  This CQL may query for patient observations, conditions, or other discrete information within the EHR to use as part of the population process or logic.  The SDC specification provides guidance about how [CQL expressions](http://build.fhir.org/ig/HL7/sdc/expressions.html#using-expressions) can be used for different purposes, as well as how information gathered by CQL in one portion of the Questionnaire can be made available in other portions of the Questionnaire.  
 
 One of the core purposes of this specification is to automate the retrieval of documentation required by the payer in a manner that reduces provider burden. Authors of DTR questionnaires **SHOULD** include CQL to auto-populate the questionnaire as much as possible. Due to differences in workflows or information systems, clinical information may be represented in different FHIR resources or with different codes or code systems. Therefore, payer CQL may have to examine different resources or use value sets to find patient information. It is preferable to have more extensive CQL or value sets than require a user to input values that the rules were unable to find.

@@ -44,8 +44,13 @@ As an example, a clinician might order, “Home Oxygen Therapy”:
   * In the event information is known to be available but does not currently exist in the EHR, the clinician could attest the data in question exists.
   * The clinician populates the fields that were not populated with data from the EHR. When the documentation is complete (or partially complete) the clinician would save the QuestionnaireResponse. DTR writes the FHIR based QuestionnaireResponse to the EHR. At this point the QuestionnaireResponse could also be sent to any ancillary service.
   * In the event the QuestionnaireResponse was incomplete, a Task could be created to allow for the QuestionnaireResponse to be completed at a later time. The QuestionnaireResponse itself could also be used to relaunch an incomplete session.
-  
-### FHIR
+
+### Underlying Technologies
+This guide is based on the HL7 FHIR standard, the US Core Implementation Guide, as well as the SMART on FHIR and CQL specifications, which build additional capabilities on top of FHIR. This architecture is intended to maximize the number of provider systems that conform to this guide, as well as to allow for easy growth and extensibility of system capabilities in the future.
+
+Implementers of this specification therefore need to understand some basic information about these specifications.
+
+#### FHIR
 This IG uses terminology, notations, and design principles that are specific to FHIR. It's important to be familiar with some of the basic principles of FHIR as well
 as general guidance on how to read FHIR specifications. Readers who are unfamiliar with FHIR are encouraged to read the following prior to reading the rest of this IG.
 
@@ -62,8 +67,6 @@ This IG supports the [R4](http://hl7.org/fhir/R4/index.html) version of the FHIR
 
 This IG leverages and builds on the [US Core](http://hl7.org/fhir/us/core/STU3.1.1/) IG defined by HL7 for sharing human EHR data in the US.  Implementers need to familiarize themselves with the profiles in [US Core](http://hl7.org/fhir/us/core/STU3.1.1/). 
 
-Implementers will need the knowledge of [US Core](http://hl7.org/fhir/us/core/STU3.1.1/) to access information for pre population via CQL calls to *21st Century* compliant FHIR APIs. The light client **SHOULD** import the US Core Server capability statement.  
-
 > | **FHIR Version:** | [FHIR R4 US Core (Release 3.1.1)](http://hl7.org/fhir/us/core/STU3.1.1/)   |
 > |                   |                                                                            |
 > | **Resources:**    | [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html)                 |
@@ -71,16 +74,23 @@ Implementers will need the knowledge of [US Core](http://hl7.org/fhir/us/core/ST
 > |                   | [Task](http://hl7.org/fhir/R4/task.html)                                   |
  {: .grid;}
 
+#### US Core Implementation Guide
+Implementers will need the knowledge of [US Core](http://hl7.org/fhir/us/core/STU3.1.1/) to access information for pre population via CQL calls to *21st Century* compliant FHIR APIs. The light client **SHOULD** import the US Core Server capability statement.  
 
-### SMART on FHIR and Native Applications
-Guidance is being provided to allow DTR functionality to be invoked outside of regular EHR clinical workflows using a SMART on FHIR app or an EHR-based "Native" app to provide a consistent way of evaluating payer rules and documentation requirements across EHR implementations. As such client implementers creating a SMART App will also need to be familiar with the [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) specification. (Payer implementers only need to be familiar with the SMART on FHIR specification if they plan to develop SMART apps for launch by CDS Hooks or other purposes.)  These applications **SHALL** conform to the requirements defined in their respective [Capability Statements](artifacts.html#behavior-capability-statements).
-
-### Must Support
 This IG marks elements with the Must Support flag in its profiles.  Implementation of Must Support **SHALL** be compliant with HRex. However, note that this guide does profile on top of US Core profiles where Must Support has been defined on certain elements (e.g., [DTR Medication Request](StructureDefinition-dtr-medicationrequest.html) profile). The FHIR specification makes it clear that when profiling another profile, a MustSupport flag can be constrained further (i.e., taken from 'false' to 'true') but cannot be loosened (i.e., changed from 'true' to 'false').  See [US Core Must Support Guidance](https://hl7.org/fhir/us/core/STU3.1.1/general-guidance.html#must-support).
 
-This IG also references the [US Core IG](http://hl7.org/fhir/us/core/STU3.1.1/). Da Vinci DTR implementations **SHALL** conform to the US Core IG [Must Support](https://hl7.org/fhir/us/core/STU3.1.1/general-guidance.html#must-support) Guidance where US Core IG resources are used.
+Da Vinci DTR implementations **SHALL** conform to the US Core IG [Must Support](https://hl7.org/fhir/us/core/STU3.1.1/general-guidance.html#must-support) Guidance where US Core IG resources are used.
 
-This implementation guide will adopt by reference the following [HRex Conformance Requirements](http://build.fhir.org/ig/HL7/davinci-ehrx/conformance.html)  In addition, systems **SHALL** comply with additional requirements called out in IG text and Profile definitions.
+#### SMART on FHIR and Native Applications
+Guidance is being provided to allow DTR functionality to be invoked outside of regular EHR clinical workflows using a SMART on FHIR app or an EHR-based "Native" app to provide a consistent way of evaluating payer rules and documentation requirements across EHR implementations. As such client implementers creating a SMART App will also need to be familiar with the [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) specification. (Payer implementers only need to be familiar with the SMART on FHIR specification if they plan to develop SMART apps for launch by CDS Hooks or other purposes.)  These applications **SHALL** conform to the requirements defined in their respective [Capability Statements](artifacts.html#behavior-capability-statements).
+
+#### CQL 
+[Clinical Quality Language (CQL)](https://cql.hl7.org/) is used to query the Electronic Health Record (EHR) FHIR server to pre-populate the DTR Questionnaire.
+
+#### Additional Requirements
+This implementation guide also adopts, by reference, these [HRex Conformance Requirements](http://build.fhir.org/ig/HL7/davinci-ehrx/conformance.html)  
+
+Systems **SHALL** comply with additional requirements called out in IG text and Profile definitions.
 
 <div markdown="1" class="new-content">
 
