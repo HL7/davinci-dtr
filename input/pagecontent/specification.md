@@ -35,10 +35,10 @@ DTR will automatically populate the answers to certain questions based on existi
 ##### Extension Usage
 With current EHR capabilities with respect to updating 'request' resources, there is no mechanism to revise the 'request' resource to have its "supportingInfo" (or "insurance") element point to the [QuestionnaireResponse](StructureDefinition-dtr-questionnaireresponse-r4.html)/[Bundle](http://build.fhir.org/ig/HL7/davinci-pas/StructureDefinition-profile-pas-request-bundle.html)/[ClaimResponse](http://hl7.org/fhir/us/davinci-hrex/STU1/StructureDefinition-hrex-claimresponse.html) that results from the DTR process. Instead, extensions are used to reference the relevant order. DTR clients **SHOULD** update their 'request' resources with the appropriate "supportingInfo" or "insurance" link to the relevant resource.
 
-##### $questionnaire-package Operation    
+<!-- ##### $questionnaire-package Operation    
 After launch the DTR App fetches the Task to the necessary input data include the Questionnaire URL.  The Questionnaire URL is required to fetch the "Questionnaire Package" using the DTRQuestionnaireOperation [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation.  The DTR App invokes this operation on the Payer's Server (Rules Repository) and it returns one or more collection bundles.  
    
-[![DTRQuestionnairePackageOperation](questionnaire-package-sequence.png){:style="float: none;width:675px;height:486px"}](questionnaire-package-sequence.png "Sequence Diagram")
+[![DTRQuestionnairePackageOperation](questionnaire-package-sequence.png){:style="float: none;width:675px;height:486px"}](questionnaire-package-sequence.png "Sequence Diagram") -->
   
 
 #### Questionnaire Response
