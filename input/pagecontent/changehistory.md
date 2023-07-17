@@ -72,7 +72,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36117">FHIR-36117</a>:
   DTR Document Reference R4 Resource Profile Inappropriately Marks Elements As Must Support
-  <a href="background.html#must-support">(Must Support)</a>
+  <a href="background.html#us-core-implementation-guide">(Must Support)</a>
   </li>
 
   <li>
@@ -114,7 +114,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36378">FHIR-36378</a>:
   Clarify CQL version expectations
-  <a href="specification.html#cql">(Clinical Quality Language)</a>
+  <a href="specification.html#use-of-cql">(Clinical Quality Language)</a>
   </li>
 
   <li>
@@ -508,7 +508,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36379">FHIR-36379</a>:
   Spec *MUST* use mustSupport in its profiles
-  <a href="background.html#must-support">(Must Support)</a>
+  <a href="background.html#us-core-implementation-guide">(Must Support)</a>
   </li>
   
   <li>
@@ -730,7 +730,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36119">FHIR-36119</a>:
   DTR SDC Questionnaire For Adaptive Form Profile Inappropriately Marks Elements As Must Support
-  <a href="background.html#must-support">(Must Support)</a>
+  <a href="background.html#us-core-implementation-guide">(Must Support)</a>
   </li>
   
   <li>
@@ -742,7 +742,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36299">FHIR-36299</a>:
   Mapping CQLs to PA criteria
-  <a href="specification.html#cql">(CQL)</a>
+  <a href="specification.html#use-of-cql">(CQL)</a>
   </li>
   
   <li>
@@ -790,7 +790,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36118">FHIR-36118</a>:
   DTR SDC Questionnaire Profile Inappropriately Marks Elements As Must Support
-  <a href="background.html#must-support">(Must Support)</a>
+  <a href="background.html#us-core-implementation-guide">(Must Support)</a>
   </li>
     
   <li>
@@ -922,7 +922,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36455">FHIR-36455</a>:
   Utilization of CQL
-  <a href="specification.html#cql">(CQL)</a>
+  <a href="specification.html#use-of-cql">(CQL)</a>
   </li>
 
   <li>
@@ -964,13 +964,13 @@ This ballot addresses several additions, modifications, technical corrections, e
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36409">FHIR-36409</a>:
   EHR and DTR initiation
-  <a href="index.html#ehr-and-dtr-initiation">(EHR and DTR Initiation)</a>
+  <a href="usecases.html#ehr-and-dtr-initiation">(EHR and DTR Initiation)</a>
   </li>
 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36411">FHIR-36411</a>:
   Organize interactions along likely HIT modules
-  <a href="index.html#ehr-and-dtr-initiation">(EHR and DTR Initiation)</a>
+  <a href="usecases.html#ehr-and-dtr-initiation">(EHR and DTR Initiation)</a>
   </li>
 
 
