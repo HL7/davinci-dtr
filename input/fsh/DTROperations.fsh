@@ -1,6 +1,15 @@
 Instance: DTRQuestionnairePackageOperation
 InstanceOf: OperationDefinition
-Description: "This operation returns 1 or more 'collection' Bundles each consisting of a single Questionnaire resource as well as any dependency Library and ValueSet instances needed to allow a renderer to fully render and otherwise process the Questionnaire.
+Description: "This operation returns 1 or more 'collection' Bundles each consisting of a single Questionnaire resource as well as any dependency Library and ValueSet instances needed to allow a renderer to fully render and otherwise process the Questionnaire."
+Usage: #definition
+
+* id = "questionnaire-package"
+* url = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package"
+* name = "QuestionnairePackage"
+* title = "Get Questionnaire for given order"
+* status = #draft
+* kind = #operation
+* description = "This operation returns 1 or more 'collection' Bundles each consisting of a single Questionnaire resource as well as any dependency Library and ValueSet instances needed to allow a renderer to fully render and otherwise process the Questionnaire.
 
 The operation **SHALL** take in either:  
 (1) one or more canonicals specifying the URL and, (optionally) the version of the Questionnaire(s) to retrieve; or (2) a CRD Context ID - **or both**.
@@ -22,16 +31,6 @@ If any of the dependencies cannot be retrieved or value sets expanded, a warning
 NOTE: for adaptive questionnaires, there will be no ValueSets and may not be any Libraries as CQL is typically in-line and questions - when they appear - will only provide answerOptions, not value sets.  When resuming a work in progress questionnaire response the DTR client **SHALL** invoke the operation with the timestamp to see if the questionnaire package has changed since it was last retrieved.  The DTR system **SHALL** store as meta data the timestamp of the last time it checked for changes.
 
 If both questionnaire and order parameters are present, both will be sent to the payer without any expectation that the list of questionnaires is a complete list."
-
-Usage: #definition
-
-* id = "questionnaire-package"
-* url = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package"
-* name = "QuestionnairePackage"
-* title = "Get Questionnaire for given order"
-* status = #draft
-* kind = #operation
-
 * code = #questionnaire-package
 * base = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package"
 
