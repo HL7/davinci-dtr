@@ -1,0 +1,182 @@
+{
+  "resourceType" : "CapabilityStatement",
+  "id" : "dtr-intermediary-system",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>DTRIntermediarySystem</h2><div><p>This statement defines the expected capabilities of intermediary systems wishing to conform to the ''DTR Intermediary System'' role.</p>\n</div><table><tr><td>Mode</td><td>SERVER</td></tr><tr><td>Description</td><td><div><p>A DTR intermediary system provides an SMART on FHIR application</p>\n</div></td></tr><tr><td>Transaction</td><td></td></tr><tr><td>System History</td><td></td></tr><tr><td>System Search</td><td></td></tr></table><table><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th><b title=\"GET a resource (read interaction)\">Read</b></th><th><b title=\"GET all set of resources of the type (search interaction)\">Search</b></th><th><b title=\"PUT a new resource version (update interaction)\">Update</b></th><th><b title=\"POST a new resource (create interaction)\">Create</b></th></tr><tr><td>Coverage</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-coverage-r4.html\">DTR Coverage R4</a></td><td></td><td>y</td><td></td><td></td></tr><tr><td>DeviceRequest</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-devicerequest.html\">DTR Device Request</a></td><td></td><td></td><td>y</td><td></td></tr><tr><td>MedicationRequest</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-medicationrequest.html\">DTR Medication Request</a></td><td></td><td></td><td>y</td><td></td></tr><tr><td>NutritionOrder</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-nutritionorder.html\">DTR Nutrition Order</a></td><td></td><td></td><td>y</td><td></td></tr><tr><td>ServiceRequest</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-servicerequest.html\">DTR Service Request</a></td><td></td><td></td><td>y</td><td></td></tr><tr><td>Parameters</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-parameters.html\">DTR Operation Parameters</a></td><td>y</td><td></td><td></td><td></td></tr><tr><td>Questionnaire</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-sdc-questionnaire.html\">DTR SDC Questionnaire</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-sdc-questionnaire-adapt.html\">DTR SDC Questionnaire for adaptive form</a></td><td>y</td><td></td><td></td><td></td></tr><tr><td>QuestionnaireResponse</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-questionnaireresponse-r4.html\">DTR Questionnaire Response R4</a></td><td>y</td><td></td><td></td><td></td></tr></table></div>"
+  },
+  "url" : "http://hl7.org/fhir/us/davinci-dtr/CapabilityStatement/dtr-intermediary-system",
+  "version" : "1.1.0-ballot",
+  "name" : "DTRIntermediarySystem",
+  "title" : "DTR Intermediary System",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2023-06-29",
+  "publisher" : "HL7 Clinical Decision Support Work Group",
+  "contact" : [{
+    "name" : "HL7 Clinical Decision Support Work Group",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/dss"
+    }]
+  }],
+  "description" : "This statement defines the expected capabilities of intermediary systems wishing to conform to the ''DTR Intermediary System'' role.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "kind" : "requirements",
+  "imports" : ["http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server"],
+  "fhirVersion" : "4.0.1",
+  "format" : ["json"],
+  "rest" : [{
+    "mode" : "server",
+    "documentation" : "A DTR intermediary system provides an SMART on FHIR application",
+    "security" : {
+      "description" : "Implementations **SHALL** meet the general security requirements documented in the [[http://hl7.org/fhir/us/davinci-hrex/STU1/security.html|HRex implementation guide]]."
+    },
+    "resource" : [{
+      "type" : "Coverage",
+      "supportedProfile" : ["http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-coverage-r4"],
+      "interaction" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHOULD"
+        }],
+        "code" : "search-type"
+      }],
+      "searchParam" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHALL"
+        }],
+        "name" : "patient",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Coverage-patient",
+        "type" : "reference",
+        "documentation" : "Allows retrieving coverages for the patient"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHALL"
+        }],
+        "name" : "status",
+        "definition" : "http://hl7.org/fhir/SearchParameter/Coverage-status",
+        "type" : "token",
+        "documentation" : "Allows filtering to only active coverages"
+      }]
+    },
+    {
+      "type" : "DeviceRequest",
+      "supportedProfile" : ["http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-devicerequest"],
+      "interaction" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHOULD"
+        }],
+        "code" : "update"
+      }],
+      "versioning" : "versioned-update"
+    },
+    {
+      "type" : "MedicationRequest",
+      "supportedProfile" : ["http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-medicationrequest"],
+      "interaction" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHOULD"
+        }],
+        "code" : "update"
+      }],
+      "versioning" : "versioned-update"
+    },
+    {
+      "type" : "NutritionOrder",
+      "supportedProfile" : ["http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-nutritionorder"],
+      "interaction" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHOULD"
+        }],
+        "code" : "update"
+      }],
+      "versioning" : "versioned-update"
+    },
+    {
+      "type" : "ServiceRequest",
+      "supportedProfile" : ["http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-servicerequest"],
+      "interaction" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHOULD"
+        }],
+        "code" : "update"
+      }],
+      "versioning" : "versioned-update"
+    },
+    {
+      "type" : "Parameters",
+      "supportedProfile" : ["http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-parameters"],
+      "interaction" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHOULD"
+        }],
+        "code" : "read"
+      }]
+    },
+    {
+      "type" : "Questionnaire",
+      "supportedProfile" : ["http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire",
+      "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire-adapt"],
+      "interaction" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHOULD"
+        }],
+        "code" : "read"
+      }]
+    },
+    {
+      "type" : "QuestionnaireResponse",
+      "supportedProfile" : ["http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse-r4"],
+      "interaction" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHOULD"
+        }],
+        "code" : "read"
+      }],
+      "searchParam" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+          "valueCode" : "SHALL"
+        }],
+        "name" : "context",
+        "definition" : "http://hl7.org/fhir/us/davinci-dtr/SearchParameter/dtr-context",
+        "type" : "reference",
+        "documentation" : "Allows retrieving QuestionnaireResponse for a context"
+      }]
+    }],
+    "operation" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode" : "SHALL"
+      }],
+      "name" : "QuestionnairePackage",
+      "definition" : "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package",
+      "documentation" : "This operation returns 1 or more 'collection' Bundles each consisting of a single Questionnaire resource as well as any dependency Library and ValueSet instances needed to allow a renderer to fully render and otherwise process the Questionnaire.  \r\nThe operation SHALL take in either:\r\n(1) one or more canonicals specifying the URL and, (optionally) the version of the Questionnaire(s) to retrieve; or (2) a CRD Context ID - or both."
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+        "valueCode" : "SHOULD"
+      }],
+      "name" : "log-questionnaire-errors",
+      "definition" : "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/log-questionnaire-errors",
+      "documentation" : "This operation **SHOULD** be supported by payers and DTR applications and allows submission of issues encountered when working with these DTR-provided artifacts. The operation will pass the Questionnaire and an OperationOutcome detailing the issue(s) including where the error occurred. \r\nThe input OperationOutcome resource **SHOULD** include information on the DTR application identity and version, date-time with time-zone offset, as well as the provider endpoint during which the error occurred, and it **SHALL NOT** contain information about the response or information retrieved from FHIR APIs that could potentially include PHI."
+    }]
+  }]
+}
