@@ -1,6 +1,6 @@
 Instance: DTRQuestionnairePackageOperation
 InstanceOf: OperationDefinition
-Description: "This operation returns 1 or more 'collection' Bundles each consisting of a single Questionnaire resource as well as any dependency Library and ValueSet instances needed to allow a renderer to fully render and otherwise process the Questionnaire."
+Description: "This operation returns one or more 'collection' Bundles each consisting of a single Questionnaire resource as well as any dependency Library and ValueSet instances needed to allow a renderer to fully render and otherwise process the Questionnaire."
 Usage: #definition
 
 * id = "questionnaire-package"
@@ -9,7 +9,7 @@ Usage: #definition
 * title = "Get Questionnaire for given order"
 * status = #draft
 * kind = #operation
-* description = "This operation returns 1 or more 'collection' Bundles each consisting of a single Questionnaire resource as well as any dependency Library and ValueSet instances needed to allow a renderer to fully render and otherwise process the Questionnaire.
+* description = "This operation returns one or more 'collection' Bundles each consisting of a single Questionnaire resource as well as any dependency Library and ValueSet instances needed to allow a renderer to fully render and otherwise process the Questionnaire.
 
 The operation **SHALL** take in either:  
 (1) one or more canonicals specifying the URL and, (optionally) the version of the Questionnaire(s) to retrieve; or (2) a CRD Context ID - **or both**.
