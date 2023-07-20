@@ -25,7 +25,7 @@
 <div markdown="1" class="pbox">
 <b>Technical Support and Guidance:</b> 
 <ul>
-    <li>Lloyd McKenzie (Accenture)</li>
+    <li>Lloyd McKenzie (Dogwood Consulting)</li>
 </ul>
 </div>
 <br>
@@ -47,7 +47,7 @@
 <ul>
     <li>Andy Gregorowicz, Cole Springate-Combs, Pat LaRocque, Keeyan Ghoreshi, Yolanda Liu, Robi Scalfani, and the FHIR Shorthand Team (The MITRE Corporation) </li>
     <li>Carie Hammond and Ryan Moehrke (AEGIS)</li>
-    <li>Kyle Johnson, Spencer Utley, and Matt Varghese (Epic)</li>
+    <li>Kyle Johnsen, Spencer Utley, and Matt Varghese (Epic)</li>
     <li>Sreekanth Puram (Mettle Solutions)</li>
     <li>Anup Mahansaria, Peni Moxim (Evernorth)</li>
     <li>Brian Poteet (Edifecs)</li>
