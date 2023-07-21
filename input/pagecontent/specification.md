@@ -535,7 +535,7 @@ The FHIR Library containing/referencing a CQL logic file can reference other nee
 This Implementation Guide's use of CQL **SHALL** be [CQL version 1](http://cql.hl7.org/N1/).
 
 ##### Behavior when receiving malformed CQL
-If the CQL is malformed (is not syntactically correct) in any way, the app’s execution engine **SHALL NOT** attempt any execution of the malformed CQL, the app **SHALL** log the error, and the user **SHALL** be notified with an appropriate message indicating that population did not occur and they **SHALL** be allowed to enter the information manually either now or at a later time. The app **SHOULD** log failures and ensure the maintainer of the CQL/Questionnaire package is notified. 
+If the CQL is malformed (is not syntactically correct) in any way, the app’s execution engine **SHALL NOT** attempt any execution of the malformed CQL, the app **SHALL** log the error, and the user **SHALL** be notified with an appropriate message indicating that population did not occur and they **SHALL** be allowed to enter the information manually either now or at a later time. The app **SHOULD** log failures and ensure the maintainer of the CQL/Questionnaire package is notified (see the [DTR Log Questionnaire Errors operation](OperationDefinition-log-questionnaire-errors.html) for details). 
 
 In an effort to notify the appropriate party or maintainer that the CQL/Questionnaire is malformed, the app developer **SHOULD** use FHIR resource OperationOutcome. The details property of the OperationOutcome should use `MSG_BAD_SYNTAX` to indicate syntactical errors. The destination of the OperationOutcome should be the endpoint the malformed CQL/Questionnaire was retrieved from.
 
