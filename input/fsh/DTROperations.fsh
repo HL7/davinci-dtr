@@ -22,7 +22,7 @@ In most cases, only one order and one coverage will be provided.  However, the o
 
 If any of the explicitly requested questionnaires cannot be found, a warning **SHALL** be provided in the 'outcome' output.  Similarly, if there is an issue understanding any of the orders or coverages and determining appropriate Questionnaires, a warning will be provided.
 
-The Bundle will include the Questionnaire as the first entry along with all external Libraries referenced by the Questionnaire using the [cqf-library] extension, as well as a recursive retrieval of all 'related-artifact' references of type 'depends-on'.  The Bundle **SHALL** include all external ValueSet instances referenced by the Questionnaire.  All value sets **SHALL** be expanded as of the current date and using expansion parameters (such as SNOMED release) as deemed appropriate by he server
+The Bundle will include the Questionnaire as the first entry along with all external Libraries referenced by the Questionnaire using the [cqf-library](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-cqf-library.html) extension, as well as a recursive retrieval of all 'related-artifact' references of type 'depends-on'.  The Bundle **SHALL** include all external ValueSet instances referenced by the Questionnaire.  All value sets **SHALL** be expanded as of the current date and using expansion parameters (such as SNOMED release) as deemed appropriate by he server
 
 All references will will be resolved on a version-specific basis if version is declared, or retrieve the 'current' version if none is specified.  
 
