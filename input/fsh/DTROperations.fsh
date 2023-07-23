@@ -16,7 +16,7 @@ The operation **SHALL** take in either:
 
 Also, one or more Coverage instances and one or more patient orders, appointments or encounters that might trigger the need for a Questionnaire to be completed may be included.
 
-In the first case, the operation will return the specified versions of the respective Questionnaires (or current version if no version is indicated).  In the second case, all Questionnaires relevant to determining coverage, prior authorization, claims acceptability, documentation requirements, etc. will be returned.  The Coverage **SHALL** comply with the [identified coverage] profile.  Similarly the Order **SHALL** comply with one of the following profiles
+In the first case, the operation will return the specified versions of the respective Questionnaires (or current version if no version is indicated).  In the second case, all Questionnaires relevant to determining coverage, prior authorization, claims acceptability, documentation requirements, etc. will be returned.  The Coverage **SHALL** comply with the coverage profile.  Similarly the Order **SHALL** comply with one of the following profiles
 
 In most cases, only one order and one coverage will be provided.  However, the operation allows for circumstances where the decision support engine can handle multiple active coverages - either for the same payer or multiple payers handled by the same engine.  It also handles multiple orders with overlapping requirements where a payer might be able to minimize the answers to be gathered by processing the answers as a group.
 
