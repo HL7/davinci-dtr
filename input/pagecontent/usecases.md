@@ -27,11 +27,7 @@ The current [CRD](https://build.fhir.org/ig/HL7/davinci-crd/), DTR, [PAS](http:/
 
 [ONC](https://www.healthit.gov/) should support certification where certified software can use generic (or generically referenced) relied-upon software to meet certain requirements and can clearly specify the capabilities they rely on without the need to assert each permutation of relied-upon software with which they support the ePA workflow.  Further guidance is needed for the interactions necessary within each of the provider and payer HIT configurations based on the functions/roles of those HIT solutions, and requires the relied upon software approach using predictable, standards-based capabilities to participate in an ePA workflow and for HIT that provides full support for ePA workflow through its certified HIT. 
 
-<div markdown="1" class="stu-note">
-<br>
-This community requests that Da Vinci seek adequate financial support to accelerate the process described here.
-</div>
-
+> This community requests that Da Vinci seek adequate financial support to accelerate the process described here.
 
 #### DTR Compliant SMART on FHIR app
 Within DTR, the SMART on FHIR app (or equivalent native EHR app) serves as a middleware layer easing payer and provider integrations. This functionality enables DTR to gather Questionnaire resources, retrieve FHIR resources from EHRs, and run rules (CQL) to reduce the time involved in looking up documentation requirements.
