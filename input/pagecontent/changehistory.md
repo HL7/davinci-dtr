@@ -424,7 +424,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36362">FHIR-36362</a>:
   "CQL and FHIR Questionnaires SHALL be required" is unclear
-  <a href="index.html#boundaries-and-relationships">(Boundaries and Relationships)</a>
+  <a href="specification.html#questionnaire-rendering">(Questionnaire Rendering)</a>
   </li>
   
   <li>

@@ -334,7 +334,7 @@ If the app is a DTR SMART app (and not a DTR Native App) then it **SHALL** use [
 
 A PDF **MAY**  include prior authorization information, if appropriate. Information in the PDF is not machine readable, and association with the order or prior authorization request must be done by hand. 
 
-When launched with context of the organization, patient, and user, the app **SHOULD** display a list of open or “in-progress” QuestionnaireResponses for the user to select from, scoped to the patient that is in context. The DTR app should check both the EHR and the payer server for stored sessions.  The QuestionnaireResponses on the EHR has a reference to the order which it is linked to, which can be used to search for the correct resource.  
+When launched with context of the organization, patient, and user, the app **SHOULD** display a list of open or “in-progress” QuestionnaireResponses for the user to select from, scoped to the patient that is in context. The DTR app should check the EHR for stored sessions.  The QuestionnaireResponses on the EHR has a reference to the order which it is linked to, which can be used to search for the correct resource.  
 
 When launched in standalone mode, the app **SHOULD** include the `launch/patient` scope to indicate that the EHR needs to provide patient context. The app can use the returned patient to search for relevant unfinished sessions.  Since a patient won’t be in context, the app **SHOULD** provide a selection of patients that the user can choose from (Currently this would be from the EHR). 
  
@@ -423,14 +423,6 @@ In a QuestionnaireResponse, this will be a 'repeating' question with one or more
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
 ---------------------
-### Provenance
-Provenance **SHOULD** be created and persisted with information created during the execution of the CQL and Questionnaire. Also, when the QuestionnaireResponse and its associated resources are exchanged with the source of the rules, appropriate Provenance resource(s) **SHOULD** be created and exchanged.
-
-All DTR applications **SHALL** support rendering according to the extensions supported in the DTR Questionnaire profile as well as executing all CQL found within Questionnaire extensions. Payers **SHALL** craft their Questionnaires such that they include CQL that attempts to pre-populate QuestionnaireResponse answers where such population can be accomplished using discrete data returned by EHR FHIR APIs that are required as part of current regulation (including simple calculations there-on - e.g., age from birthdate). Translation between standard codes **SHOULD** be supported where possible.  CQL and FHIR Questionnaires **SHALL** be required even when DTR is implemented within a DTR Native App as opposed to a DTR SMART App.
-
-[![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
-
----------------------
 ### Value Set and Code System Guidance
 The table below is guidance that **SHOULD** be used when using values sets and code systems in DTR, and can also be considered a best practice.
 
@@ -505,7 +497,7 @@ This resource **SHALL** conform to the [DTR SDC Questionnaire](StructureDefiniti
 The resulting value is used to satisfy documentation requirements. If the value is `null`, the user will be prompted to supply a value.
 
 #### CQL Constraints
-CQL for use in DTR **SHALL** have a `context` of "Patient".  Within the Questionnaire, CQL **SHALL** follow SDC rules for determining context.  Specifically, CQL definitions and variables defined on ancestor elements or preceding expression extensions within the same Questionnaire item are in scope for referencing in descendant/following expressions.  The CQL **SHALL** be version [CQL STU2](https://cql.hl7.org/STU2/index.html) or later.
+CQL for use in DTR **SHALL** have a `context` of "Patient".  Within the Questionnaire, CQL **SHALL** follow SDC rules for determining context.  Specifically, CQL definitions and variables defined on ancestor elements or preceding expression extensions within the same Questionnaire item are in scope for referencing in descendant/following expressions.  The CQL **SHALL** be version [CQL STU2](http://cql.hl7.org/N1/) or later.
 
 #### Execution of CQL
 ##### Retrieval of patient FHIR resources to supply to CQL execution engine
@@ -574,6 +566,8 @@ Two different profiles are used to support two different approaches to managing 
 * [DTR Adaptive Questionnaire](StructureDefinition-dtr-sdc-questionnaire-adapt.html) - the logic around what questions should be displayed and what answers are available is managed within software maintained by the payer.  The only CQL needed in the Questionnaire is that needed to support populating question answers.  The form filling process interacts with the payer continuously during the process of filling out the QuestionnaireResponse.  This interactivity means that it is possible for a payer to provide a Service Coverage Determination along with the QuestionnaireResponse.  
   
 Implementers should review the [advanced rendering]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/rendering.html), [advanced behavior]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/behavior.html), [population]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/populate.html) and [adaptive forms]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/adaptive.html) portions of the SDC implementation guide, focusing on the elements and extensions included in the DTR profiles.  Implementers should also be familiar with the documentation about the [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html) and [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) resources from the core FHIR specification.  Conformance with DTR requires conformance with the relevant portions of the SDC implementation guide".
+
+All DTR applications **SHALL** support rendering according to the extensions supported in the DTR Questionnaire profile as well as executing all CQL found within Questionnaire extensions. Payers **SHALL** craft their Questionnaires such that they include CQL that attempts to pre-populate QuestionnaireResponse answers where such population can be accomplished using discrete data returned by EHR FHIR APIs that are required as part of current regulation (including simple calculations there-on - e.g., age from birthdate). Translation between standard codes **SHOULD** be supported where possible.  CQL and FHIR Questionnaires **SHALL** be required even when DTR is implemented within a DTR Native App as opposed to a DTR SMART App.
 
 #### Structured Data Capture
 Payers may have requirements on how questions are presented to users. To allow for this, payers **MAY** supply Questionnaire resources that conform to the [Advanced Rendering Questionnaire Profile]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/rendering.html) as defined in Structured Data Capture.
