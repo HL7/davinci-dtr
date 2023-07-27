@@ -568,7 +568,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-40421">FHIR-40421</a>:
   Guidance on this page needs to be rewritten
-  <a href="specification.html#how-dtr-passes-information-to-pas-pao-or-other-exchanges">(How DTR passes information to PAS, PAO or Other Exchanges)</a>
+  <a href="specification.html#how-dtr-passes-information-to-pas-foe-or-other-exchanges">(How DTR passes information to PAS, PAO or Other Exchanges)</a>
   </li>
   
   <li>
@@ -658,7 +658,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36361">FHIR-36361</a>:
   Provenance expectations need more clarity
-  <a href="specification.html#provenance">(Provenance)</a>
+  <a href="specification.html">(Formal Specification)</a>
   </li>
   
   <li>
@@ -754,7 +754,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-33226">FHIR-33226</a>:
   Formalize how DTR passes information to PAS, PAO or other exchange IG
-  <a href="specification.html#how-dtr-passes-information-to-pas-pao-or-other-exchanges">(How DTR passes information to PAS, PAO or Other Exchanges)</a>
+  <a href="specification.html#how-dtr-passes-information-to-pas-foe-or-other-exchanges">(How DTR passes information to PAS, PAO or Other Exchanges)</a>
   </li>
   
   <li>
