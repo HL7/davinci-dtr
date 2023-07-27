@@ -178,12 +178,6 @@ This ballot addresses several additions, modifications, technical corrections, e
   </li>
   
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-36492">FHIR-36492</a>:
-  Handling updates to Questionnaire.effectivePeriod
-  <a href="OperationDefinition-questionnaire-package.html">(DTRQuestionnairePackageOperation)</a>
-  </li>
-  
-  <li>
   <a href="https://jira.hl7.org/browse/FHIR-36139">FHIR-36139</a>:
   More clarity around how UM Payer multi party arangements are handled
   <a href="specification.html#retrieval-of-payer-resources-and-smart-launch">(Retrieval of Payer resources and SMART Launch)</a>
@@ -294,7 +288,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36492">FHIR-36492</a>:
   Handling updates to Questionnaire.effectivePeriod
-  <a href="specification.html">(Formal Specification)</a>
+  <a href="OperationDefinition-questionnaire-package.html">(DTRQuestionnairePackageOperation)</a>
   </li>
   
   <li>

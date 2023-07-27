@@ -13,7 +13,7 @@ This Implementation Guide has expectations defined for four types of systems tha
 - [DTR - EHRs that use SMART apps](CapabilityStatement-dtr-smart-client.html)
 - [EHRs that don't use SMART apps](CapabilityStatement-dtr-native-client.html)
 - [SMART apps with payer systems](CapabilityStatement-dtr-payer-app.html)
-- [Intermediary systems with defined functionality has been defined](CapabilityStatement-dtr-intermediary-system.html) 
+- [Intermediary systems with defined functionality](CapabilityStatement-dtr-intermediary-system.html) 
 
 
 <p markdown="1" class="notebox">
