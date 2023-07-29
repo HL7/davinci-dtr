@@ -87,6 +87,8 @@ One entry point into the DTR process is launching from a [Clinical Decision Supp
 
 In most cases, a card that results in the launch of DTR will deal with only one patient coverage, multiple orders, one Questionnaire and (possibly) one initial QuestionnaireResponse.  However, there may be edge cases where more than one of these is possible.
 
+The DTR App requests an OAuth token using SMART backend services and then uses that second access token to authenticate against the payer FHIR server.
+
 <p markdown="1" class="notebox">
  <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;As a part of a CDS Hooks response, if there is a need for further information then the payer IT system <b>MAY</b> return a Card object with a Link object populated in the Card.links property. If the Link object has a URL property set to the launch URL of a DTR process, this can still be overridden by the EHR or Provider's preferred DTR application.
 </p>
@@ -284,7 +286,7 @@ Through interactions with the DTR process, a user may be prompted with a questio
 The provider can confirm that the sleep study has not yet been conducted and generate a task for office staff to schedule a sleep study directly in the questionnaire interface. Alternatively, the provider could attest that the sleep study was performed or is already scheduled to be performed, either at this provider or another provider. Attestation by the provider can prevent duplicate tests in the case that the patient's electronic record is incomplete.
 
 <p markdown="1" class="notebox">
- <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;The ability to create tasks or 'to-dos' is outside of the scope of DTR and <b>SHOULD</b> be supported by the EHR implementation. 
+ <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;The ability to create tasks or 'to-dos' is outside of the scope of DTR and <b>SHOULD</b> be supported by the EHR implementation.  The questionnaire <b>SHOULD</b> be able to suspend completion until all tasks are completed. How the application is suspended is left to the implementer, but the state of the questionnaire <b>SHOULD</b> be preserved.
 </p>
 
 The questionnaire **SHALL** be able to suspend completion until all tasks are completed. How the application is suspended is left to the implementer, but the state of the questionnaire **SHALL** be preserved.
@@ -327,6 +329,8 @@ If the DTR app receives a QuestionnaireResponse resource in the app context, it 
 The EHR **SHOULD** be able to associate orders with the QuestionnaireResponses they pertain to by linking their FHIR IDs internally. This means that even if the ID of an order changes, the EHR **SHOULD** be capable of updating the QuestionnaireResponse to reference the new ID. This way, even if DTR receives the updated orders, it will still be able to search the EHR for the associated QuestionnaireResponse.  
 
 The EHR is responsible for storing and updating the QuestionnaireResponse, as well as providing the user a way to choose sessions to relaunch. Additionally, the EHR **SHOULD** pass the QuestionnaireResponse as a [SMART launch parameter](http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#app-launch-scopes-and-launch-context).
+
+When the DTR app receives a QuestionnaireResponse but does not receive a Questionnaire URL, it should check the QuestionnaireResponse for the context extension. The contents of the extension can be sent to the CRD payer server using the questionnaire-for-order operation. The CRD payer server will return a Questionnaire if one is relevant for the provided coverage and order.
 
 The contents of the extension can be sent to the payer server using the [questionnaire-package operation](OperationDefinition-questionnaire-package.html).  The payer server **SHALL** return a Questionnaire upon receiving a valid coverage and order.
 
@@ -413,7 +417,6 @@ The PAS Bundle linkId **SHOULD** be used for attached bundles containing resourc
 The FOE Bundle linkId should be used for attached bundles containing resources needed for FHIR Orders Exchange. All the referenced resources needed for FOE **SHALL** be stored as contained resources within the QuestionnaireResponse for easier reference. These resources should include the resources collected by DTR to complete the QuestionnaireResponse, as well as the Order sent to FOE. If a response has already been received from a FOE request, this **SHALL** be stored in the QuestionnaireResponse with a reference to it in the items list as well. (See the [FOE Implementation Guide](http://build.fhir.org/ig/HL7/dme-orders/) for more details)
 
 #### Additional Workflow
-
 In a QuestionnaireResponse, this will be a 'repeating' question with one or more answers with a linkId of "DTR_TASK".  The question type will be 'Reference' and will refer to contained Task instances that describe workflow actions that need to occur, such as the creation of additional companion orders, pre-execution testing, follow-up orders, etc. These are created when the completion of the questionnaire has made evident that certain workflow steps necessary to satisfy payer requirements were confirmed missing by the user.  The EHR **SHOULD** add 'to do' items to the user's task list that correspond to the actions described within the Task instances.
 
 <p markdown="1" class="notebox">
