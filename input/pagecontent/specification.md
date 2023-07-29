@@ -739,9 +739,9 @@ When developing FHIR Libraries that depend on CQL content, the content element *
 </p>
 <br>
 
-For example, see the below snippet from a FHIR Library:
+For example, note this snippet from a FHIR Library:
 
-[![FHIR Library snippet](FHIR_Library_snippet.png){:style="float: none;width:837px;height:235px"}](FHIR_Library_snippet.png "View Image")
+[![FHIR Library snippet](FHIR_Library_snippet.png){:style="float: none;width:1160px;height:240px"}](FHIR_Library_snippet.png "View Image")
   
 <p markdown="1" class="notebox">
 <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;Although the use of `url` in the content element is valid, using the `data` element will likely be more interoperable.
