@@ -739,7 +739,7 @@ When developing FHIR Libraries that depend on CQL content, the content element *
 </p>
 <br>
 
-For example, note this snippet from a FHIR Library:
+For example, this is a snippet from a FHIR Library:
 
 [![FHIR Library snippet](FHIR_Library_snippet.png){:style="float: none;width:812px;height:168px"}](FHIR_Library_snippet.png "View Image")
   
