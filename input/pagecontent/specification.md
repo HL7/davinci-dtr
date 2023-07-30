@@ -737,8 +737,7 @@ When developing FHIR Libraries that depend on CQL content, the content element *
 <p markdown="1" class="notebox">
 <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;The use of the `data` element requires it to contain a base-64 encoded string that represents the CQL file per the <a href="https://www.hl7.org/fhir/datatypes.html#Attachment">attachment specification</a>.
 </p>
-<br>
-
+  
 For example, this is a snippet from a FHIR Library:
 
 [![FHIR Library snippet](FHIR_Library_snippet.png){:style="float: none;width:812px;height:168px"}](FHIR_Library_snippet.png "View Image")
