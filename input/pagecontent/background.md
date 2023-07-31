@@ -15,7 +15,7 @@ Additional information about Da Vinci, its members, the use cases and the implem
 {% include burdenReduction.md %}
 
 ##### Burden Reduction Goals  
-The goal of the Burden Reduction IGs is to move from Telephone, FAX, Portal, and mail to electronic transaction defined by these three IGs.  We recognize it will take time for provider and payer to fully implement these IGs and that certain PAs may never be implemented due to complexity.  However, the intent is to move a rapidly as possible to full support of these IGs by Payer, providers and any required intermediaries.
+The goal of the Burden Reduction IGs is to move from Telephone, FAX, Portal, and mail to electronic transactions defined by these three IGs.  We recognize it will take time for provider and payer to fully implement these IGs and that certain PAs may never be implemented due to complexity.  However, the intent is to move as rapidly as possible to full support of these IGs by Payer, providers and any required intermediaries.
 
 ### CRD and DTR Workflow
 The graphic shows a high-level overview of CRD and DTR (DTR is the SMART on FHIR app or equivalent native EHR app).
