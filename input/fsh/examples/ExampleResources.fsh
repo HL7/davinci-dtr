@@ -9,7 +9,7 @@ Description: "An example patient used in the example resources."
 
 Instance: PractitionerExample1
 InstanceOf: USCorePractitionerProfile
-Description: "An example practitioner referred by the example resources."
+Description: "An example practitioner referred to by the example resources."
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"
 * identifier.value = "1122334455"
 * name.family = "Doe"
@@ -18,7 +18,7 @@ Description: "An example practitioner referred by the example resources."
 
 Instance: PractitionerRoleExample1
 InstanceOf: USCorePractitionerRoleProfile
-Description: "An example practitioner referred by the example resources."
+Description: "An example practitioner referred to by the example resources."
 * practitioner = Reference(PractitionerExample1)
 * organization = Reference(ProviderOrgExample)
 * telecom.system = #email
