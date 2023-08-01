@@ -198,6 +198,10 @@ A DTR app is allowed to throw an error if not launched within one and only one o
 
 The resources corresponding to this context (if any) **SHALL** be passed in the fhirContext element.  As part of configuration during app enablement process the app **SHOULD** also always ask for the launch/patient and the openId and fhirUser contexts.
 
+<p markdown="1" class="notebox">
+ <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;This guide supports an expectation that any resources which are referenced from other resources included as parameters <b>SHALL</b> be accessible and available for retrieval by the DTR app.
+</p>
+
 #### App Relaunch 
 The DTR app **SHALL** support usage of the following new scopes to alter the launch context: 
 * `launch/request` 

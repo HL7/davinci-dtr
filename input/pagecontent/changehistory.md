@@ -344,10 +344,6 @@ This ballot addresses several additions, modifications, technical corrections, e
   Again, DTR <-> Payer should use SMART backend services
   <a href="specification.html#authentication-of-smart-on-fhir-application-to-payer-api">(Authentication of SMART on FHIR application to payer API)</a>
   </li>
-
-.............................................................................................................................................................................................................  
-  
-<br><br>
     
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36365">FHIR-36365</a>:
@@ -965,6 +961,12 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="https://jira.hl7.org/browse/FHIR-36411">FHIR-36411</a>:
   Organize interactions along likely HIT modules
   <a href="usecases.html#ehr-and-dtr-initiation">(EHR and DTR Initiation)</a>
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-41557">FHIR-41557</a>:
+  Guidance on Referenced resources misisng
+  <a href="specification.html#retrieval-of-payer-resources-and-smart-launch">(Retrieval of Payer resources and SMART Launch)</a>
   </li>
 
 
