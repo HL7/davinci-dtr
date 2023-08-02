@@ -23,6 +23,7 @@ Description:    "This profile sets minimum expectations for recording, searching
 * intent MS
 * category MS
 * code 1.. MS
+* code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service."
 
 * subject only Reference(us-core-patient)
 * subject MS
