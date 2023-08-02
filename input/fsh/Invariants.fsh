@@ -10,3 +10,8 @@ Description: "Either an Order or a Questionnaire, or both, SHALL be present"
 Severity:   #error
 Expression: "Parameters.parameter.exists(name='order') or Parameters.parameter.exists(name='questionnaire')"
 
+/*****************************************************************************************************/
+Invariant:  dtrx-1
+Description: "If source is 'override' or 'manual' then an author SHALL be supplied, otherwise an author is prohibited."
+Severity:   #error
+Expression: "extension.exists(url = 'source' and valueCode != 'auto') and extension.exists(url = 'author')"
