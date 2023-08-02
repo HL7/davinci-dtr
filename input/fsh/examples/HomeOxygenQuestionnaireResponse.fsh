@@ -152,6 +152,14 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[0].linkId = "1.1"
 * item[=].item[=].text = "Last Name but Different This Time"
 * item[=].item[=].answer.valueString = "Quinton"
+
+
+* item[=].item[=].answer.extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+* item[=].item[=].answer.extension[=].extension[0].url = "source"
+* item[=].item[=].answer.extension[=].extension[=].valueCode = #override
+* item[=].item[=].answer.extension[=].extension[+].url = "author"
+* item[=].item[=].answer.extension[=].extension[=].valueReference = Reference("PractitionerExample1")
+
 * item[=].item[+].linkId = "1.2"
 * item[=].item[=].text = "First Name"
 * item[=].item[=].answer.valueString = "Vlad"
@@ -245,3 +253,4 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[+].linkId = "5.3"
 * item[=].item[=].text = "Means of oxygen delivery and accessories"
 * item[=].item[=].answer[0].valueCoding = http://example.org#134 "Mask"
+
