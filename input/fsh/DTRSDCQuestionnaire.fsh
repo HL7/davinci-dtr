@@ -50,7 +50,7 @@ Further guidance on the use of these elements should be found in the underlying 
 * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-collapsible named collapsible 0..1
 * item.answerOption.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemAnswerMedia named itemAnswerMedia 0..1
 
-* extension[assemble-expectation] ^definition = "If present, indicates that this questionnaire has expectations with respect to assembly. Specifically, indicates whether this form requires assembly (i.e. it can't be used directly without invoking the $assemble operation operation on it) and/or whether it is intended for use only as a 'child' in an assembly process. The assembly processs might mean filling in item metadata based on information looked up from item.definitions and/or retrieving sub-questionnaires pointed to by sub-questionnaire extensions."
+* extension[assemble-expectation] ^definition = "If present, indicates that this questionnaire has expectations with respect to assembly. Specifically, indicates whether this form requires assembly (i.e., it can't be used directly without invoking the $assemble operation operation on it) and/or whether it is intended for use only as a 'child' in an assembly process. The assembly processs might mean filling in item metadata based on information looked up from item.definitions and/or retrieving sub-questionnaires pointed to by sub-questionnaire extensions."
 
 /////////////////////////
 // Behavior extensions
