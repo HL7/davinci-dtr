@@ -14,4 +14,4 @@ Expression: "Parameters.parameter.exists(name='order') or Parameters.parameter.e
 Invariant:  dtrx-1
 Description: "If source is 'override' or 'manual' then an author SHALL be supplied, otherwise author is prohibited."
 Severity:   #error
-Expression: "extension.exists(url = 'source' and value = 'auto') or extension.exists(url = 'author')"
+Expression: "extension.exists(url = 'source' and value = 'auto') != extension.exists(url = 'author')"
