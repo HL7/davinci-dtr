@@ -158,7 +158,7 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[=].answer.extension[=].extension[0].url = "source"
 * item[=].item[=].answer.extension[=].extension[=].valueCode = #override
 * item[=].item[=].answer.extension[=].extension[+].url = "author"
-* item[=].item[=].answer.extension[=].extension[=].valueReference = Reference("PractitionerExample1")
+* item[=].item[=].answer.extension[=].extension[=].valueReference = Reference("PractitionerExample1") "Jane"
 
 * item[=].item[+].linkId = "1.2"
 * item[=].item[=].text = "First Name"
