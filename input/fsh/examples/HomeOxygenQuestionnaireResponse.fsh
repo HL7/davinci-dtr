@@ -143,23 +143,16 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * status = #completed
 * subject = Reference(PatientExample1) "Vlad"
 * questionnaire = "http://example.com/Questionnaire/referred-questionnaire"
-// * extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/context"
-// * extension[=].valueReference = Reference(coverage1001)
-// * extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/context"
-// * extension[=].valueReference = Reference(deviceRequest0001)
 * item[0].linkId = "1"
 * item[=].text = "Patient Information"
 * item[=].item[0].linkId = "1.1"
 * item[=].item[=].text = "Last Name but Different This Time"
 * item[=].item[=].answer.valueString = "Quinton"
-
-
 * item[=].item[=].answer.extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer.extension[=].extension[0].url = "source"
 * item[=].item[=].answer.extension[=].extension[=].valueCode = #override
 * item[=].item[=].answer.extension[=].extension[+].url = "author"
 * item[=].item[=].answer.extension[=].extension[=].valueReference = Reference(PractitionerExample1) "Dr. Jane Doe"
-
 * item[=].item[+].linkId = "1.2"
 * item[=].item[=].text = "First Name"
 * item[=].item[=].answer.valueString = "Vlad"
