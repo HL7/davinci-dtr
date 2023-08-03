@@ -133,7 +133,7 @@ Description: "Inline Questionnaire for QuestionnaireResponse"
 * item[=].item[=].answerOption[+].valueCoding = http://example.org#136 "Oxygen conserving device"
 * item[=].item[=].answerOption[+].valueCoding = http://example.org#137 "High flow oxygen therapy"
 
-
+// **********************************************************************************************************************************
 Instance: home-o2-questionnaireresponse
 InstanceOf: QuestionnaireResponse
 Usage: #example
@@ -168,6 +168,9 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[+].linkId = "1.6"
 * item[=].item[=].text = "Medicare ID"
 * item[=].item[=].answer.valueString = "10A3D58WH22"
+* item[=].item[=].answer.extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+* item[=].item[=].answer.extension[=].extension[0].url = "source"
+* item[=].item[=].answer.extension[=].extension[=].valueCode = #auto
 * item[+].linkId = "2"
 * item[=].text = "Provider who is performing face-to-face evaluation"
 * item[=].item[0].linkId = "2.1"
