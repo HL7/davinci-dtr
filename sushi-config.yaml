@@ -59,7 +59,8 @@ menu:
   Specification:
     Formal Specification: specification.html    
  
-  FHIR Artifacts:
+  FHIR Artifacts: 
+    Artifacts Summary: artifacts.html 
     Capability Statements: artifacts.html#1
     Operations: artifacts.html#2
     Search Parameters: artifacts.html#3
