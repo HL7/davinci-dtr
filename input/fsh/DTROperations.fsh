@@ -70,6 +70,13 @@ If both questionnaire and order parameters are present, both will be sent to the
 * parameter[=].min = 0
 * parameter[=].max = "1"
 
+* parameter[+].name = #referenced
+* parameter[=].use = #in
+* parameter[=].documentation = "Referenced resources necessary to support stand-alone launch. (SHALL NOT include resources from 'supprtingInformation')"
+* parameter[=].type = #Any
+* parameter[=].min = 0
+* parameter[=].max = "*"
+
 * parameter[+].name = #changedsince
 * parameter[=].use = #in
 * parameter[=].documentation = "If present, the package will only contain the questionnaire or associated artifact that have changes since the specified timestamp.  If there are no changed artifacts the operation will simply return a 200 Ok indicating that nothing has changed since the specified timestamp."
