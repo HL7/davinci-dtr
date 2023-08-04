@@ -756,9 +756,12 @@ For example, this is a snippet from a FHIR Library:
 <p markdown="1" class="notebox">
 <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;Although the use of `url` in the content element is valid, using the `data` element will likely be more interoperable.
 </p>
-<br>
 
+[![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
+
+---------------------
 ### Reference Implementation
 A reference implementation has been created. The code is available at [DTR GitHub](https://github.com/HL7-DaVinci/dtr), and the executable can be found at [https://dtr.davinci.hl7.org](https://dtr.davinci.hl7.org/).
 
+[![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
  
