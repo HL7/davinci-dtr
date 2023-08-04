@@ -757,6 +757,8 @@ For example, this is a snippet from a FHIR Library:
 <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;Although the use of `url` in the content element is valid, using the `data` element will likely be more interoperable.
 </p>
 <br>
-A reference implementation has been created. The code is available at [DTR GitHub](https://github.com/HL7-DaVinci/dtr). The executable can be found [here](https://dtr.davinci.hl7.org/).
+
+#### Reference Implementation
+A reference implementation has been created. The code is available at [DTR GitHub](https://github.com/HL7-DaVinci/dtr), and the executable can be found at [https://dtr.davinci.hl7.org](https://dtr.davinci.hl7.org/).
 
  
