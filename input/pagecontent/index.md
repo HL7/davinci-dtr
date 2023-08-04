@@ -20,6 +20,10 @@ This Implementation Guide has expectations defined for four types of systems tha
  <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;The term Electronic Health Record (EHR) is used in this IG and can be considered equivalent to Electronic Medical Record (EMR) or a Practice Management System (PMS).
 </p>
 
+<div markdown="1" class="new-content">
+Payers may have multiple back-end functions that handle different types of decision support and/or different types of services. However, for the purpose of DTR conformance, payers <b>SHALL</b> have a single endpoint (managed by themselves or a delegate) that can handle responding to all DTR service calls.
+</div>
+
 ### Boundaries and Relationships
 
 This IG is a companion to the Da Vinci [Coverage Requirements Discovery (CRD)](https://build.fhir.org/ig/HL7/davinci-crd/) and [Prior Authorization Support (PAS)](http://build.fhir.org/ig/HL7/davinci-pas/) IGs.  The former allows a provider to be alerted that DTR is relevant for a particular order/appointment/etc. and optionally allows that provider to directly launch DTR (either as a SMART application or embedded EHR functionality), or hand off to back office staff for additional processing.  The latter allows the information returned by DTR to be packaged as part of a FHIR-based prior authorization request.  DTR functions in the 'middle' of these two IGs to capture the needed documentation.
