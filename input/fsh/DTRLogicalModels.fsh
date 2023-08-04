@@ -6,8 +6,8 @@ Description: "A logical model describing the information that should be captured
 * ^experimental = false
 * ^extension[$fmm].valueInteger = 1
 * ^extension[$standards-status].valueCode = #informative
-* source            1..1 code            "provider-src | payer-src"            "A code to indicate which type of system collected the metric data."
-* source    from MetricDataSource      (required)
+* source            1..1 code            "provider-src | payer-src | SOFApp-src"  "A code to indicate which type of system collected the metric data."
+* source            from MetricDataSource (required)
   * ^comment = "Each hook should have metric data capture by both the initiating provider and the responding payer."
 // * hookInstance      1..1 string          "Unique hook invocation id"           "The unique id for this specific hook invocation."
 //   * ^comment = "Used to link the statistics for a given hook call between provider and payer systems."
@@ -41,18 +41,18 @@ Description: "A logical model describing the information that should be captured
 //   * prefetch        0..1 boolean         "Retrieved by prefetch?"              "Was the data retrieved by prefetch or direct query.  (If some resources of the same type were accessed both with and without prefetch, include two repetitions.)"
 // * response          0..* BackboneElement "Returned card/system action"         "Summary information about each card or system action returned."
 //   * type            0..1 code            "Type of CRD card"                    "The CRD code for the card.  Mandatory if the card corresponds to a type defined by CRD, otherwise omit."
-//   // * type            from CardType              (required)
+//   * type            from CardType              (required)
 //   * focus           0..* code            "Resource tied to card"               "Indicates the type of resource(s) tied to the card."
 //   * engagement      0..1 code            "ignore | accept | override"          "Indicates if the user engaged with the card as per the CDS Hooks feedback mechanism."
 //   * coverageInfo    0..* BackboneElement "Coverage information"                "If the card is a coverage-information card, indicates additional information about the information provided in the coverage-information extension."
 //     * covered       0..1 code            "covered | not-covered | conditional" "Indicates whether the service is covered."
-//     // * covered       from CoveredInfo              (required)
+//     * covered       from CoveredInfo              (required)
 //     * paNeeded      0..1 code            "auth-needed | no-auth | satisfied +" "Indicates whether prior authorization is necessary or not, as well as considerations about applying for prior authorization."
-//     // * paNeeded      from CoveragePaDetail         (required)
+//     * paNeeded      from CoveragePaDetail         (required)
 //     * docNeeded     0..1 code            "no-doc | clinical | admin | both +"  "Indicates whether additional information is necessary (for prior auth, claims submission, or some other purpose)."
-//     // * docNeeded     from AdditionalDocumentation  (required)
+//     * docNeeded     from AdditionalDocumentation  (required)
 //     * infoNeeded    0..1 code            "performer | location | timeframe"    "Indicates what additional inforamtion is necessary in order to determine authorization/coverage - which might be available on a later hook invocation."
-//     // * infoNeeded    from InformationNeeded        (required)
+//     * infoNeeded    from InformationNeeded        (required)
 //     * questionnaire 0..* BackboneElement "Questionnaire(s) returned"           "Information about the Questionnaire(s) returned to gather additional information (e.g. through DTR)."
 //       * reference   1..1 canonical       "Questionnaire url & version"         "The official identifier of one of the Questionnaires provided to be filled out."
 //         * ^type.targetProfile = "http://hl7.org/fhir/StructureDefinition/Questionnaire"
