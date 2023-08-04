@@ -17,7 +17,7 @@ In the interest of enabling such evaluation processes, this guide has defined a
 likely to be relevant for such evaluation.
 
 This model is <u>NOT</u> a FHIR data structure for information exchange.  Instead, it is a logical model that describes
-the types of data that should be available and any constraints on the data (e.g. cardinality, terminology) that
+the types of data that should be available and any constraints on the data (e.g., cardinality, terminology) that
 should be captured by DTR implementers to support the evaluation of metrics.  Measures can then be defined
 in a standardized way based on these measures.
 
