@@ -36,9 +36,9 @@ Description: "Identifies the orders, coverages, and or other resources associate
 /**************************************************************************************************************/
 Extension: InformationOrigin
 Id: information-origin
-Description: "Identifies the origin of the information entered in the answer and how it came to exist."
+Description: "Identifies the origin of the information in the answer and how it came to exist."
 * ^context[0].type = #element
-// * ^context[=].expression = "item.answer"
+* ^context[=].expression = "BackboneElement.item.answer"
 * obeys dtrx-1
 * extension contains
     source 1..1 and
@@ -47,7 +47,7 @@ Description: "Identifies the origin of the information entered in the answer and
 * extension[source] ^short = "The origination of information"
 * extension[source] ^definition = "The origination of information"
 * extension[source].value[x] 1..1
-* extension[source].value[x] from OriginValueSet (required)
+* extension[source].value[x] from DTRInformationOrigins (required)
 * extension[source].value[x] only code
 * extension[author] only Extension
 * extension[author] ^short = "The final human who authored the information adjustment"

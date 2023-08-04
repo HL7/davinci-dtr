@@ -6,3 +6,6 @@ Alias: COVCLASS = http://terminology.hl7.org/CodeSystem/coverage-class
 Alias: COPAYTYPE = http://terminology.hl7.org/CodeSystem/coverage-copay-type
 Alias: RELATE = http://terminology.hl7.org/CodeSystem/subscriber-relationship
 Alias: CONTRACTTYPE = http://terminology.hl7.org/CodeSystem/contract-type
+Alias: $local = http://hl7.org/fhir/ValueSet/Origin-vs
+Alias: $fmm = http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+Alias: $standards-status = http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
