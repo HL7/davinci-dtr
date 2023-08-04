@@ -12,7 +12,9 @@ Usage: #definition
 * description = "This operation returns one or more 'collection' Bundles each consisting of a single Questionnaire resource as well as any dependency Library and ValueSet instances needed to allow a renderer to fully render and otherwise process the Questionnaire.
 
 The operation **SHALL** take in either:  
-(1) one or more canonicals specifying the URL and, (optionally) the version of the Questionnaire(s) to retrieve; or (2) a CRD Context ID - *or both*.
+* One or more canonicals specifying the URL and, (optionally) the version of the Questionnaire(s) to retrieve; or 
+* A CRD Context ID 
+ - *or both*.
 
 Also, one or more Coverage instances and one or more patient orders, appointments or encounters that might trigger the need for a Questionnaire to be completed may be included.
 
@@ -33,12 +35,10 @@ NOTE: for adaptive questionnaires, there will be no ValueSets and may not be any
 If both questionnaire and order parameters are present, both will be sent to the payer without any expectation that the list of questionnaires is a complete list."
 * code = #questionnaire-package
 * base = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package"
-
 * resource = #Questionnaire
 * system = false
 * type = true
 * instance = false
-
 * inputProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-parameters"
 
 // in
