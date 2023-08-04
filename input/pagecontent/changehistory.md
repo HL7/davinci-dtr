@@ -969,6 +969,11 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="specification.html#retrieval-of-payer-resources-and-smart-launch">(Retrieval of Payer resources and SMART Launch)</a>
   </li>
 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-41576">FHIR-41576</a>:
+  Prohibit alternate use of 'next-question' data
+  <a href="specification.html#general-adaptive-form-support">(General Adaptive Form Support)</a>
+  </li>
 
  </ul>
 </div>
