@@ -56,6 +56,13 @@ If both questionnaire and order parameters are present, both will be sent to the
 * parameter[=].min = 0
 * parameter[=].max = "*"
 
+* parameter[+].name = #referenced
+* parameter[=].use = #in
+* parameter[=].documentation = "Order-related referenced resources which are necessary to support stand-alone launch. (SHALL NOT include resources from 'supprtingInformation')"
+* parameter[=].type = #Any
+* parameter[=].min = 0
+* parameter[=].max = "*"
+
 * parameter[+].name = #questionnaire
 * parameter[=].use = #in
 * parameter[=].documentation = "Canonical url for Questionnaire(s)."
@@ -69,13 +76,6 @@ If both questionnaire and order parameters are present, both will be sent to the
 * parameter[=].type = #string
 * parameter[=].min = 0
 * parameter[=].max = "1"
-
-* parameter[+].name = #referenced
-* parameter[=].use = #in
-* parameter[=].documentation = "Referenced resources necessary to support stand-alone launch. (SHALL NOT include resources from 'supprtingInformation')"
-* parameter[=].type = #Any
-* parameter[=].min = 0
-* parameter[=].max = "*"
 
 * parameter[+].name = #changedsince
 * parameter[=].use = #in
