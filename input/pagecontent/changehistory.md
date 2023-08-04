@@ -1,6 +1,6 @@
 This ballot addresses several additions, modifications, technical corrections, errata, and clarifications listed below. They have been reviewed and voted on by the members of the <a href="http://www.hl7.org/Special/committees/dss/">HL7 Clinical Decision Support WorkGroup</a>, which is sponsoring this ballot release and reconciliation of the comments.
 
-### STU 1.1.0 Ballot Changes
+<!-- ### STU 1.1.0 Ballot Changes
 
 <p><b>The following issues are addressed for this ballot:</b></p>
 
@@ -49,7 +49,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="https://jira.hl7.org/browse/FHIR-33224">FHIR-33224</a>:
   Add support for SDC Adaptive forms (SDC Adaptive Forms) 
   </li>
-</ul>
+</ul> -->
 
 <!-- ====================================================================================== -->
 <div markdown="1" class="new-content">
