@@ -8,7 +8,7 @@ Description: "A logical model describing the information that should be captured
 * ^extension[$standards-status].valueCode = #informative
 * source            1..1 code            "provider-src | payer-src | SOFApp-src"  "A code to indicate which type of system collected the metric data."
 * source            from MetricDataSource (required)
-  * ^comment = "Each hook should have metric data capture by both the initiating provider and the responding payer."
+// * ^comment = "Each hook should have metric data capture by both the initiating provider and the responding payer."
 // * hookInstance      1..1 string          "Unique hook invocation id"           "The unique id for this specific hook invocation."
 //   * ^comment = "Used to link the statistics for a given hook call between provider and payer systems."
 // * hookType          1..1 code            "order-select | order-sign +"         "The type of hook specified in the `hook` element in the CDS hooks request."
