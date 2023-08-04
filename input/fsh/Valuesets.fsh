@@ -29,6 +29,7 @@ Description: "Codes temporarily defined as part of the DTR implementation guide.
 * ^content = #complete
 * #provider-src "Provider-sourced" "The metric information was captured from the provider system's perspective"
 * #payer-src    "Payer-sourced"    "The metric information was captured from the payer system's perspective"
+* #SOFApp-src   "SOFApp-sourced"   "The metric information was captured from the SMART on FHIR App's perspective"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Value Sets
@@ -49,3 +50,4 @@ Description: "A list of codes indicating the perspective from which metric data 
 * ^experimental = false
 * DTRTempCodes#payer-src
 * DTRTempCodes#provider-src
+* DTRTempCodes#SOFApp-src
