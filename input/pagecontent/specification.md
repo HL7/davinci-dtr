@@ -758,7 +758,7 @@ For example, this is a snippet from a FHIR Library:
 </p>
 <br>
 
-#### Reference Implementation
+### Reference Implementation
 A reference implementation has been created. The code is available at [DTR GitHub](https://github.com/HL7-DaVinci/dtr), and the executable can be found at [https://dtr.davinci.hl7.org](https://dtr.davinci.hl7.org/).
 
  
