@@ -8,20 +8,20 @@ Description: "A logical model describing the information that should be captured
 * ^extension[$standards-status].valueCode = #informative
 * source            1..1 code            "provider-src | payer-src | SOFApp-src"  "A code to indicate which type of system collected the metric data."
 * source            from MetricDataSource (required)
-// * ^comment = "Each hook should have metric data capture by both the initiating provider and the responding payer."
-// * hookInstance      1..1 string          "Unique hook invocation id"           "The unique id for this specific hook invocation."
-//   * ^comment = "Used to link the statistics for a given hook call between provider and payer systems."
-// * hookType          1..1 code            "order-select | order-sign +"         "The type of hook specified in the `hook` element in the CDS hooks request."
-// * hookType          from CDSHookType   (extensible)
-// * providerId        1..1 Identifier      "User invoking hook"                  "The NPI number of the user who initiated the hook request."
-// * providerId.system = "http://hl7.org/fhir/sid/us-npi"
-// * providerId.value  1..1
-// * groupId           1..1 Identifier      "Healthcare org of user"              "The NPI of the hospital/clinic/other organization that initiated the hook request."
-// * groupId.system    = "http://hl7.org/fhir/sid/us-npi"
-// * groupId.value     1..1
-// * payerId           1..1 Identifier      "Payer receiving hook"                "The identifier of the payer organization to whom the CRD call was made."
-// * payerId.system    1..1
-// * payerId.value     1..1
+* sofApp            0..1 url             "URL of SOF application" "URL of SOF application to identify the specific DTR application used by the provider and payer.  If not present, then the application is an EHR applications."
+
+* payerId           1..1 Identifier      "Identifier assigned to this payer"      "Identifier for the organization that is used to identify the organization across multiple disparate systems."
+* payerId.system    1..1
+* payerId.value     1..1
+
+* providerId        1..1 Identifier      "An identifier for the person initiating DTR"  "An identifier that applies to this person in this role."
+* providerId.system = "http://hl7.org/fhir/sid/us-npi"
+* providerId.value  1..1
+
+* groupId           1..1 Identifier      "An identifier for the organization initiating DTR"  "Identifier for the organization that is used to identify the organization across multiple disparate systems."
+* groupId.system    = "http://hl7.org/fhir/sid/us-npi"
+* groupId.value     1..1
+
 // * requestTime       1..1 instant         "Time hook initiated"                 "For providers, the time the hook call was made.  For payers, the time the hook call was received."
 // * responseTime      0..1 instant         "Time of hook response"               "For providers, the time the hook response was received.  For payers, the time the hook response was returned."
 // * httpResponse      1..1 positiveInt     "e.g. 200"                            "What HTTP response code was returned for the hook invocation."
