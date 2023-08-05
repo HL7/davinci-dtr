@@ -40,6 +40,8 @@ Description: "Codes temporarily defined as part of the DTR implementation guide.
 * #relaunch   "Re-launch"          "DTR App relaunched"
 * #salaunch   "Standalone launch"  "DTR Standalone launch"
 * #cdexlaunch "CDex launch"        "DTR App launched from CDex"
+* #manual     "Manual" "Manual"
+* #APmod      "APmod" "APmod"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Value Sets
@@ -104,3 +106,13 @@ Description: "A list of codes indicating the additional details of the error typ
 * ^status = #draft
 * ^experimental = false
 * include codes from system $issuedetails-cs
+
+// ************************************************************
+ValueSet: MetricRoleInteraction
+Id: metric-RoleInteraction
+Title: "Metric Role Interaction"
+Description: "A list of codes indicating the action performed"
+* ^status = #draft
+* ^experimental = false
+* DTRTempCodes#manual
+* DTRTempCodes#APmod
