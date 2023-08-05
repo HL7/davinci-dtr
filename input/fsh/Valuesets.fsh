@@ -31,6 +31,12 @@ Description: "Codes temporarily defined as part of the DTR implementation guide.
 * #payer-src    "Payer-sourced"    "The metric information was captured from the payer system's perspective"
 * #SOFApp-src   "SOFApp-sourced"   "The metric information was captured from the SMART on FHIR App's perspective"
 
+* #launch    "launch-action"       "The action described was a launch"
+* #Qpackage  "Qpackage-action"     "The action described was a Questionnaire Package operation"
+* #MRQuery   "MRQuery-action"      "The action described was a medical record query"
+* #NextQ     "NextQ-action"        "The action described was a call for the next question"
+* #StoreQR   "StoreQR-action"      "The action described was the storage of a Questionnaire Response"
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Value Sets
 // ************************************************************
@@ -42,12 +48,25 @@ Description: "Codes describing the possible origination of information."
 * ^experimental = false
 
 // ************************************************************
-ValueSet: MetricDataSource
-Id: metricDataSource
-Title: "Metric Data Source"
+ValueSet: Metric-Source
+Id: metric-Source
+Title: "Metric Source"
 Description: "A list of codes indicating the perspective from which metric data was captured"
 * ^status = #draft
 * ^experimental = false
 * DTRTempCodes#payer-src
 * DTRTempCodes#provider-src
 * DTRTempCodes#SOFApp-src
+
+// ************************************************************
+ValueSet: Metric-Action
+Id: metric-Action
+Title: "Metric Action"
+Description: "A list of codes indicating the action performed"
+* ^status = #draft
+* ^experimental = false
+* DTRTempCodes#launch
+* DTRTempCodes#Qpackage
+* DTRTempCodes#MRQuery
+* DTRTempCodes#NextQ
+* DTRTempCodes#StoreQR
