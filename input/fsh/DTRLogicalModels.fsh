@@ -1,7 +1,9 @@
 Logical: DTRMetricData
 Id: DTRMetricData
 Title: "DTR Metric Data"
-Description: "A logical model describing the information that should be captured by DTR implementers about every DTR invocation to support measures evaluating DTR implementation"
+Description: "> **WORK IN PROGRESS**  
+  
+A logical model describing the information that should be captured by DTR implementers about every DTR invocation to support measures evaluating DTR implementation"
 * ^status = #draft
 * ^experimental = false
 * ^extension[$fmm].valueInteger = 1
@@ -67,7 +69,7 @@ Description: "A logical model describing the information that should be captured
 
 * questionnaireFailure   0..1 code             "Questionnaire failure mode"  "Questionnaire failure mode"
 
-* elapsedTime            0..1 time             "cumulative time that questionnaire was active"  "cumulative time from DTR start to QR store, including from multiple sessions"
+* elapsedTime            0..1 time             "Cumulative time that questionnaire was active"  "cumulative time from DTR start to QR store, including from multiple sessions"
 
 // * coverage-assertion-id  0..1 string           "Id for coverage assertion"           "Corresponds to the coverage-assertion-id from the coverage-information extension."
 
