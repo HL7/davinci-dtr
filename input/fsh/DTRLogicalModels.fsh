@@ -7,7 +7,7 @@ Description: "A logical model describing the information that should be captured
 * ^extension[$fmm].valueInteger = 1
 * ^extension[$standards-status].valueCode = #informative
 * source              1..1 code            "provider-src | payer-src | SOFApp-src"  "A code to indicate which type of system collected the metric data."
-* source              from Metric-Source (required)
+* source              from MetricSource (required)
 * sofApp              0..1 url             "URL of SOF application" "URL of SOF application to identify the specific DTR application used by the provider and payer.  If not present, then the application is an EHR applications."
 
 * payerId             1..1 Identifier      "Identifier assigned to this payer"      "Identifier for the organization that is used to identify the organization across multiple disparate systems."
@@ -24,10 +24,20 @@ Description: "A logical model describing the information that should be captured
 
 * action              1..* BackboneElement  "Actions performed"  "Actions performed between a system and the DTR application."
   * actionDetail      1..1 code             "launch | Qpackage | MRQuery | NextQ | StoreQR" "The issue.code value from the OperationOutcome for this issue."
-  * actionDetail      from Metric-Action (required)
+  * actionDetail      from MetricAction (required)
   * requestTime       1..1 instant          "Time for start of action"  "The time stamp when the action was initiated."
   * responseTime      0..1 instant          "Time for end of action"    "The time stamp when the action was completed (including error return)"
   * exchangeResponse  1..1 integer          "HTTP response status code" "The HTTP response status code associated with the action."
+  * errorCode         0..1 code             "From OperationOutcome.code" "Describes the type of the issue from the IssueType value set."
+  * errorCode         from MetricIssueType (required)
+  * errorDetail       0..1 CodeableConcept  "From OperationOutcome.details" "Additional details about the error. This may be a text description of the error or a system code that identifies the error."
+  * errorDetail       from MetricIssueDetails (required)
+
+* launchMode          1..1 code             "crdlaunch | relaunch | salaunch | cdexlaunch" "Indicates the launch mode involved"
+* launchMode          from MetricLaunchMode (required)
+
+* orderItem           1..1 CodeableConcept  "USCore Procedure Code" "The specific procedure, item, medication, appointment, nutrition that is the subject of the order/appointment"
+* orderItem           from $USCORE311VS (extensible)
 
 // * requestTime       1..1 instant         "Time hook initiated"                 "For providers, the time the hook call was made.  For payers, the time the hook call was received."
 // * responseTime      0..1 instant         "Time of hook response"               "For providers, the time the hook response was received.  For payers, the time the hook response was returned."
