@@ -61,6 +61,7 @@ The IG is organized into the following sections:
 * [Credits](credits.html) Identifies the individuals and organizations involved in developing this IG.
 * [Change History](changehistory.html) Documents the specific ballot reconciliation changes as well as the corresponding Jira tickets applied to this IG.
 * [Formal Specification](specification.html) Provides the technical conformance details for the specification.
+* [DTR Metrics](metrics.html) Provides guidance on capturing formal metrics to help evaluate and potentially benchmark DTR implementations.
 * [Artifacts](artifacts.html) Introduces and provides links to the FHIR profiles, operations, extensions, as well as examples.
 
 ### Dependencies
