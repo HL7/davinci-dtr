@@ -32,10 +32,12 @@ Description: "Codes temporarily defined as part of the DTR implementation guide.
 * #SOFApp-src   "SOFApp-sourced"   "The metric information was captured from the SMART on FHIR App's perspective"
 
 * #launch     "launch-action"      "The action described was a launch"
-* #Qpackage   "Qpackage-action"    "The action described was a Questionnaire Package operation"
-* #MRQuery    "MRQuery-action"     "The action described was a medical record query"
-* #NextQ      "NextQ-action"       "The action described was a call for the next question"
-* #StoreQR    "StoreQR-action"     "The action described was the storage of a Questionnaire Response"
+* #qpackage   "qpackage-action"    "The action described was a Questionnaire Package operation"
+* #mrquery    "mrquery-action"     "The action described was a medical record query"
+* #nextq      "nextq-action"       "The action described was a call for the next question"
+* #response   "response-action"    "The action described was a response"
+* #returnqr   "returnqr action"    "The action described was the return of a Questionnaire Response"
+
 * #crdlaunch  "CRD launch"         "DTR App launched from CRD"
 * #relaunch   "Re-launch"          "DTR App relaunched"
 * #salaunch   "Standalone launch"  "DTR Standalone launch"
@@ -84,35 +86,8 @@ Description: "A list of codes indicating the action performed"
 * ^status = #draft
 * ^experimental = false
 * DTRTempCodes#launch
-* DTRTempCodes#Qpackage
-* DTRTempCodes#MRQuery
-* DTRTempCodes#NextQ
-* DTRTempCodes#StoreQR
-
-// ************************************************************
-ValueSet: MetricIssueType
-Id: metric-IssueType
-Title: "Metric Issue Type"
-Description: "A list of codes indicating the error type returned"
-* ^status = #draft
-* ^experimental = false
-* include codes from system $issuetype-cs
-
-// ************************************************************
-ValueSet: MetricIssueDetails
-Id: metric-issuedetails
-Title: "Metric Issue Details"
-Description: "A list of codes indicating the additional details of the error type returned"
-* ^status = #draft
-* ^experimental = false
-* include codes from system $issuedetails-cs
-
-// ************************************************************
-ValueSet: MetricRoleInteraction
-Id: metric-RoleInteraction
-Title: "Metric Role Interaction"
-Description: "A list of codes indicating the action performed"
-* ^status = #draft
-* ^experimental = false
-* DTRTempCodes#manual
-* DTRTempCodes#APmod
+* DTRTempCodes#qpackage
+* DTRTempCodes#mrquery
+* DTRTempCodes#nextq
+* DTRTempCodes#response
+* DTRTempCodes#returnqr
