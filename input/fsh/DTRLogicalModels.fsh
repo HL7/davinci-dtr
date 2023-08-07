@@ -45,14 +45,14 @@ Description: "A logical model describing the information that should be captured
   * type                 1..1 code             "Kind of resource" "What kind of resource was accessed."
   * type                 from ResourceType (required)
   * profile              0..1 canonical        "Solicited profile"  "Indicates the sub-type of data accessed in situations where multiple US-core profiles could apply (e.g., Observation).  Note: This does not mean that the data received was actually valid against the profile, merely that the search criteria used were intended to retrieve data of this type."
-    * ^type.targetProfile = "http://hl7.org/fhir/StructureDefinition/StructureDefinition"
+    // * ^type.targetProfile = "http://hl7.org/fhir/StructureDefinition/StructureDefinition"
   * count                1..1 positiveInt      "Number retrieved"  "How many resources of that type were accessed."
 
-* questionnaire          1..* BackboneElement  ""  ""
+* questionnaire          1..* BackboneElement  "Questionnaire"  "Questionnaire"
   * reference            1..1 canonical        "This is the URL for the canonical questionnaire"  "This is the URL for the canonical questionnaire that is retrieved from the payer operation endpoint."
   * adaptive             1..1 boolean          "True if adaptive form"  "If the Questionnaire is an adaptive form, the value is True."
   * response             1..1 boolean          "This is the URL for the QuestionniareResponse canonical questionnaire"  "The URL for the canonical questionnaire that is the basis for the questionnaire response passed in from the payer during CRD."
-  * failure              0..1 CodeableConcept  ""  ""
+  * failure              0..1 CodeableConcept  "Failure code"  "Failure code"
   * reviewPrior          1..1 boolean          "True if review prior to final save"  "If the provider reviewed the QuestionnaireResponse prior to saving the final version the value is set to True."
   * enabledQuestions     0..1 positiveInt      "Number of enabled questions"  "The count of all questions enabled during the execution of the questionnaire."
   * autoPopulated        0..1 positiveInt      "Number of questions autopopulated"  "The count of all questions that were autopopulated from the patient's medical record."
