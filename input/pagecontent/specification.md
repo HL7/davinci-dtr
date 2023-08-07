@@ -26,7 +26,7 @@ Payers **MAY** also supply Questionnaire resources that conform to the [Structur
       Elements with example bindings or missing bindings will not be used.
       </td></tr>
   </table>
-</div><br>
+</div>
 
 More information regarding Questionnaires, workflow, and behaviors in the Structured Data Capture Implementation Guide:
 - [Basic SDC Workflow](http://hl7.org/fhir/uv/sdc/STU3/workflow.html)  
@@ -35,7 +35,7 @@ More information regarding Questionnaires, workflow, and behaviors in the Struct
 - [DTR SDC Questionnaire](StructureDefinition-dtr-sdc-questionnaire.html) - [Example](Questionnaire-home-o2-sdc-questionnaire.html)
 
 ##### Pre-Population
-DTR will automatically populate the answers to certain questions based on existing EHR data.  In some cases, it may populate all answers to the Questionnaire.  The DTR application **SHALL** provide the ability, but not requirement, for providers to review pre-populated answers prior to saving the resulting response for subsequent use within the EHR.  
+DTR will automatically populate the answers to certain questions based on existing EHR data.  In some cases, it may populate all answers to the Questionnaire.  The DTR application **SHALL** provide the ability, but NOT a requirement, for providers to review pre-populated answers prior to saving the resulting response for subsequent use within the EHR.  
 
 ##### Extension Usage
 With current EHR capabilities with respect to updating 'request' resources, there is no mechanism to revise the 'request' resource to have its "supportingInfo" (or "insurance") element point to the [QuestionnaireResponse](StructureDefinition-dtr-questionnaireresponse-r4.html)/[Bundle](http://build.fhir.org/ig/HL7/davinci-pas/StructureDefinition-profile-pas-request-bundle.html)/[ClaimResponse](http://hl7.org/fhir/us/davinci-hrex/STU1/StructureDefinition-hrex-claimresponse.html) that results from the DTR process. Instead, extensions are used to reference the relevant order. DTR clients **SHOULD** update their 'request' resources with the appropriate "supportingInfo" or "insurance" link to the relevant resource.
