@@ -21,7 +21,7 @@ Payers **MAY** also supply Questionnaire resources that conform to the [Structur
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
-    <tr><td style="width: 72px; border: none"><img src="{{site.data.info.assets}}assets/images/Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> <!-- Note Text Here -->
       Elements with example bindings or missing bindings will not be used.
       </td></tr>
@@ -103,7 +103,7 @@ The DTR App requests an OAuth token using SMART backend services and then uses t
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
-    <tr><td style="width: 72px; border: none"><img src="{{site.data.info.assets}}assets/images/Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> <!-- Note Text Here -->
       As a part of a CDS Hooks response, if there is a need for further information then the payer IT system <b>MAY</b> return a Card object with a Link object populated in the Card.links property. If the Link object has a URL property set to the launch URL of a DTR process, this can still be overridden by the EHR or Provider's preferred DTR application.
       </td></tr>
@@ -137,13 +137,13 @@ For cases where the DTR process is being launched outside the context of Coverag
 The DTR process will need to retrieve resources from a payer IT system to operate properly. This application will need to obtain a FHIR Questionnaire and associated Clinical Quality Language (CQL) logic files in order to execute. The payer can specify the endpoint to be a payer's, third party, Utilization Management Organization, or Business Association whereever the questionnaires, CQL, and value sets are made available. 
 
 <!-- <p markdown="1" class="notebox"x>
- <img src="{{site.data.info.assets}}assets/images/Note.png" style="float: left; width:18px; height:18px; margin-top: -1px; margin-left: -2px;">
+ <img src="Note.png" style="float: left; width:18px; height:18px; margin-top: -1px; margin-left: -2px;">
  <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;All Questionnaires and valuesets retrieved <b>SHALL</b> be version specific, as breaking changes may occur between versions and would likely cause failures or inconsistent data.
 </p> -->
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
-    <tr><td style="width: 72px; border: none"><img src="{{site.data.info.assets}}assets/images/Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> <!-- Note Text Here -->
         All Questionnaires and valuesets retrieved <b>SHALL</b> be version specific, as breaking changes may occur between versions and would likely cause failures or inconsistent data.
       </td></tr>
@@ -254,7 +254,7 @@ These are sufficient to invoke the DTR Questionnaire operations `$next-question`
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
-    <tr><td style="width: 72px; border: none"><img src="{{site.data.info.assets}}assets/images/Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> <!-- Note Text Here -->
         Payers must be cautious about prepopulating Questionnaires with sensitive information, because there are rare situations where a malicious application could attempt to access information that was not authorized by the EHR.  
       </td></tr>
@@ -275,7 +275,7 @@ The launch context, which comes to the DTR app through the access token bundle, 
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
-    <tr><td style="width: 72px; border: none"><img src="{{site.data.info.assets}}assets/images/Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> <!-- Note Text Here -->
         Any new parameters defined by this Implementation Guide should not be confused for generic resource-specific SMART launch parameters (which are handled as 'mandatory' and will cause the EHR to prompt the user for them if they're not already in active context).  For detailed guidance on the latest specifics of SMART launch context, refer to the <a href="http://hl7.org/fhir/smart-app-launch/scopes-and-launch-context.html#app-launch-scopes-and-launch-context">App Launch: Scopes and Launch Context</a> section of the SMART App Launch Implementation Guide. 
       </td></tr>
@@ -324,7 +324,7 @@ The provider can confirm that the sleep study has not yet been conducted and gen
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
-    <tr><td style="width: 72px; border: none"><img src="{{site.data.info.assets}}assets/images/Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> <!-- Note Text Here -->
         The ability to create tasks or 'to-dos' is outside of the scope of DTR and <b>SHOULD</b> be supported by the EHR implementation.  The questionnaire <b>SHOULD</b> be able to suspend completion until all tasks are completed. How the application is suspended is left to the implementer, but the state of the questionnaire <b>SHOULD</b> be preserved.
       </td></tr>
@@ -437,7 +437,7 @@ This IG will support the [HRex Decision point – Configured by consumer?](http:
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
-    <tr><td style="width: 72px; border: none"><img src="{{site.data.info.assets}}assets/images/Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> <!-- Note Text Here -->
  Other IGs might provide additional mechanisms for transmitting results of the completed QuestionnaireResponse to the payer.  The client that launches DTR is responsible for understanding the context of the launch, and thus for what to do with any QuestionnaireResponses that are persisted as a result of that launch.
       </td></tr>
@@ -468,7 +468,7 @@ In a QuestionnaireResponse, this will be a 'repeating' question with one or more
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
-    <tr><td style="width: 72px; border: none"><img src="{{site.data.info.assets}}assets/images/Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> <!-- Note Text Here -->
  It may be appropriate to re-execute the DTR process once the specified tasks have been completed, as the DTR results may change.
       </td></tr>
@@ -538,7 +538,7 @@ As an example, a payer may have a set of rules or specific information that must
   
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
-    <tr><td style="width: 72px; border: none"><img src="{{site.data.info.assets}}assets/images/Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> <!-- Note Text Here -->
  Implementers could use <a href="specification.html#sdc-adaptive-forms">Adaptive Forms</a> to minimize the need for any CQL that provides conditional information retrieval. 
       </td></tr>
@@ -598,7 +598,7 @@ If any errors are encountered during execution, the app’s engine **SHALL NOT**
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
-    <tr><td style="width: 72px; border: none"><img src="{{site.data.info.assets}}assets/images/Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> <!-- Note Text Here -->
 A query for data that returns no results <b>SHALL NOT</b> be considered a failure.
       </td></tr>
@@ -760,7 +760,7 @@ When meeting the DTR / SMART on FHIR app requirements using a distinct app (i.e.
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
-    <tr><td style="width: 72px; border: none"><img src="{{site.data.info.assets}}assets/images/Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> <!-- Note Text Here -->
  CRD and DTR are designed to function without use case Prior Authorization Support (PAS). For example, to augment the documentation of medical necessity. Since not all orders require Prior Authorization some only require documentation therefore not all QuestionnaireResponses will need to be sent to a payer or PAS service.
       </td></tr>
@@ -790,7 +790,7 @@ When remote value sets are referenced in Questionnaires, full URLs are recommend
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
-    <tr><td style="width: 72px; border: none"><img src="{{site.data.info.assets}}assets/images/Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> <!-- Note Text Here -->
 Expanding a large value set at run time, may slow down the DTR app. In other words, having the value set already expanded could give the user a better client side experience.
       </td></tr>
@@ -811,7 +811,7 @@ When developing FHIR Libraries that depend on CQL content, the content element *
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
-    <tr><td style="width: 72px; border: none"><img src="{{site.data.info.assets}}assets/images/Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> <!-- Note Text Here -->
 The use of the `data` element requires it to contain a base-64 encoded string that represents the CQL file per the <a href="https://www.hl7.org/fhir/datatypes.html#Attachment">attachment specification</a>.
       </td></tr>
@@ -824,7 +824,7 @@ For example, this is a snippet from a FHIR Library:
   
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
-    <tr><td style="width: 72px; border: none"><img src="{{site.data.info.assets}}assets/images/Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> <!-- Note Text Here -->
 Although the use of `url` in the content element is valid, using the `data` element will likely be more interoperable.
       </td></tr>
