@@ -33,6 +33,12 @@ While designed to work with these other IGs, DTR can be implemented stand-alone.
 The third Da Vinci IG that is relevant to DTR is the [Health Record Exchange (HRex)](http://hl7.org/fhir/us/davinci-hrex/STU1/) implementation guide, which defines a number of shared profiles and other shared content used across Da Vincie IGs - including this one.
 
 This guide also depends on a number of non-Da Vinci specifications:
+<!-- <style>
+ul {
+    list-style-image: url('checkbox.png');
+}
+</style> -->
+
 <div markdown="1" class="pbox">
 <ul>
     <li>
@@ -56,6 +62,7 @@ This guide also depends on a number of non-Da Vinci specifications:
 
 ### Content and Organization
 The IG is organized into the following sections:
+
 * [Use Cases and Overview](usecases.html) Provides examples of how this specification can be used by provider and payer organizations.
 * [Technical Background](background.html) Describes the underlying technologies this specification builds upon.
 * [Credits](credits.html) Identifies the individuals and organizations involved in developing this IG.

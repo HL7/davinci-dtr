@@ -67,11 +67,11 @@ This IG supports the [R4](http://hl7.org/fhir/R4/index.html) version of the FHIR
 
 This IG leverages and builds on the [US Core](http://hl7.org/fhir/us/core/STU3.1.1/) IG defined by HL7 for sharing human EHR data in the US.  Implementers need to familiarize themselves with the profiles in [US Core](http://hl7.org/fhir/us/core/STU3.1.1/). 
 
-> | **FHIR Version:** | [FHIR R4 US Core (Release 3.1.1)](http://hl7.org/fhir/us/core/STU3.1.1/)   |
-> |                   |                                                                            |
-> | **Resources:**    | [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html)                 |
-> |                   | [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) |
-> |                   | [Task](http://hl7.org/fhir/R4/task.html)                                   |
+ | **FHIR Version:** | [FHIR R4 US Core (Release 3.1.1)](http://hl7.org/fhir/us/core/STU3.1.1/)   |
+ |                   |                                                                            |
+ | **Resources:**    | [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html)                 |
+ |                   | [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) |
+ |                   | [Task](http://hl7.org/fhir/R4/task.html)                                   |
  {: .grid;}
 
 #### US Core Implementation Guide
