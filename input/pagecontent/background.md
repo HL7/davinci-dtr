@@ -59,8 +59,7 @@ This IG uses terminology, notations, and design principles that are specific to 
 as general guidance on how to read FHIR specifications. Readers who are unfamiliar with FHIR are encouraged to read the following prior to reading the rest of this IG.
 
 * [FHIR overview]({{site.data.fhir.path}}overview.html)
-* [Developer's introduction]({{site.data.fhir.path}}overview-dev.html)
-* (or [Clinical introduction]({{site.data.fhir.path}}overview-clinical.html))
+* [Developer's introduction]({{site.data.fhir.path}}overview-dev.html) or [Clinical introduction]({{site.data.fhir.path}}overview-clinical.html) (as applicable)
 * [FHIR data types]({{site.data.fhir.path}}datatypes.html)
 * [Using codes]({{site.data.fhir.path}}terminologies.html)
 * [References between resources]({{site.data.fhir.path}}references.html)
@@ -71,24 +70,29 @@ This IG supports the [R4](http://hl7.org/fhir/R4/index.html) version of the FHIR
 
 This IG leverages and builds on the [US Core](http://hl7.org/fhir/us/core/STU3.1.1/) IG defined by HL7 for sharing human EHR data in the US.  Implementers need to familiarize themselves with the profiles in [US Core](http://hl7.org/fhir/us/core/STU3.1.1/). 
 
- | **FHIR Version:** | [FHIR R4 US Core (Release 3.1.1)](http://hl7.org/fhir/us/core/STU3.1.1/)   |
- |                   |                                                                            |
- | **Resources:**    | [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html)                 |
- |                   | [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) |
- |                   | [Task](http://hl7.org/fhir/R4/task.html)                                   |
- {: .grid;}
-
- <!-- <table>
+<table style="border: none;">
   <tr>
-    <td><b>FHIR Version:</b></td>
-    <td>[FHIR R4 US Core (Release 3.1.1)](http://hl7.org/fhir/us/core/STU3.1.1/)</td>
+    <td style="border: none;"><b>FHIR Version:</b></td>
+    <td style="border: none;"><a href="http://hl7.org/fhir/us/core/STU3.1.1/">FHIR R4 US Core (Release 3.1.1)</a></td>
   </tr>
-</table> -->
+  <tr>
+    <td style="border: none;"><b>Resources:</b></td>
+    <td style="border: none;"><a href="http://hl7.org/fhir/R4/questionnaire.html">Questionnaire</a></td>
+  </tr>
+  <tr>
+    <td style="border: none;"/>
+    <td style="border: none;"><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+  </tr>
+  <tr>
+    <td style="border: none;"/>
+    <td style="border: none;"><a href="http://hl7.org/fhir/R4/task.html">Task</a></td>
+  </tr>
+</table>
 
 #### US Core Implementation Guide
 Implementers will need the knowledge of [US Core](http://hl7.org/fhir/us/core/STU3.1.1/) to access information for pre population via CQL calls to *21st Century* compliant FHIR APIs. The light client **SHOULD** import the US Core Server capability statement.  
 
-This IG marks elements with the Must Support flag in its profiles.  Implementation of Must Support **SHALL** be compliant with HRex. However, note that this guide does profile on top of US Core profiles where Must Support has been defined on certain elements (e.g., [DTR Medication Request](StructureDefinition-dtr-medicationrequest.html) profile). The FHIR specification makes it clear that when profiling another profile, a MustSupport flag can be constrained further (i.e., taken from 'false' to 'true') but cannot be loosened (i.e., changed from 'true' to 'false').  See [US Core Must Support Guidance](https://hl7.org/fhir/us/core/STU3.1.1/general-guidance.html#must-support).
+This IG marks elements with the [Must Support flag](http://hl7.org/fhir/R4/conformance-rules.html#mustSupport) in its profiles.  Implementation of Must Support **SHALL** be compliant with HRex. However, note that this guide does profile on top of US Core profiles where Must Support has been defined on certain elements (e.g., [DTR Medication Request](StructureDefinition-dtr-medicationrequest.html) profile). The FHIR specification makes it clear that when profiling another profile, a MustSupport flag can be constrained further (i.e., taken from 'false' to 'true') but cannot be loosened (i.e., changed from 'true' to 'false').  See [US Core Must Support Guidance](https://hl7.org/fhir/us/core/STU3.1.1/general-guidance.html#must-support).
 
 Da Vinci DTR implementations **SHALL** conform to the US Core IG [Must Support](https://hl7.org/fhir/us/core/STU3.1.1/general-guidance.html#must-support) Guidance where US Core IG resources are used.
 
