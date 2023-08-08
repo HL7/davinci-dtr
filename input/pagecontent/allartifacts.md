@@ -2,9 +2,7 @@
 
 Compliance with this implementation guide requires compliance with several profiles, extensions, and value sets.  This page provides an overview of where these artifacts can be found.
 
-The FHIR artifacts used by DTR are organized according to whether the content was developed as part of the US Core implementation guides or are specific to this DTR implementation guide.
-
-As a result, there are 2 different lists of artifacts - one for this Da Vinci implementation guide and one for the US Core implementation guide.
+The FHIR artifacts used by DTR are organized according to whether the content was developed as part of the US Core implementation guides or are specific to this DTR implementation guide.  As a result, there are 2 different lists of artifacts - one for this *Da Vinci implementation guide* and one for the *US Core implementation guide*.
 
 ### Artifact Lists
 <table style="padding-left: 15px">
