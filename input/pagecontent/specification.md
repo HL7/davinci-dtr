@@ -136,11 +136,6 @@ For cases where the DTR process is being launched outside the context of Coverag
 ### Retrieval of Payer resources and SMART Launch
 The DTR process will need to retrieve resources from a payer IT system to operate properly. This application will need to obtain a FHIR Questionnaire and associated Clinical Quality Language (CQL) logic files in order to execute. The payer can specify the endpoint to be a payer's, third party, Utilization Management Organization, or Business Association whereever the questionnaires, CQL, and value sets are made available. 
 
-<!-- <p markdown="1" class="notebox"x>
- <img src="Note.png" style="float: left; width:18px; height:18px; margin-top: -1px; margin-left: -2px;">
- <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;All Questionnaires and valuesets retrieved <b>SHALL</b> be version specific, as breaking changes may occur between versions and would likely cause failures or inconsistent data.
-</p> -->
-
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
