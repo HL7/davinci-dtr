@@ -5,12 +5,12 @@ Compliance with this implementation guide requires compliance with several profi
 The FHIR artifacts used by DTR are organized according to whether the content was developed as part of the US Core implementation guides or are specific to this DTR implementation guide.  As a result, there are 2 different lists of artifacts - one for this *Da Vinci implementation guide* and one for the *US Core implementation guide*.
 
 ### Artifact Lists
-<table style="padding-left: 15px">
+<table style="border: none;">
   <tr>
-    <td><a href="artifacts.html">DTR-Specific Artifacts</a></td>
+    <td style="border: none;"/><td style="border: none;"><a href="artifacts.html">DTR-Specific Artifacts</a></td>
   </tr>
   <tr>
-    <td><a href="http://hl7.org/fhir/us/core/STU3.1.1/">US Core IG</a></td>
+    <td style="border: none;"/><td style="border: none;"><a href="http://hl7.org/fhir/us/core/STU3.1.1/">US Core IG</a></td>
   </tr>
 </table>
 

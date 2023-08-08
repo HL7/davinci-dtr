@@ -222,7 +222,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36542">FHIR-36542</a>:
   Context extension needs more definition
-  <a href="artifacts.html#artifacts-summary">(Artifacts Summary)</a>
+  <a href="artifacts.html">(Artifacts List)</a>
   </li>
   
   <li>
