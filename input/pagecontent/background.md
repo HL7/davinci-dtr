@@ -31,7 +31,8 @@ The graphic shows a high-level overview of CRD and DTR (DTR is the SMART on FHIR
   
 As an example, a clinician might order, “Home Oxygen Therapy”:
 
-![CRD DTR Flow](CRD_DTR_Flow.png){:style="float: none;"}
+<!-- ![CRD DTR Flow](CRD_DTR_Flow.png){:style="float: none;width:849px;height:307px"} -->
+[![CRD DTR Flow](CRD_DTR_Flow.png){:style="float: none;width:849px;height:307px"}](CRD_DTR_Flow.png "View Image Larger")
 
 * Arrows **1** - **4** represent the workflow processing to determine if there are documentation and/or prior authorization requirements (CRD):  
 
