@@ -20,10 +20,14 @@ The goal of the Burden Reduction IGs is to move from Telephone, FAX, Portal, and
 ### CRD and DTR Workflow
 The graphic shows a high-level overview of CRD and DTR (DTR is the SMART on FHIR app or equivalent native EHR app).
 
-<p markdown="1" class="notebox">
- <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;This workflow is just one example used to help illustrate the CRD and DTR APIs. It is expected that a supplemental guide will be produced moving forward to 
-help implementers with more concrete examples.
-</p>
+<div markdown="1" class="notebox">
+  <table style="border: none; margin-bottom: 0px;">
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+      <td style="border: none"> <!-- Note Text Here -->
+ This workflow is just one example used to help illustrate the CRD and DTR APIs. It is expected that a supplemental guide will be produced moving forward to help implementers with more concrete examples.
+      </td></tr>
+  </table>
+</div><br>
   
 As an example, a clinician might order, “Home Oxygen Therapy”:
 
@@ -73,6 +77,13 @@ This IG leverages and builds on the [US Core](http://hl7.org/fhir/us/core/STU3.1
  |                   | [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) |
  |                   | [Task](http://hl7.org/fhir/R4/task.html)                                   |
  {: .grid;}
+
+ <!-- <table>
+  <tr>
+    <td><b>FHIR Version:</b></td>
+    <td>[FHIR R4 US Core (Release 3.1.1)](http://hl7.org/fhir/us/core/STU3.1.1/)</td>
+  </tr>
+</table> -->
 
 #### US Core Implementation Guide
 Implementers will need the knowledge of [US Core](http://hl7.org/fhir/us/core/STU3.1.1/) to access information for pre population via CQL calls to *21st Century* compliant FHIR APIs. The light client **SHOULD** import the US Core Server capability statement.  

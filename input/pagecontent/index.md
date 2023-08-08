@@ -15,10 +15,14 @@ This Implementation Guide has expectations defined for four types of systems tha
 - [SMART apps with payer systems](CapabilityStatement-dtr-payer-app.html)
 - [Intermediary systems with defined functionality](CapabilityStatement-dtr-intermediary-system.html) 
 
-
-<p markdown="1" class="notebox">
- <b><span style="color:maroon;">NOTE:</span></b>&nbsp;&nbsp;The term Electronic Health Record (EHR) is used in this IG and can be considered equivalent to Electronic Medical Record (EMR) or a Practice Management System (PMS).
-</p>
+<div markdown="1" class="notebox">
+  <table style="border: none; margin-bottom: 0px;">
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+      <td style="border: none"> <!-- Note Text Here -->
+ The term Electronic Health Record (EHR) is used in this IG and can be considered equivalent to Electronic Medical Record (EMR) or a Practice Management System (PMS).
+      </td></tr>
+  </table>
+</div><br>
 
 <div markdown="1" class="new-content">
 Payers may have multiple back-end functions that handle different types of decision support and/or different types of services. However, for the purpose of DTR conformance, payers <b>SHALL</b> have a single endpoint (managed by themselves or a delegate) that can handle responding to all DTR service calls.
