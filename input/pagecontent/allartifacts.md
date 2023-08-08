@@ -25,3 +25,4 @@ The artifacts are of four types:
 * [Value Sets]({{site.data.fhir.path}}valueset.html) define the specific subsets of both DTR-defined and other code systems that must be (or are recommended to be) used within one or more profile elements
 </div>
 <br>
+For this implementation guide, Must Support means conformance to both the [US Core](http://hl7.org/fhir/us/core/STU3.1.1/) guidance, as well as the [HRex Implementation Guide](http://build.fhir.org/ig/HL7/davinci-ehrx/)
