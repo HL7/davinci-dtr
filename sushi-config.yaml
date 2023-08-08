@@ -53,6 +53,11 @@ pages:
     extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
+  epa.md:
+    title: Electronic Prior Authorization (ePA) Coordinator 
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
   specification.md:
     title: Formal Specification
     extension:
