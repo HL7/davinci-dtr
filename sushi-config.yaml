@@ -1,112 +1,114 @@
-# ╭─────────────────────────────────ImplementationGuide-fish.json──────────────────────────────────╮
+# ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
-# │  supported properties, see:                                                                    │
-# │  https://fshschool.org/docs/sushi/configuration/#full-configuration                            │
+# │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-instanceOptions:
-  setMetaProfile: never
-  manualSliceOrdering: true
-id: davinci-crd
-extension:
-  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-    valueCode: trial-use
-  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
-    valueInteger: 2
-canonical: http://hl7.org/fhir/us/davinci-crd
-version: 1.1.0-ci-build
-name: CoverageRequirementsDiscovery
-title: Da Vinci - Coverage Requirements Discovery
+id: hl7.fhir.us.davinci-dtr
+canonical: http://hl7.org/fhir/us/davinci-dtr
+name: DocumentationTemplatesRules
+title: "Documentation Templates and Rules"
+description: "The Documentation Templates and Rules (DTR) Implementation Guide (IG) specifies how payer rules can be executed in a provider context to ensure that documentation requirements are met. The IG is a companion to the Coverage Requirements Discovery (CRD) IG, which uses CDS Hooks to query payers to determine if there are documentation requirements for a proposed medication, procedure or other service."
 status: draft
-experimental: false
-publisher:
-  name: HL7 International - Financial Management Work Group
-contact:
-    telecom:
-      - system: url
-        value: http://www.hl7.org/Special/committees/cic
-description:  Guidelines for conveying coverage requirements to clinicians when planning treatment
-jurisdiction: urn:iso:std:iso:3166#US
-packageId: hl7.fhir.us.davinci-crd
 license: CC0-1.0
+version: 1.1.0-ballot
 fhirVersion: 4.0.1
-parameters:
-  path-expansion-params: "../../input/terminology-settings.json"
-  apply-publisher: true
-  apply-contact: true
-  globals-in-artifacts: true
-copyrightYear: 2019+
-releaseLabel: CI-build
+copyrightYear: 2022+
+releaseLabel: STU 1.1
+publisher:
+  name: HL7 Clinical Decision Support Work Group
+  url: http://www.hl7.org/Special/committees/dss
+jurisdiction: urn:iso:std:iso:3166#US
 
-# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
-# │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+parameters:
+  excludexml: true
+  excludettl: true
+  show-inherited-invariants: false
+
 dependencies:
-  hl7.fhir.us.core:
-    id: uscore
-    version: 3.1.1
-    reason: |
-      Defines U.S. EHR expectations on a range of resources that will be passed to and/or queried by CRD servers
-  hl7.fhir.uv.sdc:
-    id: sdc
-    version: 3.0.0
-    reason: |
-      Defines expecations for Questionnaires prompted for by cards
-  hl7.fhir.us.davinci-hrex:
-    id: hrex
-    version: 1.0.0
-    reason: |
-      Defines common conformance rules across all Da Vinci IGs, as well as additional constraints and profiles beyond U.S. Core
-  hl7.fhir.us.davinci-dtr:
-    id: dtr
-    version: 1.0.0
-    reason: |
-      Defines common documentation templates and rules across all Da Vinci IGs
-  hl7.fhir.extensions.r5:
-    id: r5ext
-    version: 4.0.1
-    reason: |
-      Makes available certain R5 elements for use as part of this R4 IG
+  hl7.fhir.uv.sdc: 3.0.0
+  hl7.fhir.us.core: 3.1.1
+
 pages:
   index.md:
-    title: CRD IG Home Page
+    title: Documentation Templates and Rules Implementation Guide Home Page
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
   usecases.md:
     title: Use Cases and Overview
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
+  credits.md:
+    title: Credits
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
+  changehistory.md:
+    title: Change History
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
   background.md:
     title: Technical Background
-  foundation.md:
-    title: Foundational Requirements
     extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: trial-use
-  deviations.md:
-    title: CDS Hook Deviations and Enhancements
-    extension:
-      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: trial-use
-  hooks.md:
-    title: Supported Hooks
-    extension:
-      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: trial-use
-  cards.md:
-    title: Supported Cards
-    extension:
-      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: trial-use
-  implementation.md:
-    title: Implementation Considerations
+        valueCode: informative
+  specification.md:
+    title: Formal Specification
     extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: trial-use
   metrics.md:
-    title: CRD Metrics
-  allartifacts.md:
-    title: FHIR Artifacts
-    artifacts.html:
-      title: Artifact List
+    title: DTR Metrics
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
+  artifacts.html:
+    title: Artifacts Summary
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
   downloads.md:
     title: Downloads
-  credits.md:
-    title: Credits
-  history.md:
-    title: Change History
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
+ 
+menu:
+  Table of Contents: toc.html
+
+  Home: index.html
+
+  Background:
+    Use Cases and Overview: usecases.html
+    Technical Background: background.html
+    Credits: credits.html
+    Change History: changehistory.html
+
+  Specification:
+    Formal Specification: specification.html
+    DTR Metrics: metrics.html
+    ePA Coordinator: epa.html
+ 
+  FHIR Artifacts: 
+    Artifacts Summary: artifacts.html 
+    Capability Statements: artifacts.html#1
+    Operations: artifacts.html#2
+    Search Parameters: artifacts.html#3
+    Logical Models: artifacts.html#4
+    Profiles: artifacts.html#5
+    Extensions: artifacts.html#6
+    Value Sets: artifacts.html#7
+    Code Systems: artifacts.html#8
+    Examples: artifacts.html#9
+
+  Base Specs:
+    FHIR R4 Spec: new-tab {{site.data.fhir.path}}
+    US Core 3.1.1: new-tab http://hl7.org/fhir/us/core/STU3.1.1/index.html
+    SDC: new-tab {{site.data.fhir.ver.hl7_fhir_uv_sdc}}
+
+  Support:
+    Project Home: new-tab https://confluence.hl7.org/pages/viewpage.action?pageId=91980079
+    Discussion Forum: new-tab https://chat.fhir.org/#narrow/stream/197320-Da-Vinci-DTR
+    Propose a Change: new-tab http://hl7.org/fhir-issues
+    Downloads: downloads.html
