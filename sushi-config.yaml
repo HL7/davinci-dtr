@@ -68,11 +68,16 @@ pages:
     extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
-  artifacts.html:
-    title: Artifacts Summary
+  allartifacts.md:
+    title: FHIR Artifacts
     extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
-        valueCode: trial-use
+        valueCode: informative
+    artifacts.html:
+      title: Artifact List
+      extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: trial-use
   downloads.md:
     title: Downloads
     extension:
@@ -95,17 +100,10 @@ menu:
     DTR Metrics: metrics.html
     ePA Coordinator: epa.html
  
-  FHIR Artifacts: 
-    Artifacts Summary: artifacts.html 
-    Capability Statements: artifacts.html#1
-    Operations: artifacts.html#2
-    Search Parameters: artifacts.html#3
-    Logical Models: artifacts.html#4
-    Profiles: artifacts.html#5
-    Extensions: artifacts.html#6
-    Value Sets: artifacts.html#7
-    Code Systems: artifacts.html#8
-    Examples: artifacts.html#9
+  FHIR Artifacts:
+    Artifacts Overview: allartifacts.html
+    DTR-specific Artifacts: artifacts.html
+    US Core: new-tab http://hl7.org/fhir/us/core/STU3.1.1/index.html
 
   Base Specs:
     FHIR R4 Spec: new-tab {{site.data.fhir.path}}
