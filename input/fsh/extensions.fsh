@@ -62,7 +62,7 @@ Description: "Identifies the origin of the information in the answer and how it 
 * extension[author].extension[role] ^short = "The role of the final human who authored the information adjustment"
 * extension[author].extension[role] ^definition = "The role of the final human who authored the information adjustment"
 * extension[author].extension[role].value[x] 1..1
-* extension[author].extension[role].value[x] only code
+* extension[author].extension[role].value[x] only CodeableConcept
 * extension[author].extension[role].value[x] from $practitioner-role (required)
 
 * extension[author].extension[practitioner] only Extension
