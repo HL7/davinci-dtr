@@ -1,25 +1,19 @@
-One of the main objectives of the DTR implementation guide (and the Burden Reduction guides as a whole) is to
-improve efficiency of the healthcare system with respect to provider-payer interaction.  However, for this
-objective to be achieved, it's important that the information provided by payers be useful and timely and
-it's equally important that the relevant information from the EHR be available (and findable) for payers in
-computable form.
+### Overview
+This Implementation Guide (IG) is one of 4 HL7 Da Vinci IGs that are designed to address the challenges of automating the exchange of information between a provider and the responsible payer to determine coverage of services, items, and referrals. In particular, these IGs standardize the exchange of information required to automate the Prior Authorization (PA) process. 
 
-EHRs, payers, and governing authorities such as CMS will all have an interest in understanding how well the
-implementation of DTR is working.  
+The specific IGs are:
+1.	[Coverage Requirements Discovery (CRD)](https://build.fhir.org/ig/HL7/davinci-crd/)
+2.	Documentation Templates and Rules (DTR)
+3.	[Prior Authorization Support (PAS)](http://build.fhir.org/ig/HL7/davinci-pas/)
+4.	[Clinical Documentation Exchange (CDex)](http://build.fhir.org/ig/HL7/davinci-ecdx/)
 
-It is likely that formal metrics (likely using the [Measure]({{site.data.fhir.path}}measure.html) resource)
-will be defined to help evaluate and potentially benchmark DTR implementations.  However, in order to evaluate
-such measures, the relevant information will need to be available in both provider and payer systems to support
-the measures.
+Each guide supports a specific set of functions and exchanges required to determine payer coverage for specific services, items, and referrals.
 
-In the interest of enabling such evaluation processes, this guide has defined a 
-[logical DTR Metric model](StructureDefinition-DTRMetricData.html) that describes the data elements most
-likely to be relevant for such evaluation.
+To maximize the value of these IGs, it is imperative that each IG is integrated into clinical workflow at the appropriate point and all of the exchanges required by each IG are fully supported by all of the participants (providers, intermediaries, and payers). 
 
-This model is <u>NOT</u> a FHIR data structure for information exchange.  Instead, it is a logical model that describes
-the types of data that should be available and any constraints on the data (e.g., cardinality, terminology) that
-should be captured by DTR implementers to support the evaluation of metrics.  Measures can then be defined
-in a standardized way based on these measures.
+Each of these IGs recommends a set of metrics that **SHOULD** or **MAY** be collected by each of the implementations to facilitate the evaluation of adoption, functionality, processes, and improved outcomes. While there is currently no requirement to aggregate these metrics, it is reasonable to believe that in the future interested entities (providers, payers, regulators, quality organization, certification agencies, states, …) will ask for these metrics to evaluate the ongoing automation of the supported processes / exchanges. While this guide will not require these metrics to be captured in this release, the authors strongly suggest each implementation should do so with the expectation that collection and dissemination of these metrics may become a requirement (**SHALL**) in future version of these IGs.
 
-DTR implementers **SHOULD** store information for each DTR call in a manner that would allow them to respond to
-measures based on this logical model.
+The following table defines a set of metrics with a short name, purpose, conformance, stakeholder, and collection/calculation instructions (based on the Metric Data model below). 
+
+### Metric Data Model
+This is a [Logical Model](StructureDefinition-DTRMetricData.html) of the information that **SHOULD** be collected and maintained for each CRD transaction.  While the implementer may choose any internal storage format that is appropriate for their system, the information collected should ultimately be mapped to the information model below.  This will allow a metrics (see the table above as an example) to be represented in terms of the Metric Data Model to provide consistent responses to metric requirements from the various interested parties (providers, payers, regulators, quality organization, certification agencies, states, …) by each of the participants in the CRD exchanges.
