@@ -37,7 +37,7 @@ The following table defines a set of metrics with a short name, purpose, conform
     <th></th>
     <th style="width: 140px;">Metric</th>
     <th style="width: 125px;">Metric Type</th>
-    <th style="width: 140px;">Provider/Payer/App Vendor/Provisioner</th>  
+    <th style="width: 140px;">Stakeholder</th>  
     <th>Calculation Example</th>  
   </tr>
   <tr>
