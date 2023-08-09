@@ -4,6 +4,7 @@ Alias: $dtr-medicationrequest = http://hl7.org/fhir/us/davinci-dtr/StructureDefi
 Alias: $dtr-nutritionorder = http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-nutritionorder
 Alias: $dtr-servicerequest = http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-servicerequest
 Alias: $us-core-encounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+Alias: $practitioner-role = http://hl7.org/fhir/ValueSet/practitioner-role
 
 /**************************************************************************************************************/
 Extension: PayerEndpoint
@@ -42,16 +43,30 @@ Description: "Identifies the origin of the information in the answer and how it 
 * obeys dtrx-1
 * extension contains
     source 1..1 and
-    author 0..1
+    author 0..1 
 * extension[source] only Extension
 * extension[source] ^short = "The origination of information"
 * extension[source] ^definition = "The origination of information"
 * extension[source].value[x] 1..1
 * extension[source].value[x] from DTRInformationOrigins (required)
 * extension[source].value[x] only code
-* extension[author] only Extension
-* extension[author] ^short = "The final human who authored the information adjustment"
-* extension[author] ^definition = "The final human who authored the information adjustment"
-* extension[author].value[x] 1..1
-* extension[author].value[x] only Reference(Practitioner)
 
+* extension[author] only Extension
+* extension[author] ^short = "The author of the information adjustment"
+* extension[author] ^definition = "The author of the information adjustment"
+* extension[author].extension contains 
+    role 1..1 and
+    practitioner 0..1
+    
+* extension[author].extension[role] only Extension
+* extension[author].extension[role] ^short = "The role of the final human who authored the information adjustment"
+* extension[author].extension[role] ^definition = "The role of the final human who authored the information adjustment"
+* extension[author].extension[role].value[x] 1..1
+* extension[author].extension[role].value[x] only code
+* extension[author].extension[role].value[x] from $practitioner-role (required)
+
+* extension[author].extension[practitioner] only Extension
+* extension[author].extension[practitioner] ^short = "The final practitioner who authored the information adjustment"
+* extension[author].extension[practitioner] ^definition = "The final practitioner who authored the information adjustment"
+* extension[author].extension[practitioner].value[x] 1..1
+* extension[author].extension[practitioner].value[x] only Reference(Practitioner)
