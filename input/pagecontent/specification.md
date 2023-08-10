@@ -28,7 +28,7 @@ Payers **MAY** also supply Questionnaire resources that conform to the [Structur
   </table>
 </div><br>
 
-More information regarding Questionnaires, workflow, and behaviors in the Structured Data Capture Implementation Guide:
+More information regarding Questionnaires, workflow, and behaviors can be found in the Structured Data Capture Implementation Guide:
 - [Basic SDC Workflow](http://hl7.org/fhir/uv/sdc/STU3/workflow.html)  
 - [Form Behavior and Calculation](http://hl7.org/fhir/uv/sdc/STU3/behavior.html)  
 - [Advanced Form Rendering](http://hl7.org/fhir/uv/sdc/STU3/rendering.html)
