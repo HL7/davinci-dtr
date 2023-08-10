@@ -1,3 +1,5 @@
+<div markdown="1" class="new-content">
+
 The current CRD, DTR, PAS, and CDex supporting the electronic Prior Authorization (ePA) workflow only focuses on the interactions between the provider HIT in total and the payer HIT in total, not the necessary interactions among the respective HIT solutions that make up the provider and payer HIT environment that need to participate in the ePA workflow.  
 
 Given the combinations of Health Information Technology (HIT) components that may be required to support prior authorization, ONC consider a certification process where certified software can use generic (or generically referenced) relied-upon software to meet certain requirements and can clearly specify the capabilities they rely on without the need to assert each permutation of relied-upon software with which they support the ePA workflow. Further guidance is needed for the interactions necessary within each of the provider and payer HIT configurations based on the functions/roles of those HIT solutions, and requires the relied upon software approach using predictable, standards-based capabilities to participate in an ePA workflow and for HIT that provides full support for ePA workflow through its certified HIT.  
@@ -38,3 +40,5 @@ The table briefly describes each action along with:
 [![Provider ePA Coordinator detail](ePA3.png){:style="float: none;width:930px;height:552px"}](ePA3.png "View Image Larger")
 
 The above graphics and descriptions outline the relevant interactions that will be further documented in subsequent releases of the IG as implementations of various combinations of HIT further inform the specifications.
+
+</div>

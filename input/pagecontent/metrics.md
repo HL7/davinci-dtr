@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="formatting.css" />
+
 ### Overview
 This Implementation Guide (IG) is one of 4 HL7 Da Vinci IGs that are designed to address the challenges of automating the exchange of information between a provider and the responsible payer to determine coverage of services, items, and referrals. In particular, these IGs standardize the exchange of information required to automate the Prior Authorization (PA) process. 
 
@@ -16,36 +18,20 @@ Each of these IGs recommends a set of metrics that may be collected by each of t
 ### Metric Examples
 The following table defines a set of metrics with a short name, purpose, conformance, stakeholder, and collection/calculation instructions (based on the Metric Data model below). 
 
-<style>
-  table, th, td 
-  {
-    border: 1px solid gainsboro; 
-  }
-  th {
-    background: ivory; 
-    padding-left: 3px;
-    padding-right: 3px;
-  }
-  th, td {
-    text-align: center;
-    vertical-align: middle;
-  }
-</style>
-
-<table>
+<table style="text-align: center; vertical-align: middle;">
   <tr>
     <th></th>
-    <th style="width: 140px;">Metric</th>
-    <th style="width: 125px;">Metric Type</th>
-    <th style="width: 140px;">Stakeholder</th>  
-    <th>Calculation Example</th>  
+    <th style="width: 140px; text-align: center; vertical-align: middle;">Metric</th>
+    <th style="width: 125px; text-align: center; vertical-align: middle;">Metric Type</th>
+    <th style="width: 140px; text-align: center; vertical-align: middle;">Stakeholder</th>  
+    <th style="text-align: center; vertical-align: middle;">Calculation Example</th>  
   </tr>
   <tr>
-    <td>1</td>
-    <td>Volume / % of from CRD, standalone, CDex  launch</td>
-    <td>Adoption Process</td>
-    <td>Provider or App Vendor/Provisioner</td>   
-    <td>Example for CRD launch
+    <td style="text-align: center; vertical-align: middle;">1</td>
+    <td style="text-align: center; vertical-align: middle;">Volume / % of from CRD, standalone, CDex  launch</td>
+    <td style="text-align: center; vertical-align: middle;">Adoption Process</td>
+    <td style="text-align: center; vertical-align: middle;">Provider or App Vendor/Provisioner</td>   
+    <td style="text-align: center; vertical-align: middle;">Example for CRD launch
 for volume, count where 
 DTRMetricData.launchMode = "crd" 
 for %, divide by count of
@@ -54,11 +40,11 @@ express as percentage
     </td>   
   </tr>
   <tr>
-    <td>2</td>
-    <td>% as standard questionnaire or adaptive forms</td>
-    <td>Adoption Process</td>
-    <td>Payer DTR app</td>   
-    <td>Example for adaptive forms
+    <td style="text-align: center; vertical-align: middle;">2</td>
+    <td style="text-align: center; vertical-align: middle;">% as standard questionnaire or adaptive forms</td>
+    <td style="text-align: center; vertical-align: middle;">Adoption Process</td>
+    <td style="text-align: center; vertical-align: middle;">Payer DTR app</td>   
+    <td style="text-align: center; vertical-align: middle;">Example for adaptive forms
  count where 
 DTRMetricData.questionnaire.adaptive is True
  divide by count of
@@ -67,11 +53,11 @@ express as percentage
     </td>   
   </tr>
   <tr>
-    <td>3</td>
-    <td>% reviewed prior to completion</td>
-    <td>Process</td>
-    <td>Provider or App Vendor/Provisioner</td>   
-    <td> count where 
+    <td style="text-align: center; vertical-align: middle;">3</td>
+    <td style="text-align: center; vertical-align: middle;">% reviewed prior to completion</td>
+    <td style="text-align: center; vertical-align: middle;">Process</td>
+    <td style="text-align: center; vertical-align: middle;">Provider or App Vendor/Provisioner</td>   
+    <td style="text-align: center; vertical-align: middle;"> count where 
 DTRMetricData.questionnaire.reviewPrior is True
  divide by count of
 DTRMetricData where DTRMetricData.action.httpResponse contains "200"
@@ -80,11 +66,11 @@ Note: if DTRMetricData.questionnaire occurs more than one time then count once f
     </td>   
   </tr>
   <tr>
-    <td>4</td>
-    <td>% of questions auto populated</td>
-    <td>Process</td>
-    <td>Both</td>   
-    <td>sum 
+    <td style="text-align: center; vertical-align: middle;">4</td>
+    <td style="text-align: center; vertical-align: middle;">% of questions auto populated</td>
+    <td style="text-align: center; vertical-align: middle;">Process</td>
+    <td style="text-align: center; vertical-align: middle;">Both</td>   
+    <td style="text-align: center; vertical-align: middle;">sum 
 DTRMetricData.questionnaire.autopopulated
  divide by sum of
 DTRMetricData.questionnaire.enabledQuestions
@@ -93,11 +79,11 @@ Note: if DTRMetricData.questionnaire occurs more than one time then sum each occ
     </td>   
   </tr>
   <tr>
-    <td>5</td>
-    <td>% of auto populated question changed</td>
-    <td>Process</td>
-    <td>Both</td>   
-    <td>sum
+    <td style="text-align: center; vertical-align: middle;">5</td>
+    <td style="text-align: center; vertical-align: middle;">% of auto populated question changed</td>
+    <td style="text-align: center; vertical-align: middle;">Process</td>
+    <td style="text-align: center; vertical-align: middle;">Both</td>   
+    <td style="text-align: center; vertical-align: middle;">sum
 DTRMetricData.questionnaire.roleinteraction.count where
 DTRMetricData.questionnaire.roleinteraction.roleaction = "apmod"
  divide by sum of
@@ -107,11 +93,11 @@ Note: if DTRMetricData.questionnaire occurs more than one time then count once f
     </td>   
   </tr>
   <tr>
-    <td>6</td>
-    <td>Average Time to complete</td>
-    <td>Process</td>
-    <td>Both</td>   
-    <td>sum
+    <td style="text-align: center; vertical-align: middle;">6</td>
+    <td style="text-align: center; vertical-align: middle;">Average Time to complete</td>
+    <td style="text-align: center; vertical-align: middle;">Process</td>
+    <td style="text-align: center; vertical-align: middle;">Both</td>   
+    <td style="text-align: center; vertical-align: middle;">sum
 DTRMetricData.elapsedTime
 divide by count of
 DTRMetricData where DTRMetricData.action.httpResponse contains "200"
