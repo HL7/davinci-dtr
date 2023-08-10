@@ -762,7 +762,7 @@ This ballot addresses several additions, modifications, technical corrections, e
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-36004">FHIR-36004</a>:
   Change to use the CRD unsolicited prior auth profile
-  <a href="specification.html#prior-authorization-support-pas">(Prior Authorization Support (PAS))</a>
+  <a href="specification.html#how-dtr-passes-information-to-pas-foe-or-other-exchanges">(How DTR passes information to PAS, PAO or Other Exchanges)</a>
   </li>
   
   <li>
