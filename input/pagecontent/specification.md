@@ -428,7 +428,7 @@ Updating work-in-progress (WIP) QuestionnaireResponses may save time and effort.
 The payer IT system **SHOULD** support the FHIR create interaction to allow the DTR process to send the QuestionnaireResponse resource to the payer. The FHIR endpoint for the payer **MAY** require authentication. If it is required, it **SHALL** follow the procedures described in [Authentication of SMART on FHIR application to payer API](specification.html#authentication-of-smart-on-fhir-application-to-payer-api).
 
 ##### Pushing QuestionnaireResponse to Payer
-This IG will support the [HRex Decision point – Configured by consumer?](http://build.fhir.org/ig/HL7/davinci-ehrx/exchanging.html#configured-by-consumer) when a DTR SMART App or DTR Native App wants to push a QuestionnaireResponse to a Payer.  
+This IG will support the [HRex Decision point – Configured by consumer?](http://build.fhir.org/ig/HL7/davinci-ehrx/exchanging.html#configured-by-consumer) when a DTR SMART App or DTR Native App wants to push a QuestionnaireResponse to a Payer.  Resulting information is to be sent to the Payer (or any third party), the DTR SMART App (or equivalent native app) **SHALL** include a configurable step to allow the provider to review and grant permission to send the information gathered in the QuestionnaireResponse before sending.
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
