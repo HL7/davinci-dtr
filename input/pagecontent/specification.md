@@ -442,33 +442,36 @@ This IG will support the [HRex Decision point – Configured by consumer?](http:
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
 ---------------------
-### How DTR passes information to PAS, FOE or Other Exchanges
-The DTR application **SHALL** save the QuestionnaireResponse to the EHR upon completion (see section [Persisting Results](specification.html#persisting-results)). The next step after completing the Questionnaire may include sending a Claim to a PAS [(Prior Auth Support)](http://build.fhir.org/ig/HL7/davinci-pas/) server for or an Order to FOE [(FHIR Orders Exchange)](http://build.fhir.org/ig/HL7/dme-orders/) for ordering. Specifications on required resources can be found in the Implementation Guides for each of those use cases.  
- 
-The QuestionnaireResponse may include groups (items with specific linkIds) that contain references to resources to include. These may be attachments needed by either PAS or FOE. Also  subject, author, and source will be included.
+### How DTR passes information to PAS, FOE, or other exchanges
 
-There are some expectations around how DTR will pass this information:  
-* Save the QuestionnaireResponse (only) on the EHR once it is complete.   
-* The QuestionnaireResponse may include groups (with magic linkIds) that contain references to resources to include, for example, as attachments in PAS, in claim submission or as attachments to the order (e.g., FOE).     
-* There **SHOULD** be a magic linkId that includes the order id of the order the   QuestionnaireResponse is associated with that an EHR could use after-the-fact to establishing a link (if the temporary id of the in-memory order is retained/meaningful).   
- 
-#### Prior Authorization Support (PAS) 
-The PAS Bundle linkId **SHOULD** be used for attached bundles containing resources needed for PAS. All of the referenced resources needed for PAS **SHALL** be stored as contained resources within the QuestionnaireResponse for easier reference. These resources **SHOULD** include the resources collected by DTR to complete the QuestionnaireResponse, as well as the Claim sent to PAS. If the [ClaimResponse](http://hl7.org/fhir/us/davinci-hrex/STU1/StructureDefinition-hrex-claimresponse.html) has already been received from a PAS request, this **SHALL** be stored in the QuestionnaireResponse with a reference to it in the items list as well. (All references to a ClaimResponse **SHALL** refer to the [HRex Prior Authorization profile of ClaimResponse](http://hl7.org/fhir/us/davinci-hrex/STU1/StructureDefinition-hrex-claimresponse.html))
- 
-#### FHIR Orders Exchange (FOE) 
-The FOE Bundle linkId should be used for attached bundles containing resources needed for FHIR Orders Exchange. All the referenced resources needed for FOE **SHALL** be stored as contained resources within the QuestionnaireResponse for easier reference. These resources **SHOULD** include the resources collected by DTR to complete the QuestionnaireResponse, as well as the Order sent to FOE. If a response has already been received from a FOE request, this **SHALL** be stored in the QuestionnaireResponse with a reference to it in the items list as well. (See the [FOE Implementation Guide](http://build.fhir.org/ig/HL7/dme-orders/) for more details)
+The information gathered via DTR can be used for a variety of purposes:
+* For inclusion as a prior authorization attachment (either via [PAS](http://build.fhir.org/ig/HL7/davinci-pas/), [CDex](http://build.fhir.org/ig/HL7/davinci-ecdx/), or via traditional attachment submission mechanisms).
+* For inclusion as a claims attachment as part of an X12 submission.
+* To accompany the order so the information is available to the performing system as per the [FHIR Orders Exchange IG](http://build.fhir.org/ig/HL7/dme-orders/) 
+* To be retained by the EHR in the event of a subsequent audit.
+* Additional purposes as yet undefined.
 
-#### Additional Workflow
-In a QuestionnaireResponse, this will be a 'repeating' question with one or more answers with a linkId of "DTR_TASK".  The question type will be 'Reference' and will refer to contained Task instances that describe workflow actions that need to occur, such as the creation of additional companion orders, pre-execution testing, follow-up orders, etc. These are created when the completion of the questionnaire has made evident that certain workflow steps necessary to satisfy payer requirements were confirmed missing by the user.  The EHR **SHOULD** add 'to do' items to the user's task list that correspond to the actions described within the Task instances.
+Once DTR has written a QuestionnaireResponse to the DTR Client and updated the QuestionnaireResponse.status element to `complete`, the DTR Client needs to understand what action(s) it should take with the collected information.  This is accomplished via two extensions:
+
+1. The [pertinentOrders](StructureDefinition-pertinentOrders.html) extension provides a reference to the Request resource(s) and/or Encounter that the QuestionnaireResponse relates to.
+2. The [intendedUse](StructureDefinition-intendedUse.html) extension indicates how the EHR is to use the information with respect to the associated orders/records
+
+In those cases where a QuestionnaireResponse is to be used to convey information either to the payer or to downstream service providers, the DTR Client **SHALL** 'wrap' the QuestionnaireResponse in a 'collection' Bundle complying with the [questionnaireResponseBundle] profile.  This Bundle will include the QuestionnaireResponse entry as its initial entry and will then also include any resources that are referenced by the QuestionnaireResponse as answerReference that are not already [contained] within the QuestionnaireResponse.  This ensures that all necessary information is delivered without a need for subsequent queries.
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> <!-- Note Text Here -->
- It may be appropriate to re-execute the DTR process once the specified tasks have been completed, as the DTR results may change.
+Only those resources directly referenced in the QuestionnaireResponse are included.  If further references from a referenced resource are desired, the designer of the Questionnaire must ensure that these are also included as answers (possibly as hidden answers automatically populated by CQL within the Questionnaire).
       </td></tr>
   </table>
 </div><br>
+
+While multiple purposes are possible, the expectation is that all information in the QuestionnaireResponse will be used for that purpose - e.g., If a QuestionnaireResponse had a purpose of 'prior authorization' and 'order transmission', then the full QuestionnaireResponse bundle would be sent as a prior authorization attachment and as an attachment when the order is sent to the performer.
+
+If there is a desire to send different content to different recipients, then distinct QuestionnaireResponses **SHALL** be used.
+
+It is up to the DTR Client to determine the process by which attachments to prior auth requests, claims or orders are assembled - this could be done automatically, or with human review.
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
