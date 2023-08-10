@@ -3,7 +3,7 @@ NOTE: Aliases are defined in GlobalAliasList.fsh
 **********/
 
 //==================================================================================
-// Service Request 
+// Medication Request 
 
 Profile:        DTRMedicationRequest
 Parent:         us-core-medicationrequest

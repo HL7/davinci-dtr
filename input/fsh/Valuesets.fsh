@@ -43,6 +43,9 @@ Description: "Codes temporarily defined as part of the DTR implementation guide.
 * #salaunch   "Standalone launch"     "DTR Standalone launch"
 * #cdexlaunch "CDex launch"           "DTR App launched from CDex"
 
+* #manual     "Manual"                "Manual"
+* #APmod      "APmod"                 "APmod"
+
 * #pa         "include-pa"            "The information in this QuestionnaireResponse should be packaged into a Bundle and submitted as part of (or in association with) a prior authorization for the associated request resource(s)."
 * #claim      "include-claim"         "The information in this QuestionnaireResponse should be packaged into a Bundle and submitted as part of (or in association with) the insurance claim for the services ordered by the associated request resource(s)."
 * #order      "include-order"         "The information in this QuestionnaireResponse should be packaged into a Bundle and submitted along with (or referenced as supporting information to) the associated request resource(s)."

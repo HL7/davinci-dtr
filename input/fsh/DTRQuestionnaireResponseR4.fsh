@@ -18,9 +18,10 @@ This profile allows questions to be answered with a type of Reference.  I.e. The
 * ^status = #draft
 * ^date = "2020-12-23T02:27:35+00:00"
 
-* extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/context named Context 0..1 MS
-* extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/pertinentOrders named pertinentOrders 1..* MS
-* extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/intendedUse named intendedUse 0..* MS
+* extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/context named Context 0..1 
+
+// * extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/pertinentOrders named pertinentOrders 1..* 
+// * extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/intendedUse named intendedUse 0..* 
 
 * basedOn 0..0
 * partOf 0..0
