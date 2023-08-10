@@ -92,13 +92,13 @@ menu:
   Background:
     Use Cases and Overview: usecases.html
     Technical Background: background.html
+    ePA Coordinator: epa.html
     Credits: credits.html
     Change History: changehistory.html
 
   Specification:
     Formal Specification: specification.html
     DTR Metrics: metrics.html
-    ePA Coordinator: epa.html
  
   FHIR Artifacts:
     Artifacts Overview: allartifacts.html
