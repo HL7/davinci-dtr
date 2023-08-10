@@ -54,7 +54,7 @@ pages:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
   epa.md:
-    title: Electronic Prior Authorization (ePA) Coordinator 
+    title: Electronic Prior Authorization (ePA) Coordinators
     extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
@@ -92,7 +92,7 @@ menu:
   Background:
     Use Cases and Overview: usecases.html
     Technical Background: background.html
-    ePA Coordinator: epa.html
+    ePA Coordinators: epa.html
     Credits: credits.html
     Change History: changehistory.html
 
