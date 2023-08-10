@@ -10,9 +10,32 @@ Alias: $practitioner-role = http://hl7.org/fhir/ValueSet/practitioner-role
 Extension: PayerEndpoint
 Id: endpoint
 Description: "This extension contains the endpoint for payer services."
-* value[x] ^short = "THe URL of the payer endpoint."
+* value[x] ^short = "The URL of the payer endpoint."
 * value[x] ^definition = "This contains the canonical url for the payer endpoint, for retrieval of payer resources like the Questionnaire and CQL."
 * value[x] only url
+* value[x] 1..1
+
+/**************************************************************************************************************/
+Extension: PertinentOrders 
+Id: pertinentOrders 
+Description: "Provides a reference to the Request resource(s) and/or Encounter that the QuestionnaireResponse relates to."
+* ^context[0].type = #element
+* ^context[=].expression = "QuestionnaireResponse"
+* value[x] ^short = "Reference to the pertinent order associated with this QuestionnaireResponse."
+* value[x] ^definition = "This contains references to the pertinent orders associated with this QuestionnaireResponse."
+* value[x] only Reference(Appointment or CommunicationRequest or DeviceRequest or Encounter or MedicationRequest or NutritionOrder or ServiceRequest or VisionPrescription)
+* value[x] 1..1
+
+/**************************************************************************************************************/
+Extension: IntendedUse 
+Id: intendedUse 
+Description: "Indicates how the EHR is to use the information with respect to the associated orders/records."
+* ^context[0].type = #element
+* ^context[=].expression = "QuestionnaireResponse"
+* value[x] ^short = "Reference to the pertinent order associated with this QuestionnaireResponse."
+* value[x] ^definition = "This contains references to the pertinent orders associated with this QuestionnaireResponse."
+* value[x] only CodeableConcept
+* value[x] from IntendedUse
 * value[x] 1..1
 
 /**************************************************************************************************************/
@@ -50,6 +73,7 @@ Description: "Identifies the origin of the information in the answer and how it 
 * extension[source].value[x] 1..1
 * extension[source].value[x] from DTRInformationOrigins (required)
 * extension[source].value[x] only code
+* extension[source].value[x] ^short = "auto | override | manual"
 
 * extension[author] only Extension
 * extension[author] ^short = "The author of the information adjustment"
