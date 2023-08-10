@@ -6,7 +6,7 @@ Given the combinations of Health Information Technology (HIT) components that ma
 
 The following drawing demonstrates the DTR Workflow exchanges between an integrated provider HIT environment and an integrated payer HIT environment in the upper portion.  The lower portion of the CRD workflow drawing represents the potential for electronic Prior Authorization (ePA) coordinator functionality to play a role between the provider HIT and the payer HIT.  It should be noted, that the exchanges between the provider HIT (including any ePA) and the payer HIT (including any ePA) will replicate all of the defined exchanges between provider and payer (represented by the green and orange arrows).  The red and purple arrows are representative of information exchange between the Provider ePA and the Provider systems (red arrows) or the information exchange between the Payer ePA and the Payer systems (purple arrows).
 
-[![DTR Workflow Image](ePA1.png){:style="float: none;width:890px;height:547px"}](ePA1.png "View Image Larger")
+[![DTR Workflow Image](ePA1.png){:style="float: none; width:890px;height:547px; margin-left: auto; margin-right: auto;display: block;"}](ePA1.png "View Image Larger")
 
 The following drawing provides additional detail regarding the exchanges between a Provider ePA Coordinator, multiple Provider HIT systems and the payer.  The boxes below the workflow drawing indicate the activities of the various components.  
 From left to right: 
@@ -20,7 +20,7 @@ The numbered workflow in the Provider ePA Coordinator indicates the inputs from 
 3.	Processing the Questionnaire
 4.	Storing the QuestionnaireResponse (including the QR Bundle)
 
-[![Provider ePA Coordinator detail](ePA2.png){:style="float: none;width:962px;height:523px"}](ePA2.png "View Image Larger")
+[![Provider ePA Coordinator detail](ePA2.png){:style="float: none; width:962px;height:523px; margin-left: auto; margin-right: auto;display: block;"}](ePA2.png "View Image Larger")
 
 The following graphic and associated table provides an example of the type of interactions that will need to be supported between an ePA coordinator and the various Provider HIT components.  
   
@@ -37,7 +37,7 @@ The table briefly describes each action along with:
 - ePA Coordinator API requirements
 - Comments regarding each transaction 
 
-[![Provider ePA Coordinator detail](ePA3.png){:style="float: none;width:930px;height:552px"}](ePA3.png "View Image Larger")
+[![Provider ePA Coordinator detail](ePA3.png){:style="float: none; width:930px;height:552px; margin-left: auto; margin-right: auto;display: block;"}](ePA3.png "View Image Larger")
 
 The above graphics and descriptions outline the relevant interactions that will be further documented in subsequent releases of the IG as implementations of various combinations of HIT further inform the specifications.
 
