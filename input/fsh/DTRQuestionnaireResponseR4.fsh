@@ -19,9 +19,13 @@ This profile allows questions to be answered with a type of Reference.  I.e. The
 * ^date = "2020-12-23T02:27:35+00:00"
 
 * extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/context named Context 0..1 
+* extension[Context] ^short = "Identifies the orders, coverages, and or other resources associated with the specified QuestionnaireResponse."
 
-// * extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/pertinentOrders named pertinentOrders 1..* 
-// * extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/intendedUse named intendedUse 0..* 
+* extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/pertinentOrders named pertinentOrders 1..* 
+* extension[pertinentOrders] ^short = "Provides a reference to the Request resource(s) and/or Encounter that the QuestionnaireResponse relates to."
+
+* extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/intendedUse named intendedUse 0..* 
+* extension[intendedUse] ^short = "Indicates how the EHR is to use the information with respect to the associated orders/records."
 
 * basedOn 0..0
 * partOf 0..0
