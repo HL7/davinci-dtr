@@ -85,7 +85,7 @@ Note: if DTRMetricData.questionnaire occurs more than one time then sum each occ
     <td style="text-align: center; vertical-align: middle;">Both</td>   
     <td style="text-align: center; vertical-align: middle;">sum
 DTRMetricData.questionnaire.roleinteraction.count where
-DTRMetricData.questionnaire.roleinteraction.roleaction = "apmod"
+DTRMetricData.questionnaire.roleinteraction.roleaction != "auto"
  divide by sum of
 DTRMetricData.questionnaire.autopopulated
 express as percentage
