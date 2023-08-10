@@ -3,29 +3,49 @@
 # │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.davinci-dtr
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    valueCode: trial-use
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 2
 canonical: http://hl7.org/fhir/us/davinci-dtr
+version: 1.1.0-ci-build
 name: DocumentationTemplatesRules
 title: "Documentation Templates and Rules"
 description: "The Documentation Templates and Rules (DTR) Implementation Guide (IG) specifies how payer rules can be executed in a provider context to ensure that documentation requirements are met. The IG is a companion to the Coverage Requirements Discovery (CRD) IG, which uses CDS Hooks to query payers to determine if there are documentation requirements for a proposed medication, procedure or other service."
 status: draft
 license: CC0-1.0
-version: 1.1.0-ballot
 fhirVersion: 4.0.1
 copyrightYear: 2022+
-releaseLabel: STU 1.1
+releaseLabel: CI-build
 publisher:
   name: HL7 Clinical Decision Support Work Group
   url: http://www.hl7.org/Special/committees/dss
 jurisdiction: urn:iso:std:iso:3166#US
 
 parameters:
+  apply-publisher: true
+  apply-contact: true
   excludexml: true
   excludettl: true
   show-inherited-invariants: false
 
 dependencies:
-  hl7.fhir.uv.sdc: 3.0.0
-  hl7.fhir.us.core: 3.1.1
+  hl7.fhir.us.core:
+    id: uscore
+    version: 3.1.1
+    reason: |
+      Defines U.S. EHR expectations on a range of resources that will be passed to and/or queried by CRD servers
+  hl7.fhir.uv.sdc:
+    id: sdc
+    version: 3.0.0
+    reason: |
+      Defines expecations for Questionnaires prompted for by cards
+  hl7.fhir.us.davinci-hrex:
+    id: hrex
+    version: 1.0.0
+    reason: |
+      Defines common conformance rules across all Da Vinci IGs, as well as additional constraints and profiles beyond U.S. Core
 
 pages:
   index.md:
