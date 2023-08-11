@@ -78,6 +78,18 @@ If a payer uses [adaptive forms](http://build.fhir.org/ig/HL7/sdc/adaptive.html)
 
 If an adaptive questionnaire response includes an unsolicited determination that authorization requirements have been 'satisfied', the EHR **SHALL** allow the clinician to flag the provided determination number as "not valid" - e.g., If they feel the determination was based on incorrect information.  If a payer receives a new invocation of an adaptive form for the same order, they **SHALL** treat the result of the new completion as replacing any previous completion from a coverage determination process.
 
+##### Determinations from Adaptive Forms
+In some cases, upon receiving enough answers from an adaptive form, a payer will be in a position to make assertions about coverage, prior authorization, and/or any 'additional documentation needed' similar to what is provided by the CRD process.  This information needs to be made available to the DTR client in a computable fashion.  To do so, the adaptive form service will place the [coverage-information](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension on the root of the QuestionnaireResponse, alongside the [pertinentOrders](StructureDefinition-pertinentOrders.html) extension.  When the QuestionnaireResponse is stored in the DTR client, client **SHALL** propagate the [coverage-information](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension into each of the pertinent orders.
+
+<div markdown="1" class="notebox">
+  <table style="border: none; margin-bottom: 0px;">
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+      <td style="border: none"> <!-- Note Text Here -->
+It will be unusual for a coverage-information extension created by an adaptive form to come back saying 'additional documentation required', however there are theoretical use-cases for this to be useful and this specification does not prohibit such behavior.  If this occurs, it may result in a subsequent launch of DTR, or could result in the DTR client prompting the user as to whether they want to move on to filling out the new form(s).
+      </td></tr>
+  </table>
+</div><br>
+
 ##### Adaptive Forms and Prior Authorization
 
 When a prior authorization comes back while using an Adaptive Form, the SMART app **SHALL**:
@@ -754,7 +766,7 @@ Compliant questionnaires **SHALL NOT** include hidden or read-only questions unl
 
 Any EHR with SMART on FHIR support **SHOULD** be prepared to deal with the implications of providing a client with the scopes they request. For example, EHRs **SHOULD** limit FHIR search capabilities for clients, requiring a patient ID in any search query to ensure the client can only access resources related to that patient.
 
-When meeting the DTR / SMART on FHIR app requirements using a distinct app (i.e., not within the EHR), the app **SHALL** have a distinct client id for when it’s being invoked purely as a mechanism to supplement EHR data, as opposed to when it is being invoked to share data back to the payer.
+When meeting the DTR SMART on FHIR app requirements using a distinct app (i.e., not within the EHR), the app **SHALL** have a distinct client id for when it’s being invoked purely as a mechanism to supplement EHR data, as opposed to when it is being invoked to share data back to the payer.
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
