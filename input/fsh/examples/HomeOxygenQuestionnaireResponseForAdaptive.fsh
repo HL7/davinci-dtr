@@ -14,7 +14,7 @@ Description: "An example Adaptive SDC questionnaire for Home Oxygen Therapy."
 * publisher = "Da Vinci DTR"
 * contact.name = "Example Author"
 
-* derivedFrom = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire"
+* derivedFrom = "http://hl7.org/fhir/StructureDefinition/Questionnaire"
 * extension[sdc-questionnaire-questionnaireAdaptive].valueBoolean = true
 * item.linkId = "1"
 * item[=].text = "Relevant Patient Diagnoses (conditions that might be expected to improve with oxygen therapy)"

@@ -12,7 +12,7 @@ Description: "Inline Questionnaire for QuestionnaireResponse"
 * date = "2020-01-16T00:00:00+00:00"
 * publisher = "Da Vinci DTR"
 * contact.name = "Example Author"
-* derivedFrom = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire"
+* derivedFrom = "http://hl7.org/fhir/StructureDefinition/Questionnaire"
 * extension[sdc-questionnaire-questionnaireAdaptive].valueBoolean = true
 * item[0].linkId = "1"
 * item[=].text = "Patient Information"
