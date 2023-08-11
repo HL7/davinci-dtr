@@ -26,7 +26,7 @@ Description: "An example practitioner referred to by the example resources."
 
 Instance: ServiceRequestExample1
 InstanceOf: ServiceRequest
-Usage: #inline
+//Usage: #inline
 * status = #active
 * intent = #original-order
 * code = http://loinc.org#24338-6
