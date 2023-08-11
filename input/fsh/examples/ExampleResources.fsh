@@ -1,3 +1,4 @@
+// **********************************************************************************************************************************
 Instance: PatientExample1
 InstanceOf: Patient
 Description: "An example patient used in the example resources."
@@ -7,6 +8,7 @@ Description: "An example patient used in the example resources."
 * address.type = #both
 * address.state = "MA"
 
+// **********************************************************************************************************************************
 Instance: PractitionerExample1
 InstanceOf: USCorePractitionerProfile
 Description: "An example practitioner referred to by the example resources."
@@ -16,6 +18,7 @@ Description: "An example practitioner referred to by the example resources."
 * name.given = "Jane"
 * name.prefix = "Dr."
 
+// **********************************************************************************************************************************
 Instance: PractitionerRoleExample1
 InstanceOf: USCorePractitionerRoleProfile
 Description: "An example practitioner referred to by the example resources."
@@ -24,6 +27,7 @@ Description: "An example practitioner referred to by the example resources."
 * telecom.system = #email
 * telecom.value = "drjanedoe@example.org"
 
+// **********************************************************************************************************************************
 Instance: ServiceRequestExample1
 InstanceOf: ServiceRequest
 //Usage: #inline
@@ -36,6 +40,7 @@ InstanceOf: ServiceRequest
 * requester = Reference(PractitionerExample1) "Dr. Jane Doe"
 * reasonCode.text = "Check for O2 blood saturation levels"
 
+// **********************************************************************************************************************************
 Instance: OrgExample1
 InstanceOf: USCoreOrganizationProfile
 Description: "An instance of Organization as a payer used in the example resources."
@@ -51,6 +56,7 @@ Description: "An instance of Organization as a payer used in the example resourc
 * address.postalCode = "06155"
 * address.country = "US"
 
+// **********************************************************************************************************************************
 Instance: OrgExample2
 InstanceOf: USCoreOrganizationProfile
 Description: "A 2nd instance of Organization as a payer used in the example resources."
@@ -66,6 +72,7 @@ Description: "A 2nd instance of Organization as a payer used in the example reso
 * address.postalCode = "06155"
 * address.country = "US"
 
+// **********************************************************************************************************************************
 Instance: ProviderOrgExample
 InstanceOf: USCoreOrganizationProfile
 Description: "An instance of Organization as a provider organization used in the example resources."
@@ -81,6 +88,7 @@ Description: "An instance of Organization as a provider organization used in the
 * address.postalCode = "06155"
 * address.country = "US"
 
+// **********************************************************************************************************************************
 Instance: DeviceRequestExample1
 InstanceOf: DTRDeviceRequest
 Description: "An example device request used in the example resources."
@@ -107,6 +115,7 @@ Description: "An example device request used in the example resources."
 // * status = #active
 // * payor = Reference(OrgExample2)
 
+// **********************************************************************************************************************************
 Instance: DTRCoverageExample1
 InstanceOf: DTRCoverage
 Description: "An instance of DTRCoverage"
@@ -124,6 +133,7 @@ Description: "An instance of DTRCoverage"
 * costToBeneficiary.type = COPAYTYPE#copaypct "Copay Percentage"
 * costToBeneficiary.valueQuantity.value = 20.00
 
+// **********************************************************************************************************************************
 Instance: DTRCoverageExample2
 InstanceOf: DTRCoverage
 Description: "A 2nd instance of DTRCoverage used in examples"
@@ -141,6 +151,7 @@ Description: "A 2nd instance of DTRCoverage used in examples"
 * costToBeneficiary.type = COPAYTYPE#copaypct "Copay Percentage"
 * costToBeneficiary.valueQuantity.value = 20.00
 
+// **********************************************************************************************************************************
 Instance: DTRParametersComplexExample
 InstanceOf: DTRParameters
 Description: "An example Parameters resource for DTRQuestionnairePackageOperation showing all parameters with multiple Coverage and Order parameters"
@@ -160,6 +171,7 @@ Usage: #example
 * parameter[changedsince].name = "changedsince"
 * parameter[changedsince].valueDateTime = "2023-04-20T00:00:00+00:00"
 
+// **********************************************************************************************************************************
 Instance: DTRParametersSimpleQuestionnaireExample
 InstanceOf: DTRParameters
 Description: "An example Parameters resource for DTRQuestionnairePackageOperation with Coverage and a Questionnaire"
@@ -169,6 +181,7 @@ Usage: #example
 * parameter[questionnaire].name = "questionnaire"
 * parameter[questionnaire].valueCanonical = "http://hl7.org/fhir/us/davinci-dtr/Questionnaire/home-o2-sdc-questionnaire"
 
+// **********************************************************************************************************************************
 Instance: DTRParametersSimpleOrderExample
 InstanceOf: DTRParameters
 Description: "An example Parameters resource for DTRQuestionnairePackageOperation with Coverage and an Order"
@@ -178,8 +191,7 @@ Usage: #example
 * parameter[order].name = "order"
 * parameter[order].resource = DeviceRequestExample1
 
-
-///////////////////////////////////////////
+// **********************************************************************************************************************************
 Instance: library-quick-model-definition
 InstanceOf: Library
 Description: "A sample library from the FHIR core spec to include in other examples in this IG to demonstrate the use of Library resources"
@@ -197,9 +209,7 @@ Usage: #example
 * content.contentType = #application/xml
 * content.url = "http://cqlrepository.org/quick-modelinfo.xml"
 
-
-///////////////////////////////////////////
-
+// **********************************************************************************************************************************
 Instance: DTRQuestionnairePackageOperationResultSimple
 InstanceOf: Bundle
 Description: "And example of DTRQuestionnairePackageOperation returning a Bundle with only a single adaptive questionnaire"
@@ -211,8 +221,7 @@ Description: "And example of DTRQuestionnairePackageOperation returning a Bundle
 * entry[0].id = "home-o2-sdc-adaptive-questionnaire"
 * entry[0].resource = home-o2-sdc-adaptive-questionnaire
 
-///////////////////////////////////////////
-
+// **********************************************************************************************************************************
 Instance: DTRQuestionnairePackageOperationResultComplex
 InstanceOf: Bundle
 Description: "And example of DTRQuestionnairePackageOperation returning a Bundle with only a multiple questionnaires, with references to other Library and ValueSet resources"
