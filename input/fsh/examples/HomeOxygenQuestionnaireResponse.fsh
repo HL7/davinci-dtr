@@ -143,6 +143,10 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * status = #completed
 * subject = Reference(PatientExample1) "Vlad"
 * questionnaire = "http://example.com/Questionnaire/referred-questionnaire"
+
+* extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/pertinentOrders" 
+* extension[=].valueReference = Reference(ServiceRequestExample1) "Gas panel - Blood"
+
 * item[0].linkId = "1"
 * item[=].text = "Patient Information"
 * item[=].item[0].linkId = "1.1"
