@@ -26,7 +26,6 @@ Description: "An example practitioner referred to by the example resources."
 
 Instance: ServiceRequestExample1
 InstanceOf: ServiceRequest
-//Usage: #inline
 * status = #active
 * intent = #original-order
 * code = http://loinc.org#24338-6
@@ -90,22 +89,6 @@ Description: "An example device request used in the example resources."
 * subject = Reference(PatientExample1)
 * occurrenceDateTime = "2022-01-08T09:33:27+07:00"
 * requester = Reference(PractitionerRoleExample1) "Dr. Jane Doe"
-
-// Instance: CoverageExample1
-// InstanceOf: Coverage
-// Description: "An instance of Coverage used in the example resources."
-// * subscriber = Reference(PatientExample1)
-// * beneficiary = Reference(PatientExample1)
-// * status = #active
-// * payor = Reference(OrgExample1)
-
-// Instance: CoverageExample2
-// InstanceOf: Coverage
-// Description: "An instance of Coverage used in the example resources."
-// * subscriber = Reference(PatientExample1)
-// * beneficiary = Reference(PatientExample1)
-// * status = #active
-// * payor = Reference(OrgExample2)
 
 Instance: DTRCoverageExample1
 InstanceOf: DTRCoverage
