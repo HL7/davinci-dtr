@@ -748,13 +748,13 @@ Implementers **SHALL** also adhere to the security guidelines defined in:
 * CDS Hooks: [Security & Safety](https://cds-hooks.hl7.org/1.0/#security-and-safety)
 * SMART on FHIR: [SMART App Launch Framework](http://www.hl7.org/fhir/smart-app-launch)
 
-The DTR / SMART on FHIR application will have access to the scope of data authorized by the organization as appropriate for use by the app, and accessible to the user. This scope granted may provide the  SMART on FHIR application  access to more data than is needed for the specific situation. For example, if `Observation.read` capabilities are needed, the app will have access to all observations for that patient. For compliance with HIPAA Minimum Necessary, the CQL **SHALL** limit requests for information from the EHR's API to only items that are relevant to the documentation requirements for which DTR was launched (e.g., documentation requirements for a service that requires prior authorization).
+The DTR SMART on FHIR application will have access to the scope of data authorized by the organization as appropriate for use by the app, and accessible to the user. This scope granted may provide the  SMART on FHIR application  access to more data than is needed for the specific situation. For example, if `Observation.read` capabilities are needed, the app will have access to all observations for that patient. For compliance with HIPAA Minimum Necessary, the CQL **SHALL** limit requests for information from the EHR's API to only items that are relevant to the documentation requirements for which DTR was launched (e.g., documentation requirements for a service that requires prior authorization).
 
 Compliant questionnaires **SHALL NOT** include hidden or read-only questions unless the information is populated by the payer or their out-sourced service.  If information is privacy restricted, the information **SHOULD** be treated as if it does not exist. The provider **SHOULD** ask the patient if they want to share the information with the payer.
 
 Any EHR with SMART on FHIR support **SHOULD** be prepared to deal with the implications of providing a client with the scopes they request. For example, EHRs **SHOULD** limit FHIR search capabilities for clients, requiring a patient ID in any search query to ensure the client can only access resources related to that patient.
 
-When meeting the DTR / SMART on FHIR app requirements using a distinct app (i.e., not within the EHR), the app **SHALL** have a distinct client id for when it’s being invoked purely as a mechanism to supplement EHR data vs. when it is being invoked to share data back to the payer.
+When meeting the DTR / SMART on FHIR app requirements using a distinct app (i.e., not within the EHR), the app **SHALL** have a distinct client id for when it’s being invoked purely as a mechanism to supplement EHR data, as opposed to when it is being invoked to share data back to the payer.
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
