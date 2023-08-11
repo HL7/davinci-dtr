@@ -975,5 +975,17 @@ This ballot addresses several additions, modifications, technical corrections, e
   <a href="specification.html#general-adaptive-form-support">(General Adaptive Form Support)</a>
   </li>
 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-41168">FHIR-41168</a>:
+  "How DTR Passes Information" page is no longer accurate
+  <a href="specification.html#how-dtr-passes-information-to-pas-foe-or-other-exchanges">(How DTR passes information to PAS, FOE, or other exchanges)</a>
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-40421">FHIR-40421</a>:
+  Guidance on this page needs to be rewritten
+  <a href="specification.html#determinations-from-adaptive-forms">(Determinations from Adaptive Forms)</a>
+  </li>
+
  </ul>
 </div>
