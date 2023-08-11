@@ -15,7 +15,7 @@ To maximize the value of these IGs, it is imperative that each IG is integrated 
 
 Each of these IGs recommends a set of metrics that may be collected by each of the implementations to facilitate the evaluation of adoption, functionality, processes, and improved outcomes. While there is currently no requirement to aggregate these metrics, it is reasonable to believe that in the future interested entities (providers, payers, regulators, quality organization, certification agencies, states, etc.) will ask for these metrics to evaluate the ongoing automation of the supported processes / exchanges. While this guide will not require these metrics to be captured in this release, the authors strongly suggest each implementation should do so with the expectation that collection and dissemination of these metrics may become a requirement (**SHALL**) in future version of these IGs.
 
-### Metric Examples
+### Suggested Metrics
 The following table defines a set of metrics with a short name, purpose, conformance, stakeholder, and collection/calculation instructions (based on the Metric Data model below). 
 
 <table style="text-align: center; vertical-align: middle;">
