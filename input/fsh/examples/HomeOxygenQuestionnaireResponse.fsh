@@ -12,7 +12,7 @@ Description: "Inline Questionnaire for QuestionnaireResponse"
 * date = "2020-01-16T00:00:00+00:00"
 * publisher = "Da Vinci DTR"
 * contact.name = "Example Author"
-* derivedFrom = "http://hl7.org/fhir/StructureDefinition/Questionnaire"
+* derivedFrom = "http://example/basequestionnaire"
 * extension[sdc-questionnaire-questionnaireAdaptive].valueBoolean = true
 * item[0].linkId = "1"
 * item[=].text = "Patient Information"
@@ -137,14 +137,16 @@ Description: "Inline Questionnaire for QuestionnaireResponse"
 Instance: home-o2-questionnaireresponse
 InstanceOf: QuestionnaireResponse
 Usage: #example
-Description: "An example QuestionnaireResponse for Home Oxygen Therapy scenario."
+Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * meta.profile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse-r4"
 * authored = "2019-07-18"
 * status = #completed
 * subject = Reference(PatientExample1) "Vlad"
 * questionnaire = "http://example.com/Questionnaire/referred-questionnaire"
+
 * extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/pertinentOrders" 
 * extension[=].valueReference = Reference(ServiceRequestExample1) "Gas panel - Blood"
+
 * item[0].linkId = "1"
 * item[=].text = "Patient Information"
 * item[=].item[0].linkId = "1.1"
