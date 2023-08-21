@@ -9,7 +9,7 @@ Description: "Inline Questionnaire for QuestionnaireResponse"
 * subjectType = #Patient
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Example adaptive questionnaire contained in a QuestionnaireResposne</div>"
-* date = "2020-01-16T00:00:00+00:00"
+* date = "2023-08-21T00:00:00+00:00"
 * publisher = "Da Vinci DTR"
 * contact.name = "Example Author"
 * derivedFrom = "http://example/basequestionnaire"
@@ -139,7 +139,7 @@ InstanceOf: QuestionnaireResponse
 Usage: #example
 Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * meta.profile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse-r4"
-* authored = "2019-07-18"
+* authored = "2023-08-21"
 * status = #completed
 * subject = Reference(PatientExample1) "Vlad"
 * questionnaire = "http://example.com/Questionnaire/referred-questionnaire"
