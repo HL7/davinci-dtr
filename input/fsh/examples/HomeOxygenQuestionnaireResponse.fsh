@@ -155,8 +155,16 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[=].answer.extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer.extension[=].extension[0].url = "source"
 * item[=].item[=].answer.extension[=].extension[=].valueCode = #override
+
 * item[=].item[=].answer.extension[=].extension[+].url = "author"
-* item[=].item[=].answer.extension[=].extension[=].valueReference = Reference(PractitionerExample1) "Dr. Jane Doe"
+* item[=].item[=].answer.extension[=].extension[=].extension[0].url = "role"
+* item[=].item[=].answer.extension[=].extension[=].extension[=].valueCodeableConcept = 	http://terminology.hl7.org/CodeSystem/practitioner-role#doctor "The doctor"
+* item[=].item[=].answer.extension[=].extension[=].extension[+].url = "practitioner"
+* item[=].item[=].answer.extension[=].extension[=].extension[=].valueReference = Reference(PractitionerExample1) "Dr. Jane Doe"
+
+// * item[=].item[=].answer.extension[=].extension[+].url = "author"
+// * item[=].item[=].answer.extension[=].extension[=].valueReference = Reference(PractitionerExample1) "Dr. Jane Doe"
+
 * item[=].item[+].linkId = "1.2"
 * item[=].item[=].text = "First Name"
 * item[=].item[=].answer.valueString = "Vlad"
