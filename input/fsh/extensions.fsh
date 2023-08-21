@@ -62,8 +62,8 @@ Extension: InformationOrigin
 Id: information-origin
 Description: "Identifies the origin of the information in the answer and how it came to exist."
 * ^context[0].type = #element
-// * ^context[=].expression = "BackboneElement.item.answer"
-* ^context[=].expression = "BackboneElement or QuestionnaireResponse.item.answer or QuestionnaireResponse.item.item.answer"
+* ^context[=].expression = "element"
+// * ^context[=].expression = "BackboneElement or QuestionnaireResponse.item.answer or QuestionnaireResponse.item.item.answer"
 
 * obeys dtrx-1
 * extension contains
