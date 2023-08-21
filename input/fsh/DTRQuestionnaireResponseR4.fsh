@@ -27,6 +27,9 @@ This profile allows questions to be answered with a type of Reference - i.e., Th
 * extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/intendedUse named intendedUse 0..* 
 * extension[intendedUse] ^short = "Indicates how the EHR is to use the information with respect to the associated orders/records."
 
+// * extension contains http://hl7.org/fhir/us/davinci-crd/StructureDefinition/ext-coverage-information named coverageInformation 0..* 
+// * extension[coverageInformation] ^short = "Coverage information."
+
 * basedOn 0..0
 * partOf 0..0
 
