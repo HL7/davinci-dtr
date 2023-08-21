@@ -44,11 +44,6 @@ dependencies:
     version: 1.0.0
     reason: |
       Defines common conformance rules across all Da Vinci IGs, as well as additional constraints and profiles beyond U.S. Core
-  hl7.fhir.extensions.r5:
-    id: r5ext
-    version: 4.0.1
-    reason: |
-      Makes available certain R5 elements for use as part of this R4 IG
 
 pages:
   index.md:
