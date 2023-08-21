@@ -11,12 +11,12 @@ Description:    "Enforces DTR requirements on a completed or partially completed
 This profile allows questions to be answered with a type of Reference - i.e., The answer to a question might be pointing to an existing resource (a Practitioner, a Condition, a DocumentReference, etc.)  In general, all such answers **SHOULD** be references to resources held within the launching EHR.  However, with mutual agreement with the EMR, a payer **MAY** provide Questionnaires that allow answers as references to an external FHIR repository - e.g., a centralized practitioner or organization registry.  The EMR would need to have access to the external entries in order to allow them to be incorporated into the [QuestionnaireResponse Bundle](StructureDefinition-DTR-QRBundle.html)."
 
 * ^meta.versionId = "10"
-* ^meta.lastUpdated = "2019-03-11T11:10:05.000-07:00"
+* ^meta.lastUpdated = "2023-08-21T11:10:05.000-07:00"
 * ^text.status = #additional
 * ^text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>The QuestionnaireResponse resource is used to represent the information supplied by the provider.</p></div>"
 * ^version = "1.0.0"
 * ^status = #draft
-* ^date = "2020-12-23T02:27:35+00:00"
+* ^date = "2023-08-21T02:27:35+00:00"
 
 * extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/context named Context 0..1 
 * extension[Context] ^short = "Identifies the orders, coverages, and or other resources associated with the specified QuestionnaireResponse."
