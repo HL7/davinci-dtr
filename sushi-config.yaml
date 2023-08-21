@@ -29,8 +29,26 @@ parameters:
   show-inherited-invariants: false
 
 dependencies:
-  hl7.fhir.uv.sdc: 3.0.0
-  hl7.fhir.us.core: 3.1.1
+  hl7.fhir.us.core:
+    id: uscore
+    version: 3.1.1
+    reason: |
+      Defines U.S. EHR expectations on a range of resources that will be within the necessary DTR processes
+  hl7.fhir.uv.sdc:
+    id: sdc
+    version: 3.0.0
+    reason: |
+      Defines expecations for Questionnaires used to gather information
+  hl7.fhir.us.davinci-hrex:
+    id: hrex
+    version: 1.0.0
+    reason: |
+      Defines common conformance rules across all Da Vinci IGs, as well as additional constraints and profiles beyond U.S. Core
+  hl7.fhir.extensions.r5:
+    id: r5ext
+    version: 4.0.1
+    reason: |
+      Makes available certain R5 elements for use as part of this R4 IG
 
 pages:
   index.md:
