@@ -35,7 +35,7 @@ InstanceOf: ServiceRequest
 * intent = #original-order
 * code = http://loinc.org#24338-6
 * code.text = "Gas panel - Blood"
-* subject = Reference(PatientExample1)
+* subject = Reference(PatientExample)
 * occurrenceDateTime = "2019-05-08T09:33:27+07:00"
 * requester = Reference(PractitionerExample1) "Dr. Jane Doe"
 * reasonCode.text = "Check for O2 blood saturation levels"
