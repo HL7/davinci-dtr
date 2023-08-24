@@ -4,9 +4,9 @@ Title: "DTR Metric Data"
 Description: "A logical model describing the information that should be captured by DTR implementers about every DTR invocation to support measures evaluating DTR implementation.  
 This model is NOT a FHIR data structure for information exchange. Instead, it is a logical model of the information that **SHOULD** be collected and maintained for each DTR system action. While implementers may choose any internal storage format that is appropriate for their system, the information collected should ultimately be mapped to the information model below.
 Mapping implementation data to these elements will allow metrics (see the [table on the metrics page]) to be represented in a way that provides consistent responses to requirements from various interested parties (providers, payers, regulators, quality organizations, certification agencies, states, etc.) by each of the participants in the DTR exchanges.
-A separate instance should be created by each participant for each DTR ‘session’:
-* For a ‘Light’ EHR, a session exists from the time the DTR SMART app launches until it closes.
-* For a ‘Full’ EHR, a session exists from the time the user interface initiates the DTR process until the user interface returns from QuestionnaireResponse population to other activity.
+A separate instance should be created by each participant for each DTR 'session':
+* For a 'Light' EHR, a session exists from the time the DTR SMART app launches until it closes.
+* For a 'Full' EHR, a session exists from the time the user interface initiates the DTR process until the user interface returns from QuestionnaireResponse population to other activity.
 * For a SMART app, a session runs from the time the app is launched until it closes.
 * For a payer, a session runs from the time a SMART back-end connection from the Full EHR or SMART app is established until the last operation call is made using that security token.
 Resumed DTR sessions initiated from a previously stored QuestionnaireResponse will be tracked separately from initial DTR sessions.  Unless there is at least one CRD-assigned assertion id present on the record, it will not be possible to tie together multiple sessions related to the same QuestionnaireResponse or order.
