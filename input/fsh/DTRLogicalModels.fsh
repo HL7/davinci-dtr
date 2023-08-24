@@ -52,7 +52,7 @@ Resumed DTR sessions initiated from a previously stored QuestionnaireResponse wi
   * requestTime          1..1 instant          "Time action initiated"  "The time stamp when the action was initiated from the perspective of the reporting system."
   * responseTime         0..1 instant          "Time of action response"  "The time stamp when the action was completed (including error return) from the perspective of the reporting system."
   * questionnaire        0..1 canonical        "Associated Questionnaire" "The questionnaire(s) tied to the current action"
-    * ^type.targetProfile[0] = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire"
+    * ^type.targetProfile[0] = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-std-questionnaire"
     * ^type.targetProfile[+] = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire-adapt"
   * httpResponse         0..1 integer          "HTTP response status code" "The HTTP response status code associated with the action (successful or not)."
     * ^comment = "Must be present unless action is a userresponse"
