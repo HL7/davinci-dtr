@@ -3,7 +3,7 @@
   "id" : "dtr-native-client",
   "text" : {
     "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>DTRNativeClient</h2><div><p>This statement defines the expected capabilities of systems wishing to conform to the ''DTR Native Client'' role.</p>\n</div><table><tr><td>Mode</td><td>CLIENT</td></tr><tr><td>Description</td><td><div><p>A DTR Native Client provides an EHR-based application</p>\n</div></td></tr><tr><td>Transaction</td><td></td></tr><tr><td>System History</td><td></td></tr><tr><td>System Search</td><td></td></tr></table><table><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th><b title=\"GET a resource (read interaction)\">Read</b></th><th><b title=\"GET all set of resources of the type (search interaction)\">Search</b></th><th><b title=\"PUT a new resource version (update interaction)\">Update</b></th><th><b title=\"POST a new resource (create interaction)\">Create</b></th></tr><tr><td>Coverage</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-coverage-r4.html\">DTR Coverage R4</a></td><td></td><td>y</td><td></td><td></td></tr><tr><td>DeviceRequest</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-devicerequest.html\">DTR Device Request</a></td><td></td><td></td><td>y</td><td></td></tr><tr><td>MedicationRequest</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-medicationrequest.html\">DTR Medication Request</a></td><td></td><td></td><td>y</td><td></td></tr><tr><td>NutritionOrder</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-nutritionorder.html\">DTR Nutrition Order</a></td><td></td><td></td><td>y</td><td></td></tr><tr><td>ServiceRequest</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-servicerequest.html\">DTR Service Request</a></td><td></td><td></td><td>y</td><td></td></tr><tr><td>Parameters</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-parameters.html\">DTR Operation Parameters</a></td><td>y</td><td></td><td></td><td></td></tr><tr><td>Questionnaire</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-sdc-questionnaire.html\">DTR SDC Questionnaire</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-sdc-questionnaire-adapt.html\">DTR SDC Questionnaire for adaptive form</a></td><td>y</td><td></td><td></td><td></td></tr><tr><td>QuestionnaireResponse</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-questionnaireresponse-r4.html\">DTR Questionnaire Response R4</a></td><td>y</td><td></td><td></td><td></td></tr></table></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>DTRNativeClient</h2><div><p>This statement defines the expected capabilities of systems wishing to conform to the ''DTR Native Client'' role.</p>\n</div><table><tr><td>Mode</td><td>CLIENT</td></tr><tr><td>Description</td><td><div><p>A DTR Native Client provides an EHR-based application</p>\n</div></td></tr><tr><td>Transaction</td><td></td></tr><tr><td>System History</td><td></td></tr><tr><td>System Search</td><td></td></tr></table><table><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th><b title=\"GET a resource (read interaction)\">Read</b></th><th><b title=\"GET all set of resources of the type (search interaction)\">Search</b></th><th><b title=\"PUT a new resource version (update interaction)\">Update</b></th><th><b title=\"POST a new resource (create interaction)\">Create</b></th></tr><tr><td>Coverage</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-coverage.html\">DTR Coverage R4</a></td><td></td><td>y</td><td></td><td></td></tr><tr><td>DeviceRequest</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-devicerequest.html\">DTR Device Request</a></td><td></td><td></td><td>y</td><td></td></tr><tr><td>MedicationRequest</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-medicationrequest.html\">DTR Medication Request</a></td><td></td><td></td><td>y</td><td></td></tr><tr><td>NutritionOrder</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-nutritionorder.html\">DTR Nutrition Order</a></td><td></td><td></td><td>y</td><td></td></tr><tr><td>ServiceRequest</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-servicerequest.html\">DTR Service Request</a></td><td></td><td></td><td>y</td><td></td></tr><tr><td>Parameters</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-qpackage-input-parameters.html\">DTR Operation Parameters</a></td><td>y</td><td></td><td></td><td></td></tr><tr><td>Questionnaire</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-std-questionnaire.html\">DTR SDC Questionnaire</a><br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-sdc-questionnaire-adapt.html\">DTR SDC Questionnaire for adaptive form</a></td><td>y</td><td></td><td></td><td></td></tr><tr><td>QuestionnaireResponse</td><td>Supported profiles:<br/>\u00a0\u00a0<a href=\"StructureDefinition-dtr-questionnaireresponse.html\">DTR Questionnaire Response R4</a></td><td>y</td><td></td><td></td><td></td></tr></table></div>"
   },
   "url" : "http://hl7.org/fhir/us/davinci-dtr/CapabilityStatement/dtr-native-client",
   "version" : "1.1.0-ballot",
@@ -39,7 +39,7 @@
     },
     "resource" : [{
       "type" : "Coverage",
-      "supportedProfile" : ["http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-coverage-r4"],
+      "supportedProfile" : ["http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-coverage"],
       "interaction" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -118,7 +118,7 @@
     },
     {
       "type" : "Parameters",
-      "supportedProfile" : ["http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-parameters"],
+      "supportedProfile" : ["http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-qpackage-input-parameters"],
       "interaction" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
@@ -129,7 +129,7 @@
     },
     {
       "type" : "Questionnaire",
-      "supportedProfile" : ["http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire",
+      "supportedProfile" : ["http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-std-questionnaire",
       "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire-adapt"],
       "interaction" : [{
         "extension" : [{
@@ -141,7 +141,7 @@
     },
     {
       "type" : "QuestionnaireResponse",
-      "supportedProfile" : ["http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse-r4"],
+      "supportedProfile" : ["http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse"],
       "interaction" : [{
         "extension" : [{
           "url" : "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
