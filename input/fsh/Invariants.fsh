@@ -23,7 +23,7 @@ Severity:   #error
 Expression: "entry.first().resource.is(QuestionnaireResponse)"
 
 /*****************************************************************************************************/
-// Invariant:  dtrb-2
-// Description: "All items with an answer.valueReference have a URL that matches a fullUrl in the Bundle."
-// Severity:   #error
-// Expression: "entry.first().resource.is(QuestionnaireResponse)"
+Invariant:  dtrb-2
+Description: "All items with an answer.valueReference have a URL that matches a fullUrl in the Bundle."
+Severity:   #error
+Expression: "entry.first().resource.is(QuestionnaireResponse)"
