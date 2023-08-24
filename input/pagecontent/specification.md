@@ -9,7 +9,7 @@ This implementation guide will adopt by reference the following [HRex Conformanc
 #### Questionnaire
 Payers have documentation requirements and rules that must be satisfied as part of their typical operations when reimbursing for care for certain services requiring authorization or documentation.
 
-The Questionnaire resource is used to represent the information needs that a payer has to satisfy for their documentation requirements and/or rules. Payers **SHALL** gather data needed to satisfy their rules using FHIR Questionnaires that comply with either the [DTR SDC Questionnaire profile](StructureDefinition-dtr-sdc-questionnaire.html) or the [DTR Adaptive Questionnaire profile](StructureDefinition-dtr-sdc-questionnaire-adapt.html).  
+The Questionnaire resource is used to represent the information needs that a payer has to satisfy for their documentation requirements and/or rules. Payers **SHALL** gather data needed to satisfy their rules using FHIR Questionnaires that comply with either the [DTR SDC Questionnaire profile](StructureDefinition-dtr-std-questionnaire.html) or the [DTR Adaptive Questionnaire profile](StructureDefinition-dtr-sdc-questionnaire-adapt.html).  
 
 The DTR process **SHALL** use the URL provided in the `questionnaire` property of the appContext to retrieve a Questionnaire resource. The payer **SHALL** provide this as a FHIR resource, such that the DTR process will be executing a FHIR read interaction on the payer’s server. 
 
@@ -17,7 +17,7 @@ These Questionnaires **SHALL** include logic that supports population from the E
 
 These systems **SHOULD** also support all non mustSupport data elements found in the differential of the profiles as per SDC documentation for those elements and extensions and **SHALL** gracefully handle the presence of these elements if not supported.  (i.e., non-support for an element **SHALL NOT** interfere with a user's ability to complete a QuestionnaireResponse.)  It should be understood that DTR can gather additional information to determine coverage of service or item.
 
-Payers **MAY** also supply Questionnaire resources that conform to the [Structured Data Capture (SDC) Advanced Rendering Profile]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/rendering.html) to control how information requests will ultimately be presented to users.  DTR conformant [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) applications **SHALL** support the SDC Advanced Rendering Profile.  
+Payers **MAY** also supply Questionnaire resources that conform to the [Structured Data Capture (SDC) Advanced Rendering Profile](http://hl7.org/fhir/uv/sdc/STU3/rendering.html) to control how information requests will ultimately be presented to users.  DTR conformant [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) applications **SHALL** support the SDC Advanced Rendering Profile.  
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
@@ -32,13 +32,13 @@ More information regarding Questionnaires, workflow, and behaviors can be found 
 - [Basic SDC Workflow](http://hl7.org/fhir/uv/sdc/STU3/workflow.html)  
 - [Form Behavior and Calculation](http://hl7.org/fhir/uv/sdc/STU3/behavior.html)  
 - [Advanced Form Rendering](http://hl7.org/fhir/uv/sdc/STU3/rendering.html)
-- [DTR SDC Questionnaire](StructureDefinition-dtr-sdc-questionnaire.html) - [Example](Questionnaire-home-o2-sdc-questionnaire.html)
+- [DTR SDC Questionnaire](StructureDefinition-dtr-std-questionnaire.html) - [Example](Questionnaire-home-o2-std-questionnaire.html)
 
 ##### Pre-Population
 DTR will automatically populate the answers to certain questions based on existing EHR data.  In some cases, it may populate all answers to the Questionnaire.  The DTR application **SHALL** provide the ability, but NOT a requirement, for providers to review pre-populated answers prior to saving the resulting response for subsequent use within the EHR.  
 
 ##### Extension Usage
-With current EHR capabilities with respect to updating 'request' resources, there is no mechanism to revise the 'request' resource to have its "supportingInfo" (or "insurance") element point to the [QuestionnaireResponse](StructureDefinition-dtr-questionnaireresponse-r4.html)/[Bundle](http://build.fhir.org/ig/HL7/davinci-pas/StructureDefinition-profile-pas-request-bundle.html)/[ClaimResponse](http://hl7.org/fhir/us/davinci-hrex/STU1/StructureDefinition-hrex-claimresponse.html) that results from the DTR process. Instead, extensions are used to reference the relevant order. DTR clients **SHOULD** update their 'request' resources with the appropriate "supportingInfo" or "insurance" link to the relevant resource.
+With current EHR capabilities with respect to updating 'request' resources, there is no mechanism to revise the 'request' resource to have its "supportingInfo" (or "insurance") element point to the [QuestionnaireResponse](StructureDefinition-dtr-questionnaireresponse.html)/[Bundle](http://build.fhir.org/ig/HL7/davinci-pas/StructureDefinition-profile-pas-request-bundle.html)/[ClaimResponse](http://hl7.org/fhir/us/davinci-hrex/STU1/StructureDefinition-hrex-claimresponse.html) that results from the DTR process. Instead, extensions are used to reference the relevant order. DTR clients **SHOULD** update their 'request' resources with the appropriate "supportingInfo" or "insurance" link to the relevant resource.
 
 #### Questionnaire Response
 The QuestionnaireResponse resource is used to represent a response to the Questionnaire presented by the payer. The source of the data is important for both providers and payers to attribute the information to a particular source and provide feedback on the design and use of the questionnaire and the implications regarding provider burden.  Information pulled from the medical record by CQL needs to be clearly identified as well as the information entered by a provider or office staff.  As an example, if information is not found in the medical record and needs to be manually entered, or if it is "found" and needs to be changed, then the questionnaire needs to be updated to better utilize the information available in the record where possible. In addition, understanding who is entering the information, will help to optimize questionnaires to focus provider interactions on information that only they can realistically provide.  
@@ -47,7 +47,7 @@ The [InformationOrigin extension](StructureDefinition-information-origin.html) i
 
 Any `QuestionnaireResponse` provided **SHALL** either be an adaptive form or correspond to a specified Questionnaire (See the [DTR profiles](artifacts.html#structures-resource-profiles))
 
-* [DTR QuestionnaireResponse R4](StructureDefinition-dtr-questionnaireresponse-r4.html) - [Example](QuestionnaireResponse-home-o2-questionnaireresponse.html)
+* [DTR QuestionnaireResponse R4](StructureDefinition-dtr-questionnaireresponse.html) - [Example](QuestionnaireResponse-home-o2-questionnaireresponse.html)
 
 #### SDC Adaptive Forms
 
@@ -79,7 +79,7 @@ If a payer uses [adaptive forms](http://build.fhir.org/ig/HL7/sdc/adaptive.html)
 If an adaptive questionnaire response includes an unsolicited determination that authorization requirements have been 'satisfied', the EHR **SHALL** allow the clinician to flag the provided determination number as "not valid" - e.g., If they feel the determination was based on incorrect information.  If a payer receives a new invocation of an adaptive form for the same order, they **SHALL** treat the result of the new completion as replacing any previous completion from a coverage determination process.
 
 ##### Determinations from Adaptive Forms
-In some cases, upon receiving enough answers from an adaptive form, a payer will be in a position to make assertions about coverage, prior authorization, and/or any 'additional documentation needed' similar to what is provided by the CRD process.  This information needs to be made available to the DTR client in a computable fashion.  To do so, the adaptive form service will place the [coverage-information](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension on the root of the QuestionnaireResponse, alongside the [pertinentOrders](StructureDefinition-pertinentOrders.html) extension.  When the QuestionnaireResponse is stored in the DTR client, client **SHALL** propagate the [coverage-information](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension into each of the pertinent orders.
+In some cases, upon receiving enough answers from an adaptive form, a payer will be in a position to make assertions about coverage, prior authorization, and/or any 'additional documentation needed' similar to what is provided by the CRD process.  This information needs to be made available to the DTR client in a computable fashion.  To do so, the adaptive form service will place the [coverage-information](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension on the root of the QuestionnaireResponse, alongside the [QuestionnaireResponse Context](StructureDefinition-qr-context.html) extension.  When the QuestionnaireResponse is stored in the DTR client, client **SHALL** propagate the [coverage-information](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension into each of the pertinent orders.
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
@@ -152,11 +152,12 @@ The DTR process will need to retrieve resources from a payer IT system to operat
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> <!-- Note Text Here -->
-        All Questionnaires and valuesets retrieved <b>SHALL</b> be version specific, as breaking changes may occur between versions and would likely cause failures or inconsistent data.
+        Payers may have multiple back-end functions that handle different types of decision support and/or different types of services. However, for the purpose of DTR conformance, payers <b>SHALL</b> have a single endpoint (managed by themselves or a delegate) that can handle responding to all DTR service calls.
       </td></tr>
   </table>
 </div>
 <br>
+
 The information needed to obtain the required resources will be provided as escaped JSON in the `appContext` property of the Clinical Decision Support (CDS) Hooks Card Link object, as described in [CDS Hooks](specification.html#use-of-cardlinks). When launched in context of CRD and a CDS Hook, that object will have the following properties:
 
 <table>
@@ -243,7 +244,7 @@ If the `request` scope is included when launching, the access token bundle **SHO
 
 At least one of the two fields `request` or `response` must be filled in order for the DTR app to successfully launch. In the case that `response` is filled but `request` is empty, the DTR process **SHALL** use the URL provided in the `response` property of the `appContext` to retrieve the referenced QuestionnaireResponse. The QuestionnaireResponse can be used to discover the request through the `context` extension. The app **SHOULD** allow the user to relaunch the deferred usage session defined by the QuestionnaireResponse. 
 
-When launching with the `currentorder` or `currentqr` scopes, if no QuestionnaireResponse is passed, SMART app will query the EHR to try to find the QuestionnaireResponses linked to that order by the [context extension](StructureDefinition-context.html).  If there are multiple QuestionnaireResponses for an order, will need to investigate whether it's possible to pass multiple responses as a launch context.  
+When launching with the `currentorder` or `currentqr` scopes, if no QuestionnaireResponse is passed, SMART app will query the EHR to try to find the QuestionnaireResponses linked to that order by the [context extension](StructureDefinition-qr-context.html).  If there are multiple QuestionnaireResponses for an order, will need to investigate whether it's possible to pass multiple responses as a launch context.  
 
 The QuestionnaireResponse will have all the information required to request the Questionnaire and CQL from the payer server and allow relaunch of the session with previously answered questions already filled out. (See the [Save Context for Relaunch](specification.html#persisting-application-state) section) 
 
@@ -258,15 +259,6 @@ Payers **SHALL** require the DTR process to authenticate in order to retrieve re
  - `system/library.rs`  
  
 These are sufficient to invoke the DTR Questionnaire operations `$next-question` and `ValueSet/$expand`, as well as retrieval of libraries and value sets.  
-
-<div markdown="1" class="notebox">
-  <table style="border: none; margin-bottom: 0px;">
-    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
-      <td style="border: none"> <!-- Note Text Here -->
-        Payers must be cautious about prepopulating Questionnaires with sensitive information, because there are rare situations where a malicious application could attempt to access information that was not authorized by the EHR.  
-      </td></tr>
-  </table>
-</div><br>
 
 #### CQL Rules
 CQL can either be embedded inline as part of an expression or referenced in a library.  All libraries needed by a questionnaire **SHALL** be referenced by the cqf-library extension which **SHALL** be resolvable by the SMART app. Metadata about the rules will be represented as a FHIR Library resource. The payer **SHALL** provide this as a FHIR resource, such that the DTR process will be executing a FHIR read interaction on the payer's server.
@@ -463,10 +455,7 @@ The information gathered via DTR can be used for a variety of purposes:
 * To be retained by the EHR in the event of a subsequent audit.
 * Additional purposes as yet undefined.
 
-Once DTR has written a QuestionnaireResponse to the DTR Client and updated the QuestionnaireResponse.status element to `complete`, the DTR Client needs to understand what action(s) it should take with the collected information.  This is accomplished via two extensions:
-
-1. The [pertinentOrders](StructureDefinition-pertinentOrders.html) extension provides a reference to the Request resource(s) and/or Encounter that the QuestionnaireResponse relates to.
-2. The [intendedUse](StructureDefinition-intendedUse.html) extension indicates how the EHR is to use the information with respect to the associated orders/records
+Once DTR has written a QuestionnaireResponse to the DTR Client and updated the QuestionnaireResponse.status element to `complete`, the DTR Client needs to understand what action(s) it should take with the collected information.  
 
 In those cases where a QuestionnaireResponse is to be used to convey information either to the payer or to downstream service providers, the DTR Client **SHALL** 'wrap' the QuestionnaireResponse in a 'collection' Bundle complying with the [questionnaireResponseBundle] profile.  This Bundle will include the QuestionnaireResponse entry as its initial entry and will then also include any resources that are referenced by the QuestionnaireResponse as answerReference that are not already [contained] within the QuestionnaireResponse.  This ensures that all necessary information is delivered without a need for subsequent queries.
 
@@ -560,7 +549,7 @@ CQL allows for the gathering of information through the use of `define` statemen
 
 DTR makes use of the identifier names within the CQL. The DTR process will examine the payer supplied Questionnaire resource. 
 
-This resource **SHALL** conform to the [DTR SDC Questionnaire](StructureDefinition-dtr-sdc-questionnaire.html):  
+This resource **SHALL** conform to the [DTR SDC Questionnaire](StructureDefinition-dtr-std-questionnaire.html):  
   * Resources are retrieved from the EHR FHIR server with RESTful queries and CQL is executed to extract relevant information.
   * Values extracted from the FHIR resources are assigned identifier strings and the DTR process will then use these statement identifiers to retrieve a value from the CQL execution. 
   
@@ -632,20 +621,20 @@ It is likely that at least some answers will not be able to be gleaned from the 
 When the execution of Clinical Quality Language (CQL) is unable to obtain the required data, it is necessary to prompt the user for more input.
 
 #### Questionnaire Rendering
-DTR leverages a subset of extensions and capabilities defined by the SDC implementation guide to support control over rendering, flow logic, and population and calculation of answers.  The [DTR SDC Questionnaire profile](StructureDefinition-dtr-sdc-questionnaire.html) and [DTR Adaptive Questionnaire profile](StructureDefinition-dtr-sdc-questionnaire-adapt.html) identify the set of core elements and extensions that must be supported by 'full' EHRs and DTR solutions in terms of rendering and processing Questionnaires and their associated responses - and the elements that payers can count on being supported in the Questionnaires they expose.
+DTR leverages a subset of extensions and capabilities defined by the SDC implementation guide to support control over rendering, flow logic, and population and calculation of answers.  The [DTR SDC Questionnaire profile](StructureDefinition-dtr-std-questionnaire.html) and [DTR Adaptive Questionnaire profile](StructureDefinition-dtr-sdc-questionnaire-adapt.html) identify the set of core elements and extensions that must be supported by 'full' EHRs and DTR solutions in terms of rendering and processing Questionnaires and their associated responses - and the elements that payers can count on being supported in the Questionnaires they expose.
 
 Two different profiles are used to support two different approaches to managing questionnaire logic and two different levels of engagement between the form filling interface and the payer:
 
-* [DTR SDC Questionnaire](StructureDefinition-dtr-sdc-questionnaire.html) - all logic around what questions should be displayed, what answers are available, etc. is embedded in the Questionnaire (or in libraries linked to from the Questionnaire).  The only interaction with the payer is to retrieve the Questionnaire appropriate for a particular order or set of orders for a given set of patient coverage.  The only possible result from the DTR process is a completed QuestionnaireResponse.
+* [DTR SDC Questionnaire](StructureDefinition-dtr-std-questionnaire.html) - all logic around what questions should be displayed, what answers are available, etc. is embedded in the Questionnaire (or in libraries linked to from the Questionnaire).  The only interaction with the payer is to retrieve the Questionnaire appropriate for a particular order or set of orders for a given set of patient coverage.  The only possible result from the DTR process is a completed QuestionnaireResponse.
 
 * [DTR Adaptive Questionnaire](StructureDefinition-dtr-sdc-questionnaire-adapt.html) - the logic around what questions should be displayed and what answers are available is managed within software maintained by the payer.  The only CQL needed in the Questionnaire is that needed to support populating question answers.  The form filling process interacts with the payer continuously during the process of filling out the QuestionnaireResponse.  This interactivity means that it is possible for a payer to provide a Service Coverage Determination along with the QuestionnaireResponse.  
   
-Implementers should review the [advanced rendering]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/rendering.html), [advanced behavior]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/behavior.html), [population]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/populate.html) and [adaptive forms]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/adaptive.html) portions of the SDC implementation guide, focusing on the elements and extensions included in the DTR profiles.  Implementers should also be familiar with the documentation about the [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html) and [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) resources from the core FHIR specification.  Conformance with DTR requires conformance with the relevant portions of the SDC implementation guide".
+Implementers should review the [advanced rendering](http://hl7.org/fhir/uv/sdc/STU3/rendering.html), [advanced behavior](http://hl7.org/fhir/uv/sdc/STU3/behavior.html), [population](http://hl7.org/fhir/uv/sdc/STU3/populate.html) and [adaptive forms](http://hl7.org/fhir/uv/sdc/STU3/adaptive.html) portions of the SDC implementation guide, focusing on the elements and extensions included in the DTR profiles.  Implementers should also be familiar with the documentation about the [Questionnaire](http://hl7.org/fhir/R4/questionnaire.html) and [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html) resources from the core FHIR specification.  Conformance with DTR requires conformance with the relevant portions of the SDC implementation guide".
 
 All DTR applications **SHALL** support rendering according to the extensions supported in the DTR Questionnaire profile as well as executing all CQL found within Questionnaire extensions. Payers **SHALL** craft their Questionnaires such that they include CQL that attempts to pre-populate QuestionnaireResponse answers where such population can be accomplished using discrete data returned by EHR FHIR APIs that are required as part of current regulation (including simple calculations there-on - e.g., age from birthdate). Translation between standard codes **SHOULD** be supported where possible.  CQL and FHIR Questionnaires **SHALL** be required even when DTR is implemented within a DTR Native App as opposed to a DTR SMART App.
 
 #### Structured Data Capture
-Payers may have requirements on how questions are presented to users. To allow for this, payers **MAY** supply Questionnaire resources that conform to the [Advanced Rendering Questionnaire Profile]({{site.data.fhir.ver.hl7_fhir_uv_sdc}}/rendering.html) as defined in Structured Data Capture.
+Payers may have requirements on how questions are presented to users. To allow for this, payers **MAY** supply Questionnaire resources that conform to the [Advanced Rendering Questionnaire Profile](http://hl7.org/fhir/uv/sdc/STU3/rendering.html) as defined in Structured Data Capture.
 
 If the `rendering-styleSensitive` extension property is not present or `false` the DTR process **SHOULD** use `rendering-style` and `rendering-xhtml` properties.  The purpose of this extension is to indicate that it is not SAFE to render the form if the styles indicated in the Questionnaire are not followed. If the system is not capable of rendering the form as the Questionnaire dictates, then it cannot display the form.  Note the use of this flag will likely be extremely rare in DTR.
 
