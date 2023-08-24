@@ -1,65 +1,14 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Code Systems 
-// ************************************************************
-CodeSystem: DTRInformationOriginsCodeSystem
-Id: informationOrigins-cs
-Title: "Information Origins Code System"
-Description: "Codes describing the possible origination of information."
-* #auto "Information was auto-populated"
-* ^caseSensitive = true
-* ^experimental = false
-
-* #override "Information was auto-populated but overridden by a human"
-* ^caseSensitive = false
-* ^experimental = false
-
-* #manual "Information was manually entered by a human"
-* ^caseSensitive = false
-* ^experimental = false
-
-// ************************************************************
-CodeSystem: DTRTempCodes
-Id: temp
-Title: "DTR Temporary Codes"
-Description: "Codes temporarily defined as part of the DTR implementation guide.  These will eventually migrate into an officially maintained terminology (likely HL7's UTG code systems)."
-* ^status = #draft
-* ^experimental = false
-* ^caseSensitive = true
-* ^hierarchyMeaning = #is-a
-* ^content = #complete
-* #provider-src "Provider-sourced"    "The metric information was captured from the provider system's perspective"
-* #payer-src    "Payer-sourced"       "The metric information was captured from the payer system's perspective"
-* #SOFApp-src   "SOFApp-sourced"      "The metric information was captured from the SMART on FHIR App's perspective"
-
-* #launch     "launch-action"         "The action described was a launch"
-* #qpackage   "qpackage-action"       "The action described was a Questionnaire Package operation"
-* #mrquery    "mrquery-action"        "The action described was a medical record query"
-* #nextq      "nextq-action"          "The action described was a call for the next question"
-* #response   "response-action"       "The action described was a response"
-* #returnqr   "returnqr action"       "The action described was the return of a Questionnaire Response"
-
-* #crdlaunch  "CRD launch"            "DTR App launched from CRD"
-* #relaunch   "Re-launch"             "DTR App relaunched"
-* #salaunch   "Standalone launch"     "DTR Standalone launch"
-* #cdexlaunch "CDex launch"           "DTR App launched from CDex"
-
-* #manual     "Manual"                "Manual"
-* #APmod      "APmod"                 "APmod"
-
-* #pa         "include-pa"            "The information in this QuestionnaireResponse should be packaged into a Bundle and submitted as part of (or in association with) a prior authorization for the associated request resource(s)."
-* #claim      "include-claim"         "The information in this QuestionnaireResponse should be packaged into a Bundle and submitted as part of (or in association with) the insurance claim for the services ordered by the associated request resource(s)."
-* #order      "include-order"         "The information in this QuestionnaireResponse should be packaged into a Bundle and submitted along with (or referenced as supporting information to) the associated request resource(s)."
-* #retain     "retain-documentation"  "The information in this QuestionnaireResponse should be retained within the DTR as supporting evidence of the medical necessity of the associated request resource(s)."
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Value Sets
 // ************************************************************
 ValueSet: DTRInformationOrigins
 Id: informationOrigins
 Title: "Information Origins Value Set"
 Description: "Codes describing the possible origination of information."
-* include codes from system DTRInformationOriginsCodeSystem
 * ^experimental = false
+* DTRTempCodes#auto
+* DTRTempCodes#override
+* DTRTempCodes#manual
 
 // ************************************************************
 ValueSet: MetricSource
@@ -70,13 +19,13 @@ Description: "A list of codes indicating the perspective from which metric data 
 * ^experimental = false
 * DTRTempCodes#payer-src
 * DTRTempCodes#provider-src
-* DTRTempCodes#SOFApp-src
+* DTRTempCodes#DTRApp-src
 
 // ************************************************************
 ValueSet: MetricLaunchMode
 Id: metric-launchmode
 Title: "Metric Launch Mode"
-Description: "A list of codes indicating the Launch Mode"
+Description: "A list of codes indicating how DTR was launched"
 * ^status = #draft
 * ^experimental = false
 * DTRTempCodes#crdlaunch
@@ -88,15 +37,15 @@ Description: "A list of codes indicating the Launch Mode"
 ValueSet: MetricAction
 Id: metric-Action
 Title: "Metric Action"
-Description: "A list of codes indicating the action performed"
+Description: "A list of codes indicating the DTR action performed by a system"
 * ^status = #draft
 * ^experimental = false
 * DTRTempCodes#launch
 * DTRTempCodes#qpackage
 * DTRTempCodes#mrquery
 * DTRTempCodes#nextq
-* DTRTempCodes#response
-* DTRTempCodes#returnqr
+* DTRTempCodes#userresponse
+* DTRTempCodes#storeqr
 
 // ************************************************************
 ValueSet: IntendedUse
@@ -109,3 +58,51 @@ Description: "A list of codes indicating the intended use of the QuestionnaireRe
 * DTRTempCodes#claim
 * DTRTempCodes#order
 * DTRTempCodes#retain
+
+// ************************************************************
+ValueSet: CoveredInfo
+Id: coverageInfo
+Title: "Covered Information Value Set"
+Description: "Codes defining whether the ordered/requested service is covered under patient's plan"
+* ^status = #draft
+* ^experimental = false
+* DTRTempCodes#not-covered
+* DTRTempCodes#covered
+* DTRTempCodes#conditional
+
+// ************************************************************
+ValueSet: CoveragePaDetail
+Id: coveragePaDetail
+Title: "Coverage Prior Authorization Value Set"
+Description: "Codes defining whether prior auth will be needed for coverage to be provided"
+* ^status = #draft
+* ^experimental = false
+* DTRTempCodes#no-auth
+* DTRTempCodes#auth-needed
+* DTRTempCodes#satisfied
+* DTRTempCodes#performpa
+* DTRTempCodes#conditional
+
+// ************************************************************
+ValueSet: AdditionalDocumentation
+Id: AdditionalDocumentation
+Title: "Additional Documentation Value Set"
+Description: "Codes defining whether additional documentation needs to be captured"
+* ^status = #draft
+* ^experimental = false
+* DTRTempCodes#no-doc
+* DTRTempCodes#clinical
+* DTRTempCodes#admin
+* DTRTempCodes#both
+* DTRTempCodes#conditional
+
+// ************************************************************
+ValueSet: InformationNeeded
+Id: informationNeeded
+Title: "Information Needed Value Set"
+Description: "Codes defining whether information about the perfomer, location, and/or performance date is needed to determine coverage information"
+* ^status = #draft
+* ^experimental = false
+* DTRTempCodes#performer
+* DTRTempCodes#location
+* DTRTempCodes#timeframe

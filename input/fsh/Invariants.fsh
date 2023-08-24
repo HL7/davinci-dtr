@@ -6,9 +6,9 @@ Expression: "type = 'group' or extension.url = 'http://hl7.org/fhir/StructureDef
 
 /*****************************************************************************************************/
 Invariant:  dtr-1
-Description: "Either an Order or a Questionnaire, or both, SHALL be present"
+Description: "At least one of 'order', 'questionnaire' and 'context' SHALL be present"
 Severity:   #error
-Expression: "Parameters.parameter.exists(name='order') or Parameters.parameter.exists(name='questionnaire')"
+Expression: "parameter.exists(name='order' or name='questionnaire' or name='context')"
 
 /*****************************************************************************************************/
 Invariant:  dtrx-1
@@ -23,7 +23,7 @@ Severity:   #error
 Expression: "entry.first().resource.is(QuestionnaireResponse)"
 
 /*****************************************************************************************************/
-Invariant:  dtrb-2
-Description: "All items with an answer.valueReference have a URL that matches a fullUrl in the Bundle."
-Severity:   #error
-Expression: "entry.first().resource.is(QuestionnaireResponse)"
+// Invariant:  dtrb-2
+// Description: "All items with an answer.valueReference have a URL that matches a fullUrl in the Bundle."
+// Severity:   #error
+// Expression: "entry.first().resource.is(QuestionnaireResponse)"

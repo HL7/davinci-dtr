@@ -12,3 +12,4 @@ Alias: $standards-status = http://hl7.org/fhir/StructureDefinition/structuredefi
 Alias: $issuetype-cs = http://hl7.org/fhir/issue-type
 Alias: $issuedetails-cs = http://terminology.hl7.org/CodeSystem/operation-outcome
 Alias: $USCORE311VS = http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code
+Alias: $sdcEntryMode = http://hl7.org/fhir/uv/sdc/ValueSet/entryMode
