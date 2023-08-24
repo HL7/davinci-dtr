@@ -36,9 +36,7 @@ Description: "An example QuestionnaireResponse for Adaptive Questionnaire."
 * contained[0] = home-o2-sdc-adaptive-questionnaire
 * questionnaire = "#home-o2-sdc-adaptive-questionnaire"
 * status = #completed
-* subject = Reference(PatientExample1) "Vlad"
 * authored = "2022-01-26T20:36:57.544Z"
-* author = Reference(PractitionerExample1)
 * item.linkId = "1"
 * item[=].text = "Relevant Patient Diagnoses (conditions that might be expected to improve with oxygen therapy)"
 * item[=].answer.valueString = "diagnosis"
