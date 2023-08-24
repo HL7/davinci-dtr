@@ -44,6 +44,11 @@ dependencies:
     version: 1.0.0
     reason: |
       Defines common conformance rules across all Da Vinci IGs, as well as additional constraints and profiles beyond U.S. Core
+  hl7.fhir.extensions.r5:
+    id: r5ext
+    version: 4.0.1
+    reason: |
+      Makes available certain R5 elements for use as part of this R4 IG
 
 pages:
   index.md:
@@ -126,7 +131,7 @@ menu:
   Base Specs:
     FHIR R4 Spec: new-tab {{site.data.fhir.path}}
     US Core 3.1.1: new-tab http://hl7.org/fhir/us/core/STU3.1.1/index.html
-    SDC: new-tab {{site.data.fhir.ver.hl7_fhir_uv_sdc}}
+    SDC: new-tab http://hl7.org/fhir/uv/sdc/STU3/
 
   Support:
     Project Home: new-tab https://confluence.hl7.org/pages/viewpage.action?pageId=91980079
