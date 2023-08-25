@@ -44,7 +44,7 @@ They **SHALL** also handle all mustSupport elements within the Questionnaire pro
 Those same systems **SHOULD** be able to display QR.item.itemMedia
 
 #### EHRs and Payers
-Throughout this guide, the term 'EHR' refers to the set of systems acting on behalf of a provider, whether managed directly by the provider organization or by a third-party agency.  Similarly, 'payer' refers to the set of systems acting on behalf of the payer, whether managed directly by the payer or by a third-party agency.  For additional discussion about how this implementation guide functions when EHR and/or payer systems are not monolithic but instead are made up of components, refer to the [ePA Coordinators page].
+Throughout this guide, the term 'EHR' refers to the set of systems acting on behalf of a provider, whether managed directly by the provider organization or by a third-party agency.  Similarly, 'payer' refers to the set of systems acting on behalf of the payer, whether managed directly by the payer or by a third-party agency.  For additional discussion about how this implementation guide functions when EHR and/or payer systems are not monolithic but instead are made up of components, refer to the [ePA Coordinators page](epa.html).
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")  
 
@@ -64,7 +64,7 @@ EHRs have the option of delivering DTR functionality internally or leveraging a 
 
 DTR apps are expected to be technically able to run against any EHR and work with any payer. This means that EHRs are free to choose which app they prefer and **MAY** switch apps as they see fit.  However, for a DTR app to be used it needs to be trusted appropriately to manage access to personal health information by the EHRs and payers. EHRs that leverage DTR SMART apps will choose which DTR apps they will trust and support.  In some cases, an EHR **MAY** opt to support multiple DTR SMART apps.  If so, the EHR will be responsible for determining which app is used in which circumstances.
 
-SMART on FHIR defines the [basic expectations for an EHR to register a SMART app].  Most EHRs and organizations impose additional registration expectations.  DTR imposes an additional expectation as part of the app registration process, which is discussed in more detail in the [Determination of Payers Supported by a DTR App] section of this specification.
+SMART on FHIR defines the [basic expectations for an EHR to register a SMART app](https://www.hl7.org/fhir/smart-app-launch/app-launch.html#register-app-with-ehr).  Most EHRs and organizations impose additional registration expectations.  DTR imposes an additional expectation as part of the app registration process, which is discussed in more detail in the [Determination of Payers Supported by a DTR App](specification.html#determination-of-payers-supported-by-a-dtr-app) section of this specification.
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
@@ -76,7 +76,7 @@ Payers **MAY** have multiple back-end functions that handle different types of d
 
 This registration process will ensure the that the DTR app or Full EHR:
 * Is 'trusted' by the payer to deal with patient-identifiable data.
-* Knows the relevant endpoint to use for the payer to access the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation has a shared secret allowing secure access to the payer endpoint via SMART on FHIR Backend Services.
+* Knows the relevant endpoint to use for the payer to access the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation has a shared secret allowing secure access to the payer endpoint via [SMART on FHIR Backend Services](https://www.hl7.org/fhir/smart-app-launch/backend-services.html).
   
 Even after an application has been successfully registered, payers and EHRs **SHOULD** monitor the application behavior and **MAY** suspend an application's access if it is suspected of malicious behavior. 
 
@@ -98,7 +98,7 @@ The Questionnaire resource is used to represent the information needs that provi
 * How to automatically fill in answers to some of the questions based on data already available from the EHR.
 * Etc.
   
-The base Questionnaire resource defines some of these capabilities.  However, to allow specifying all the expectations needed to meet payer requirements for data collection forms, additional extensions are necessary.  DTR leverages the extended Questionnaire capabilities defined in the [Structured Data Capture (SDC) implementation guide] to define the complete set of functionality necessary to support data capture for payer purposes.  
+The base Questionnaire resource defines some of these capabilities.  However, to allow specifying all the expectations needed to meet payer requirements for data collection forms, additional extensions are necessary.  DTR leverages the extended Questionnaire capabilities defined in the [Structured Data Capture (SDC) implementation guide](http://hl7.org/fhir/uv/sdc/STU3/) to define the complete set of functionality necessary to support data capture for payer purposes.  
 
 More information regarding Questionnaires, workflow, and behaviors implementers will need to understand can be found in the SDC Guide:
 * Basic SDC Workflow
@@ -194,7 +194,7 @@ Adaptive questionnaires pose a slight challenge when it comes to preparing the Q
   
 * Finally, the payer can opt to specify the CQL and codes without using Libraries or ValueSets at all – the CQL can be sent in-line within the various Expression elements, and the codes can be listed directly as answerOption Codings.  This has similar advantages and disadvantages to the second option, though it has less overhead.  On the other hand, CQL and codes can't be shared across different items.
 
-The [Security and Privacy section] includes additional guidance on the use of Adaptive questionnaires.
+The [Security and Privacy section](security.html) includes additional guidance on the use of Adaptive questionnaires.
 
 #### Determinations from Adaptive Forms
 In some cases, upon receiving enough answers from an adaptive form, a payer will be able to make assertions about coverage, prior authorization, and/or any 'additional documentation needed' similar to what is provided by the CRD process. This information needs to be made available to the DTR client in a computable fashion. To do so, the adaptive form service will place the coverage-information extension on the root of the QuestionnaireResponse, alongside the [context] extension. 
@@ -231,7 +231,7 @@ Due to differences in workflows or information systems, clinical information **M
 
 DTR uses the [SDC Expression-based Population mechanism](http://hl7.org/fhir/uv/sdc/STU3/populate.html#expression-based-population) as the mechanism for populating, and specifically the use of CQL as the expression language.  CQL **SHALL** be used when pre-populating elements using data gathered from the EHR.  This will mean using the launchContext, [variable](https://hl7.org/fhir/extensions/StructureDefinition-variable.html) and the [initialExpression](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-initialExpression.html), [contextExpression](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-contextExpression.html) or [calculatedExpression](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-calculatedExpression.html) extensions together with logic in [Libraries](http://hl7.org/fhir/R4/library.html) referenced by the [cqf-library](https://hl7.org/fhir/extensions/StructureDefinition-cqf-library.html) extension to help populate the QuestionnaireResponse.
 
-Further guidance on writing the necessary CQL can be found [later in this guide].
+Further guidance on writing the necessary CQL can be found [later in this guide](specification.html#use-of-cql).
 
 #### Questionnaire Design
 Questionnaires, whether standard or adaptive, **SHOULD** also use logic that ensures that only 'relevant' questions and answer choices are displayed, based on what answers have already been provided/populated using elements such as enableWhen or enableWhenExpression. When using elements with a data type of  'Expression' within Questionnaires to control flow or rendering, all logic **SHALL** be written in CQL.  However, there are many other properties and extensions that control the rendering and behavior of Questionnaires.The DTR [Standard](StructureDefinition-dtr-std-questionnaire.html) and [Adaptive](StructureDefinition-dtr-sdc-questionnaire-adapt.html) Questionnaires have identified the elements and extensions from the SDC [Base](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html), [Advanced Rendering](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-render.html), [Advanced Behavior](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-behave.html) and [Expression-based Population](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-pop-exp.html) profiles that must be supported in DTR.  The descriptions Elements flagged as mustSupport **SHALL** be supported by DTR Apps and Full EHRs.  
@@ -434,7 +434,7 @@ The result will be a response with one or more Questionnaire package Bundles.  T
 
 If any of the retrieved Questionnaires have an effectivePeriod that ends prior to the current date, then the DTR client **SHALL** change the status of any retrieved work-in-progress QuestionnaireResponses for the expired Questionnaires to 'stopped' and notify the user that the previously recorded content has expired.  The [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation would then need to be re-invoked just passing the orders and not specifying canonical questionnaire URLs to retrieve the updated Questionnaire(s) appropriate for the order, using the same 'context'.
 
-If an expired Questionnaire is retrieved when it wasn't explicitly requested by referring to a canonical version, but instead by passing in the relevant order(s) and/or context id, the DTR client **SHOULD** [report an error] to the payer.
+If an expired Questionnaire is retrieved when it wasn't explicitly requested by referring to a canonical version, but instead by passing in the relevant order(s) and/or context id, the DTR client **SHOULD** report an error to the payer.
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
