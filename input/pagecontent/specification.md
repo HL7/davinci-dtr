@@ -106,7 +106,7 @@ More information regarding Questionnaires, workflow, and behaviors implementers 
 * Advanced Form Rendering
 * DTR SDC Questionnaire - Example
   
-This IG defines two different profiles on Questionnaire that can be used to define data gathering requirements: the [DTR Standard Questionnaire profile] and the [DTR Adaptive Questionnaire profile].
+This IG defines two different profiles on Questionnaire that can be used to define data gathering requirements: the [DTR Standard Questionnaire profile](StructureDefinition-dtr-std-questionnaire.html) and the [DTR Adaptive Questionnaire profile](StructureDefinition-dtr-sdc-questionnaire-adapt.html).
 
 In the first approach, all possible questions that can be asked, as well as the logic around when questions are enabled and what answers are permitted are expressed in computable form and shared as a complete set when the [questionnaire package](OperationDefinition-questionnaire-package.html) is retrieved.  Typically, the same Questionnaires are used across a wide variety of order types and members, though in theory the payer could generate a custom Questionnaire that is specific to a particular order and/or member.
 
