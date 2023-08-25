@@ -86,6 +86,11 @@ pages:
     extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: trial-use
+  security.md:
+    title: Privacy, Security, and Safety
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
   metrics.md:
     title: DTR Metrics
     extension:
@@ -121,6 +126,7 @@ menu:
 
   Specification:
     Formal Specification: specification.html
+    Privacy, Security, and Safety: security.html
     DTR Metrics: metrics.html
  
   FHIR Artifacts:
