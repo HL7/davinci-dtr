@@ -3,20 +3,6 @@
 ### Overview
 This page is organized into several sections reflecting the various steps involved in implementing DTR.  These steps are organized in roughly the order they would typically occur, though some variation in order is possible.
 
-<!-- * General considerations
-* Configuring EHR to App connectivity – if using SMART apps
-* Configuring App/EHR to Payer connectivity
-* Defining Questionnaires
-* Determination of Payers supported by a DTR app
-* Launching DTR
-* Authenticating DTR client to payer API
-* Retrieving launch context information
-* Retrieving Questionnaire packages
-* Pre-Populating QuestionnaireResponses
-* User interaction with Questionnaires
-* Storing QuestionnaireResponses
-* Passing DTR QuestionnaireResponses to downstream processes -->
-
 The core of this process is summarized in this diagram:
 
 [![DTRQuestionnairePackageOperation](questionnaire-package-sequence.png){:style="float: none;width:630px;height:420px"}](questionnaire-package-sequence.png "Sequence Diagram")
@@ -52,7 +38,7 @@ Throughout this guide, the term 'EHR' refers to the set of systems acting on beh
 ### Impact on payer processes
 Information passed to DTR will typically contain clinical terminologies, might not contain billing terminologies, and will generally not include billing modifier codes or similar information typically included in prior authorization requests. Services will also need to consider that the mapping they perform between clinical terminologies and billing codes **MAY** be different than the bill coding process performed by the client system when claims are eventually submitted. This **MAY** mean that assertions about coverage or prior authorization requirements will need to be expressed conditionally. e.g., "Provided this service is billed as X, Y or Z, then prior authorization is not needed".
 
-In situations where the DTR App is aware of the likely billing codes at the time of ordering, it might send these codes as additional CodeableConcept.coding repetitions to assist in server processing. If CPT is used, note the ability to convey CPT modifier codes via post-coordination as described in the Using CPT page on terminology.hl7.org.
+In situations where the DTR App is aware of the likely billing codes at the time of ordering, it might send these codes as additional CodeableConcept.coding repetitions to assist in server processing. If CPT is used, note the ability to convey CPT modifier codes via post-coordination as described in the Using CPT page on [terminology.hl7.org](https://terminology.hl7.org/).
 
 It is more efficient if mappings can be shared across payers and providers. This implementation guide encourages industry participants to cooperate on the development of shared mappings and/or to work with terminology developers (e.g., AMA for CPT codes) to develop shared mappings as part of their code maintenance process.
 
