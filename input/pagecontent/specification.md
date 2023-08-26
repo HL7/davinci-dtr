@@ -176,8 +176,8 @@ When a payer uses an Adaptive Form, they **SHALL** return a questionnaire instan
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
-      <td style="border: none"> <!-- Note Text Here -->
-if present, any questionnaire-adaptive url <b>SHALL</b> be a sub-url under the base for the payer and able to be accessed within the same SMART Backend Services connection as was established to make the <a href="OperationDefinition-questionnaire-package.html"><code>$questionnaire-package</code></a> call.
+      <td style="border: none"> 
+If present, any questionnaire-adaptive url <b>SHALL</b> be a sub-url under the base for the payer and able to be accessed within the same SMART Backend Services connection as was established to make the <a href="OperationDefinition-questionnaire-package.html"><code>$questionnaire-package</code></a> call.
       </td></tr>
   </table>
 </div><br>
@@ -197,12 +197,12 @@ Adaptive questionnaires pose a slight challenge when it comes to preparing the Q
 The [Security and Privacy section](security.html) includes additional guidance on the use of Adaptive questionnaires.
 
 #### Determinations from Adaptive Forms
-In some cases, upon receiving enough answers from an adaptive form, a payer will be able to make assertions about coverage, prior authorization, and/or any 'additional documentation needed' similar to what is provided by the CRD process. This information needs to be made available to the DTR client in a computable fashion. To do so, the adaptive form service will place the coverage-information extension on the root of the QuestionnaireResponse, alongside the [context] extension. 
+In some cases, upon receiving enough answers from an adaptive form, a payer will be able to make assertions about coverage, prior authorization, and/or any 'additional documentation needed' similar to what is provided by the CRD process. This information needs to be made available to the DTR client in a computable fashion. To do so, the adaptive form service will place the coverage-information extension on the root of the [QuestionnaireResponse](StructureDefinition-dtr-questionnaireresponse.html), alongside the [context](StructureDefinition-qr-context.html) extension. 
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
-      <td style="border: none"> <!-- Note Text Here -->
+      <td style="border: none"> 
 It will be unusual for a coverage-information extension created by an adaptive form to come back saying 'additional documentation required', however there are theoretical use-cases for this to be useful and this specification does not prohibit such behavior. If this occurs, it <b>MAY</b> result in a subsequent launch of DTR, or could result in the DTR client prompting the user as to whether they want to move on to filling out the new form(s).
       </td></tr>
   </table>
@@ -243,7 +243,16 @@ The questionnaire designer should consider the possibility that access to some d
 #### Provider Attestation
 In some cases, if there isn't specific data that can be retrieved computably from the EHR, it **MAY** be sufficient for a payer to merely have an attestation by the provider that certain documentation exists, that a certain patient condition exists, or that certain actions have been completed. This can be represented in a Questionnaire as a simple boolean or choice question where the text describes what the user is attesting to. Payers **SHOULD** design questionnaires to support attestation rather than discrete data where this is sufficient for the business requirements.
 
-Some payers **MAY** require that attestations or other answers be 'signed' (the electronic equivalent of 'initialing' the answer). This would be identified by means of the signatureRequired extension on the Questionnaire item.  NOTE that this IG does not define any expectations around certificate management or other considerations involved in the creation or validation of signatures, only the means by which signatures are requested and provided.
+Some payers **MAY** require that attestations or other answers be 'signed' (the electronic equivalent of 'initialing' the answer). This would be identified by means of the signatureRequired extension on the Questionnaire item.  
+
+<div markdown="1" class="notebox">
+  <table style="border: none; margin-bottom: 0px;">
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+      <td style="border: none"> 
+This IG does not define any expectations around certificate management or other considerations involved in the creation or validation of signatures, only the means by which signatures are requested and provided.
+      </td></tr>
+  </table>
+</div><br>
 
 Questionnaires **MAY** also support attaching reports or other supporting documentation (e.g., images, pathology reports, etc.) where providing question answers is not sufficient. The 'attachment' question type can be used to support this. Attachments might be found by searching for DiagnosticReport or Media instances, or by the provider directly uploading something to the Questionnaire rendering tool.
 
@@ -288,7 +297,7 @@ The Questionnaire resource provides several mechanisms for conveying coded answe
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
-      <td style="border: none"> <!-- Note Text Here -->
+      <td style="border: none"> 
 When licensed code systems are involved (e.g., UB, CPT), the payer, provider and, if necessary, the SMART on FHIR app vendor will need to have the relevant licenses.  The expectations around licensing should be established as part of the configuration process between the parties. 
       </td></tr>
   </table>
@@ -315,7 +324,7 @@ As an example, a payer **MAY** have a set of rules or specific information that 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
-      <td style="border: none"> <!-- Note Text Here -->
+      <td style="border: none"> 
 Implementers could use Adaptive Forms to minimize the need for any CQL that provides conditional information retrieval.
       </td></tr>
   </table>
@@ -450,7 +459,7 @@ The flow of execution of the CQL will be determined by the associated Questionna
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
-      <td style="border: none"> <!-- Note Text Here -->
+      <td style="border: none"> 
 The answers to questions populated by an initialExpression or calculatedExpression might themselves be dependencies to determining whether a Questionnaire item is enabled or not, which <b>MAY</b> in turn influence whether additional pre-population is required.  DTR clients <b>SHALL</b> iterate as necessary until a steady state is reached.  If dependencies are such that a steady state cannot be reached (e.g., an item that is enabled causes a value to be set which causes a different item to be enabled, that then disables the first item…), then the Questionnaire <b>SHALL</b> be treated as erroneous and attempts at automatic population <b>SHALL</b> end, with the user being informed of that.
       </td></tr>
   </table>
@@ -497,7 +506,7 @@ If any errors are encountered during execution, the app's engine **SHALL NOT** a
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
-      <td style="border: none"> <!-- Note Text Here -->
+      <td style="border: none"> 
 A query for data that returns no results <b>SHALL NOT</b> be considered a failure.
       </td></tr>
   </table>
@@ -573,7 +582,7 @@ In those cases where a QuestionnaireResponse is to be used to convey information
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
-      <td style="border: none"> <!-- Note Text Here -->
+      <td style="border: none"> 
 Only those resources directly referenced in the QuestionnaireResponse are included. If further references from a referenced resource are desired, the designer of the Questionnaire must ensure that these are also included as answers (possibly as hidden answers automatically populated by CQL within the Questionnaire).
       </td></tr>
   </table>
@@ -583,4 +592,3 @@ While multiple purposes are possible, the expectation is that all information in
 
 If there is a desire to send different content to different recipients, then distinct QuestionnaireResponses **SHALL** be used.
 It is up to the DTR Client to determine the process by which attachments to prior auth requests, claims or orders are assembled - this could be done automatically, or with human review.
-

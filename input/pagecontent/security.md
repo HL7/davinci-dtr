@@ -1,6 +1,6 @@
 Guidance and conformance expectations around privacy and security are provided by all three specifications this IG relies on. Implementers **SHALL** be familiar with and adhere primarily to any security and privacy rules defined by Da Vinci HRex Privacy and Security.
 Implementers **SHALL** also adhere to the security guidelines defined in:
-* FHIR core: [Security & Privacy module](http://hl7.org/fhir/R4/secpriv-module.html), [Security Principles and Implementer's Checklist](http://hl7.org/fhir/R4/safety.html)
+* FHIR core: [Security & Privacy module](http://hl7.org/fhir/R4/secpriv-module.html), [Security Principles](http://hl7.org/fhir/R4/security.html) and [Implementer's Checklist](http://hl7.org/fhir/R4/safety.html)
 * CDS Hooks: [Security & Safety](https://cds-hooks.hl7.org/2.0/#security-and-safety)
 * SMART on FHIR: [SMART App Launch Framework](https://www.hl7.org/fhir/smart-app-launch/)
 
