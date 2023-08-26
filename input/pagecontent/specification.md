@@ -3,7 +3,7 @@
 ### Overview
 This page is organized into several sections reflecting the various steps involved in implementing DTR.  These steps are organized in roughly the order they would typically occur, though some variation in order is possible.
 
-* General considerations
+<!-- * General considerations
 * Configuring EHR to App connectivity – if using SMART apps
 * Configuring App/EHR to Payer connectivity
 * Defining Questionnaires
@@ -15,7 +15,7 @@ This page is organized into several sections reflecting the various steps involv
 * Pre-Populating QuestionnaireResponses
 * User interaction with Questionnaires
 * Storing QuestionnaireResponses
-* Passing DTR QuestionnaireResponses to downstream processes
+* Passing DTR QuestionnaireResponses to downstream processes -->
 
 The core of this process is summarized in this diagram:
 
