@@ -87,10 +87,10 @@ The Questionnaire resource is used to represent the information needs that provi
 The base Questionnaire resource defines some of these capabilities.  However, to allow specifying all the expectations needed to meet payer requirements for data collection forms, additional extensions are necessary.  DTR leverages the extended Questionnaire capabilities defined in the [Structured Data Capture (SDC) implementation guide](http://hl7.org/fhir/uv/sdc/STU3/) to define the complete set of functionality necessary to support data capture for payer purposes.  
 
 More information regarding Questionnaires, workflow, and behaviors implementers will need to understand can be found in the SDC Guide:
-* Basic SDC Workflow
-* Form Behavior and Calculation
-* Advanced Form Rendering
-* DTR SDC Questionnaire - Example
+* [Basic SDC Workflow](http://hl7.org/fhir/uv/sdc/STU3/workflow.html)
+* [Form Behavior and Calculation](http://hl7.org/fhir/uv/sdc/STU3/behavior.html)
+* [Advanced Form Rendering](http://hl7.org/fhir/uv/sdc/STU3/rendering.html)
+* [DTR SDC Questionnaire - Example](Questionnaire-home-o2-std-questionnaire.html)
   
 This IG defines two different profiles on Questionnaire that can be used to define data gathering requirements: the [DTR Standard Questionnaire profile](StructureDefinition-dtr-std-questionnaire.html) and the [DTR Adaptive Questionnaire profile](StructureDefinition-dtr-sdc-questionnaire-adapt.html).
 
@@ -325,11 +325,11 @@ DTR imposes the following additional rules on CQL use by payers to maximize inte
 * The CQL **SHALL** be version CQL STU2.
 * CQL **SHALL** have a context of "Patient". 
 * Within the Questionnaire, CQL **SHALL** follow SDC rules for determining context. Specifically, CQL definitions and variables defined on ancestor elements or preceding expression extensions within the same Questionnaire item are in scope for referencing in descendant/following expressions. 
-* Within Libraries, both raw CQL and compiled ELM **SHALL** be provided as separate content repetitions within the library.  Within Expression elements, the base expression CQL **SHALL** be accompanied by a http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-alternative-expression-extension containing the compiled ELM for the expression.
+* Within Libraries, both raw CQL and compiled ELM **SHALL** be provided as separate content repetitions within the library.  Within Expression elements, the base expression CQL **SHALL** be accompanied by a [US Public Health Alternative Expression Extension](http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-alternative-expression-extension) containing the compiled ELM for the expression.
 * If the Questionnaire depends on multiple Libraries (has multiple cqf-library elements), then any [valueExpression](https://hl7.org/fhir/extensions/StructureDefinition-variable.html) referring to defined variables **SHALL** specify the library name as well as the statement name as follows: "LibraryName".statementName.
 * Library names **SHALL** be unique within a Questionnaire package and **SHOULD** be unique across all Libraries made available by the payer. e.g., "expression": "\"LowerLimbProsthesis\".PhysicalExaminationType"
 where LowerLimbProsthesis is the library name and PhysicalExaminationType is the expression name.
-* FHIR Libraries **SHALL** send CQL and ELM using the content.data element.
+* FHIR Libraries **SHALL** send CQL and ELM using the `content.data` element.
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
@@ -343,7 +343,7 @@ Accessing the endpoint will be by a simple GET with an Accept header of applicat
 
 EHRs will typically retrieve the list of supported payers for the app once per day and will use this information to determine whether to expose the ability to launch DTR for orders associated with coverages for that payer.
 
-Standardization of payer ids is still an open issue.  Guidance on standardization of payer identity is expected to be provided in the CRD/DTR Supplemental Guide on HL7 Confluence.
+Standardization of payer ids is still an open issue.  Guidance on standardization of payer identity is expected to be provided in the [CRD/DTR Supplemental Guide](https://confluence.hl7.org/pages/viewpage.action?pageId=91991946) on HL7 Confluence.
  
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
@@ -353,7 +353,7 @@ Standardization of payer ids is still an open issue.  Guidance on standardizatio
 #### Launching a DTR SMART app
 If an EHR is not using a SMART app, this section will not apply.
 
-When the DTR process is being launched, the Electronic Health Record (EHR) system and DTR process **SHALL** follow the procedures established by the SMART App Launch Framework - specifically the SMART App Launch Framework's EHR launch sequence.
+When the DTR process is being launched, the Electronic Health Record (EHR) system and DTR process **SHALL** follow the procedures established by the SMART App Launch Framework - specifically the [SMART App Launch Framework's EHR launch sequence](https://www.hl7.org/fhir/smart-app-launch/app-launch.html#launch-app-ehr-launch).
 
 Like any SMART app, DTR is passed a context when launched.  The openId, user, and patient launch contexts **SHALL** be requested and provided.  In addition, the launchContext **SHOULD** include fhirContext references as follows:
 * One active Coverage resource indicating the coverage(s) associated with the documentation to be captured (unless Coverage is already conveyed in the [coverage-information](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extensions of the Request or Encounter passed below) and 
