@@ -39,28 +39,28 @@ Resumed DTR sessions initiated from a previously stored QuestionnaireResponse wi
 * docReason              0..* code             "Reason for launching DTR" "doc-purpose passed in on the coverage-information in Requests, Encounters or QuestoinnaireResponses used as context to launch DTR (or selected by the user as context post-launch)."
   * ^comment = "If there were multiple coverage-informations present in the launch context, this will be the union of distinct codes present."
 
-* launchMode             0..1 code             "crdlaunch | relaunch | salaunch | cdexlaunch" "Indicates the launch mode involved for this session."
-* launchMode             from MetricLaunchMode (required)
-
-* orderItem              1..* CodeableConcept  "What was ordered" "The specific procedure, item, medication, appointment, nutrition that is the subject of the order/appointment."
-* orderItem              from $USCORE311VS (extensible)
-
 * action                 1..* BackboneElement  "Actions the reporting system engaged in as part of the DTR session."  "Actions performed between a system and the DTR application."
   * ^comment = "See notes section below for how the action elements should be populated for different actions"
   * actionDetail         1..1 code             "launch | qpackage | mrquery | userresponse | nextq | storeqr" "What type of action occurred within the DTR session."
   * actionDetail         from MetricAction (required)
   * requestTime          1..1 instant          "Time action initiated"  "The time stamp when the action was initiated from the perspective of the reporting system."
   * responseTime         0..1 instant          "Time of action response"  "The time stamp when the action was completed (including error return) from the perspective of the reporting system."
+  * httpResponse         0..1 integer          "HTTP response status code" "The HTTP response status code associated with the action (successful or not)."
+    * ^comment = "Must be present unless action is a userresponse"
   * questionnaire        0..1 canonical        "Associated Questionnaire" "The questionnaire(s) tied to the current action"
     * ^type.targetProfile[0] = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-std-questionnaire"
     * ^type.targetProfile[+] = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire-adapt"
-  * httpResponse         0..1 integer          "HTTP response status code" "The HTTP response status code associated with the action (successful or not)."
-    * ^comment = "Must be present unless action is a userresponse"
   * issue                0..* BackboneElement  "OperationOutcome info"  "If an OperationOutcome is returned, what were the issues?"
     * code               1..1 code             "Error code"  "The issue.code value from the OperationOutcome for this issue."
     * code               from IssueType       (required)
     * details            0..1 CodeableConcept  "More detailed error code"  "The issue.details value from the OperationOutcome for this issue."
     * details            from OperationOutcomeCodes (example)
+
+* launchMode             0..1 code             "crdlaunch | relaunch | salaunch | cdexlaunch" "Indicates the launch mode involved for this session."
+* launchMode             from MetricLaunchMode (required)
+
+* orderItem              1..* CodeableConcept  "What was ordered" "The specific procedure, item, medication, appointment, nutrition that is the subject of the order/appointment."
+* orderItem              from $USCORE311VS (extensible)
 
 * resources              0..* BackboneElement  "Resource types accessed"  "Information that was accessed from the EHR by the one or more of the questionnaires using CQL."
   * type                 1..1 code             "Kind of resource" "What kind of resource was accessed."
@@ -81,11 +81,10 @@ Resumed DTR sessions initiated from a previously stored QuestionnaireResponse wi
   * enabledQuestions     0..1 positiveInt      "Number of enabled questions"  "The count of all questions enabled in the Questionnaire at the time it was marked ‘complete’."
   * autoPopulated        0..1 positiveInt      "Number of questions autopopulated"  "The count of all questions that were auto-populated from the patient's medical record and/or by payer information."
     * ^meaningWhenMissing = "No questions had their answers auto-populated"
-  * elapsedTime          1..1 time             "Cumulative user response time that questionnaire was active"  "cumulative time from DTR start to QR store, including from multiple sessions."
   * roleInteraction      0..* BackboneElement  "Role specific interactions"  "Specific roles that were responsible for entering data manually or modifying data that was auto populated."
     * role               1..1 CodeableConcept  "Role of information contributor" "The type of individual performing the data entry/override."
     * roleAction         1..1 code             "auto | override | manual"  "Was the data entry to answer a question that was not prepopulated (manual) or to modify the answer to question that was auto populated."
-    * roleAction         from DTRInformationOrigins (required)
+    * roleAction         from DTRInformationOrigins (extensible)
     * count              1..1 positiveInt      "Count of combination of role and roleInteraction"  "Number of questions within the questionnaire where the specified role performed the specified action."
 
   * coverageInfo    0..* BackboneElement "Coverage information"                "Coverage information extensions returned as part of completed adaptive Questionnaires within this DTR session."
@@ -107,4 +106,6 @@ Resumed DTR sessions initiated from a previously stored QuestionnaireResponse wi
       * ^requirements = "Used to link the results of CRD to metric information captured for DTR and/or PAS."
     * satisfiedId   0..1 string          "Id if PA is satisfied"               "Corresponds to the satisfied-pa-id from the coverage-information extension."
     * businessLine  0..1 CodeableConcept "E.g. MedicareAdvantage"              "A code that indicates which type of insurance this assertion applies to."
+
+* elapsedTime       1..1 time             "Cumulative user response time that questionnaire was active"  "cumulative time from DTR start to QR store, including from multiple sessions."
 
