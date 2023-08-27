@@ -152,10 +152,10 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[0].linkId = "1.1"
 * item[=].item[=].text = "Last Name but Different This Time"
 * item[=].item[=].answer.valueString = "Quinton"
+
 * item[=].item[=].answer.extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer.extension[=].extension[0].url = "source"
 * item[=].item[=].answer.extension[=].extension[=].valueCode = #override
-
 * item[=].item[=].answer.extension[=].extension[+].url = "author"
 * item[=].item[=].answer.extension[=].extension[=].extension[0].url = "role"
 * item[=].item[=].answer.extension[=].extension[=].extension[=].valueCodeableConcept = 	http://terminology.hl7.org/CodeSystem/practitioner-role#doctor "Doctor"
@@ -177,9 +177,11 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[+].linkId = "1.6"
 * item[=].item[=].text = "Medicare ID"
 * item[=].item[=].answer.valueString = "10A3D58WH22"
+
 * item[=].item[=].answer.extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer.extension[=].extension[0].url = "source"
 * item[=].item[=].answer.extension[=].extension[=].valueCode = #auto
+
 * item[+].linkId = "2"
 * item[=].text = "Provider who is performing face-to-face evaluation"
 * item[=].item[0].linkId = "2.1"
@@ -197,6 +199,15 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[+].linkId = "2.5"
 * item[=].item[=].text = "Date of Face-To-Face Evaluation"
 * item[=].item[=].answer.valueDate = "2019-07-18"
+* item[=].item[=].answer.extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+* item[=].item[=].answer.extension[=].extension[0].url = "source"
+* item[=].item[=].answer.extension[=].extension[=].valueCode = #override
+* item[=].item[=].answer.extension[=].extension[+].url = "author"
+* item[=].item[=].answer.extension[=].extension[=].extension[0].url = "role"
+* item[=].item[=].answer.extension[=].extension[=].extension[=].valueCodeableConcept = 	http://terminology.hl7.org/CodeSystem/practitioner-role#doctor "Doctor"
+* item[=].item[=].answer.extension[=].extension[=].extension[+].url = "practitioner"
+* item[=].item[=].answer.extension[=].extension[=].extension[=].valueReference = Reference(PractitionerExample) "Dr. Jane Doe"
+
 * item[+].linkId = "3"
 * item[=].text = "Coverage Requirements"
 * item[=].item[0].linkId = "3.1"
@@ -218,6 +229,10 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[+].linkId = "3.6"
 * item[=].item[=].text = "Is there a documented improvement of hypoxemia during exercise with oxygen?"
 * item[=].item[=].answer.valueBoolean = true
+* item[=].item[=].answer.extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+* item[=].item[=].answer.extension[=].extension[0].url = "source"
+* item[=].item[=].answer.extension[=].extension[=].valueCode = #auto
+
 * item[+].linkId = "4"
 * item[=].text = "Prescribed Use"
 * item[=].item[0].linkId = "4.1"
@@ -245,6 +260,10 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[+].linkId = "4.5"
 * item[=].item[=].text = "Frequency of use (choose all that apply)"
 * item[=].item[=].answer.valueCoding = #"At rest and awake" "At rest and awake"
+* item[=].item[=].answer.extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+* item[=].item[=].answer.extension[=].extension[0].url = "source"
+* item[=].item[=].answer.extension[=].extension[=].valueCode = #auto
+
 * item[+].linkId = "5"
 * item[=].text = "Oxygen Supply Order Details"
 * item[=].item[0].linkId = "5.1"
@@ -258,4 +277,7 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[+].linkId = "5.3"
 * item[=].item[=].text = "Means of oxygen delivery and accessories"
 * item[=].item[=].answer[0].valueCoding = http://example.org#134 "Mask"
+* item[=].item[=].answer.extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+* item[=].item[=].answer.extension[=].extension[0].url = "source"
+* item[=].item[=].answer.extension[=].extension[=].valueCode = #auto
 
