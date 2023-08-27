@@ -87,25 +87,25 @@ Resumed DTR sessions initiated from a previously stored QuestionnaireResponse wi
     * roleAction         from DTRInformationOrigins (extensible)
     * count              1..1 positiveInt      "Count of combination of role and roleInteraction"  "Number of questions within the questionnaire where the specified role performed the specified action."
 
-  * coverageInfo    0..* BackboneElement "Coverage information"                "Coverage information extensions returned as part of completed adaptive Questionnaires within this DTR session."
-    * covered       0..1 code            "covered | not-covered | conditional" "Indicates whether the service is covered."
-    * covered       from CoveredInfo              (required)
-    * paNeeded      0..1 code            "auth-needed | no-auth | satisfied +" "Indicates whether prior authorization is necessary or not, as well as considerations about applying for prior authorization."
-    * paNeeded      from CoveragePaDetail         (required)
-    * docNeeded     0..1 code            "no-doc | clinical | admin | both +"  "Indicates whether additional information is necessary (for prior auth, claims submission, or some other purpose)."
-    * docNeeded     from AdditionalDocumentation  (required)
-    * infoNeeded    0..1 code            "performer | location | timeframe"    "Indicates what additional inforamtion is necessary in order to determine authorization/coverage - which might be available on a later hook invocation."
-    * infoNeeded    from InformationNeeded        (required)
-    * questionnaire 0..* BackboneElement "Questionnaire(s) returned"           "Information about the Questionnaire(s) returned to gather additional information (e.g. through DTR)."
-      * ^requirements = "Allows linking metadata about forms identified 'to be filled out' in CRD with what is actually completed in DTR, and eventually submitted in CDex, PAS or claims"
-      * reference   1..1 canonical       "Questionnaire url & version"         "The official identifier of one of the Questionnaires provided to be filled out."
-        * ^type.targetProfile = "http://hl7.org/fhir/StructureDefinition/Questionnaire"
-      * adaptive    1..1 boolean         "Is questionnaire adaptive?"          "If true, indicates that the questionnaire is adaptive (i.e. uses the $next-question operation to determine questions)."
-      * response    1..1 boolean         "Pre-pop response provided?"          "If true, indicates that the card included a partially populated QuestionnaireResponse with answers filled by the payer from pre-known data."
-    * assertionId   1..1 string          "Id for coverage assertion"           "Corresponds to the coverage-assertion-id from the coverage-information extension."
-      * ^requirements = "Used to link the results of CRD to metric information captured for DTR and/or PAS."
-    * satisfiedId   0..1 string          "Id if PA is satisfied"               "Corresponds to the satisfied-pa-id from the coverage-information extension."
-    * businessLine  0..1 CodeableConcept "E.g. MedicareAdvantage"              "A code that indicates which type of insurance this assertion applies to."
+* coverageInfo    0..* BackboneElement "Coverage information"                "Coverage information extensions returned as part of completed adaptive Questionnaires within this DTR session."
+  * covered       0..1 code            "covered | not-covered | conditional" "Indicates whether the service is covered."
+  * covered       from CoveredInfo              (required)
+  * paNeeded      0..1 code            "auth-needed | no-auth | satisfied +" "Indicates whether prior authorization is necessary or not, as well as considerations about applying for prior authorization."
+  * paNeeded      from CoveragePaDetail         (required)
+  * docNeeded     0..1 code            "no-doc | clinical | admin | both +"  "Indicates whether additional information is necessary (for prior auth, claims submission, or some other purpose)."
+  * docNeeded     from AdditionalDocumentation  (required)
+  * infoNeeded    0..1 code            "performer | location | timeframe"    "Indicates what additional inforamtion is necessary in order to determine authorization/coverage - which might be available on a later hook invocation."
+  * infoNeeded    from InformationNeeded        (required)
+  * questionnaire 0..* BackboneElement "Questionnaire(s) returned"           "Information about the Questionnaire(s) returned to gather additional information (e.g. through DTR)."
+    * ^requirements = "Allows linking metadata about forms identified 'to be filled out' in CRD with what is actually completed in DTR, and eventually submitted in CDex, PAS or claims"
+    * reference   1..1 canonical       "Questionnaire url & version"         "The official identifier of one of the Questionnaires provided to be filled out."
+      * ^type.targetProfile = "http://hl7.org/fhir/StructureDefinition/Questionnaire"
+    * adaptive    1..1 boolean         "Is questionnaire adaptive?"          "If true, indicates that the questionnaire is adaptive (i.e. uses the $next-question operation to determine questions)."
+    * response    1..1 boolean         "Pre-pop response provided?"          "If true, indicates that the card included a partially populated QuestionnaireResponse with answers filled by the payer from pre-known data."
+  * assertionId   1..1 string          "Id for coverage assertion"           "Corresponds to the coverage-assertion-id from the coverage-information extension."
+    * ^requirements = "Used to link the results of CRD to metric information captured for DTR and/or PAS."
+  * satisfiedId   0..1 string          "Id if PA is satisfied"               "Corresponds to the satisfied-pa-id from the coverage-information extension."
+  * businessLine  0..1 CodeableConcept "E.g. MedicareAdvantage"              "A code that indicates which type of insurance this assertion applies to."
 
 * elapsedTime       1..1 time             "Cumulative user response time that questionnaire was active"  "cumulative time from DTR start to QR store, including from multiple sessions."
 
