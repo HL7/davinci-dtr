@@ -160,10 +160,7 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[=].answer.extension[=].extension[=].extension[0].url = "role"
 * item[=].item[=].answer.extension[=].extension[=].extension[=].valueCodeableConcept = 	http://terminology.hl7.org/CodeSystem/practitioner-role#doctor "Doctor"
 * item[=].item[=].answer.extension[=].extension[=].extension[+].url = "practitioner"
-* item[=].item[=].answer.extension[=].extension[=].extension[=].valueReference = Reference(PractitionerExample1) "Dr. Jane Doe"
-
-// * item[=].item[=].answer.extension[=].extension[+].url = "author"
-// * item[=].item[=].answer.extension[=].extension[=].valueReference = Reference(PractitionerExample1) "Dr. Jane Doe"
+* item[=].item[=].answer.extension[=].extension[=].extension[=].valueReference = Reference(PractitionerExample) "Dr. Jane Doe"
 
 * item[=].item[+].linkId = "1.2"
 * item[=].item[=].text = "First Name"

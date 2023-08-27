@@ -63,6 +63,7 @@ Description: "An instance of DTRCoverage"
 * costToBeneficiary.type = COPAYTYPE#copaypct "Copay Percentage"
 * costToBeneficiary.valueQuantity.value = 20.00
 
+// **********************************************************************************************************************************
 Instance: ServiceRequestExample
 InstanceOf: DTRServiceRequest
 //Usage: #inline
@@ -72,9 +73,8 @@ InstanceOf: DTRServiceRequest
 * code.text = "Gas panel - Blood"
 * subject = Reference(PatientExample)
 * occurrenceDateTime = "2019-05-08T09:33:27+07:00"
-// * requester = Reference(PractitionerExample1) "Dr. Jane Doe"
+* requester = Reference(PractitionerExample) "Dr. Jane Doe"
 * reasonCode.text = "Check for O2 blood saturation levels"
-
 
 // **********************************************************************************************************************************
 Instance: PatientExample
@@ -102,3 +102,13 @@ Description: "An instance of Organization as a payer used in the example resourc
 * address.state = "CT"
 * address.postalCode = "06155"
 * address.country = "US"
+
+// **********************************************************************************************************************************
+Instance: PractitionerExample
+InstanceOf: USCorePractitionerProfile
+Description: "An example practitioner referred to by the example resources."
+* identifier.system = "http://hl7.org/fhir/sid/us-npi"
+* identifier.value = "1122334455"
+* name.family = "Doe"
+* name.given = "Jane"
+* name.prefix = "Dr."
