@@ -165,18 +165,33 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[+].linkId = "1.2"
 * item[=].item[=].text = "First Name"
 * item[=].item[=].answer.valueString = "Vlad"
+* item[=].item[=].answer.extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+* item[=].item[=].answer.extension[=].extension[0].url = "source"
+* item[=].item[=].answer.extension[=].extension[=].valueCode = #auto
 * item[=].item[+].linkId = "1.3"
 * item[=].item[=].text = "Middle Initial"
 * item[=].item[=].answer.valueString = "A, N"
+* item[=].item[=].answer.extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+* item[=].item[=].answer.extension[=].extension[0].url = "source"
+* item[=].item[=].answer.extension[=].extension[=].valueCode = #auto
 * item[=].item[+].linkId = "1.4"
 * item[=].item[=].text = "Date Of Birth"
 * item[=].item[=].answer.valueDate = "1956-12-01"
+* item[=].item[=].answer.extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+* item[=].item[=].answer.extension[=].extension[0].url = "source"
+* item[=].item[=].answer.extension[=].extension[=].valueCode = #auto
 * item[=].item[+].linkId = "1.5"
 * item[=].item[=].text = "Gender"
 * item[=].item[=].answer.valueCoding = http://hl7.org/fhir/administrative-gender#male "Male"
+* item[=].item[=].answer.extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+* item[=].item[=].answer.extension[=].extension[0].url = "source"
+* item[=].item[=].answer.extension[=].extension[=].valueCode = #auto
 * item[=].item[+].linkId = "1.6"
 * item[=].item[=].text = "Medicare ID"
 * item[=].item[=].answer.valueString = "10A3D58WH22"
+* item[=].item[=].answer.extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+* item[=].item[=].answer.extension[=].extension[0].url = "source"
+* item[=].item[=].answer.extension[=].extension[=].valueCode = #auto
 
 * item[=].item[=].answer.extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer.extension[=].extension[0].url = "source"
@@ -187,18 +202,33 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[0].linkId = "2.1"
 * item[=].item[=].text = "Last Name"
 * item[=].item[=].answer.valueString = "Doe"
+* item[=].item[=].answer.extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+* item[=].item[=].answer.extension[=].extension[0].url = "source"
+* item[=].item[=].answer.extension[=].extension[=].valueCode = #auto
 * item[=].item[+].linkId = "2.2"
 * item[=].item[=].text = "First Name"
 * item[=].item[=].answer.valueString = "Jane"
+* item[=].item[=].answer.extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+* item[=].item[=].answer.extension[=].extension[0].url = "source"
+* item[=].item[=].answer.extension[=].extension[=].valueCode = #auto
 * item[=].item[+].linkId = "2.3"
 * item[=].item[=].text = "Middle Initial"
 * item[=].item[=].answer.valueString = "B"
+* item[=].item[=].answer.extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+* item[=].item[=].answer.extension[=].extension[0].url = "source"
+* item[=].item[=].answer.extension[=].extension[=].valueCode = #auto
 * item[=].item[+].linkId = "2.4"
 * item[=].item[=].text = "NPI"
 * item[=].item[=].answer.valueString = "1122334455"
+* item[=].item[=].answer.extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+* item[=].item[=].answer.extension[=].extension[0].url = "source"
+* item[=].item[=].answer.extension[=].extension[=].valueCode = #auto
 * item[=].item[+].linkId = "2.5"
 * item[=].item[=].text = "Date of Face-To-Face Evaluation"
 * item[=].item[=].answer.valueDate = "2019-07-18"
+* item[=].item[=].answer.extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+* item[=].item[=].answer.extension[=].extension[0].url = "source"
+* item[=].item[=].answer.extension[=].extension[=].valueCode = #auto
 * item[=].item[=].answer.extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer.extension[=].extension[0].url = "source"
 * item[=].item[=].answer.extension[=].extension[=].valueCode = #override
@@ -212,19 +242,37 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].text = "Coverage Requirements"
 * item[=].item[0].linkId = "3.1"
 * item[=].item[=].text = "Relevant Patient Diagnoses (conditions that might be expected to improve with oxygen therapy)"
-* item[=].item[=].answer[0].valueCoding = http://snomed.info/sct#313296004 "Mild chronic obstructive pulmonary disease"
+* item[=].item[=].answer[+].valueCoding = http://snomed.info/sct#313296004 "Mild chronic obstructive pulmonary disease"
+* item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+* item[=].item[=].answer[=].extension[=].extension[0].url = "source"
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
 * item[=].item[=].answer[+].valueCoding = http://snomed.info/sct#389087006 "Hypoxemia (disorder)"
+* item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+* item[=].item[=].answer[=].extension[=].extension[0].url = "source"
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
 * item[=].item[+].linkId = "3.2"
 * item[=].item[=].text = "Arterial oxygen saturation (Patient on room air while at rest and awake when tested)"
 * item[=].item[=].answer.valueQuantity = 95 'mm[Hg]'
+* item[=].item[=].answer.extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+* item[=].item[=].answer.extension[=].extension[0].url = "source"
+* item[=].item[=].answer.extension[=].extension[=].valueCode = #auto
 * item[=].item[+].linkId = "3.3"
 * item[=].item[=].text = "Arterial Partial Pressure of Oxygen (PO2) (Patient on room air while at rest and awake when tested)"
 * item[=].item[=].answer.valueQuantity = 83 'mm[Hg]'
+* item[=].item[=].answer.extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+* item[=].item[=].answer.extension[=].extension[0].url = "source"
+* item[=].item[=].answer.extension[=].extension[=].valueCode = #auto
 * item[=].item[+].linkId = "3.4"
 * item[=].item[=].text = "Arterial oxygen saturation (Patient tested during exercise)"
 * item[=].item[=].answer.valueQuantity = 95 'mm[Hg]'
+* item[=].item[=].answer.extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+* item[=].item[=].answer.extension[=].extension[0].url = "source"
+* item[=].item[=].answer.extension[=].extension[=].valueCode = #auto
 * item[=].item[+].linkId = "3.5"
 * item[=].item[=].answer.valueQuantity = 78 'mm[Hg]'
+* item[=].item[=].answer.extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+* item[=].item[=].answer.extension[=].extension[0].url = "source"
+* item[=].item[=].answer.extension[=].extension[=].valueCode = #auto
 * item[=].item[=].text = "Arterial Partial Pressure of Oxygen (PO2) (Patient tested during exercise)"
 * item[=].item[+].linkId = "3.6"
 * item[=].item[=].text = "Is there a documented improvement of hypoxemia during exercise with oxygen?"
