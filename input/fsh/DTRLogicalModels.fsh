@@ -70,6 +70,8 @@ Resumed DTR sessions initiated from a previously stored QuestionnaireResponse wi
 
 * questionnaire          0..* BackboneElement  "Questionnaire"  "Questionnaire that was returned in the Questionnaire package (and information about what was done with it)"
   * reference            1..1 canonical        "This is the URL for the canonical questionnaire"  "This is the URL for the canonical questionnaire that was returned by the $questionnaire-package operation"
+    * ^type.targetProfile[0] = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-std-questionnaire"
+    * ^type.targetProfile[+] = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire-adapt"
   * adaptive             0..1 boolean          "True if adaptive form"  "If the Questionnaire is an adaptive form, the value is True."
     * ^meaningWhenMissing = "Questionnaire was a standard (non-adaptive) Questionnaire"
   * populated            0..1 boolean          "Whether a pre-populated response was provided from payer"  "If true, indicates that the draft QuestionnaireResponse provided in the Questionnaire package Bundle included at least some answers pre-populated with payer data."
