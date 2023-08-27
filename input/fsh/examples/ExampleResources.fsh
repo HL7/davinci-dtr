@@ -73,7 +73,7 @@ InstanceOf: DTRServiceRequest
 * code.text = "Gas panel - Blood"
 * subject = Reference(PatientExample)
 * occurrenceDateTime = "2019-05-08T09:33:27+07:00"
-* requester = Reference(PractitionerExample) "Dr. Jane Doe"
+// * requester = Reference(PractitionerExample) "Dr. Jane Doe"
 * reasonCode.text = "Check for O2 blood saturation levels"
 
 // **********************************************************************************************************************************
