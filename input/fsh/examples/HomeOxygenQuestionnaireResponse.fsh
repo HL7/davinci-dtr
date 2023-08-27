@@ -135,15 +135,18 @@ Description: "Inline Questionnaire for QuestionnaireResponse"
 
 // **********************************************************************************************************************************
 Instance: home-o2-questionnaireresponse
-InstanceOf: QuestionnaireResponse
+InstanceOf: DTRQuestionnaireResponse
 Usage: #example
 Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * meta.profile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse"
-* authored = "2023-08-21"
+
+* extension[context][+].extension[coverage].valueReference = Reference(DTRCoverageExample)
+* extension[context][+].extension[order].valueReference = Reference(ServiceRequestExample)
+* extension[intendedUse].valueCodeableConcept.coding = http://hl7.org/fhir/us/davinci-dtr/CodeSystem/temp#order "include-order"
+* questionnaire = "http://example.com/Questionnaire/referred-questionnaire"
 * status = #completed
 * subject = Reference(PatientExample) "Vlad"
-* questionnaire = "http://example.com/Questionnaire/referred-questionnaire"
-
+* authored = "2023-08-21"
 * item[0].linkId = "1"
 * item[=].text = "Patient Information"
 * item[=].item[0].linkId = "1.1"

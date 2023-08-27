@@ -13,7 +13,6 @@ Description: "An example Adaptive SDC questionnaire for Home Oxygen Therapy."
 * date = "2020-01-16T00:00:00+00:00"
 * publisher = "Da Vinci DTR"
 * contact.name = "Example Author"
-
 * derivedFrom = "http://example/basequestionnaire"
 * extension[sdc-questionnaire-questionnaireAdaptive].valueBoolean = true
 * item.linkId = "1"
