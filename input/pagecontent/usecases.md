@@ -20,16 +20,16 @@ The goal of the Burden Reduction IGs is to move from Telephone, FAX, Portal, and
 ### System Actors
 This Implementation Guide Fundamentally supports four different system actors that can be involved (with corresponding Capability Statements):
 
-1. **[Light DTR EHR](CapabilityStatement-dtr-smart-client.html)**  
+1. **[Light DTR EHR](CapabilityStatement-light-dtr-ehr.html)**  
 EHR systems which leverage a SMART app to manage data capture and rules execution, but which must be able to launch the SMART app, respond to app queries, and store the final documentation results. 
 
-2. **[Full DTR EHRs](CapabilityStatement-dtr-native-client.html)**  
+2. **[Full DTR EHRs](CapabilityStatement-full-dtr-ehr.html)**  
 EHR systems which manage DTR data capture and execution directly and also allow the rules to access other data and store final documentation results  
 
-3. **[DTR SMART Apps](CapabilityStatement-dtr-payer-app.html)**  
+3. **[DTR SMART Client](CapabilityStatement-dtr-smart-client.html)**  
 SMART on FHIR applications that take context from an EHR, retrieve questionnaires and rule sets from a DTR Payer server, render the Questionnaires and capture data, and store the results on payer and/or EHR systems  
 
-4. **[DTR Payer Servers](CapabilityStatement-dtr-intermediary-system.html)**  
+4. **[DTR Payer App](CapabilityStatement-dtr-payer-app.html)**  
 Responds to operations requesting Questionnaire packages, and (optionally) helps in the processing of adaptive questionnaires. 
 
 <!-- ### Expected Systems

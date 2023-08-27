@@ -11,7 +11,7 @@ Usage: #example
 * version = "1.0.0"
 * title = "QUICK Model Definition"
 * status = #draft
-* type.coding.code = #model-definition
+* type = http://terminology.hl7.org/CodeSystem/library-type#model-definition
 * date = "2016-07-08"
 * description = "Model definition for the QUICK Logical Model"
 * topic.text = "QUICK"
