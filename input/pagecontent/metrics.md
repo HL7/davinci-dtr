@@ -77,7 +77,7 @@ express as percentage
     <td style="vertical-align: middle;">Process</td>
     <td style="vertical-align: middle;">Both</td>   
     <td style="vertical-align: middle;">DTRMetricData.where(exists(action.where(actionDetail=’launch’ and httpResponse=200)))
-.questionnaire.roleInteraction.where(roleAction=’overrid’).count.aggregate($this + $total,0)
+.questionnaire.roleInteraction.where(roleAction=’override’).aggregate($this + $total,0)
 divide by 
 DTRMetricData.where(exists(action.where(actionDetail=’launch’ and httpResponse=200)))
 .questionnaire.autoPopulated.aggregate($this + $total,0)
