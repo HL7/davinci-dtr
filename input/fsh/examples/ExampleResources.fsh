@@ -19,6 +19,24 @@ Usage: #example
 * content.url = "http://cqlrepository.org/quick-modelinfo.xml"
 
 // **********************************************************************************************************************************
+Instance: CoverageExample
+InstanceOf: http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-coverage
+Description: "An instance of CRD Coverage"
+* subscriber = Reference(PatientExample)
+* beneficiary = Reference(PatientExample)
+* relationship = RELATE#self "Self"
+* status = #active
+* class.name = "Premim Family Plus Plan"
+* class.type = COVCLASS#plan "Plan"
+* class.value = "Premim Family Plus"
+* period.start = "2022-01-01"
+* period.end = "2023-01-01"
+* payor = Reference(OrgExample)
+* subscriberId = "PFP123450000"
+// * costToBeneficiary.type = COPAYTYPE#copaypct "Copay Percentage"
+// * costToBeneficiary.valueQuantity.value = 20.00
+
+// **********************************************************************************************************************************
 Instance: DTRQuestionnairePackageOperationResultSimple
 InstanceOf: Bundle
 Description: "An example of DTRQuestionnairePackageOperation returning a Parameters instance containing multiple Questionnaire bundles, each with references to other Library and ValueSet resources."
