@@ -15,8 +15,9 @@ This implementation guide adopts by reference the following HRex Conformance Req
 This IG marks elements with the Must Support flag in its profiles. In addition to the expectations provided in the HRex section referenced above, the following additional considerations apply:  
 
 This guide profiles on top of US Core profiles where Must Support has been defined on certain elements (e.g., DTR Medication Request profile). The FHIR specification makes it clear that when profiling another profile, a MustSupport flag can be constrained further (i.e., taken from 'false' to 'true') but cannot be loosened (i.e., changed from 'true' to 'false').  
-
-Da Vinci DTR implementations **SHALL** conform to the US Core IG Must Support Guidance where US Core IG resources are used.
+  
+Da Vinci DTR implementations **SHALL** conform to the US Core IG [Must Support](http://hl7.org/fhir/us/core/STU3.1.1/general-guidance.html#must-support) Guidance where US Core IG resources are used.
+  
 DTR apps and EHRs that take on DTR app responsibility **SHALL** be able to render Questionnaires and QuestionnaireResponses.  Specifically, apps and EHRs acting as form fillers **SHALL** be able to display:
 * `QR.questionnaire.questionnaireDisplay`/`Questionnaire.title`
 * `QR.authored`
@@ -27,6 +28,7 @@ DTR apps and EHRs that take on DTR app responsibility **SHALL** be able to rende
 * The same for all nested items
 
 They **SHALL** also handle all mustSupport elements within the Questionnaire profile and provide visual cues where those elements impact expected user action (e.g., required answers, need for signatures, etc.)
+  
 Those same systems **SHOULD** be able to display QR.item.itemMedia
 
 #### EHRs and Payers
@@ -65,6 +67,15 @@ This registration process will ensure the that the DTR app or Full EHR:
 * Knows the relevant endpoint to use for the payer to access the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation has a shared secret allowing secure access to the payer endpoint via [SMART on FHIR Backend Services](https://www.hl7.org/fhir/smart-app-launch/backend-services.html).
   
 Even after an application has been successfully registered, payers and EHRs **SHOULD** monitor the application behavior and **MAY** suspend an application's access if it is suspected of malicious behavior. 
+
+<div markdown="1" class="notebox">
+  <table style="border: none; margin-bottom: 0px;">
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+      <td style="border: none"> 
+Some payers may create Questionnaires that rely on code systems that require licensing for use where there isn’t already a cross-U.S. license in place (e.g., UB, CPT).  In such cases, the payer, provider, and if necessary, the SMART on FHIR app vendor will need to have the relevant licenses to display, store, and retransmit the information captured.  The expectations around licensing requirements should be established as part of the configuration process between the parties.
+      </td></tr>
+  </table>
+</div><br>
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
@@ -279,15 +290,6 @@ The Questionnaire resource provides several mechanisms for conveying coded answe
     <td>You don't have the value set (e.g., probably because of licensing issues) - you need to look for it on a registry/terminology server, resolve the canonical URL to retrieve it, then cache the value set(s) if allowed by the code system(s). For some code systems, you may need to license the data file first in order to retrieve codes and descriptors by browser or API. Also, once you get the value set, you might still need to expand it like scenario (3) above.</td>    
   </tr>
 </table><br>
-
-<div markdown="1" class="notebox">
-  <table style="border: none; margin-bottom: 0px;">
-    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
-      <td style="border: none"> 
-When licensed code systems are involved (e.g., UB, CPT), the payer, provider and, if necessary, the SMART on FHIR app vendor will need to have the relevant licenses.  The expectations around licensing should be established as part of the configuration process between the parties. 
-      </td></tr>
-  </table>
-</div><br>
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
