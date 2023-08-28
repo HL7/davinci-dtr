@@ -80,14 +80,20 @@ Resumed DTR sessions initiated from a previously stored QuestionnaireResponse wi
   * failure              from IssueType (required)
   * reviewPrior          0..1 boolean          "True if user reviewed answers prior to final save"  "If the provider reviewed the QuestionnaireResponse answers prior to marking it as complete or saving it in the EHR."
     * ^meaningWhenMissing = "User did not review the QuestionnaireRepsonse in this session"
-  * enabledQuestions     0..1 positiveInt      "Number of enabled questions"  "The count of all questions enabled in the Questionnaire at the time it was marked ‘complete’."
+  * enabledQuestions     0..1 positiveInt      "Number of enabled questions"  "The count of all questions enabled in the Questionnaire at the time it was marked 'complete'."
+    * ^comment = "This element is a count of the number of enabled question items at the time the QuestionnaireResponse was last stored as part of this DTR session"
   * autoPopulated        0..1 positiveInt      "Number of questions autopopulated"  "The count of all questions that were auto-populated from the patient's medical record and/or by payer information."
+    * ^comment = "The modification may have happened in a prior session.  This element is a count of the number of enabled question items with an information-origin extension of 'auto' or 'override' at the time the QuestionnaireResponse was last stored as part of this DTR session."
     * ^meaningWhenMissing = "No questions had their answers auto-populated"
-  * roleInteraction      0..* BackboneElement  "Role specific interactions"  "Specific roles that were responsible for entering data manually or modifying data that was auto populated."
-    * role               1..1 CodeableConcept  "Role of information contributor" "The type of individual performing the data entry/override."
-    * roleAction         1..1 code             "auto | override | manual"  "Was the data entry to answer a question that was not prepopulated (manual) or to modify the answer to question that was auto populated."
+  * overridden           0..1 positiveInt  "The count of all enabled questions that were auto-populated" "The count of all enabled questions that were auto-populated from the patient's medical record and/or by payer information and then had their answers modified by the user."
+    * ^comment = "The modification may have happened in a prior session.  This element is a count of the number of enabled question items with an information-origin extension of ‘override’ at the time the QuestionnaireResponse was last stored as part of this DTR session."
+    * ^meaningWhenMissing = "No questions had their answers overridden"
+  * roleInteraction      0..* BackboneElement  "Role specific interactions"  "A summary of the information-origin extensions for all enabled questions in the Questionnaire as they were at the time the QuestionnaireResponse was last stored within the DTR session reflecting human intervention."
+    * role               1..1 CodeableConcept  "Role of information contributor" "The type of humanrole whose questionnaire completion is summarized here.  Corresponds to the information-origin.author.role.  NOTE: if a form is edited by multiple people with the same roles, the items they edit or override will be aggregated together."
+    * role               from $USCORE311PRVS (extensible)
+    * roleAction         1..1 code             "auto | override | manual"  "This will indicate the type of human intervention action being summarized (auto, override or manual)."
     * roleAction         from DTRInformationOrigins (extensible)
-    * count              1..1 positiveInt      "Count of combination of role and roleInteraction"  "Number of questions within the questionnaire where the specified role performed the specified action."
+    * count              1..1 positiveInt      "Count of combination of role and roleInteraction"  "This is the sum of enabled questions for the specified with an information-origin of that source AND an author.role that matches the specified role."
 
 * coverageInfo    0..* BackboneElement "Coverage information"                "Coverage information extensions returned as part of completed adaptive Questionnaires within this DTR session."
   * covered       0..1 code            "covered | not-covered | conditional" "Indicates whether the service is covered."
