@@ -46,24 +46,6 @@ Description: "An example of DTRQuestionnairePackageOperation returning a Bundle 
 * entry[=].resource = home-o2-std-questionnaire
 
 // **********************************************************************************************************************************
-Instance: DTRCoverageExample
-InstanceOf: DTRCoverage
-Description: "An instance of DTRCoverage"
-* subscriber = Reference(PatientExample)
-* beneficiary = Reference(PatientExample)
-* relationship = RELATE#self "Self"
-* status = #active
-* class.name = "Premim Family Plus Plan"
-* class.type = COVCLASS#plan "Plan"
-* class.value = "Premim Family Plus"
-* period.start = "2022-01-01"
-* period.end = "2023-01-01"
-* payor = Reference(OrgExample)
-* subscriberId = "PFP123450000"
-* costToBeneficiary.type = COPAYTYPE#copaypct "Copay Percentage"
-* costToBeneficiary.valueQuantity.value = 20.00
-
-// **********************************************************************************************************************************
 Instance: ServiceRequestExample
 InstanceOf: DTRServiceRequest
 //Usage: #inline
