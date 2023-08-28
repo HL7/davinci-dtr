@@ -49,6 +49,9 @@ dependencies:
     version: 4.0.1
     reason: |
       Makes available certain R5 elements for use as part of this R4 IG
+  hl7.fhir.us.davinci-crd:
+    id: crd
+    version: current
 
 pages:
   index.md:
