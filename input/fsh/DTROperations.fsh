@@ -118,7 +118,7 @@ Id:             dtr-qpackage-input-parameters
 Title:          "DTR Questionnaire Package Input Parameters"
 Description:    "The Parameters profile used to define the inputs of the 'questionnaire-package' operation."
 * obeys dtr-1
-* status = #active
+* ^status = #active
 * parameter ^slicing.discriminator.type = #pattern
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.rules = #open
@@ -158,7 +158,7 @@ Id:             dtr-qpackage-output-parameters
 Title:          "DTR Questionnaire Package Output Parameters"
 Description:    "A profile on Parameters indicating the expected response content of a questionnaire-package operation."
 * obeys dtr-1
-* status = #active
+* ^status = #active
 * parameter ^slicing.discriminator.type = #pattern
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.rules = #open

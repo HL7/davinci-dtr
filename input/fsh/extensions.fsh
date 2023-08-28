@@ -4,7 +4,7 @@ Id: qr-context
 Description: "Identifies the orders, coverages, and or other resources associated with the specified QuestionnaireResponse.  Allows finding the DTR responses associated with a particular Order/Encounter/Appointment for a particular insurance coverage."
 * ^title = "Questionnaire Response Context"
 * ^context.expression = "QuestionnaireResponse"
-* status = #active
+* ^status = #active
 * extension contains
     coverage 0..1 and
     order 0..1
@@ -27,7 +27,7 @@ Title: "Intended Use"
 Description: "Indicates how the EHR is to use the information with respect to the associated orders/records."
 * ^context[0].type = #element
 * ^context[=].expression = "QuestionnaireResponse"
-* status = #active
+* ^status = #active
 * value[x] ^short = "Reference to the pertinent order associated with this QuestionnaireResponse."
 * value[x] ^definition = "This contains references to the pertinent orders associated with this QuestionnaireResponse."
 * value[x] only CodeableConcept
@@ -41,8 +41,8 @@ Description: "Identifies the origin of the information in the answer and how it 
 * ^title = "Information Origin"
 * ^context[0].type = #element
 * ^context[=].expression = "QuestionnaireResponse.item.answer"
+* ^status = #active
 * obeys dtrx-1
-* status = #active
 * extension contains
     source 1..1 and
     author 0..1 
