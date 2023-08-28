@@ -1,3 +1,6 @@
+Alias: $dtr-servicerequest = http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-servicerequest
+Alias: $us-core-encounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+Alias: $practitioner-role = http://hl7.org/fhir/ValueSet/practitioner-role
 Alias: $CQFQ = http://hl7.org/fhir/StructureDefinition/cqf-questionnaire
 Alias: $CQFLIB = http://hl7.org/fhir/StructureDefinition/cqf-library
 Alias: $CQFEXP = http://hl7.org/fhir/StructureDefinition/cqf-expression
@@ -14,3 +17,9 @@ Alias: $issuedetails-cs = http://terminology.hl7.org/CodeSystem/operation-outcom
 Alias: $USCORE311VS = http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code
 Alias: $sdcEntryMode = http://hl7.org/fhir/uv/sdc/ValueSet/entryMode
 Alias: $USCORE311PRVS = http://hl7.org/fhir/us/core/ValueSet/us-core-provider-role
+Alias: $CRDCoverage = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-coverage
+Alias: $CRDCommunicationRequest = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-communicationrequest
+Alias: $CRDDeviceRequest = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-devicerequest
+Alias: $CRDVisionPrescription = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-visionprescription
+Alias: $CRDMedicationRequest = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-medicationrequest
+Alias: $CRDNutritionOrder = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-nutritionorder

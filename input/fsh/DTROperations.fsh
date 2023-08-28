@@ -124,17 +124,17 @@ Description:    "The Parameters profile used to define the inputs of the 'questi
 * parameter ^slicing.description = "Slice based on $this pattern"
 * parameter 1..* MS
 * parameter contains 
-	coverage 1..* MS and
+	  coverage 1..* MS and
     order 0..* MS and
     questionnaire 0..* MS and
-	context 0..1 MS and
-	changedsince 0..1 MS
+	  context 0..1 MS and
+	  changedsince 0..1 MS
 * parameter[coverage].name = "coverage"
 * parameter[coverage].resource 1..1 MS
-* parameter[coverage].resource only DTRCoverage
+* parameter[coverage].resource only $CRDCoverage
 * parameter[order].name = "order"
 * parameter[order].resource 1..1 MS
-* parameter[order].resource only Appointment or CommunicationRequest or DeviceRequest or ImmunizationRecommendation or MedicationRequest or NutritionOrder or ServiceRequest or SupplyRequest or VisionPrescription
+* parameter[order].resource only Appointment or $CRDCommunicationRequest or $CRDDeviceRequest or ImmunizationRecommendation or $CRDMedicationRequest or $CRDNutritionOrder or ServiceRequest or SupplyRequest or $CRDVisionPrescription
 * parameter[order].resource ^short = "One or more Order resource instances. e.g., DeviceRequest, ServiceRequest, MedicationRequest, ... Encounter, Appointment, or prior-auth Claim, etc."
 * parameter[questionnaire].name = "questionnaire"
 * parameter[questionnaire].value[x] 1..1 MS

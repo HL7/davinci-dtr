@@ -2,6 +2,7 @@
 /**************************************************************************************************************/
 Instance: light-dtr-ehr
 InstanceOf: CapabilityStatement
+Title: "Light DTR EHR"
 Usage: #definition
 * url = "http://hl7.org/fhir/us/davinci-dtr/CapabilityStatement/light-dtr-ehr"
 * version = "1.1.0-ballot"
@@ -101,6 +102,7 @@ Usage: #definition
 /**************************************************************************************************************/
 Instance: full-dtr-ehr
 InstanceOf: CapabilityStatement
+Title: "Full DTR EHR"
 Usage: #definition
 * url = "http://hl7.org/fhir/us/davinci-dtr/CapabilityStatement/full-dtr-ehr"
 * version = "1.1.0-ballot"
@@ -190,6 +192,7 @@ Usage: #definition
 /**************************************************************************************************************/
 Instance: dtr-payer-app
 InstanceOf: CapabilityStatement
+Title: "DTR Payer App"
 Usage: #definition
 * url = "http://hl7.org/fhir/us/davinci-dtr/CapabilityStatement/dtr-payer-app"
 * version = "1.1.0-ballot"
@@ -289,11 +292,12 @@ Usage: #definition
 /**************************************************************************************************************/
 Instance: dtr-smart-client
 InstanceOf: CapabilityStatement
+Title: "DTR SMART Client"
 Usage: #definition
 * url = "http://hl7.org/fhir/us/davinci-dtr/CapabilityStatement/dtr-smart-client"
 * version = "1.1.0-ballot"
 * name = "DTRSmartClient"
-* title = "DTR SMART Client"
+* title = "DTR SMART on FHIR Client"
 * status = #active
 * experimental = false
 * date = "2023-06-29"
