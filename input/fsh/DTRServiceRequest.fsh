@@ -16,7 +16,7 @@ Description:    "This profile sets minimum expectations for recording, searching
 * ^text.status = #additional
 * ^text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This profile sets minimum expectations for recording, searching, and fetching the ServiceRequest resource to promote interoperability and adoption through common implementation.</p></div>"
 * ^version = "1.0.0"
-* ^status = #draft
+* ^status = #active
 * ^date = "2023-05-29T02:27:35+00:00"
 
 * status MS

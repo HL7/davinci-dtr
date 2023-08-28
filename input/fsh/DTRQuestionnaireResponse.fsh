@@ -9,7 +9,7 @@ Description:    "Enforces DTR requirements on a completed or partially completed
 * ^text.status = #additional
 * ^text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>The QuestionnaireResponse resource is used to represent the information supplied by the provider.</p></div>"
 * ^version = "1.0.0"
-* ^status = #draft
+* ^status = #active
 * ^date = "2023-08-21T02:27:35+00:00"
 
 * extension[signature] MS

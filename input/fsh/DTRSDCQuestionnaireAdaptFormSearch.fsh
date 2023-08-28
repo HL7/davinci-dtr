@@ -9,7 +9,7 @@ Description: "The DTR SDC adaptive Questionnaire is used to represent an adaptiv
 * ^text.status = #additional
 * ^text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>The Questionnaire resource for the adaptive form is used to represent the information needs that a payer has to satisfy their documentation requirements and/or rules.</p></div>"
 * ^version = "1.0.0"
-* ^status = #draft
+* ^status = #active
 
 * extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-questionnaireAdaptive named questionnaireAdaptive 0..* MS
 * extension[sdc-questionnaire-assemble-expectation] 0..0

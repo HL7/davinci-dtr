@@ -3,6 +3,7 @@ Extension: QuestionnaireResponseContext
 Id: qr-context
 Description: "Identifies the orders, coverages, and or other resources associated with the specified QuestionnaireResponse.  Allows finding the DTR responses associated with a particular Order/Encounter/Appointment for a particular insurance coverage."
 * ^title = "Questionnaire Response Context"
+* ^context.expression = "QuestionnaireResponse"
 * extension contains
     coverage 0..1 and
     order 0..1

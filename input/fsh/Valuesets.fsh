@@ -15,7 +15,7 @@ ValueSet: MetricSource
 Id: metric-Source
 Title: "Metric Source"
 Description: "A list of codes indicating the perspective from which metric data was captured"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * DTRTempCodes#payer-src
 * DTRTempCodes#provider-src
@@ -26,7 +26,7 @@ ValueSet: MetricLaunchMode
 Id: metric-launchmode
 Title: "Metric Launch Mode"
 Description: "A list of codes indicating how DTR was launched"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * DTRTempCodes#crdlaunch
 * DTRTempCodes#relaunch
@@ -38,7 +38,7 @@ ValueSet: MetricAction
 Id: metric-Action
 Title: "Metric Action"
 Description: "A list of codes indicating the DTR action performed by a system"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * DTRTempCodes#launch
 * DTRTempCodes#qpackage
@@ -52,7 +52,7 @@ ValueSet: IntendedUse
 Id: intended-Use
 Title: "Intended Use"
 Description: "A list of codes indicating the intended use of the QuestionnaireResponse."
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * DTRTempCodes#pa
 * DTRTempCodes#claim
@@ -64,7 +64,7 @@ ValueSet: CoveredInfo
 Id: coverageInfo
 Title: "Covered Information Value Set"
 Description: "Codes defining whether the ordered/requested service is covered under patient's plan"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * DTRTempCodes#not-covered
 * DTRTempCodes#covered
@@ -75,7 +75,7 @@ ValueSet: CoveragePaDetail
 Id: coveragePaDetail
 Title: "Coverage Prior Authorization Value Set"
 Description: "Codes defining whether prior auth will be needed for coverage to be provided"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * DTRTempCodes#no-auth
 * DTRTempCodes#auth-needed
@@ -88,7 +88,7 @@ ValueSet: AdditionalDocumentation
 Id: AdditionalDocumentation
 Title: "Additional Documentation Value Set"
 Description: "Codes defining whether additional documentation needs to be captured"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * DTRTempCodes#no-doc
 * DTRTempCodes#clinical
@@ -101,7 +101,7 @@ ValueSet: InformationNeeded
 Id: informationNeeded
 Title: "Information Needed Value Set"
 Description: "Codes defining whether information about the perfomer, location, and/or performance date is needed to determine coverage information"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * DTRTempCodes#performer
 * DTRTempCodes#location

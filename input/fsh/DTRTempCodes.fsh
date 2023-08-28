@@ -5,7 +5,7 @@ CodeSystem: DTRTempCodes
 Id: temp
 Title: "DTR Temporary Codes"
 Description: "Codes temporarily defined as part of the DTR implementation guide.  These will eventually migrate into an officially maintained terminology (likely HL7's UTG code systems)."
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a

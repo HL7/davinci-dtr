@@ -8,7 +8,7 @@ Usage: #definition
 * url = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package"
 * name = "QuestionnairePackage"
 * title = "Get Questionnaire Packge for given order(s)"
-* status = #draft
+* status = #active
 * kind = #operation
 * description = "This operation returns one or more 'collection' Bundles each consisting of a single Questionnaire resource as well as any dependency Library and ValueSet instances needed to allow a renderer to fully render and otherwise process the Questionnaire.
 
@@ -184,7 +184,7 @@ Usage: #definition
 * url = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/log-questionnaire-errors"
 * name = "LogQuestionnaireErrors"
 * title = "Log errors resulting from a specific Questionnaire and/or CQL to the originating Payer"
-* status = #draft
+* status = #active
 * kind = #operation
 * description = "This operation **SHOULD** be supported by payers and DTR applications and allows submission of issues encountered when working with these DTR-provided artifacts.  The operation will pass the Questionnaire and an OperationOutcome detailing the issue(s) including where the error occurred.    
 
