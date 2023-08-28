@@ -8,6 +8,8 @@ Description: "The DTR SDC adaptive Questionnaire is used to represent an adaptiv
 * ^meta.lastUpdated = "2021-11-12T17:01:59.000+00:00"
 * ^text.status = #additional
 * ^text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>The Questionnaire resource for the adaptive form is used to represent the information needs that a payer has to satisfy their documentation requirements and/or rules.</p></div>"
+* text.div ^comment = "The contents of the html element are an XHTML fragment containing only the basic html formatting elements described in chapters 7-11 and 15 of the HTML 4.0 standard, 'anchor' elements (either name or href), images and internally contained stylesheets. The XHTML content SHALL NOT contain a head, a body, external stylesheet references, scripts, forms, base/link/xlink, frames, iframes and objects."
+
 * ^version = "1.0.0"
 * ^status = #active
 * ^date = "2021-11-12T02:27:35+00:00"
@@ -59,3 +61,4 @@ Description: "The DTR SDC adaptive Questionnaire is used to represent an adaptiv
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-unit named unit 0..1
 * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-candidateExpression named candidateExpression 0..1 MS
 * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-contextExpression named contextExpression 0..* MS
+
