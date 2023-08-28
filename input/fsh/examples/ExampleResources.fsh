@@ -10,7 +10,7 @@ Usage: #example
 * url = "http://example.org/fhir/Library/quick"
 * version = "1.0.0"
 * title = "QUICK Model Definition"
-* status = #draft
+* status = #active
 * type = http://terminology.hl7.org/CodeSystem/library-type#model-definition
 * date = "2016-07-08"
 * description = "Model definition for the QUICK Logical Model"
@@ -33,8 +33,6 @@ Description: "An instance of CRD Coverage"
 * period.end = "2023-01-01"
 * payor = Reference(OrgExample)
 * subscriberId = "PFP123450000"
-// * costToBeneficiary.type = COPAYTYPE#copaypct "Copay Percentage"
-// * costToBeneficiary.valueQuantity.value = 20.00
 
 // **********************************************************************************************************************************
 Instance: DTRQuestionnairePackageOperationResultSimple
@@ -66,15 +64,16 @@ Description: "An example of DTRQuestionnairePackageOperation returning a Bundle 
 // **********************************************************************************************************************************
 Instance: ServiceRequestExample
 InstanceOf: DTRServiceRequest
-//Usage: #inline
+Description: "Example of ServiceRequest used in the Home Oxygen Therapy (home-o2-questionnaireresponse) example"
 * status = #active
 * intent = #original-order
 * code = http://loinc.org#24338-6
 * code.text = "Gas panel - Blood"
 * subject = Reference(PatientExample)
 * occurrenceDateTime = "2019-05-08T09:33:27+07:00"
-// * requester = Reference(PractitionerExample) "Dr. Jane Doe"
-* reasonCode.text = "Check for O2 blood saturation levels"
+* reasonCode.coding.code = #4565000
+* reasonCode.coding.system = "http://snomed.info/sct"
+* reasonCode.text = "Decreased oxygen affinity"
 
 // **********************************************************************************************************************************
 Instance: PatientExample

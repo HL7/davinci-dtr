@@ -13,7 +13,7 @@ Description: "An example Adaptive SDC questionnaire for Home Oxygen Therapy."
 * date = "2020-01-16T00:00:00+00:00"
 * publisher = "Da Vinci DTR"
 * contact.name = "Example Author"
-* derivedFrom = "http://example/basequestionnaire"
+* derivedFrom = "http://hl7.org/fhir/us/davinci-dtr/Questionnaire/home-o2-std-questionnaire"
 * extension[sdc-questionnaire-questionnaireAdaptive].valueBoolean = true
 * item.linkId = "1"
 * item[=].text = "Relevant Patient Diagnoses (conditions that might be expected to improve with oxygen therapy)"
