@@ -25,7 +25,7 @@ Usage: #definition
 * rest.documentation = "A DTR intermediary system provides an SMART on FHIR application"
 * rest.security.description = "Implementations **SHALL** meet the general security requirements documented in the [[http://hl7.org/fhir/us/davinci-hrex/STU1/security.html|HRex implementation guide]]."
 * rest.resource[0].type = #Coverage
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-coverage"
+* rest.resource[=].supportedProfile = $CRDCoverage
 * rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction.extension.valueCode = #SHOULD
 * rest.resource[=].interaction.code = #search-type
@@ -42,19 +42,19 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Allows filtering to only active coverages"
 * rest.resource[+].type = #DeviceRequest
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-devicerequest"
+* rest.resource[=].supportedProfile = $CRDDeviceRequest
 * rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction.extension.valueCode = #SHOULD
 * rest.resource[=].interaction.code = #update
 * rest.resource[=].versioning = #versioned-update
 * rest.resource[+].type = #MedicationRequest
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-medicationrequest"
+* rest.resource[=].supportedProfile = $CRDMedicationRequest
 * rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction.extension.valueCode = #SHOULD
 * rest.resource[=].interaction.code = #update
 * rest.resource[=].versioning = #versioned-update
 * rest.resource[+].type = #NutritionOrder
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-nutritionorder"
+* rest.resource[=].supportedProfile = $CRDNutritionOrder
 * rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction.extension.valueCode = #SHOULD
 * rest.resource[=].interaction.code = #update
@@ -125,7 +125,7 @@ Usage: #definition
 * rest.documentation = "A DTR Native Client provides an EHR-based application"
 * rest.security.description = "Implementations **SHALL** meet the general security requirements documented in the [[http://hl7.org/fhir/us/davinci-hrex/STU1/security.html|HRex implementation guide]]."
 * rest.resource[0].type = #Coverage
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-coverage"
+* rest.resource[=].supportedProfile = $CRDCoverage
 * rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction.extension.valueCode = #SHOULD
 * rest.resource[=].interaction.code = #search-type
@@ -142,19 +142,19 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Allows filtering to only active coverages"
 * rest.resource[+].type = #DeviceRequest
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-devicerequest"
+* rest.resource[=].supportedProfile = $CRDDeviceRequest
 * rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction.extension.valueCode = #SHOULD
 * rest.resource[=].interaction.code = #update
 * rest.resource[=].versioning = #versioned-update
 * rest.resource[+].type = #MedicationRequest
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-medicationrequest"
+* rest.resource[=].supportedProfile = $CRDMedicationRequest
 * rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction.extension.valueCode = #SHOULD
 * rest.resource[=].interaction.code = #update
 * rest.resource[=].versioning = #versioned-update
 * rest.resource[+].type = #NutritionOrder
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-nutritionorder"
+* rest.resource[=].supportedProfile = $CRDNutritionOrder
 * rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction.extension.valueCode = #SHOULD
 * rest.resource[=].interaction.code = #update
@@ -215,7 +215,7 @@ Usage: #definition
 * rest.documentation = "A DTR Payer App provides an SMART on FHIR application"
 * rest.security.description = "Implementations **SHALL** meet the general security requirements documented in the [[http://hl7.org/fhir/us/davinci-hrex/STU1/security.html|HRex implementation guide]]."
 * rest.resource[0].type = #Coverage
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-coverage"
+* rest.resource[=].supportedProfile = $CRDCoverage
 * rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction.extension.valueCode = #SHOULD
 * rest.resource[=].interaction.code = #search-type
@@ -232,19 +232,19 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Allows filtering to only active coverages"
 * rest.resource[+].type = #DeviceRequest
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-devicerequest"
+* rest.resource[=].supportedProfile = $CRDDeviceRequest
 * rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction.extension.valueCode = #SHOULD
 * rest.resource[=].interaction.code = #update
 * rest.resource[=].versioning = #versioned-update
 * rest.resource[+].type = #MedicationRequest
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-medicationrequest"
+* rest.resource[=].supportedProfile = $CRDMedicationRequest
 * rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction.extension.valueCode = #SHOULD
 * rest.resource[=].interaction.code = #update
 * rest.resource[=].versioning = #versioned-update
 * rest.resource[+].type = #NutritionOrder
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-nutritionorder"
+* rest.resource[=].supportedProfile = $CRDNutritionOrder
 * rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction.extension.valueCode = #SHOULD
 * rest.resource[=].interaction.code = #update
@@ -315,7 +315,7 @@ Usage: #definition
 * rest.documentation = "A DTR SMART on FHIR Client provides an application conforming to the SMART on FHIR specification and related requirements declared in this Implementation Guide."
 * rest.security.description = "Implementations **SHALL** meet the general security requirements documented in the [[http://hl7.org/fhir/us/davinci-hrex/STU1/security.html|HRex implementation guide]]."
 * rest.resource[0].type = #Coverage
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-coverage"
+* rest.resource[=].supportedProfile = $CRDCoverage
 * rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction.extension.valueCode = #SHOULD
 * rest.resource[=].interaction.code = #search-type
@@ -332,19 +332,19 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "Allows filtering to only active coverages"
 * rest.resource[+].type = #DeviceRequest
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-devicerequest"
+* rest.resource[=].supportedProfile = $CRDDeviceRequest
 * rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction.extension.valueCode = #SHOULD
 * rest.resource[=].interaction.code = #update
 * rest.resource[=].versioning = #versioned-update
 * rest.resource[+].type = #MedicationRequest
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-medicationrequest"
+* rest.resource[=].supportedProfile = $CRDMedicationRequest
 * rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction.extension.valueCode = #SHOULD
 * rest.resource[=].interaction.code = #update
 * rest.resource[=].versioning = #versioned-update
 * rest.resource[+].type = #NutritionOrder
-* rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-nutritionorder"
+* rest.resource[=].supportedProfile = $CRDNutritionOrder
 * rest.resource[=].interaction.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction.extension.valueCode = #SHOULD
 * rest.resource[=].interaction.code = #update

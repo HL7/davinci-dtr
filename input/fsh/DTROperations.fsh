@@ -1,12 +1,13 @@
 Instance: DTRQuestionnairePackage
 InstanceOf: OperationDefinition
 Description: "This operation returns a collection Bundle containing one or more Questionnaire-specific collection Bundles each consisting of a single Questionnaire resource as well as any dependency Library and ValueSet instances needed to allow a renderer to fully render and otherwise process the Questionnaire."
+Title: "DTR Questionnaire Package"
 Usage: #definition
 
 * id = "questionnaire-package"
 * url = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package"
 * name = "QuestionnairePackage"
-* title = "Get Questionnaire for given order"
+* title = "Get Questionnaire Packge for given order(s)"
 * status = #draft
 * kind = #operation
 * description = "This operation returns one or more 'collection' Bundles each consisting of a single Questionnaire resource as well as any dependency Library and ValueSet instances needed to allow a renderer to fully render and otherwise process the Questionnaire.
@@ -176,6 +177,7 @@ Description:    "A profile on Parameters indicating the expected response conten
 Instance: DTRLogQuestionnaireErrors
 InstanceOf: OperationDefinition
 Description: "The operation will pass a Questionnaire reference and an OperationOutcome detailing the issue(s) including where the error occurred back to the originating Payer."
+Title: "DTR Log Questionnaire Errors"
 Usage: #definition
 
 * id = "log-questionnaire-errors"
