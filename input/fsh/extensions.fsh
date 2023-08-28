@@ -21,6 +21,7 @@ Description: "Identifies the orders, coverages, and or other resources associate
 /**************************************************************************************************************/
 Extension: IntendedUse 
 Id: intendedUse 
+Title: "Intended Use"
 Description: "Indicates how the EHR is to use the information with respect to the associated orders/records."
 * ^context[0].type = #element
 * ^context[=].expression = "QuestionnaireResponse"
