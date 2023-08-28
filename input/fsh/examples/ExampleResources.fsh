@@ -1,10 +1,9 @@
-
-
 // **********************************************************************************************************************************
 Instance: library-quick-model-definition
 InstanceOf: Library
 Description: "A sample library from the FHIR core spec to include in other examples in this IG to demonstrate the use of Library resources"
 Usage: #example
+//* status = #active
 * identifier.use = #official
 * identifier.value = "QUICK"
 * url = "http://example.org/fhir/Library/quick"
@@ -22,6 +21,7 @@ Usage: #example
 Instance: CoverageExample
 InstanceOf: http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-coverage
 Description: "An instance of CRD Coverage"
+//* status = #active
 * subscriber = Reference(PatientExample)
 * beneficiary = Reference(PatientExample)
 * relationship = RELATE#self "Self"
@@ -38,6 +38,7 @@ Description: "An instance of CRD Coverage"
 Instance: DTRQuestionnairePackageOperationResultSimple
 InstanceOf: Bundle
 Description: "An example of DTRQuestionnairePackageOperation returning a Parameters instance containing multiple Questionnaire bundles, each with references to other Library and ValueSet resources."
+//* status = #active
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:90404930-204a-4127-9c40-997b2ed7f767"
 * type = #collection
@@ -50,6 +51,7 @@ Description: "An example of DTRQuestionnairePackageOperation returning a Paramet
 Instance: DTRQuestionnairePackageOperationResultComplex
 InstanceOf: Bundle
 Description: "An example of DTRQuestionnairePackageOperation returning a Bundle with only a multiple questionnaires, with references to other Library and ValueSet resources"
+//* status = #active
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:90404930-204a-4127-9c40-997b2ed7f767"
 * type = #collection
@@ -80,6 +82,7 @@ Instance: PatientExample
 InstanceOf: Patient
 Description: "An example patient used in the example resources."
 Usage: #example
+//* status = #active
 * gender = #male
 * birthDate = "1996-12-23"
 * address.use = #home
@@ -90,6 +93,7 @@ Usage: #example
 Instance: OrgExample
 InstanceOf: USCoreOrganizationProfile
 Description: "An instance of Organization as a payer used in the example resources."
+//* status = #active
 * type = http://terminology.hl7.org/CodeSystem/organization-type#pay "Payer"
 * name = "Insurance Company"
 * active = true
@@ -106,8 +110,16 @@ Description: "An instance of Organization as a payer used in the example resourc
 Instance: PractitionerExample
 InstanceOf: USCorePractitionerProfile
 Description: "An example practitioner referred to by the example resources."
+//* status = #active
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"
 * identifier.value = "1122334455"
 * name.family = "Doe"
 * name.given = "Jane"
 * name.prefix = "Dr."
+
+// **********************************************************************************************************************************
+// Instance: SDCAdaptiveSearchExample
+// InstanceOf: DTRSDCQuestionnaireAdaptSearch
+// Description: "An example adaptive form search instance."
+// * url = http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire-adapt-search
+// * status = "active"
