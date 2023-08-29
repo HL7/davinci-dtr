@@ -6,12 +6,9 @@ Profile: DTRStdQuestionnaire
 Parent: sdc-questionnaire
 Id: dtr-std-questionnaire
 Title: "DTR Standard Questionnaire"
-Description: "Takes a subset of extensions and constraints from the SDC [rendering](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-render.html), [behavior](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-behave.html), and [population](http://hl7.org/fhir/uv/sdc/STU3/artifacts.html#structures-resource-profiles) profiles, reflecting agreed expectations around which data elements might be relevant as well as which must be supported for DTR purposes.
+Description: "Takes a subset of extensions and constraints from the SDC [rendering](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-render.html), [behavior](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-behave.html), and [population](http://hl7.org/fhir/uv/sdc/STU3/artifacts.html#structures-resource-profiles) profiles, reflecting agreed expectations around which data elements might be relevant as well as which must be supported for DTR purposes."
 
-Elements that are not mustSupport are presented here as elements that may be of interest to certain payers, but can only be used if the payer is aware that the invoking EHR or SMART App can support them.
-
-Further guidance on the use of these elements should be found in the underlying [SDC](http://hl7.org/fhir/uv/sdc/STU3/) specification."
-
+* ^purpose = "Elements that are not mustSupport are presented here as elements that may be of interest to certain payers, but can only be used if the payer is aware that the invoking EHR or SMART App can support them.  Further guidance on the use of these elements should be found in the underlying [SDC](http://hl7.org/fhir/uv/sdc/STU3/) specification."
 * ^meta.versionId = "1"
 * ^meta.lastUpdated = "2021-11-12T17:01:59.000+00:00"
 * ^text.status = #additional
@@ -20,6 +17,8 @@ Further guidance on the use of these elements should be found in the underlying 
 * ^status = #active
 * ^date = "2021-11-12T02:27:35+00:00"
 * text.div ^comment = "The contents of the html element are an XHTML fragment containing only the basic html formatting elements described in chapters 7-11 and 15 of the HTML 4.0 standard, 'anchor' elements (either name or href), images and internally contained stylesheets. The XHTML content SHALL NOT contain a head, a body, external stylesheet references, scripts, forms, base/link/xlink, frames, iframes and objects."
+* subjectType 1..1
+* subjectType = #Patient
 
 /////////////////////////
 // Rendering extensions 
@@ -54,14 +53,14 @@ Further guidance on the use of these elements should be found in the underlying 
 * extension[assemble-expectation] 0..0
 
 * extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-entryMode named entryMode 0..* MS
-* extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-endpoint named endpoint 0..* MS
+* extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-endpoint named endpoint 0..0
 * extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-signatureRequired named signatureRequired 0..1 MS
 * extension[signatureRequired] ^short = "There's a cost to support this."
 * extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-constraint named constraint 0..* 
 * extension contains http://hl7.org/fhir/StructureDefinition/cqf-library named cqf-library 0..* MS
 * extension[cqf-library] ^short = "The library can contain CQL, FHIRPath or x-fhir-query. The implementers must handle any of the above."
 * extension[cqf-library].valueCanonical only Canonical(http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-library)
-* extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext named launchContex 0..* MS
+* extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext named launchContext 0..* MS
 * extension contains http://hl7.org/fhir/StructureDefinition/variable named variable 0..* MS
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-usageMode named usageMode 0..1
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-signatureRequired named itemSignatureRequired 0..1

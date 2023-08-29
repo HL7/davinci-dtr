@@ -2,8 +2,8 @@ Profile: DTRSDCQuestionnaireAdaptSearch
 Parent: sdc-questionnaire
 Id: dtr-sdc-questionnaire-adapt-search
 Title: "DTR SDC Questionnaire for adaptive form Search"
-Description: "The DTR SDC adaptive Questionnaire is used to represent an adaptive Questionnaire when returning the empty Questionnaire in a Questionnaire package.  While aligned with the [SDC Adaptive Questionnaire Search](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-adapt-srch.html) profile, this profile does not derive from that profile because elements that SDC make mustSupport for search purposes are not needed for the DTR use case.  (EHRs do not need to search for relevant Questionnaires)."
-
+Description: "The DTR SDC adaptive Questionnaire is used to represent an adaptive Questionnaire when returning the empty Questionnaire in a Questionnaire package."
+* ^purpose = "While aligned with the [SDC Adaptive Questionnaire Search](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-adapt-srch.html) profile, this profile does not derive from that profile because elements that SDC make mustSupport for search purposes are not needed for the DTR use case.  (EHRs do not need to search for relevant Questionnaires)."
 * ^meta.versionId = "1"
 * ^meta.lastUpdated = "2024-08-24T17:01:59.000+00:00"
 * ^text.status = #additional

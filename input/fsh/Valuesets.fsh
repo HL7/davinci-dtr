@@ -11,6 +11,15 @@ Description: "Codes describing the possible origination of information."
 * DTRTempCodes#manual
 
 // ************************************************************
+ValueSet: MetricsInformationOrigins
+Id: MetricsinformationOrigins
+Title: "Metric-specific Information Origins Value Set"
+Description: "Codes describing the possible origination of information."
+* ^experimental = false
+* DTRTempCodes#override
+* DTRTempCodes#manual
+
+// ************************************************************
 ValueSet: MetricSource
 Id: metric-Source
 Title: "Metric Source"

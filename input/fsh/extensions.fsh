@@ -18,7 +18,7 @@ Description: "Identifies the orders, coverages, and or other resources associate
 * extension[order] ^short = "Order associated with the QuestionnaireResponse"
 * extension[order] ^definition = "The order context associated with a QuestionnaireResponse"
 * extension[order].value[x] 1..1
-* extension[order].value[x] only Reference($CRDDeviceRequest or $CRDMedicationRequest or $CRDNutritionOrder or $dtr-servicerequest or $us-core-encounter or Appointment)
+* extension[order].value[x] only Reference($CRDDeviceRequest or $CRDMedicationRequest or $CRDNutritionOrder or $CRDServiceRequest or $us-core-encounter or Appointment)
 
 /**************************************************************************************************************/
 Extension: IntendedUse 
@@ -50,7 +50,7 @@ Description: "Identifies the origin of the information in the answer and how it 
 * extension[source] ^short = "The origination of information"
 * extension[source] ^definition = "The origination of information"
 * extension[source].value[x] 1..1
-* extension[source].value[x] from DTRInformationOrigins (required)
+* extension[source].value[x] from DTRInformationOrigins (extensible)
 * extension[source].value[x] only code
 * extension[source].value[x] ^short = "auto | override | manual"
 
