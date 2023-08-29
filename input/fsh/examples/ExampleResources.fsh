@@ -61,10 +61,11 @@ Description: "An example of DTRQuestionnairePackageOperation returning a Bundle 
 
 // **********************************************************************************************************************************
 Instance: ServiceRequestExample
-InstanceOf: DTRServiceRequest
+InstanceOf: http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-servicerequest
 Description: "Example of ServiceRequest used in the Home Oxygen Therapy (home-o2-questionnaireresponse) example"
-* status = #active
 * intent = #original-order
+* authoredOn = "2019-09-18T07:53:21+07:00"
+* requester = Reference(PractitionerExample)
 * code = http://loinc.org#24338-6
 * code.text = "Gas panel - Blood"
 * subject = Reference(PatientExample)
