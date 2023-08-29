@@ -24,7 +24,6 @@ publisher:
 jurisdiction: urn:iso:std:iso:3166#US
 
 parameters:
-  excludexml: true
   excludettl: true
   show-inherited-invariants: false
 
