@@ -157,7 +157,6 @@ Parent:         Parameters
 Id:             dtr-qpackage-output-parameters
 Title:          "DTR Questionnaire Package Output Parameters"
 Description:    "A profile on Parameters indicating the expected response content of a questionnaire-package operation."
-* obeys dtr-1
 * ^status = #active
 * parameter ^slicing.discriminator.type = #pattern
 * parameter ^slicing.discriminator.path = "name"
