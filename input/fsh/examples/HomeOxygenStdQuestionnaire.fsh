@@ -60,9 +60,12 @@ Description: "An example Standard questionnaire for Home Oxygen Therapy."
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].answerValueSet = "http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype"
+
 * item[=].item[+].linkId = "1.4"
-* item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/regex"
-* item[=].item[=].extension.valueString = "[A-Z][0-9][A-Z] [0-9][A-Z][0-9]"
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-derivationType#compliesWith
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/regex"
+* item[=].item[=].extension[=].valueString = "[A-Z][0-9][A-Z] [0-9][A-Z][0-9]"
 * item[=].item[=].text = "Postal Code (A1A 1A1)"
 * item[=].item[=].type = #string
 
