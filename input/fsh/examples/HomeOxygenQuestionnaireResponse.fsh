@@ -144,8 +144,8 @@ Usage: #example
 Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * meta.profile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse"
 
-* extension[context][+].extension[coverage].valueReference = Reference(CoverageExample)
-* extension[context][+].extension[order].valueReference = Reference(ServiceRequestExample)
+* extension[context][0].valueReference = Reference(CoverageExample)
+* extension[context][+].valueReference = Reference(ServiceRequestExample)
 * extension[intendedUse].valueCodeableConcept.coding = http://hl7.org/fhir/us/davinci-dtr/CodeSystem/temp#order "include-order"
 * questionnaire = "http://example.com/Questionnaire/referred-questionnaire"
 * status = #completed
