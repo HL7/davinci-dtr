@@ -17,6 +17,10 @@ Description: "An example Standard questionnaire for Home Oxygen Therapy."
 * extension[rendering-styleSensitive].valueBoolean = false
 * extension[sdc-questionnaire-entryMode].valueCode = #sequential
 * extension[cqf-library].valueCanonical = "http://example.org/fhir/Library/quick"
+
+// * derivedFrom.extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType"
+// * derivedFrom.extension[derivationType].valueCodeableConcept = http://hl7.org/fhir/questionnaire-derivationType#compliesWith "Complies with"
+
 * item.linkId = "1"
 * item.text = "Patient Information"
 * item.type = #group
@@ -40,11 +44,13 @@ Description: "An example Standard questionnaire for Home Oxygen Therapy."
 * item.item[=].type = #choice
 * item.item[=].required = true
 * item.item[=].answerValueSet = "http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype"
+
 * item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/regex"
 * item[=].extension.valueString = "[A-Z][0-9][A-Z] [0-9][A-Z][0-9]"
 * item[=].linkId = "1.4"
 * item[=].text = "Postal Code (A1A 1A1)"
 * item[=].type = #string
+
 * item[+].extension[0].url = "http://hl7.org/fhir/StructureDefinition/minValue"
 * item[=].extension[=].valueDecimal = 1
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxValue"
@@ -54,6 +60,7 @@ Description: "An example Standard questionnaire for Home Oxygen Therapy."
 * item[=].linkId = "1.5"
 * item[=].text = "Enter your weight in lb"
 * item[=].type = #decimal
+
 * item[+].extension[0].url = "http://hl7.org/fhir/StructureDefinition/mimeType"
 * item[=].extension[=].valueCode = #image/jpeg
 * item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxSize"
@@ -61,6 +68,7 @@ Description: "An example Standard questionnaire for Home Oxygen Therapy."
 * item[=].linkId = "1.6"
 * item[=].text = "Attach latest x-ray"
 * item[=].type = #attachment
+
 * item[+].linkId = "2"
 * item[=].text = "Calculation"
 * item[=].type = #group
@@ -71,4 +79,3 @@ Description: "An example Standard questionnaire for Home Oxygen Therapy."
 * item[=].item[=].text = "Deadline for submission (7 days from now)"
 * item[=].item[=].type = #date
 * item[=].item[=].readOnly = true
-
