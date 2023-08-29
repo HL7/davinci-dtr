@@ -17,65 +17,88 @@ Description: "An example Standard questionnaire for Home Oxygen Therapy."
 * extension[rendering-styleSensitive].valueBoolean = false
 * extension[sdc-questionnaire-entryMode].valueCode = #sequential
 * extension[cqf-library].valueCanonical = "http://example.org/fhir/Library/quick"
+// * extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType"
+// * extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-derivationType#compliesWith
 
 // * derivedFrom.extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType"
 // * derivedFrom.extension[derivationType].valueCodeableConcept = http://hl7.org/fhir/questionnaire-derivationType#compliesWith "Complies with"
 
-* item.linkId = "1"
-* item.text = "Patient Information"
-* item.type = #group
-* item.item[0].linkId = "1.1"
-* item.item[=].text = "Last Name"
-* item.item[=].type = #string
-* item.item[=].required = true
-* item.item[=].extension[minLength].valueInteger = 2
-* item.item[=].extension[questionnaire-supportLink].valueUri = "https://example.com/supportLink"
-* item.item[+].linkId = "1.2"
-* item.item[=].text = "Fist Name"
-* item.item[=].type = #string
-* item.item[=].required = true
-* item.item[+].linkId = "1.3"
-* item.item[=].text = "Middle Name"
-* item.item[=].type = #string
-* item.item[=].required = false
-* item.item[+].linkId = "1.gender"
-* item.item[=].definition = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-question-library#Demographics.sex"
-* item.item[=].text = "What is this person's gender?"
-* item.item[=].type = #choice
-* item.item[=].required = true
-* item.item[=].answerValueSet = "http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype"
+* item[+].linkId = "1"
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType"
+* item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-derivationType#compliesWith
+* item[=].text = "Patient Information"
+* item[=].type = #group
 
-* item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/regex"
-* item[=].extension.valueString = "[A-Z][0-9][A-Z] [0-9][A-Z][0-9]"
-* item[=].linkId = "1.4"
-* item[=].text = "Postal Code (A1A 1A1)"
-* item[=].type = #string
+* item[=].item[0].linkId = "1.1"
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-derivationType#compliesWith
+// * item[=].item[=].extension[minLength].valueInteger = 2
+// * item[=].item[=].extension[questionnaire-supportLink].valueUri = "https://example.com/supportLink"
+* item[=].item[=].text = "Last Name"
+* item[=].item[=].type = #string
+* item[=].item[=].required = true
 
-* item[+].extension[0].url = "http://hl7.org/fhir/StructureDefinition/minValue"
-* item[=].extension[=].valueDecimal = 1
-* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxValue"
-* item[=].extension[=].valueDecimal = 400
-* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxDecimalPlaces"
-* item[=].extension[=].valueInteger = 2
-* item[=].linkId = "1.5"
-* item[=].text = "Enter your weight in lb"
-* item[=].type = #decimal
+* item[=].item[+].linkId = "1.2"
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-derivationType#compliesWith
+* item[=].item[=].text = "Fist Name"
+* item[=].item[=].type = #string
+* item[=].item[=].required = true
 
-* item[+].extension[0].url = "http://hl7.org/fhir/StructureDefinition/mimeType"
-* item[=].extension[=].valueCode = #image/jpeg
-* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxSize"
-* item[=].extension[=].valueDecimal = 1048576
-* item[=].linkId = "1.6"
-* item[=].text = "Attach latest x-ray"
-* item[=].type = #attachment
+* item[=].item[+].linkId = "1.3"
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-derivationType#compliesWith
+* item[=].item[=].text = "Middle Name"
+* item[=].item[=].type = #string
+* item[=].item[=].required = false
+
+* item[=].item[+].linkId = "1.gender"
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-derivationType#compliesWith
+* item[=].item[=].definition = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-question-library#Demographics.sex"
+* item[=].item[=].text = "What is this person's gender?"
+* item[=].item[=].type = #choice
+* item[=].item[=].required = true
+* item[=].item[=].answerValueSet = "http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype"
+* item[=].item[+].linkId = "1.4"
+* item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/regex"
+* item[=].item[=].extension.valueString = "[A-Z][0-9][A-Z] [0-9][A-Z][0-9]"
+* item[=].item[=].text = "Postal Code (A1A 1A1)"
+* item[=].item[=].type = #string
+
+* item[=].item[+].linkId = "1.5"
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-derivationType#compliesWith
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
+* item[=].item[=].extension[=].valueDecimal = 1
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxValue"
+* item[=].item[=].extension[=].valueDecimal = 400
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxDecimalPlaces"
+* item[=].item[=].extension[=].valueInteger = 2
+* item[=].item[=].text = "Enter your weight in lb"
+* item[=].item[=].type = #decimal
+
+* item[=].item[+].linkId = "1.6"
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-derivationType#compliesWith
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/mimeType"
+* item[=].item[=].extension[=].valueCode = #image/jpeg
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/maxSize"
+* item[=].item[=].extension[=].valueDecimal = 1048576
+* item[=].item[=].text = "Attach latest x-ray"
+* item[=].item[=].type = #attachment
 
 * item[+].linkId = "2"
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType"
+* item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-derivationType#compliesWith
 * item[=].text = "Calculation"
 * item[=].type = #group
-* item[=].item[0].extension[sdc-questionnaire-initialExpression].valueExpression.description = "deadline for submission"
-* item[=].item[0].extension[sdc-questionnaire-initialExpression].valueExpression.language = #text/fhirpath
-* item[=].item[0].extension[sdc-questionnaire-initialExpression].valueExpression.expression = "today() + 7 days"
-* item[=].item[=].linkId = "3.1"
+* item[=].item[+].linkId = "2.1"
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType"
+* item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-derivationType#compliesWith
+// * item[=].item[=].extension[sdc-questionnaire-initialExpression].valueExpression.description = "deadline for submission"
+// * item[=].item[=].extension[sdc-questionnaire-initialExpression].valueExpression.language = #text/fhirpath
+// * item[=].item[=].extension[sdc-questionnaire-initialExpression].valueExpression.expression = "today() + 7 days"
 * item[=].item[=].text = "Deadline for submission (7 days from now)"
 * item[=].item[=].type = #date
 * item[=].item[=].readOnly = true
