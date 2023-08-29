@@ -1,5 +1,11 @@
 == Suppressed Messages ==
 
+# See the following statement from Grahame about the next two issues: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/questionnaire-derivationType.20warning.20question
+
+The extension http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType is not allowed to be used at this point (allowed = e:Questionnaire.item; this element is [Questionnaire.derivedFrom, QuestionnaireResponse.contained/*Questionnaire/home-o2-sdc-adaptive-questionnaire*/.derivedFrom, canonical])
+
+The derivation type 'null#null' is unknown, which means that no derivation checking has been performed against this questionnaire
+
 
 # QuestionnaireResponse.questionnaire is a cannonical URL which points to the actual Questionnaire, but in the example the Questionnaire is not published anywhere
 The questionnaire 'http://example.com/Questionnaire/referred-questionnaire' could not be resolved, so no validation can be performed against the base questionnaire

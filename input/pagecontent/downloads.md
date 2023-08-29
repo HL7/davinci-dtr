@@ -1,14 +1,26 @@
-<link rel="stylesheet" type="text/css" href="formatting.css" />
+### Downloads
+* The full [DTR Implementation Guide](full-ig.zip)
+* FHIR R4 DTR Resource Definitions [(JSON)](definitions.json.zip) [(XML)](definitions.xml.zip) [(TTL)](definitions.ttl.zip)
+* FHIR R4 DTR Profile Examples [(JSON)](examples.json.zip) [(XML)](examples.xml.zip) [(TTL)](examples.ttl.zip)
+* FHIR R4 DTR [Validator Pack](validator-hl7.fhir.us.davinci-dtr.pack)
 
-### Links
+#### Package File
+The following package file includes an NPM  (Node Package Manager) package file used by many of the FHIR tools. It contains all the value sets, profiles, extensions, list of pages and URLs in the implementation guide (IG), etc. defined as part of this version of the IG. This file should be the first choice whenever generating any implementation artifacts since it contains all of the rules about what makes the profiles valid. Implementers will still need to be familiar with the content of the specification and profiles that apply to make a conformant implementation. See the overview on validating <a href="http://hl7.org/fhir/R4/validation.html">FHIR profiles and resources</a>:
 
-This implementation guide is web-based and is intended to be browsed online.  However, for the convenience of implementers, both this implementation guide, various sub-packages of it, and some of the source specifications are available for download.  The following links allow you to download various parts of this implementation guide and other referenced implementation guides for local use.
+* [Package](package.tgz)
 
-<div markdown="1" class="pbox">
-<ul>
-    <li>The full <a href="full-ig.zip">DTR Implementation Guide</a></li>
-    <li><a href="definitions.json.zip">FHIR R4 DTR Resource Definitions</a></li>
-    <li><a href="validator-hl7.fhir.us.davinci-dtr.pack">FHIR R4 DTR IG Validator Pack</a></li>
-</ul>
-</div>
-<br>
+#### Cross Version Analysis
+
+{% include cross-version-analysis.xhtml %}
+
+#### Dependency Table
+
+{% include dependency-table.xhtml %}
+
+#### Globals Table
+
+{% include globals-table.xhtml %}
+
+#### IP Statements
+
+{% include ip-statements.xhtml %}
