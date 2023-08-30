@@ -56,6 +56,7 @@
     <li>Sreenivas Reddy Mallipeddi (MCG)</li>
     <li>Mike Gould (ZeOmega)</li>
     <li>Rob Brull, Brian Lind (Infor)</li>
+    <li>Rick Geimer (Lantana Consulting Group)</li>
 </ul>
 </div>
 <br>
