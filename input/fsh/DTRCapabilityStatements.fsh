@@ -15,7 +15,7 @@ Usage: #definition
 * contact.name = "HL7 Clinical Decision Support Work Group"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://www.hl7.org/Special/committees/dss"
-* description = "This statement defines the expected capabilities of EHRs that rely on a SMART on FHIR application to handle the form filling function of DTR. This requires the server to provide access to the resources specified below to allow such an app to retrieve and edit QuestionnaireResponses and related resources."
+* description = "This statement defines the expected capabilities of EHRs that rely on a SMART on FHIR application to handle the form filling function of DTR. This requires the server to provide access to the specified resources to allow such an app to retrieve and edit QuestionnaireResponses and related resources."
 * jurisdiction = urn:iso:std:iso:3166#US
 * kind = #requirements
 * imports = "http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server"
