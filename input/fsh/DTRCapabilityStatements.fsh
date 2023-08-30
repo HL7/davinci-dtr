@@ -15,14 +15,14 @@ Usage: #definition
 * contact.name = "HL7 Clinical Decision Support Work Group"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://www.hl7.org/Special/committees/dss"
-* description = "This statement defines the expected capabilities of EHRs that rely on a SMART on FHIR application to handle the form filling function of DTR"
+* description = "This statement defines the expected capabilities of EHRs that rely on a SMART on FHIR application to handle the form filling function of DTR. This requires the server to provide access to the resources specified below to allow such an app to retrieve and edit QuestionnaireResponses and related resources."
 * jurisdiction = urn:iso:std:iso:3166#US
 * kind = #requirements
 * imports = "http://hl7.org/fhir/us/core/CapabilityStatement/us-core-server"
 * fhirVersion = #4.0.1
 * format = #json
 * rest.mode = #server
-* rest.documentation = "A DTR intermediary system provides an SMART on FHIR application"
+* rest.documentation = "A DTR intermediary system provides a SMART on FHIR application"
 * rest.security.description = "Implementations **SHALL** meet the general security requirements documented in the [[http://hl7.org/fhir/us/davinci-hrex/STU1/security.html|HRex implementation guide]]."
 
 * rest.resource[+].type = #QuestionnaireResponse
@@ -128,7 +128,7 @@ Usage: #definition
 * contact.name = "HL7 Clinical Decision Support Work Group"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://www.hl7.org/Special/committees/dss"
-* description = "This statement defines the expected capabilities of EHRs that manage the form filling functions of DTR internally"
+* description = "This statement defines the expected capabilities of EHRs that manage the form filling functions of DTR internally. Such EHRs need only support client capabilities for the Questionnaire Package, ValueSet Expand, and Next Question operations."
 * jurisdiction = urn:iso:std:iso:3166#US
 * kind = #requirements
 * fhirVersion = #4.0.1
@@ -169,7 +169,7 @@ Usage: #definition
 * contact.name = "HL7 Clinical Decision Support Work Group"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://www.hl7.org/Special/committees/dss"
-* description = "This statement defines the expected capabilities of payer systems that provide questionnaires to DTR clients."
+* description = "This statement defines the expected capabilities of payer systems that provide questionnaires to DTR clients. Such systems need only support server capabilities for the Questionnaire Package, ValueSet Expand, and Next Question operations."
 * jurisdiction = urn:iso:std:iso:3166#US
 * kind = #requirements
 * fhirVersion = #4.0.1
@@ -210,7 +210,7 @@ Usage: #definition
 * contact.name = "HL7 Clinical Decision Support Work Group"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://www.hl7.org/Special/committees/dss"
-* description = "This statement defines the expected capabilities of DTR SMART on FHIR applications"
+* description = "This statement defines the expected capabilities of DTR SMART on FHIR applications. Such apps require client support for retrieving and editing QuestionnaireResponse resources and related resources, as well as client support for the Questionnaire Package, ValueSet Expand, and Next Question operations."
 * jurisdiction = urn:iso:std:iso:3166#US
 * kind = #requirements
 * imports = "http://hl7.org/fhir/us/core/CapabilityStatement/us-core-client"
