@@ -15,8 +15,8 @@
     <li>Robert Dieterle (EnableCare, LLC)</li>
     <li>Viet Nguyen (Stratametrics, LLC)</li>
     <li>Crystal Kallem (Point of Care Partners)</li>
-    <li>Vanessa Candelora (Point-of-Care Partners)</li>
-    <li>Jocelyn Keegan (Point-of-Care Partners)</li>
+    <li>Vanessa Candelora (Point of Care Partners)</li>
+    <li>Jocelyn Keegan (Point of Care Partners)</li>
     <li>Dana Marcelonis (Point of Care Partners)</li>
 </ul>
 </div>
