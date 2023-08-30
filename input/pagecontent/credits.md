@@ -49,13 +49,18 @@
     <li>Carie Hammond and Ryan Moehrke (AEGIS)</li>
     <li>Kyle Johnsen, Spencer Utley, and Matt Varghese (Epic)</li>
     <li>Sreekanth Puram (Mettle Solutions)</li>
-    <li>Anup Mahansaria, Peni Moxim (Evernorth)</li>
+    <li>Celine Lefebvre, Heather McComas (AMA)</li>
+    <li>Hans Buitendijk (Oracle)</li>
+    <li>Anup Mahansaria, Peni Moxim, Mariel Brechner (Evernorth)</li>
     <li>Brian Poteet (Edifecs)</li>
+    <li>James Bound (Cognizant)</li>
     <li>Richard Abercrombie (Palmetto GBA)</li>
-    <li>Tom Kakanowski (Smile Digital Health)</li>
+    <li>Tom Kakanowski, Brenin Rhodes, David Chisholm (Smile Digital Health)</li>
+    <li>Chris Cioffi (Carelon)</li>
     <li>Sreenivas Reddy Mallipeddi (MCG)</li>
     <li>Mike Gould (ZeOmega)</li>
     <li>Rob Brull, Brian Lind (Infor)</li>
+    <li>Balaji Narayanan (Onyx)</li>
     <li>Rick Geimer (Lantana Consulting Group)</li>
 </ul>
 </div>
