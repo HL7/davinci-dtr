@@ -35,9 +35,9 @@ Resumed DTR sessions initiated from a previously stored QuestionnaireResponse wi
   * ^comment = "If there are multiple coverage-information extensions in context, this will be the union of distinct assertionIds."
   * ^requirements = "Allows linking DTR sessions to CRD, CDex, and potentially prior DTR sessions."
 
-* docReason              0..* code             "Reason for launching DTR" "doc-purpose passed in on the coverage-information in Requests, Encounters or QuestoinnaireResponses used as context to launch DTR (or selected by the user as context post-launch)."
-* docNeeded              from $CRDDocReason    (required)
-  * ^comment = "If there were multiple coverage-informations present in the launch context, this will be the union of distinct codes present."
+* docReason              0..* code             "withpa | withclaim | withorder | retain-doc | OTH" "doc-purpose passed in on the coverage-information in Requests, Encounters or QuestoinnaireResponses used as context to launch DTR (or selected by the user as context post-launch)."
+* docReason              from $CRDDocReason    (required)
+* docReason ^comment = "If there were multiple coverage-informations present in the launch context, this will be the union of distinct codes present."
 
 * launchMode             0..1 code             "crdlaunch | relaunch | salaunch | cdexlaunch" "Indicates the launch mode involved for this session."
 * launchMode             from MetricLaunchMode (required)
