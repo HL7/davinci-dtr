@@ -24,4 +24,11 @@ Alias: $CRDDeviceRequest = http://hl7.org/fhir/us/davinci-crd/StructureDefinitio
 Alias: $CRDVisionPrescription = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-visionprescription
 Alias: $CRDMedicationRequest = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-medicationrequest
 Alias: $CRDNutritionOrder = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-nutritionorder
+
 Alias: $CRDOrderDetail = http://hl7.org/fhir/us/davinci-crd/ValueSet/orderDetail
+
+Alias: $CRDCoveredInfo = http://hl7.org/fhir/us/davinci-crd/ValueSet/coverageInfo
+Alias: $CRDCoveragePaDetail = http://hl7.org/fhir/us/davinci-crd/ValueSet/coveragePaDetail
+Alias: $CRDAdditionalDoc = http://hl7.org/fhir/us/davinci-crd/ValueSet/AdditionalDocumentation
+Alias: $CRDInformationNeeded = http://hl7.org/fhir/us/davinci-crd/ValueSet/informationNeeded
+Alias: $CRDDocReason = http://hl7.org/fhir/us/davinci-crd/ValueSet/DocReason

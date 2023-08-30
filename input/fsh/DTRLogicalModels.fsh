@@ -36,18 +36,19 @@ Resumed DTR sessions initiated from a previously stored QuestionnaireResponse wi
   * ^requirements = "Allows linking DTR sessions to CRD, CDex, and potentially prior DTR sessions."
 
 * docReason              0..* code             "Reason for launching DTR" "doc-purpose passed in on the coverage-information in Requests, Encounters or QuestoinnaireResponses used as context to launch DTR (or selected by the user as context post-launch)."
+* docNeeded              from $CRDDocReason    (required)
   * ^comment = "If there were multiple coverage-informations present in the launch context, this will be the union of distinct codes present."
 
 * launchMode             0..1 code             "crdlaunch | relaunch | salaunch | cdexlaunch" "Indicates the launch mode involved for this session."
 * launchMode             from MetricLaunchMode (required)
 
 * orderItem              1..* CodeableConcept  "What was ordered" "The specific procedure, item, medication, appointment, nutrition that is the subject of the order/appointment."
-* orderItem              from $CRDOrderDetail (extensible)
+* orderItem              from $CRDOrderDetail  (extensible)
 
 * action                 1..* BackboneElement  "Actions the reporting system engaged in as part of the DTR session."  "Actions performed between a system and the DTR application."
   * ^comment = "See notes section below for how the action elements should be populated for different actions"
   * actionDetail         1..1 code             "launch | qpackage | mrquery | userresponse | nextq | storeqr" "What type of action occurred within the DTR session."
-  * actionDetail         from MetricAction (required)
+  * actionDetail         from MetricAction     (required)
   * requestTime          1..1 instant          "Time action initiated"  "The time stamp when the action was initiated from the perspective of the reporting system."
   * responseTime         0..1 instant          "Time of action response"  "The time stamp when the action was completed (including error return) from the perspective of the reporting system."
   * httpResponse         0..1 integer          "HTTP response status code" "The HTTP response status code associated with the action (successful or not)."
@@ -57,13 +58,13 @@ Resumed DTR sessions initiated from a previously stored QuestionnaireResponse wi
     * ^type.targetProfile[+] = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire-adapt"
   * issue                0..* BackboneElement  "OperationOutcome info"  "If an OperationOutcome is returned, what were the issues?"
     * code               1..1 code             "Error code"  "The issue.code value from the OperationOutcome for this issue."
-    * code               from IssueType       (required)
+    * code               from IssueType        (required)
     * details            0..1 CodeableConcept  "More detailed error code"  "The issue.details value from the OperationOutcome for this issue."
     * details            from OperationOutcomeCodes (example)
 
 * resources              0..* BackboneElement  "Resource types accessed"  "Information that was accessed from the EHR by the one or more of the questionnaires using CQL."
   * type                 1..1 code             "Kind of resource" "What kind of resource was accessed."
-  * type                 from ResourceType (required)
+  * type                 from ResourceType     (required)
   * profile              0..1 canonical        "Solicited profile"  "Indicates the sub-type of data accessed in situations where multiple US-core profiles could apply (e.g., Observation).  Note: This does not mean that the data received was actually valid against the profile, merely that the search criteria used were intended to retrieve data of this type."
     * ^type.targetProfile = "http://hl7.org/fhir/StructureDefinition/StructureDefinition"
   * count                1..1 positiveInt      "Number retrieved"  "How many resources of that type were accessed."
@@ -94,13 +95,13 @@ Resumed DTR sessions initiated from a previously stored QuestionnaireResponse wi
 
 * coverageInfo    0..* BackboneElement "Coverage information"                "Coverage information extensions returned as part of completed adaptive Questionnaires within this DTR session."
   * covered       0..1 code            "covered | not-covered | conditional" "Indicates whether the service is covered."
-  * covered       from CoveredInfo              (required)
-  * paNeeded      0..1 code            "auth-needed | no-auth | satisfied +" "Indicates whether prior authorization is necessary or not, as well as considerations about applying for prior authorization."
-  * paNeeded      from CoveragePaDetail         (required)
-  * docNeeded     0..1 code            "no-doc | clinical | admin | both +"  "Indicates whether additional information is necessary (for prior auth, claims submission, or some other purpose)."
-  * docNeeded     from AdditionalDocumentation  (required)
-  * infoNeeded    0..1 code            "performer | location | timeframe"    "Indicates what additional inforamtion is necessary in order to determine authorization/coverage - which might be available on a later hook invocation."
-  * infoNeeded    from InformationNeeded        (required)
+  * covered       from $CRDCoveredInfo          (required)
+  * paNeeded      0..1 code            "auth-needed | no-auth | satisfied | performpa | conditional" "Indicates whether prior authorization is necessary or not, as well as considerations about applying for prior authorization."
+  * paNeeded      from $CRDCoveragePaDetail     (required)
+  * docNeeded     0..1 code            "clinical | admin | both | conditional"  "Indicates whether additional information is necessary (for prior auth, claims submission, or some other purpose)."
+  * docNeeded     from $CRDAdditionalDoc        (required)
+  * infoNeeded    0..1 code            "performer | location | timeframe | OTH" "Indicates what additional inforamtion is necessary in order to determine authorization/coverage - which might be available on a later hook invocation."
+  * infoNeeded    from $CRDInformationNeeded    (required)
   * questionnaire 0..* BackboneElement "Questionnaire(s) returned"           "Information about the Questionnaire(s) returned to gather additional information (e.g. through DTR)."
     * ^requirements = "Allows linking metadata about forms identified 'to be filled out' in CRD with what is actually completed in DTR, and eventually submitted in CDex, PAS or claims"
     * reference   1..1 canonical       "Questionnaire url & version"         "The official identifier of one of the Questionnaires provided to be filled out."
