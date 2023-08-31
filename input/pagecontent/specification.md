@@ -103,7 +103,7 @@ More information regarding Questionnaires, workflow, and behaviors implementers 
 * [Advanced Form Rendering](http://hl7.org/fhir/uv/sdc/STU3/rendering.html)
 * [DTR SDC Questionnaire - Example](Questionnaire-home-o2-std-questionnaire.html)
   
-This IG defines two different profiles on Questionnaire that can be used to define data gathering requirements: the [DTR Standard Questionnaire profile](StructureDefinition-dtr-std-questionnaire.html) and the [DTR Adaptive Questionnaire profile](StructureDefinition-dtr-sdc-questionnaire-adapt.html).
+This IG defines two different profiles on Questionnaire that can be used to define data gathering requirements: the [DTR Standard Questionnaire profile](StructureDefinition-dtr-std-questionnaire.html) and the [DTR Adaptive Questionnaire profile](StructureDefinition-dtr-questionnaire-adapt.html).
 
 In the first approach, all possible questions that can be asked, as well as the logic around when questions are enabled and what answers are permitted are expressed in computable form and shared as a complete set when the [questionnaire package](OperationDefinition-questionnaire-package.html) is retrieved.  Typically, the same Questionnaires are used across a wide variety of order types and members, though in theory the payer could generate a custom Questionnaire that is specific to a particular order and/or member.
 
@@ -168,7 +168,7 @@ Rules and logic are hidden and only questions relevant to the current member/ord
 Payers **MAY** support either approach, or **MAY** opt to provide some Questionnaires using one approach and others using the second based on the requirements of the form.  DTR apps and Full EHRs **SHALL** support both types of Questionnaires.
 
 #### Adaptive Form Considerations
-When a payer uses an Adaptive Form, they **SHALL** return a questionnaire instance compliant with the DTR [AdaptiveQuestionnaire-Search](StructureDefinition-dtr-sdc-questionnaire-adapt-search.html) profile. This will include a 'questionnaire-adaptive' extension that indicates that the Questionnaire is adaptive and is also used to determine the endpoint on which the [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) operation should be called to start completing the QuestionnaireResponse.  If the extension is simply a boolean value of 'true', then the operation endpoint is the payer base URL.  (i.e., `[base]/$next-question`).  If the extension is a url, then that is the base for the next question (i.e., `[url]/$next-question`).  
+When a payer uses an Adaptive Form, they **SHALL** return a questionnaire instance compliant with the DTR [AdaptiveQuestionnaire-Search](StructureDefinition-dtr-questionnaire-adapt-search.html) profile. This will include a 'questionnaire-adaptive' extension that indicates that the Questionnaire is adaptive and is also used to determine the endpoint on which the [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) operation should be called to start completing the QuestionnaireResponse.  If the extension is simply a boolean value of 'true', then the operation endpoint is the payer base URL.  (i.e., `[base]/$next-question`).  If the extension is a url, then that is the base for the next question (i.e., `[url]/$next-question`).  
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
@@ -231,7 +231,7 @@ DTR uses the [SDC Expression-based Population mechanism](http://hl7.org/fhir/uv/
 Further guidance on writing the necessary CQL can be found [later in this guide](specification.html#use-of-cql).
 
 #### Questionnaire Design
-Questionnaires, whether standard or adaptive, **SHOULD** also use logic that ensures that only 'relevant' questions and answer choices are displayed, based on what answers have already been provided/populated using elements such as enableWhen or enableWhenExpression. When using elements with a data type of  'Expression' within Questionnaires to control flow or rendering, all logic **SHALL** be written in CQL.  However, there are many other properties and extensions that control the rendering and behavior of Questionnaires.The DTR [Standard](StructureDefinition-dtr-std-questionnaire.html) and [Adaptive](StructureDefinition-dtr-sdc-questionnaire-adapt.html) Questionnaires have identified the elements and extensions from the SDC [Base](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html), [Advanced Rendering](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-render.html), [Advanced Behavior](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-behave.html) and [Expression-based Population](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-pop-exp.html) profiles that must be supported in DTR.  The descriptions Elements flagged as mustSupport **SHALL** be supported by DTR Apps and Full EHRs.  
+Questionnaires, whether standard or adaptive, **SHOULD** also use logic that ensures that only 'relevant' questions and answer choices are displayed, based on what answers have already been provided/populated using elements such as enableWhen or enableWhenExpression. When using elements with a data type of  'Expression' within Questionnaires to control flow or rendering, all logic **SHALL** be written in CQL.  However, there are many other properties and extensions that control the rendering and behavior of Questionnaires.The DTR [Standard](StructureDefinition-dtr-std-questionnaire.html) and [Adaptive](StructureDefinition-dtr-questionnaire-adapt.html) Questionnaires have identified the elements and extensions from the SDC [Base](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html), [Advanced Rendering](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-render.html), [Advanced Behavior](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-behave.html) and [Expression-based Population](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-pop-exp.html) profiles that must be supported in DTR.  The descriptions Elements flagged as mustSupport **SHALL** be supported by DTR Apps and Full EHRs.  
 
 These systems **SHOULD** also support all non mustSupport data extensions included in the differential of the DTR Questionnaire profiles as per SDC documentation for those elements and extensions and **SHALL** gracefully handle the presence of these elements if not supported. (i.e., non-support for an element **SHALL NOT** interfere with a user's ability to complete a QuestionnaireResponse.)  However, payers **SHALL NOT** rely on support for any of these elements in the design of their Questionnaire.  i.e., a DTR client that ignores such elements cannot impact the successful collection of information acceptability of the information gathered. 
 
@@ -265,29 +265,20 @@ The Questionnaire resource provides several mechanisms for conveying coded answe
 
 <table border="1">
   <tr>
-    <th></th>
     <th>CQL and Questionnaire terminology usage</th>
     <th>Comment</th>    
   </tr>
   <tr>
-    <td>1</td>
     <td>No value set, embed the code choices using answerOption.</td>
     <td>This is OK if there is no need to reuse the codes across multiple questions and the list of codes is ‘fixed’ and relatively small (< 40).</td>   
   </tr>
   <tr>
-    <td>2</td>
     <td>Pass a value set in the questionnaire package with the expansion already in place.</td>
     <td>The same set of codes is used for multiple answers and the set of codes is relatively small (< 40).  This saves the need for a terminology service call.’</td>    
   </tr>
   <tr>
-    <td>3</td>
     <td>Pass a value set in the questionnaire package, but the client recipient will need to run the expansion or ask a terminology server to do the expansion.</td>
     <td>The value set expansion is on the larger size (> ~40 codes), such that using the $expand with a filter operation will be more efficient from a user interface perspective.</td>    
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>Value set reference and recipient need to retrieve the value set and run expand or invoke a terminology server somewhere else to run the expansion.</td>
-    <td>You don't have the value set (e.g., probably because of licensing issues) - you need to look for it on a registry/terminology server, resolve the canonical URL to retrieve it, then cache the value set(s) if allowed by the code system(s). For some code systems, you may need to license the data file first in order to retrieve codes and descriptors by browser or API. Also, once you get the value set, you might still need to expand it like scenario (3) above.</td>    
   </tr>
 </table><br>
 

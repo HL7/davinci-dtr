@@ -7,6 +7,17 @@ The Da Vinci Documentation Templates and Rules (DTR) implementation guide provid
 
 DTR leverages FHIR [Questionnaires](http://hl7.org/fhir/R4/questionnaire.html) combined with embedded [CQL](https://cql.hl7.org/) logic and associated [value sets](artifacts.html#terminology-value-sets) to retrieve existing information, prompt for additional relevant information, and manage the logic process of determining which questions need to be answered (and what answer choices are relevant).  The function of rendering these Questionnaires and capturing the information in patient-specific QuestionnaireResponses can occur either through [SMART on FHIR applications](http://hl7.org/fhir/smart-app-launch/index.html) or through functionality embedded directly into the EHR.
 
+### Expected Systems
+This Implementation Guide has expectations defined for four types of systems that can be involved (with corresponding Capability Statements):
+* [DTR Payer App](CapabilityStatement-dtr-payer-app.html)
+  Payer systems that provide questionnaires to DTR clients supporting server capabilities for the Questionnaire Package, ValueSet Expand, and Next Question operations.
+* [DTR SMART Client](CapabilityStatement-dtr-smart-client.html)
+  Clients support retrieving and editing QuestionnaireResponse and related resources, as well as client support for the Questionnaire Package, ValueSet Expand, and Next Question operations.
+* [Full DTR EHR](CapabilityStatement-full-dtr-ehr.html)
+  EHRs that manage the form filling functions of DTR internally supporting client capabilities for the Questionnaire Package, ValueSet Expand, and Next Question operations.
+* [Light DTR EHR](CapabilityStatement-light-dtr-ehr.html)
+  SMART on FHIR application that handles the form filling function of DTR, requiring the server to provide access to the specified resources to allow such an app to retrieve and edit QuestionnaireResponses and related resources.
+
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
@@ -17,7 +28,6 @@ DTR leverages FHIR [Questionnaires](http://hl7.org/fhir/R4/questionnaire.html) c
 </div><br>
 
 ### Boundaries and Relationships
-
 This IG is a companion to the Da Vinci [Coverage Requirements Discovery (CRD)](https://build.fhir.org/ig/HL7/davinci-crd/), [Prior Authorization Support (PAS)](http://build.fhir.org/ig/HL7/davinci-pas/), and [Clinical Data Exchange (CDex)](https://hl7.org/fhir/us/davinci-cdex/index.html) IGs.  CRD allows a provider to be alerted that DTR is relevant for a particular order/appointment/etc. and optionally allows that provider to directly launch DTR (either as a SMART application or embedded EHR functionality), or hand off to back office staff for additional processing.  PAS allows the information returned by DTR to be packaged as part of a FHIR-based prior authorization request.  DTR functions in the 'middle' of these two IGs to capture the needed documentation.  CDex allows a payer to solicit additional information from a clinical system in a variety of circumstances.  One of the mechanisms it supports is asking for a user to fill out a particular form, or an unspecified set of forms associated with a tracking id.  DTR provides the mechanism to allow the user to fill out such forms.
 
 While designed to work with these other IGs, DTR can be implemented stand-alone.  Further details on the relationships between these three implementation guides can be found [here](usecases.html#da-vinci-burden-reduction).

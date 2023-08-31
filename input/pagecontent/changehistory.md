@@ -987,5 +987,10 @@ This ballot addresses several additions, modifications, technical corrections, e
   <!-- <a href="specification.html#determinations-from-adaptive-forms">(Determinations from Adaptive Forms)</a> -->
   </li>
 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-41854">FHIR-41854</a>:
+  DTR needs to be re-organized quite a bit
+   </li>
+
  </ul>
 </div>
