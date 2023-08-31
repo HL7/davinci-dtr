@@ -1,4 +1,3 @@
-
 /**************************************************************************************************************/
 Instance: light-dtr-ehr
 InstanceOf: CapabilityStatement
@@ -140,28 +139,28 @@ Usage: #definition
 // Operations
 * rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.operation[=].extension.valueCode = #SHALL
-* rest.operation[=].name = "QuestionnairePackage"
+* rest.operation[=].name = "questionnaire-package"
 * rest.operation[=].definition = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package"
 
 * rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.operation[=].extension.valueCode = #SHALL
-* rest.operation[=].name = "Expand"
+* rest.operation[=].name = "expand"
 * rest.operation[=].definition = "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"
 
 * rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.operation[=].extension.valueCode = #SHALL
-* rest.operation[=].name = "NexQuestion"
+* rest.operation[=].name = "next-question"
 * rest.operation[=].definition = "http://hl7.org/fhir/uv/sdc/OperationDefinition/Questionnaire-next-question"
 
 /**************************************************************************************************************/
-Instance: dtr-payer-app
+Instance: dtr-payer-service
 InstanceOf: CapabilityStatement
-Title: "DTR Payer App"
+Title: "DTR Payer Service"
 Usage: #definition
 * url = "http://hl7.org/fhir/us/davinci-dtr/CapabilityStatement/dtr-payer-app"
 * version = "1.1.0-ballot"
-* name = "DTRPayerApp"
-* title = "DTR Payer App"
+* name = "DTRPayerService"
+* title = "DTR Payer Service"
 * status = #active
 * experimental = false
 * date = "2023-06-29"
@@ -175,23 +174,23 @@ Usage: #definition
 * fhirVersion = #4.0.1
 * format = #json
 * rest.mode = #server
-* rest.documentation = "A DTR Payer App provides an SMART on FHIR application"
+* rest.documentation = "A DTR Payer service provides a service endpoint for DTR apps and full EHRs to connect to"
 * rest.security.description = "Implementations **SHALL** meet the general security requirements documented in the [[http://hl7.org/fhir/us/davinci-hrex/STU1/security.html|HRex implementation guide]]."
 
 // Operations
 * rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.operation[=].extension.valueCode = #SHALL
-* rest.operation[=].name = "QuestionnairePackage"
+* rest.operation[=].name = "questionnaire-package"
 * rest.operation[=].definition = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package"
 
 * rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.operation[=].extension.valueCode = #SHALL
-* rest.operation[=].name = "Expand"
+* rest.operation[=].name = "expand"
 * rest.operation[=].definition = "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"
 
 * rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.operation[=].extension.valueCode = #SHOULD
-* rest.operation[=].name = "NexQuestion"
+* rest.operation[=].name = "next-question"
 * rest.operation[=].definition = "http://hl7.org/fhir/uv/sdc/OperationDefinition/Questionnaire-next-question"
 
 /**************************************************************************************************************/
@@ -309,15 +308,15 @@ Usage: #definition
 // Operations
 * rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.operation[=].extension.valueCode = #SHALL
-* rest.operation[=].name = "QuestionnairePackage"
+* rest.operation[=].name = "questionnaire-package"
 * rest.operation[=].definition = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package"
 
 * rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.operation[=].extension.valueCode = #SHALL
-* rest.operation[=].name = "Expand"
+* rest.operation[=].name = "expand"
 * rest.operation[=].definition = "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"
 
 * rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.operation[=].extension.valueCode = #SHALL
-* rest.operation[=].name = "NexQuestion"
+* rest.operation[=].name = "next-question"
 * rest.operation[=].definition = "http://hl7.org/fhir/uv/sdc/OperationDefinition/Questionnaire-next-question"
