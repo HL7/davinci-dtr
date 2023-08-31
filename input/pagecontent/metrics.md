@@ -25,10 +25,10 @@ The following table defines a set of metrics with a short name, purpose, conform
     <td style="vertical-align: middle;">Volume / % of from CRD, standalone, CDex  launch</td>
     <td style="vertical-align: middle;">Adoption Process</td>
     <td style="vertical-align: middle;">Provider or App Vendor/Provisioner</td>   
-    <td style="vertical-align: middle;">Repeat for each launch mode as %mode:
+    <td style="vertical-align: middle;">Repeat for each launch mode as %mode:<br>
 For volume: 
-DTRMetricData.where(launchMode = %mode and exists(action.where(actionDetail=’launch’ and httpResponse=200))).count() 
-For %, divide volume above by: DTRMetricData.where(exists(action.where(actionDetail=’launch’ and httpResponse=200))).count()
+<code>DTRMetricData.where(launchMode = %mode and exists(action.where(actionDetail=’launch’ and httpResponse=200))).count()</code><br>
+For %, divide volume above by: <code>DTRMetricData.where(exists(action.where(actionDetail=’launch’ and httpResponse=200))).count()</code>
 express as percentage
     </td>   
   </tr>
@@ -37,11 +37,9 @@ express as percentage
     <td style="vertical-align: middle;">% as standard questionnaire or adaptive forms</td>
     <td style="vertical-align: middle;">Adoption Process</td>
     <td style="vertical-align: middle;">Payer DTR app</td>   
-    <td style="vertical-align: middle;">For adaptive forms: DTRMetricData.where(exists(action.where(actionDetail=’launch’ and httpResponse=200)))
-.questionnaire.where(adaptive).count()
+    <td style="vertical-align: middle;">For adaptive forms: <code>DTRMetricData.where(exists(action.where(actionDetail=’launch’ and httpResponse=200))).questionnaire.where(adaptive).count()</code>
 divide by
-DTRMetricData.where(exists(action.where(actionDetail=’launch’ and httpResponse=200)))
-.questionnaire.count()
+<code>DTRMetricData.where(exists(action.where(actionDetail=’launch’ and httpResponse=200))).questionnaire.count()</code>
 express as percentage
     </td>   
   </tr>
@@ -50,11 +48,9 @@ express as percentage
     <td style="vertical-align: middle;">% reviewed prior to completion</td>
     <td style="vertical-align: middle;">Process</td>
     <td style="vertical-align: middle;">Provider or App Vendor/Provisioner</td>   
-    <td style="vertical-align: middle;">DTRMetricData.where(exists(action.where(actionDetail=’launch’ and httpResponse=200)))
-.questionnaire.where(reviewPrior).count()
+    <td style="vertical-align: middle;"><code>DTRMetricData.where(exists(action.where(actionDetail=’launch’ and httpResponse=200))).questionnaire.where(reviewPrior).count()</code>
 divide by
-DTRMetricData.where(exists(action.where(actionDetail=’launch’ and httpResponse=200)))
-.questionnaire.count()
+<code>DTRMetricData.where(exists(action.where(actionDetail=’launch’ and httpResponse=200))).questionnaire.count()</code>
 express as percentage
     </td>   
   </tr>
@@ -63,11 +59,9 @@ express as percentage
     <td style="vertical-align: middle;">% of questions auto populated</td>
     <td style="vertical-align: middle;">Process</td>
     <td style="vertical-align: middle;">Both</td>   
-    <td style="vertical-align: middle;">DTRMetricData.where(exists(action.where(actionDetail=’launch’ and httpResponse=200)))
-.questionnaire.autoPopulated.aggregate($this + $total, 0)
+    <td style="vertical-align: middle;"><code>DTRMetricData.where(exists(action.where(actionDetail=’launch’ and httpResponse=200))).questionnaire.autoPopulated.aggregate($this + $total, 0)</code>
 divide by
-DTRMetricData.where(exists(action.where(actionDetail=’launch’ and httpResponse=200)))
-.questionnaire.enabled.aggregate($this + $total, 0)
+<code>DTRMetricData.where(exists(action.where(actionDetail=’launch’ and httpResponse=200))).questionnaire.enabled.aggregate($this + $total, 0)</code>
 express as percentage
     </td>   
   </tr>
@@ -76,11 +70,9 @@ express as percentage
     <td style="vertical-align: middle;">% of auto populated question changed</td>
     <td style="vertical-align: middle;">Process</td>
     <td style="vertical-align: middle;">Both</td>   
-    <td style="vertical-align: middle;">DTRMetricData.where(exists(action.where(actionDetail=’launch’ and httpResponse=200)))
-.questionnaire.roleInteraction.where(role=’override’).aggregate($this + $total,0)
+    <td style="vertical-align: middle;"><code>DTRMetricData.where(exists(action.where(actionDetail=’launch’ and httpResponse=200))).questionnaire.roleInteraction.where(role=’override’).aggregate($this + $total,0)</code>
 divide by 
-DTRMetricData.where(exists(action.where(actionDetail=’launch’ and httpResponse=200)))
-.questionnaire.autoPopulated.aggregate($this + $total,0)
+<code>DTRMetricData.where(exists(action.where(actionDetail=’launch’ and httpResponse=200))).questionnaire.autoPopulated.aggregate($this + $total,0)</code>
 express as percentage
     </td>   
   </tr>
@@ -89,9 +81,9 @@ express as percentage
     <td style="vertical-align: middle;">Average Time to complete</td>
     <td style="vertical-align: middle;">Process</td>
     <td style="vertical-align: middle;">Both</td>   
-    <td style="vertical-align: middle;">DTRMetricData.where(launchMode = %mode and exists(action.where(actionDetail=’launch’ and httpResponse=200))).elapsedTime.aggregate($this + $total, 0) 
+    <td style="vertical-align: middle;"><code>DTRMetricData.where(launchMode = %mode and exists(action.where(actionDetail=’launch’ and httpResponse=200))).elapsedTime.aggregate($this + $total, 0)</code> 
 divide by
-DTRMetricData.where(launchMode = %mode and exists(action.where(actionDetail=’launch’ and httpResponse=200))).count()
+<code>DTRMetricData.where(launchMode = %mode and exists(action.where(actionDetail=’launch’ and httpResponse=200))).count()</code>
     </td>   
   </tr>
 </table>
