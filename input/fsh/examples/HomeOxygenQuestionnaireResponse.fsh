@@ -146,7 +146,7 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 
 * extension[context][0].valueReference = Reference(CoverageExample)
 * extension[context][+].valueReference = Reference(ServiceRequestExample)
-* extension[intendedUse].valueCodeableConcept.coding = http://hl7.org/fhir/us/davinci-dtr/CodeSystem/temp#order "include-order"
+* extension[intendedUse].valueCodeableConcept.coding = http://hl7.org/fhir/us/davinci-crd/CodeSystem/temp#withorder "include-order"
 * questionnaire = "http://example.com/Questionnaire/referred-questionnaire"
 * status = #completed
 * subject = Reference(PatientExample) "Vlad"

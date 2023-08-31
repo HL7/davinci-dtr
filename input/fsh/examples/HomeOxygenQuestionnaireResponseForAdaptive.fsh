@@ -1,11 +1,11 @@
-Instance: home-o2-sdc-adaptive-questionnaire
-InstanceOf: DTRSDCQuestionnaireAdapt
+Instance: home-o2-adaptive-questionnaire
+InstanceOf: DTRQuestionnaireAdapt
 Usage: #inline
-Description: "An example Adaptive SDC questionnaire for Home Oxygen Therapy."
+Description: "An example Adaptive questionnaire for Home Oxygen Therapy."
 
 * version = "0.1.0"
-* name = "HomeOxygenTherapyAdaptiveSDCQuestionnaire"
-* title = "Adaptive Home Oxygen Therapy Order Template (SDC)"
+* name = "HomeOxygenTherapyAdaptiveQuestionnaire"
+* title = "Adaptive Home Oxygen Therapy Order Template"
 * status = #draft
 * subjectType = #Patient
 * text.status = #generated
@@ -30,12 +30,12 @@ Description: "An example Adaptive SDC questionnaire for Home Oxygen Therapy."
 * item[=].answerOption[+].valueCoding = http://example.org#3 "Revision or change in equipment"
 * item[=].answerOption[+].valueCoding = http://example.org#4 "Replacement"
 
-Instance: home-o2-sdc-adaptive-questionnaireresponse
+Instance: home-o2-adaptive-questionnaireresponse
 InstanceOf: QuestionnaireResponse
 Usage: #example
 Description: "An example QuestionnaireResponse for Adaptive Questionnaire."
-* contained[0] = home-o2-sdc-adaptive-questionnaire
-* questionnaire = "#home-o2-sdc-adaptive-questionnaire"
+* contained[0] = home-o2-adaptive-questionnaire
+* questionnaire = "#home-o2-adaptive-questionnaire"
 * status = #completed
 * authored = "2022-01-26T20:36:57.544Z"
 * item[+].linkId = "1"
