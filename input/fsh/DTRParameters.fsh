@@ -3,7 +3,7 @@ Profile:        DTRQuestionnairePackageInputParameters
 Parent:         Parameters
 Id:             dtr-qpackage-input-parameters
 Title:          "DTR Questionnaire Package Input Parameters"
-Description:    "The Parameters profile used to define the inputs of the 'questionnaire-package' operation."
+Description:    "The Parameters profile used to define the inputs of the [$questionnaire-package](OperationDefinition-questionnaire-package.html) operation."
 * obeys dtr-1
 * ^status = #active
 * parameter ^slicing.discriminator.type = #pattern
@@ -42,7 +42,7 @@ Profile:        DTRQuestionnairePackageOutputParameters
 Parent:         Parameters
 Id:             dtr-qpackage-output-parameters
 Title:          "DTR Questionnaire Package Output Parameters"
-Description:    "A profile on Parameters indicating the expected response content of a questionnaire-package operation."
+Description:    "A profile on Parameters indicating the expected response content of a [$questionnaire-package](OperationDefinition-questionnaire-package.html) operation."
 * ^status = #active
 * parameter ^slicing.discriminator.type = #pattern
 * parameter ^slicing.discriminator.path = "name"
@@ -50,12 +50,12 @@ Description:    "A profile on Parameters indicating the expected response conten
 * parameter ^slicing.description = "Slice based on $this pattern"
 * parameter 1..* MS
 * parameter contains 
-	QRBundle 1..* MS and
+	PackageBundle 1..* MS and
   Outcome 0..* MS 
-* parameter[QRBundle].name = "QRBundle"
-* parameter[QRBundle].resource 1..1 MS
-* parameter[QRBundle].resource only DTRQuestionnaireResponseBundle
-* parameter[QRBundle] ^short = "The Questionnaire package that was retrieved"
+* parameter[PackageBundle].name = "PackageBundle"
+* parameter[PackageBundle].resource 1..1 MS
+* parameter[PackageBundle].resource only DTRQuestionnairePackageBundle
+* parameter[PackageBundle] ^short = "The QuestionnairePackage bundle that was retrieved"
 
 * parameter[Outcome].name = "operationOutcome"
 * parameter[Outcome].resource 0..1 MS

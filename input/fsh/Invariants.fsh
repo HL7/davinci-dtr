@@ -18,12 +18,12 @@ Expression: "extension.exists(url = 'source' and value = 'auto') != extension.ex
 
 /*****************************************************************************************************/
 Invariant:  dtrb-1
-Description: "The first resource in bundle must be a QuestionnaireResponse."
+Description: "The first resource in bundle must be a Questionnaire."
 Severity:   #error
-Expression: "entry.first().resource.is(QuestionnaireResponse)"
+Expression: "entry.first().resource.is(Questionnaire)"
 
 /*****************************************************************************************************/
 Invariant:  dtrb-2
-Description: "All items with an answer.valueReference have a URL that matches a fullUrl in the Bundle."
+Description: "The first resource in bundle must be a QuestionnaireResponse."
 Severity:   #error
 Expression: "entry.first().resource.is(QuestionnaireResponse)"
