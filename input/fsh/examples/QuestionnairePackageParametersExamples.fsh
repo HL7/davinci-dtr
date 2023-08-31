@@ -11,4 +11,4 @@ Instance: QuestionnairePackageOutputParamsExample
 InstanceOf: DTRQuestionnairePackageOutputParameters
 Description: "An example instance of Output Parameters for the QuestionnairePackage operation."
 Usage: #example
-* parameter[QRBundle].resource = home-o2-questionnaireresponse-bundle
+* parameter[PackageBundle].resource = home-o2-questionnairepackage-bundle
