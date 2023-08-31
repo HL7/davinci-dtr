@@ -31,10 +31,10 @@ Description: "Codes temporarily defined as part of the DTR implementation guide.
 * #salaunch     "Standalone launch"     "launching from the context of an order/resource with no pre-existing associated QR and no coverage-information extension"
 * #cdexlaunch   "CDex launch"           "launching from the context of a Task specifying a questionnaire url or context id when the Task does not yet have a Task output"
 
-* #pa           "include-pa"            "The information in this QuestionnaireResponse should be packaged into a Bundle and submitted as part of (or in association with) a prior authorization for the associated request resource(s)."
-* #claim        "include-claim"         "The information in this QuestionnaireResponse should be packaged into a Bundle and submitted as part of (or in association with) the insurance claim for the services ordered by the associated request resource(s)."
-* #order        "include-order"         "The information in this QuestionnaireResponse should be packaged into a Bundle and submitted along with (or referenced as supporting information to) the associated request resource(s)."
-* #retain       "retain-documentation"  "The information in this QuestionnaireResponse should be retained within the DTR as supporting evidence of the medical necessity of the associated request resource(s)."
+// * #pa           "include-pa"            "The information in this QuestionnaireResponse should be packaged into a Bundle and submitted as part of (or in association with) a prior authorization for the associated request resource(s)."
+// * #claim        "include-claim"         "The information in this QuestionnaireResponse should be packaged into a Bundle and submitted as part of (or in association with) the insurance claim for the services ordered by the associated request resource(s)."
+// * #order        "include-order"         "The information in this QuestionnaireResponse should be packaged into a Bundle and submitted along with (or referenced as supporting information to) the associated request resource(s)."
+// * #retain       "retain-documentation"  "The information in this QuestionnaireResponse should be retained within the DTR as supporting evidence of the medical necessity of the associated request resource(s)."
 
 // Coverage guidance - auth
 // * #no-auth                 "No Prior Authorization"            "The ordered service does not require prior authorization"

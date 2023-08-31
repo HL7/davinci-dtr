@@ -28,7 +28,11 @@ Description:    "Enforces DTR requirements on a completed or partially completed
 * subject 1..1
 * subject only Reference(us-core-patient)
 
+* author only Reference(Device or $USCOREPatient or $USCOREPractitioner or $USCOREPractitionerRole or $USCOREOrganization or RelatedPerson)
+
 * item 1..*
 * item.extension[ItemSignature] MS
 
+* item.answer.extension[itemAnswerMedia] MS
+* item.answer.extension[ordinalValue] MS
 * item.answer.extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin named origin 1..1 MS

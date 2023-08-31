@@ -92,6 +92,7 @@ Resumed DTR sessions initiated from a previously stored QuestionnaireResponse wi
     * roleAction         1..1 code             "override | manual"  "This will indicate the type of human intervention action being summarized (auto, override or manual)."
     * roleAction         from MetricsInformationOrigins (extensible)
     * count              1..1 positiveInt      "Count of combination of role and roleInteraction"  "This is the sum of enabled questions for the specified with an information-origin of that source AND an author.role that matches the specified role."
+  * elapsedTime       1..1 time             "Cumulative user response time that questionnaire was active in session"  "cumulative time from DTR start to QR store, including from multiple sessions."
 
 * coverageInfo    0..* BackboneElement "Coverage information"                "Coverage information extensions returned as part of completed adaptive Questionnaires within this DTR session."
   * covered       0..1 code            "covered | not-covered | conditional" "Indicates whether the service is covered."
@@ -112,6 +113,3 @@ Resumed DTR sessions initiated from a previously stored QuestionnaireResponse wi
     * ^requirements = "Used to link the results of CRD to metric information captured for DTR and/or PAS."
   * satisfiedId   0..1 string          "Id if PA is satisfied"               "Corresponds to the satisfied-pa-id from the coverage-information extension."
   * businessLine  0..1 CodeableConcept "E.g. MedicareAdvantage"              "A code that indicates which type of insurance this assertion applies to."
-
-* elapsedTime       1..1 time             "Cumulative user response time that questionnaire was active in session"  "cumulative time from DTR start to QR store, including from multiple sessions."
-

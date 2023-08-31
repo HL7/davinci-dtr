@@ -17,6 +17,9 @@ Alias: $issuedetails-cs = http://terminology.hl7.org/CodeSystem/operation-outcom
 Alias: $USCORE311VS = http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code
 Alias: $sdcEntryMode = http://hl7.org/fhir/uv/sdc/ValueSet/entryMode
 Alias: $USCORE311PRVS = http://hl7.org/fhir/us/core/ValueSet/us-core-provider-role
+Alias: $USCOREPractitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+Alias: $USCOREPractitionerRole = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole
+Alias: $CRDAppointment = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-appointment
 Alias: $CRDCoverage = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-coverage
 Alias: $CRDCommunicationRequest = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-communicationrequest
 Alias: $CRDServiceRequest = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-servicerequest
@@ -24,11 +27,12 @@ Alias: $CRDDeviceRequest = http://hl7.org/fhir/us/davinci-crd/StructureDefinitio
 Alias: $CRDVisionPrescription = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-visionprescription
 Alias: $CRDMedicationRequest = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-medicationrequest
 Alias: $CRDNutritionOrder = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-nutritionorder
-
 Alias: $CRDOrderDetail = http://hl7.org/fhir/us/davinci-crd/ValueSet/orderDetail
-
 Alias: $CRDCoveredInfo = http://hl7.org/fhir/us/davinci-crd/ValueSet/coverageInfo
 Alias: $CRDCoveragePaDetail = http://hl7.org/fhir/us/davinci-crd/ValueSet/coveragePaDetail
 Alias: $CRDAdditionalDoc = http://hl7.org/fhir/us/davinci-crd/ValueSet/AdditionalDocumentation
 Alias: $CRDInformationNeeded = http://hl7.org/fhir/us/davinci-crd/ValueSet/informationNeeded
 Alias: $CRDDocReason = http://hl7.org/fhir/us/davinci-crd/ValueSet/DocReason
+Alias: $USCOREPatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+Alias: $USCOREOrganization = http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+Alias: $USCOREEncounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter

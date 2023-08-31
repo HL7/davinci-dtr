@@ -6,7 +6,7 @@ Description: "Identifies the orders, coverages, and or other resources associate
 * ^context.expression = "QuestionnaireResponse"
 * ^status = #active
 * value[x] 1..1
-* value[x] only Reference($CRDCoverage or $CRDDeviceRequest or $CRDMedicationRequest or $CRDNutritionOrder or $CRDServiceRequest or $us-core-encounter or Appointment)
+* value[x] only Reference($CRDCoverage or $CRDDeviceRequest or $CRDMedicationRequest or $CRDNutritionOrder or $CRDServiceRequest or $us-core-encounter or $CRDAppointment)
 
 /**************************************************************************************************************/
 Extension: IntendedUse 
@@ -19,7 +19,7 @@ Description: "Indicates how the EHR is to use the information with respect to th
 * value[x] ^short = "Reference to the pertinent order associated with this QuestionnaireResponse."
 * value[x] ^definition = "This contains references to the pertinent orders associated with this QuestionnaireResponse."
 * value[x] only CodeableConcept
-* value[x] from IntendedUse
+* value[x] from $CRDDocReason
 * value[x] 1..1
 
 /**************************************************************************************************************/
@@ -60,4 +60,4 @@ Description: "Identifies the origin of the information in the answer and how it 
 * extension[author].extension[practitioner] ^short = "The final practitioner who authored the information adjustment"
 * extension[author].extension[practitioner] ^definition = "The final practitioner who authored the information adjustment"
 * extension[author].extension[practitioner].value[x] 1..1
-* extension[author].extension[practitioner].value[x] only Reference(Practitioner)
+* extension[author].extension[practitioner].value[x] only Reference($USCOREPractitioner)
