@@ -62,3 +62,28 @@ Description:    "A profile on Parameters indicating the expected response conten
 * parameter[Outcome].resource only OperationOutcome
 * parameter[Outcome] ^short = "Operation Outcome from this execution"
 
+/**************************************************************************************************************/
+Profile:        DTRLogErrorsInputParameters
+Parent:         Parameters
+Id:             dtr-log-errors-input-parameters
+Title:          "DTR Log Questionnaire Errors Input Parameters"
+Description:    "The Parameters profile used to define the inputs to the [$log-questionnaire-errors](OperationDefinition-log-questionnaire-errors.html) operation."
+* obeys dtr-1
+* ^status = #active
+* parameter ^slicing.discriminator.type = #pattern
+* parameter ^slicing.discriminator.path = "name"
+* parameter ^slicing.rules = #open
+* parameter ^slicing.description = "Slice based on $this pattern"
+* parameter 1..* MS
+* parameter contains 
+    questionnaire 0..* and 
+    outcome 0..*
+* parameter[questionnaire].name = "questionnaire"
+* parameter[questionnaire] ^short = "The Questionnaire generating the errors (The reference SHOULD be version-specific)"
+* parameter[questionnaire].value[x] 1..1 MS
+* parameter[questionnaire].value[x] only canonical
+  * ^type.targetProfile = "http://hl7.org/fhir/StructureDefinition/Questionnaire"
+* parameter[outcome].name = "operationOutcome"
+* parameter[outcome].resource 1..1 MS
+* parameter[outcome].resource only OperationOutcome
+* parameter[outcome] ^short = "Operation Outcome associated with the Questionnaire/CQL"

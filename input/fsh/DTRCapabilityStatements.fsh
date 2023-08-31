@@ -21,7 +21,7 @@ Usage: #definition
 * fhirVersion = #4.0.1
 * format = #json
 * rest.mode = #server
-* rest.documentation = "A DTR intermediary system provides a SMART on FHIR application"
+* rest.documentation = "EHR systems which leverage a SMART app to manage data capture and rules execution, but which must be able to launch the SMART app."
 * rest.security.description = "Implementations **SHALL** meet the general security requirements documented in the [[http://hl7.org/fhir/us/davinci-hrex/STU1/security.html|HRex implementation guide]]."
 
 * rest.resource[+].type = #QuestionnaireResponse
@@ -108,7 +108,6 @@ Usage: #definition
 * rest.resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].interaction[=].extension.valueCode = #SHOULD
 * rest.resource[=].interaction[=].code = #update
-
 
 
 /**************************************************************************************************************/

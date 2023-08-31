@@ -36,3 +36,4 @@ Alias: $CRDDocReason = http://hl7.org/fhir/us/davinci-crd/ValueSet/DocReason
 Alias: $USCOREPatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
 Alias: $USCOREOrganization = http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
 Alias: $USCOREEncounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
+Alias: USCOREClientCapStatement = http://hl7.org/fhir/us/core/CapabilityStatement/us-core-client
