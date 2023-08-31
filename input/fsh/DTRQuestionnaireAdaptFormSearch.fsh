@@ -16,11 +16,11 @@ Description: "The DTR adaptive Questionnaire is used to represent an adaptive Qu
 * extension contains http://hl7.org/fhir/StructureDefinition/rendering-styleSensitive named styleSensitive 0..1
 * extension[styleSensitive].valueBoolean = false
 * extension[sdc-questionnaire-preferredTerminologyServer] 0..* MS
+* extension[sdc-questionnaire-preferredTerminologyServer] ^comment = "Multiple repetitions are available to support availability (one server might be down) as well as to accommodate the possibility that different servers might be needed for different value sets.  In either case, client behavior is to try different servers from the available list until one is successful.  There is no implication to the order in which the servers are listed.  If no service is listed and terminology services are needed, the $expand operation should be invoked on the base URL for the payer."
 
 * extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-entryMode named entryMode 0..* MS
 * extension[entryMode].valueCode from $sdcEntryMode (required) 
 
-* extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-endpoint named endpoint 0..* MS
 * extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-signatureRequired named signatureRequired 0..1 MS
 * extension[signatureRequired] ^short = "There's a cost to support this."
 * extension contains http://hl7.org/fhir/StructureDefinition/cqf-library named cqf-library 0..* MS
@@ -30,3 +30,5 @@ Description: "The DTR adaptive Questionnaire is used to represent an adaptive Qu
 * title.extension contains http://hl7.org/fhir/StructureDefinition/rendering-xhtml named titleRenderingXhtml 0..1
 * effectivePeriod 0..1 MS
   * ^short = "Validity period for the Questionnaire"
+
+* item.extension[terminologyServer] ^comment = "Multiple repetitions are available to support availability (one server might be down) as well as to accommodate the possibility that different servers might be needed for different value sets.  In either case, client behavior is to try different servers from the available list until one is successful.  There is no implication to the order in which the servers are listed.  If no service is listed and terminology services are needed, the $expand operation should be invoked on the base URL for the payer."

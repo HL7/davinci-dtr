@@ -20,10 +20,12 @@ Resumed DTR sessions initiated from a previously stored QuestionnaireResponse wi
 * sofApp                 0..1 url             "URL of SMART on FHIR application" "The URL of SMART on FHIR application to identify the specific DTR application used by the provider and payer.  If not present, then the DTR session is with a Full EHR."
 
 * providerId             1..1 Identifier      "Identifier for the user initiating DTR"  "The NPI number of the user who initiated this DTR session."
+* providerId.system      1..1
 * providerId.system      = "http://hl7.org/fhir/sid/us-npi"
 * providerId.value       1..1
 
 * groupId                1..1 Identifier      "Identifier for the healthcare organization initiating DTR"  "The NPI of the hospital/clinic/other organization that initiated this DTR session."
+* groupId.system         1..1
 * groupId.system         = "http://hl7.org/fhir/sid/us-npi"
 * groupId.value          1..1
 
@@ -55,7 +57,7 @@ Resumed DTR sessions initiated from a previously stored QuestionnaireResponse wi
     * ^comment = "Must be present unless action is a userresponse"
   * questionnaire        0..1 canonical        "Associated Questionnaire" "The questionnaire(s) tied to the current action"
     * ^type.targetProfile[0] = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-std-questionnaire"
-    * ^type.targetProfile[+] = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-sdc-questionnaire-adapt"
+    * ^type.targetProfile[+] = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaire-adapt"
   * issue                0..* BackboneElement  "OperationOutcome info"  "If an OperationOutcome is returned, what were the issues?"
     * code               1..1 code             "Error code"  "The issue.code value from the OperationOutcome for this issue."
     * code               from IssueType        (required)
