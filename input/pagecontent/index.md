@@ -39,6 +39,7 @@ The IG is organized into the following sections:
 
 * [Use Cases and Overview](usecases.html) Provides examples of how this specification can be used by provider and payer organizations.
 * [Technical Background](background.html) Describes the underlying technologies this specification builds upon that readers should be familiar with before reading the rest of the IG.
+* [ePA Coordinators](epa.html) Provides information regarding the interactions necessary to participate in an ePA workflow.
 * [Formal Specification](specification.html) Provides the technical conformance details for the specification.
 * [Privacy, Security, and Safety](security.html) Describes guidance and conformance expectations around privacy and security this IG relies on.
 * [DTR Metrics](metrics.html) Provides guidance on capturing formal metrics to help evaluate and potentially benchmark DTR implementations.
