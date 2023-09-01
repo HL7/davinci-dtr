@@ -156,7 +156,7 @@ Instance: dtr-payer-service
 InstanceOf: CapabilityStatement
 Title: "DTR Payer Service"
 Usage: #definition
-* url = "http://hl7.org/fhir/us/davinci-dtr/CapabilityStatement/dtr-payer-app"
+* url = "http://hl7.org/fhir/us/davinci-dtr/CapabilityStatement/dtr-payer-service"
 * version = "1.1.0-ballot"
 * name = "DTRPayerService"
 * title = "DTR Payer Service"
