@@ -168,7 +168,7 @@ Rules and logic are hidden and only questions relevant to the current member/ord
 Payers **MAY** support either approach, or **MAY** opt to provide some Questionnaires using one approach and others using the second based on the requirements of the form.  DTR apps and Full EHRs **SHALL** support both types of Questionnaires.
 
 #### Adaptive Form Considerations
-When a payer uses an Adaptive Form, they **SHALL** return a questionnaire instance compliant with the DTR [AdaptiveQuestionnaire-Search](StructureDefinition-dtr-questionnaire-adapt-search.html) profile. This will include a 'questionnaire-adaptive' extension that indicates that the Questionnaire is adaptive and is also used to determine the endpoint on which the [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) operation should be called to start completing the QuestionnaireResponse.  If the extension is simply a boolean value of 'true', then the operation endpoint is the payer base URL.  (i.e., `[base]/$next-question`).  If the extension is a url, then that is the base for the next question (i.e., `[url]/$next-question`).  
+When a payer uses an Adaptive Form, they **SHALL** return a questionnaire instance compliant with the DTR [AdaptiveQuestionnaire-Search](StructureDefinition-dtr-questionnaire-adapt-search.html) profile. This will include a [`questionnaire-adaptive`](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-questionnaireAdaptive) extension that indicates that the Questionnaire is adaptive and is also used to determine the endpoint on which the [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) operation should be called to start completing the QuestionnaireResponse.  If the extension is simply a boolean value of 'true', then the operation endpoint is the payer base URL.  (i.e., `[base]/$next-question`).  If the extension is a url, then that is the base for the next question (i.e., `[url]/$next-question`).  
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
@@ -571,3 +571,5 @@ While multiple purposes are possible, the expectation is that all information in
 
 If there is a desire to send different content to different recipients, then distinct QuestionnaireResponses **SHALL** be used.
 It is up to the DTR Client to determine the process by which attachments to prior auth requests, claims or orders are assembled - this could be done automatically, or with human review.
+
+[![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
