@@ -49,7 +49,7 @@ Implementers will need the knowledge of [US Core](http://hl7.org/fhir/us/core/ST
 Guidance is being provided to allow DTR functionality to be invoked outside of regular EHR clinical workflows using a SMART on FHIR app or an EHR-based "Native" app to provide a consistent way of evaluating payer rules and documentation requirements across EHR implementations. As such client implementers creating a SMART App will also need to be familiar with the [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) specification. (Payer implementers only need to be familiar with the SMART on FHIR specification if they plan to develop SMART apps for launch by CDS Hooks or other purposes.)  
 
 #### CQL 
-[Clinical Quality Language (CQL)](https://cql.hl7.org/) is used to query the Electronic Health Record (EHR) FHIR server to pre-populate the DTR Questionnaire and may also be used to guide which questions need to be answered.  DTR Servers will need to construct Questionnaires containing CQL references and CQL libraries that perform the necessary logic.  DTR clients will need to be able to execute the proved CQL.
+[Clinical Quality Language (CQL)](http://cql.hl7.org/N1/) is used to query the Electronic Health Record (EHR) FHIR server to pre-populate the DTR Questionnaire and may also be used to guide which questions need to be answered.  DTR Servers will need to construct Questionnaires containing CQL references and CQL libraries that perform the necessary logic.  DTR clients will need to be able to execute the proved CQL.
 
 ### Architectural approach
 This IG leverages several architectural to FHIR data exchange:
