@@ -51,6 +51,8 @@ dependencies:
   hl7.fhir.us.davinci-crd:
     id: crd
     version: current
+    reason: |
+      Makes available CRD profiles, valuesets, and codes for use as part of this IG
 
 pages:
   index.md:
