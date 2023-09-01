@@ -120,3 +120,11 @@ Description: "An example adaptive form search instance."
 Usage: #example
 * url = "http://example.com/example-adaptive-search"
 * status = #active
+
+// **********************************************************************************************************************************
+Instance: OperationOutcomeExample
+InstanceOf: OperationOutcome
+Description: "An example operation outcome instance."
+Usage: #inline
+* issue.severity = #error
+* issue.code = #not-found
