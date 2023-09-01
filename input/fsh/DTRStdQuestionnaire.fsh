@@ -1,7 +1,3 @@
-Alias: $cqf-expression = http://hl7.org/fhir/StructureDefinition/cqf-expression
-Alias: $questionnaire-constraint = http://hl7.org/fhir/StructureDefinition/questionnaire-constraint
-Alias: $assemble-expectation = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation
-
 Profile: DTRStdQuestionnaire
 Parent: sdc-questionnaire
 Id: dtr-std-questionnaire
