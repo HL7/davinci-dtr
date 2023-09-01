@@ -191,7 +191,7 @@ Adaptive questionnaires pose a slight challenge when it comes to preparing the Q
   
 * Finally, the payer can opt to specify the CQL and codes without using Libraries or ValueSets at all – the CQL can be sent in-line within the various Expression elements, and the codes can be listed directly as answerOption Codings.  This has similar advantages and disadvantages to the second option, though it has less overhead.  On the other hand, CQL and codes can't be shared across different items.
 
-The [Security and Privacy section](security.html) includes additional guidance on the use of Adaptive questionnaires.
+The [Privacy, Security, and Safety page](security.html) includes additional guidance on the use of Adaptive questionnaires.
 
 #### Determinations from Adaptive Forms
 In some cases, upon receiving enough answers from an adaptive form, a payer will be able to make assertions about coverage, prior authorization, and/or any 'additional documentation needed' similar to what is provided by the CRD process. This information needs to be made available to the DTR client in a computable fashion. To do so, the adaptive form service will place the coverage-information extension on the root of the [QuestionnaireResponse](StructureDefinition-dtr-questionnaireresponse.html), alongside the [context](StructureDefinition-qr-context.html) extension. 
