@@ -14,9 +14,6 @@ Additional information about Da Vinci, its members, the use cases and the implem
 
 {% include burdenReduction.md %}
 
-<!-- ### Burden Reduction Goals  
-The goal of the Burden Reduction IGs is to move from Telephone, FAX, Portal, and mail to electronic transactions defined by these three IGs.  We recognize it will take time for provider and payer to fully implement these IGs and that certain PAs may never be implemented due to complexity.  However, the intent is to move as rapidly as possible to full support of these IGs by Payer, providers and any required intermediaries. -->
-
 ### System Actors
 This Implementation Guide Fundamentally supports four different system actors that can be involved (with corresponding Capability Statements):
 

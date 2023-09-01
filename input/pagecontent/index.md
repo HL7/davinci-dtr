@@ -40,8 +40,9 @@ The IG is organized into the following sections:
 * [Use Cases and Overview](usecases.html) Provides examples of how this specification can be used by provider and payer organizations.
 * [Technical Background](background.html) Describes the underlying technologies this specification builds upon that readers should be familiar with before reading the rest of the IG.
 * [Formal Specification](specification.html) Provides the technical conformance details for the specification.
+* [Privacy, Security, and Safety](security.html) Describes guidance and conformance expectations around privacy and security this IG relies on.
 * [DTR Metrics](metrics.html) Provides guidance on capturing formal metrics to help evaluate and potentially benchmark DTR implementations.
-* [Artifacts](artifacts.html) Introduces and provides links to the FHIR profiles, operations, extensions, as well as examples.
+* [Artifacts](allartifacts.html) Introduces and provides links to the FHIR profiles, operations, extensions, as well as examples.
 * [Credits](credits.html) Identifies the individuals and organizations involved in developing this IG.
 * [Change History](changehistory.html) Documents the changes that have been made to this IG in its different releases and pointers to the discussion that drove those changes.
    
