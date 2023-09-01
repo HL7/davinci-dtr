@@ -20,6 +20,7 @@ Usage: #example
 Instance: CoverageExample
 InstanceOf: http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-coverage
 Description: "An instance of CRD Coverage"
+Usage: #inline
 * subscriber = Reference(PatientExample)
 * beneficiary = Reference(PatientExample)
 * relationship = RELATE#self "Self"
@@ -63,6 +64,7 @@ Description: "An example of DTRQuestionnairePackageOperation returning a Bundle 
 Instance: ServiceRequestExample
 InstanceOf: http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-servicerequest
 Description: "Example of ServiceRequest used in the Home Oxygen Therapy (home-o2-questionnaireresponse) example"
+Usage: #inline
 * intent = #original-order
 * authoredOn = "2019-09-18T07:53:21+07:00"
 * requester = Reference(PractitionerExample)
@@ -78,7 +80,7 @@ Description: "Example of ServiceRequest used in the Home Oxygen Therapy (home-o2
 Instance: PatientExample
 InstanceOf: Patient
 Description: "An example patient used in the example resources."
-Usage: #example
+Usage: #inline
 * gender = #male
 * birthDate = "1996-12-23"
 * address.use = #home
@@ -89,7 +91,7 @@ Usage: #example
 Instance: OrgExample
 InstanceOf: USCoreOrganizationProfile
 Description: "An instance of Organization as a payer used in the example resources."
-Usage: #example
+Usage: #inline
 * type = http://terminology.hl7.org/CodeSystem/organization-type#pay "Payer"
 * name = "Insurance Company"
 * active = true
@@ -106,7 +108,7 @@ Usage: #example
 Instance: PractitionerExample
 InstanceOf: USCorePractitionerProfile
 Description: "An example practitioner referred to by the example resources."
-Usage: #example
+Usage: #inline
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"
 * identifier.value = "1122334455"
 * name.family = "Doe"
