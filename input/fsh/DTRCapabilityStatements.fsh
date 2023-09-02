@@ -9,7 +9,7 @@ Usage: #definition
 * title = "Light DTR EHR"
 * status = #active
 * experimental = false
-* date = "2023-06-29"
+* date = "2023-08-31"
 * publisher = "HL7 Clinical Decision Support Work Group"
 * contact.name = "HL7 Clinical Decision Support Work Group"
 * contact.telecom.system = #url
@@ -121,7 +121,7 @@ Usage: #definition
 * title = "Full DTR EHR"
 * status = #active
 * experimental = false
-* date = "2023-06-29"
+* date = "2023-08-31"
 * publisher = "HL7 Clinical Decision Support Work Group"
 * contact.name = "HL7 Clinical Decision Support Work Group"
 * contact.telecom.system = #url
@@ -162,7 +162,7 @@ Usage: #definition
 * title = "DTR Payer Service"
 * status = #active
 * experimental = false
-* date = "2023-06-29"
+* date = "2023-08-31"
 * publisher = "HL7 Clinical Decision Support Work Group"
 * contact.name = "HL7 Clinical Decision Support Work Group"
 * contact.telecom.system = #url
@@ -203,7 +203,7 @@ Usage: #definition
 * title = "DTR SMART on FHIR Client"
 * status = #active
 * experimental = false
-* date = "2023-06-29"
+* date = "2023-08-31"
 * publisher = "HL7 Clinical Decision Support Work Group"
 * contact.name = "HL7 Clinical Decision Support Work Group"
 * contact.telecom.system = #url
