@@ -16,7 +16,7 @@ Usage: #example
 // **********************************************************************************************************************************
 Instance: LogQuestionnaireErrorsInputParamsExample
 InstanceOf: DTRLogErrorsInputParameters
-Description: "An example instance of Input Parameters for the Log Questionnaire Errors operation."
+Description: "An example instance of Input Parameters that are supplied to the Log Questionnaire Errors operation."
 Usage: #example
 * parameter[questionnaire].valueCanonical = "http://hl7.org/fhir/us/davinci-dtr/Questionnaire/home-o2-std-questionnaire"
 * parameter[outcome].resource = OperationOutcomeExample
