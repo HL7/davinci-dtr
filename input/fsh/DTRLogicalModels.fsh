@@ -10,6 +10,7 @@ A separate instance should be created by each participant for each DTR 'session'
 * For a SMART app, a session runs from the time the app is launched until it closes.
 * For a payer, a session runs from the time a SMART back-end connection from the Full EHR or SMART app is established until the last operation call is made using that security token.
 Resumed DTR sessions initiated from a previously stored QuestionnaireResponse will be tracked separately from initial DTR sessions.  Unless there is at least one CRD-assigned assertion id present on the record, it will not be possible to tie together multiple sessions related to the same QuestionnaireResponse or order."
+
 * ^status = #active
 * ^experimental = false
 * ^extension[$fmm].valueInteger = 1

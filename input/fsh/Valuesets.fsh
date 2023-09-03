@@ -13,8 +13,8 @@ Description: "Codes describing the possible origination of information."
 // ************************************************************
 ValueSet: MetricsInformationOrigins
 Id: MetricsinformationOrigins
-Title: "Metric-specific Information Origins Value Set"
-Description: "Codes describing the possible origination of information."
+Title: "Information Human Origins Value Set"
+Description: "Questionnaire actions taken by human actors."
 * ^experimental = false
 * DTRTempCodes#override
 * DTRTempCodes#manual
