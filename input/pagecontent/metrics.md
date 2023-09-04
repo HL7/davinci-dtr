@@ -5,7 +5,7 @@ This Implementation Guide (IG) is one of four HL7 Da Vinci IGs ([CRD](https://bu
 
 Each guide supports a specific set of functions and exchanges required to determine payer coverage for specific services, items, and referrals.
 
-To maximize the value of these IGs, it is imperative that each IG is integrated into clinical workflow at the appropriate point and that all of exchanges required by each IG are fully supported by all the participants (providers, intermediaries, and payers). 
+To maximize the value of these IGs, it is imperative that each IG is integrated into clinical workflow at the appropriate point and that all exchanges required by each IG are fully supported by all the participants (providers, intermediaries, and payers). 
 
 Each of these IGs recommends a set of metrics that may be collected by each implementation to facilitate the evaluation of adoption, functionality, processes, and improved outcomes. While there is currently no requirement to aggregate these metrics, it is reasonable to believe that, in the future, interested entities (providers, payers, regulators, quality organization, certification agencies, states, etc.) will ask for these metrics to evaluate the ongoing automation of the supported processes and exchanges. While this guide will not require these metrics to be captured in this release, the authors strongly suggest each implementation should do so with the expectation that collection and dissemination of these metrics may become a requirement (**SHALL**) in future versions of these IGs.
 
