@@ -46,21 +46,22 @@
 <br><br>To the numerous Da Vinci members and community who have participated on conference calls, provided reviews and feedback, supported sample data gathering, reference implementation development, and testing including, but not limited to:
 <ul>
     <li>Andy Gregorowicz, Cole Springate-Combs, Pat LaRocque, Keeyan Ghoreshi, Yolanda Liu, Robi Scalfani, and the FHIR Shorthand Team (The MITRE Corporation) </li>
-    <li>Carie Hammond and Ryan Moehrke (AEGIS)</li>
-    <li>Kyle Johnsen, Spencer Utley, and Matt Varghese (Epic)</li>
+    <li>Kyle Johnsen, Spencer Utley, Fred Switzer, and Matt Varghese (Epic)</li>
     <li>Sreekanth Puram (Mettle Solutions)</li>
     <li>Celine Lefebvre, Heather McComas (AMA)</li>
-    <li>Hans Buitendijk (Oracle)</li>
     <li>Anup Mahansaria, Peni Moxim, Mariel Brechner (Evernorth)</li>
+    <li>Carie Hammond and Ryan Moehrke (AEGIS)</li>
     <li>Brian Poteet (Edifecs)</li>
     <li>James Bound (Cognizant)</li>
+    <li>Hans Buitendijk (Oracle)</li>
     <li>Richard Abercrombie (Palmetto GBA)</li>
     <li>Tom Kakanowski, Brenin Rhodes, David Chisholm (Smile Digital Health)</li>
     <li>Chris Cioffi (Carelon)</li>
-    <li>Sreenivas Reddy Mallipeddi (MCG)</li>
     <li>Mike Gould (ZeOmega)</li>
     <li>Rob Brull, Brian Lind (Infor)</li>
     <li>Balaji Narayanan (Onyx)</li>
+    <li>Rachel Foerster (CAQH CORE)</li>
+    <li>Sreenivas Reddy Mallipeddi (MCG)</li>
     <li>Rick Geimer (Lantana Consulting Group)</li>
 </ul>
 </div>
