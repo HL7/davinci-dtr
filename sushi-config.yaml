@@ -141,8 +141,8 @@ menu:
   Base Specs:
     FHIR R4 Spec: new-tab {{site.data.fhir.path}}
     US Core 3.1.1: new-tab http://hl7.org/fhir/us/core/STU3.1.1/index.html
-    SDC: new-tab http://hl7.org/fhir/uv/sdc/STU3/
-    CQL: new-tab http://cql.hl7.org/N1/
+    Structured Data Capture (SDC): new-tab http://hl7.org/fhir/uv/sdc/STU3/
+    Clinical Quality Language (CQL): new-tab http://cql.hl7.org/N1/
 
   Support:
     Project Home: new-tab https://confluence.hl7.org/pages/viewpage.action?pageId=91980079
