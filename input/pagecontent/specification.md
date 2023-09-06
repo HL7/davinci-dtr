@@ -5,7 +5,7 @@ This page is organized into several sections reflecting the various steps involv
 
 The core of this process is summarized in this diagram:
 
-[![DTRQuestionnairePackageOperation](questionnaire-package-sequence.png){:style="float: none;width:726px;height:484px"}](questionnaire-package-sequence.png "Sequence Diagram")
+[![DTRQuestionnairePackageOperation](questionnaire-package-sequence.png){:style="float: none;width:725px;height:484px"}](questionnaire-package-sequence.png "Sequence Diagram")
 
 ---------------------
 ### General Considerations
@@ -496,7 +496,7 @@ A query for data that returns no results <b>SHALL NOT</b> be considered a failur
 ---------------------
 ### User Interaction with Questionnaires
 While the goal of DTR is to automatically gather all the necessary information to satisfy documentation requirements without interrupting the user, this is not possible in all cases.
-It is likely that at least some answers will not be able to be gleaned from the EHR, due to missing data, data that is not computable, or data that is not represented in a standardized way. Also, even where answers are determined automatically, users **MAY** wish to review them for accuracy and completeness. Therefore, the system acting as a form filler is responsible for displaying all 'enabled' questions, groups, and display items to the end user for completion and/or review.
+It is likely that at least some answers will not be able to be gleaned from the EHR, due to missing data, data that is not computable, or data that is not represented in a standardized way. Also, even where answers are determined automatically, users may wish to review them for accuracy and completeness. Therefore, the system acting as a form filler is responsible for displaying all 'enabled' questions, groups, and display items to the end user for completion and/or review.
  In some cases, the population process **MAY** populate all answers to the Questionnaire. The DTR client **SHALL** provide the ability, but NOT a requirement, for providers to review pre-populated answers prior to saving the resulting response for subsequent use within the EHR.
 
 #### Questionnaire Rendering
