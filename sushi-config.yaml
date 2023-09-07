@@ -27,6 +27,18 @@ parameters:
   excludettl: true
   show-inherited-invariants: false
 
+resources:
+  examplepatient:
+    exampleBoolean: false
+  PractitionerExample:  
+    exampleBoolean: false
+  CoverageExample: 
+    exampleBoolean: false
+  ServiceRequestExample : 
+    exampleBoolean: false
+  library-quick-model-definition:
+    exampleBoolean: false
+
 dependencies:
   hl7.fhir.us.core:
     id: uscore
