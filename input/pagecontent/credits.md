@@ -56,7 +56,7 @@
     <li>Hans Buitendijk (Oracle)</li>
     <li>Richard Abercrombie (Palmetto GBA)</li>
     <li>Tom Kakanowski, Brenin Rhodes, David Chisholm (Smile Digital Health)</li>
-    <li>Chris Cioffi (Carelon)</li>
+    <li>Chris Cioffi (Elevance Health)</li>
     <li>Mike Gould (ZeOmega)</li>
     <li>Rob Brull, Brian Lind (Infor)</li>
     <li>Balaji Narayanan (Onyx)</li>
