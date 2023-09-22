@@ -8,6 +8,8 @@ extension:
     valueCode: trial-use
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
     valueInteger: 2
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
+    valueCode: cds
 canonical: http://hl7.org/fhir/us/davinci-dtr
 name: DocumentationTemplatesRules
 title: "Da Vinci - Documentation Templates and Rules"
@@ -19,7 +21,7 @@ fhirVersion: 4.0.1
 copyrightYear: 2022+
 releaseLabel: CI-build
 publisher:
-  name: HL7 Clinical Decision Support Work Group
+  name: HL7 International / Clinical Decision Support
   url: http://www.hl7.org/Special/committees/dss
 jurisdiction: urn:iso:std:iso:3166#US
 
