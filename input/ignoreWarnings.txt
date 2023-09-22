@@ -18,3 +18,10 @@ Code System URI 'http://www.cms.gov/Medicare/Coding/HCPCSReleaseCodeSets' is unk
 
 # Example code system in the example
 Code System URI 'http://example.org' is unknown so the code cannot be validated
+
+# Examples only
+Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-std-questionnaire|1.1.0
+
+This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaire-adapt-search|1.1.0 
