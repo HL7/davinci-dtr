@@ -5,7 +5,7 @@ This page is organized into several sections reflecting the various steps involv
 
 The core of this process is summarized in this diagram:
 
-[![DTRQuestionnairePackageOperation](questionnaire-package-sequence.png){:style="float: none;width:732px;height:558px"}](questionnaire-package-sequence.png "Sequence Diagram")
+[![DTRQuestionnairePackageOperation](questionnaire-package-sequence.png){:style="float: none;width:732px;height:559px"}](questionnaire-package-sequence.png "Sequence Diagram")
 
 ---------------------
 ### General Considerations
@@ -19,12 +19,12 @@ This guide profiles on top of US Core profiles where Must Support has been defin
 Da Vinci DTR implementations **SHALL** conform to the US Core IG [Must Support](http://hl7.org/fhir/us/core/STU3.1.1/general-guidance.html#must-support) Guidance where US Core IG resources are used.
   
 DTR apps and EHRs that take on DTR app responsibility **SHALL** be able to render Questionnaires and QuestionnaireResponses.  Specifically, apps and EHRs acting as form fillers **SHALL** be able to display:
-* `QR.questionnaire.questionnaireDisplay`/`Questionnaire.title`
-* `QR.authored`
-* `QR.author.resolve().name`
-* `QR.source.resolve().name`
-* `QR.item.text`
-* `QR.item.value` - all data types
+* `QuesionnaireResponse.questionnaire.questionnaireDisplay`/`Questionnaire.title`
+* `QuesionnaireResponse.authored`
+* `QuesionnaireResponse.author.resolve().name`
+* `QuesionnaireResponse.source.resolve().name`
+* `QuesionnaireResponse.item.text`
+* `QuesionnaireResponse.item.value` - all data types
 * The same for all nested items
 
 They **SHALL** also handle all mustSupport elements within the Questionnaire profile and provide visual cues where those elements impact expected user action (e.g., required answers, need for signatures, etc.)
