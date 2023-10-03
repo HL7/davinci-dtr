@@ -1,11 +1,11 @@
 == Suppressed Messages ==
+# Approved by Cross Group Projects WG:9/28/2023 https://confluence.hl7.org/display/CGP/2023-09-28+Cross-Group+Project+Workgroup+Call
+US FHIR Usage rules require that all profiles on QuestionnaireResponse derive from the core US profile. Comparison with US Core QuestionnaireResponse Profile
 
 # See the following statement from Grahame about the next two issues: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/questionnaire-derivationType.20warning.20question
-
 The extension http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType is not allowed to be used at this point (allowed = e:Questionnaire.item; this element is [Questionnaire.derivedFrom, QuestionnaireResponse.contained/*Questionnaire/home-o2-sdc-adaptive-questionnaire*/.derivedFrom, canonical])
 
 The derivation type 'null#null' is unknown, which means that no derivation checking has been performed against this questionnaire
-
 
 # QuestionnaireResponse.questionnaire is a cannonical URL which points to the actual Questionnaire, but in the example the Questionnaire is not published anywhere
 The questionnaire 'http://example.com/Questionnaire/referred-questionnaire' could not be resolved, so no validation can be performed against the base questionnaire
@@ -21,7 +21,5 @@ Code System URI 'http://example.org' is unknown so the code cannot be validated
 
 # Examples only
 Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
-
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-std-questionnaire|1.1.0
-
 This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaire-adapt-search|1.1.0 
