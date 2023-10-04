@@ -19,7 +19,7 @@ license: CC0-1.0
 version: 1.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2022+
-releaseLabel: CI-build
+releaseLabel: STU 1.1
 publisher:
   name: HL7 International / Clinical Decision Support
   url: http://www.hl7.org/Special/committees/dss

@@ -67,6 +67,9 @@
 <artifact deprecated="true" id="QuestionnaireResponse/home-o2-sdc-adaptive-questionnaireresponse" key="QuestionnaireResponse-home-o2-sdc-adaptive-questionnaireresponse" name="home-o2-sdc-adaptive-questionnaireresponse"/>
 <artifact deprecated="true" id="Questionnaire/home-o2-sdc-questionnaire" key="Questionnaire-home-o2-sdc-questionnaire" name="home-o2-sdc-questionnaire"/>
 <artifact deprecated="true" id="Organization/org1001" key="Organization-org1001" name="org1001"/>
+<artifact deprecated="true" id="Contract/contract1001" key="Contract-contract1001" name="contract1001"/>
+<artifact deprecated="true" id="Coverage/coverage1001" key="Coverage-coverage1001" name="coverage1001"/>
+<artifact deprecated="true" id="DeviceRequest/deviceRequest0001" key="DeviceRequest-deviceRequest0001" name="deviceRequest0001"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifact List"/>
