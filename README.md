@@ -24,3 +24,4 @@ To view the actual IG, you can visit the [Continuous Build of the DTR IG](http:/
 
 <!-- ## Balloting
 >This IG will be a ballot as a part of the early HL7 May 2022 ballot cycle. Interested parties should sign up for participation at the [HL7 Ballot Desktop](http://www.hl7.org/ctl.cfm?action=ballots.home). -->
+
