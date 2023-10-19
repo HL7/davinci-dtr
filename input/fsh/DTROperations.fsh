@@ -67,7 +67,7 @@ When resuming a work in progress questionnaire response the DTR client **SHALL**
 
 * parameter[+].name = #referenced
 * parameter[=].use = #in
-* parameter[=].documentation = "Order-related referenced resources which are necessary to support stand-alone launch – specifically the Patient, requester, performer and location-related resources. (SHALL NOT include resources from 'supprtingInformation')."
+* parameter[=].documentation = "Order-related referenced resources which are necessary to support stand-alone launch – specifically the Patient, requester, performer and location-related resources. (SHALL NOT include resources from 'supportingInformation')."
 * parameter[=].type = #Any
 * parameter[=].min = 0
 * parameter[=].max = "*"
