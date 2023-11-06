@@ -2,6 +2,7 @@
     "package-id": "hl7.fhir.us.davinci-dtr",
     "version": "2.0.0",
     "path": "http://hl7.org/fhir/us/davinci-dtr/STU2",
+    "milestone" : true,
     "mode": "milestone",
     "status": "trial-use",
     "sequence": "STU 2.0",
