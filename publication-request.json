@@ -1,9 +1,9 @@
 {
     "package-id": "hl7.fhir.us.davinci-dtr",
-    "version": "1.1.0",
-    "path": "http://hl7.org/fhir/us/davinci-dtr/STU1.1",
+    "version": "2.0.0",
+    "path": "http://hl7.org/fhir/us/davinci-dtr/STU2",
     "mode": "milestone",
     "status": "trial-use",
-    "sequence": "STU 1.1",
-    "desc": "Da Vinci Documentation Templates and Rules Implementation Guide Release 1.1 - US Realm STU"
+    "sequence": "STU 2.0",
+    "desc": "STU 2.0 Release"
 }
