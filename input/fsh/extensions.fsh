@@ -47,7 +47,7 @@ Description: "Identifies the origin of the information in the answer and how it 
 * extension[author] ^short = "The author of the information adjustment"
 * extension[author] ^definition = "The author of the information adjustment"
 * extension[author].extension contains 
-    role 1..1 and
+    role 0..* and
     practitioner 0..1
     
 * extension[author].extension[role] only Extension
@@ -55,10 +55,25 @@ Description: "Identifies the origin of the information in the answer and how it 
 * extension[author].extension[role] ^definition = "The role of the final human who authored the information adjustment"
 * extension[author].extension[role].value[x] 1..1
 * extension[author].extension[role].value[x] only CodeableConcept
-* extension[author].extension[role].value[x] from $practitioner-role (required)
+* extension[author].extension[role].value[x] from $USCORE311PRVS (extensible)
 
 * extension[author].extension[practitioner] only Extension
 * extension[author].extension[practitioner] ^short = "The final practitioner who authored the information adjustment"
 * extension[author].extension[practitioner] ^definition = "The final practitioner who authored the information adjustment"
 * extension[author].extension[practitioner].value[x] 1..1
 * extension[author].extension[practitioner].value[x] only Reference($USCOREPractitioner)
+
+/**************************************************************************************************************/
+Extension: ActiveRole 
+Id: activeRole 
+Title: "Active Role"
+Description: "Indicates the active role(s) a practitioner is currently functioning in."
+* ^context[0].type = #element
+* ^context[=].expression = "Practitioner"
+* ^status = #active
+* ^description = "The active role of the practitioner. DTR clients **SHALL** either provide a PractitionerRole in the SMART App launch of DTR or support transmitting the role by means of this extension within the Practitioner resource."
+* value[x] ^short = "The active role(s) of the practitioner."
+* value[x] ^definition = "The active role of the practitioner."
+* value[x] 0..1
+* value[x] only CodeableConcept
+* value[x] from $USCORE311PRVS (extensible)
