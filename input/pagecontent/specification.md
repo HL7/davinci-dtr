@@ -511,7 +511,7 @@ Implementers should review the advanced rendering, advanced behavior, population
 All DTR applications **SHALL** support rendering according to the mustSupport elements in the DTR Questionnaire profile as well as executing all CQL found within Questionnaire extensions. CQL and FHIR Questionnaires **SHALL** be required even when DTR is implemented within a DTR Native App as opposed to a DTR SMART App.
 
 #### Separating user provided information from CQL retrieved information
-When a user fills in a value or changes an answer in a QuestionnaireResponse, the DTR client **SHALL** populate the [InformationOrigin extension](StructureDefinition-information-origin.html), setting the 'author' property to the current user, and setting 'source' to 'override' if the source was already 'override' or 'auto', or 'manual' otherwise.
+When a user fills in a value or changes an answer in a QuestionnaireResponse, the DTR client **SHALL** populate the [InformationOrigin extension](StructureDefinition-information-origin.html), setting the 'author' property to the current user, and setting 'source' to 'override' if the source was already 'override' or 'auto', or 'manual' otherwise. DTR clients **SHALL** either provide a PractitionerRole in the SMART App launch of DTR or support transmitting the role by means of the [Active Role](StructureDefinition-activeRole.html) extension within the Practitioner resource.
 
 #### QuestionnaireResponse validation
 Each Questionnaire has a set of rules that determine whether a QuestionnaireResponse is allowed to be considered 'complete'.  For example, cardinality expectations on answers, restrictions on allowed values, etc.  These rules are defined both by core elements as well as by extensions.
