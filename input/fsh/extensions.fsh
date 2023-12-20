@@ -67,11 +67,10 @@ Description: "Identifies the origin of the information in the answer and how it 
 Extension: ActiveRole 
 Id: activeRole 
 Title: "Active Role"
-Description: "Indicates the active role(s) a practitioner is currently functioning in."
+Description: "An extension to indicate the active role(s) a practitioner is currently functioning in."
 * ^context[0].type = #element
 * ^context[=].expression = "Practitioner"
 * ^status = #active
-* ^description = "The active role of the practitioner. DTR clients **SHALL** either provide a PractitionerRole in the SMART App launch of DTR or support transmitting the role by means of this extension within the Practitioner resource."
 * value[x] ^short = "The active role(s) of the practitioner."
 * value[x] ^definition = "The active role of the practitioner."
 * value[x] 0..1
