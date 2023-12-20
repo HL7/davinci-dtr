@@ -91,6 +91,8 @@ Usage: #example
 * name.family = "Doe"
 * name.given = "Jane"
 * name.prefix = "Dr."
+* extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/activeRole"
+* extension[=].valueCodeableConcept = 	http://nucc.org/provider-taxonomy#363A00000X "Physician Assistant"
 
 // *****************************************
 Instance: library-quick-model-definition
