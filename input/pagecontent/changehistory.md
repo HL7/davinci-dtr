@@ -994,3 +994,13 @@ This ballot addresses several additions, modifications, technical corrections, e
 
  </ul>
 </div>
+
+
+### STU 2.0.1 Technical Correction
+<p><b>The following issues are addressed in this technical correction:</b></p>
+<ul>
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-43030">FHIR-43030</a>:
+  Information Origin Extension challenged to be supported by SMART
+  </li>
+</ul>
