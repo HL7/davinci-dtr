@@ -16,10 +16,10 @@ title: "Da Vinci - Documentation Templates and Rules"
 description: "The Documentation Templates and Rules (DTR) Implementation Guide (IG) specifies how payer rules can be executed in a provider context to ensure that documentation requirements are met. The IG is a companion to the Coverage Requirements Discovery (CRD) IG, which uses CDS Hooks to query payers to determine if there are documentation requirements for a proposed medication, procedure or other service."
 status: active
 license: CC0-1.0
-version: 2.0.0
+version: 2.0.1
 fhirVersion: 4.0.1
 copyrightYear: 2022+
-releaseLabel: STU 2.0
+releaseLabel: STU 2
 publisher:
   name: HL7 International / Clinical Decision Support
   url: http://www.hl7.org/Special/committees/dss
