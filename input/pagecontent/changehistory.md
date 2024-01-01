@@ -1,59 +1,4 @@
 This ballot addresses several additions, modifications, technical corrections, errata, and clarifications listed below. They have been reviewed and voted on by the members of the <a href="http://www.hl7.org/Special/committees/dss/">HL7 Clinical Decision Support WorkGroup</a>, which is sponsoring this ballot release and reconciliation of the comments.
-
-<!-- ### STU 1.1.0 Ballot Changes
-
-<p><b>The following issues are addressed for this ballot:</b></p>
-
-<ul>
-   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-34291">FHIR-34291</a>:
-  Deferring and relaunching DTR App (Persisting Application State)
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-34151">FHIR-34151</a>:
-  Need an ability for DTR to store prior authorization (Adaptive Forms and Prior Authorization)
-  </li>
-  
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-34121">FHIR-34121</a>:
-  Provide a mechanism for Template to specify what to do when DTR ends (How DTR Saves Context of DTR for a Relaunch)
-  </li>
-
- <li>
-  <a href="https://jira.hl7.org/browse/FHIR-34128">FHIR-34128</a>:
-  Allow passing 'order' context when launching DTR (How DTR Saves Context of DTR for a Relaunch) 
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-34103">FHIR-34103</a>:
-  Clarify minimum Questionnaire capabilities (Structures: Resource Profiles )
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-34077">FHIR-34077</a>:
-  Incorporate relevant portions of the STU1 supplemental guide into the STU2 version (Best Practices) 
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-33328">FHIR-33328</a>:
-  Need clarification of what the DTR Task page is actually for (Task Creation) 
-  </li>
- 
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-33226">FHIR-33226</a>:
-  Formalize how DTR passes information to PAS, PAO or other exchange IG (How DTR passes information to PAS, PAO or other exchanges) 
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-33224">FHIR-33224</a>:
-  Add support for SDC Adaptive forms (SDC Adaptive Forms) 
-  </li>
-</ul> -->
-
-<!-- ====================================================================================== -->
-<div markdown="1" class="new-content">
-
 ### STU 1.1.0 Ballot Reconciliation Changes
 <p><b>The following issues are addressed resulting from this ballot:</b></p>
 <ul>
@@ -993,8 +938,9 @@ This ballot addresses several additions, modifications, technical corrections, e
    </li>
 
  </ul>
-</div>
 
+
+<div markdown="1" class="new-content">
 
 ### STU 2.0.1 Technical Correction
 <p><b>The following issues are addressed in this technical correction:</b></p>
@@ -1004,3 +950,4 @@ This ballot addresses several additions, modifications, technical corrections, e
   Information Origin Extension challenged to be supported by SMART
   </li>
 </ul>
+</div>
