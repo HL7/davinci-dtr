@@ -1,6 +1,6 @@
 == Suppressed Messages ==
 # Approved by Cross Group Projects WG:9/28/2023 https://confluence.hl7.org/display/CGP/2023-09-28+Cross-Group+Project+Workgroup+Call
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse').baseDefinition: 	US FHIR Usage rules require that all profiles on QuestionnaireResponse derive from the core US profile.
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse').baseDefinition: US FHIR Usage rules require that all profiles on QuestionnaireResponse derive from the core US profile. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
 
 # See the following statement from Grahame about the next two issues: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/questionnaire-derivationType.20warning.20question
 The extension http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType is not allowed to be used at this point (allowed = e:Questionnaire.item; this element is [Questionnaire.derivedFrom, QuestionnaireResponse.contained/*Questionnaire/home-o2-sdc-adaptive-questionnaire*/.derivedFrom, canonical])
