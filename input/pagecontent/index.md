@@ -66,7 +66,7 @@ This guide also depends on several non-Da Vinci specifications:
     </li>
     <br>
     <li>
-        In turn, DTR relies on the various EHR FHIR interfaces that comply with the <a href="http://hl7.org/fhir/us/core/STU3.1.1/index.html">US Core implementation guide</a>.  These interfaces allow the CQL embedded in Questionnaires to retrieve data from the EHR to help populate answers and/or to guide what questions are necessary. 
+        In turn, DTR relies on the various EHR FHIR interfaces that comply with the <a href="{{site.data.fhir.ver.uscore6}}/index.html">US Core implementation guide</a>.  These interfaces allow the CQL embedded in Questionnaires to retrieve data from the EHR to help populate answers and/or to guide what questions are necessary. 
     </li>
     <br>
     <li>
