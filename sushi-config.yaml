@@ -32,10 +32,16 @@ parameters:
 
 dependencies:
   hl7.fhir.us.core:
-    id: uscore
-    version: 3.1.1
+    id: uscore6
+    version: 6.1.0
     reason: |
-      Defines U.S. EHR expectations on a range of resources that will be within the necessary DTR processes
+      Defines USCDI 3 EHR expectations on a range of resources that will be passed to and/or queried by CRD servers
+  hl7.fhir.us.core.3.1.1:
+    version: 3.1.1
+    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
+    id: uscore3
+    reason: |
+      Defines USCDI 1 EHR expectations on a range of resources that will be passed to and/or queried by CRD servers.  
   hl7.fhir.uv.sdc:
     id: sdc
     version: 3.0.0
