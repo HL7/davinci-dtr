@@ -7,7 +7,7 @@ Description: "Identifies the orders, coverages, and or other resources associate
 * ^context[=].expression = "QuestionnaireResponse"
 * ^status = #active
 * value[x] 1..1
-* value[x] only Reference($CRDCoverage or $CRDDeviceRequest or $CRDMedicationRequest or $CRDNutritionOrder or $CRDServiceRequest or $CRDEncounter or $CRDAppointment)
+* value[x] only Reference($CRDCoverage or $CRDDeviceRequest or $CRDMedicationRequest or $CRDNutritionOrder or $CRDServiceRequest or $CRDEncounter31 or $CRDEncounter61 or $CRDAppointment)
 
 /**************************************************************************************************************/
 Extension: IntendedUse 
