@@ -18,6 +18,7 @@ Description: "The DTR Adaptive Questionnaire is used to represent an adaptive Qu
 // Rendering extensions 
 * extension contains http://hl7.org/fhir/StructureDefinition/rendering-styleSensitive named styleSensitive 0..1
 * extension[styleSensitive].valueBoolean = false
+* extension[styleSensitive] ^comment = "If set to true, all systems that claim to support this extension and that render elements from the resource SHALL either render the content as required by the style extensions (style, xhtml and markdown or shall indicate to the user that the resource (or specific elements in the resource) cannot be appropriately rendered by the system."
 * title.extension contains http://hl7.org/fhir/StructureDefinition/rendering-style named titleRenderingStyle 0..1
 * title.extension contains http://hl7.org/fhir/StructureDefinition/rendering-xhtml named titleRenderingXhtml 0..1
 * text 1..1 

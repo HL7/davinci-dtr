@@ -20,6 +20,8 @@ Description: "Takes a subset of extensions and constraints from the SDC [renderi
 // Rendering extensions 
 * extension contains http://hl7.org/fhir/StructureDefinition/rendering-styleSensitive named styleSensitive 0..1
 * extension[styleSensitive].valueBoolean = false
+* extension[styleSensitive] ^comment = "If set to true, all systems that claim to support this extension and that render elements from the resource SHALL either render the content as required by the style extensions (style, xhtml and markdown or shall indicate to the user that the resource (or specific elements in the resource) cannot be appropriately rendered by the system."
+
 // * extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-preferredTerminologyServer named preferredTerminologyServer 0..* MS
 * extension[terminologyServer] MS 
 * extension[terminologyServer] ^comment = "Multiple repetitions are available to support availability (one server might be down) as well as to accommodate the possibility that different servers might be needed for different value sets.  In either case, client behavior is to try different servers from the available list until one is successful.  There is no implication to the order in which the servers are listed.  If no service is listed and terminology services are needed, the $expand operation should be invoked on the base URL for the payer."
