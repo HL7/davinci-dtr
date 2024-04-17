@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="formatting.css" />
 
 ### Underlying Technologies
-This guide is based on the HL7 FHIR standard, the US Core Implementation Guide, as well as the SMART on FHIR and CQL specifications, which build additional capabilities on top of FHIR. This architecture is intended to maximize the number of provider systems that conform to this guide, as well as to allow for easy growth and extensibility of system capabilities in the future.
+This guide is based on the HL7 FHIR standard, the US Core [3.1.1](http://hl7.org/fhir/us/core/STU3.1.1/) and [6.1](https://hl7.org/fhir/us/core/STU6.1/) Implementation Guides, as well as the SMART on FHIR and CQL specifications, which build additional capabilities on top of FHIR. This architecture is intended to maximize the number of provider systems that conform to this guide, as well as to allow for easy growth and extensibility of system capabilities in the future.
 
 Implementers of this specification therefore need to understand some basic information about these specifications.
 
@@ -19,12 +19,20 @@ as general guidance on how to read FHIR specifications. Readers who are unfamili
 
 This IG supports the [R4](http://hl7.org/fhir/R4/index.html) version of the FHIR standard.
 
-This IG leverages and builds on the [US Core](http://hl7.org/fhir/us/core/STU3.1.1/) IG defined by HL7 for sharing human EHR data in the US.  Implementers need to familiarize themselves with the profiles in [US Core](http://hl7.org/fhir/us/core/STU3.1.1/). 
+This IG leverages and builds on the US Core [3.1.1](http://hl7.org/fhir/us/core/STU3.1.1/) and [6.1](https://hl7.org/fhir/us/core/STU6.1/) IGs defined by HL7 for sharing human EHR data in the US.  Implementers need to familiarize themselves with the profiles in US Core. 
 
 <table style="border: none;">
   <tr>
     <td style="border: none;"><b>FHIR Version:</b></td>
-    <td style="border: none;"><a href="http://hl7.org/fhir/us/core/STU3.1.1/">FHIR R4 US Core (Release 3.1.1)</a></td>
+    <td style="border: none;"><a href="https://hl7.org/fhir/R4/">FHIR R4 (4.0.1)</a></td>
+  </tr>
+  <tr>
+    <td style="border: none;"><b>US Core:</b></td>
+    <td style="border: none;"><a href="http://hl7.org/fhir/us/core/STU6.1/">Release 6.1</a></td>
+  </tr>
+  <tr>
+    <td style="border: none;"/>
+    <td style="border: none;"><a href="http://hl7.org/fhir/us/core/STU3.1.1/">Release 3.1.1</a></td>
   </tr>
   <tr>
     <td style="border: none;"><b>Resources:</b></td>
