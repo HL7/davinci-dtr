@@ -32,7 +32,7 @@ This IG is a companion to the Da Vinci [Coverage Requirements Discovery (CRD)](h
 
 While designed to work with these other IGs, DTR can be implemented stand-alone.  Further details on the relationships between these three implementation guides can be found [here](usecases.html#da-vinci-burden-reduction).
 
-A fourth Da Vinci IG that is relevant to DTR is the [Health Record Exchange (HRex)](http://hl7.org/fhir/us/davinci-hrex/STU1/) implementation guide, which defines a number of shared profiles and other shared content used across Da Vincie IGs - including this one.
+A fourth Da Vinci IG that is relevant to DTR is the [Health Record Exchange (HRex)]({{site.data.fhir.ver.uscore}}) implementation guide, which defines a number of shared profiles and other shared content used across Da Vincie IGs - including this one.
 
 ### Content and Organization
 The IG is organized into the following sections:
