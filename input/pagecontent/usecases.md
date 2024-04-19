@@ -97,9 +97,3 @@ CDex supports the launch of DTR to gather documentation through the [CDex Task D
 
 See the Task Input sequence [here](http://build.fhir.org/ig/HL7/davinci-ecdx/task-based-approach.html#using-questionnaire-as-task-input).
 
-<!-- **Questionnaire as Task Input Sequence Diagram**
-[![CDex To DTR](http://build.fhir.org/ig/HL7/davinci-ecdx/taskbased-task-Q-summary.svg){:style="float: none;width:980px;height:560px"}](http://build.fhir.org/ig/HL7/davinci-ecdx/task-based-approach.html#using-questionnaire-as-task-input "Opens CDex Implementation Guide")
-
-
-**Using DTR to Complete the Questionnaire**  
-[![CDex To DTR](http://build.fhir.org/ig/HL7/davinci-ecdx/taskbased-task-Q-sequencediagram.svg){:style="float: none;width:400px;height:800px"}](http://build.fhir.org/ig/HL7/davinci-ecdx/taskbased-task-Q-sequencediagram.svg "View Image Larger") -->

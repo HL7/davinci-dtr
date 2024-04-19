@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="formatting.css" />
 
 ### Underlying Technologies
-This guide is based on the HL7 FHIR standard, the US Core [3.1.1](http://hl7.org/fhir/us/core/STU3.1.1/) and [6.1](https://hl7.org/fhir/us/core/STU6.1/) Implementation Guides, as well as the SMART on FHIR and CQL specifications, which build additional capabilities on top of FHIR. This architecture is intended to maximize the number of provider systems that conform to this guide, as well as to allow for easy growth and extensibility of system capabilities in the future.
+This guide is based on the HL7 FHIR standard, the US Core [3.1.1]({{site.data.fhir.ver.uscore3}}) and [6.1]({{site.data.fhir.ver.uscore6}}) Implementation Guides, as well as the SMART on FHIR and CQL specifications, which build additional capabilities on top of FHIR. This architecture is intended to maximize the number of provider systems that conform to this guide, as well as to allow for easy growth and extensibility of system capabilities in the future.
 
 Implementers of this specification therefore need to understand some basic information about these specifications.
 
@@ -19,7 +19,7 @@ as general guidance on how to read FHIR specifications. Readers who are unfamili
 
 This IG supports the [R4](http://hl7.org/fhir/R4/index.html) version of the FHIR standard.
 
-This IG leverages and builds on the US Core [3.1.1](http://hl7.org/fhir/us/core/STU3.1.1/) and [6.1](https://hl7.org/fhir/us/core/STU6.1/) IGs defined by HL7 for sharing human EHR data in the US.  Implementers need to familiarize themselves with the profiles in US Core. 
+This IG leverages and builds on the US Core [3.1.1]({{site.data.fhir.ver.uscore3}}) and [6.1]({{site.data.fhir.ver.uscore6}}) IGs defined by HL7 for sharing human EHR data in the US.  Implementers need to familiarize themselves with the profiles in US Core. 
 
 <table style="border: none;">
   <tr>
@@ -28,11 +28,11 @@ This IG leverages and builds on the US Core [3.1.1](http://hl7.org/fhir/us/core/
   </tr>
   <tr>
     <td style="border: none;"><b>US Core:</b></td>
-    <td style="border: none;"><a href="http://hl7.org/fhir/us/core/STU6.1/">Release 6.1</a></td>
+    <td style="border: none;"><a href="{{site.data.fhir.ver.uscore6}}">Release 6.1</a></td>
   </tr>
   <tr>
     <td style="border: none;"/>
-    <td style="border: none;"><a href="http://hl7.org/fhir/us/core/STU3.1.1/">Release 3.1.1</a></td>
+    <td style="border: none;"><a href="{{site.data.fhir.ver.uscore3}}">Release 3.1.1</a></td>
   </tr>
   <tr>
     <td style="border: none;"><b>Resources:</b></td>
@@ -51,7 +51,7 @@ This IG leverages and builds on the US Core [3.1.1](http://hl7.org/fhir/us/core/
 Other resources may also be accessed as part of the CQL rules.
   
 #### US Core Implementation Guide
-Implementers will need the knowledge of [US Core](http://hl7.org/fhir/us/core/STU3.1.1/) to access information for pre population via CQL calls to *21st Century* compliant FHIR APIs. Some of the implementations will need to support US Core requirements.  (Refer to the [CapabilityStatements](artifacts.html#behavior-capability-statements).)   
+Implementers will need the knowledge of US Core [3.1.1]({{site.data.fhir.ver.uscore3}}) and [6.1]({{site.data.fhir.ver.uscore6}}) IGs to access information for pre population via CQL calls to *21st Century* compliant FHIR APIs. Some of the implementations will need to support US Core requirements.  (Refer to the [CapabilityStatements](artifacts.html#behavior-capability-statements).)   
 
 #### SMART on FHIR and Native Applications
 Guidance is being provided to allow DTR functionality to be invoked outside of regular EHR clinical workflows using a SMART on FHIR app or an EHR-based "Native" app to provide a consistent way of evaluating payer rules and documentation requirements across EHR implementations. As such client implementers creating a SMART App will also need to be familiar with the [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) specification. (Payer implementers only need to be familiar with the SMART on FHIR specification if they plan to develop SMART apps for launch by CDS Hooks or other purposes.)  
@@ -70,7 +70,7 @@ The choice of using REST to access and store data from the SMART app is driven b
   
 The choice of using operations for `$next-question` for adaptive forms was made by the SDC implementation guide.
   
-The decision tree navigation in the [HRex Approaches to Exchanging Data decision tree] that led to these approaches where decisions needed to be made as part of DTR are as follows:  
+The decision tree navigation in the [HRex Approaches to Exchanging Data decision tree](https://build.fhir.org/ig/HL7/davinci-ehrx/exchanging.html) that led to these approaches where decisions needed to be made as part of DTR are as follows:  
 
 Access to payer Questionnaire package -
 * Data retrieval is initiated by the consumer (SMART app/EHR).

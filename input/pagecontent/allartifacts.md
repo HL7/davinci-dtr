@@ -10,10 +10,10 @@ The FHIR artifacts used by DTR are organized according to whether the content wa
     <td style="border: none;"/><td style="border: none;"><a href="artifacts.html">DTR-Specific Artifacts</a></td>
   </tr>
   <tr>
-    <td style="border: none;"/><td style="border: none;"><a href="https://hl7.org/fhir/us/core/STU6.1/">US Core 6.1 artifacts</a></td>
+    <td style="border: none;"/><td style="border: none;"><a href="{{site.data.fhir.ver.uscore6}}">US Core 6.1 artifacts</a></td>
   </tr>
   <tr>
-    <td style="border: none;"/><td style="border: none;"><a href="http://hl7.org/fhir/us/core/STU3.1.1/">US Core 3.1.1 artifacts</a></td>
+    <td style="border: none;"/><td style="border: none;"><a href="{{site.data.fhir.ver.uscore3}}">US Core 3.1.1 artifacts</a></td>
   </tr>
 </table>
 
@@ -29,4 +29,4 @@ The artifacts are of four types:
 </div>
 <br>
 
-For this implementation guide, Must Support means conformance to both the [US Core](http://hl7.org/fhir/us/core/STU3.1.1/) guidance, as well as the [HRex Implementation Guide](http://build.fhir.org/ig/HL7/davinci-ehrx/) (See this guide's [US Core Implementation Guide](background.html#us-core-implementation-guide) background)
+For this implementation guide, Must Support means conformance to both the [US Core]({{site.data.fhir.ver.uscore3}}) guidance, as well as the [HRex Implementation Guide](http://build.fhir.org/ig/HL7/davinci-ehrx/) (See this guide's [US Core Implementation Guide](background.html#us-core-implementation-guide) background)
