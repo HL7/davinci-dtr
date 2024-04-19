@@ -20,13 +20,13 @@ This Implementation Guide Fundamentally supports four different system actors th
 * [DTR Payer Service](CapabilityStatement-dtr-payer-service.html):  
 Responds to operations requesting Questionnaire packages, and (optionally) helps in the processing of adaptive questionnaires. 
 
-* [DTR SMART Client](CapabilityStatement-dtr-smart-client.html):  
+* DTR SMART Client ([US Core 3.1.1](CapabilityStatement-dtr-smart-client-311.html) / [US Core 6.1](CapabilityStatement-dtr-smart-client-61.html)): 
 SMART on FHIR applications that take context from an EHR, retrieve questionnaires and rule sets from a DTR Payer server, render the Questionnaires and capture data, and store the results on payer and/or EHR systems  
 
 * [Full DTR EHR](CapabilityStatement-full-dtr-ehr.html):  
 EHR systems which manage DTR data capture and execution directly and also allow the rules to access other data and store final documentation results 
 
-* [Light DTR EHR](CapabilityStatement-light-dtr-ehr.html):  
+* Light DTR EHR ([US Core 3.1.1](CapabilityStatement-light-dtr-ehr-311.html) / [US Core 6.1](CapabilityStatement-light-dtr-ehr-61.html)):  
 EHR systems which leverage a SMART app to manage data capture and rules execution, but which must be able to launch the SMART app, respond to app queries, and store the final documentation results. 
  
   
@@ -96,4 +96,3 @@ CDex supports the launch of DTR to gather documentation through the [CDex Task D
 <br>
 
 See the Task Input sequence [here](http://build.fhir.org/ig/HL7/davinci-ecdx/task-based-approach.html#using-questionnaire-as-task-input).
-

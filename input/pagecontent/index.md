@@ -11,11 +11,11 @@ DTR leverages FHIR [Questionnaires](http://hl7.org/fhir/R4/questionnaire.html) c
 This Implementation Guide has expectations defined for four types of systems that can be involved (with corresponding Capability Statements):
 * [DTR Payer Service](CapabilityStatement-dtr-payer-service.html):  
   Payer systems that provide questionnaires to DTR clients supporting server capabilities for the Questionnaire Package, ValueSet Expand, and Next Question operations.
-* [DTR SMART Client](CapabilityStatement-dtr-smart-client.html):  
+* DTR SMART Client ([US Core 3.1.1](CapabilityStatement-dtr-smart-client-311.html) / [US Core 6.1](CapabilityStatement-dtr-smart-client-61.html)): 
   Clients support retrieving and editing QuestionnaireResponse and related resources, as well as client support for the Questionnaire Package, ValueSet Expand, and Next Question operations.
 * [Full DTR EHR](CapabilityStatement-full-dtr-ehr.html):  
   EHRs that manage the form filling functions of DTR internally supporting client capabilities for the Questionnaire Package, ValueSet Expand, and Next Question operations.
-* [Light DTR EHR](CapabilityStatement-light-dtr-ehr.html):  
+* Light DTR EHR ([US Core 3.1.1](CapabilityStatement-light-dtr-ehr-311.html) / [US Core 6.1](CapabilityStatement-light-dtr-ehr-61.html)):  
   SMART on FHIR application that handles the form filling function of DTR, requiring the server to provide access to the specified resources to allow such an app to retrieve and edit QuestionnaireResponses and related resources.
 
 <div markdown="1" class="notebox">
