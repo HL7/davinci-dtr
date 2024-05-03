@@ -194,7 +194,7 @@ Adaptive questionnaires pose a slight challenge when it comes to preparing the Q
 The [Privacy, Security, and Safety page](security.html) includes additional guidance on the use of Adaptive questionnaires.
 
 #### Determinations from Adaptive Forms
-In some cases, upon receiving enough answers from an adaptive form, a payer will be able to make assertions about coverage, prior authorization, and/or any 'additional documentation needed' similar to what is provided by the CRD process. This information needs to be made available to the DTR client in a computable fashion. To do so, the adaptive form service will place the coverage-information extension on the root of the [QuestionnaireResponse](StructureDefinition-dtr-questionnaireresponse.html), alongside the [context](StructureDefinition-qr-context.html) extension. 
+In some cases, upon receiving enough answers from an adaptive form, a payer will be able to make assertions about coverage, prior authorization, and/or any 'additional documentation needed' similar to what is provided by the CRD process. This information needs to be made available to the DTR client in a computable fashion. To do so, the adaptive form service will place the [coverage-information](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension on the root of the [QuestionnaireResponse](StructureDefinition-dtr-questionnaireresponse.html), alongside the [context](StructureDefinition-qr-context.html) extension. 
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
