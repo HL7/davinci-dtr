@@ -12,6 +12,9 @@ Description:    "Enforces DTR requirements on a completed or partially completed
 * ^status = #active
 * ^date = "2023-08-21T02:27:35+00:00"
 
+* extension contains CRDCoverageInformation named Coverage-Information 0..* MS
+* extension[Coverage-Information] ^short = "Coverage Info"
+
 * extension[signature] MS
 
 * extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/qr-context named context 2..*
