@@ -23,7 +23,7 @@ Responds to operations requesting Questionnaire packages, and (optionally) helps
 * **DTR SMART Client** (for [US Core 3.1.1](CapabilityStatement-dtr-smart-client-311.html) / [US Core 6.1](CapabilityStatement-dtr-smart-client-610.html)): 
 SMART on FHIR applications that take context from an EHR, retrieve questionnaires and rule sets from a DTR Payer server, render the Questionnaires and capture data, and store the results on payer and/or EHR systems  
 
-* **Full DTR EHR** (for [US Core 3.1.1](CapabilityStatement-full-dtr-ehr-311.html) / [US Core 6.1](CapabilityStatement-dtr-payer-service-610.html)): 
+* **Full DTR EHR** (for [US Core 3.1.1](CapabilityStatement-full-dtr-ehr-311.html) / [US Core 6.1](CapabilityStatement-full-dtr-ehr-610.html)): 
 EHR systems which manage DTR data capture and execution directly and also allow the rules to access other data and store final documentation results 
 
 * **Light DTR EHR** (for [US Core 3.1.1](CapabilityStatement-light-dtr-ehr-311.html) / [US Core 6.1](CapabilityStatement-light-dtr-ehr-610.html)):  
