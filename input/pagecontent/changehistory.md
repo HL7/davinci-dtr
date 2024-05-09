@@ -31,7 +31,7 @@
 </ul>
 </div>
 
-### STU 1.1.0 Ballot Reconciliation Changes (for STU2 publication)
+### STU 1.1.0 Ballot Reconciliation Changes (for STU 2.0.0 publication)
 <p><b>The following issues are addressed resulting from this ballot:</b></p>
 <ul>
   <li>
