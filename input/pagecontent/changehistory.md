@@ -1,8 +1,12 @@
 <div markdown="1" class="new-content">
 
 ### Changes for STU 2.1.0 (since V2.0.1)
-<!-- <p><b>The following issues are addressed in this technical correction:</b></p> -->
+<p><b>The following issues are addressed in preparation for this publication:</b></p>
 <ul>
+  <li>
+    <i> Multiple changes have been incorporated to provide support for both US Core 3.1.1 and 6.1 </i>
+  </li>
+
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-44930">FHIR-44930</a>:
   extra period breaks out a requirement in section 7.10.2 of the formal spec
