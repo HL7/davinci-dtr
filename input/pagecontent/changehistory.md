@@ -1,5 +1,33 @@
-This ballot addresses several additions, modifications, technical corrections, errata, and clarifications listed below. They have been reviewed and voted on by the members of the <a href="http://www.hl7.org/Special/committees/dss/">HL7 Clinical Decision Support WorkGroup</a>, which is sponsoring this ballot release and reconciliation of the comments.
-### STU 1.1.0 Ballot Reconciliation Changes
+<div markdown="1" class="new-content">
+
+### Changes for STU 2.1.0 (since V2.0.1)
+<!-- <p><b>The following issues are addressed in this technical correction:</b></p> -->
+<ul>
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-44930">FHIR-44930</a>:
+  extra period breaks out a requirement in section 7.10.2 of the formal spec
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-45010">FHIR-45010</a>:
+  Why does OperationOutcome repeat
+  </li>
+</ul>
+</div>
+
+<div markdown="1">
+
+### STU 2.0.1 Technical Correction
+<p><b>The following issues are addressed in this technical correction:</b></p>
+<ul>
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-43030">FHIR-43030</a>:
+  Information Origin Extension challenged to be supported by SMART
+  </li>
+</ul>
+</div>
+
+### STU 1.1.0 Ballot Reconciliation Changes (for STU2 publication)
 <p><b>The following issues are addressed resulting from this ballot:</b></p>
 <ul>
   <li>
@@ -938,16 +966,3 @@ This ballot addresses several additions, modifications, technical corrections, e
    </li>
 
  </ul>
-
-
-<div markdown="1" class="new-content">
-
-### STU 2.0.1 Technical Correction
-<p><b>The following issues are addressed in this technical correction:</b></p>
-<ul>
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-43030">FHIR-43030</a>:
-  Information Origin Extension challenged to be supported by SMART
-  </li>
-</ul>
-</div>
