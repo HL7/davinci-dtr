@@ -60,6 +60,7 @@
     <li>Mike Gould (ZeOmega)</li>
     <li>Rob Brull, Brian Lind (Infor)</li>
     <li>Balaji Narayanan (Onyx)</li>
+    <li>Joshua Lamb (Optum)</li>
     <li>Rachel Foerster (CAQH CORE)</li>
     <li>Sreenivas Reddy Mallipeddi (MCG)</li>
     <li>Rick Geimer (Lantana Consulting Group)</li>
