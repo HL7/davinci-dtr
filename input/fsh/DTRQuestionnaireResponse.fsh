@@ -23,9 +23,6 @@ Description:    "Enforces DTR requirements on a completed or partially completed
 * extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/intendedUse named intendedUse 1..* 
 * extension[intendedUse] ^short = "Indicates how the EHR is to use the information with respect to the associated orders/records."
 
-* extension contains http://hl7.org/fhir/us/davinci-crd/StructureDefinition/ext-coverage-information named Coverage-Information 0..* MS
-* extension[Coverage-Information] ^short = "Coverage Info"
-
 * basedOn 0..0
 * partOf 0..0
 
