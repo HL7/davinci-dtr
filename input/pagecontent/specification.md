@@ -235,7 +235,7 @@ Questionnaires, whether standard or adaptive, **SHOULD** also use logic that ens
 
 These systems **SHOULD** also support all non mustSupport data extensions included in the differential of the DTR Questionnaire profiles as per SDC documentation for those elements and extensions and **SHALL** gracefully handle the presence of these elements if not supported. (i.e., non-support for an element **SHALL NOT** interfere with a user's ability to complete a QuestionnaireResponse.)  However, payers **SHALL NOT** rely on support for any of these elements in the design of their Questionnaire.  i.e., a DTR client that ignores such elements cannot impact the successful collection of information acceptability of the information gathered. 
 
-The questionnaire designer needs to consider the possibility that access to some data **MAY** be restricted or prohibited and access restrictions **MAY** happen silently (e.g., indistinguishable absent data).
+The questionnaire designer **SHOULD** consider the possibility that access to some data may be restricted or prohibited and that access restrictions could happen silently (e.g., indistinguishable absent data).
 
 #### Provider Attestation
 In some cases, if there isn't specific data that can be retrieved computably from the EHR, it **MAY** be sufficient for a payer to merely have an attestation by the provider that certain documentation exists, that a certain patient condition exists, or that certain actions have been completed. This can be represented in a Questionnaire as a simple boolean or choice question where the text describes what the user is attesting to. Payers **SHOULD** design questionnaires to support attestation rather than discrete data where this is sufficient for the business requirements.
