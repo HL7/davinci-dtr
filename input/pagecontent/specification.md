@@ -200,7 +200,7 @@ In some cases, upon receiving enough answers from an adaptive form, a payer will
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> 
-It will be unusual for a coverage-information extension created by an adaptive form to come back saying 'additional documentation required', however there are theoretical use-cases for this to be useful and this specification does not prohibit such behavior. If this occurs, it <b>MAY</b> result in a subsequent launch of DTR, or could result in the DTR client prompting the user as to whether they want to move on to filling out the new form(s).
+It will be unusual for a coverage-information extension created by an adaptive form to come back saying 'additional documentation required', however there are theoretical use-cases for this to be useful and this specification does not prohibit such behavior. If this occurs, it could result in a subsequent launch of DTR, or could result in the DTR client prompting the user as to whether they want to move on to filling out the new form(s).
       </td></tr>
   </table>
 </div><br>
