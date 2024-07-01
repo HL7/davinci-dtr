@@ -38,7 +38,7 @@ Throughout this guide, the term 'EHR' refers to the set of systems acting on beh
 
 ---------------------
 ### Impact on payer processes
-Information passed to DTR will typically contain clinical terminologies, might not contain billing terminologies, and will generally not include billing modifier codes or similar information typically included in prior authorization requests. Services will also need to consider that the mapping they perform between clinical terminologies and billing codes **MAY** be different than the bill coding process performed by the client system when claims are eventually submitted. This **MAY** mean that assertions about coverage or prior authorization requirements will need to be expressed conditionally. e.g., "Provided this service is billed as X, Y or Z, then prior authorization is not needed".
+Information passed to DTR will typically contain clinical terminologies, might not contain billing terminologies, and will generally not include billing modifier codes or similar information typically included in prior authorization requests. Services will also need to consider that the mapping they perform between clinical terminologies and billing codes could be different than the bill coding process performed by the client system when claims are eventually submitted. This **MAY** mean that assertions about coverage or prior authorization requirements will need to be expressed conditionally. e.g., "Provided this service is billed as X, Y or Z, then prior authorization is not needed".
 
 In situations where the DTR App is aware of the likely billing codes at the time of ordering, it might send these codes as additional CodeableConcept.coding repetitions to assist in server processing. If CPT is used, note the ability to convey CPT modifier codes via post-coordination as described in the Using CPT page on [terminology.hl7.org](https://terminology.hl7.org/).
 
@@ -48,7 +48,7 @@ It is more efficient if mappings can be shared across payers and providers. This
 
 ---------------------
 ### Configuring EHR to App Connectivity
-EHRs have the option of delivering DTR functionality internally or leveraging a DTR SMART Application that handles the primary data capture and population functions of the DTR process.  Such SMART applications **MAY** be developed by the EHR vendors, by payers, or by third parties.
+EHRs have the option of delivering DTR functionality internally or leveraging a DTR SMART Application that handles the primary data capture and population functions of the DTR process.  Such SMART applications may be developed by the EHR vendors, by payers, or by third parties.
 
 DTR apps are expected to be technically able to run against any EHR and work with any payer. This means that EHRs are free to choose which app they prefer and **MAY** switch apps as they see fit.  However, for a DTR app to be used it needs to be trusted appropriately to manage access to personal health information by the EHRs and payers. EHRs that leverage DTR SMART apps will choose which DTR apps they will trust and support.  In some cases, an EHR **MAY** opt to support multiple DTR SMART apps.  If so, the EHR will be responsible for determining which app is used in which circumstances.
 
@@ -90,7 +90,7 @@ The Questionnaire resource is used to represent the information needs that provi
 * What constraints exist on allowed answers (data types, choice lists, etc.), 
 * Logic about which questions are enabled or disabled based on prior answers or other context,
 * How questions are organized and grouped,
-* Rules about what answers are mandatory or **MAY** have multiple answers,
+* Rules about what answers are mandatory or may have multiple answers,
 * How the questions should be rendered (tables, drop-downs, etc.)
 * How to automatically fill in answers to some of the questions based on data already available from the EHR.
 * Etc.
@@ -185,11 +185,11 @@ The [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Quest
 
 Adaptive questionnaires pose a slight challenge when it comes to preparing the Questionnaire package.  Unlike standard questionnaires, adaptive forms do not identify all their questions up-front.  As such, it is not clear exactly which ValueSets will be needed for coded elements, nor which Libraries might be needed to contain CQL to support pre-population.  There are three strategies payers can use – and payers **MAY** opt to combine strategies within a single Questionnaire:
 
-* The payer **MAY** opt to include CQL Libraries and ValueSets in the package that are not actually referenced by any questions, on the prospect that they *might* be (or are likely to be) referenced by one of the questions at some point.  Libraries might also be included that define common helper functions that will be leveraged by question-specific CQL provided later.  The downside of this approach is that an adaptive form might draw from a library of hundreds of different questions but only actually use a handful.  This **MAY** result in needing to share an extremely large questionnaire package.  It **MAY** also expose more of the proprietary logic than the payer **MAY** wish to make known.  On the other hand, any CQL or code lists provided in the package is content that will not need to appear contained in the QuestionnaireResponse, which can lighten subsequent calls to [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html). 
+* The payer **MAY** opt to include CQL Libraries and ValueSets in the package that are not actually referenced by any questions, on the prospect that they *might* be (or are likely to be) referenced by one of the questions at some point.  Libraries might also be included that define common helper functions that will be leveraged by question-specific CQL provided later.  The downside of this approach is that an adaptive form might draw from a library of hundreds of different questions but only actually use a handful.  This **MAY** result in needing to share an extremely large questionnaire package.  It **MAY** also expose more of the proprietary logic than the payer might wish to make known.  On the other hand, any CQL or code lists provided in the package is content that will not need to appear contained in the QuestionnaireResponse, which can lighten subsequent calls to [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html). 
   
 * The payer **MAY** add CQL Libraries and ValueSets as 'contained' resources inside the QuestionnaireResponse that are relevant to the questions that are part of the Questionnaire for each [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) call, slowly building up the set of resources that happen to be relevant to the questions actually asked.  The benefit of this approach is that only codes and CQL relevant to the questions asked needs to be shared.  The downside is that this content is then present on every call to [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html).
   
-* Finally, the payer can opt to specify the CQL and codes without using Libraries or ValueSets at all – the CQL can be sent in-line within the various Expression elements, and the codes can be listed directly as answerOption Codings.  This has similar advantages and disadvantages to the second option, though it has less overhead.  On the other hand, CQL and codes can't be shared across different items.
+* Finally, the payer **MAY** opt to specify the CQL and codes without using Libraries or ValueSets at all – the CQL can be sent in-line within the various Expression elements, and the codes can be listed directly as answerOption Codings.  This has similar advantages and disadvantages to the second option, though it has less overhead.  On the other hand, CQL and codes can't be shared across different items.
 
 The [Privacy, Security, and Safety page](security.html) includes additional guidance on the use of Adaptive questionnaires.
 
