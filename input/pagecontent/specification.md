@@ -165,7 +165,7 @@ Rules and logic are hidden and only questions relevant to the current member/ord
   </tr>
 </table><br>
   
-Payers **MAY** support either approach, or **MAY** opt to provide some Questionnaires using one approach and others using the second based on the requirements of the form.  DTR apps and Full EHRs **SHALL** support both types of Questionnaires.
+Payers **MAY** support either approach or opt to provide some Questionnaires using one approach and others using the second based on the requirements of the form.  DTR apps and Full EHRs **SHALL** support both types of Questionnaires.
 
 #### Adaptive Form Considerations
 When a payer uses an Adaptive Form, they **SHALL** return a questionnaire instance compliant with the DTR [AdaptiveQuestionnaire-Search](StructureDefinition-dtr-questionnaire-adapt-search.html) profile. This will include a [`questionnaire-adaptive`](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-questionnaireAdaptive) extension that indicates that the Questionnaire is adaptive and is also used to determine the endpoint on which the [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) operation should be called to start completing the QuestionnaireResponse.  If the extension is simply a boolean value of 'true', then the operation endpoint is the payer base URL.  (i.e., `[base]/$next-question`).  If the extension is a url, then that is the base for the next question (i.e., `[url]/$next-question`).  
