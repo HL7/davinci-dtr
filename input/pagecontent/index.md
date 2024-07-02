@@ -18,6 +18,9 @@ This Implementation Guide has expectations defined for four types of systems tha
 * **Light DTR EHR** (for [US Core 3.1.1](CapabilityStatement-light-dtr-ehr-311.html) / [US Core 6.1](CapabilityStatement-light-dtr-ehr-610.html)):  
   SMART on FHIR application that handles the form filling function of DTR, requiring the server to provide access to the specified resources to allow such an app to retrieve and edit QuestionnaireResponses and related resources.
 
+[![ExpectedSystems](Actors.png){:style="float: none;width:766px;height:271px"}](Actors.png "Expected Systems")
+  
+
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
