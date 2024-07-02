@@ -17,19 +17,22 @@ Additional information about Da Vinci, its members, the use cases and the implem
 ### System Actors
 This Implementation Guide Fundamentally supports four different system actors that can be involved (with corresponding Capability Statements):
 
-* **DTR Payer Service** (for [US Core 3.1.1](CapabilityStatement-dtr-payer-service-311.html) / [US Core 6.1](CapabilityStatement-dtr-payer-service-610.html)): 
-Responds to operations requesting Questionnaire packages, and (optionally) helps in the processing of adaptive questionnaires. 
-
-* **DTR SMART Client** (for [US Core 3.1.1](CapabilityStatement-dtr-smart-client-311.html) / [US Core 6.1](CapabilityStatement-dtr-smart-client-610.html)): 
-SMART on FHIR applications that take context from an EHR, retrieve questionnaires and rule sets from a DTR Payer server, render the Questionnaires and capture data, and store the results on payer and/or EHR systems  
-
-* **Full DTR EHR** (for [US Core 3.1.1](CapabilityStatement-full-dtr-ehr-311.html) / [US Core 6.1](CapabilityStatement-full-dtr-ehr-610.html)): 
-EHR systems which manage DTR data capture and execution directly and also allow the rules to access other data and store final documentation results 
-
 * **Light DTR EHR** (for [US Core 3.1.1](CapabilityStatement-light-dtr-ehr-311.html) / [US Core 6.1](CapabilityStatement-light-dtr-ehr-610.html)):  
-EHR systems which leverage a SMART app to manage data capture and rules execution, but which must be able to launch the SMART app, respond to app queries, and store the final documentation results. 
+  SMART on FHIR application that handles the form filling function of DTR, requiring the server to provide access to the specified resources to allow such an app to retrieve and edit QuestionnaireResponses and related resources.
+    
+* **Full DTR EHR** (for [US Core 3.1.1](CapabilityStatement-full-dtr-ehr-311.html) / [US Core 6.1](CapabilityStatement-full-dtr-ehr-610.html)):  
+  EHRs that manage the form filling functions of DTR internally supporting client capabilities for the Questionnaire Package, ValueSet Expand, and Next Question operations.
+    
+*  **SMART DTR Client** (for [US Core 3.1.1](CapabilityStatement-smart-dtr-client-311.html) / [US Core 6.1](CapabilityStatement-smart-dtr-client-610.html)): 
+  Clients support retrieving and editing QuestionnaireResponse and related resources, as well as client support for the Questionnaire Package, ValueSet Expand, and Next Question operations.
  
+* **DTR Payer Service** (for [US Core 3.1.1](CapabilityStatement-dtr-payer-service-311.html) / [US Core 6.1](CapabilityStatement-dtr-payer-service-610.html)):  
+  Payer systems that provide questionnaires to DTR clients supporting server capabilities for the Questionnaire Package, ValueSet Expand, and Next Question operations.
+
+
+[![ExpectedSystems](Actors.png){:style="float: none;width:766px;height:271px"}](Actors.png "Expected Systems")
   
+
 ### CRD and DTR Workflow
 The graphic below shows a high-level overview of CRD and DTR (DTR is the SMART on FHIR app or equivalent native EHR app).
 
