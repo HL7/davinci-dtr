@@ -10,7 +10,7 @@ Usage: #definition
 * title = "Get Questionnaire Packge for given order(s)"
 * status = #active
 * kind = #operation
-* description = "This operation returns one or more 'collection' Bundles each consisting of a single Questionnaire resource as well as any dependency Library and ValueSet instances needed to allow a renderer to fully render and otherwise process the Questionnaire.
+* description = "This operation returns one or more 'collection' Bundles each consisting of a single Questionnaire resource, one or more QuestionnaireResponse resources, as well as any dependency Library and ValueSet instances needed to allow a renderer to fully render and otherwise process the Questionnaire.
 
 The operation **SHALL** take as input the Coverage resource(s) identifying the member and the type(s) of Coverage for which additional information is needed and at least one of:  
 * Zero or more canonicals specifying the URL and, (optionally) the version of the Questionnaire(s) to retrieve;
@@ -31,7 +31,7 @@ All references to Questionnaires, Libraries, and ValueSets within the Bundle **S
 
 If any of the dependencies cannot be retrieved or value sets expanded, a warning will be included in the 'outcome'.  Each Library and ValueSet will only appear once in the Bundle, even if it is referenced multiple places.  The only exception is if more than one version of a Library or ValueSet are referenced.  Multiple versions of a ValueSet will be returned.  Multiple versions of a Library **MAY** be treated as an error, or **MAY** be handled by returning the 'most recent' version of the referenced versions.
 
-NOTE: for adaptive questionnaires, there will be no question items to reference any ValueSets and no expressions to reference any Libraries.  However, the payer may still opt to include Libraries or ValueSets in the initial Bundle to avoid the overhead of needing to send contained content with each $next-question invocation.  Alternatively, any needed Libraries and ValueSets may manifest as ‘contained’ resources within the QuestionnaireResponse returned by $next-question based on which questions have been selected.
+<u>NOTE:</u> for adaptive questionnaires, there will be no question items to reference any ValueSets and no expressions to reference any Libraries.  However, the payer may still opt to include Libraries or ValueSets in the initial Bundle to avoid the overhead of needing to send contained content with each `$next-question` invocation.  Alternatively, any needed Libraries and ValueSets may manifest as ‘contained’ resources within the QuestionnaireResponse returned by `$next-question` based on which questions have been selected. (see [Adaptive Form Considerations](https://build.fhir.org/ig/HL7/davinci-dtr/specification.html#adaptive-form-considerations))
 
 As well, the Questionnaire Bundle **SHALL** contain one or more initial draft QuestionnaireResponses that reference the Questionnaire for that Bundle and populate the subject as well as repetitions of the Context extension that identify the Coverage(s) and Request or Encounter resources the Questionnaire is to be completed for.  The same QuestionnaireResponse might be associated with multiple Request resources or may need to be filled out separately for different Requests.
 
@@ -39,7 +39,7 @@ The payer **MAY** opt to pre-populate some answers in the provided Questionnaire
 
 Payers must be cautious about prepopulating Questionnaires with sensitive information, because there are rare situations where a malicious application could attempt to access information that was not authorized by the EHR.
 
-When resuming a work in progress questionnaire response the DTR client **SHALL** invoke the operation with the timestamp to see if the questionnaire package has changed since it was last retrieved, presuming that the QuestionnaireResponse.meta.lastUpdated element corresponds to the last package retrieval time."
+When resuming a work in progress questionnaire response the DTR client **SHALL** invoke the operation with the timestamp to see if the questionnaire package has changed since it was last retrieved, presuming that the `QuestionnaireResponse.meta.lastUpdated` element corresponds to the last package retrieval time."
 
 * code = #questionnaire-package
 * base = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package"
