@@ -336,8 +336,16 @@ Accessing the endpoint will be by a simple GET with an Accept header of applicat
 
 EHRs will typically retrieve the list of supported payers for the app once per day and will use this information to determine whether to expose the ability to launch DTR for orders associated with coverages for that payer.
 
-Standardization of payer ids is still an open issue.  Guidance on standardization of payer identity is expected to be provided in the [CRD/DTR Supplemental Guide](https://confluence.hl7.org/pages/viewpage.action?pageId=91991946) on HL7 Confluence.
- 
+<div markdown="1" class="notebox">
+  <table style="border: none; margin-bottom: 0px;">
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+      <td style="border: none"> 
+The standardization of payer ids is still considered an open issue.  Guidance on standardization of payer identity is expected to be provided in the <a href="https://confluence.hl7.org/pages/viewpage.action?pageId=91991946">CRD/DTR Supplemental Guide</a> on the HL7 Confluence site.
+      </td></tr>
+  </table>
+</div><br>
+
+
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
 ---------------------
