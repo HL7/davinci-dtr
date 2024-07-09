@@ -32,6 +32,7 @@
 <div markdown="1" class="pbox">
 <b>Da Vinci Member Leadership Provided by:</b> 
 <ul>
+    <li>Mike Gould (ZeOmega)</li>
     <li>Rajesh Godavarthi (MCG)</li>
     <li>Anna Taylor (MultiCare Connected Care)</li>
     <li>David DeGandi (Cambia)</li>
@@ -56,7 +57,6 @@
     <li>Richard Abercrombie (Palmetto GBA)</li>
     <li>Tom Kakanowski, Brenin Rhodes, David Chisholm (Smile Digital Health)</li>
     <li>Chris Cioffi (Elevance Health)</li>
-    <li>Mike Gould (ZeOmega)</li>
     <li>Rob Brull, Brian Lind (Infor)</li>
     <li>Balaji Narayanan (Onyx)</li>
     <li>Joshua Lamb (Optum)</li>
