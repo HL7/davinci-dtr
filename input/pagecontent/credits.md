@@ -44,7 +44,7 @@
 <b>Special Thanks...</b>
 <br><br>To the numerous Da Vinci members and community who have participated on conference calls, provided reviews and feedback, supported sample data gathering, reference implementation development, and testing including, but not limited to:
 <ul>
-    <li>Larry Decelles, Andy Gregorowicz, Cole Springate-Combs, Pat LaRocque, Keeyan Ghoreshi, Yolanda Liu, Robi Scalfani, and the FHIR Shorthand Team (The MITRE Corporation) </li>
+    <li>Larry Decelles, Andy Gregorowicz, Cole Springate-Combs, Pat LaRocque, Keeyan Ghoreshi, Yolanda Liu, Robi Scalfani (The MITRE Corporation) </li>
     <li>Kyle Johnsen, Spencer Utley, Fred Switzer, and Matt Varghese (Epic)</li>
     <li>Sreekanth Puram (Mettle Solutions)</li>
     <li>Celine Lefebvre, Heather McComas (AMA)</li>
