@@ -350,9 +350,12 @@ The standardization of payer ids is still considered an open issue.  Guidance on
 ---------------------
 ### Launching DTR
 
-#### Launching a DTR SMART app
-<br/>
-_If an EHR is not using a SMART app, this section will not apply._
+#### Launching a DTR SMART app 
+  
+<!-- ![Note!](Info.png){:style="float: none;margin-top: 10px;margin-right: 4px"}_If an EHR is **not** using a SMART app, this section will not apply._ -->
+
+![Note!](Info.png){:style="float: none;margin-top: 8px;margin-right: 4px"}_This section only applies if an EHR is using a SMART app._
+
 
 When the DTR process is being launched, the Electronic Health Record (EHR) system and DTR process **SHALL** follow the procedures established by the SMART App Launch Framework - specifically the [SMART App Launch Framework's EHR launch sequence](https://www.hl7.org/fhir/smart-app-launch/app-launch.html#launch-app-ehr-launch).
 
