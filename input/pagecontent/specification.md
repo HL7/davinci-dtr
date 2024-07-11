@@ -352,7 +352,16 @@ The standardization of payer ids is still considered an open issue.  Guidance on
 
 #### Launching a DTR SMART app 
  
-![Note!](InfoItem.png){:style="float: none;margin-top: 8px;margin-right: 4px"}_This section only applies if an EHR is using a SMART app._\
+ <div markdown="1" class="notebox">
+  <table style="border: none; margin-bottom: 0px;">
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+      <td style="border: none"> 
+This section only applies if an EHR is using a SMART app.
+      </td></tr>
+  </table>
+</div>
+  \
+<!-- ![Note!](InfoItem.png){:style="float: none;margin-top: 8px;margin-right: 4px"}_This section only applies if an EHR is using a SMART app._\ -->
 When the DTR process is being launched, the Electronic Health Record (EHR) system and DTR process **SHALL** follow the procedures established by the SMART App Launch Framework - specifically the [SMART App Launch Framework's EHR launch sequence](https://www.hl7.org/fhir/smart-app-launch/app-launch.html#launch-app-ehr-launch).
 
 Like any SMART app, DTR is passed a context when launched.  The openId, user, and patient launch contexts **SHALL** be requested and provided.  In addition, the launch context **SHOULD** include fhirContext references as follows:
