@@ -64,8 +64,9 @@ Payers **MAY** have multiple back-end functions that handle different types of d
 
 This registration process will ensure that the DTR app or Full EHR (i.e., Native App):
 * Is 'trusted' by the payer to deal with patient-identifiable data.
-* Knows the relevant endpoint to use for the payer to access the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation has a shared secret allowing secure access to the payer endpoint via [SMART on FHIR Backend Services](https://www.hl7.org/fhir/smart-app-launch/backend-services.html).
-  
+* Knows the relevant endpoint to use for the payer to access the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation has a shared secret allowing secure access to the payer endpoint via [SMART on FHIR Backend Services](https://www.hl7.org/fhir/smart-app-launch/backend-services.html). 
+  <!-- (Also see [Authenticating DTR client to payer API](specification.html#authenticating-dtr-client-to-payer-api)) -->
+
 Even after an application has been successfully registered, payers and EHRs **SHOULD** monitor the application behavior and **MAY** suspend an application's access if it is suspected of malicious behavior. 
 
 <div markdown="1" class="notebox">
