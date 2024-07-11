@@ -367,23 +367,23 @@ Like any SMART app, DTR is passed a context when launched.  The openId, user, an
   
 If these are not passed in as part of context, then the app **MAY** either raise an error or guide the user to select the needed records.
 
-In addition to launch contexts, the SMART app will need to request scopes for the type of information it needs to access and manipulate.  Payer-provided Questionnaires **MAY** require access to a wide range of resources.  At a minimum, the app will require read access to the following resources: 
-> * Patient,  
-> * Coverage, 
-> * QuestionnaireResponse, 
-> * Encounter, 
-> * ServiceRequest, 
-> * MedicationRequest, 
-> * DeviceRequest, 
-> * Appointment, 
-> * NutritionOrder and 
-> * VisionPrescription
+In addition to launch contexts, the SMART app will need to request scopes for the type of information it needs to access and manipulate.  Payer-provided Questionnaires **MAY** require access to a wide range of resources.  At a minimum, the app will require read access to the following resources:  
+* Patient
+* Coverage 
+* QuestionnaireResponse
+* Encounter 
+* ServiceRequest
+* MedicationRequest 
+* DeviceRequest 
+* Appointment
+* NutritionOrder 
+* VisionPrescription
 
 Along with referenced resources such as :
-> * Practitioner, 
-> * PractitionerRole, 
-> * Organization and 
-> * Location.  
+* Practitioner 
+* PractitionerRole 
+* Organization
+* Location
 
 However, typically CQL in Questionnaires will also need access to Observation, Condition, Procedure, DocumentReference and potentially others.  Therefore, in most cases, apps will simply request `patient/*.rs` and `patient/questionnaireresponse.cu`.  However, apps **MAY** opt to be more restrictive in their access requests if they are confident that they can do so while meeting payer CQL needs and EHRs indicate this is desirable.
 
