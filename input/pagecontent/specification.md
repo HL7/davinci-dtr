@@ -352,24 +352,23 @@ The standardization of payer ids is still considered an open issue.  Guidance on
 
 #### Launching a DTR SMART app 
  
-![Note!](InfoItem.png){:style="float: none;margin-top: 8px;margin-right: 4px"}_This section only applies if an EHR is using a SMART app._
-
+![Note!](InfoItem.png){:style="float: none;margin-top: 8px;margin-right: 4px"}_This section only applies if an EHR is using a SMART app._\
 When the DTR process is being launched, the Electronic Health Record (EHR) system and DTR process **SHALL** follow the procedures established by the SMART App Launch Framework - specifically the [SMART App Launch Framework's EHR launch sequence](https://www.hl7.org/fhir/smart-app-launch/app-launch.html#launch-app-ehr-launch).
 
 Like any SMART app, DTR is passed a context when launched.  The openId, user, and patient launch contexts **SHALL** be requested and provided.  In addition, the launch context **SHOULD** include fhirContext references as follows:
 * One active Coverage resource indicating the coverage(s) associated with the documentation to be captured (unless Coverage is already conveyed in the [coverage-information](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extensions of the Request or Encounter passed below) and 
 * Exactly one of the following:
-  * A CRD-type Request or Encounter resource ([CRD profiles](https://build.fhir.org/ig/HL7/davinci-crd/artifacts.html#structures-resource-profiles))
-    * Used when launching based on recommendations from CRD or for stand-alone launch without CRD.
-  * An existing incomplete QuestionnaireResponse previously created with DTR.
-    * Used when re-launching DTR to continue a previous session
-  * A Questionnaire [Task](https://hl7.org/fhir/us/davinci-cdex/StructureDefinition-cdex-task-attachment-request.html)
-    * Used when launching based on a request from [CDex](https://hl7.org/fhir/us/davinci-cdex/index.html), possibly prompted by instructions in PAS.
+  * A CRD-type Request or Encounter resource ([CRD profiles](https://build.fhir.org/ig/HL7/davinci-crd/artifacts.html#structures-resource-profiles))\
+    (Used when launching based on recommendations from CRD or for stand-alone launch without CRD)
+  * An existing incomplete QuestionnaireResponse previously created with DTR.\
+    (Used when re-launching DTR to continue a previous session)
+  * A Questionnaire [Task](https://hl7.org/fhir/us/davinci-cdex/StructureDefinition-cdex-task-attachment-request.html)\
+    (Used when launching based on a request from [CDex](https://hl7.org/fhir/us/davinci-cdex/index.html), possibly prompted by instructions in PAS)
   
 If these are not passed in as part of context, then the app **MAY** either raise an error or guide the user to select the needed records.
 
 In addition to launch contexts, the SMART app will need to request scopes for the type of information it needs to access and manipulate.  Payer-provided Questionnaires **MAY** require access to a wide range of resources.  At a minimum, the app will require read access to the following resources: 
-> * Patient, 
+> * Patient,  
 > * Coverage, 
 > * QuestionnaireResponse, 
 > * Encounter, 
