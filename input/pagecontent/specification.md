@@ -367,7 +367,9 @@ Like any SMART app, DTR is passed a context when launched.  The openId, user, an
   
 If these are not passed in as part of context, then the app **MAY** either raise an error or guide the user to select the needed records.
 
-In addition to launch contexts, the SMART app will need to request scopes for the type of information it needs to access and manipulate.  Payer-provided Questionnaires **MAY** require access to a wide range of resources.  At a minimum, the app will require read access to the following resources:  
+In addition to launch contexts, the SMART app will need to request scopes for the type of information it needs to access and manipulate.  Payer-provided Questionnaires **MAY** require access to a wide range of resources.  
+
+At a minimum, the app will require read access to the following resources:  
 * Patient
 * Coverage 
 * QuestionnaireResponse
