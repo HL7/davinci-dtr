@@ -487,6 +487,7 @@ An adaptive form handles population slightly differently from a 'standard' form 
 
 #### Populating resumed QuestionnairesResponses
 If DTR is launched using a previously saved QuestionnaireResponse, the DTR client **SHOULD** re-execute CQL to populate all empty elements, as well as those with an `origin.source` of 'auto'.  Any answers with an `origin.source` of 'override' or 'manual' **SHALL NOT** be changed, though if pre-population would have asserted a value for an answer with an `origin.source` of 'manual', the `origin.source` **SHALL** be changed to 'override'.
+  
 An adaptive form handles population slightly differently from a 'standard' form because questions only become available one (or a few) at a time.  Some CQL libraries **MAY** themselves only become available once certain questions are displayed.  The population process must therefore happen after each call to [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html), populating any newly available questions.  DTR clients **SHALL** support such an incremental population of adaptive QuestionnaireResponses.  For performance, the DTR application **SHOULD** save the results of execution of CQL prior to the [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) call.
 
 #### Library Dependencies
