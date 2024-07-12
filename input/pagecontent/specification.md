@@ -402,7 +402,7 @@ However, typically CQL in Questionnaires will also need access to Observation, C
 Regardless of the scopes asked for and granted by the user, the EHR **SHALL** limit access to only that data they deem appropriate for use in automatically populating payer forms, in particular restricting sensitive data.  (Refer to the [Privacy and Security section for more details](security.html))
 
 #### Authenticating DTR client to payer API
-To collect data for a payer, the EHR or SMART app responsible for data collection must first establish a connection to the payer.   Payers **SHALL** require DTR apps and EHRs connecting to their endpoint to authenticate using SMART on FHIR Backend Services.  This mechanism provides a flow that authorizes a system to connect to a FHIR server where no user needs to be involved in the authorization process. It allows systems like EHRs to easily interact with pre-authorized defined scopes of access. The scopes necessary are:
+To collect data for a payer, the EHR or SMART app responsible for data collection must first establish a connection to the payer.   Payers **SHALL** require DTR apps and EHRs connecting to their endpoint to authenticate using [SMART on FHIR Backend Services](https://www.hl7.org/fhir/smart-app-launch/backend-services.html).  This mechanism provides a flow that authorizes a system to connect to a FHIR server where no user needs to be involved in the authorization process. It allows systems like EHRs to easily interact with pre-authorized defined scopes of access. The scopes necessary are:
 * `system/questionnaire.rs`
 * `system/valueset.rs`
 * `system/library.rs`
