@@ -13,7 +13,7 @@ The following package file includes an NPM  (Node Package Manager) package file 
 
 {% include cross-version-analysis.xhtml %}
 
-#### Dependency Table
+<!-- #### Dependency Table
 
 {% include dependency-table.xhtml %}
 
@@ -23,4 +23,4 @@ The following package file includes an NPM  (Node Package Manager) package file 
 
 #### IP Statements
 
-{% include ip-statements.xhtml %}
+{% include ip-statements.xhtml %} -->
