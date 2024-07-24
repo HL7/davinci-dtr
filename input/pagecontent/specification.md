@@ -526,7 +526,7 @@ Two different profiles are used to support two different approaches to managing 
 * DTR Standard Questionnaire 
 * DTR Adaptive Questionnaire
   
-Implementers should review the advanced rendering, advanced behavior, population and adaptive forms portions of the SDC implementation guide, focusing on the elements and extensions included in the DTR profiles. Implementers should also be familiar with the documentation about the Questionnaire and QuestionnaireResponse resources from the core FHIR specification. Conformance with DTR requires conformance with the relevant portions of the SDC implementation guide".
+Implementers should review the advanced rendering, advanced behavior, population and adaptive forms portions of the SDC implementation guide, focusing on the elements and extensions included in the DTR profiles. Implementers should also be familiar with the documentation about the Questionnaire and QuestionnaireResponse resources from the core FHIR specification. Conformance with DTR requires conformance with the relevant portions of the SDC implementation guide.
 
 All DTR applications **SHALL** support rendering according to the mustSupport elements in the DTR Questionnaire profile as well as executing all CQL found within Questionnaire extensions. CQL and FHIR Questionnaires **SHALL** be required even when DTR is implemented within a DTR Native App as opposed to a DTR SMART App.
 
