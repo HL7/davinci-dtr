@@ -39,7 +39,7 @@ DTR apps and EHRs that take on DTR app responsibility **SHALL** be able to rende
 
 They **SHALL** also handle all mustSupport elements within the Questionnaire profile and provide visual cues where those elements impact expected user action (e.g., required answers, need for signatures, etc.)
   
-Those same systems **SHOULD** be able to display QR.item.itemMedia
+Those same systems **SHOULD** be able to display `QuestionnaireResponse.item.itemMedia`
 
 #### EHRs and Payers
 Throughout this guide, the term 'EHR' refers to the set of systems acting on behalf of a provider, whether managed directly by the provider organization or by a third-party agency.  Similarly, 'payer' refers to the set of systems acting on behalf of the payer, whether managed directly by the payer or by a third-party agency.  For additional discussion about how this implementation guide functions when EHR and/or payer systems are not monolithic but instead are made up of components, refer to the [ePA Coordinators page](epa.html).
