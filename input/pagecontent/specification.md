@@ -73,7 +73,7 @@ Similarly, all DTR apps **SHALL** be registered with the payer systems with whic
 Payers **MAY** have multiple back-end functions that handle different types of decision support and/or different types of services. However, for the purpose of DTR conformance, payers **SHALL** have a single endpoint (managed by themselves or a delegate) that can handle responding to all DTR service calls.
 
 This registration process **SHALL** ensure that the DTR app or Full EHR (i.e., Native App):
-* Is 'trusted' by the payer to deal with patient-identifiable data (i.e., There is a BAA, or it's equivalent, in place between the Payer and the application vendor).
+* Is 'trusted' by the payer to deal with patient-identifiable data (i.e., There is a BAA, or its equivalent, in place between the Payer and the application vendor).
 * Knows the relevant endpoint to use for the payer to access the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation has a shared secret allowing secure access to the payer endpoint via [SMART on FHIR Backend Services](https://www.hl7.org/fhir/smart-app-launch/backend-services.html). 
   
 (Also see [Authenticating DTR client to payer API](specification.html#authenticating-dtr-client-to-payer-api))
