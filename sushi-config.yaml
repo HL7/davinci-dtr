@@ -148,8 +148,6 @@ menu:
   FHIR Artifacts:
     Artifacts Overview: allartifacts.html
     DTR-specific Artifacts: artifacts.html
-    US Core 6.1: new-tab https://hl7.org/fhir/us/core/STU6.1/profiles-and-extensions.html
-    US Core 3.1.1: new-tab https://hl7.org/fhir/us/core/STU3.1.1/profiles.html
 
   Base Specs:
     FHIR R4 Spec: new-tab {{site.data.fhir.path}}
