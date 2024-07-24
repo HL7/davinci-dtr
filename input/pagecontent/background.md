@@ -19,7 +19,7 @@ as general guidance on how to read FHIR specifications. Readers who are unfamili
 
 This IG supports the [R4](http://hl7.org/fhir/R4/index.html) version of the FHIR standard.
 
-This IG leverages and builds on the US Core [3.1.1]({{site.data.fhir.ver.uscore3}}) and [6.1]({{site.data.fhir.ver.uscore6}}) IGs defined by HL7 for sharing human EHR data in the US.  Implementers need to familiarize themselves with the profiles in US Core. 
+This IG leverages and builds on the US Core [3.1.1]({{site.data.fhir.ver.uscore3}}) and [6.1]({{site.data.fhir.ver.uscore6}}) IGs defined by HL7 for sharing human EHR data in the US.  Implementers need to familiarize themselves with the profiles in US Core, as well as the underlying [Structured Data Capture (SDC)](https://hl7.org/fhir/uv/sdc/STU3/index.html) profiles being used. 
 
 <table style="border: none;">
   <tr>
@@ -35,16 +35,20 @@ This IG leverages and builds on the US Core [3.1.1]({{site.data.fhir.ver.uscore3
     <td style="border: none;"><a href="{{site.data.fhir.ver.uscore3}}">Release 3.1.1</a></td>
   </tr>
   <tr>
-    <td style="border: none;"><b>Resources:</b></td>
-    <td style="border: none;"><a href="http://hl7.org/fhir/R4/questionnaire.html">Questionnaire</a></td>
+    <td style="border: none;"><b>Profiles:</b></td>
+    <td style="border: none;"><a href="StructureDefinition-dtr-std-questionnaire.html">Standard Questionnaire</a></td>
   </tr>
   <tr>
     <td style="border: none;"/>
-    <td style="border: none;"><a href="http://hl7.org/fhir/R4/questionnaireresponse.html">QuestionnaireResponse</a></td>
+    <td style="border: none;"><a href="StructureDefinition-dtr-questionnaire-adapt.html">Adaptive Questionnaire</a></td>
   </tr>
   <tr>
     <td style="border: none;"/>
-    <td style="border: none;"><a href="http://hl7.org/fhir/R4/task.html">Task</a></td>
+    <td style="border: none;"><a href="StructureDefinition-dtr-questionnaireresponse.html">QuestionnaireResponse</a></td>
+  </tr>
+  <tr>
+    <td style="border: none;"/>
+    <td style="border: none;"><a href="https://hl7.org/fhir/us/davinci-cdex/StructureDefinition-cdex-task-attachment-request.html">Task</a></td>
   </tr>
 </table>
 <br>

@@ -1,7 +1,7 @@
 <div markdown="1" class="new-content">
 
 ### Changes for STU 2.1.0 (since V2.0.1)
-<p><b>The following issues are addressed in preparation for this upcoming ballot:</b></p>
+<p><b>The following issues are addressed in preparation for this STU Update:</b></p>
 <ul>
   <li>
     <i> Multiple changes have been incorporated to provide support for both US Core 3.1.1 and 6.1 </i>
@@ -15,6 +15,31 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-45010">FHIR-45010</a>:
   Why does OperationOutcome repeat
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-46288">FHIR-46288</a>:
+  Identifying the minimum resource read access ought to be SHALL instead of 'will'
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-45945">FHIR-45945</a>:
+  Clarify links to base FHIR resources in Background section
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-45075">FHIR-45075</a>:
+  DTR should not point to CDS Hook security guide
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-44929">FHIR-44929</a>:
+  Ambiguity within the formal specification on use of SMART on FHIR Backend Services
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-42809">FHIR-42809</a>:
+  allowing linking to a portal rather than building out a questionnaire is not in line with regulation, legislation, or even the spirit of IG
   </li>
 </ul>
 </div>
@@ -31,7 +56,7 @@
 </ul>
 </div>
 
-### STU 1.1.0 Ballot Reconciliation Changes (for STU 2.0.0 publication)
+### STU 1.1.0 Ballot Reconciliation Changes
 <p><b>The following issues are addressed resulting from this ballot:</b></p>
 <ul>
   <li>
