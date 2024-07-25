@@ -266,8 +266,8 @@ This IG does not define any expectations around certificate management or other 
 Questionnaires **MAY** also support attaching reports or other supporting documentation (e.g., images, pathology reports, etc.) where providing question answers is not sufficient. The 'attachment' question type can be used to support this. Attachments might be found by searching for DiagnosticReport or Media instances, or by the provider directly uploading something to the Questionnaire rendering tool.
 
 #### Questionnaire Expiry
-While a user might need to suspend interaction with the DTR process, there could possibly be a limit on the amount of time that a set of documentation templates and rules is valid. For example, it is unreasonable to resume the DTR process for an order that was started several years ago because it would produce a QuestionnaireResponse that would still be valid if submitted now.  On the other hand, if a form was filled out five days ago and submitted today, it will be frustrating for providers if the form is rejected as "out of date".
-Payers **SHOULD** use the Questionnaire.effectivePeriod element to describe the period over which the documentation templates and rules are valid. The DTR App or EHR can then check against that period when resuming a previously stored QuestionnaireResponse.
+While a user might need to suspend interaction with the DTR process, there could possibly be a limit on the amount of time that a set of documentation templates and rules is valid. For example, it is unreasonable to resume the DTR process for an order that was started several years ago because it would produce a QuestionnaireResponse that would still be valid if submitted now.  On the other hand, if a form was filled out five days ago and submitted today, it will be frustrating for providers if the form is rejected as "out of date".  
+Payers **SHOULD** use the `Questionnaire.effectivePeriod` element to describe the period over which the documentation templates and rules are valid. The DTR App or EHR can then check against that period when resuming a previously stored QuestionnaireResponse.
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
@@ -475,7 +475,7 @@ The answers to questions populated by an initialExpression or calculatedExpressi
 </div><br>
 
 #### Retrieval of patient FHIR resources to supply to CQL execution engine
-The DTR client **SHALL** retrieve the FHIR resources specified in the dataRequirement section of a Library.  SMART apps will do this using the access token provided on launch.  The client can then pass these resources to the Clinical Quality Language (CQL) engine. For example, the below snippet is from a Library that contains a dataRequirement section. In this code snippet the resource data needed from the EHR is Condition.
+The DTR client **SHALL** retrieve the FHIR resources specified in the `dataRequirement` section of a Library.  SMART apps will do this using the access token provided on launch.  The client can then pass these resources to the Clinical Quality Language (CQL) engine. For example, the snippet below is from a Library that contains a `dataRequirement` section. In this code snippet the resource data needed from the EHR is Condition.
 
 ```json
 "dataRequirement": [
@@ -534,8 +534,8 @@ It is likely that at least some answers will not be able to be gleaned from the 
 DTR leverages a subset of extensions and capabilities defined by the SDC implementation guide to support control over rendering, flow logic, and population and calculation of answers. The DTR SDC Questionnaire profile and DTR Adaptive Questionnaire profile identify the set of core elements and extensions that must be supported by 'full' EHRs and DTR solutions in terms of rendering and processing Questionnaires and their associated responses - and the elements that payers can count on being supported in the Questionnaires they expose.
 
 Two different profiles are used to support two different approaches to managing questionnaire logic and two different levels of engagement between the form filling interface and the payer:
-* DTR Standard Questionnaire 
-* DTR Adaptive Questionnaire
+* [DTR Standard Questionnaire](StructureDefinition-dtr-std-questionnaire.html) 
+* [DTR Adaptive Questionnaire](StructureDefinition-dtr-questionnaire-adapt.html)
   
 Implementers should review the advanced rendering, advanced behavior, population and adaptive forms portions of the SDC implementation guide, focusing on the elements and extensions included in the DTR profiles. Implementers should also be familiar with the documentation about the Questionnaire and QuestionnaireResponse resources from the core FHIR specification. Conformance with DTR requires conformance with the relevant portions of the SDC implementation guide.
 
@@ -553,10 +553,10 @@ For Standard Questionnaires, when the QuestionnaireResponse is valid, the DTR cl
 
 With an adaptive Questionnaire, there is an iteration of invoking [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html), populating if possible, and allowing user review/adjustment of answers.  The DTR client **SHALL NOT** allow the user to indicate they are ready for the next question/set of questions until the answers to the current QuestionnaireResponse pass validation rules.  If [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) is invoked with a QuestionnaireResponse the payer determines is invalid based on the rules in the contained Questionnaire, it **SHOULD** return an HTTP 400 error with an OperationOutcome indicating the circumstances where the QuestionnaireResponse is invalid.
 
-Unlike Standard Questionnaires, with adaptive QuestionnaireResponses, the determination that a QuestionnaireResponse is complete is made by the payer.  The final call to [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) will result in an echo back of the QuestionnaireResponse with no further questions provided in the contained Questionnaire, and with the QuestionnaireResponse set to 'complete'.  However, the QuestionnaireResponse **MAY** have a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension added reflecting the payer's coverage assessment based on the information gathered in the QuestionnaireResponse.
+Unlike Standard Questionnaires, with adaptive QuestionnaireResponses the determination that a QuestionnaireResponse is complete is made by the payer.  The final call to [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) will result in an echo back of the QuestionnaireResponse with no further questions provided in the contained Questionnaire, and with the QuestionnaireResponse set to 'complete'.  However, the QuestionnaireResponse **MAY** have a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension added reflecting the payer's coverage assessment based on the information gathered in the QuestionnaireResponse.
 
 #### Additional considerations
-If a questionnaire or question is marked as ['signatureRequired'](http://hl7.org/fhir/StructureDefinition/questionnaire-signatureRequired), then the DTR client will need to add a [`signature`](http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature) extension element to the appropriate location in the QuestionnaireResponse.  The signature would attest to the QuestionnaireResponse as a whole, or to the specific item the signature appears on – excluding any [`signature`](http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature) extensions themselves.
+If a questionnaire or question is marked as ['signatureRequired'](http://hl7.org/fhir/StructureDefinition/questionnaire-signatureRequired), then the DTR client will need to add a [`signature`](http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature) extension to the appropriate location in the QuestionnaireResponse.  The signature would attest to the QuestionnaireResponse as a whole, or to the specific item the signature appears on – excluding any [`signature`](http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature) extensions themselves.
 In some cases, the answer to a question modified by a user **MAY** be the input to an expression driving other logic within the questionnaire.  DTR clients **SHALL** monitor for changes to dependent questionnaire answers and re-execute logic, adjusting calculatedValues, enabling elements, adjusting validation rules, etc. based on changes made by the user.
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
@@ -576,11 +576,11 @@ The DTR process creates a QuestionnaireResponse resource through the course of n
 The information gathered via DTR can be used for a variety of purposes:
 * For inclusion as a prior authorization attachment (either via PAS, CDex, or via traditional attachment submission mechanisms).
 * For inclusion as a claims attachment as part of an X12 submission.
-* To accompany the order so the information is available to the performing system as per the FHIR Orders Exchange IG
+* To accompany the order so the information is available to the performing system as per the FHIR Orders Exchange IG.
 * To be retained by the EHR in the event of a subsequent audit.
 * Additional purposes not yet defined.
   
-Once DTR has written a QuestionnaireResponse to the DTR Client and updated the QuestionnaireResponse.status element to complete, the DTR Client needs to understand what action(s) it should take with the collected information. This is accomplished via three extensions:
+Once DTR has written a QuestionnaireResponse to the DTR Client and updated the `QuestionnaireResponse.status` element to complete, the DTR Client needs to understand what action(s) it should take with the collected information. This is accomplished via three extensions:
 1. The [`qr-context`](StructureDefinition-qr-context.html) extension provides a reference to the Request resource(s) and/or Encounter that the QuestionnaireResponse relates to.
 2. The [`intendedUse`](StructureDefinition-intendedUse.html) extension indicates how the EHR is to use the information with respect to the associated orders/records
 3. The [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension captures any coverage determination made by the payer with respect to the Request or encounter resources mentioned in the `context` extension.
