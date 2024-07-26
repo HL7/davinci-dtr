@@ -11,7 +11,7 @@ Compliant Questionnaires **SHALL NOT** include hidden or read-only questions whe
 
 Any EHR with SMART on FHIR support **SHOULD** be prepared to deal with the implications of providing a client with the scopes they request. For example, EHRs **SHALL** limit FHIR search capabilities for clients, requiring a patient ID in any search query to ensure the client can only access resources related to that patient.  It is important for implementers to be aware that data is going to be auto-populated that could be considered sensitive - so there will likely be a need for a human to review and confirm that the information is appropriate to be shared, and be able to remove it without risk of it being put back if they wish. Also, the app **MAY** not have access to certain data for retrieval because of security considerations.
 
-Payer systems **SHALL** use information received during execution of DTR `$questionnaire-package` solely for the purpose of satisfying the operation invoked, for audit, and to satisfy metric reporting needs.
+Payer systems **SHALL** use information received during execution of DTR [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) solely for the purpose of satisfying the operation invoked, for audit, and to satisfy metric reporting needs.
 
 If a payer uses adaptive forms to gather information, the payer **SHALL NOT** persist or use the information shared as part of the `$next-question` operation for any purpose other than:
 * Responding to the operation.
