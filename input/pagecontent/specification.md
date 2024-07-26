@@ -503,7 +503,7 @@ An adaptive form handles population slightly differently from a 'Standard' form 
 The FHIR Library containing/referencing a CQL logic file can reference other needed CQL files (e.g., helper libraries) using the `relatedArtifact` field and a RelatedArtifact with a type of depends-on. The engine **SHALL** make available to the execution context all such referenced CQL libraries. 
 
 #### Behavior when receiving malformed CQL
-If the CQL is malformed (is not syntactically correct) in any way, the app's execution engine **SHALL NOT** attempt any execution of the malformed CQL, the client **SHALL** do the following: 
+If the CQL is malformed (is not syntactically correct) in any way, the app's execution engine **SHALL NOT** attempt any execution of the malformed CQL, and the client **SHALL** do the following: 
 - Log the error.
 - Notify the user with an appropriate message indicating that the population did not occur.  
 - Allow the user to enter the information manually, either now or at a later time. 
