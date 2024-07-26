@@ -13,7 +13,7 @@ Any EHR with SMART on FHIR support **SHOULD** be prepared to deal with the impli
 
 Payer systems **SHALL** use information received during execution of DTR [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) solely for the purpose of satisfying the operation invoked, for audit, and to satisfy metric reporting needs.
 
-If a payer uses adaptive forms to gather information, the payer **SHALL NOT** persist or use the information shared as part of the `$next-question` operation for any purpose other than:
+If a payer uses adaptive forms to gather information, the payer **SHALL NOT** persist or use the information shared as part of the [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) operation for any purpose other than:
 * Responding to the operation.
 * Retention of the fully completed QuestionnaireResponse to support a coverage determination made as part of the Questionnaire completion process.
 * Internal audit and metric calculation.
