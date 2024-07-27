@@ -458,7 +458,7 @@ If an expired Questionnaire is retrieved when it wasn't explicitly requested by 
 ### Pre-populating QuestionnaireResponses
 Prior to exposing the draft QuestionnaireResponse to the user for completion and/or review, the DTR client **SHALL** execute all CQL necessary to resolve the [`initialExpression`](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-initialExpression.html), [`candidateExpression`](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-candidateExpression.html) and [`calculatedExpression`](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-calculatedExpression.html) extensions found in the Questionnaire for any enabled elements.
 
-All items that are pre-populated (whether by the payer in the initial QuestionnaireResponse provided in the questionnaire package, or from data retrieved from the EHR) **SHALL** have their `origin.source` set to 'auto'(within the mandatory [`information-origin`](StructureDefinition-information-origin.html) extension).
+All items that are pre-populated (whether by the payer in the initial QuestionnaireResponse provided in the questionnaire package, or from data retrieved from the EHR) **SHALL** have their `origin.source` set to 'auto' (within the mandatory [`information-origin`](StructureDefinition-information-origin.html) extension).
 
 #### Execution Sequence
 The flow of execution of the CQL will be determined by the associated Questionnaire. The client will proceed through the Questionnaire, and for any question that is associated with the result of a CQL expression, that specific CQL statement will be executed. The DTR client **SHALL** use result caching so that results that are already available will be reused without requesting them again.
