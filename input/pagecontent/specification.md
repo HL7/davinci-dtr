@@ -332,8 +332,8 @@ DTR imposes the following additional rules on CQL use by payers to maximize inte
 * Within the Questionnaire, CQL **SHALL** follow SDC rules for determining context. Specifically, CQL definitions and variables defined on ancestor elements or preceding expression extensions within the same Questionnaire item are in scope for referencing in descendant/following expressions. 
 * Within [Libraries](http://hl7.org/fhir/R4/library.html), both raw CQL and compiled ELM (in JSON syntax – i.e., application/elm+json) **SHALL** be provided as separate content repetitions within the library.  Within Expression elements, the base expression CQL **SHALL** be accompanied by a [US Public Health Alternative Expression Extension](http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-alternative-expression-extension) containing the compiled JSON ELM for the expression.
 * If the Questionnaire depends on multiple [Libraries](http://hl7.org/fhir/R4/library.html) (has multiple [`cqf-library`](https://hl7.org/fhir/extensions/StructureDefinition-cqf-library.html) elements), then any [`valueExpression`](https://hl7.org/fhir/extensions/StructureDefinition-variable.html) referring to defined variables **SHALL** specify the library name as well as the statement name as follows: "LibraryName".statementName.
-* Library names **SHALL** be unique within a Questionnaire package and **SHOULD** be unique across all Libraries made available by the payer. e.g., "expression": "\"LowerLimbProsthesis\".PhysicalExaminationType"
-where LowerLimbProsthesis is the library name and PhysicalExaminationType is the expression name.
+* Library names **SHALL** be unique within a Questionnaire package and **SHOULD** be unique across all Libraries made available by the payer (e.g., "expression": "\"LowerLimbProsthesis\".PhysicalExaminationType"
+where LowerLimbProsthesis is the library name and PhysicalExaminationType is the expression name).
 * FHIR [Libraries](http://hl7.org/fhir/R4/library.html) **SHALL** send CQL and ELM using the `content.data` element.
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
