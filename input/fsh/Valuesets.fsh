@@ -1,4 +1,4 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///**********************************************************************************************
 // Value Sets
 // ************************************************************
 ValueSet: DTRInformationOrigins
@@ -23,7 +23,7 @@ Description: "Questionnaire actions taken by human actors."
 ValueSet: MetricSource
 Id: metric-Source
 Title: "Metric Source"
-Description: "A list of codes indicating the perspective from which metric data was captured"
+Description: "A list of codes indicating the perspective from which metric data was captured."
 * ^status = #active
 * ^experimental = false
 * DTRTempCodes#payer-src
@@ -34,7 +34,7 @@ Description: "A list of codes indicating the perspective from which metric data 
 ValueSet: MetricLaunchMode
 Id: metric-launchmode
 Title: "Metric Launch Mode"
-Description: "A list of codes indicating how DTR was launched"
+Description: "A list of codes indicating how DTR was launched."
 * ^status = #active
 * ^experimental = false
 * DTRTempCodes#crdlaunch
@@ -46,7 +46,7 @@ Description: "A list of codes indicating how DTR was launched"
 ValueSet: MetricAction
 Id: metric-Action
 Title: "Metric Action"
-Description: "A list of codes indicating the DTR action performed by a system"
+Description: "A list of codes indicating the DTR action performed by a system."
 * ^status = #active
 * ^experimental = false
 * DTRTempCodes#launch
