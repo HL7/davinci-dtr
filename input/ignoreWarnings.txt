@@ -38,6 +38,8 @@ WARNING: Bundle/DTRQuestionnairePackageOperationResultSimple: Bundle.entry[0].re
 # See Grahame's statement regarding this issue: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/questionnaire-derivationType.20warning.20question
 WARNING: Bundle/DTRQuestionnairePackageOperationResultSimple: Bundle.entry[0].resource.derivedFrom[0].extension[0].value.ofType(CodeableConcept): The derivation type 'null#null' is unknown, which means that no derivation checking has been performed against this questionnaire
 
+# This is for an example of a Parameters resource containing a DTR Bundle. It should not have it's own narrative.
+Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 
 
 
