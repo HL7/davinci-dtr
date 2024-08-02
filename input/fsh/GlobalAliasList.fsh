@@ -1,6 +1,7 @@
 Alias: $cqf-expression = http://hl7.org/fhir/StructureDefinition/cqf-expression
 Alias: $questionnaire-constraint = http://hl7.org/fhir/StructureDefinition/questionnaire-constraint
 Alias: $assemble-expectation = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation
+Alias: $dtr-questionnaire-response = http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse
 Alias: $dtr-servicerequest = http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-servicerequest
 Alias: $us-core-encounter = http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter
 Alias: $practitioner-role = http://hl7.org/fhir/ValueSet/practitioner-role
