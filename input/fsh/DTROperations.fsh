@@ -31,15 +31,18 @@ All references to Questionnaires, Libraries, and ValueSets within the Bundle **S
 
 If any of the dependencies cannot be retrieved or value sets expanded, a warning will be included in the [`Outcome`](StructureDefinition-dtr-qpackage-output-parameters.html). Each Library and ValueSet will only appear once in the Bundle, even if it is referenced multiple places.  The only exception is if more than one version of a Library or ValueSet are referenced.  Multiple versions of a ValueSet will be returned.  Multiple versions of a Library **MAY** be treated as an error, or **MAY** be handled by returning the 'most recent' version of the referenced versions.
 
-NOTE: for adaptive questionnaires, there will be no question items to reference any ValueSets and no expressions to reference any Libraries.  However, the payer may still opt to include Libraries or ValueSets in the initial Bundle to avoid the overhead of needing to send contained content with each [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) invocation.  Alternatively, any needed Libraries and ValueSets may manifest as ‘contained’ resources within the QuestionnaireResponse returned by [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) based on which questions have been selected. (see [Adaptive Form Considerations](https://build.fhir.org/ig/HL7/davinci-dtr/specification.html#adaptive-form-considerations))
-
 As well, the Questionnaire Bundle **SHALL** contain one or more initial draft QuestionnaireResponses that reference the Questionnaire for that Bundle and populate the subject as well as repetitions of the Context extension that identify the Coverage(s) and Request or Encounter resources the Questionnaire is to be completed for.  The same QuestionnaireResponse might be associated with multiple Request resources or may need to be filled out separately for different Requests.
 
 The payer **MAY** opt to pre-populate some answers in the provided QuestionnaireResponses based on information the payer has in its own records or has from context from CRD or from other prior auth or claims submissions.
 
 Payers must be cautious about prepopulating Questionnaires with sensitive information, because there are rare situations where a malicious application could attempt to access information that was not authorized by the EHR.
 
-When resuming a work in progress questionnaire response the DTR client **SHALL** invoke the operation with the timestamp to see if the questionnaire package has changed since it was last retrieved, presuming that the `QuestionnaireResponse.meta.lastUpdated` element corresponds to the last package retrieval time."
+When resuming a work in progress questionnaire response the DTR client **SHALL** invoke the operation with the timestamp to see if the questionnaire package has changed since it was last retrieved, presuming that the `QuestionnaireResponse.meta.lastUpdated` element corresponds to the last package retrieval time.
+
+### Notes
+* For adaptive questionnaires, there will be no question items to reference any ValueSets and no expressions to reference any Libraries.  However, the payer may still opt to include Libraries or ValueSets in the initial Bundle to avoid the overhead of needing to send contained content with each [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) invocation.  Alternatively, any needed Libraries and ValueSets may manifest as ‘contained’ resources within the QuestionnaireResponse returned by [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) based on which questions have been selected. (see [Adaptive Form Considerations](https://build.fhir.org/ig/HL7/davinci-dtr/specification.html#adaptive-form-considerations))
+
+* The `outcome` parameter is only present if the operation completes successfully with a 200 HTTP response code.  In the event of an error, no Parameters response will be returned at all, though a bare `OperationOutcome` might be returned."
 
 * code = #questionnaire-package
 * base = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package"
@@ -106,7 +109,7 @@ When resuming a work in progress questionnaire response the DTR client **SHALL**
 * parameter[=].use = #out
 * parameter[=].min = 0
 * parameter[=].max = "1"
-* parameter[=].documentation = "This OperationOutcome satisfies the definition of this operation"
+* parameter[=].documentation = "Warning or information messages related to the successful execution of the operation"
 * parameter[=].type = #OperationOutcome
 
 /**************************************************************************************************************/

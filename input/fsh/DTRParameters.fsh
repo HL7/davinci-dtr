@@ -50,7 +50,7 @@ Description:    "A profile on Parameters indicating the expected response conten
 * parameter ^slicing.description = "Slice based on $this pattern"
 * parameter 1..* MS
 * parameter contains 
-	PackageBundle 1..* MS and
+	PackageBundle 0..* MS and
   Outcome 0..1 MS 
 * parameter[PackageBundle].name = "PackageBundle"
 * parameter[PackageBundle].resource 1..1 MS
