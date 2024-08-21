@@ -41,6 +41,16 @@
   <a href="https://jira.hl7.org/browse/FHIR-42809">FHIR-42809</a>:
   allowing linking to a portal rather than building out a questionnaire is not in line with regulation, legislation, or even the spirit of IG
   </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-45020">FHIR-45020</a>:
+  $questionnaire-package Operation Definition incorrectly states to return warning in outer Bundle
+  </li>
+
+  <li>
+  <a href="[5020](https://jira.hl7.org/browse/FHIR-46627)">FHIR-46627</a>:
+  Include Burden Reduction common narrative for Enforcement Discretion
+  </li>
 </ul>
 </div>
 
