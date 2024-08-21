@@ -452,6 +452,15 @@ If any of the retrieved Questionnaires have an `effectivePeriod` that ends prior
 
 If an expired Questionnaire is retrieved when it wasn't explicitly requested by referring to a canonical version, but instead by passing in the relevant order(s) and/or context id, the DTR client **SHOULD** report an error to the payer.
 
+<div markdown="1" class="notebox">
+  <table style="border: none; margin-bottom: 0px;">
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+      <td style="border: none"> 
+Previously completed QuestionnaireResponses <b>SHALL NOT</b> be supported due to concerns about currency of clinical information.
+      </td></tr>
+  </table>
+</div><br>
+
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
 ---------------------

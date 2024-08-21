@@ -61,6 +61,11 @@
   <a href="https://jira.hl7.org/browse/FHIR-46525">FHIR-46525</a>:
   Discrepancy in DTR Package output definition
   </li>
+      
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-44789">FHIR-44789</a>:
+  Can DTR be satisfied by a pre-existing QR?
+  </li>
 </ul>
 </div>
 
