@@ -56,6 +56,11 @@
   <a href="https://jira.hl7.org/browse/FHIR-46569">FHIR-46569</a>:
   Use EHR rather than EMR throughout
   </li>
+    
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-46525">FHIR-46525</a>:
+  Discrepancy in DTR Package output definition
+  </li>
 </ul>
 </div>
 
