@@ -48,8 +48,13 @@
   </li>
 
   <li>
-  <a href="[5020](https://jira.hl7.org/browse/FHIR-46627)">FHIR-46627</a>:
+  <a href="https://jira.hl7.org/browse/FHIR-46627">FHIR-46627</a>:
   Include Burden Reduction common narrative for Enforcement Discretion
+  </li>
+  
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-46569">FHIR-46569</a>:
+  Use EHR rather than EMR throughout
   </li>
 </ul>
 </div>
