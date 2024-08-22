@@ -81,7 +81,11 @@
   <a href="https://jira.hl7.org/browse/FHIR-46285">FHIR-46285</a>:
   Need to formalize expectation around use of 'questionnaire-adaptive' extension
   </li>
-
+      
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-46002">FHIR-46002</a>:
+  Provide guidance on how to transmit FHIR resources to Adaptive Questionnaires
+  </li>
 </ul>
 </div>
 
