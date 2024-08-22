@@ -68,6 +68,7 @@ Description: "An example adaptive form search instance."
 Usage: #example
 * url = "http://example.com/example-adaptive-search"
 * status = #active
+* extension[questionnaireAdaptive].valueUrl = "http://example.com/fhir/R4"
 
 // *****************************************
 Instance: PatientExample
