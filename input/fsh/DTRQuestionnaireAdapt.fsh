@@ -22,14 +22,15 @@ Description: "The DTR Adaptive Questionnaire is used to represent an adaptive Qu
 * title.extension contains http://hl7.org/fhir/StructureDefinition/rendering-style named titleRenderingStyle 0..1
 * title.extension contains http://hl7.org/fhir/StructureDefinition/rendering-xhtml named titleRenderingXhtml 0..1
 * text 1..1 
-// * text.extension contains http://hl7.org/fhir/StructureDefinition/rendering-style named textRenderingStyle 0..1
-// * text.extension contains http://hl7.org/fhir/StructureDefinition/rendering-xhtml named textRenderingXhtml 0..1
 * effectivePeriod MS
   * ^short = "Validity period for the Questionnaire"
 * item.prefix.extension contains http://hl7.org/fhir/StructureDefinition/rendering-style named itemPrefixRenderingStyle 0..1
 * item.text.extension contains http://hl7.org/fhir/StructureDefinition/rendering-style named itemTextRenderingStyle 0..1
 * item.prefix.extension contains http://hl7.org/fhir/StructureDefinition/rendering-xhtml named itemPrefixRenderingXhtml 0..1
 * item.text.extension contains http://hl7.org/fhir/StructureDefinition/rendering-xhtml named itemTextRenderingXhtml 0..1 MS
+
+* item.extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/containedReference named containedReference 0..1 MS
+* item.extension[containedReference] ^short = "Contain the reference?"
 * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemMedia named itemMedia 0..1
 * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-optionalDisplay named itemOptionalDisplay 0..0
 * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-shortText named shortText 0..1

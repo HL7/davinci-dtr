@@ -1,4 +1,17 @@
 /**************************************************************************************************************/
+Extension: ContainedReference
+Id: containedReference
+Title: "Contained Reference"
+Description: "Indicates that when filling a QuestionnaireResponse and selecting a reference, that the referenced resource should be included as a 'contained' resource within the QuestionnaireResponse"
+* ^status = #active
+* ^context[0].type = #element
+* ^context[=].expression = "QuestionnaireResponse.item.where(type = 'reference')"
+* value[x] ^short = "Contain the reference?"
+//* value[x] ^definition = "This contains references to the pertinent orders associated with this QuestionnaireResponse."
+* value[x] 1..1
+* value[x] only boolean
+
+/**************************************************************************************************************/
 Extension: QuestionnaireResponseContext
 Id: qr-context
 Description: "Identifies the orders, coverages, and or other resources associated with the specified QuestionnaireResponse.  Allows finding the DTR responses associated with a particular Order/Encounter/Appointment for a particular insurance coverage."
