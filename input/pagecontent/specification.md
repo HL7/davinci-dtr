@@ -7,7 +7,6 @@ The core of this process is summarized in this diagram:
 
 [![DTRQuestionnairePackageOperation](Sequence-Diagram.png){:style="float: none;width:732px;height:559px"}](Sequence-Diagram.png "Sequence Diagram")
 
-
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
@@ -19,7 +18,7 @@ The use of a portal for collection of clinical data to support prior authorizati
 
 ---------------------
 ### General Considerations
-This implementation guide adopts by reference the following HRex Conformance Requirements which describe conformance language, rules around mustSupport and other considerations. 
+This implementation guide adopts by reference the following [HRex Conformance Expectations](https://build.fhir.org/ig/HL7/davinci-ehrx/conformance.html) which describe conformance language, rules around mustSupport and other considerations. 
 
 #### Must Support
 This IG marks elements with the Must Support flag in its profiles. In addition to the expectations provided in the HRex section referenced above, the following additional considerations apply:  
@@ -75,7 +74,9 @@ Payers **MAY** have multiple back-end functions that handle different types of d
 This registration process **SHALL** ensure that the DTR app or Full EHR (i.e., Native App):
 * Is 'trusted' by the payer to deal with patient-identifiable data (i.e., There is a BAA, or its equivalent, in place between the Payer and the application vendor).
 * Knows the relevant endpoint to use for the payer to access the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation has a shared secret allowing secure access to the payer endpoint via [SMART on FHIR Backend Services](https://www.hl7.org/fhir/smart-app-launch/backend-services.html). 
-  
+
+Implementers of this IG **SHOULD** support the [endpoint discovery](https://build.fhir.org/ig/HL7/davinci-ehrx/endpoint-discovery.html) mechanism defined in the HRex specification to allow discovery of the endpoints used in this IG - specifically the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation endpoint used to retrieve the Questionnaires and associated libraries, value sets, etc. to be completed
+
 (Also see [Authenticating DTR client to payer API](specification.html#authenticating-dtr-client-to-payer-api))
 
 Even after an application has been successfully registered, payers and EHRs **SHOULD** monitor the application behavior and **MAY** suspend an application's access if it is suspected of malicious behavior. 
