@@ -76,6 +76,11 @@
   <a href="https://jira.hl7.org/browse/FHIR-46441">FHIR-46441</a>:
   Add endpoint discovery expectations
   </li>
+      
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-46285">FHIR-46285</a>:
+  Need to formalize expectation around use of 'questionnaire-adaptive' extension
+  </li>
 
 </ul>
 </div>
