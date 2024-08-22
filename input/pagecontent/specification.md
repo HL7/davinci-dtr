@@ -206,12 +206,25 @@ Adaptive questionnaires pose a slight challenge when it comes to preparing the Q
 
 In some cases, an adaptive form may need to retrieve resources from the EHR in order to determine what subsequent questions to ask or to make a prior authorization decision.  The only way for information to be relayed to the payer is with answers inside a QuestionnaireResponse.  However, QuestionnaireResponse answers can't actually be full resources, only references.  Payers needing full resources to be returned should use the `containedReference` extension to indicate that the selected resource(s) for an answer of type reference should be included as contained resources within the QuestionnaireResponse.  This provides a mechanism for full resources to be included as part of the QuestionnaireResponse.
 
-NOTE: This mechanism is not necessary for non-adaptive forms as all resources pointed to by the QuestionnaireResponse will be returned as part of the [Questionnaire Package Bundle](StructureDefinition-DTR-QPackageBundle.html)
+<div markdown="1" class="notebox">
+  <table style="border: none; margin-bottom: 0px;">
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+      <td style="border: none"> 
+This mechanism is not necessary for non-adaptive forms as all resources pointed to by the QuestionnaireResponse will be returned as part of the <a href="StructureDefinition-DTR-QPackageBundle.html">Questionnaire Package Bundle</a>
+      </td></tr>
+  </table>
+</div><br>
 
 The [Privacy, Security, and Safety page](security.html) includes additional guidance on the use of Adaptive questionnaires.
 
 #### Determinations from Adaptive Forms
 In some cases, upon receiving enough answers from an adaptive form, a payer will be able to make assertions about coverage, prior authorization, and/or any 'additional documentation needed' similar to what is provided by the CRD process. This information needs to be made available to the DTR client in a computable fashion. To do so, the adaptive form service will place the [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension on the root of the [QuestionnaireResponse](StructureDefinition-dtr-questionnaireresponse.html), alongside the [`qr-context`](StructureDefinition-qr-context.html) extension. 
+
+DTR payers **SHALL** ONLY use DTR adaptive forms to return a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension when:
+* CRD has already been called and a `coverage-information` extension is already present on the relevant order; and
+* Information is needed from a user that cannot be made available via the CRD process (either by pre-fetch or active query).
+
+Payers **SHALL** return `coverage-information` as early in the burden reduction process as possible (i.e., use CRD in preference to DTR as much as possible).
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
@@ -221,12 +234,6 @@ It will be unusual for a <code>coverage-information</code> extension created by 
       </td></tr>
   </table>
 </div><br>
-
-DTR payers **SHALL** ONLY use DTR adaptive forms to return a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension when:
-* CRD has already been called and a `coverage-information` extension is already present on the relevant order; and
-* Information is needed from a user that cannot be made available via the CRD process (either by pre-fetch or active query).
-
-Payers **SHALL** return `coverage-information` as early in the burden reduction process as possible (i.e., use CRD in preference to DTR as much as possible).
 
 If an adaptive questionnaire response includes an unsolicited determination that authorization requirements have been 'satisfied', the EHR **SHALL** allow the clinician to flag the provided determination number as "not valid".  For example, If they feel the determination was based on incorrect information. If a payer receives a new invocation of an adaptive form for the same order, they **SHALL** treat the result of the new completion as replacing any previous completion from a prior coverage determination process. 
 
