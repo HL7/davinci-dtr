@@ -11,7 +11,9 @@ Description: "The DTR adaptive Questionnaire is used to represent an adaptive Qu
 * ^version = "1.0.0"
 * ^status = #active
 
-* extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-questionnaireAdaptive named questionnaireAdaptive 0..* MS
+* extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-questionnaireAdaptive named questionnaireAdaptive 1..* MS
+* extension[questionnaireAdaptive].value[x] only url
+
 * extension[sdc-questionnaire-assemble-expectation] 0..0
 * extension contains http://hl7.org/fhir/StructureDefinition/rendering-styleSensitive named styleSensitive 0..1
 * extension[styleSensitive].valueBoolean = false
