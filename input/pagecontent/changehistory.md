@@ -66,6 +66,12 @@
   <a href="https://jira.hl7.org/browse/FHIR-44789">FHIR-44789</a>:
   Can DTR be satisfied by a pre-existing QR?
   </li>
+      
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-45967">FHIR-45967</a>:
+  questionnaire-package bundle needs to allow for QuestionnaireResponses
+  </li>
+
 </ul>
 </div>
 
