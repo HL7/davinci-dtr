@@ -21,14 +21,12 @@ This Implementation Guide has expectations defined for four types of systems tha
 * **DTR Payer Service** (for [US Core 3.1.1](CapabilityStatement-dtr-payer-service-311.html) / [US Core 6.1](CapabilityStatement-dtr-payer-service-610.html)):  
   Payer systems that provide questionnaires to DTR clients supporting server capabilities for the Questionnaire Package, ValueSet Expand, and Next Question operations.
 
-
 [![ExpectedSystems](Actors.png){:style="float: none;width:766px;height:271px"}](Actors.png "Expected Systems")
   
-
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
-      <td style="border: none"> <!-- Note Text Here -->
+      <td style="border: none"> 
  The term Electronic Health Record (EHR) is used in this IG and can be considered equivalent to Electronic Medical Record (EMR) or a Practice Management System (PMS) for the purposes of the contained content.
       </td></tr>
   </table>
