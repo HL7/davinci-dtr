@@ -31,7 +31,7 @@ Description:    "Enforces DTR requirements on a completed or partially completed
 * subject 1..1
 * subject only Reference($CRDPatient)
 
-* author only Reference(Device or $CRDPatient or $CRDPractitioner or $USCOREPractitionerRole or $CRDOrganization or RelatedPerson)
+* author only Reference(Device or $CRDPatient or $CRDPractitioner or $USCOREPractitionerRole311 or $USCOREPractitionerRole610 or $CRDOrganization or RelatedPerson)
 
 * item 1..*
 * item.extension[ItemSignature] MS
