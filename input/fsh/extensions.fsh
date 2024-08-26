@@ -74,7 +74,7 @@ Description: "Identifies the origin of the information in the answer and how it 
 * extension[author].extension[practitioner] ^short = "The final practitioner who authored the information adjustment"
 * extension[author].extension[practitioner] ^definition = "The final practitioner who authored the information adjustment"
 * extension[author].extension[practitioner].value[x] 1..1
-* extension[author].extension[practitioner].value[x] only Reference($USCOREPractitioner)
+* extension[author].extension[practitioner].value[x] only Reference($CRDPractitioner)
 
 /**************************************************************************************************************/
 Extension: ActiveRole 

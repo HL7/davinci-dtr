@@ -29,9 +29,9 @@ Description:    "Enforces DTR requirements on a completed or partially completed
 * questionnaire 1..1
 
 * subject 1..1
-* subject only Reference(us-core-patient)
+* subject only Reference($CRDPatient)
 
-* author only Reference(Device or $USCOREPatient or $USCOREPractitioner or $USCOREPractitionerRole or $USCOREOrganization or RelatedPerson)
+* author only Reference(Device or $CRDPatient or $CRDPractitioner or $USCOREPractitionerRole or $CRDOrganization or RelatedPerson)
 
 * item 1..*
 * item.extension[ItemSignature] MS
