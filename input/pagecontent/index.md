@@ -60,6 +60,10 @@ The IG is organized into the following sections:
 ### Dependencies
 This guide is based on the FHIR R4 specification that is mandated for use in the U.S. as well as the [Clinical Quality Language (CQL) N1](http://cql.hl7.org/N1/) release specification. It also leverages the SMART on FHIR specification for non-native DTR Apps.
 
+<div class="new-content" markdown="1">
+This IG supports both USCDI v1 (US-Core 3.1.1) and USCDI v3 (US-Core 6.1.0), but the expectation is that in the near future DTR will be updated to include support for USCDI v4 (US-Core 7.0.0) which will bring minimal impact through the reliance on the Coverage Requirements Discover (CRD) dependencies.
+</div>
+
 In addition, this guide also relies on a number of parent implementation guides:
 
 {% include dependency-table-short.xhtml %}
