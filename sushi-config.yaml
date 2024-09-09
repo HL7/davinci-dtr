@@ -46,6 +46,12 @@ dependencies:
     id: uscore6
     reason: |
       Needed for systems supporting USCDI v3
+  hl7.fhir.us.core.v700:
+    version: 7.0.0
+    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
+    id: uscore7
+    reason: |
+      Needed for systems supporting USCDI v4
   hl7.fhir.uv.sdc:
     id: sdc
     version: 3.0.0
