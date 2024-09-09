@@ -23,7 +23,7 @@ Description:    "The Parameters profile used to define the inputs of the [$quest
 * parameter[order].name = "order"
 * parameter[order].resource 1..1 MS
 * parameter[order].resource only $CRDAppointmentBase or $CRDEncounter31 or $CRDEncounter61 or $CRDCommunicationRequest or $CRDDeviceRequest or ImmunizationRecommendation or $CRDMedicationRequest or $CRDNutritionOrder or $CRDServiceRequest or SupplyRequest or $CRDVisionPrescription
-* parameter[order].resource ^short = "One or more Order resource instances. e.g., DeviceRequest, ServiceRequest, MedicationRequest, ... Encounter, Appointment, or prior-auth Claim, etc."
+* parameter[order].resource ^short = "One or more Order resource instances, e.g., DeviceRequest, ServiceRequest, MedicationRequest, ... Encounter, Appointment, or prior-auth Claim, etc."
 * parameter[questionnaire].name = "questionnaire"
 * parameter[questionnaire].value[x] 1..1 MS
 * parameter[questionnaire].value[x] only canonical
