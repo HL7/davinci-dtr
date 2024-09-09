@@ -7,9 +7,8 @@ Alias: USCOREClientCapStatement = http://hl7.org/fhir/us/core/CapabilityStatemen
 
 // ------------------------------------------------------------------------------------------------------------------------
 // CRD artifacts
+Alias: $CRDAppointmentBase = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-appointment-base
 Alias: $CRDPatient = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-patient
-Alias: $CRDPractitioner = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-practitioner
-Alias: $CRDAppointment = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-appointment
 Alias: $CRDCoverage = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-coverage
 Alias: $CRDCommunicationRequest = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-communicationrequest
 Alias: $CRDServiceRequest = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-servicerequest

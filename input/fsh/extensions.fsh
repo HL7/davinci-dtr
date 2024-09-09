@@ -20,7 +20,7 @@ Description: "Identifies the orders, coverages, and or other resources associate
 * ^context[=].expression = "QuestionnaireResponse"
 * ^status = #active
 * value[x] 1..1
-* value[x] only Reference($CRDCoverage or $CRDDeviceRequest or $CRDMedicationRequest or $CRDNutritionOrder or $CRDServiceRequest or $CRDEncounter31 or $CRDEncounter61 or $CRDAppointment)
+* value[x] only Reference($CRDCoverage or $CRDDeviceRequest or $CRDMedicationRequest or $CRDNutritionOrder or $CRDServiceRequest or $CRDEncounter31 or $CRDEncounter61 or $CRDAppointmentBase)
 
 /**************************************************************************************************************/
 Extension: IntendedUse 
@@ -74,7 +74,7 @@ Description: "Identifies the origin of the information in the answer and how it 
 * extension[author].extension[practitioner] ^short = "The final practitioner who authored the information adjustment"
 * extension[author].extension[practitioner] ^definition = "The final practitioner who authored the information adjustment"
 * extension[author].extension[practitioner].value[x] 1..1
-* extension[author].extension[practitioner].value[x] only Reference($CRDPractitioner)
+* extension[author].extension[practitioner].value[x] only Reference(USCorePractitionerProfile)
 
 /**************************************************************************************************************/
 Extension: ActiveRole 
