@@ -3,7 +3,7 @@
 ### Underlying Technologies
 This guide is based on the HL7 FHIR standard, the US Core [3.1.1]({{site.data.fhir.ver.uscore3}}) and [6.1]({{site.data.fhir.ver.uscore6}}) Implementation Guides, as well as the [SMART on FHIR](http://hl7.org/fhir/smart-app-launch/index.html), [Clinical Quality Language (CQL)](http://cql.hl7.org/N1/), and [Structured Data Capture (SDC)](http://hl7.org/fhir/uv/sdc/STU3/) specifications which build additional capabilities on top of FHIR. This architecture is intended to maximize the number of provider systems that conform to this guide, as well as to allow for easy growth and extensibility of system capabilities in the future.
 
-Implementers of this specification therefore need to understand some basic information about these specifications.
+Implementers of this specification therefore will need to understand some basic information about these specifications.
 
 #### FHIR
 This IG uses terminology, notations, and design principles that are specific to FHIR. It's important to be familiar with some of the basic principles of FHIR as well
