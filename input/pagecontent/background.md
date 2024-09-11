@@ -76,7 +76,7 @@ The choice of using operations for `$next-question` for adaptive forms was made 
   
 The decision tree navigation in the [HRex Approaches to Exchanging Data decision tree](https://build.fhir.org/ig/HL7/davinci-ehrx/exchanging.html) that led to these approaches where decisions needed to be made as part of DTR are as follows:  
 
-Access to payer Questionnaire package -
+Access to payer Questionnaire package:
 * Data retrieval is initiated by the consumer (SMART app/EHR).
 * The app/EHR will have a direct connection to the payer – there is required to be a single defined endpoint for the payer.  Any routing will be behind the scenes.
 * No human intervention in return of data.
@@ -84,7 +84,7 @@ Access to payer Questionnaire package -
 * Data is not necessarily pre-existing.  The questionnaire *could* be assembled on the fly based on context.
 * There’s no need for routing. This isn’t a standard message or operation. This must be synchronous.  In the end, choose the ‘lighter’ approach which is an operation.
   
-Reporting of Questionnaire issues - 
+Reporting of Questionnaire issues: 
 * Data sharing is initiated by a data source (EHR or app that has found the Questionnaire issue).
 * The transmission of the data isn’t configured by the payer – polling or subscription wouldn’t really work.
 * The app/EHR will have a direct connection to the payer – there is required to be a single defined endpoint for the payer.  Any routing will be behind the scenes.
