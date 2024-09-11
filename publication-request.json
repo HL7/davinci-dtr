@@ -3,7 +3,7 @@
     "version" : "2.1.0-preview",
     "milestone" : true,
       "path": "http://hl7.org/fhir/us/davinci-dtr/2.1.0-preview",
-    "status" : "qa-preview",
+    "status" : "preview",
     "mode" : "working",
     "sequence" : "STU 2.1",
     "desc" : "STU 2.1.0 Release",
