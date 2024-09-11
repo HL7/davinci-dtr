@@ -2,9 +2,9 @@
     "package-id" : "hl7.fhir.us.davinci-dtr",
     "version" : "2.1.0-preview",
     "milestone" : true,
-      "path": "http://hl7.org/fhir/us/davinci-dtr/STU2.1",
-    "status" : "trial-use",
-    "mode" : "milestone",
+      "path": "http://hl7.org/fhir/us/davinci-dtr/2.1.0-preview",
+    "status" : "qa-preview",
+    "mode" : "working",
     "sequence" : "STU 2.1",
     "desc" : "STU 2.1.0 Release",
     "descmd" : "STU 2.1.0 STU update with US Core 6.1."
