@@ -96,8 +96,8 @@ When resuming a work in progress questionnaire response the DTR client **SHALL**
 * parameter[=].min = 0
 * parameter[=].max = "1"
 
-// return
-* parameter[+].name = #return
+// PackageBundle
+* parameter[+].name = #PackageBundle
 * parameter[=].use = #out
 * parameter[=].min = 0
 * parameter[=].max = "*"
