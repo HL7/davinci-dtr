@@ -1,5 +1,15 @@
 <div markdown="1" class="new-content">
 
+### Changes for STU 2.1.0 (from STU Update Comment Period)
+<p><b>The following issues are addressed resulting from the STU Update Comment period review:</b></p>
+<ul>
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48490">FHIR-48490</a>:
+   $questionnaire-response output parameter name inconsistency
+  </li>
+</ul>
+
+
 ### Changes for STU 2.1.0 (since V2.0.1)
 <p><b>The following issues are addressed in preparation for this STU Update:</b></p>
 <ul>
