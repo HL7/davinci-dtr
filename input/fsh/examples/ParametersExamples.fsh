@@ -5,6 +5,7 @@ Description: "An example instance of Input Parameters for the QuestionnairePacka
 Usage: #example
 * parameter[coverage].resource = CoverageExample
 * parameter[order].resource = ServiceRequestExample
+* parameter[questionnaire].valueCanonical = "http://hl7.org/fhir/us/davinci-dtr/Questionnaire/home-o2-std-questionnaire"
 
 // **********************************************************************************************************************************
 Instance: QuestionnairePackageOutputParamsExample
