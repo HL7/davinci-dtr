@@ -14,7 +14,7 @@ Additional information about Da Vinci, its members, the use cases and the implem
 
 {% include burdenReduction.md %}
 
-### System Actors
+<!-- ### System Actors
 This Implementation Guide Fundamentally supports four different system actors that can be involved (with corresponding Capability Statements):
 
 * **Light DTR EHR** (for [US Core 3.1.1](CapabilityStatement-light-dtr-ehr-311.html) / [US Core 6.1](CapabilityStatement-light-dtr-ehr-610.html)):  
@@ -31,7 +31,7 @@ This Implementation Guide Fundamentally supports four different system actors th
 
 
 [![ExpectedSystems](Actors.png){:style="float: none;width:766px;height:271px"}](Actors.png "Expected Systems")
-  
+   -->
 
 ### CRD and DTR Workflow
 The graphic below shows a high-level overview of CRD and DTR (DTR is the SMART on FHIR app or equivalent native EHR app).

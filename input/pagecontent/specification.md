@@ -443,7 +443,7 @@ The operation will be invoked passing a [DTR Questionnaire Package Input Paramet
 * All Coverages associated with the payer endpoint in repetitions of the `coverage` element.
 * If a Questionnaire was identified, the version-specific canonical of that Questionnaire in the `questionnaire` element.
 * If no Questionnaires were identified but Request or Encounter resources were found in the preceding step, those resources as the `order` resources, plus the associated performer and requester Practitioner and Organizations, as well as any referenced Devices or Medications as 'referenced' resources.
-* If a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension was available, the `coverage-assertion-id` as 'context'.
+* If a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension was available, the `coverage-assertion-id` as `context`.
 * Otherwise, the context id provided in the Questionnaire Task as `context`.
 * If working from a previously stored QuestionnaireResponse, the `meta.lastUpdated` as `changedsince`.
 
