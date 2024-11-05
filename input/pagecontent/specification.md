@@ -189,6 +189,8 @@ Adaptive questionnaires pose a slight challenge when it comes to preparing the Q
 
 In some cases, an adaptive form may need to retrieve resources from the EHR in order to determine what subsequent questions to ask or to make a prior authorization decision.  The only way for information to be relayed to the payer is with answers inside a QuestionnaireResponse.  However, QuestionnaireResponse answers can't actually be full resources, only references.  Payers needing full resources to be returned should use the `containedReference` extension to indicate that the selected resource(s) for an answer of type reference should be included as contained resources within the QuestionnaireResponse.  This provides a mechanism for full resources to be included as part of the QuestionnaireResponse.
 
+Implementers that support Adaptive Questionnaires **SHOULD** always include a coverage-information extension when the QuestionnaireResponse is deemed complete.  (Future versions of this guide may tighten this expectation to a SHALL).
+
 The package returned by the [$questionnaire-package](OperationDefinition-questionnaire-package.html) operation **MAY** include Library and/or ValueSet instances that are not referenced by any of the returned questionnaires if at least one of those questionnaires is adaptive.  In this circumstance these additional resources are being made available, and **SHALL** be retained in the session, on the likelihood that a question in one of those adaptive questionnaires returned by the [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) operation will need (and reference) these resources. 
 
 <div markdown="1" class="notebox">
@@ -208,8 +210,6 @@ In some cases, upon receiving enough answers from an adaptive form, a payer will
 DTR payers **SHALL** ONLY use DTR adaptive forms to return a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension when:
 * CRD has already been called and a `coverage-information` extension is already present on the relevant order; and
 * Information is needed from a user that cannot be made available via the CRD process (either by pre-fetch or active query).
-
-Payers **SHALL** return `coverage-information` as early in the burden reduction process as possible (i.e., use CRD in preference to DTR as much as possible).
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
@@ -298,6 +298,16 @@ The Questionnaire resource provides several mechanisms for conveying coded answe
 As part of the SDC Questionnaires that define the information payers require to be captured, CQL is used to support automatic population of answers from existing EHR data and, occasionally, to enforce complex logic around what questions should be displayed. For example, whether answers are required, what answers should be enabled, etc. This CQL **MAY** query for patient observations, conditions, or other discrete information within the EHR to use as part of the population process or logic. The SDC specification provides guidance about how CQL expressions can be used for different purposes, as well as how information gathered by CQL in one portion of the Questionnaire can be made available in other portions of the Questionnaire.
 
 CQL can either be embedded inline as part of an expression or referenced in a Library resource. All [Libraries](http://hl7.org/fhir/R4/library.html) needed by a questionnaire **SHALL** be referenced by the [`cqf-library`](https://hl7.org/fhir/extensions/StructureDefinition-cqf-library.html) extension and included as part of the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation. 
+  
+<div markdown="1" class="notebox">
+  <table style="border: none; margin-bottom: 0px;">
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+      <td style="border: none"> 
+This guide sets expectation that Questionnaires returned from the <a href="OperationDefinition-questionnaire-package.html"><code>$questionnaire-package</code></a> operation will include CQL to support population and/or flow control and rendering of the Questionnaire within the DTR app or EHR.  It is possible that payers may opt to use CQL internally to support population of QuestionnaireResponses returned in the <a href="OperationDefinition-questionnaire-package.html"><code>$questionnaire-package</code></a> or as part of the <a href="http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html"><code>$next-question</code></a> operations.  However, there is <u>no expectation</u> this will occur and this specification provides no guidance on how such CQL would be written.
+      </td>
+    </tr>
+  </table>
+</div><br>
 
 #### Guidance on Structure of CQL Logic
 Like many other programming languages, CQL allows for statements to be nested within conditional logic. This creates instances where some statements **MAY** not be executed due to a prior condition not being met.  
@@ -308,15 +318,8 @@ CQL logic **SHOULD** be partitioned to be specific to groups/questions/etc. when
 This pattern of logic structure is referred to by several names, including eager quitting, early return or, short circuiting. The goal is to avoid the execution of statements if they will not be relevant given other information available to the logic. This is done to streamline workflow and allow the user to focus on relevant input fields.
 
 As an example, a payer **MAY** have a set of rules or specific information that must be gathered on a patient only if they have diabetes. This information **MAY** be gathered through a series of CQL statements. When constructing this CQL for DTR, these statements **SHOULD** be nested in conditionals to first check if the patient has diabetes before checking for information dependent on that condition.
-  
-<div markdown="1" class="notebox">
-  <table style="border: none; margin-bottom: 0px;">
-    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
-      <td style="border: none"> 
-Implementers could use Adaptive Forms to minimize the need for any CQL that provides conditional information retrieval.
-      </td></tr>
-  </table>
-</div><br>
+
+Implementers could use [Adaptive Forms](specification.html#adaptive-form-considerations) to minimize the need for any CQL that provides conditional information retrieval.
 
 #### Organizing CQL within Questionnaires
 While CQL can either be embedded inline in Expression elements or packaged in [Libraries](http://hl7.org/fhir/R4/library.html), This guide strongly recommends that implementers **SHOULD** place CQL logic in libraries as it is much easier to edit and debug such logic when is all in one place than when it's scattered through MAY different expression elements throughout the Questionnaire.
