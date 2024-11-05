@@ -2,7 +2,8 @@ Profile: DTRQuestionnaireAdapt
 Parent: sdc-questionnaire-adapt
 Id: dtr-questionnaire-adapt
 Title: "DTR Questionnaire for adaptive form"
-Description: "The DTR Adaptive Questionnaire is used to represent an adaptive Questionnaire when actually filling out a QuestionnaireResponse."
+Description: "The DTR Adaptive Questionnaire is used to represent an adaptive Questionnaire when actually filling out a QuestionnaireResponse.
+NOTE: This profile does not realistically need the <code>questionnaireAdaptive</code> extension, but will remain intact due to potential impacts on Structured Data Capture (SDC) requirements.  (Efforts will be made in an attempt to get the SDC requirements on this extension loosened in a future release)"
 
 * ^meta.versionId = "1"
 * ^meta.lastUpdated = "2021-11-12T17:01:59.000+00:00"
