@@ -21,26 +21,6 @@ The use of a portal for collection of clinical data to support prior authorizati
 ### General Considerations
 This implementation guide adopts by reference the following [HRex Conformance Expectations](https://build.fhir.org/ig/HL7/davinci-ehrx/conformance.html) which describe conformance language, rules around mustSupport and other considerations. 
 
-#### Must Support
-This IG marks elements with the Must Support flag in its profiles. In addition to the expectations provided in the HRex section referenced above, the following additional considerations apply:  
-
-The FHIR specification makes it clear that when profiling another profile, a MustSupport flag can be constrained further (i.e., taken from 'false' to 'true') but cannot be loosened (i.e., changed from 'true' to 'false').   
-  
-Da Vinci DTR implementations **SHALL** conform to the US Core IG [Must Support]({{site.data.fhir.ver.uscore6}}/general-guidance.html#must-support) Guidance where US Core IG resources are used.
-  
-DTR apps and EHRs that take on DTR app responsibility **SHALL** be able to render Questionnaires and QuestionnaireResponses.  Specifically, apps and EHRs acting as form fillers **SHALL** be able to display:
-* `QuestionnaireResponse.questionnaire.questionnaireDisplay`/`Questionnaire.title`
-* `QuestionnaireResponse.authored`
-* `QuestionnaireResponse.author.resolve().name`
-* `QuestionnaireResponse.source.resolve().name`
-* `QuestionnaireResponse.item.text`
-* `QuestionnaireResponse.item.value` - all data types
-* The same for all nested items
-
-They **SHALL** also handle all mustSupport elements within the Questionnaire profile and provide visual cues where those elements impact expected user action (e.g., required answers, need for signatures, etc.)
-  
-Those same systems **SHOULD** be able to display `QuestionnaireResponse.item.itemMedia`
-
 #### EHRs and Payers
 Throughout this guide, the term 'EHR' refers to the set of systems acting on behalf of a provider, whether managed directly by the provider organization or by a third-party agency.  Similarly, 'payer' refers to the set of systems acting on behalf of the payer, whether managed directly by the payer or by a third-party agency.  For additional discussion about how this implementation guide functions when EHR and/or payer systems are not monolithic but instead are made up of components, refer to the [ePA Coordinators page](epa.html).
 
@@ -70,6 +50,8 @@ SMART on FHIR defines the basic expectations for an EHR to [register a SMART app
 ### Configuring App/EHR to Payer Connectivity
 Similarly, all DTR apps **SHALL** be registered with the payer systems with which they communicate.  If an EHR opts to interact with the payer directly without using an app, then the EHR itself will need to register.
 
+Initial setup of connectivity between client and payer will have a manual component to establish security credentials and a trust relationship (unless both parties are part of a shared trust network).  Dynamic endpoint discovery allows for the potential to use different endpoints for the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation over time without changing security credential or legal agreement expectations.
+
 Payers **MAY** have multiple back-end functions that handle different types of decision support and/or different types of services. However, for the purpose of DTR conformance, payers **SHALL** have a single endpoint (managed by themselves or a delegate) that can handle responding to all DTR service calls.
 
 This registration process **SHALL** ensure that the DTR app or Full EHR (i.e., Native App):
@@ -86,7 +68,7 @@ Even after an application has been successfully registered, payers and EHRs **SH
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> 
-Some payers <b>MAY</b> create Questionnaires that rely on code systems that require licensing for use where there isn’t already a cross-U.S. license in place (e.g., UB, CPT).  In such cases, the payer, provider, and if necessary, the SMART on FHIR app vendor will need to have the relevant licenses to display, store, and retransmit the information captured.  The expectations around licensing requirements <b>SHOULD</b> be established as part of the configuration process between the parties.
+Some payers <b>MAY</b> create Questionnaires that rely on code systems that require licensing for use where there isn’t already a cross-U.S. license in place (e.g., UB, CPT).  In such cases, the payer, provider, and if necessary, the SMART on FHIR app vendor will need to have the relevant licenses to display, store, and retransmit the information captured.  The expectations around licensing requirements <b>SHALL</b> be established as part of the configuration process between the parties.
       </td></tr>
   </table>
 </div><br>
@@ -206,6 +188,8 @@ Adaptive questionnaires pose a slight challenge when it comes to preparing the Q
 * Finally, the payer **MAY** opt to specify the CQL and codes without using [Libraries](http://hl7.org/fhir/R4/library.html) or ValueSets at all – the CQL can be sent in-line within the various Expression elements, and the codes can be listed directly as answerOption Codings.  This has similar advantages and disadvantages to the second option, though it has less overhead.  On the other hand, CQL and codes can't be shared across different items.
 
 In some cases, an adaptive form may need to retrieve resources from the EHR in order to determine what subsequent questions to ask or to make a prior authorization decision.  The only way for information to be relayed to the payer is with answers inside a QuestionnaireResponse.  However, QuestionnaireResponse answers can't actually be full resources, only references.  Payers needing full resources to be returned should use the `containedReference` extension to indicate that the selected resource(s) for an answer of type reference should be included as contained resources within the QuestionnaireResponse.  This provides a mechanism for full resources to be included as part of the QuestionnaireResponse.
+
+The package returned by the [$questionnaire-package](OperationDefinition-questionnaire-package.html) operation **MAY** include Library and/or ValueSet instances that are not referenced by any of the returned questionnaires if at least one of those questionnaires is adaptive.  In this circumstance these additional resources are being made available, and **SHALL** be retained in the session, on the likelihood that a question in one of those adaptive questionnaires returned by the [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) operation will need (and reference) these resources. 
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
@@ -335,7 +319,7 @@ Implementers could use Adaptive Forms to minimize the need for any CQL that prov
 </div><br>
 
 #### Organizing CQL within Questionnaires
-CQL can either be embedded inline in Expression elements or packaged in [Libraries](http://hl7.org/fhir/R4/library.html).  This guide strongly recommends the practice of putting most CQL logic in libraries as it is easier to edit and debug such logic when is all in one place than when it's scattered through **MAY** different expression elements throughout the Questionnaire.
+While CQL can either be embedded inline in Expression elements or packaged in [Libraries](http://hl7.org/fhir/R4/library.html), This guide strongly recommends that implementers **SHOULD** place CQL logic in libraries as it is much easier to edit and debug such logic when is all in one place than when it's scattered through MAY different expression elements throughout the Questionnaire.
 In this approach and results of the queries, filtering, and other operations are to variables in the Libraries using define statements. These variables can then be referenced in the [valueExpression](https://hl7.org/fhir/extensions/StructureDefinition-variable.html), [contextExpression](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-contextExpression.html) or [calculatedExpression](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-calculatedExpression.html) elements asserted for the various Questionnaire item elements.  If a given variable evaluates to null the answer will be left empty, for the end user to complete.
 
 #### CQL Constraints
@@ -365,10 +349,15 @@ EHRs will typically retrieve the list of supported payers for the app once per d
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> 
-The standardization of payer ids is still considered an open issue.  Guidance on standardization of payer identity is expected to be provided in the <a href="https://confluence.hl7.org/pages/viewpage.action?pageId=91991946">CRD/DTR Supplemental Guide</a> on the HL7 Confluence site.
+The purpose of the DTR client registration process is to establish trust - NOT to establish custom questionnaire behavioral expectations.
       </td></tr>
   </table>
 </div><br>
+
+
+<blockquote class="stu-note" markdown="1">
+The standardization of payer ids is still considered an open issue.  Guidance on standardization of payer identity is expected to be provided in the <a href="https://confluence.hl7.org/x/dwjEE">DTR Implementer Support page</a> on the HL7 Confluence site.
+</blockquote>
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
@@ -415,11 +404,7 @@ At a minimum, the app and the HIT server **SHALL** support access to the followi
 * NutritionOrder 
 * VisionPrescription
 
-Along with referenced resources such as :
-* Practitioner 
-* PractitionerRole 
-* Organization
-* Location
+Resources referenced from the above via Must Support elements, including transitive references, **SHALL** also be supported.
 
 However, typically CQL in Questionnaires will also need access to Observation, Condition, Procedure, DocumentReference and potentially others.  Therefore, in most cases, apps will simply request `patient/*.rs` and `patient/questionnaireresponse.cu`.  However, apps **MAY** opt to be more restrictive in their access requests if they are confident that they can do so while meeting payer CQL needs and EHRs indicate this is desirable.
 

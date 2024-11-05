@@ -7,6 +7,57 @@
   <a href="https://jira.hl7.org/browse/FHIR-48490">FHIR-48490</a>:
    $questionnaire-response output parameter name inconsistency
   </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48744">FHIR-48744</a>:
+   Align endpoint discovery language w/ CRD
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48521">FHIR-48521</a>:
+   Determining support for payer questionnaires
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48517">FHIR-48517</a>:
+   Library and ValueSet Caching requirements for DTR Apps and Full EHRs
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48515">FHIR-48515</a>:
+   Explain Reasoning behind the difference in Questionnaire Adaptive extension cardinality
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48511">FHIR-48511</a>:
+   Change SHOULD to SHALL
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48506">FHIR-48506</a>:
+   SHOULD have CQL logic
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48501">FHIR-48501</a>:
+   Change SHOULD to SHALL
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48488">FHIR-48488</a>:
+   Ambiguous SHALL on resource support requirement
+  </li>
+  
+  <!-- <li>
+  <a href="">FHIR-</a>:
+   abcdefgh
+  </li> -->
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-47995">FHIR-47995</a>:
+   Must Support guidance section should be moved from Specification page to a 'Conformance Expectations' page
+  </li>
+ 
 </ul>
 
 
