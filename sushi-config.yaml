@@ -104,6 +104,11 @@ pages:
     extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
+  confexpectations.md:
+    title: Conformance Expectations
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
   specification.md:
     title: Formal Specification
     extension:
@@ -148,6 +153,7 @@ menu:
     Change History: changehistory.html
 
   Specification:
+    Conformance Expectations: confexpectations.html
     Formal Specification: specification.html
     Privacy, Security, and Safety: security.html
     DTR Metrics: metrics.html
