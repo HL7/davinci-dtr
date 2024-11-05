@@ -322,7 +322,7 @@ As an example, a payer **MAY** have a set of rules or specific information that 
 Implementers could use [Adaptive Forms](specification.html#adaptive-form-considerations) to minimize the need for any CQL that provides conditional information retrieval.
 
 #### Organizing CQL within Questionnaires
-While CQL can either be embedded inline in Expression elements or packaged in [Libraries](http://hl7.org/fhir/R4/library.html), This guide strongly recommends that implementers **SHOULD** place CQL logic in libraries as it is much easier to edit and debug such logic when is all in one place than when it's scattered through MAY different expression elements throughout the Questionnaire.
+While CQL can either be embedded inline in Expression elements or packaged in [Libraries](http://hl7.org/fhir/R4/library.html), This guide strongly recommends that implementers **SHOULD** place CQL logic in libraries as it is much easier to edit and debug such logic when is all in one place, rather than when it's scattered through many different expression elements throughout the Questionnaire.
 In this approach and results of the queries, filtering, and other operations are to variables in the Libraries using define statements. These variables can then be referenced in the [valueExpression](https://hl7.org/fhir/extensions/StructureDefinition-variable.html), [contextExpression](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-contextExpression.html) or [calculatedExpression](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-calculatedExpression.html) elements asserted for the various Questionnaire item elements.  If a given variable evaluates to null the answer will be left empty, for the end user to complete.
 
 #### CQL Constraints
