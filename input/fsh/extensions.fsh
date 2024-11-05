@@ -26,7 +26,7 @@ Description: "Identifies the orders, coverages, and or other resources associate
 Extension: IntendedUse 
 Id: intendedUse 
 Title: "Intended Use"
-Description: "Indicates how the EHR is to use the information with respect to the associated orders/records."
+Description: "Indicates how the EHR is to use the information with respect to the associated orders/records.  If the Adaptive QuestionnaireResponse includes a prior authorization number the `intendedUse` element should be set to 'retain-doc' and/or 'withorder'."
 * ^context[0].type = #element
 * ^context[=].expression = "QuestionnaireResponse"
 * ^status = #active
