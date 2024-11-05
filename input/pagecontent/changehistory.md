@@ -48,10 +48,10 @@
    Ambiguous SHALL on resource support requirement
   </li>
   
-  <!-- <li>
-  <a href="">FHIR-</a>:
-   abcdefgh
-  </li> -->
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-47706">FHIR-47706</a>:
+   Add support for US Core 7
+  </li>
 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-47995">FHIR-47995</a>:
