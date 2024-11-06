@@ -153,7 +153,6 @@ menu:
     Technical Background: background.html
     ePA Coordinators: epa.html
     Credits: credits.html
-    Change History: changehistory.html
 
   Specification:
     Conformance Expectations: confexpectations.html
@@ -179,3 +178,5 @@ menu:
     Discussion Forum: new-tab https://chat.fhir.org/#narrow/stream/197320-Da-Vinci-DTR
     Propose a Change: new-tab http://hl7.org/fhir-issues
     Downloads: downloads.html
+
+  Change History: changehistory.html
