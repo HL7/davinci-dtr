@@ -88,7 +88,7 @@ pages:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
   credits.md:
-    title: Credits
+    title: Project and Participants
     extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
@@ -152,7 +152,7 @@ menu:
     Use Cases and Overview: usecases.html
     Technical Background: background.html
     ePA Coordinators: epa.html
-    Credits: credits.html
+    Project and Participants: credits.html
 
   Specification:
     Conformance Expectations: confexpectations.html
