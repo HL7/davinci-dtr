@@ -20,8 +20,10 @@ The standard aligns with [US Core](https://build.fhir.org/ig/HL7/US-Core) Implem
 <ul>
     <li>Jeff Brown (Lantana Consulting Group)</li>
 </ul>
+</div>
 <br>
 
+<div markdown="1" class="pbox">
 <b>Da Vinci Project Coordination and Core Team:</b> 
 <ul>
     <li>Robert Dieterle (EnableCare, LLC)</li>
@@ -31,14 +33,18 @@ The standard aligns with [US Core](https://build.fhir.org/ig/HL7/US-Core) Implem
     <li>Jocelyn Keegan (Point of Care Partners)</li>
     <li>Dana Marcelonis (Point of Care Partners)</li>
 </ul>
+</div>
 <br>
 
+<div markdown="1" class="pbox">
 <b>Technical Support and Guidance:</b> 
 <ul>
     <li>Lloyd McKenzie (Dogwood Consulting)</li>
 </ul>
+</div>
 <br>
 
+<div markdown="1" class="pbox">
 <b>Da Vinci Member Leadership Provided by:</b> 
 <ul>
     <li>Mike Gould (ZeOmega)</li>
@@ -47,8 +53,10 @@ The standard aligns with [US Core](https://build.fhir.org/ig/HL7/US-Core) Implem
     <li>David DeGandi (Cambia)</li>
     <li>Craig Knier (Change Healthcare)</li>
 </ul>
+</div>
 <br>
 
+<div markdown="1" class="pbox">
 <b>Special Thanks...</b>
 <br><br>To the numerous Da Vinci members and community who have participated on conference calls, provided reviews and feedback, supported sample data gathering, reference implementation development, and testing including, but not limited to:
 <ul>
