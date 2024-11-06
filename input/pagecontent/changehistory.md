@@ -39,6 +39,21 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48474">FHIR-48474</a>:
+   2 Pages in the IG have the exact same content
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48475">FHIR-48475</a>:
+   Inconsistent documenting of 'context' when describing Retrieving Questionnaire Packages
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48476">FHIR-48476</a>:
+   Capabilities is missing the profiling on the Task resource
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-48488">FHIR-48488</a>:
    Ambiguous SHALL on resource support requirement
   </li>
@@ -76,6 +91,11 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-48521">FHIR-48521</a>:
    Determining support for payer questionnaires
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48591">FHIR-48591</a>:
+   Minor technical corrections
   </li>
 
   <li>
