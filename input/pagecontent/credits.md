@@ -15,12 +15,12 @@ This approach benefits providers by reducing administrative burden, payers by st
 The standard aligns with [US Core](https://build.fhir.org/ig/HL7/US-Core) Implementation Guides and addresses HIPAA privacy regulations by emphasizing limited data access for specific documentation needs.
 
 ### Credits
-<br/>
+<br>
 <b>Technical Lead and Primary Author:</b>  
 <ul>
     <li>Jeff Brown (Lantana Consulting Group)</li>
 </ul>
-
+<br>
 <b>Da Vinci Project Coordination and Core Team:</b> 
 <ul>
     <li>Robert Dieterle (EnableCare, LLC)</li>
@@ -30,12 +30,12 @@ The standard aligns with [US Core](https://build.fhir.org/ig/HL7/US-Core) Implem
     <li>Jocelyn Keegan (Point of Care Partners)</li>
     <li>Dana Marcelonis (Point of Care Partners)</li>
 </ul>
-
+<br/>
 <b>Technical Support and Guidance:</b> 
 <ul>
     <li>Lloyd McKenzie (Dogwood Consulting)</li>
 </ul>
-
+<br>
 <b>Da Vinci Member Leadership Provided by:</b> 
 <ul>
     <li>Mike Gould (ZeOmega)</li>
@@ -44,9 +44,9 @@ The standard aligns with [US Core](https://build.fhir.org/ig/HL7/US-Core) Implem
     <li>David DeGandi (Cambia)</li>
     <li>Craig Knier (Change Healthcare)</li>
 </ul>
-
+<br>
 <b>Special Thanks...</b>
-<br><br>To the numerous Da Vinci members and community who have participated on conference calls, provided reviews and feedback, supported sample data gathering, reference implementation development, and testing including, but not limited to:
+<br>To the numerous Da Vinci members and community who have participated on conference calls, provided reviews and feedback, supported sample data gathering, reference implementation development, and testing including, but not limited to:
 <ul>
     <li>Larry Decelles, Andy Gregorowicz, Cole Springate-Combs, Pat LaRocque, Keeyan Ghoreshi, Yolanda Liu, Robi Scalfani (The MITRE Corporation) </li>
     <li>Kyle Johnsen, Spencer Utley, Fred Switzer, and Matt Varghese (Epic)</li>
