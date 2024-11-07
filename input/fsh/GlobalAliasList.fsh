@@ -42,4 +42,4 @@ Alias: COPAYTYPE = http://terminology.hl7.org/CodeSystem/coverage-copay-type
 Alias: RELATE = http://terminology.hl7.org/CodeSystem/subscriber-relationship
 Alias: CONTRACTTYPE = http://terminology.hl7.org/CodeSystem/contract-type
 Alias: $sdcEntryMode = http://hl7.org/fhir/uv/sdc/ValueSet/entryMode
-Alias: $CDexTask = http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-task-attachment-request
+Alias: $PASTask = http://hl7.org/fhir/us/davinci-pas/StructureDefinition/profile-task
