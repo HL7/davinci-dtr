@@ -72,8 +72,8 @@ dependencies:
     version: current
     reason: |
       Makes available CRD profiles, valuesets, and codes for use as part of this IG
-  hl7.fhir.us.davinci-cdex:
-    id: cdex
+  hl7.fhir.us.davinci-pas:
+    id: pas
     version: current
 
 pages:
