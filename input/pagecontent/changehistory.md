@@ -92,6 +92,11 @@
   <a href="https://jira.hl7.org/browse/FHIR-48521">FHIR-48521</a>:
    Determining support for payer questionnaires
   </li>
+  
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48523">FHIR-48523</a>:
+   Is the "Retrieving Launch Context Information" informational?
+  </li>
 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-48591">FHIR-48591</a>:

@@ -58,7 +58,7 @@ This registration process **SHALL** ensure that the DTR app or Full EHR (i.e., N
 * Is 'trusted' by the payer to deal with patient-identifiable data (i.e., There is a BAA, or its equivalent, in place between the Payer and the application vendor).
 * Knows the relevant endpoint to use for the payer to access the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation has a shared secret allowing secure access to the payer endpoint via [SMART on FHIR Backend Services](https://www.hl7.org/fhir/smart-app-launch/backend-services.html). 
 
-Implementers of this IG **SHOULD** support the [endpoint discovery](https://build.fhir.org/ig/HL7/davinci-ehrx/endpoint-discovery.html) mechanism defined in the HRex specification to allow discovery of the endpoints used in this IG - specifically the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation endpoint used to retrieve the Questionnaires and associated libraries, value sets, etc. to be completed
+Implementers of this IG **SHOULD** support the [endpoint discovery](https://build.fhir.org/ig/HL7/davinci-ehrx/endpoint-discovery.html) mechanism defined in the HRex specification to allow discovery of the endpoints used in this IG - specifically the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation endpoint used to retrieve the Questionnaires and associated libraries, value sets, etc. to be completed.
 
 (Also see [Authenticating DTR client to payer API](specification.html#authenticating-dtr-client-to-payer-api))
 
@@ -82,13 +82,13 @@ Some payers <b>MAY</b> create Questionnaires that rely on code systems that requ
 Payers have documentation requirements and rules that must be satisfied as part of their typical operations when reimbursing for care for certain services requiring authorization or documentation.
 The Questionnaire resource is used to represent the information needs that providers must satisfy to meet payer documentation requirements and/or rules. The Questionnaire resource allows specifying:  
 
-* What questions are asked,
-* What constraints exist on allowed answers (data types, choice lists, etc.), 
-* Logic about which questions are enabled or disabled based on prior answers or other context,
-* How questions are organized and grouped,
-* Rules about what answers are mandatory or may have multiple answers,
+* What questions are asked
+* What constraints exist on allowed answers (data types, choice lists, etc.) 
+* Logic about which questions are enabled or disabled based on prior answers or other context
+* How questions are organized and grouped
+* Rules about what answers are mandatory or may have multiple answers
 * How the questions should be rendered (tables, drop-downs, etc.)
-* How to automatically fill in answers to some of the questions based on data already available from the EHR.
+* How to automatically fill in answers to some of the questions based on data already available from the EHR
 * Etc.
   
 The base Questionnaire resource defines some of these capabilities.  However, to allow specifying all the expectations needed to meet payer requirements for data collection forms, additional extensions are necessary.  DTR leverages the extended Questionnaire capabilities defined in the [Structured Data Capture (SDC) implementation guide](http://hl7.org/fhir/uv/sdc/STU3/) to define the complete set of functionality necessary to support data capture for payer purposes.  
@@ -129,7 +129,7 @@ Rules and logic are hidden and only questions relevant to the current member/ord
   </tr>
   <tr>
     <td>Payers will need to write CQL and/or leverage advanced Questionnaire logic elements for both rules as well as data pre-population</td>
-    <td>Payers will need to write CQL for data pre-population only (though will need to express rules in some programming/configuration language of their choice)</td>    
+    <td>Payers will need to write CQL for data pre-population only (though they will need to express rules in some programming/configuration language of their choice)</td>    
   </tr>
   <tr>
     <td>Rules that require accessing other payer systems or logic not expressible in CQL cannot be expressed.</td>
@@ -322,7 +322,7 @@ As an example, a payer **MAY** have a set of rules or specific information that 
 Implementers could use [Adaptive Forms](specification.html#adaptive-form-considerations) to minimize the need for any CQL that provides conditional information retrieval.
 
 #### Organizing CQL within Questionnaires
-While CQL can either be embedded inline in Expression elements or packaged in [Libraries](http://hl7.org/fhir/R4/library.html), This guide strongly recommends that implementers **SHOULD** place CQL logic in libraries as it is much easier to edit and debug such logic when is all in one place, rather than when it's scattered through many different expression elements throughout the Questionnaire.
+While CQL can either be embedded inline in Expression elements or packaged in [Libraries](http://hl7.org/fhir/R4/library.html), This guide strongly recommends that implementers **SHOULD** place CQL logic in libraries as it is much easier to edit and debug such logic when it is all in one place, rather than when it's scattered through many different expression elements throughout the Questionnaire.
 In this approach and results of the queries, filtering, and other operations are to variables in the Libraries using define statements. These variables can then be referenced in the [valueExpression](https://hl7.org/fhir/extensions/StructureDefinition-variable.html), [contextExpression](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-contextExpression.html) or [calculatedExpression](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-calculatedExpression.html) elements asserted for the various Questionnaire item elements.  If a given variable evaluates to null the answer will be left empty, for the end user to complete.
 
 #### CQL Constraints
@@ -332,7 +332,7 @@ DTR imposes the following additional rules on CQL use by payers to maximize inte
 * Within the Questionnaire, CQL **SHALL** follow SDC rules for determining context. Specifically, CQL definitions and variables defined on ancestor elements or preceding expression extensions within the same Questionnaire item are in scope for referencing in descendant/following expressions. 
 * Within [Libraries](http://hl7.org/fhir/R4/library.html), both raw CQL and compiled ELM (in JSON syntax – i.e., application/elm+json) **SHALL** be provided as separate content repetitions within the library.  Within Expression elements, the base expression CQL **SHALL** be accompanied by a [US Public Health Alternative Expression Extension](http://hl7.org/fhir/us/ecr/StructureDefinition/us-ph-alternative-expression-extension) containing the compiled JSON ELM for the expression.
 * If the Questionnaire depends on multiple [Libraries](http://hl7.org/fhir/R4/library.html) (has multiple [`cqf-library`](https://hl7.org/fhir/extensions/StructureDefinition-cqf-library.html) elements), then any [`valueExpression`](https://hl7.org/fhir/extensions/StructureDefinition-variable.html) referring to defined variables **SHALL** specify the library name as well as the statement name as follows: "LibraryName".statementName.
-* Library names **SHALL** be unique within a Questionnaire package and **SHOULD** be unique across all Libraries made available by the payer (e.g., "expression": "\"LowerLimbProsthesis\".PhysicalExaminationType"
+* Library names **SHALL** be unique within a Questionnaire package and **SHOULD** be unique across all Libraries made available by the payer (e.g., "expression": \"LowerLimbProsthesis\".PhysicalExaminationType"
 where LowerLimbProsthesis is the library name and PhysicalExaminationType is the expression name).
 * FHIR [Libraries](http://hl7.org/fhir/R4/library.html) **SHALL** send CQL and ELM using the `content.data` element.
 
@@ -419,12 +419,13 @@ To collect data for a payer, the EHR or SMART app responsible for data collectio
 * `system/valueset.rs`
 * `system/library.rs`
 
-These are sufficient to invoke the DTR Questionnaire operations [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) and ValueSet/`$expand`, as well as retrieval of libraries and value sets.
+These are sufficient to invoke the DTR Questionnaire operations [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) and ValueSet/`$expand`, as well as the retrieval of libraries and value sets.
 
 
 #### Retrieving Launch Context Information
 Again, this is only relevant for SMART on FHIR clients, though a similar process will happen for Full EHRs.
-There are several steps in processing the launch context to begin the data collection process:
+There are several steps in processing the launch context to begin the data collection process.  The following recommended workflow describes the steps and mechanisms that would be necessary to determine the QuestionnaireResponse(s) to render.  Some EHRs or SMART apps may vary their behavior slightly, but the end result of determining the relevant QuestionnaireResponse(s) should be the same.
+
 1.	If the launch context did not include Coverages, a QuestionnaireResponse or a Request or Encounter, the DTR app **MAY** generate an error, but **SHOULD** allow the user to search to find one to use as context for the DTR session.  QuestionnaireResponses would be filtered by patient, a status of in-progress, and a context that is not empty, while requests and encounters would be filtered by patient, active status, and any other standard search parameters the DTR client chooses to offer.
 2.	Otherwise, retrieve the referenced fhirUser, patient, and fhirContext resources referenced in the SMART authorization response by performing read or search operations.  (Search operations allow _including the requester, performer and location resources for encounters and request resources, which will be needed later.)
 3.	For any Request resources or Encounter resources passed in context, perform a search to see if there are any QuestionnaireResponses associated with those orders using the [`dtr-context`](SearchParameter-dtr-context.html) search parameter (e.g., `[EHR-base]/QuestionnaireResponse?patient=123&dtr-context=ServiceRequest/789`).
@@ -587,7 +588,7 @@ The DTR process creates a QuestionnaireResponse resource through the course of n
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
 ---------------------
-### Passing DTR Questionnaire Responses to Downstream Processes
+### Passing DTR QuestionnaireResponses to Downstream Processes
 The information gathered via DTR can be used for a variety of purposes:
 * For inclusion as a prior authorization attachment (either via PAS, CDex, or via traditional attachment submission mechanisms).
 * For inclusion as a claims attachment as part of an X12 submission.
