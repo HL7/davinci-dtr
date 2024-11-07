@@ -45,7 +45,7 @@ The standard aligns with [US Core](https://build.fhir.org/ig/HL7/US-Core) Implem
     <li>Craig Knier (Change Healthcare)</li>
 </ul>
 <br>
-<b>Special Thanks...</b>
+<b>Special Thanks...</b><br>
 <br>To the numerous Da Vinci members and community who have participated on conference calls, provided reviews and feedback, supported sample data gathering, reference implementation development, and testing including, but not limited to:
 <ul>
     <li>Larry Decelles, Andy Gregorowicz, Cole Springate-Combs, Pat LaRocque, Keeyan Ghoreshi, Yolanda Liu, Robi Scalfani (The MITRE Corporation) </li>
