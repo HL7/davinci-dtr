@@ -39,6 +39,11 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48410">FHIR-48410</a>:
+   Invalid DTR context search parameter example
+  </li>
+  
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-48474">FHIR-48474</a>:
    2 Pages in the IG have the exact same content
   </li>
@@ -62,6 +67,11 @@
   <a href="https://jira.hl7.org/browse/FHIR-48490">FHIR-48490</a>:
    $questionnaire-response output parameter name inconsistency
   </li>
+
+  <!-- <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48494">FHIR-48494</a>:
+   Include CMS requirements
+  </li> -->
 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-48501">FHIR-48501</a>:
