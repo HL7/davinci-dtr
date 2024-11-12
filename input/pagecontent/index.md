@@ -41,7 +41,7 @@ While designed to work with these other IGs, DTR can be implemented stand-alone.
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> 
-  Note that CMS 0057-F sets out requirements recommending implementation of all 3 guides by covered systems and that such expectations could become mandatory in future regulations.
+  Note that <a href="https://www.cms.gov/priorities/key-initiatives/burden-reduction/interoperability/policies-and-regulations/cms-interoperability-and-prior-authorization-final-rule-cms-0057-f">CMS 0057-F</a> sets out requirements recommending implementation of all 3 guides by covered systems and that such expectations could become mandatory in future regulations.
       </td></tr>
   </table>
 </div><br>
