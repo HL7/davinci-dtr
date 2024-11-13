@@ -44,6 +44,11 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48487">FHIR-48487</a>:
+   Replace EHR with Provider HIT
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-48488">FHIR-48488</a>:
    Ambiguous SHALL on resource support requirement
   </li>
