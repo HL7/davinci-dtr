@@ -65,7 +65,7 @@ Instance: AdaptiveSearchExample
 InstanceOf: DTRQuestionnaireAdaptSearch
 Description: "An example adaptive form search instance."
 Usage: #example
-* url = "http://example.com/example-adaptive-search"
+* url = "http://hl7.org/fhir/us/davinci-dtr/Questionnaire/example-adaptive-search"
 * status = #active
 * extension[questionnaireAdaptive].valueUrl = "http://example.com/fhir/R4"
 
