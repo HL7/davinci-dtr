@@ -191,6 +191,8 @@ In some cases, an adaptive form may need to retrieve resources from the EHR in o
 
 Implementers that support Adaptive Questionnaires **SHOULD** always include a coverage-information extension when the QuestionnaireResponse is deemed complete.  (Future versions of this guide may tighten this expectation to a SHALL).
 
+If Adaptive Forms are being used, and a DTR service determines that prior authorization is both necessary and the requirements have been met, then the final question in the form **SHALL** be a question that asks the user if they would like prior authorization identifier to be issued.  Based on the user's answer, the service with either mark the questionnaire answer with `no prior authorization` or `with prior authorization`.
+
 The package returned by the [$questionnaire-package](OperationDefinition-questionnaire-package.html) operation **MAY** include Library and/or ValueSet instances that are not referenced by any of the returned questionnaires if at least one of those questionnaires is adaptive.  In this circumstance these additional resources are being made available, and **SHALL** be retained in the session, on the likelihood that a question in one of those adaptive questionnaires returned by the [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) operation will need (and reference) these resources. 
 
 <div markdown="1" class="notebox">
@@ -426,7 +428,7 @@ These are sufficient to invoke the DTR Questionnaire operations [`$next-question
 Again, this is only relevant for SMART on FHIR clients, though a similar process will happen for Full EHRs.
 There are several steps in processing the launch context to begin the data collection process.  The following recommended workflow describes the steps and mechanisms that would be necessary to determine the QuestionnaireResponse(s) to render.  Some EHRs or SMART apps may vary their behavior slightly, but the end result of determining the relevant QuestionnaireResponse(s) should be the same.
 
-1.	If the launch context did not include Coverages, a QuestionnaireResponse or a Request or Encounter, the DTR app **MAY** generate an error, but **SHOULD** allow the user to search to find one to use as context for the DTR session.  QuestionnaireResponses would be filtered by patient, a status of in-progress, and a context that is not empty, while requests and encounters would be filtered by patient, active status, and any other standard search parameters the DTR client chooses to offer.
+1.	If the launch context did not include Coverages, a QuestionnaireResponse or a Request or Encounter, the DTR app **SHALL** either generate an error or allow the user to search to find one to use as context for the DTR session.  QuestionnaireResponses would be filtered by patient, a status of in-progress, and a context that is not empty, while requests and encounters would be filtered by patient, active status, and any other standard search parameters the DTR client chooses to offer.
 2.	Otherwise, retrieve the referenced fhirUser, patient, and fhirContext resources referenced in the SMART authorization response by performing read or search operations.  (Search operations allow _including the requester, performer and location resources for encounters and request resources, which will be needed later.)
 3.	For any Request resources or Encounter resources passed in context, perform a search to see if there are any QuestionnaireResponses associated with those orders using the [`dtr-context`](SearchParameter-dtr-context.html) search parameter (e.g., `[EHR-base]/QuestionnaireResponse?patient=123&context=ServiceRequest/789`).
 4.	If no Request or Encounter resource was passed as context, check any provided QuestionnaireResponse for a [`qr-context`](StructureDefinition-qr-context.html) extension identifying any associated requests or encounters, and if so, perform searches to retrieve them with _includes for requester, performer, etc.
@@ -515,19 +517,14 @@ An adaptive form handles population slightly differently from a 'Standard' form 
 #### Library Dependencies
 The FHIR Library containing/referencing a CQL logic file can reference other needed CQL files (e.g., helper libraries) using the `relatedArtifact` field and a RelatedArtifact with a type of depends-on. The engine **SHALL** make available to the execution context all such referenced CQL [Libraries](http://hl7.org/fhir/R4/library.html). 
 
-#### Behavior when receiving malformed CQL
-If the CQL is malformed (is not syntactically correct) in any way, the app's execution engine **SHALL NOT** attempt any execution of the malformed CQL, and the client **SHALL** do the following: 
-- Log the error.
-- Notify the user with an appropriate message indicating that the population did not occur.  
-- Allow the user to enter the information manually, either now or at a later time. 
-  
-The app **SHOULD** log failures and ensure the maintainer of the CQL/Questionnaire package is notified (see the DTR [Log Questionnaire Errors operation](OperationDefinition-log-questionnaire-errors.html) for details).
-In this case, the details property of the OperationOutcome **SHOULD** use MSG_BAD_SYNTAX to indicate syntactical errors. The destination of the OperationOutcome will be the endpoint the malformed CQL/Questionnaire was retrieved from.
+#### Behavior when encountering CQL-related errors
+If the CQL is malformed (is not syntactically correct) in any way, the app's execution engine **SHALL NOT** attempt any execution of the malformed CQL. If the CQL engine reports an error when executing any of the CQL the app should similarly stop all CQL execution.  In either case, the client **SHALL** report the error to the payer using the [Log Questionnaire Errors operation](OperationDefinition-log-questionnaire-errors.html) and **SHOULD** Log the error internally and/or in the DTR client if possible.
 
-It is a CQL failure if the CQL cannot be executed by the app's CQL engine in the DTR client.
+If the CQL in the Questionnaire is only used for form population purposes, the app **SHALL**:
+* Notify the user with an appropriate message indicating that the form population did not occur.
+* Allow the user to enter the information manually, either now or at a later time.
 
-#### Behavior when encountering execution errors
-If any errors are encountered during execution, the app's engine **SHALL NOT** attempt any further execution, and the user **SHALL** be notified with an appropriate on-screen error message. The app **SHALL** log failures and ensure the maintainer of the CQL/Questionnaire package is notified using the [DTR Log Questionnaire Errors](OperationDefinition-log-questionnaire-errors.html) operation. The user should have the option to complete the Questionnaire if possible, despite the error.
+If the CQL also includes questionnaire logic, such as whether certain elements are enabled, or other validation rules, the app **SHALL** notify the user that there is an issue with the questionnaire and prohibit further completion of the form. 
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">

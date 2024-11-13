@@ -39,6 +39,11 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48314">FHIR-48314</a>:
+   providers need a way to indicate if they want pre-emptive prior auth as part of adaptive forms
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-48488">FHIR-48488</a>:
    Ambiguous SHALL on resource support requirement
   </li>
@@ -63,6 +68,11 @@
    SHOULD have CQL logic
   </li>
  
+   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48508">FHIR-48508</a>:
+   change conformance language for the retrieving launch context
+  </li>
+  
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-48511">FHIR-48511</a>:
    Change SHOULD to SHALL
