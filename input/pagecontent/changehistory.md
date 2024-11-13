@@ -69,6 +69,11 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48504">FHIR-48504</a>:
+   Questionnaire-package Bundle Example not updated to only have one questionnaire
+  </li>
+  
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-48506">FHIR-48506</a>:
    SHOULD have CQL logic
   </li>
@@ -81,6 +86,11 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-48511">FHIR-48511</a>:
    Change SHOULD to SHALL
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48513">FHIR-48513</a>:
+   No examples of Questionnaire Package Bundles with a QuestionnaireResponse
   </li>
 
   <li>
@@ -111,6 +121,11 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-48523">FHIR-48523</a>:
    Is the "Retrieving Launch Context Information" informational?
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48524">FHIR-48524</a>:
+   Constraining Queries example clarification
   </li>
 
   <li>
