@@ -94,6 +94,16 @@
   </li>
   
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48518">FHIR-48518</a>:
+   Are there required DTR client responses to an added coverage-information extension?
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48519">FHIR-48519</a>:
+   Clarify whether FHIRPath is allowed in pre-population expressions
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-48521">FHIR-48521</a>:
    Determining support for payer questionnaires
   </li>
@@ -101,6 +111,11 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-48523">FHIR-48523</a>:
    Is the "Retrieving Launch Context Information" informational?
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48694">FHIR-48694</a>:
+   Clarify ValueSet and $expand Guidance
   </li>
 
   <li>
