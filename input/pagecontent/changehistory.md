@@ -99,6 +99,11 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48516">FHIR-48516</a>:
+   Clarify QuestionnaireResponse contained Questionnaire Requirements for adaptive questionnaires
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-48517">FHIR-48517</a>:
    Library and ValueSet Caching requirements for DTR Apps and Full EHRs
   </li>
