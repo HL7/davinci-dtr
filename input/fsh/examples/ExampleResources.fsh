@@ -20,31 +20,29 @@ Usage: #example
 
 // *****************************************
 Instance: DTRQuestionnairePackageOperationResultSimple
-InstanceOf: Bundle
+InstanceOf: DTRQuestionnairePackageBundle
 Title: "Questionnaire Package Operation Results - Simple"
 Description: "An example of DTRQuestionnairePackageOperation returning a Parameters instance containing multiple Questionnaire bundles, each with references to other Library and ValueSet resources."
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:90404930-204a-4127-9c40-997b2ed7f767"
 * type = #collection
 * timestamp = "2023-04-20T00:00:00+05:00"
-* entry[0].fullUrl = "http://example.org/fhir/Questionnaire/home-o2-adaptive-questionnaire"
-* entry[0].id = "home-o2-adaptive-questionnaire"
-* entry[0].resource = home-o2-adaptive-questionnaire
+* entry[questionnaire].fullUrl = "http://example.org/fhir/Questionnaire/home-o2-adaptive-questionnaire"
+* entry[questionnaire].id = "home-o2-adaptive-questionnaire"
+* entry[questionnaire].resource = home-o2-adaptive-questionnaire
 
 // *****************************************
 Instance: DTRQuestionnairePackageOperationResultComplex
-InstanceOf: Bundle
+InstanceOf: DTRQuestionnairePackageBundle
 Description: "An example of DTRQuestionnairePackageOperation returning a Bundle with only a multiple questionnaires, with references to other Library and ValueSet resources"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:90404930-204a-4127-9c40-997b2ed7f767"
 * type = #collection
 * timestamp = "2023-04-20T00:00:00+05:00"
-* entry[0].fullUrl = "http://example.org/fhir/Questionnaire/home-o2-adaptive-questionnaire"
-* entry[0].id = "home-o2-adaptive-questionnaire"
-* entry[0].resource = home-o2-adaptive-questionnaire
-* entry[+].fullUrl = "http://example.org/fhir/Questionnaire/home-o2-std-questionnaire"
-* entry[=].id = "home-o2-std-questionnaire"
-* entry[=].resource = home-o2-std-questionnaire
+* entry[questionnaire].fullUrl = "http://example.org/fhir/Questionnaire/home-o2-adaptive-questionnaire"
+* entry[questionnaire].id = "home-o2-adaptive-questionnaire"
+* entry[questionnaire].resource = home-o2-adaptive-questionnaire
+
 
 // *****************************************
 Instance: ServiceRequestExample
