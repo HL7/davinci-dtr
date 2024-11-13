@@ -39,26 +39,6 @@
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48410">FHIR-48410</a>:
-   Invalid DTR context search parameter example
-  </li>
-  
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48474">FHIR-48474</a>:
-   2 Pages in the IG have the exact same content
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48475">FHIR-48475</a>:
-   Inconsistent documenting of 'context' when describing Retrieving Questionnaire Packages
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48476">FHIR-48476</a>:
-   Capabilities is missing the profiling on the Task resource
-  </li>
-
-  <li>
   <a href="https://jira.hl7.org/browse/FHIR-48488">FHIR-48488</a>:
    Ambiguous SHALL on resource support requirement
   </li>
@@ -68,10 +48,10 @@
    $questionnaire-response output parameter name inconsistency
   </li>
 
-  <!-- <li>
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-48494">FHIR-48494</a>:
    Include CMS requirements
-  </li> -->
+  </li>
 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-48501">FHIR-48501</a>:
@@ -106,11 +86,6 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-48523">FHIR-48523</a>:
    Is the "Retrieving Launch Context Information" informational?
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48591">FHIR-48591</a>:
-   Minor technical corrections
   </li>
 
   <li>
