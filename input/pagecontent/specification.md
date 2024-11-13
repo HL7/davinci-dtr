@@ -175,7 +175,7 @@ If present, any <code>questionnaireAdaptive</code> url <b>SHALL</b> be a sub-url
   </table>
 </div><br>
 
-The QuestionnaireResponse included in the Questionnaire package Bundle accompanying an adaptive Questionnaire will follow the convention of referencing a contained Questionnaire `derivedFrom` the canonical for the Questionnaire being completed.  Typically, the QuestionnaireResponse and contained Questionnaire will contain no answers (or corresponding questions), though the payer **MAY** opt to include a few pre-populated answers for user review prior to soliciting additional questions using the [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) operation.
+The QuestionnaireResponse included in the Questionnaire package Bundle accompanying an adaptive Questionnaire **SHALL** follow the convention of referencing a contained Questionnaire `derivedFrom` the canonical for the Questionnaire being completed.  Typically, the QuestionnaireResponse and contained Questionnaire will contain no answers (or corresponding questions), though the payer **MAY** opt to include a few pre-populated answers for user review prior to soliciting additional questions using the [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) operation.
 
 The [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) operation provides no opportunity to pass context to the server posing the questions.  It will have no information about who the member is, the nature of the order, or anything else.  Any information needed will need to be passed in as the answer to a question.  Payers **MAY** define pre-populatable questions to extract such information, using CQL to access the Questionnaire's [`launchContext`](https://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-launchContext.html) extension or performing any necessary data retrieval.  The populated (and potentially user-reviewed or adjusted) answers can then be leveraged in subsequent calls to [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) to determine what to ask next.
 
@@ -505,7 +505,7 @@ The DTR client **SHALL** retrieve the FHIR resources specified in the `dataRequi
     },
 ```
 
-Depending on user permissions, the client might not have access to all the data. The app's CQL execution engine **SHOULD** constrain queries to reduce data retrieval overhead. (For example, if the CQL logic filters for medications meeting certain conditions, it is acceptable if the engine retrieves all medications for the patient, even if a more constrained query was possible).
+Depending on user permissions, the client might not have access to all the data. Queries SHOULD be constructed to minimize the retrieval of information that is not necessary to answer the relevant questions (For example, queries for medications that only require active medications should have appropriate filters to retrieve active medications and not inactive medications).
 It's possible not every CQL statement will be executed (for example some questions may only be enabled given certain answers to prior questions). To reduce data transfers and increase overall speed, data **MAY** be fetched as needed. However, the app's execution engine **MAY** be implemented using a different strategy (for example by doing bulk fetches before starting execution).
 
 #### Populating adaptive questionnaires
