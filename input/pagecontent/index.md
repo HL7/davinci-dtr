@@ -7,6 +7,13 @@ The Da Vinci Documentation Templates and Rules (DTR) implementation guide provid
 
 DTR leverages FHIR [Questionnaires](http://hl7.org/fhir/R4/questionnaire.html) combined with embedded [CQL](http://cql.hl7.org/N1/) logic and associated [value sets](artifacts.html#terminology-value-sets) to retrieve existing information, prompt for additional relevant information, and manage the logic process of determining which questions need to be answered (and what answer choices are relevant).  The function of rendering these Questionnaires and capturing the information in patient-specific QuestionnaireResponses can occur either through [SMART on FHIR applications](http://hl7.org/fhir/smart-app-launch/index.html) or through functionality embedded directly into the EHR.
 
+### CMS Enforcement Discretion
+One of the options available with DTR is to interact dynamically with the payer to formulate the questions being asked of the user, and potentially providing additional information back from the payer system - including coverage information via the [Coverage Information extension](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html).
+
+On Feb 28, 2024, the Office of Burden Reduction and Health Informatics (OBRHI) National Standards Group (NSG) announced an [enforcement discretion](https://www.cms.gov/files/document/discretion-x12-278-enforcement-guidance-letter-remediated-2024-02-28.pdf) that they would not enforce the requirement to use the X12 278 for prior authorization if the covered entities were using the FHIR-based Prior Authorization API as described in the CMS Interoperability and Prior Authorization final rule (CMS-0057-F). This allows the payer to return a prior authorization number for use in the X12 837 in coverage extension of the CRD and DTR IGs or as part of the 'all FHIR' exchange of the Prior Authorization Response Bundle in the PAS IG. 
+
+For DTR, this specifically means that `satisfied-pa-id` in the [Coverage Information extension](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) can be used as an X12 prior authorization number.
+
 ### Expected Systems
 This Implementation Guide has expectations defined for four types of systems that can be involved (with corresponding Capability Statements):
 * **Light DTR EHR** (for [US Core 3.1.1](CapabilityStatement-light-dtr-ehr-311.html) / [US Core 6.1](CapabilityStatement-light-dtr-ehr-610.html)):  
@@ -46,11 +53,6 @@ While designed to work with these other IGs, DTR can be implemented stand-alone.
   </table>
 </div><br>
 A fourth Da Vinci IG that is relevant to DTR is the [Health Record Exchange (HRex)](https://build.fhir.org/ig/HL7/davinci-ehrx/) implementation guide, which defines a number of shared profiles and other shared content used across Da Vincie IGs - including this one.
-
-### CMS Enforcement Discretion
-On Feb 28, 2024, the Office of Burden Reduction and Health Informatics (OBRHI) National Standards Group (NSG) announced an [enforcement discretion](https://www.cms.gov/files/document/discretion-x12-278-enforcement-guidance-letter-remediated-2024-02-28.pdf) that they would not enforce the requirement to use the X12 278 for prior authorization if the covered entities were using the FHIR-based Prior Authorization API as described in the CMS Interoperability and Prior Authorization final rule (CMS-0057-F). This allows the payer to return a prior authorization number for use in the X12 837 in coverage extension of the CRD and DTR IGs or as part of the 'all FHIR' exchange of the Prior Authorization Response Bundle in the PAS IG. 
-
-For DTR, this specifically means that `satisfied-pa-id` in the [Coverage Information extension](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) can be used as an X12 prior authorization number.
 
 ### Content and Organization
 The IG is organized into the following sections:

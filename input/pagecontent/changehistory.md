@@ -64,6 +64,11 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48495">FHIR-48495</a>:
+   CMS enforcement discretion comes out of nowhere
+  </li> 
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-48501">FHIR-48501</a>:
    Change SHOULD to SHALL
   </li>
@@ -134,6 +139,11 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48686">FHIR-48686</a>:
+   Profile $next-question (or create a new operation) so there's an actual use for the DTR adaptive questionnaire profile
+  </li> 
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-48694">FHIR-48694</a>:
    Clarify ValueSet and $expand Guidance
   </li>
@@ -149,7 +159,7 @@
   </li>
 
   <!-- 
-  
+
   <li>
   <a href="">FHIR-4</a>:
    ggdfgdsd
