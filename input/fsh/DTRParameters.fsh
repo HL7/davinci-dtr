@@ -87,3 +87,27 @@ Description:    "The Parameters profile used to define the inputs to the [$log-q
 * parameter[outcome].resource 1..1 MS
 * parameter[outcome].resource only OperationOutcome
 * parameter[outcome] ^short = "Operation Outcome associated with the Questionnaire/CQL"
+
+/**************************************************************************************************************/
+Profile: DTRParametersQuestionnaireNextQuestionnaire  //Serves as both Input and Output
+Parent: Parameters
+Id: dtr-next-question-parameters
+Title: "DTR Next question operation parameters"
+Description: "Profile used to validate the parameters that are the input of the 'next question' adaptive questionnaire operation"
+* ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"
+* ^extension[=].valueInteger = 3
+* ^extension[=].valueInteger.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
+* ^extension[=].valueInteger.extension.valueCanonical = "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
+* ^extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"
+* ^extension[=].valueCode = #trial-use
+* ^extension[=].valueCode.extension.url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"
+* ^extension[=].valueCode.extension.valueCanonical = "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"
+* ^status = #draft
+* parameter ^slicing.discriminator.type = #value
+* parameter ^slicing.discriminator.path = "name"
+* parameter ^slicing.rules = #open
+* parameter contains in 0..*
+* parameter[in].name = "in" (exactly)
+* parameter[in].value[x] ..0
+* parameter[in].resource only http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse
+* parameter[in].part ..0
