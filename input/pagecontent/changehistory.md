@@ -94,6 +94,11 @@
   </li>
   
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48510">FHIR-48510</a>:
+   suggest adding "including appeals"
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-48511">FHIR-48511</a>:
    Change SHOULD to SHALL
   </li>

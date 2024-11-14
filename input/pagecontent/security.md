@@ -16,4 +16,4 @@ Payer systems **SHALL** use information received during execution of the DTR [`$
 If a payer uses adaptive forms to gather information, the payer **SHALL NOT** persist or use the information shared as part of the [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) operation for any purpose other than:
 * Responding to the operation.
 * Retention of the fully completed QuestionnaireResponse to support a coverage determination made as part of the Questionnaire completion process.
-* Internal audit and metric calculation.
+* Internal audit, appeals, and metric calculation.

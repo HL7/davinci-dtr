@@ -44,7 +44,7 @@ As an example, a clinician might order, “Home Oxygen Therapy”:
   * DTR will retrieve the appropriate Questionnaire(s) and rule(s) from the repository via a repository API.
   * The clinician would launch the SMART app/DTR (or equivalent native EHR app) which pre-populates one or more FHIR based Questionnaire(s) with data from the EHR.
   * In the event data is known to be available but does not exist in the EHR the clinician could attest to the data in question.
-  * The practitioner populates the fields that were not populated with data from the EHR and possibly adjusts pre-populated elements. When the documentation is complete (or partially complete) the practitioner would save the QuestionnaireResponse. DTR writes the FHIR based QuestionnaireResponse to the EHR. At this point the QuestionnaireResponse could also be sent to any ancillary service.
+  * The clinician or designated staff member populates the fields that were not populated with data from the EHR and possibly adjusts pre-populated elements. When the documentation is complete (or partially complete) the clinician or designated staff member would save the QuestionnaireResponse. DTR writes the FHIR based QuestionnaireResponse to the EHR. At this point the QuestionnaireResponse could also be sent to any ancillary service.
   * In the event the QuestionnaireResponse was incomplete, DTR could be launched at a future time with a context of the in-progress QuestionnaireResponse or associated order/resource and the process continued.
 
 ### EHR System
