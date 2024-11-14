@@ -139,14 +139,23 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48728">FHIR-48728</a>:
+   Inconsitency between contexts in CRD and DTR
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-48744">FHIR-48744</a>:
    Align endpoint discovery language w/ CRD
   </li>
 
-  <!-- <li>
+  <!-- 
+  
+  <li>
   <a href="">FHIR-4</a>:
    ggdfgdsd
-  </li> -->
+  </li> 
+  
+  -->
 
 </ul>
 
