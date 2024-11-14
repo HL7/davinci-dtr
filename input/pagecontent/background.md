@@ -3,7 +3,7 @@
 ### Underlying Technologies
 This guide is based on the HL7 FHIR standard, the US Core [3.1.1]({{site.data.fhir.ver.uscore3}}) and [6.1]({{site.data.fhir.ver.uscore6}}) Implementation Guides, as well as the [SMART on FHIR](http://hl7.org/fhir/smart-app-launch/index.html), [Clinical Quality Language (CQL)](http://cql.hl7.org/N1/), and [Structured Data Capture (SDC)](http://hl7.org/fhir/uv/sdc/STU3/) specifications which build additional capabilities on top of FHIR. This architecture is intended to maximize the number of provider systems that conform to this guide, as well as to allow for easy growth and extensibility of system capabilities in the future.
 
-Implementers of this specification therefore will need to understand some basic information about these specifications.
+Implementers of this specification therefore need to understand some basic information about these specifications.
 
 #### FHIR
 This IG uses terminology, notations, and design principles that are specific to FHIR. It's important to be familiar with some of the basic principles of FHIR as well
@@ -55,10 +55,12 @@ This IG leverages and builds on the US Core [3.1.1]({{site.data.fhir.ver.uscore3
 Other resources may also be accessed as part of the CQL rules.
   
 #### US Core Implementation Guide
-Implementers will need the knowledge of US Core [3.1.1]({{site.data.fhir.ver.uscore3}}) and [6.1]({{site.data.fhir.ver.uscore6}}) IGs to access information for pre population via CQL calls to *21st Century* compliant FHIR APIs. Some of the implementations will need to support US Core requirements.  (Refer to the [CapabilityStatements](artifacts.html#behavior-capability-statements).)   
+Implementers will need the knowledge of US Core [3.1.1]({{site.data.fhir.ver.uscore3}}) and [6.1]({{site.data.fhir.ver.uscore6}}) IGs to access information for pre-population via CQL calls to *21st Century* compliant FHIR APIs. Some of the implementations will need to support US Core requirements.  (Refer to the [CapabilityStatements](artifacts.html#behavior-capability-statements).)   
 
 #### SMART on FHIR and Native Applications
 Guidance is being provided to allow DTR functionality to be invoked outside of regular EHR clinical workflows using a SMART on FHIR app or an EHR-based "Native" app to provide a consistent way of evaluating payer rules and documentation requirements across EHR implementations. As such client implementers creating a SMART App will also need to be familiar with the [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) specification. (Payer implementers only need to be familiar with the SMART on FHIR specification if they plan to develop SMART apps for launch by CDS Hooks or other purposes.)  
+
+In some cases, staff may wish to invoke DTR in a "what-if" scenario based on recommendations/plans for an upcoming visit.  Such recommendations might be from decision support (such as ImmunizationRecommendation or a CarePlan with an intent of 'proposed') or from standard protocols (e.g., "this patient is due for a pap smear").  In such cases, the EHR can support automated generation of 'draft' requests based on the descision support or protocol resources and use them when invoking DTR.
 
 #### CQL 
 [Clinical Quality Language (CQL)](http://cql.hl7.org/N1/) is used to query the Electronic Health Record (EHR) FHIR server to pre-populate the DTR Questionnaire and may also be used to guide which questions need to be answered.  DTR Servers will need to construct Questionnaires containing CQL references and CQL libraries that perform the necessary logic.  DTR clients will need to be able to execute the proved CQL.
@@ -76,7 +78,7 @@ The choice of using operations for `$next-question` for adaptive forms was made 
   
 The decision tree navigation in the [HRex Approaches to Exchanging Data decision tree](https://build.fhir.org/ig/HL7/davinci-ehrx/exchanging.html) that led to these approaches where decisions needed to be made as part of DTR are as follows:  
 
-Access to payer Questionnaire package:
+Access to payer Questionnaire package -
 * Data retrieval is initiated by the consumer (SMART app/EHR).
 * The app/EHR will have a direct connection to the payer – there is required to be a single defined endpoint for the payer.  Any routing will be behind the scenes.
 * No human intervention in return of data.
@@ -84,7 +86,7 @@ Access to payer Questionnaire package:
 * Data is not necessarily pre-existing.  The questionnaire *could* be assembled on the fly based on context.
 * There’s no need for routing. This isn’t a standard message or operation. This must be synchronous.  In the end, choose the ‘lighter’ approach which is an operation.
   
-Reporting of Questionnaire issues: 
+Reporting of Questionnaire issues - 
 * Data sharing is initiated by a data source (EHR or app that has found the Questionnaire issue).
 * The transmission of the data isn’t configured by the payer – polling or subscription wouldn’t really work.
 * The app/EHR will have a direct connection to the payer – there is required to be a single defined endpoint for the payer.  Any routing will be behind the scenes.
