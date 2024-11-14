@@ -14,25 +14,6 @@ Additional information about Da Vinci, its members, the use cases and the implem
 
 {% include burdenReduction.md %}
 
-<!-- ### System Actors
-This Implementation Guide Fundamentally supports four different system actors that can be involved (with corresponding Capability Statements):
-
-* **Light DTR EHR** (for [US Core 3.1.1](CapabilityStatement-light-dtr-ehr-311.html) / [US Core 6.1](CapabilityStatement-light-dtr-ehr-610.html)):  
-  SMART on FHIR-enabled EHR that handles the form filling function of DTR, requiring the server to provide access to the specified resources to allow such an app to retrieve and edit QuestionnaireResponses and related resources.
-    
-* **Full DTR EHR** (for [US Core 3.1.1](CapabilityStatement-full-dtr-ehr-311.html) / [US Core 6.1](CapabilityStatement-full-dtr-ehr-610.html)):  
-  EHRs that manage the form filling functions of DTR internally supporting client capabilities for the Questionnaire Package, ValueSet Expand, and Next Question operations.
-    
-*  **SMART DTR Client** (for [US Core 3.1.1](CapabilityStatement-smart-dtr-client-311.html) / [US Core 6.1](CapabilityStatement-smart-dtr-client-610.html)): 
-  Clients support retrieving and editing QuestionnaireResponse and related resources, as well as client support for the Questionnaire Package, ValueSet Expand, and Next Question operations.
- 
-* **DTR Payer Service** (for [US Core 3.1.1](CapabilityStatement-dtr-payer-service-311.html) / [US Core 6.1](CapabilityStatement-dtr-payer-service-610.html)):  
-  Payer systems that provide questionnaires to DTR clients supporting server capabilities for the Questionnaire Package, ValueSet Expand, and Next Question operations.
-
-
-[![ExpectedSystems](Actors.png){:style="float: none;width:766px;height:271px"}](Actors.png "Expected Systems")
-   -->
-
 ### CRD and DTR Workflow
 The graphic below shows a high-level overview of CRD and DTR (DTR is the SMART on FHIR app or equivalent native EHR app).
 
@@ -63,7 +44,7 @@ As an example, a clinician might order, “Home Oxygen Therapy”:
   * DTR will retrieve the appropriate Questionnaire(s) and rule(s) from the repository via a repository API.
   * The clinician would launch the SMART app/DTR (or equivalent native EHR app) which pre-populates one or more FHIR based Questionnaire(s) with data from the EHR.
   * In the event data is known to be available but does not exist in the EHR the clinician could attest to the data in question.
-  * The clinician populates the fields that were not populated with data from the EHR and possibly adjusts pre-populated elements. When the documentation is complete (or partially complete) the clinician would save the QuestionnaireResponse. DTR writes the FHIR based QuestionnaireResponse to the EHR. At this point the QuestionnaireResponse could also be sent to any ancillary service.
+  * The practitioner populates the fields that were not populated with data from the EHR and possibly adjusts pre-populated elements. When the documentation is complete (or partially complete) the practitioner would save the QuestionnaireResponse. DTR writes the FHIR based QuestionnaireResponse to the EHR. At this point the QuestionnaireResponse could also be sent to any ancillary service.
   * In the event the QuestionnaireResponse was incomplete, DTR could be launched at a future time with a context of the in-progress QuestionnaireResponse or associated order/resource and the process continued.
 
 ### EHR System
