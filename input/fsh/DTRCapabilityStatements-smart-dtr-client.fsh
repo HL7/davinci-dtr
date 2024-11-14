@@ -24,7 +24,7 @@ Usage: #definition
 * format = #json
 * rest.mode = #client
 * rest.documentation = "A SMART on FHIR DTR Client provides an application conforming to the SMART on FHIR specification and related requirements declared in this Implementation Guide."
-* rest.security.description = "Implementations **SHALL** meet the general security requirements documented in the <a href=\"https://build.fhir.org/ig/HL7/davinci-ehrx\">HRex implementation guide</a>."
+* rest.security.description = "Implementations **SHALL** meet the general security requirements documented in the [HRex implementation guide](https://build.fhir.org/ig/HL7/davinci-ehrx)."
 * rest.resource[+].type = #QuestionnaireResponse
 * rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse"
 * rest.resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
@@ -147,7 +147,7 @@ Usage: #definition
 * format = #json
 * rest.mode = #client
 * rest.documentation = "A SMART on FHIR DTR Client provides an application conforming to the SMART on FHIR specification and related requirements declared in this Implementation Guide."
-* rest.security.description = "Implementations **SHALL** meet the general security requirements documented in the <a href=\"https://build.fhir.org/ig/HL7/davinci-ehrx\">HRex implementation guide</a>."
+* rest.security.description = "Implementations **SHALL** meet the general security requirements documented in the [HRex implementation guide](https://build.fhir.org/ig/HL7/davinci-ehrx)."
 * rest.resource[+].type = #QuestionnaireResponse
 * rest.resource[=].supportedProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse"
 * rest.resource[=].interaction[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
