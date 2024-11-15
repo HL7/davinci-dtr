@@ -1,11 +1,11 @@
-Instance: dtr-context
+Instance: qr-context
 InstanceOf: SearchParameter
 Usage: #definition
 * url = "http://hl7.org/fhir/us/davinci-dtr/SearchParameter/dtr-context"
 * version = "1.0.0"
-* name = "DTRcontext"
+* name = "QRcontext"
 * status = #active
-* description = "Returns order(s) with a context extension matching the specified order."
+* description = "Allows finding QuestionnaireResponses that contain information relevant to a particular appointment, encounter or order."
 * jurisdiction = urn:iso:std:iso:3166#US
 * code = #context
 * base = #QuestionnaireResponse
