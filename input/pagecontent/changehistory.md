@@ -159,6 +159,11 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48703">FHIR-48703</a>:
+   Coverage context search parameter inconsistencies
+  </li> 
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-48728">FHIR-48728</a>:
    Inconsitency between contexts in CRD and DTR
   </li>
