@@ -134,6 +134,11 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48520">FHIR-48520</a>:
+   Clarify use of PH Alternate Expression Extension
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-48521">FHIR-48521</a>:
    Determining support for payer questionnaires
   </li>
