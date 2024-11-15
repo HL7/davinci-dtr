@@ -1,4 +1,16 @@
 /**************************************************************************************************************/
+Extension: AlternativeExpression
+Id: alternativeExpression
+Title: "Alternative Expression Extension"
+Description: "Provides an alternate expression containing the compiled JSON ELM for an expression. (**NOTE**: The expectation is that this extension will transition to the core extensions pack)"
+* ^status = #active
+* ^context[0].type = #element
+* ^context[=].expression = "Expression"
+* value[x] ^short = "Alternate expression containing compiled JSON ELM."
+* value[x] 1..1
+* value[x] only Expression
+
+/**************************************************************************************************************/
 Extension: ContainedReference
 Id: containedReference
 Title: "Contained Reference"
