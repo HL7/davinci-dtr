@@ -1,7 +1,7 @@
 Instance: qr-context
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://hl7.org/fhir/us/davinci-dtr/SearchParameter/dtr-context"
+* url = "http://hl7.org/fhir/us/davinci-dtr/SearchParameter/qr-context"
 * version = "1.0.0"
 * name = "QRcontext"
 * status = #active
