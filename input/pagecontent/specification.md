@@ -346,7 +346,32 @@ where LowerLimbProsthesis is the library name and PhysicalExaminationType is the
 ### Determination of Payers Supported by a DTR App
 It is possible that the apps used to provide DTR functionality will not support all payers the EHR might have "DTR requests" for. It is important for the EHR to know what payers their app supports so that they only allow their users to launch the DTR app in the context of payers the app will be able to support. (Launching an app only to be told "this payer isn't supported" is an unpleasant user experience.)  
 
-The developer of SMART on FHIR DTR apps **SHALL** define an endpoint maintaining a list of payers currently supported by that app.  EHRs using external DTR apps **SHALL** support accessing the endpoint. The EHR will be configured with knowledge of which endpoint to access for a given app as part of the process of configuring support for that app within the EHR. Different endpoints **SHALL** be defined for different versions of the application in situations where support for payers varies by application version.
+The developer of SMART on FHIR DTR apps **SHALL** define an endpoint maintaining a list of payers currently supported by that app. This listing of Payers is based on the [Supported Payers](StructureDefinition-DTRSupportedPayers.html) logical model also published in this IG.  EHRs using external DTR apps **SHALL** support accessing the endpoint. The EHR will be configured with knowledge of which endpoint to access for a given app as part of the process of configuring support for that app within the EHR. Different endpoints **SHALL** be defined for different versions of the application in situations where support for payers varies by application version.
+
+It is important to note that the Payer Identifier used in this file **SHALL** be the same as the ones that are returned by the [endpoint discovery mechanism](https://build.fhir.org/ig/HL7/davinci-ehrx/endpoint-discovery.html) defined in HRex.  
+
+Example 'Supported Payers' file:
+```json
+{
+  "supportedPayers": [
+    {
+        "name": "Health Ohmy",
+        "identifier" : {
+            "system" : "http://healthohmy.com/NamingSystem/payer-identifiers",
+            "value" : "4902903943"
+        }
+    },
+    {
+        "name": "Instancio Health",
+        "identifier" : {
+            "system" : "http://Instancio.org/NamingSystem/payer-identifiers",
+            "value" : "9592818170"
+        }
+    }    
+  ],
+  ...
+}
+```
 
 Accessing the endpoint will be by a simple GET with an Accept header of application/json and **SHALL** be performed over TLS. The returned JSON object will contain a "payers" property referring to an array of objects. Each object will have an id and name property, both with string values. It is possible that additional properties **MAY** be supported in the future.
 
