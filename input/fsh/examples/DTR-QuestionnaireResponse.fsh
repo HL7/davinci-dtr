@@ -7,7 +7,8 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * extension[context][0].valueReference = Reference(CoverageExample)
 * extension[context][+].valueReference = Reference(ServiceRequestExample)
 * extension[intendedUse].valueCodeableConcept.coding = http://hl7.org/fhir/us/davinci-crd/CodeSystem/temp#withorder "Include with order"
-* questionnaire = "http://example.com/Questionnaire/referred-questionnaire"
+
+* questionnaire = "http://example.org/fhir/Questionnaire/referred-questionnaire"
 * status = #completed
 * subject = Reference(PatientExample) "Vlad"
 * authored = "2023-08-21"

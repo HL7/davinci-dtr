@@ -5,7 +5,7 @@ Description: "Inline Questionnaire for QuestionnaireResponse"
 * version = "0.1.0"
 * name = "referred-questionnaire"
 * title = "Referred Questionnaire for QuestionnaireResponse"
-* status = #draft
+* status = #active
 * subjectType = #Patient
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Example adaptive questionnaire contained in a QuestionnaireResposne</div>"
@@ -13,7 +13,7 @@ Description: "Inline Questionnaire for QuestionnaireResponse"
 * publisher = "Da Vinci DTR"
 * contact.name = "Example Author"
 * derivedFrom = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-base-questionnaire"
-* extension[sdc-questionnaire-questionnaireAdaptive].valueBoolean = true
+//* extension[sdc-questionnaire-questionnaireAdaptive].valueBoolean = true
 * item[0].linkId = "1"
 * item[=].text = "Patient Information"
 * item[=].type = #group
