@@ -358,14 +358,14 @@ Example 'Supported Payers' file:
         "name": "Health Ohmy",
         "identifier" : {
             "system" : "http://healthohmy.com/NamingSystem/payer-identifiers",
-            "value" : "4902903943"
+            "value" : "987654321"
         }
     },
     {
         "name": "Instancio Health",
         "identifier" : {
             "system" : "http://Instancio.org/NamingSystem/payer-identifiers",
-            "value" : "9592818170"
+            "value" : "123456789"
         }
     }    
   ],
