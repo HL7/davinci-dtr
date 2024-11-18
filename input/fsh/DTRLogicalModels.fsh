@@ -1,3 +1,24 @@
+Logical: DTRSupportedPayers
+Id: DTRSupportedPayers
+Title: "DTR Supported Payers"
+Description: "A logical model describing the listing of payers currently supported by the DTR app."
+* ^purpose = "**Purpose:** 
+
+This logical model is NOT a FHIR data structure for information exchange. Instead, it is a model of the information that the DTR app will maintain for the Payers that are supported by the app. (See the [*Determination of Payers Supported by a DTR App*](specification.html#determination-of-payers-supported-by-a-dtr-app) section of the Formal Specification)
+ 
+ The Payer Identifier used in structures based on this model **SHALL** be the same as the ones that are returned by the [endpoint discovery mechanism](https://build.fhir.org/ig/HL7/davinci-ehrx/endpoint-discovery.html) defined in HRex."
+* ^status = #active
+* ^experimental = false
+* ^extension[$fmm].valueInteger = 1
+* ^extension[$standards-status].valueCode = #informative
+* name          1..1 string           "Name of the payer" 
+* identifier    1..1 Identifier       "Identifier of the payer"
+  * system      1..1                  
+    * ^short = "Identifier namespace for this payer"
+  * value       1..1                  
+    * ^short = "Specific identifier value for this payer"
+
+/**************************************************************************************************************************************************************/
 Logical: DTRMetricData
 Id: DTRMetricData
 Title: "DTR Metric Data"
@@ -118,24 +139,3 @@ Resumed DTR sessions initiated from a previously stored QuestionnaireResponse wi
     * ^requirements = "Used to link the results of CRD to metric information captured for DTR and/or PAS."
   * satisfiedId   0..1 string          "Id if PA is satisfied"               "Corresponds to the satisfied-pa-id from the coverage-information extension."
   * businessLine  0..1 CodeableConcept "e.g., MedicareAdvantage"              "A code that indicates which type of insurance this assertion applies to."
-
-/**************************************************************************************************************************************************************/
-Logical: DTRSupportedPayers
-Id: DTRSupportedPayers
-Title: "DTR Supported Payers"
-Description: "A logical model describing the listing of payers currently supported by the DTR app."
-* ^purpose = "**Purpose:** 
-
-This logical model is NOT a FHIR data structure for information exchange. Instead, it is a model of the information that the DTR app will maintain for the Payers that are supported by the app. (See the [*Determination of Payers Supported by a DTR App*](specification.html#determination-of-payers-supported-by-a-dtr-app) section of the Formal Specification)
- 
- The Payer Identifier used in structures based on this model **SHALL** be the same as the ones that are returned by the [endpoint discovery mechanism](https://build.fhir.org/ig/HL7/davinci-ehrx/endpoint-discovery.html) defined in HRex."
-* ^status = #active
-* ^experimental = false
-* ^extension[$fmm].valueInteger = 1
-* ^extension[$standards-status].valueCode = #informative
-* name          1..1 string           "Name of the payer" 
-* identifier    1..1 Identifier       "Identifier of the payer"
-  * system      1..1                  
-    * ^short = "Identifier namespace for this payer"
-  * value       1..1                  
-    * ^short = "Specific identifier value for this payer"
