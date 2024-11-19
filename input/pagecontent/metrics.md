@@ -67,7 +67,7 @@ express as percentage
   </tr>
   <tr>
     <td style="vertical-align: middle;">5</td>
-    <td style="vertical-align: middle;">% of auto populated question changed</td>
+    <td style="vertical-align: middle;">% of auto populated questions changed</td>
     <td style="vertical-align: middle;">Process</td>
     <td style="vertical-align: middle;">Both</td>   
     <td style="vertical-align: middle;"><code>DTRMetricData.where(exists(action.where(actionDetail=’launch’ and httpResponse=200))).questionnaire.roleInteraction.where(role=’override’).aggregate($this + $total,0)</code>

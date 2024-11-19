@@ -10,10 +10,10 @@ The FHIR artifacts used by DTR are organized according to whether the content wa
     <td style="border: none;"/><td style="border: none;"><a href="artifacts.html">DTR-Specific Artifacts</a></td>
   </tr>
   <tr>
-    <td style="border: none;"/><td style="border: none;"><a href="{{site.data.fhir.ver.uscore7}}">US Core 7 artifacts</a></td>
+    <td style="border: none;"/><td style="border: none;"><a href="{{site.data.fhir.ver.uscore7}}">US Core 7.0.0 artifacts</a></td>
   </tr>
   <tr>
-    <td style="border: none;"/><td style="border: none;"><a href="{{site.data.fhir.ver.uscore6}}">US Core 6.1 artifacts</a></td>
+    <td style="border: none;"/><td style="border: none;"><a href="{{site.data.fhir.ver.uscore6}}">US Core 6.1.0 artifacts</a></td>
   </tr>
   <tr>
     <td style="border: none;"/><td style="border: none;"><a href="{{site.data.fhir.ver.uscore3}}">US Core 3.1.1 artifacts</a></td>
