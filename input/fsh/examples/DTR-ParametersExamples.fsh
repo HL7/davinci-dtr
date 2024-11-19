@@ -27,7 +27,6 @@ Instance: NextQuestionInputParamsExample
 InstanceOf: DTRQuestionnaireNextQuestionnaireInputParameters
 Description: "An example instance of input Parameters used by the `$next-question' operation."
 Usage: #example
-* title = "`$next-question` Input Parameters Example"
 * parameter[QuestionnaireResponse].resource = home-o2-questionnaireresponse
 
 // **********************************************************************************************************************************
@@ -35,5 +34,4 @@ Instance: NextQuestionOutputParamsExample
 InstanceOf: DTRQuestionnaireNextQuestionnaireOutputParameters
 Description: "An example instance of output Parameters used by the `$next-question' operation."
 Usage: #example
-* title = "`$next-question` Output Parameters Example"
 * parameter[QuestionnaireResponse].resource = home-o2-questionnaireresponse
