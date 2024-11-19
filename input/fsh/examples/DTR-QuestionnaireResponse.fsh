@@ -19,6 +19,8 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[0].linkId = "1.1"
 * item[=].item[=].text = "Last Name but Different This Time"
 * item[=].item[=].answer[0].valueString = "Quinton"
+// * item[=].item[=].answer[=].extension[=].extension[=].extension[=].extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/containedReference"
+// * item[=].item[=].answer[=].extension[=].extension[=].extension[=].extension[=].valueBoolean = false
 
 * item[=].item[=].answer[=].extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
