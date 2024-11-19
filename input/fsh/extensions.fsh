@@ -19,7 +19,6 @@ Description: "Indicates that when filling a QuestionnaireResponse and selecting 
 * ^context[0].type = #element
 * ^context[=].expression = "QuestionnaireResponse.item.where(type = 'reference')"
 * value[x] ^short = "Contain the reference?"
-//* value[x] ^definition = "This contains references to the pertinent orders associated with this QuestionnaireResponse."
 * value[x] 1..1
 * value[x] only boolean
 

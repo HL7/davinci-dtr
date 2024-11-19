@@ -14,8 +14,8 @@ Usage: #definition
 * type = true
 * instance = false
 
-* inputProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-next-question-parameters"
-* outputProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-next-question-parameters"
+* inputProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-next-question-input-parameters"
+* outputProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-next-question-output-parameters"
 
 * parameter[0].type = #Resource
 * parameter[=].name = #questionnaire-response
@@ -25,7 +25,7 @@ Usage: #definition
 * parameter[=].documentation = "The [DTR QuestionnaireResponse Profile](StructureDefinition-dtr-questionnaireresponse.html) of the QuestionnaireResponse resource with a *contained* Questionnaire.  When invoking the operation for the first time, neither the QuestionnaireResponse nor the contained Questionnaire will have any items, as no questions are yet known.  In subsequent calls, the QuestionnaireResponse will include answers to all required questions asked so far and the contained QuestionnaireResponse will remain the same as provided back from the operation in the preceding response."
 
 * parameter[+].type = #Resource
-* parameter[=].name = #return
+* parameter[=].name = #questionnaire-response
 * parameter[=].use = #out
 * parameter[=].min = 1
 * parameter[=].max = "1"
