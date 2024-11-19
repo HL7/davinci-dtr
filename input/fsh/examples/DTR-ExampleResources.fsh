@@ -86,14 +86,6 @@ Usage: #example
 * content.contentType = #application/xml
 * content.url = "http://cqlrepository.org/quick-modelinfo.xml"
 
-// *****************************************
-Instance: alternativeExpressionExample
-InstanceOf: alternativeExpression
-Description: "An example an Alernative Expression extension."
-Usage: #example
-* valueExpression.language = #application/elm+json
-* valueExpression.expression = "elm data"
-
 // ===================================================================================================================================
 // Inline Instances
 // ===================================================================================================================================

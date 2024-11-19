@@ -72,9 +72,12 @@ Description: "An example Standard questionnaire for Home Oxygen Therapy."
 * item[=].text = "Calculation"
 * item[=].type = #group
 * item[=].item[+].linkId = "2.1"
-// * item[=].item[=].extension[sdc-questionnaire-initialExpression].valueExpression.description = "deadline for submission"
-// * item[=].item[=].extension[sdc-questionnaire-initialExpression].valueExpression.language = #text/fhirpath
-// * item[=].item[=].extension[sdc-questionnaire-initialExpression].valueExpression.expression = "today() + 7 days"
 * item[=].item[=].text = "Deadline for submission (7 days from now)"
 * item[=].item[=].type = #date
 * item[=].item[=].readOnly = true
+* item[=].item[=].extension[sdc-questionnaire-initialExpression].valueExpression.description = "deadline for submission"
+* item[=].item[=].extension[sdc-questionnaire-initialExpression].valueExpression.language = #text/fhirpath
+* item[=].item[=].extension[sdc-questionnaire-initialExpression].valueExpression.expression = "today() + 7 days"
+* item[=].item[=].extension[sdc-questionnaire-initialExpression].valueExpression.extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/alternativeExpression"
+* item[=].item[=].extension[sdc-questionnaire-initialExpression].valueExpression.extension[0].valueExpression.language = #application/elm+json
+* item[=].item[=].extension[sdc-questionnaire-initialExpression].valueExpression.extension[0].valueExpression.expression = "corresponding elm data"
