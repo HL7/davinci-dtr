@@ -1,7 +1,7 @@
 Profile: DTRQuestionnaireAdaptSearch
 Parent: sdc-questionnaire
 Id: dtr-questionnaire-adapt-search
-Title: "DTR Questionnaire for adaptive form Search"
+Title: "DTR Questionnaire for Adaptive Form Search"
 Description: "The DTR adaptive Questionnaire is used to represent an adaptive Questionnaire when returning the empty Questionnaire in a Questionnaire package."
 * ^purpose = "While aligned with the [SDC Adaptive Questionnaire Search](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-adapt-srch.html) profile, this profile does not derive from that profile because elements that SDC make mustSupport for search purposes are not needed for the DTR use case.  (EHRs do not need to search for relevant Questionnaires)."
 * ^meta.versionId = "1"
@@ -25,7 +25,7 @@ Description: "The DTR adaptive Questionnaire is used to represent an adaptive Qu
 * extension[entryMode].valueCode from $sdcEntryMode (required) 
 
 * extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-signatureRequired named signatureRequired 0..1 MS
-* extension[signatureRequired] ^short = "There's a cost to support this."
+* extension[signatureRequired] ^short = "There is a cost to support this."
 * extension contains http://hl7.org/fhir/StructureDefinition/cqf-library named cqf-library 0..* MS
 * extension[cqf-library] ^short = "The library can contain CQL, FHIRPath or x-fhir-query. The implementers must handle any of the above."
 * extension[cqf-library].valueCanonical only Canonical(http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-library)
