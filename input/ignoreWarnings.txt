@@ -41,5 +41,7 @@ WARNING: Bundle/DTRQuestionnairePackageOperationResultSimple: Bundle.entry[0].re
 # This is for an example of a Parameters resource containing a DTR Bundle. It should not have it's own narrative.
 Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 
+# A change in SUSHI is needed to fix this warning.
+The discriminator type 'pattern' has been deprecated. Use type=fixed with a pattern[x] instead
 
 
