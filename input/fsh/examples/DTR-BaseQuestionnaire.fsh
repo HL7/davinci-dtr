@@ -1,7 +1,7 @@
 Instance: dtr-base-questionnaire
 InstanceOf: Questionnaire
-Usage: #example
 Description: "An example base questionnaire."
+Usage: #example
 * url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-base-questionnaire"
 * version = "0.1.0"
 * name = "DTRBaseQuestionnaire"

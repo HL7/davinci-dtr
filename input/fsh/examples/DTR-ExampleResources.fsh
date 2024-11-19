@@ -112,3 +112,11 @@ Description: "An example operation outcome instance."
 Usage: #inline
 * issue.severity = #error
 * issue.code = #not-found
+
+// *****************************************
+Instance: alternativeExpressionExample
+InstanceOf: alternativeExpression
+Description: "An example an Alernative Expression extension."
+Usage: #inline
+* valueExpression.language = #application/elm+json
+* valueExpression.expression = "<elm>"
