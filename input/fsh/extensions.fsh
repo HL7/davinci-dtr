@@ -1,7 +1,7 @@
 /**************************************************************************************************************/
 Extension: AlternativeExpression
 Id: alternativeExpression
-Title: "Alternative Expression Extension"
+Title: "Alternative Expression"
 Description: "Provides an alternate expression containing the compiled JSON ELM for an expression. (**NOTE**: The expectation is that this extension will transition to the core extensions pack)"
 * ^status = #active
 * ^context[0].type = #element
