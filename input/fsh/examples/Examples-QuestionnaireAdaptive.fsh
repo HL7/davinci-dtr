@@ -1,7 +1,7 @@
 // **********************************************************************************************************************************
 Instance: home-o2-adaptive-questionnaire
 InstanceOf: DTRQuestionnaireAdapt
-Usage: #example
+Usage: #inline
 Description: "An example Adaptive questionnaire for Home Oxygen Therapy."
 * version = "0.1.0"
 * name = "HomeOxygenTherapyAdaptiveQuestionnaire"

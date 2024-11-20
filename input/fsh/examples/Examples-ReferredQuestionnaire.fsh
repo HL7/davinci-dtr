@@ -13,7 +13,6 @@ Description: "Inline Questionnaire for QuestionnaireResponse"
 * publisher = "Da Vinci DTR"
 * contact.name = "Example Author"
 * derivedFrom = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-base-questionnaire"
-//* extension[sdc-questionnaire-questionnaireAdaptive].valueBoolean = true
 * item[0].linkId = "1"
 * item[=].text = "Patient Information"
 * item[=].type = #group
