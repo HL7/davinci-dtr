@@ -6,7 +6,6 @@ Description: "The DTR Adaptive Questionnaire is used to represent an adaptive Qu
 NOTE: This profile does not realistically need the `questionnaireAdaptive` extension, but will remain intact due to potential impacts on Structured Data Capture (SDC) requirements.  (Efforts will be made in an attempt to get the SDC requirements on this extension loosened in a future release)"
 
 * ^meta.versionId = "1"
-* ^meta.lastUpdated = "2021-11-12T17:01:59.000+00:00"
 * ^text.status = #additional
 * ^text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>The Questionnaire resource for the adaptive form is used to represent the information needs that a payer has to satisfy their documentation requirements and/or rules.</p></div>"
 * text.div ^comment = "The contents of the html element are an XHTML fragment containing only the basic html formatting elements described in chapters 7-11 and 15 of the HTML 4.0 standard, 'anchor' elements (either name or href), images and internally contained stylesheets. The XHTML content SHALL NOT contain a head, a body, external stylesheet references, scripts, forms, base/link/xlink, frames, iframes and objects."
@@ -14,7 +13,6 @@ NOTE: This profile does not realistically need the `questionnaireAdaptive` exten
 * ^version = "1.0.0"
 * ^status = #active
 * ^date = "2021-11-12T02:27:35+00:00"
-
 * extension[questionnaireAdaptive].value[x] only url
 
 * extension contains http://hl7.org/fhir/StructureDefinition/rendering-styleSensitive named styleSensitive 0..1
@@ -30,8 +28,6 @@ NOTE: This profile does not realistically need the `questionnaireAdaptive` exten
 * item.prefix.extension contains http://hl7.org/fhir/StructureDefinition/rendering-xhtml named itemPrefixRenderingXhtml 0..1
 * item.text.extension contains http://hl7.org/fhir/StructureDefinition/rendering-xhtml named itemTextRenderingXhtml 0..1 MS
 
-// * item.extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/containedReference named containedReference 0..1 MS
-// * item.extension[containedReference] ^short = "Contain the reference?"
 * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemMedia named itemMedia 0..1
 * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-optionalDisplay named itemOptionalDisplay 0..0
 * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-shortText named shortText 0..1
