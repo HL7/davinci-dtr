@@ -117,8 +117,8 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[+].linkId = "2.6"
 * item[=].item[=].text = "Record"
 * item[=].item[=].answer[0].valueReference = Reference(PatientExample) "Mr. Saul Moki"
-// * item[=].item[=].answer[=].extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/containedReference"
-// * item[=].item[=].answer[=].extension[=].valueBoolean = false
+* item[=].item[=].answer[=].extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/containedReference"
+* item[=].item[=].answer[=].extension[=].valueBoolean = false
 
 // ===========================================================================================
 * item[+].linkId = "3"
