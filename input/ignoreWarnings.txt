@@ -26,3 +26,6 @@ Rule dom-6: 'A resource should have narrative for robust management' Failed (def
 
 # This will occur in the next major release
 INFORMATION: CodeSystem/temp: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+
+# Not necessary for the examples
+INFORMATION: Resource: This resource could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
