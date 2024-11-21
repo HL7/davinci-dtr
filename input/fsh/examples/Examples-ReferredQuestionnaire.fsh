@@ -3,7 +3,6 @@ InstanceOf: Questionnaire
 Usage: #example
 Description: "Inline Questionnaire for QuestionnaireResponse"
 * version = "0.1.0"
-// * name = "referred-questionnaire"
 * title = "Referred Questionnaire for QuestionnaireResponse"
 * status = #active
 * subjectType = #Patient
@@ -12,7 +11,7 @@ Description: "Inline Questionnaire for QuestionnaireResponse"
 * date = "2023-08-21T00:00:00+00:00"
 * publisher = "Da Vinci DTR"
 * contact.name = "Example Author"
-* derivedFrom = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-base-questionnaire"
+* derivedFrom = Canonical(dtr-base-questionnaire)
 * item[0].linkId = "1"
 * item[=].text = "Patient Information"
 * item[=].type = #group
