@@ -54,7 +54,7 @@ Description: "Takes a subset of extensions and constraints from the SDC [renderi
 * extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-endpoint named endpoint 0..0
 * extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-signatureRequired named signatureRequired 0..1 MS
 * extension[signatureRequired] ^short = "There's a cost to support this."
-//* extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-constraint named constraint 0..* 
+* extension contains http://hl7.org/fhir/StructureDefinition/targetConstraint named constraint 0..* 
 * extension contains http://hl7.org/fhir/StructureDefinition/cqf-library named cqf-library 0..* MS
 * extension[cqf-library] ^short = "The library can contain CQL, FHIRPath or x-fhir-query. The implementers must handle any of the above."
 * extension[cqf-library].valueCanonical only Canonical(http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-library)
@@ -81,7 +81,7 @@ Description: "Takes a subset of extensions and constraints from the SDC [renderi
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-referenceProfile named referenceProfile 0..* MS
 * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-candidateExpression named candidateExpression 0..1 MS
 * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-lookupQuestionnaire named lookupQuestionnaire 0..1 MS
-* item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-constraint named itemConstraint 0..*
+* item.extension contains http://hl7.org/fhir/StructureDefinition/targetConstraint named itemConstraint 0..*
 * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression named initialExpression 0..1 MS
 * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression named calculatedExpression 0..1 MS
 * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-enableWhenExpression named enableWhenExpression 0..1 MS
