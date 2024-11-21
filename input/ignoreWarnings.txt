@@ -29,3 +29,6 @@ INFORMATION: CodeSystem/temp: CodeSystem: Most code systems defined in HL7 IGs w
 
 # Not necessary for the examples
 INFORMATION: Resource: This resource could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+
+# An example does exist within the IG as a contained resource in the QuestionnaireResponse for Adaptive
+INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaire-adapt'): The Implementation Guide contains no explicitly linked examples for this profile
