@@ -8,7 +8,7 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * extension[context][+].valueReference = Reference(ServiceRequestExample)
 * extension[intendedUse].valueCodeableConcept.coding = http://hl7.org/fhir/us/davinci-crd/CodeSystem/temp#withorder "Include with order"
 
-* questionnaire = "http://example.org/fhir/Questionnaire/referred-questionnaire"
+* questionnaire = Canonical(referred-questionnaire)
 * status = #completed
 * subject = Reference(PatientExample) "Vlad"
 * authored = "2023-08-21"
@@ -25,7 +25,7 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[=].answer[=].extension[=].extension[=].valueCode = #override
 * item[=].item[=].answer[=].extension[=].extension[+].url = "author"
 * item[=].item[=].answer[=].extension[=].extension[=].extension[0].url = "role"
-* item[=].item[=].answer[=].extension[=].extension[=].extension[=].valueCodeableConcept = 	http://terminology.hl7.org/CodeSystem/practitioner-role#doctor "Doctor"
+* item[=].item[=].answer[=].extension[=].extension[=].extension[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/practitioner-role#doctor "Doctor"
 * item[=].item[=].answer[=].extension[=].extension[=].extension[+].url = "practitioner"
 * item[=].item[=].answer[=].extension[=].extension[=].extension[=].valueReference = Reference(PractitionerExample) "Dr. Jane Doe"
 
@@ -130,10 +130,10 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
 * item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
-* item[=].item[=].answer[+].valueCoding = http://snomed.info/sct#389087006 "Hypoxemia (disorder)"
-* item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
-* item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+// * item[=].item[=].answer[+].valueCoding = http://snomed.info/sct#389087006 "Hypoxemia (disorder)"
+// * item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
+// * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
+// * item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
 
 * item[=].item[+].linkId = "3.2"
 * item[=].item[=].text = "Arterial oxygen saturation (Patient on room air while at rest and awake when tested)"
@@ -192,13 +192,13 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[=].text = "Peak Flow Rate"
 * item[=].item[=].item[0].linkId = "4.3.1"
 * item[=].item[=].item[=].text = "LPM"
-* item[=].item[=].item[=].answer[0].valueInteger = 2
+* item[=].item[=].item[=].answer[0].valueQuantity.value = 2
 * item[=].item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].item[=].answer[=].extension[=].extension[0].url = "source"
 * item[=].item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
 * item[=].item[=].item[+].linkId = "4.3.2"
 * item[=].item[=].item[=].text = "oxygen %"
-* item[=].item[=].item[=].answer[0].valueInteger = 98
+* item[=].item[=].item[=].answer[0].valueQuantity.value = 98
 * item[=].item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].item[=].answer[=].extension[=].extension[0].url = "source"
 * item[=].item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
@@ -207,19 +207,19 @@ Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
 * item[=].item[=].text = "Average Flow Rate"
 * item[=].item[=].item[0].linkId = "4.4.1"
 * item[=].item[=].item[=].text = "LPM"
-* item[=].item[=].item[=].answer[0].valueInteger = 2
+* item[=].item[=].item[=].answer[0].valueQuantity.value = 2
 * item[=].item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].item[=].answer[=].extension[=].extension[0].url = "source"
 * item[=].item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
 * item[=].item[=].item[+].linkId = "4.4.2"
 * item[=].item[=].item[=].text = "oxygen %"
-* item[=].item[=].item[=].answer[0].valueInteger = 97
+* item[=].item[=].item[=].answer[0].valueQuantity.value = 97
 * item[=].item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].item[=].answer[=].extension[=].extension[0].url = "source"
 * item[=].item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
 * item[=].item[+].linkId = "4.5"
 * item[=].item[=].text = "Frequency of use (choose all that apply)"
-* item[=].item[=].answer[0].valueCoding = http://example.org#2112 "At rest and awake"
+* item[=].item[=].answer[0].valueString = "At rest and awake"
 * item[=].item[=].answer[=].extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
 * item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto

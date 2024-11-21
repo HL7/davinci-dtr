@@ -1,9 +1,9 @@
 Instance: referred-questionnaire
 InstanceOf: Questionnaire
-Usage: #inline
+Usage: #example
 Description: "Inline Questionnaire for QuestionnaireResponse"
 * version = "0.1.0"
-* name = "referred-questionnaire"
+// * name = "referred-questionnaire"
 * title = "Referred Questionnaire for QuestionnaireResponse"
 * status = #active
 * subjectType = #Patient
