@@ -17,7 +17,7 @@ Title: "Contained Reference"
 Description: "Indicates that when filling a QuestionnaireResponse and selecting a reference, that the referenced resource should be included as a 'contained' resource within the QuestionnaireResponse"
 * ^status = #active
 * ^context[0].type = #element
-* ^context[=].expression = "QuestionnaireResponse.item.answer" //.where(type = 'reference')
+* ^context[=].expression = "QuestionnaireResponse.item.answer.value is Reference"
 * value[x] ^short = "Contain the reference?"
 * value[x] 1..1
 * value[x] only boolean
