@@ -19,7 +19,7 @@ WARNING: QuestionnaireResponse/home-o2-adaptive-questionnaireresponse: Questionn
 Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
 
 # See Grahame's statement regarding this issue: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/deprecated.20pattern.20slicing/near/482196925
-%is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+%deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 
 # This link is intended to be version-independent
 % The link 'http://hl7.org/fhir/us/davinci-dtr' for "Documentation Templates and Rules (DTR)" is a canonical link and is therefore unsafe with regard to versions
