@@ -1,7 +1,7 @@
 Instance: home-o2-adaptive-questionnaireresponse
 InstanceOf: QuestionnaireResponse
 Usage: #example
-Description: "An example QuestionnaireResponse for Adaptive Questionnaire."
+Description: "An example [QuestionnaireResponse](StructureDefinition-dtr-questionnaireresponse.html) for Adaptive Questionnaire."
 * contained[0] = home-o2-adaptive-questionnaire
 * questionnaire = "#home-o2-adaptive-questionnaire"
 * status = #completed

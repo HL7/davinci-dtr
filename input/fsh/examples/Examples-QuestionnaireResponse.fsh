@@ -1,7 +1,7 @@
 Instance: home-o2-questionnaireresponse
 InstanceOf: DTRQuestionnaireResponse
 Usage: #example
-Description: "An example QuestionnaireResponse for Home Oxygen Therapy."
+Description: "An example [QuestionnaireResponse](StructureDefinition-dtr-questionnaireresponse.html) for Home Oxygen Therapy."
 * meta.profile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse"
 
 * extension[context][0].valueReference = Reference(CoverageExample)

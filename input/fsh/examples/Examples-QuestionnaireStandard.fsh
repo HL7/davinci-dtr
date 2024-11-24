@@ -1,7 +1,7 @@
 Instance: home-o2-std-questionnaire
 InstanceOf: DTRStdQuestionnaire
 Usage: #example
-Description: "An example Standard questionnaire for Home Oxygen Therapy."
+Description: "An example [Standard questionnaire](StructureDefinition-dtr-std-questionnaire.html) for Home Oxygen Therapy."
 
 * url = "http://hl7.org/fhir/us/davinci-dtr/Questionnaire/home-o2-std-questionnaire"
 * version = "0.1.0"

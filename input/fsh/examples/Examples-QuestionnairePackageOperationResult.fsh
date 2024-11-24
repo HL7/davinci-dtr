@@ -2,7 +2,7 @@
 Instance: DTRQuestionnairePackageOperationResultSimple
 InstanceOf: DTRQuestionnairePackageBundle
 Title: "Questionnaire Package Operation Results - Simple"
-Description: "An example of DTRQuestionnairePackageOperation returning a Parameters instance containing multiple Questionnaire bundles, each with references to other Library and ValueSet resources."
+Description: "An example of [DTRQuestionnairePackageOperation](OperationDefinition-questionnaire-package.html) returning a Parameters instance containing multiple Questionnaire bundles, each with references to other Library and ValueSet resources."
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:90404930-204a-4127-9c40-997b2ed7f767"
 * type = #collection
@@ -14,7 +14,8 @@ Description: "An example of DTRQuestionnairePackageOperation returning a Paramet
 // ***********************************************************************************************************
 Instance: DTRQuestionnairePackageOperationResultComplex
 InstanceOf: DTRQuestionnairePackageBundle
-Description: "An example of DTRQuestionnairePackageOperation returning a Bundle with only a multiple questionnaires, with references to other Library and ValueSet resources"
+Title: "Questionnaire Package Operation Results - Complex"
+Description: "An example of [DTRQuestionnairePackageOperation](OperationDefinition-questionnaire-package.html) returning a Bundle with only a multiple questionnaires, with references to other Library and ValueSet resources"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:90404930-204a-4127-9c40-997b2ed7f767"
 * type = #collection
