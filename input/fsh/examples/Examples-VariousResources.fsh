@@ -18,7 +18,7 @@ Usage: #example
 * payor = Reference(OrgExample) 
 * subscriberId = "PFP123450000"
 
-// **********************************************************************************************************************************
+// *******************************************************************************************************************************
 Instance: ServiceRequestExample
 InstanceOf: http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-servicerequest
 Description: "Example of ServiceRequest used in the Home Oxygen Therapy (home-o2-questionnaireresponse) example"
@@ -34,7 +34,7 @@ Description: "Example of ServiceRequest used in the Home Oxygen Therapy (home-o2
 * reasonCode.coding.system = "http://snomed.info/sct"
 * reasonCode.text = "Decreased oxygen affinity"
 
-// **********************************************************************************************************************************
+// *******************************************************************************************************************************
 Instance: AdaptiveSearchExample
 InstanceOf: DTRQuestionnaireAdaptSearch
 Description: "An example [Adaptive Form](StructureDefinition-dtr-questionnaire-adapt-search.html) search instance."
@@ -43,7 +43,7 @@ Usage: #example
 * status = #active
 * extension[questionnaireAdaptive].valueUrl = "http://example.com/fhir/R4"
 
-// **********************************************************************************************************************************
+// *******************************************************************************************************************************
 Instance: PatientExample
 InstanceOf: Patient
 Description: "An example patient used in the example resources."
@@ -55,7 +55,7 @@ Usage: #example
 * address.type = #both
 * address.state = "MA"
 
-// **********************************************************************************************************************************
+// *******************************************************************************************************************************
 Instance: PractitionerExample
 InstanceOf: USCorePractitionerProfile
 Description: "An example practitioner referred to by the example resources."
@@ -68,7 +68,7 @@ Usage: #example
 * extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/activeRole"
 * extension[=].valueCodeableConcept = 	http://nucc.org/provider-taxonomy#363A00000X "Physician Assistant"
 
-// **********************************************************************************************************************************
+// *******************************************************************************************************************************
 Instance: library-quick-model-definition
 InstanceOf: Library
 Description: "A sample library from the FHIR core spec to include in other examples in this IG to demonstrate the use of Library resources"
@@ -107,7 +107,7 @@ Usage: #inline
 * address.postalCode = "06155"
 * address.country = "US"
 
-// *****************************************
+// *******************************************************************************************************************************
 Instance: OperationOutcomeExample
 InstanceOf: OperationOutcome
 Description: "An example operation outcome instance."
