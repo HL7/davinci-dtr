@@ -14,4 +14,6 @@ DTR apps and EHRs that take on DTR app responsibility **SHALL** be able to rende
 * `QuestionnaireResponse.item.value` - all data types
 * The same for all nested items
 
-They **SHALL** also handle all mustSupport elements within the Questionnaire profile and provide visual cues where those elements impact expected user action (e.g., required answers, need for signatures, etc.)  Those same systems **SHOULD** be able to display `QuestionnaireResponse.item.itemMedia`
+They **SHALL** also handle all mustSupport elements within the Questionnaire profile and provide visual cues where those elements impact expected user action (e.g., required answers, need for signatures, etc.)  
+
+Those same systems **SHOULD** be able to display `QuestionnaireResponse.item.itemMedia`
