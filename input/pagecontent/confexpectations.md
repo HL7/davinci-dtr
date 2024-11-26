@@ -1,7 +1,10 @@
+### General Considerations
+This implementation guide adopts by reference the following [HRex Conformance Expectations](https://hl7.org/fhir/us/davinci-hrex/STU1.1/conformance.html) which describe conformance language, rules around mustSupport and other considerations. 
+
 ### Must Support Guidance
 This IG marks elements with the Must Support flag in its profiles. In addition to the expectations provided in the HRex section referenced above, the following additional considerations apply:  
 
-The FHIR specification makes it clear that when profiling another profile, a MustSupport flag can be constrained further (i.e., taken from `false` to `true`) but cannot be loosened (i.e., changed from `true` to `false`).   
+The FHIR specification makes it clear that when profiling another profile, a MustSupport flag can be constrained further (i.e., taken from 'false' to 'true') but cannot be loosened (i.e., changed from 'true' to 'false').   
   
 Da Vinci DTR implementations **SHALL** conform to the US Core IG [Must Support]({{site.data.fhir.ver.uscore6}}/general-guidance.html#must-support) Guidance where US Core IG resources are used.
   
@@ -14,4 +17,6 @@ DTR apps and EHRs that take on DTR app responsibility **SHALL** be able to rende
 * `QuestionnaireResponse.item.value` - all data types
 * The same for all nested items
 
-They **SHALL** also handle all mustSupport elements within the Questionnaire profile and provide visual cues where those elements impact expected user action (e.g., required answers, need for signatures, etc.)  Those same systems **SHOULD** be able to display `QuestionnaireResponse.item.itemMedia`
+They **SHALL** also handle all mustSupport elements within the Questionnaire profile and provide visual cues where those elements impact expected user action (e.g., required answers, need for signatures, etc.)
+  
+Those same systems **SHOULD** be able to display `QuestionnaireResponse.item.itemMedia`

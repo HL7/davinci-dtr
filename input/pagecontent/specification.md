@@ -18,9 +18,6 @@ The use of a portal for collection of clinical data to support prior authorizati
 <br>
 
 ---------------------
-### General Considerations
-This implementation guide adopts by reference the following [HRex Conformance Expectations](https://build.fhir.org/ig/HL7/davinci-ehrx/conformance.html) which describe conformance language, rules around mustSupport and other considerations. 
-
 #### EHRs and Payers
 Throughout this guide, the term 'EHR' refers to the set of systems acting on behalf of a provider, whether managed directly by the provider organization or by a third-party agency.  Similarly, 'payer' refers to the set of systems acting on behalf of the payer, whether managed directly by the payer or by a third-party agency.  For additional discussion about how this implementation guide functions when EHR and/or payer systems are not monolithic but instead are made up of components, refer to the [ePA Coordinators page](epa.html).
 
@@ -58,7 +55,7 @@ This registration process **SHALL** ensure that the DTR app or Full EHR (i.e., N
 * Is 'trusted' by the payer to deal with patient-identifiable data (i.e., There is a BAA, or its equivalent, in place between the Payer and the application vendor).
 * Knows the relevant endpoint to use for the payer to access the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation has a shared secret allowing secure access to the payer endpoint via [SMART on FHIR Backend Services](https://www.hl7.org/fhir/smart-app-launch/backend-services.html). 
 
-Implementers of this IG **SHOULD** support the [endpoint discovery](https://build.fhir.org/ig/HL7/davinci-ehrx/endpoint-discovery.html) mechanism defined in the HRex specification to allow discovery of the endpoints used in this IG - specifically the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation endpoint used to retrieve the Questionnaires and associated libraries, value sets, etc. to be completed.
+Implementers of this IG **SHOULD** support the [endpoint discovery](https://hl7.org/fhir/us/davinci-hrex/STU1.1/endpoint-discovery.html) mechanism defined in the HRex specification to allow discovery of the endpoints used in this IG - specifically the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation endpoint used to retrieve the Questionnaires and associated libraries, value sets, etc. to be completed.
 
 (Also see [Authenticating DTR client to payer API](specification.html#authenticating-dtr-client-to-payer-api))
 
@@ -235,7 +232,7 @@ Pre-populating answers reduces burden in two ways:
   
 Pre-population requires that logic be embedded in the Questionnaire that identifies where in the EHR the information can be found.  This in turn requires that the information needed be reliably locatable.
 
-Questionnaires **SHALL** include logic that supports population from the EHR where possible. Such logic **SHOULD** rely exclusively on data elements and search parameters defined either in US Core or HRex (including simple calculations there-on - e.g., age from birthdate). Translation between standard codes **SHOULD** be supported where possible.  Ideally, the design of questions in payer forms **SHOULD** consider what data is likely to be available for pre-population purposes, with an objective of minimizing provider data entry effort. 
+Questionnaires **SHALL** include logic that supports population from the EHR where possible. Such logic **SHOULD** rely exclusively on data elements and search parameters defined either in US Core or [HRex](https://hl7.org/fhir/us/davinci-hrex/STU1.1/index.html) (including simple calculations there-on - e.g., age from birthdate). Translation between standard codes **SHOULD** be supported where possible.  Ideally, the design of questions in payer forms **SHOULD** consider what data is likely to be available for pre-population purposes, with an objective of minimizing provider data entry effort. 
 
 Due to differences in workflows or information systems, clinical information **MAY** be represented in different FHIR resources or with different codes or code systems. Therefore, payer CQL **MAY** have to examine different resources or use value sets to find patient information. It is preferable to have more extensive CQL or value sets than require a user to input values that the rules were unable to find.
 
@@ -348,7 +345,7 @@ It is possible that the apps used to provide DTR functionality will not support 
 
 The developer of SMART on FHIR DTR apps **SHALL** define an endpoint maintaining a list of payers currently supported by that app. This listing of Payers is based on the [Supported Payers](StructureDefinition-DTRSupportedPayers.html) logical model also published in this IG.  EHRs using external DTR apps **SHALL** support accessing the endpoint. The EHR will be configured with knowledge of which endpoint to access for a given app as part of the process of configuring support for that app within the EHR. Different endpoints **SHALL** be defined for different versions of the application in situations where support for payers varies by application version.
 
-It is important to note that the Payer Identifier used in this file **SHALL** be the same as the ones that are returned by the [endpoint discovery mechanism](https://build.fhir.org/ig/HL7/davinci-ehrx/endpoint-discovery.html) defined in HRex.  
+It is important to note that the Payer Identifier used in this file **SHALL** be the same as the ones that are returned by the [endpoint discovery mechanism](https://build.fhir.org/ig/HL7/davinci-ehrx/endpoint-discovery.html) defined in [HRex](https://hl7.org/fhir/us/davinci-hrex/STU1.1/index.html).  
 
 Example 'Supported Payers' file:
 ```json

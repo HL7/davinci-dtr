@@ -76,7 +76,7 @@ The choice of using REST to access and store data from the SMART app is driven b
   
 The choice of using operations for `$next-question` for adaptive forms was made by the SDC implementation guide.
   
-The decision tree navigation in the [HRex Approaches to Exchanging Data decision tree](https://build.fhir.org/ig/HL7/davinci-ehrx/exchanging.html) that led to these approaches where decisions needed to be made as part of DTR are as follows:  
+The decision tree navigation in the [HRex Approaches to Exchanging Data decision tree](https://hl7.org/fhir/us/davinci-hrex/STU1.1/exchanging.html) that led to these approaches where decisions needed to be made as part of DTR are as follows:  
 
 Access to payer Questionnaire package -
 * Data retrieval is initiated by the consumer (SMART app/EHR).
