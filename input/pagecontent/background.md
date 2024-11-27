@@ -19,7 +19,7 @@ as general guidance on how to read FHIR specifications. Readers who are unfamili
 
 This IG supports the [R4](http://hl7.org/fhir/R4/index.html) version of the FHIR standard.
 
-This IG leverages and builds on the US Core [3.1.1]({{site.data.fhir.ver.uscore3}}) and [6.1]({{site.data.fhir.ver.uscore6}}) IGs defined by HL7 for sharing human EHR data in the US.  Implementers need to familiarize themselves with the profiles in US Core, as well as the underlying [Structured Data Capture (SDC)](https://hl7.org/fhir/uv/sdc/STU3/index.html) profiles being used. 
+This IG leverages and builds on the US Core [3.1.1]({{site.data.fhir.ver.uscore3}}), [6.1]({{site.data.fhir.ver.uscore6}}), and [7.0]({{site.data.fhir.ver.uscore7}}) IGs defined by HL7 for sharing human EHR data in the US.  Implementers need to familiarize themselves with the profiles in US Core, as well as the underlying [Structured Data Capture (SDC)](https://hl7.org/fhir/uv/sdc/STU3/index.html) profiles being used. 
 
 <table style="border: none;">
   <tr>
