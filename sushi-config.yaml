@@ -149,7 +149,6 @@ pages:
         valueCode: informative
  
 menu:
-  # Table of Contents: toc.html
 
   Home: index.html
 
