@@ -59,7 +59,7 @@ This IG leverages and builds on the US Core [3.1.1]({{site.data.fhir.ver.uscore3
 Other resources may also be accessed as part of the CQL rules.
   
 #### US Core Implementation Guide
-Implementers will need the knowledge of US Core [3.1.1]({{site.data.fhir.ver.uscore3}}) and [6.1]({{site.data.fhir.ver.uscore6}}) IGs to access information for pre-population via CQL calls to *21st Century* compliant FHIR APIs. Some of the implementations will need to support US Core requirements.  (Refer to the [CapabilityStatements](artifacts.html#behavior-capability-statements).)   
+Implementers will need the knowledge of US Core [3.1.1]({{site.data.fhir.ver.uscore3}}), [6.1]({{site.data.fhir.ver.uscore6}}), and [7.0]({{site.data.fhir.ver.uscore7}}) IGs to access information for pre-population via CQL calls to *21st Century* compliant FHIR APIs. Some of the implementations will need to support US Core requirements.  (Refer to the [CapabilityStatements](artifacts.html#behavior-capability-statements).)   
 
 #### SMART on FHIR and Native Applications
 Guidance is being provided to allow DTR functionality to be invoked outside of regular EHR clinical workflows using a SMART on FHIR app or an EHR-based "Native" app to provide a consistent way of evaluating payer rules and documentation requirements across EHR implementations. As such client implementers creating a SMART App will also need to be familiar with the [SMART on FHIR](http://hl7.org/fhir/smart-app-launch) specification. (Payer implementers only need to be familiar with the SMART on FHIR specification if they plan to develop SMART apps for launch by CDS Hooks or other purposes.)  
