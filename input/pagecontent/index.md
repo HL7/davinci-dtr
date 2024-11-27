@@ -42,7 +42,7 @@ This Implementation Guide has expectations defined for four types of systems tha
 ### Boundaries and Relationships
 This IG is a companion to the Da Vinci [Coverage Requirements Discovery (CRD)](https://build.fhir.org/ig/HL7/davinci-crd/), [Prior Authorization Support (PAS)](http://build.fhir.org/ig/HL7/davinci-pas/), and [Clinical Data Exchange (CDex)](https://hl7.org/fhir/us/davinci-cdex/index.html) IGs.  CRD allows a provider to be alerted that DTR is relevant for a particular order/appointment/etc. and optionally allows that provider to directly launch DTR (either as a SMART application or embedded EHR functionality), or hand off to back office staff for additional processing.  PAS allows the information returned by DTR to be packaged as part of a FHIR-based prior authorization request.  DTR functions in the 'middle' of these two IGs to capture the needed documentation.  CDex allows a payer to solicit additional information from a clinical system in a variety of circumstances.  One of the mechanisms it supports is asking for a user to fill out a particular form, or an unspecified set of forms associated with a tracking id.  DTR provides the mechanism to allow the user to fill out such forms.
 
-While designed to work with these other IGs, DTR can be implemented stand-alone.  Further details on the relationships between these three implementation guides can be found [here](usecases.html#da-vinci-burden-reduction).  
+While designed to work with these other IGs, DTR can be implemented stand-alone.  Further details on the relationships between these three implementation guides can be found [here](burden.html#da-vinci-burden-reduction).  
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
