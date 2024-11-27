@@ -83,7 +83,12 @@ pages:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
   usecases.md:
-    title: Use Cases and Overview
+    title: Use Cases
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
+  burden.md:
+    title: Burden Reduction
     extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
@@ -98,7 +103,7 @@ pages:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
   background.md:
-    title: Technical Background
+    title: Reading this IG
     extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
@@ -149,8 +154,9 @@ menu:
   Home: index.html
 
   Background:
-    Use Cases and Overview: usecases.html
-    Technical Background: background.html
+    Reading this IG: background.html
+    Use Cases: usecases.html
+    Burden Reduction: burden.html
     ePA Coordinators: epa.html
     Project and Participants: credits.html
 
