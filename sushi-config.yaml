@@ -173,6 +173,7 @@ menu:
     FHIR R4 Spec: new-tab {{site.data.fhir.path}}
     Structured Data Capture (SDC): new-tab http://hl7.org/fhir/uv/sdc/STU3/
     Clinical Quality Language (CQL): new-tab http://cql.hl7.org/N1/
+    SMART on FHIR (SDC): new-tab http://hl7.org/fhir/smart-app-launch/index.html
     US Core 3.1.1: new-tab http://hl7.org/fhir/us/core/STU3.1.1/index.html
     US Core 6.1.0: new-tab https://hl7.org/fhir/us/core/STU6.1/index.html
     US Core 7.0.0: new-tab https://hl7.org/fhir/us/core/STU7/index.html
