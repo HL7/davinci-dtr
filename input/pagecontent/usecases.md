@@ -55,7 +55,6 @@ This example shows an overview of how the DTR SMART App (or equivalent native EH
 
 ![Process Flow Detail](DTR_Example_Workflow.png){:style="float: none;"}
 
-
 ### Relation to Clinical Data Exchange (CDex)  
 
 DTR can be invoked for purposes other than specific Burden Reduction use-cases, specifically the guidance provided within the [Clinical Data Exchange (CDex)](https://hl7.org/fhir/us/davinci-cdex/index.html) Implementation Guide.  CDex specifies the use of DTR to [request attachments using questionnaires](https://hl7.org/fhir/us/davinci-cdex/requesting-attachments-questionnaire.html).  
