@@ -28,6 +28,10 @@ This IG leverages and builds on the US Core [3.1.1]({{site.data.fhir.ver.uscore3
   </tr>
   <tr>
     <td style="border: none;"><b>US Core:</b></td>
+    <td style="border: none;"><a href="{{site.data.fhir.ver.uscore7}}">Release 7.0</a></td>
+  </tr>
+  <tr>
+    <td style="border: none;"/>
     <td style="border: none;"><a href="{{site.data.fhir.ver.uscore6}}">Release 6.1</a></td>
   </tr>
   <tr>
@@ -48,7 +52,7 @@ This IG leverages and builds on the US Core [3.1.1]({{site.data.fhir.ver.uscore3
   </tr>
   <tr>
     <td style="border: none;"/>
-    <td style="border: none;"><a href="https://hl7.org/fhir/us/davinci-cdex/StructureDefinition-cdex-task-attachment-request.html">Task</a></td>
+    <td style="border: none;"><a href="https://hl7.org/fhir/us/davinci-pas/StructureDefinition-profile-task.html">Task (PAS)</a></td>
   </tr>
 </table>
 <br>
