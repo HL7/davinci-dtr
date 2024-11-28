@@ -1,5 +1,3 @@
-<div markdown="1" class="new-content">
-
 ### Changes for STU 2.1.0 (from STU Update Comment Period)
 <p><b>The following issues are addressed resulting from the STU Update Comment period review:</b></p>
 <ul>
@@ -277,7 +275,6 @@
   Provide guidance on how to transmit FHIR resources to Adaptive Questionnaires
   </li>
 </ul>
-</div>
 
 <div markdown="1">
 
