@@ -64,7 +64,7 @@ Implementers should also familiarize themselves with the FHIR resources used wit
 
 | **Resource** | **Relevance** |
 | [Bundle]({{site.data.fhir.path}}bundle.html) | Used when delivering collections of resources for Questionnaires and also used for queries |
-| [CapabilityStatement]({{site.data.fhir.path}}capabilitystatement.html) | >Used to define conformance expectations for this guide |
+| [CapabilityStatement]({{site.data.fhir.path}}capabilitystatement.html) | Used to define conformance expectations for this guide |
 | [CodeSystem]({{site.data.fhir.path}}codesystem.html) | Used to define custom codes specific to this guide |
 | [Coverage]({{site.data.fhir.path}}coverage.html) | Used to identify the member and the relevant insurance coverage to a payer |
 | [Library]({{site.data.fhir.path}}library.html) | Used to encapsulate the necessary CQL returned by the Questionnaire Package operation |
