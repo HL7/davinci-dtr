@@ -14,7 +14,7 @@ as general guidance on how to read FHIR specifications. Readers who are unfamili
 * [FHIR data types]({{site.data.fhir.path}}datatypes.html)
 * [Using codes]({{site.data.fhir.path}}terminologies.html)
 * [References between resources]({{site.data.fhir.path}}references.html)
-* [How to read resource & profile definitions]({{site.data.fhir.path}}formats.html)
+* [How to read resource & profile definitions]({{site.data.fhir.path}}formats.html) and additional [IG reading guidance](https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html)
 * [Base resource]({{site.data.fhir.path}}resource.html)
 
 This IG supports the [R4](http://hl7.org/fhir/R4/index.html) version of the FHIR standard.
@@ -57,6 +57,29 @@ This IG leverages and builds on the US Core [3.1.1]({{site.data.fhir.ver.uscore3
 </table>
 <br>
 Other resources may also be accessed as part of the CQL rules.
+
+This IG also draws on content from the Davinci Health Record Exchange (HRex) and Structured Data Capture (SDC) implementation guides.
+
+Implementers should also familiarize themselves with the FHIR resources used within the guide:
+
+| Resource | Relevance |
+| [Bundle]({{site.data.fhir.path}}bundle.html) | Used when delivering collections of resources for Questionnaires and also used for queries |
+| [CapabilityStatement]({{site.data.fhir.path}}capabilitystatement.html) | >Used to define conformance expectations for this guide |
+| [CodeSystem]({{site.data.fhir.path}}codesystem.html) | Used to define custom codes specific to this guide |
+| [Coverage]({{site.data.fhir.path}}coverage.html) | Used to identify the member and the relevant insurance coverage to a payer |
+| [Library]({{site.data.fhir.path}}library.html) | Used to encapsulate the necessary CQL returned by the Questionnaire Package operation |
+| [OperationDefinition]({{site.data.fhir.path}}operationdefinition.html) | Used to define the necessary operations in this guide |
+| [Parameters]({{site.data.fhir.path}}parameters.html) | Supporting information for the input and output for operations |
+| [Patient]({{site.data.fhir.path}}patient.html) | Demographic information relevant to all requests |
+| [Practitioner]({{site.data.fhir.path}}practitioner.html) | Used when identifying providers in Encounters, Tasks, and all requests |
+| [Questionnaire]({{site.data.fhir.path}}questionnaire.html) | Used to support the question structure to be answered |
+| [QuestionnaireResponse]({{site.data.fhir.path}}questionnaireresponse.html) | Used to support the capture of answers to a corresponding Questionnaire |
+| [SearchParameter]({{site.data.fhir.path}}searchparameter.html) | Used in finding QuestionnaireResponses that contain information relevant to a particular appointment, encounter or order |
+| [ServiceRequest]({{site.data.fhir.path}}servicerequest.html) | One of the resources that can be involved in DTR context |
+| [StructureDefinition]({{site.data.fhir.path}}structuredefinition.html) | Used when profiling resource and defining extensions |
+| [ValueSet]({{site.data.fhir.path}}valueset.html) | Used to define collections of codes used by DTR profiles |
+
+
   
 #### US Core Implementation Guide
 Implementers will need the knowledge of US Core [3.1.1]({{site.data.fhir.ver.uscore3}}), [6.1]({{site.data.fhir.ver.uscore6}}), and [7.0]({{site.data.fhir.ver.uscore7}}) IGs to access information for pre-population via CQL calls to *21st Century* compliant FHIR APIs. Some of the implementations will need to support US Core requirements.  (Refer to the [CapabilityStatements](artifacts.html#behavior-capability-statements).)   

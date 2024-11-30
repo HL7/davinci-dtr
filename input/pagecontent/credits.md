@@ -10,9 +10,9 @@ The standard automates data collection by leveraging [Clinical Quality Language]
 
 Key features include the use of FHIR Questionnaires for defining documentation requirements, CQL for data extraction and logic implementation, and [SMART on FHIR](https://build.fhir.org/ig/HL7/smart-app-launch) integration for seamless EHR compatibility.
 
-This approach benefits providers by reducing administrative burden, payers by standardizing documentation requirements, and patients by potentially expediting access to care. It also creates opportunities for EHR vendors and app developers to integrate documentation functionality into their systems.
+This approach benefits providers by reducing administrative burden, payers by standardizing documentation requirements, and patients by potentially expediting access to care. It also creates opportunities for EHR vendors and app developers to integrate documentation functionality into their systems.  The standard aligns with [US Core](https://build.fhir.org/ig/HL7/US-Core) Implementation Guides and addresses HIPAA privacy regulations by emphasizing limited data access for specific documentation needs.
 
-The standard aligns with [US Core](https://build.fhir.org/ig/HL7/US-Core) Implementation Guides and addresses HIPAA privacy regulations by emphasizing limited data access for specific documentation needs.
+Further details about the project, including minutes of meetings can be found on the [DTR project Confluence](https://confluence.hl7.org/pages/viewpage.action?pageId=21857604) page
 
 ### Credits
 <br>

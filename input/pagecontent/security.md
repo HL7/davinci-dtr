@@ -1,8 +1,9 @@
-Guidance and conformance expectations around privacy and security are provided by all three specifications this IG relies on. Implementers **SHALL** be familiar with and adhere primarily to any security and privacy rules defined by Da Vinci HRex Security and Privacy.
-Implementers **SHALL** also adhere to the security guidelines defined in:
-* FHIR core: [Security & Privacy module](http://hl7.org/fhir/R4/secpriv-module.html), [Security Principles](http://hl7.org/fhir/R4/security.html) and [Implementer's Checklist](http://hl7.org/fhir/R4/safety.html)
-* Health Record Exchange (HRex): [Security and Privacy](https://hl7.org/fhir/us/davinci-hrex/STU1.1/security.html)
-* SMART on FHIR: [SMART App Launch Framework](https://www.hl7.org/fhir/smart-app-launch/)
+Guidance and conformance expectations around privacy and security are provided by all three specifications this implementation guide relies on. Implementers **SHALL** adhere to any security and privacy rules defined by:
+
+* FHIR Core: [Security & Privacy Module]({{site.data.fhir.path}}secpriv-module.html), [Security Principles]({{site.data.fhir.path}}security.html) and [Implementer's Checklist]({{site.data.fhir.path}}safety.html)
+* HRex: [Privacy & Security]({{site.data.fhir.ver.hrex}}/security.html)
+* SMART on FHIR: [SMART App Launch](http://www.hl7.org/fhir/smart-app-launch)
+
 
 ### DTR-specific considerations
 Any DTR SMART on FHIR application will have access to the scope of data authorized by the organization as appropriate for use by the app, accessible to the user, and potentially as authorized by the user. This scope granted **MAY** provide the SMART on FHIR application access to more data than is needed for the specific situation. For example, if Observation.read capabilities are needed, the app will have access to all observations for that patient. For compliance with HIPAA Minimum Necessary, the CQL included in payer-defined Questionnaires **SHALL** limit requests for information from the EHR's API to only items that are relevant to the documentation requirements for which DTR was launched (e.g., documentation requirements for a service that requires prior authorization).
