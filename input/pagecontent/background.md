@@ -62,7 +62,7 @@ This IG also draws on content from the Davinci Health Record Exchange (HRex) and
 
 Implementers should also familiarize themselves with the FHIR resources used within the guide:
 
-| Resource | Relevance |
+| **Resource** | **Relevance** |
 | [Bundle]({{site.data.fhir.path}}bundle.html) | Used when delivering collections of resources for Questionnaires and also used for queries |
 | [CapabilityStatement]({{site.data.fhir.path}}capabilitystatement.html) | >Used to define conformance expectations for this guide |
 | [CodeSystem]({{site.data.fhir.path}}codesystem.html) | Used to define custom codes specific to this guide |
