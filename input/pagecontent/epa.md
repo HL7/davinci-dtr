@@ -37,6 +37,8 @@ The table briefly describes each action along with:
 - ePA Coordinator API requirements
 - Comments regarding each transaction 
 
+--
+
 [![Provider ePA Coordinator detail](ePA3.png){:style="float: none; width:930px;height:552px; margin-left: auto; margin-right: auto;display: block;"}](ePA3.png "View Image Larger")
 
 The above graphics and descriptions outline the relevant interactions that will be further documented in subsequent releases of the IG as implementations of various combinations of HIT further inform the specifications.
