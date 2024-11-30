@@ -42,3 +42,11 @@ INFORMATION: Resource: This resource could usefully have an OID assigned (OIDs a
   
 # An example does exist within the IG as a contained resource in the QuestionnaireResponse for Adaptive
 INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaire-adapt'): The Implementation Guide contains no explicitly linked examples for this profile
+
+# These versions are before we started detailed tracking of changes and there's little value in going back to document them now
+%DA VINCI: The Change Log page (changehistory.html) does not include an h3 section for the version 1.1.0-ballot
+%DA VINCI: The Change Log page (changehistory.html) does not include an h3 section for the version 1.0.0
+%DA VINCI: The Change Log page (changehistory.html) does not include an h3 section for the version 0.2.0
+%DA VINCI: The Change Log page (changehistory.html) does not include an h3 section for the version 0.1.0
+%DA VINCI: The Change Log page (changehistory.html) does not include an h3 section for the version 1.1.0
+
