@@ -6,16 +6,12 @@ Additional conformance expectations specific to this guide are as follows:
 In order to conform to this implementation guide, in addition to adhering to any relevant 'SHALL' statements, a system **SHALL** conform to at least one of the appropriate CapabilityStatements listed here:
 
 * **Light DTR EHR** (for [US Core 3.1.1](CapabilityStatement-light-dtr-ehr-311.html) / [US Core 6.1/7.0](CapabilityStatement-light-dtr-ehr-610.html)):  
-  SMART on FHIR-enabled EHR that handles the form filling function of DTR, requiring the server to provide access to the specified resources to allow such an app to retrieve and edit QuestionnaireResponses and related resources.
     
 * **Full DTR EHR** (for [US Core 3.1.1](CapabilityStatement-full-dtr-ehr-311.html) / [US Core 6.1/7.0](CapabilityStatement-full-dtr-ehr-610.html)):  
-  EHRs that manage the form filling functions of DTR internally supporting client capabilities for the Questionnaire Package, ValueSet Expand, and Next Question operations.
     
 *  **SMART DTR Client** (for [US Core 3.1.1](CapabilityStatement-smart-dtr-client-311.html) / [US Core 6.1/7.0](CapabilityStatement-smart-dtr-client-610.html)): 
-  Clients support retrieving and editing QuestionnaireResponse and related resources, as well as client support for the Questionnaire Package, ValueSet Expand, and Next Question operations.
     
 * **DTR Payer Service** (for [US Core 3.1.1](CapabilityStatement-dtr-payer-service-311.html) / [US Core 6.1/7.0](CapabilityStatement-dtr-payer-service-610.html)):  
-  Payer systems that provide questionnaires to DTR clients supporting server capabilities for the Questionnaire Package, ValueSet Expand, and Next Question operations.
 
 
 ### MustSupport
