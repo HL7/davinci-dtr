@@ -1,5 +1,14 @@
 <link rel="stylesheet" type="text/css" href="formatting.css" />
 
+<blockquote class="stu-note">
+<p>
+This specification is currently published as a Standard for Trial Use (STU).  Feedback is welcome and may be submitted through the <a href="https://jira.hl7.org/secure/CreateIssueDetails!init.jspa?pid=10405&issuetype=10600&customfield_11302=FHIR-us-davinci-dtr">FHIR change tracker</a> for this specification.
+</p>
+<p>
+Individuals interested in participating in the Documentation Templates and Rules, or other HL7 Da Vinci projects, can find information about Da Vinci <a href="http://www.hl7.org/about/davinci">here</a>.
+</p>
+</blockquote>
+
 ### Introduction
 When creating orders, booking appointments, admitting patients, etc. there is often an expectation that certain types of documentation are captured that will subsequently be used for payer processing.  This might be information needed for determining prior authorization (or even whether prior authorization is necessary), for inclusion as part of a claims submission, or even for retention as documentation of 'medical necessity' in the event of a future audit.  Each payer has rules for what documentation is necessary and in what form it needs to exist.  Failure to capture appropriate documentation or represent it in the correct manner can delay the processing of authorization requests and claims, result in denial of requests, or result in other penalties or hardships for both the provider and their patients.
 
