@@ -101,7 +101,7 @@ This IG leverages several architectural to FHIR data exchange:
   
 The choice of using REST to access and store data from the SMART app is driven by the SMART on FHIR architecture.
   
-The choice of using operations for `$next-question` for adaptive forms was made by the SDC implementation guide.
+The choice of using operations for [`$next-question`](OperationDefinition-DTR-Questionnaire-next-question.html) for adaptive forms was made by the SDC implementation guide.
   
 The decision tree navigation in the [HRex Approaches to Exchanging Data decision tree](https://hl7.org/fhir/us/davinci-hrex/STU1.1/exchanging.html) that led to these approaches where decisions needed to be made as part of DTR are as follows:  
 
