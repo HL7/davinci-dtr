@@ -15,6 +15,7 @@ This approach benefits providers by reducing administrative burden, payers by st
 Further details about the project, including minutes of meetings can be found on the [DTR project Confluence](https://confluence.hl7.org/pages/viewpage.action?pageId=21857604) page
 
 ### Credits
+<div markdown="1" class="pbox">
 <br>
 <b>Technical Lead and Primary Author:</b>  
 <ul>
@@ -67,6 +68,7 @@ Further details about the project, including minutes of meetings can be found on
     <li>Sreenivas Reddy Mallipeddi (MCG)</li>
     <li>Rick Geimer (Lantana Consulting Group)</li>
 </ul>
+</div>
 
 This IG was developed under the auspices of the Clinical Decision Support work group.
 
