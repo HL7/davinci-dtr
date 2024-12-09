@@ -59,7 +59,7 @@ Usage: #definition
 * contact.name = "HL7 Clinical Decision Support Work Group"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://www.hl7.org/Special/committees/dss"
-* description = "This statement defines the expected capabilities of EHRs that manage the form filling functions of DTR internally for USCDI 3 (US-Core 6.1). Such EHRs need only support client capabilities for the Questionnaire Package, ValueSet Expand, and Next Question operations."
+* description = "This statement defines the expected capabilities of EHRs that manage the form filling functions of DTR internally for USCDI 3 (US-Core 6.1) and USCDI 4 (US-Core 7.0). Such EHRs need only support client capabilities for the Questionnaire Package, ValueSet Expand, and Next Question operations."
 * jurisdiction = urn:iso:std:iso:3166#US
 * kind = #requirements
 * imports = "http://hl7.org/fhir/us/core/CapabilityStatement/us-core-client|7.0.0"
