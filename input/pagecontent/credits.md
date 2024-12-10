@@ -63,6 +63,7 @@ Further details about the project, including minutes of meetings can be found on
     <li>Chris Cioffi (Elevance Health)</li>
     <li>Rob Brull, Brian Lind (Infor)</li>
     <li>Balaji Narayanan (Onyx)</li>
+    <li>Maxim Gorshkov (InterSystems)</li>
     <li>Joshua Lamb (Optum)</li>
     <li>Rachel Foerster (CAQH CORE)</li>
     <li>Sreenivas Reddy Mallipeddi (MCG)</li>
