@@ -37,7 +37,7 @@ INFORMATION: CodeSystem/temp: CodeSystem: Most code systems defined in HL7 IGs w
   
   
 # Not necessary for the examples
-%resource Library/library-quick-model-definition could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+%could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
   
   
 # An example does exist within the IG as a contained resource in the QuestionnaireResponse for Adaptive
