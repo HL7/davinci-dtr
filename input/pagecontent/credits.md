@@ -52,7 +52,7 @@ Further details about the project, including minutes of meetings can be found on
     <li>Larry Decelles, Andy Gregorowicz, Cole Springate-Combs, Pat LaRocque, Keeyan Ghoreshi, Yolanda Liu, Robi Scalfani (The MITRE Corporation) </li>
     <li>Kyle Johnsen, Spencer Utley, Fred Switzer, and Matt Varghese (Epic)</li>
     <li>Sreekanth Puram (Mettle Solutions)</li>
-    <li>Celine Lefebvre, Heather McComas (AMA)</li>
+    <li>Celine Lefebvre, Heather McComas, Denis Casaubon (AMA)</li>
     <li>Anup Mahansaria, Peni Moxim, Mariel Brechner (Evernorth)</li>
     <li>Carie Hammond and Ryan Moehrke (AEGIS)</li>
     <li>Brian Poteet (Edifecs)</li>
