@@ -57,6 +57,7 @@ Further details about the project, including minutes of meetings can be found on
     <li>Carie Hammond and Ryan Moehrke (AEGIS)</li>
     <li>Brian Poteet (Edifecs)</li>
     <li>James Bound (Cognizant)</li>
+    <li>Jason Vogt, Chris Hardee (Meditech)</li>
     <li>Hans Buitendijk (Oracle)</li>
     <li>Richard Abercrombie (Palmetto GBA)</li>
     <li>Tom Kakanowski, Brenin Rhodes, David Chisholm (Smile Digital Health)</li>
