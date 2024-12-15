@@ -5,7 +5,7 @@ This page is organized into several sections reflecting the various steps involv
 
 The core of this process is summarized in this diagram:
 
-[![DTRQuestionnairePackageOperation](Sequence-Diagram.png){:style="float: none;width:732px;height:559px"}](Sequence-Diagram.png "Sequence Diagram")
+[![DTRQuestionnairePackageOperation](Sequence-Diagram.png){:style="float: none;width:622px;height:475px"}](Sequence-Diagram.png "Sequence Diagram")
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
@@ -37,6 +37,8 @@ It is more efficient if mappings can be shared across payers and providers. This
 ### Configuring Connectivity
 
 #### EHR to App Connectivity
+[![Connectivity-EHR-to-App](Connectivity-EHR-to-App.png){:style="float: none;width:265px;height:61px"}](Connectivity-EHR-to-App.png "EHR to App Connectivity")
+
 EHRs have the option of delivering DTR functionality internally or leveraging a DTR [SMART on FHIR Application](https://www.hl7.org/fhir/smart-app-launch/) (SMART App) that handles the primary data capture and population functions of the DTR process.  Such SMART applications may be developed by the EHR vendors, by payers, or by third parties.
 
 DTR apps are expected to be technically able to run against any EHR and work with any payer. This means that EHRs are free to choose which app they prefer and **MAY** switch apps as they see fit.  However, for a DTR app to be used it needs to be trusted appropriately to manage access to personal health information by the EHRs and payers. EHRs that leverage DTR SMART apps will choose which DTR apps they will trust and support.  In some cases, an EHR **MAY** opt to support multiple DTR SMART apps.  If so, the EHR will be responsible for determining which app is used in which circumstances.
@@ -44,6 +46,8 @@ DTR apps are expected to be technically able to run against any EHR and work wit
 SMART on FHIR defines the basic expectations for an EHR to [register a SMART app](https://www.hl7.org/fhir/smart-app-launch/app-launch.html#register-app-with-ehr).  Most EHRs and organizations impose additional registration expectations.  DTR imposes an additional expectation as part of the app registration process, which is discussed in more detail in the [Determination of Payers Supported by a DTR App](specification.html#determination-of-payers-supported-by-a-dtr-app) section of this specification.
 
 #### App/EHR to Payer Connectivity
+[![Connectivity-App-to-Payer](Connectivity-App-to-Payer.png){:style="float: none;width:316px;height:104px"}](Connectivity-App-to-Payer.png "App to Payer Connectivity")
+
 Similarly, all DTR apps **SHALL** be registered with the payer systems with which they communicate.  If an EHR opts to interact with the payer directly without using an app, then the EHR itself will need to register.
 
 Initial setup of connectivity between client and payer will have a manual component to establish security credentials and a trust relationship (unless both parties are part of a shared trust network).  Dynamic endpoint discovery allows for the potential to use different endpoints for the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation over time without changing security credential or legal agreement expectations.
