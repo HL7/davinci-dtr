@@ -5,7 +5,7 @@ This page is organized into several sections reflecting the various steps involv
 
 The core of this process is summarized in this diagram:
 
-[![DTRQuestionnairePackageOperation](Sequence-Diagram.png){:style="float: none;width:622px;height:475px"}](Sequence-Diagram.png "Sequence Diagram")
+[![DTRQuestionnairePackageOperation](Sequence-Diagram.png){:style="float: none;width:661px;height:550px"}](Sequence-Diagram.png "Sequence Diagram")
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
