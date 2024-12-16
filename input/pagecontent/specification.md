@@ -37,7 +37,7 @@ It is more efficient if mappings can be shared across payers and providers. This
 ### Configuring Connectivity
 
 #### EHR to App Connectivity
-[![Connectivity-EHR-to-App](Connectivity-EHR-to-App.png){:style="float: none;width:265px;height:61px"}](Connectivity-EHR-to-App.png "EHR to App Connectivity")
+[![Connectivity-EHR-to-App](Connectivity-EHR-to-App.png){:style="float: none;width:256px;height:67px"}](Connectivity-EHR-to-App.png "EHR to App Connectivity")
 
 EHRs have the option of delivering DTR functionality internally or leveraging a DTR [SMART on FHIR Application](https://www.hl7.org/fhir/smart-app-launch/) (SMART App) that handles the primary data capture and population functions of the DTR process.  Such SMART applications may be developed by the EHR vendors, by payers, or by third parties.
 
