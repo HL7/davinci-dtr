@@ -46,7 +46,7 @@ DTR apps are expected to be technically able to run against any EHR and work wit
 SMART on FHIR defines the basic expectations for an EHR to [register a SMART app](https://www.hl7.org/fhir/smart-app-launch/app-launch.html#register-app-with-ehr).  Most EHRs and organizations impose additional registration expectations.  DTR imposes an additional expectation as part of the app registration process, which is discussed in more detail in the [Determination of Payers Supported by a DTR App](specification.html#determination-of-payers-supported-by-a-dtr-app) section of this specification.
 
 #### App/EHR to Payer Connectivity
-[![Connectivity-App-to-Payer](Connectivity-App-to-Payer.png){:style="float: none;width:316px;height:104px"}](Connectivity-App-to-Payer.png "App to Payer Connectivity")
+[![Connectivity-App-to-Payer](Connectivity-App-to-Payer.png){:style="float: none;width:330px;height:118px"}](Connectivity-App-to-Payer.png "App to Payer Connectivity")
 
 Similarly, all DTR apps **SHALL** be registered with the payer systems with which they communicate.  If an EHR opts to interact with the payer directly without using an app, then the EHR itself will need to register.
 
