@@ -315,7 +315,7 @@ This guide sets expectation that Questionnaires returned from the <a href="Opera
 </div><br>
 
 #### Guidance on Structure of CQL Logic
-Like many other programming languages, CQL allows for statements to be nested within conditional logic. This creates instances where some statements **MAY** not be executed due to a prior condition not being met.  
+Like many other programming languages, CQL allows for statements to be nested within conditional logic. This creates instances where some statements may not be executed due to a prior condition not being met.  
 
 Data retrieval in a QuestionnaireResponse is dependent on the `enableWhen` element.
 
