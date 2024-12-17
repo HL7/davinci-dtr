@@ -292,7 +292,7 @@ The Questionnaire resource provides several mechanisms for conveying coded answe
   </tr>
   <tr>
     <td>Pass a value set in the questionnaire package, but the client recipient will need to run the expansion or ask a terminology server to do the expansion.</td>
-    <td>The value set expansion is on the larger size (> ~40 codes), such that using the $expand with a filter operation will be more efficient from a user interface perspective. These value sets **SHOULD** be expanded by the client and therefore **SHOULD NOT** be included in the questionnaire package.  DTR clients running as SMART on FHIR apps will typically need to hold the complete content of the questionnaire package in memory. Payers **SHOULD** design their questionnaires, value sets, and libraries with the knowledge that content which is too large may cause DTR clients to fail.</td>    
+    <td>The value set expansion is on the larger size (> ~40 codes), such that using the $expand with a filter operation will be more efficient from a user interface perspective. These value sets <b>SHOULD</b> be expanded by the client and therefore <b>SHOULD NOT</b> be included in the questionnaire package.  DTR clients running as SMART on FHIR apps will typically need to hold the complete content of the questionnaire package in memory. Payers <b>SHOULD</b> design their questionnaires, value sets, and libraries with the knowledge that content which is too large may cause DTR clients to fail.</td>    
   </tr>
 </table><br>
 
