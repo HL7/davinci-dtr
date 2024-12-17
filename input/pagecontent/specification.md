@@ -17,7 +17,6 @@ The use of a portal for collection of clinical data to support prior authorizati
 </div>
 <br>
 
----------------------
 #### EHRs and Payers
 Throughout this guide, the term 'EHR' refers to the set of systems acting on behalf of a provider, whether managed directly by the provider organization or by a third-party agency.  Similarly, 'payer' refers to the set of systems acting on behalf of the payer, whether managed directly by the payer or by a third-party agency.  For additional discussion about how this implementation guide functions when EHR and/or payer systems are not monolithic but instead are made up of components, refer to the [ePA Coordinators page](epa.html).
 
