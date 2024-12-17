@@ -279,7 +279,7 @@ The Questionnaire resource provides several mechanisms for conveying coded answe
 
 <table border="1">
   <tr>
-    <th>CQL and Questionnaire terminology usage</th>
+    <th style="width:40%">CQL and Questionnaire terminology usage</th>
     <th>Comment</th>    
   </tr>
   <tr>
