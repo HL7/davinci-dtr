@@ -59,7 +59,7 @@ dependencies:
       Defines expecations for Questionnaires used to gather information
   hl7.fhir.us.davinci-hrex:
     id: hrex
-    version: current
+    version: 1.1.0
     reason: |
       Defines common conformance rules across all Da Vinci IGs, as well as additional constraints and profiles beyond U.S. Core
   hl7.fhir.extensions.r5:
@@ -69,7 +69,7 @@ dependencies:
       Makes available certain R5 elements for use as part of this R4 IG
   hl7.fhir.us.davinci-crd:
     id: crd
-    version: current
+    version: 2.1.0
     reason: |
       Makes available CRD profiles, valuesets, and codes for use as part of this IG
   hl7.fhir.us.davinci-pas:
