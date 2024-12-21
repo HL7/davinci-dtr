@@ -73,8 +73,8 @@ dependencies:
     reason: |
       Makes available CRD profiles, valuesets, and codes for use as part of this IG
   hl7.fhir.us.davinci-pas:
-    id: 2.1.0
-    version: current
+    id: pas
+    version: 2.1.0
 
 pages:
   index.md:
