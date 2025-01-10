@@ -68,6 +68,7 @@ Further details about the project, including minutes of meetings can be found on
     <li>Joshua Lamb (Optum)</li>
     <li>Rachel Foerster (CAQH CORE)</li>
     <li>Sreenivas Reddy Mallipeddi (MCG)</li>
+    <li>Janice Hsieh, Muhammad Ali, Sudhansu Mishra, Shilpi Jain (AETNA)</li>
     <li>Rick Geimer (Lantana Consulting Group)</li>
 </ul>
 </div>
