@@ -8,6 +8,9 @@ Description: "An example [QuestionnaireResponseBundle](StructureDefinition-DTR-Q
 * entry[questionnaire].fullUrl = "http://example.org/fhir/home-o2-questionnairepackage"
 * entry[questionnaire].resource = home-o2-std-questionnaire
 
+* entry[questionnaireResponse].fullUrl = "http://example.org/fhir/home-o2-questionnaireresponse"
+* entry[questionnaireResponse].resource = home-o2-questionnaireresponse
+
 // **********************************************************************************************************************************
 Instance: home-o2-questionnairepackage-bundle-2
 InstanceOf: DTRQuestionnairePackageBundle

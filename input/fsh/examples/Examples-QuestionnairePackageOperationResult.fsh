@@ -11,6 +11,9 @@ Description: "An example of [DTRQuestionnairePackageOperation](OperationDefiniti
 * entry[questionnaire].id = "home-o2-adaptive-questionnaire"
 * entry[questionnaire].resource = home-o2-adaptive-questionnaire
 
+* entry[questionnaireResponse].fullUrl = "http://example.org/fhir/home-o2-questionnaireresponse"
+* entry[questionnaireResponse].resource = home-o2-questionnaireresponse
+
 // ***********************************************************************************************************
 Instance: DTRQuestionnairePackageOperationResultComplex
 InstanceOf: DTRQuestionnairePackageBundle
@@ -24,3 +27,5 @@ Description: "An example of [DTRQuestionnairePackageOperation](OperationDefiniti
 * entry[questionnaire].id = "home-o2-adaptive-questionnaire"
 * entry[questionnaire].resource = home-o2-adaptive-questionnaire
 
+* entry[questionnaireResponse].fullUrl = "http://example.org/fhir/home-o2-questionnaireresponse"
+* entry[questionnaireResponse].resource = home-o2-questionnaireresponse
