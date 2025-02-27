@@ -15,7 +15,7 @@ Description: "This profile represents the Bundle of Questionnaires and Libraries
 * entry ^slicing.description = "Slice different resources included in the bundle"
 * entry contains
     questionnaire 1..1 MS and
-    questionnaireResponse 0..1 MS and
+    questionnaireResponse 1..1 MS and
     valueSet 0..* MS and
     library 0..* MS 
     
