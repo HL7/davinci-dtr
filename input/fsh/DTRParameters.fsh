@@ -106,7 +106,7 @@ Description: "Profile used to validate the parameters that are the input of the 
 * parameter ^slicing.discriminator.type = #value
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.rules = #open
-* parameter contains QuestionnaireResponse 0..*
+* parameter contains QuestionnaireResponse 1..1
 * parameter[QuestionnaireResponse].name = "in" (exactly)
 * parameter[QuestionnaireResponse].value[x] ..0
 * parameter[QuestionnaireResponse].resource only http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse
@@ -130,7 +130,7 @@ Description: "Profile used to validate the parameters that are the output of the
 * parameter ^slicing.discriminator.type = #value
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.rules = #open
-* parameter contains QuestionnaireResponse 0..*
+* parameter contains QuestionnaireResponse 1..1
 * parameter[QuestionnaireResponse].name = "out" (exactly)
 * parameter[QuestionnaireResponse].value[x] ..0
 * parameter[QuestionnaireResponse].resource only http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse
