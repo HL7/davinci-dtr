@@ -532,7 +532,7 @@ The DTR client **SHALL** retrieve the FHIR resources specified in the `dataRequi
     },
 ```
 
-Depending on user permissions, the client might not have access to all the data. Queries SHOULD be constructed to minimize the retrieval of information that is not necessary to answer the relevant questions (For example, queries for medications that only require active medications should have appropriate filters to retrieve active medications and not inactive medications).
+Depending on user permissions, the client might not have access to all the data. Queries **SHOULD** be constructed to minimize the retrieval of information that is not necessary to answer the relevant questions (For example, queries for medications that only require active medications should have appropriate filters to retrieve active medications and not inactive medications).
 It's possible not every CQL statement will be executed (for example some questions may only be enabled given certain answers to prior questions). To reduce data transfers and increase overall speed, data **MAY** be fetched as needed. However, the app's execution engine **MAY** be implemented using a different strategy (for example by doing bulk fetches before starting execution).
 
 #### Populating adaptive questionnaires
