@@ -7,23 +7,23 @@ Alias: USCOREClientCapStatement = http://hl7.org/fhir/us/core/CapabilityStatemen
 
 // ------------------------------------------------------------------------------------------------------------------------
 // CRD artifacts
-Alias: $CRDAppointmentBase = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-appointment-base
-Alias: $CRDPatient = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-patient
-Alias: $CRDCoverage = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-coverage
-Alias: $CRDCommunicationRequest = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-communicationrequest
-Alias: $CRDServiceRequest = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-servicerequest
-Alias: $CRDDeviceRequest = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-devicerequest
-Alias: $CRDVisionPrescription = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-visionprescription
-Alias: $CRDMedicationRequest = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-medicationrequest
-Alias: $CRDNutritionOrder = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-nutritionorder
-Alias: $CRDOrganization = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-organization
-Alias: $CRDOrderDetail = http://hl7.org/fhir/us/davinci-crd/ValueSet/orderDetail
-Alias: $CRDEncounter = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-encounter
-Alias: $CRDCoveredInfo = http://hl7.org/fhir/us/davinci-crd/ValueSet/coverageInfo
-Alias: $CRDCoveragePaDetail = http://hl7.org/fhir/us/davinci-crd/ValueSet/coveragePaDetail
-Alias: $CRDAdditionalDoc = http://hl7.org/fhir/us/davinci-crd/ValueSet/AdditionalDocumentation
-Alias: $CRDInformationNeeded = http://hl7.org/fhir/us/davinci-crd/ValueSet/informationNeeded
-Alias: $CRDDocReason = http://hl7.org/fhir/us/davinci-crd/ValueSet/DocReason
+Alias: $CRDAppointmentBase = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-appointment-base|2.1.0
+Alias: $CRDPatient = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-patient|2.1.0
+Alias: $CRDCoverage = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-coverage|2.1.0
+Alias: $CRDCommunicationRequest = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-communicationrequest|2.1.0
+Alias: $CRDServiceRequest = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-servicerequest|2.1.0
+Alias: $CRDDeviceRequest = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-devicerequest|2.1.0
+Alias: $CRDVisionPrescription = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-visionprescription|2.1.0
+Alias: $CRDMedicationRequest = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-medicationrequest|2.1.0
+Alias: $CRDNutritionOrder = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-nutritionorder|2.1.0
+Alias: $CRDOrganization = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-organization|2.1.0
+Alias: $CRDOrderDetail = http://hl7.org/fhir/us/davinci-crd/ValueSet/orderDetail|2.1.0
+Alias: $CRDEncounter = http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-encounter|2.1.0
+Alias: $CRDCoveredInfo = http://hl7.org/fhir/us/davinci-crd/ValueSet/coverageInfo|2.1.0
+Alias: $CRDCoveragePaDetail = http://hl7.org/fhir/us/davinci-crd/ValueSet/coveragePaDetail|2.1.0
+Alias: $CRDAdditionalDoc = http://hl7.org/fhir/us/davinci-crd/ValueSet/AdditionalDocumentation|2.1.0
+Alias: $CRDInformationNeeded = http://hl7.org/fhir/us/davinci-crd/ValueSet/informationNeeded|2.1.0
+Alias: $CRDDocReason = http://hl7.org/fhir/us/davinci-crd/ValueSet/DocReason|2.1.0
 
 // ------------------------------------------------------------------------------------------------------------------------
 // Miscellaneous artifacts
