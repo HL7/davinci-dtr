@@ -33,7 +33,7 @@ Description:    "Enforces DTR requirements on a completed or partially completed
 
 * author only Reference(Device or $CRDPatient or USCorePractitionerProfile or HRexPractitionerRole or $CRDOrganization or RelatedPerson)
 
-* item 1..*
+* item 0..*
 * item.extension[ItemSignature] MS
 
 * item.answer.extension[itemAnswerMedia] MS
