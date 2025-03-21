@@ -1,3 +1,22 @@
+<p><b>The following issues have been addressed since publication of Release 2.1.0:</b></p>
+<ul>
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49699">FHIR-49699</a>:
+  Mismatched requirements between operation $next-question and QuestionnaireResponse.item
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-50013">FHIR-50013</a>:
+  Requirement for support of $log-questionnaire-errors operation is inconsistent 
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-50020">FHIR-50020</a>:
+  Section on Storing QuestionnaireResponses contains contradictory guidance  
+  </li>
+</ul>
+</div>
+
 ### Release 2.1.0
 <p><b>The following issues are addressed resulting from the STU Update Comment period review:</b></p>
 <ul>
