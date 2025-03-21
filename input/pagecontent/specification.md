@@ -5,6 +5,7 @@ This page is organized into several sections reflecting the various steps involv
 
 The core of this process is summarized in this diagram:
 
+<!-- [![DTRQuestionnairePackageOperation](Sequence-Diagram.png){:style="float: none;width:716px;height:595px"}](Sequence-Diagram.png "Sequence Diagram") -->
 [![DTRQuestionnairePackageOperation](Sequence-Diagram.png){:style="float: none;width:716px;height:465px"}](Sequence-Diagram.png "Sequence Diagram")
 
 <div markdown="1" class="notebox">
@@ -603,11 +604,9 @@ In some cases, the answer to a question modified by a user **MAY** be the input 
 
 ---------------------
 ### Storing QuestionnaireResponses
-If an EHR system performs DTR functionality internally, it **MAY** save session information however it likes. The guidance below does NOT apply in this scenario.
+The DTR process creates a QuestionnaireResponse resource through the course of normal operation.  At any point prior to completion a DTR client **SHALL** be able to save the `in-progress` QuestionnaireResponse, both to ensure that work-in-progress is not lost, and to allow the user to close the session and then relaunch it later. When the QuestionnaireResponse has been marked as `completed`, the DTR client **SHALL** save the QuestionnaireResponse to the EHR.
 
-At any point prior to completion the DTR client **SHALL** be able to save the 'in-progress' QuestionnaireResponse, either to ensure that work-in-progress is not lost, or to allow the user to close the session and then relaunch it later. 
-When the QuestionnaireResponse has been marked as 'complete', the DTR client **SHALL** save the QuestionnaireResponse to the EHR using a create (POST) if the record had not previously been stored, or an update (PUT) if the record had already been saved at least once. 
-The DTR process creates a QuestionnaireResponse resource through the course of normal operation. This resource **SHOULD** be saved to the patient record in the EHR system of the healthcare provider if supported. It **MAY** also be transmitted to the payer IT system.
+A DTR SMART App **SHALL** 'create' the record if it had not previously been stored, or 'update' if the record had already been saved at least once via the FHIR API.
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
