@@ -63,7 +63,7 @@ Description: "Identifies the origin of the information in the answer and how it 
 * extension[source] ^short = "The origination of information"
 * extension[source] ^definition = "The origination of information"
 * extension[source].value[x] 1..1
-* extension[source].value[x] from DTRInformationOrigins (extensible)
+* extension[source].value[x] from DTRInformationOrigins (required)
 * extension[source].value[x] only code
 * extension[source].value[x] ^short = "auto | override | manual"
 
