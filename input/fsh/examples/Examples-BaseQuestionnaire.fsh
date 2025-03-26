@@ -12,4 +12,3 @@ Usage: #example
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">Example base questionnaire</div>"
 * date = "2020-01-16T00:00:00+00:00"
 * publisher = "Da Vinci DTR"
-* item.question
