@@ -1,5 +1,5 @@
 Instance: dtr-questionnaire
-InstanceOf: dtr-base-questionnaire
+InstanceOf: Questionnaire
 Description: "An example base questionnaire."
 Usage: #example
 * url = "http://hl7.org/fhir/us/davinci-dtr/dtr-questionnaire"
