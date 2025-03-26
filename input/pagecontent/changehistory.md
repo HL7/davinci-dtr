@@ -15,6 +15,32 @@
   'Questionnaire for adaptive form Search' profile should prevent including questions
   </li>
 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49724">FHIR-49724</a>:
+  DTR Adaptive form parent should be DTR Questionnaire
+  </li>
+
+  <!-- 
+  
+  <li>
+  <a href="">FHIR-</a>:
+  words
+  </li>
+
+  <li>
+  <a href="">FHIR-</a>:
+  words
+  </li>
+
+  <li>
+  <a href="">FHIR-</a>:
+  words
+  </li> 
+  
+  -->
+
+
+
 
 
   <li>
