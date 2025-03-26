@@ -342,6 +342,7 @@ DTR imposes the following additional rules on CQL use by payers to maximize inte
 * Library names **SHALL** be unique within a Questionnaire package and **SHOULD** be unique across all Libraries made available by the payer (e.g., "expression": \"LowerLimbProsthesis\".PhysicalExaminationType"
 where LowerLimbProsthesis is the library name and PhysicalExaminationType is the expression name).
 * FHIR [Libraries](http://hl7.org/fhir/R4/library.html) **SHALL** send CQL and ELM using the `content.data` element.
+* CQL tools **SHOULD** support additional FHIRPath variables and functions that are defined within SDC.
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 

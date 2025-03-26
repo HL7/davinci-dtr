@@ -35,20 +35,24 @@
   Why is itemOptionalDisplay no longer prohibited?
   </li>
 
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49836">FHIR-49836</a>:
-  Conformance requirements on subjective qualifications is inappropriate
-  </li> 
-
   <!-- 
   
   <li>
   <a href="">FHIR-</a>:
   words
   </li> 
-  
+
   -->
 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49744">FHIR-49744</a>:
+  Document expectations on FHIRPath variables
+  </li> 
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49836">FHIR-49836</a>:
+  Conformance requirements on subjective qualifications is inappropriate
+  </li> 
 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-49699">FHIR-49699</a>:
