@@ -5,6 +5,16 @@
   No guidance or constraint on QuestionnaireResponse Bundle that only one QuestionnaireResponse is allowed
   </li>
 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49343">FHIR-49343</a>:
+  Narrative guidance for QR Bundle needs to change 'will' to 'SHALL'
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49639">FHIR-49639</a>:
+  'Questionnaire for adaptive form Search' profile should prevent including questions
+  </li>
+
 
 
   <li>
