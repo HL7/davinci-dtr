@@ -25,13 +25,14 @@
   Consider making supportLink 0..1
   </li>
 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49730">FHIR-49730</a>:
+  Why is itemOptionalDisplay no longer prohibited?
+  </li>
+
+
   <!-- 
   
-
-  <li>
-  <a href="">FHIR-</a>:
-  words
-  </li>
 
   <li>
   <a href="">FHIR-</a>:
