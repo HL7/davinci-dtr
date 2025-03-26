@@ -13,7 +13,7 @@ Description: "An example Adaptive questionnaire for Home Oxygen Therapy."
 * date = "2020-01-16T00:00:00+00:00"
 * publisher = "Da Vinci DTR"
 * contact.name = "Example Author"
-* derivedFrom = Canonical(dtr-base-questionnaire)
+* derivedFrom = Canonical(dtr-questionnaire)
 
 // * derivedFrom = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-base-questionnaire"
 // * derivedFrom.extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType"
