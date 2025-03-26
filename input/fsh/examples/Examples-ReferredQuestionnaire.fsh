@@ -11,7 +11,7 @@ Description: "Inline Questionnaire for QuestionnaireResponse"
 * date = "2023-08-21T00:00:00+00:00"
 * publisher = "Da Vinci DTR"
 * contact.name = "Example Author"
-* derivedFrom = Canonical(dtr-base-questionnaire)
+* derivedFrom = Canonical(dtr-questionnaire)
 * item[0].linkId = "1"
 * item[=].text = "Patient Information"
 * item[=].type = #group
