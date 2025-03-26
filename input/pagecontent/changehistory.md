@@ -21,6 +21,11 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49726">FHIR-49726</a>:
+  Narrative should not be mandatory (or have extensions)
+  </li> 
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-49729">FHIR-49729</a>:
   Consider making supportLink 0..1
   </li>
@@ -34,7 +39,6 @@
   <a href="https://jira.hl7.org/browse/FHIR-49836">FHIR-49836</a>:
   Conformance requirements on subjective qualifications is inappropriate
   </li> 
-
 
   <!-- 
   
