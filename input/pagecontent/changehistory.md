@@ -1,13 +1,13 @@
 <p><b>The following issues have been addressed since publication of Release 2.1.0:</b></p>
 <ul>
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49339">FHIR-49399</a>:
-  No guidance or constraint on QuestionnaireResponse Bundle that only one QuestionnaireResponse is allowed
+  <a href="https://jira.hl7.org/browse/FHIR-49343">FHIR-49343</a>:
+  Narrative guidance for QR Bundle needs to change 'will' to 'SHALL'
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49343">FHIR-49343</a>:
-  Narrative guidance for QR Bundle needs to change 'will' to 'SHALL'
+  <a href="https://jira.hl7.org/browse/FHIR-49339">FHIR-49399</a>:
+  No guidance or constraint on QuestionnaireResponse Bundle that only one QuestionnaireResponse is allowed
   </li>
 
   <li>
