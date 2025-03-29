@@ -348,7 +348,7 @@ where LowerLimbProsthesis is the library name and PhysicalExaminationType is the
 
 ---------------------
 ### Determination of Payers Supported by a DTR App
-It is possible that the apps used to provide DTR functionality will not support all payers the EHR might have "DTR requests" for. It is important for the EHR to know what payers their app supports so that they only allow their users to launch the DTR app in the context of payers the app will be able to support. (Launching an app only to be told "this payer isn't supported" is an unpleasant user experience.)  
+While all apps must '*technically*' support all payers, it is possible that the apps used to provide DTR functionality will not have the business arrangements in place to allow data sharing with all payers the EHR might have "DTR requests" for. It is important for the EHR to know what payers their app supports so that they only allow their users to launch the DTR app in the context of payers the app will be able to support. (Launching an app only to be told "this payer isn't supported" is an unpleasant user experience.)  
 
 The developer of SMART on FHIR DTR apps **SHALL** define an endpoint maintaining a list of payers currently supported by that app. This listing of Payers is based on the [Supported Payers](StructureDefinition-DTRSupportedPayers.html) logical model also published in this IG.  EHRs using external DTR apps **SHALL** support accessing the endpoint. The EHR will be configured with knowledge of which endpoint to access for a given app as part of the process of configuring support for that app within the EHR. Different endpoints **SHALL** be defined for different versions of the application in situations where support for payers varies by application version.
 
