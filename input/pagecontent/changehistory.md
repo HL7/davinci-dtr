@@ -35,14 +35,10 @@
   Why is itemOptionalDisplay no longer prohibited?
   </li>
 
-  <!-- 
-  
   <li>
-  <a href="">FHIR-</a>:
-  words
+  <a href="https://jira.hl7.org/browse/FHIR-49743">FHIR-49743</a>:
+  Suggest requiring certain extensions based on type
   </li> 
-
-  -->
 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-49744">FHIR-49744</a>:
