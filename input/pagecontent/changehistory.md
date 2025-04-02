@@ -1,58 +1,9 @@
 <p><b>The following issues have been addressed since publication of Release 2.1.0:</b></p>
 <ul>
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49343">FHIR-49343</a>:
-  Narrative guidance for QR Bundle needs to change 'will' to 'SHALL'
-  </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49339">FHIR-49399</a>:
-  No guidance or constraint on QuestionnaireResponse Bundle that only one QuestionnaireResponse is allowed
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49639">FHIR-49639</a>:
-  'Questionnaire for adaptive form Search' profile should prevent including questions
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49724">FHIR-49724</a>:
-  DTR Adaptive form parent should be DTR Questionnaire
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49726">FHIR-49726</a>:
-  Narrative should not be mandatory (or have extensions)
-  </li> 
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49729">FHIR-49729</a>:
-  Consider making supportLink 0..1
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49730">FHIR-49730</a>:
-  Why is itemOptionalDisplay no longer prohibited?
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49743">FHIR-49743</a>:
-  Suggest requiring certain extensions based on type
-  </li> 
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49744">FHIR-49744</a>:
-  Document expectations on FHIRPath variables
-  </li> 
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49836">FHIR-49836</a>:
-  Conformance requirements on subjective qualifications is inappropriate
-  </li> 
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49699">FHIR-49699</a>:
-  Mismatched requirements between operation $next-question and QuestionnaireResponse.item
+  <a href="https://jira.hl7.org/browse/FHIR-50020">FHIR-50020</a>:
+  Section on Storing QuestionnaireResponses contains contradictory guidance  
   </li>
 
   <li>
@@ -61,172 +12,74 @@
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50020">FHIR-50020</a>:
-  Section on Storing QuestionnaireResponses contains contradictory guidance  
+  <a href="https://jira.hl7.org/browse/FHIR-49836">FHIR-49836</a>:
+  Conformance requirements on subjective qualifications is inappropriate
+  </li> 
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49744">FHIR-49744</a>:
+  Document expectations on FHIRPath variables
+  </li> 
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49743">FHIR-49743</a>:
+  Suggest requiring certain extensions based on type
+  </li> 
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49730">FHIR-49730</a>:
+  Why is itemOptionalDisplay no longer prohibited?
   </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49729">FHIR-49729</a>:
+  Consider making supportLink 0..1
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49726">FHIR-49726</a>:
+  Narrative should not be mandatory (or have extensions)
+  </li> 
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49724">FHIR-49724</a>:
+  DTR Adaptive form parent should be DTR Questionnaire
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49699">FHIR-49699</a>:
+  Mismatched requirements between operation $next-question and QuestionnaireResponse.item
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49639">FHIR-49639</a>:
+  'Questionnaire for adaptive form Search' profile should prevent including questions
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49339">FHIR-49399</a>:
+  No guidance or constraint on QuestionnaireResponse Bundle that only one QuestionnaireResponse is allowed
+  </li>
+  
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49343">FHIR-49343</a>:
+  Narrative guidance for QR Bundle needs to change 'will' to 'SHALL'
+  </li>
+
 </ul>
 
 ### Release 2.1.0
 <p><b>The following issues are addressed resulting from the STU Update Comment period review:</b></p>
 <ul>
-    <li>
-  <a href="https://jira.hl7.org/browse/FHIR-46554">FHIR-46554</a>:
-   Include questionnaire details in the example
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-46646">FHIR-46646</a>:
-   Conformance requirement on subjective determination
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-46750">FHIR-46750</a>:
-   Clarify that CQL expectations are for app/EHR, not payer
-  </li>
-  
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-46754">FHIR-46754</a>:
-   $questionnaire-package narrative and DTRQuestionnairePackageBundle do not align.
-  </li>
-  
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-47250">FHIR-47250</a>:
-   Clarify adaptive architecture
-  </li>
-  
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-47706">FHIR-47706</a>:
-   Add support for US Core 7
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-47995">FHIR-47995</a>:
-   Must Support guidance section should be moved from Specification page to a 'Conformance Expectations' page
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48314">FHIR-48314</a>:
-   providers need a way to indicate if they want pre-emptive prior auth as part of adaptive forms
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48487">FHIR-48487</a>:
-   Replace EHR with Provider HIT
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48488">FHIR-48488</a>:
-   Ambiguous SHALL on resource support requirement
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48490">FHIR-48490</a>:
-   $questionnaire-response output parameter name inconsistency
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48494">FHIR-48494</a>:
-   Include CMS requirements
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48495">FHIR-48495</a>:
-   CMS enforcement discretion comes out of nowhere
-  </li> 
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48499">FHIR-48499</a>:
-   add or staff to better capture people who populate
-  </li> 
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48501">FHIR-48501</a>:
-   Change SHOULD to SHALL
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48504">FHIR-48504</a>:
-   Questionnaire-package Bundle Example not updated to only have one questionnaire
-  </li>
-  
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48506">FHIR-48506</a>:
-   SHOULD have CQL logic
-  </li>
  
-   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48508">FHIR-48508</a>:
-   change conformance language for the retrieving launch context
-  </li>
-  
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48510">FHIR-48510</a>:
-   suggest adding "including appeals"
+  <a href="https://jira.hl7.org/browse/FHIR-48744">FHIR-48744</a>:
+   Align endpoint discovery language w/ CRD
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48511">FHIR-48511</a>:
-   Change SHOULD to SHALL
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48513">FHIR-48513</a>:
-   No examples of Questionnaire Package Bundles with a QuestionnaireResponse
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48515">FHIR-48515</a>:
-   Explain Reasoning behind the difference in Questionnaire Adaptive extension cardinality
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48516">FHIR-48516</a>:
-   Clarify QuestionnaireResponse contained Questionnaire Requirements for adaptive questionnaires
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48517">FHIR-48517</a>:
-   Library and ValueSet Caching requirements for DTR Apps and Full EHRs
-  </li>
-  
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48518">FHIR-48518</a>:
-   Are there required DTR client responses to an added coverage-information extension?
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48519">FHIR-48519</a>:
-   Clarify whether FHIRPath is allowed in pre-population expressions
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48520">FHIR-48520</a>:
-   Clarify use of PH Alternate Expression Extension
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48521">FHIR-48521</a>:
-   Determining support for payer questionnaires
-  </li>
-  
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48523">FHIR-48523</a>:
-   Is the "Retrieving Launch Context Information" informational?
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48524">FHIR-48524</a>:
-   Constraining Queries example clarification
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48686">FHIR-48686</a>:
-   Profile $next-question (or create a new operation) so there's an actual use for the DTR adaptive questionnaire profile
-  </li> 
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48694">FHIR-48694</a>:
-   Clarify ValueSet and $expand Guidance
+  <a href="https://jira.hl7.org/browse/FHIR-48728">FHIR-48728</a>:
+   Inconsitency between contexts in CRD and DTR
   </li>
 
   <li>
@@ -235,13 +88,163 @@
   </li> 
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48728">FHIR-48728</a>:
-   Inconsitency between contexts in CRD and DTR
+  <a href="https://jira.hl7.org/browse/FHIR-48694">FHIR-48694</a>:
+   Clarify ValueSet and $expand Guidance
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48744">FHIR-48744</a>:
-   Align endpoint discovery language w/ CRD
+  <a href="https://jira.hl7.org/browse/FHIR-48686">FHIR-48686</a>:
+   Profile $next-question (or create a new operation) so there's an actual use for the DTR adaptive questionnaire profile
+  </li> 
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48524">FHIR-48524</a>:
+   Constraining Queries example clarification
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48523">FHIR-48523</a>:
+   Is the "Retrieving Launch Context Information" informational?
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48521">FHIR-48521</a>:
+   Determining support for payer questionnaires
+  </li>
+  
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48520">FHIR-48520</a>:
+   Clarify use of PH Alternate Expression Extension
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48519">FHIR-48519</a>:
+   Clarify whether FHIRPath is allowed in pre-population expressions
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48518">FHIR-48518</a>:
+   Are there required DTR client responses to an added coverage-information extension?
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48517">FHIR-48517</a>:
+   Library and ValueSet Caching requirements for DTR Apps and Full EHRs
+  </li>
+  
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48516">FHIR-48516</a>:
+   Clarify QuestionnaireResponse contained Questionnaire Requirements for adaptive questionnaires
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48515">FHIR-48515</a>:
+   Explain Reasoning behind the difference in Questionnaire Adaptive extension cardinality
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48513">FHIR-48513</a>:
+   No examples of Questionnaire Package Bundles with a QuestionnaireResponse
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48511">FHIR-48511</a>:
+   Change SHOULD to SHALL
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48510">FHIR-48510</a>:
+   suggest adding "including appeals"
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48508">FHIR-48508</a>:
+   change conformance language for the retrieving launch context
+  </li>
+ 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48506">FHIR-48506</a>:
+   SHOULD have CQL logic
+  </li>
+ 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48504">FHIR-48504</a>:
+   Questionnaire-package Bundle Example not updated to only have one questionnaire
+  </li>
+  
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48501">FHIR-48501</a>:
+   Change SHOULD to SHALL
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48499">FHIR-48499</a>:
+   add or staff to better capture people who populate
+  </li> 
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48495">FHIR-48495</a>:
+   CMS enforcement discretion comes out of nowhere
+  </li> 
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48494">FHIR-48494</a>:
+   Include CMS requirements
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48490">FHIR-48490</a>:
+   $questionnaire-response output parameter name inconsistency 
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48488">FHIR-48488</a>:
+   Ambiguous SHALL on resource support requirement
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48487">FHIR-48487</a>:
+   Replace EHR with Provider HIT
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48314">FHIR-48314</a>:
+   providers need a way to indicate if they want pre-emptive prior auth as part of adaptive forms
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-47995">FHIR-47995</a>:
+   Must Support guidance section should be moved from Specification page to a 'Conformance Expectations' page
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-47706">FHIR-47706</a>:
+   Add support for US Core 7
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-47250">FHIR-47250</a>:
+   Clarify adaptive architecture
+  </li>
+  
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-46754">FHIR-46754</a>:
+   $questionnaire-package narrative and DTRQuestionnairePackageBundle do not align.
+  </li>
+  
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-46750">FHIR-46750</a>:
+   Clarify that CQL expectations are for app/EHR, not payer
+  </li>
+  
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-46646">FHIR-46646</a>:
+   Conformance requirement on subjective determination
+  </li>
+  
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-46554">FHIR-46554</a>:
+   Include questionnaire details in the example
   </li>
 
 </ul>
