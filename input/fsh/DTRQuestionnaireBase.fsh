@@ -34,10 +34,10 @@ Description: "Takes a subset of extensions and constraints from the SDC [renderi
 * extension contains http://hl7.org/fhir/StructureDefinition/cqf-library named cqf-library 0..* MS
 * extension[cqf-library] ^short = "The library can contain CQL, FHIRPath or x-fhir-query. The implementers must handle any of the above."
 * extension[cqf-library].valueCanonical only Canonical(http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-library)
-* extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext named launchContext 0..* MS
-* extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext named itemPopulationContext 0..* MS
-* extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-entryMode named entryMode 0..* MS
-* extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-endpoint named endpoint 0..0
+* extension contains sdcLaunchContext named launchContext 0..* MS
+* extension contains sdcItemPopulationContext named itemPopulationContext 0..* MS
+* extension contains sdcEntryMode named entryMode 0..* MS
+* extension contains sdcEndpoint named endpoint 0..0
 
 // ***********************************************************************************************************************************************
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-hidden named itemHidden 0..1 MS
@@ -66,20 +66,20 @@ Description: "Takes a subset of extensions and constraints from the SDC [renderi
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-unitValueSet named unitValueSet 0..1 MS
 * item.extension[unitValueSet] ^comment = "Provide either unitOption(s) or unitValueSet. If either of the extensions are present, the units for a Quantity element are constrained to only the units listed by the extensions - i.e. it is treated as a \"required\", not an \"extensible\" binding. In the absence of either, any unit is valid. See additional guidance and examples in the [SDC implementation guide](http://hl7.org/fhir/uv/sdc/behavior.html#unitValueSet). If this extension present and an answer is provided for the question item in the QuestionnaireResponse, then the valueQuantity **SHALL** have a Quantity.code and Quantity.system that match the Coding.code and system of one of the allowed values if the Coding has a code and/or system. If the Coding only has a display, then the Quantity.unit must match. (Note that Coding with only a display is strongly discouraged.) If there is a match on code and system, but no match on display/unit, systems MAY raise a warning. However, because of translation and bandwidth considerations, some systems **MAY** opt to drop the unit or express it in an alternate language. Validation of the Quantity unit **MAY** be performed by using the $validateCode operation, populating the elements passed into the operation from the Quantity.code, system and unit elements."
 
-* item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemMedia named itemMedia 0..1
-* item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-optionalDisplay named itemOptionalDisplay 0..0
-* item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-shortText named shortText 0..1
-* item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel named openLabel 0..1
-* item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-choiceColumn named choiceColumn 0..*
-* item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-width named width 0..1
-* item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-collapsible named collapsible 0..1
-* item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-minQuantity named minQuantity 0..1
-* item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-maxQuantity named maxQuantity 0..1
-* item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-candidateExpression named candidateExpression 0..1 MS
-* item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-lookupQuestionnaire named lookupQuestionnaire 0..1 MS
-* item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression named initialExpression 0..1 MS
-* item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression named calculatedExpression 0..1 MS
-* item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-contextExpression named contextExpression 0..* MS
+* item.extension contains sdcItemMedia named itemMedia 0..1
+* item.extension contains sdcOptionalDisplay named itemOptionalDisplay 0..0
+* item.extension contains sdcShortText named shortText 0..1
+* item.extension contains sdcOpenLabel named openLabel 0..1
+* item.extension contains sdcChoiceColumn named choiceColumn 0..*
+* item.extension contains sdcWidth named width 0..1
+* item.extension contains sdcCollapsible named collapsible 0..1
+* item.extension contains sdcMinQuantity named minQuantity 0..1
+* item.extension contains sdcMaxQuantity named maxQuantity 0..1
+* item.extension contains sdcCandidateExpression named candidateExpression 0..1 MS
+* item.extension contains sdcLookupQuestionnaire named lookupQuestionnaire 0..1 MS
+* item.extension contains sdcInitialExpression named initialExpression 0..1 MS
+* item.extension contains sdcCalculatedExpression named calculatedExpression 0..1 MS
+* item.extension contains sdcContextExpression named contextExpression 0..* MS
 
 * item.text 1..1
 * item.text.extension contains http://hl7.org/fhir/StructureDefinition/rendering-style named itemTextRenderingStyle 0..1
@@ -91,6 +91,6 @@ Description: "Takes a subset of extensions and constraints from the SDC [renderi
 * item.answerOption.value[x].extension contains http://hl7.org/fhir/StructureDefinition/rendering-xhtml named answerOptionRenderingXhtml 0..1 MS
 * item.answerOption.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-optionExclusive named optionExclusive 0..1 MS
 * item.answerOption.extension contains http://hl7.org/fhir/StructureDefinition/ordinalValue named ordinalValue 0..1
-* item.answerOption.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemAnswerMedia named itemAnswerMedia 0..1
+* item.answerOption.extension contains sdcItemAnswerMedia named itemAnswerMedia 0..1
 
 * effectivePeriod MS
