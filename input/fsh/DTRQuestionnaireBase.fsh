@@ -38,10 +38,9 @@ Description: "Takes a subset of extensions and constraints from the SDC [renderi
 // * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemMedia named itemMedia 0..1
 // * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-optionalDisplay named itemOptionalDisplay 0..0
 // * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-shortText named shortText 0..1
-
-* item.extension contains {{site.data.fhir.ver.sdc}}StructureDefinition/sdc-questionnaire-itemMedia named itemMedia 0..1
-* item.extension contains {{site.data.fhir.ver.sdc}}StructureDefinition/sdc-questionnaire-optionalDisplay named itemOptionalDisplay 0..0
-* item.extension contains {{site.data.fhir.ver.sdc}}StructureDefinition/sdc-questionnaire-shortText named shortText 0..1
+* item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemMedia named itemMedia 0..1
+* item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-optionalDisplay named itemOptionalDisplay 0..0
+* item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-shortText named shortText 0..1
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-hidden named itemHidden 0..1 MS
 * item.extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel named openLabel 0..1
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl named itemControl 0..1 MS
