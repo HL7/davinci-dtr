@@ -14,7 +14,7 @@ Description: "Takes a subset of extensions and constraints from the SDC [renderi
 * ^date = "2021-11-12T02:27:35+00:00"
 * ^abstract = true
 
-// * obeys dtrq-2 
+* obeys dtrq-2 
 // * obeys dtrq-3 
 // * obeys dtrq-4 
 // * obeys dtrq-5
