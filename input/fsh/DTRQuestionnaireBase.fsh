@@ -14,9 +14,9 @@ Description: "Takes a subset of extensions and constraints from the SDC [renderi
 * ^date = "2021-11-12T02:27:35+00:00"
 * ^abstract = true
 
-// * obeys dtrq-2 
-* obeys dtrq-3 
-* obeys dtrq-4 
+* obeys dtrq-2 
+// * obeys dtrq-3 
+// * obeys dtrq-4 
 // * obeys dtrq-5
 
 * text.div ^comment = "The contents of the html element are an XHTML fragment containing only the basic html formatting elements described in chapters 7-11 and 15 of the HTML 4.0 standard, 'anchor' elements (either name or href), images and internally contained stylesheets. The XHTML content SHALL NOT contain a head, a body, external stylesheet references, scripts, forms, base/link/xlink, frames, iframes and objects."
