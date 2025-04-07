@@ -5,10 +5,10 @@ Severity: #error
 Expression: "type = 'group' or extension.url = 'http://hl7.org/fhir/StructureDefinition/cqf-expression'"
 
 /*****************************************************************************************************/
-Invariant: dtrq-2
-Description: "if item type is 'choice' or 'open-choice', then it should have either the answerOption, answerValueSet, or answerExpression extension"
-Severity: #warning
-Expression: "(type='choice' or type='open-choice') implies answerOption.exists() or answerValueSet.exists() or extension('http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression').exists()"
+// Invariant: dtrq-2
+// Description: "if item type is 'choice' or 'open-choice', then it should have either the answerOption, answerValueSet, or answerExpression extension"
+// Severity: #warning
+// Expression: "(type='choice' or type='open-choice') implies answerOption.exists() or answerValueSet.exists() or extension('http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression').exists()"
 
 /*****************************************************************************************************/
 Invariant: dtrq-3
@@ -23,10 +23,10 @@ Severity: #error
 Expression: "(type='reference') implies extension.where(url='http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource').exists()"
 
 /*****************************************************************************************************/
-Invariant: dtrq-5
-Description: "if item type is Reference, then it should have a candidateExpression extension"
-Severity: #warning
-Expression: "(type='reference') implies extension.where(url='http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-candidateExpression').exists()"
+// Invariant: dtrq-5
+// Description: "if item type is Reference, then it should have a candidateExpression extension"
+// Severity: #warning
+// Expression: "(type='reference') implies extension.where(url='http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-candidateExpression').exists()"
 
 /*****************************************************************************************************/
 Invariant:  dtr-1
