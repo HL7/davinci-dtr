@@ -6,9 +6,9 @@ Expression: "type = 'group' or extension.url = 'http://hl7.org/fhir/StructureDef
 
 /*****************************************************************************************************/
 // Invariant: dtrq-2
-Description: "if item type is 'choice' or 'open-choice', then it should have either the answerOption, answerValueSet, or answerExpression extension"
-Severity: #warning
-Expression: "(type='choice' or type='open-choice') implies answerOption.exists() or answerValueSet.exists() or extension('http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression').exists()"
+// Description: "if item type is 'choice' or 'open-choice', then it should have either the answerOption, answerValueSet, or answerExpression extension"
+// Severity: #warning
+// Expression: "(type='choice' or type='open-choice') implies answerOption.exists() or answerValueSet.exists() or extension('http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression').exists()"
 
 /*****************************************************************************************************/
 // Invariant: dtrq-3
