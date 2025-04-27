@@ -76,15 +76,15 @@ Description:    "The Parameters profile used to define the inputs to the [$log-q
 * parameter ^slicing.description = "Slice based on $this pattern"
 * parameter 1..* MS
 * parameter contains 
-    questionnaire 0..* and 
-    outcome 0..*
+    questionnaire 0..* MS and 
+    outcome 0..* MS
 * parameter[questionnaire].name = "questionnaire"
 * parameter[questionnaire] ^short = "The Questionnaire generating the errors (The reference SHOULD be version-specific)"
-* parameter[questionnaire].value[x] 1..1 MS
+* parameter[questionnaire].value[x] 1..1
 * parameter[questionnaire].value[x] only canonical
   * ^type.targetProfile = "http://hl7.org/fhir/StructureDefinition/Questionnaire"
 * parameter[outcome].name = "operationOutcome"
-* parameter[outcome].resource 1..1 MS
+* parameter[outcome].resource 1..1
 * parameter[outcome].resource only OperationOutcome
 * parameter[outcome] ^short = "Operation Outcome associated with the Questionnaire/CQL"
 
