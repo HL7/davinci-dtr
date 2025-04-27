@@ -11,22 +11,22 @@ Severity: #warning
 Expression: "(type='choice' or type='open-choice') implies answerOption.exists() or answerValueSet.exists() or extension('http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression').exists()"
 
 /*****************************************************************************************************/
-// Invariant: dtrq-3
-// Description: "if item type is Quantity, then it should have either the unitOption or unitValueSet extension"
-// Severity: #warning
-// Expression: "(type='quantity') implies extension.where(url='http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption').exists() or extension.where(url='http://hl7.org/fhir/StructureDefinition/questionnaire-unitValueSet').exists()"
+Invariant: dtrq-3
+Description: "if item type is Quantity, then it should have either the unitOption or unitValueSet extension"
+Severity: #warning
+Expression: "(type='quantity') implies extension.where(url='http://hl7.org/fhir/StructureDefinition/questionnaire-unitOption').exists() or extension.where(url='http://hl7.org/fhir/StructureDefinition/questionnaire-unitValueSet').exists()"
 
 /*****************************************************************************************************/
-// Invariant: dtrq-4
-// Description: "if item type is Reference, then it must have a referenceResource extension"
-// Severity: #error
-// Expression: "(type='reference') implies extension.where(url='http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource').exists()"
+Invariant: dtrq-4
+Description: "if item type is Reference, then it must have a referenceResource extension"
+Severity: #error
+Expression: "(type='reference') implies extension.where(url='http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource').exists()"
 
 /*****************************************************************************************************/
-// Invariant: dtrq-5
-// Description: "if item type is Reference, then it should have a candidateExpression extension"
-// Severity: #warning
-// Expression: "(type='reference') implies extension.where(url='http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-candidateExpression').exists()"
+Invariant: dtrq-5
+Description: "if item type is Reference, then it should have a candidateExpression extension"
+Severity: #warning
+Expression: "(type='reference') implies extension.where(url='http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-candidateExpression').exists()"
 
 /*****************************************************************************************************/
 Invariant:  dtr-1

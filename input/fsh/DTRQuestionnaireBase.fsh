@@ -14,10 +14,6 @@ Description: "Takes a subset of extensions and constraints from the SDC [renderi
 * ^date = "2021-11-12T02:27:35+00:00"
 * ^abstract = true
 
-// * obeys dtrq-3 
-// * obeys dtrq-4 
-// * obeys dtrq-5
-
 * text.div ^comment = "The contents of the html element are an XHTML fragment containing only the basic html formatting elements described in chapters 7-11 and 15 of the HTML 4.0 standard, 'anchor' elements (either name or href), images and internally contained stylesheets. The XHTML content SHALL NOT contain a head, a body, external stylesheet references, scripts, forms, base/link/xlink, frames, iframes and objects."
 * subjectType 1..1
 * subjectType = #Patient
@@ -42,7 +38,7 @@ Description: "Takes a subset of extensions and constraints from the SDC [renderi
 * extension contains sdcEndpoint named endpoint 0..0
 
 // ***********************************************************************************************************************************************
-* item obeys dtrq-2 
+* item obeys dtrq-2 and dtrq-3 and dtrq-4 and dtrq-5
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-hidden named itemHidden 0..1 MS
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl named itemControl 0..1 MS
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation named choiceOrientation 0..1
@@ -78,8 +74,18 @@ Description: "Takes a subset of extensions and constraints from the SDC [renderi
 * item.extension contains sdcCollapsible named collapsible 0..1
 * item.extension contains sdcMinQuantity named minQuantity 0..1
 * item.extension contains sdcMaxQuantity named maxQuantity 0..1
-* item.extension contains sdcCandidateExpression named candidateExpression 0..1 MS
 * item.extension contains sdcLookupQuestionnaire named lookupQuestionnaire 0..1 MS
+
+// * item.extension contains sdcCandidateExpression named candidateExpression 0..1 MS
+// * item.extension[candidateExpression].valueExpression.extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/alternativeExpression named alternativeExpression 0..1 MS
+// * item.extension contains sdcInitialExpression named initialExpression 0..1 MS
+// * item.extension[initialExpression].valueExpression.extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/alternativeExpression named alternativeExpression 0..1 MS
+// * item.extension contains sdcCalculatedExpression named calculatedExpression 0..1 MS
+// * item.extension[calculatedExpression].valueExpression.extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/alternativeExpression named alternativeExpression 0..1 MS
+// * item.extension contains sdcContextExpression named contextExpression 0..* MS
+// * item.extension[contextExpression].extension[expression].valueExpression.extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/alternativeExpression named alternativeExpression 0..1 MS
+
+* item.extension contains sdcCandidateExpression named candidateExpression 0..1 MS
 * item.extension contains sdcInitialExpression named initialExpression 0..1 MS
 * item.extension contains sdcCalculatedExpression named calculatedExpression 0..1 MS
 * item.extension contains sdcContextExpression named contextExpression 0..* MS
