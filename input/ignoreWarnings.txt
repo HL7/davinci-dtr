@@ -4,17 +4,7 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-dtr/Str
   
   
 # See Grahame's statement regarding this issue: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/questionnaire-derivationType.20warning.20question
-WARNING: Bundle/DTRQuestionnairePackageOperationResultComplex: Bundle.entry[0].resource/*Questionnaire/home-o2-adaptive-questionnaire*/.derivedFrom[0]: The questionnaire 'http://hl7.org/fhir/us/davinci-dtr/dtr-base-questionnaire' has no derivation type specified using the 'http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType' extension, so derivation has not been checked
-
-WARNING: Bundle/DTRQuestionnairePackageOperationResultComplex: Bundle.entry[0].resource.derivedFrom[0]: The questionnaire 'http://hl7.org/fhir/us/davinci-dtr/dtr-base-questionnaire' has no derivation type specified using the 'http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType' extension, so derivation has not been checked
-
-WARNING: Bundle/DTRQuestionnairePackageOperationResultSimple: Bundle.entry[0].resource/*Questionnaire/home-o2-adaptive-questionnaire*/.derivedFrom[0]: The questionnaire 'http://hl7.org/fhir/us/davinci-dtr/dtr-base-questionnaire' has no derivation type specified using the 'http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType' extension, so derivation has not been checked
-
-WARNING: Bundle/DTRQuestionnairePackageOperationResultSimple: Bundle.entry[0].resource.derivedFrom[0]: The questionnaire 'http://hl7.org/fhir/us/davinci-dtr/dtr-base-questionnaire' has no derivation type specified using the 'http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType' extension, so derivation has not been checked
-
-WARNING: Questionnaire/referred-questionnaire: Questionnaire.derivedFrom[0]: The questionnaire 'http://hl7.org/fhir/us/davinci-dtr/dtr-base-questionnaire' has no derivation type specified using the 'http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType' extension, so derivation has not been checked
-
-WARNING: QuestionnaireResponse/home-o2-adaptive-questionnaireresponse: QuestionnaireResponse.contained[0]/*Questionnaire/home-o2-adaptive-questionnaire*/.derivedFrom[0]: The questionnaire 'http://hl7.org/fhir/us/davinci-dtr/dtr-base-questionnaire' has no derivation type specified using the 'http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType' extension, so derivation has not been checked
+%has no derivation type specified using the%
 
 # These are incorrectly declared as 'draft' in their source IGs
 Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/practitioner-role|1.0.0
