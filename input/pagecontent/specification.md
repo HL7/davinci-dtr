@@ -121,8 +121,8 @@ Rules and logic are hidden and only questions relevant to the current member/ord
  </td>   
   </tr>
   <tr>
-    <td>Only <code>$questionnaire-package</code> operation is needed</td>
-    <td>Payer must support both <code>$questionnaire-package</code> and <code>$next-question</code> operations</td>    
+    <td>Only <a href="OperationDefinition-questionnaire-package.html"><code>$questionnaire-package</code></a> operation is needed</td>
+    <td>Payer must support both <a href="OperationDefinition-questionnaire-package.html"><code>$questionnaire-package</code></a> and <a href="OperationDefinition-DTR-Questionnaire-next-question.html"><code>$next-question</code></a> operations</td>    
   </tr>
   <tr>
     <td>Logic for which questions are asked and which answers are available is encoded in the Questionnaire, possibly using CQL, and is executed by the DTR app/EHR.</td>
@@ -137,7 +137,7 @@ Rules and logic are hidden and only questions relevant to the current member/ord
     <td>Code defining rules for what questions to display, the text of the question, the answers available, etc. can depend on calls to other payer interfaces and can leverage logic of any needed level of complexity, including using third-party rules engines.</td>    
   </tr>
   <tr>
-    <td>Any population from payer data must occur at the time the <code>$questionnaire-package</code> operation is called and cannot be dependent on data populated from the EHR or entered by the user.</td>
+    <td>Any population from payer data must occur at the time the <a href="OperationDefinition-questionnaire-package.html"><code>$questionnaire-package</code></a> operation is called and cannot be dependent on data populated from the EHR or entered by the user.</td>
     <td>Answers to later questions can be pre-populated from payer data based on previously answered questions (whether answered by pre-population from the EHR or by users)</td>    
   </tr>
   <tr>
@@ -145,14 +145,14 @@ Rules and logic are hidden and only questions relevant to the current member/ord
     <td>Individual questions could theoretically be shared, but any special logic around which questions are asked or answers are available would not be easily shareable</td>    
   </tr>
   <tr>
-    <td>Logic cannot leverage payer data except as present in pre-populated answers in the initial QuestionnaireResponse provided in the <code>$questionnaire-package</code> operation</td>
-    <td><code>$next-question</code> logic is free to leverage data held by the payer about the member, plan, or other information
+    <td>Logic cannot leverage payer data except as present in pre-populated answers in the initial QuestionnaireResponse provided in the <a href="OperationDefinition-questionnaire-package.html"><code>$questionnaire-package</code></a> operation</td>
+    <td><a href="OperationDefinition-DTR-Questionnaire-next-question.html"><code>$next-question</code></a> logic is free to leverage data held by the payer about the member, plan, or other information
     </td>    
   </tr>
   <tr>
     <td>Outcomes of the Questionnaire process are only reflected in answers in the QuestionnaireResponse
     </td>
-    <td>The QuestionnaireResponse returned by <code>$next-question</code> can contain extensions as well as answers – such as the <a href="https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html"><code>coverage-information</code></a> extension (see below)
+    <td>The QuestionnaireResponse returned by <a href="OperationDefinition-DTR-Questionnaire-next-question.html"><code>$next-question</code></a> can contain extensions as well as answers – such as the <a href="https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html"><code>coverage-information</code></a> extension (see below)
     </td>    
   </tr>
   <tr>
