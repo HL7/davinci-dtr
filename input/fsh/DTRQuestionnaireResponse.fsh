@@ -14,13 +14,13 @@ Description:    "Enforces DTR requirements on a completed or partially completed
 
 * extension[signature] MS
 
-* extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/qr-context named context 2..*
+* extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/qr-context named context 2..* MS
 * extension[context] ^short = "Identifies the orders, coverages, and or other resources associated with the specified QuestionnaireResponse. The QuestionnaireResponse SHALL have at least one context that refers to a patient Coverage AND at least one context that refers to a Request resource or Encounter"
 
 * extension contains CRDCoverageInformation named coverage-information 0..* MS
 * extension[coverage-information] ^short = "Coverage Info"
 
-* extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/intendedUse named intendedUse 1..* 
+* extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/intendedUse named intendedUse 1..* MS
 * extension[intendedUse] ^short = "Indicates how the EHR is to use the information with respect to the associated orders/records."
 
 * basedOn 0..0
