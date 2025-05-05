@@ -591,7 +591,7 @@ This guide contains certain expectations around the use of ['contained'](https:/
 
 * All references within the QuestionnaireResponse **SHALL** only point to either contained resources or to resources that reside on the DTR client's FHIR endpoint.  (It is not acceptable to point to resources on the payer's endpoint or anywhere else).
 * The only situation where a resource can be ['contained'](https://hl7.org/fhir/R4/references.html#contained) **SHALL** be if the contained instance is provided by the payer either:
-  *  In the initial partially pre-populated QuestionnaireResponse that is provided in the [$questionnaire-package](OperationDefinition-questionnaire-package.html) operation, or 
+  *  In the initial partially pre-populated QuestionnaireResponse that is provided in the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation, or 
   *  In a response to the [`$next-question`](OperationDefinition-DTR-Questionnaire-next-question.html) operation.
 * The only place ['contained'](https://hl7.org/fhir/R4/references.html#contained) resource references are permitted **SHALL** be in `item.answer` references.  (References such as subject or author will never be contained resources).
 
