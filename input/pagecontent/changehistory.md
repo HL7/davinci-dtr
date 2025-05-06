@@ -2,6 +2,11 @@
 <ul>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-50587">FHIR-50587</a>:
+  Need clarity on expectation for QR contained resources  
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-50020">FHIR-50020</a>:
   Section on Storing QuestionnaireResponses contains contradictory guidance  
   </li>
@@ -12,8 +17,23 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49845">FHIR-49845</a>:
+  Missing mustSupports
+  </li> 
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-49836">FHIR-49836</a>:
   Conformance requirements on subjective qualifications is inappropriate
+  </li> 
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49815">FHIR-49815</a>:
+  Conflicting requirements for app support of payers
+  </li> 
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49814">FHIR-49814</a>:
+  alternateExpression needs to be in Questionnaire profiles
   </li> 
 
   <li>
