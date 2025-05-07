@@ -83,7 +83,7 @@
   
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-49343">FHIR-49343</a>:
-  Narrative guidance for QuestionnaireResponse Bundle change of 'will' to 'SHALL' addressed by ticket <a href="https://jira.hl7.org/browse/FHIR-49339">FHIR-49399</a>
+  Narrative guidance for QuestionnaireResponse Bundle change of 'will' to <b>SHALL</b> addressed by ticket <a href="https://jira.hl7.org/browse/FHIR-49339">FHIR-49399</a>
   </li>
 
 </ul>
