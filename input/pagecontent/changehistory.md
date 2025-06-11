@@ -1,4 +1,4 @@
-### Release 2.1.0
+### Release 2.2.0
 <p><b>The following issues have been addressed since publication of Release 2.1.0:</b></p>
 <ul>
   <li>
