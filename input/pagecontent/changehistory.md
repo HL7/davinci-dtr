@@ -1,16 +1,6 @@
 ### Release 2.2.0
-<p><b>The following issues have been addressed since publication of Release 2.1.0:</b></p>
+<p><b>Substantive and breaking changes:</b></p>
 <ul>
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50587">FHIR-50587</a> (Non-substantive):<br>
-  Added 'QuestionnaireResponse Contained Resources' section describing expectations for contained resources within QuestionnaireResponses.
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50587">FHIR-50587</a> (Non-substantive):<br>
-  Added 'QuestionnaireResponse Contained Resources' section describing expectations for contained resources within QuestionnaireResponses.
-  </li>
-
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-50020">FHIR-50020</a> (Compatible, substantive):<br>
   Rewrote section on Storing QuestionnaireResponses because it contained contradictory guidance and was misleading.   
@@ -32,16 +22,6 @@
   </li> 
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49815">FHIR-49815</a> (Non-substantive):<br>
-  Updated narrative in 'EHR to App Connectivity' to provide clarity around DTR support for payers.
-  </li> 
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49814">FHIR-49814</a> (Non-substantive):<br>
-  Added <code>alternateExpression</code> extension (as mustSupport) to each 'expression' extension in the Questionnaire profiles.
-  </li> 
-
-  <li>
   <a href="https://jira.hl7.org/browse/FHIR-49744">FHIR-49744</a> (Compatible, substantive):<br>
   Included narrative guidance within section '9.6.3 CQL Constraints' indicating that DTR <b>SHOULD</b> support additional FHIRPath variables/functions.
   </li> 
@@ -50,11 +30,6 @@
   <a href="https://jira.hl7.org/browse/FHIR-49743">FHIR-49743</a> (Compatible, substantive):<br>
   Added new invariants to Questionnaires that require certain extensions based on question type.
   </li> 
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49730">FHIR-49730</a> (Non-substantive):<br>
-  Constrained out <code>itemOptionalDisplay</code> in base questionnaire.
-  </li>
 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-49729">FHIR-49729</a> (Compatible, substantive):<br>
@@ -77,20 +52,47 @@
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49639">FHIR-49639</a> (Non-substantive):<br>
-  Adaptive Form Search profile modified to constrain out (0..0) the item due to questions not being relevant and were marked as MustSupport.
-  </li>
-
-  <li>
   <a href="https://jira.hl7.org/browse/FHIR-49339">FHIR-49339</a> (Non-compatible):<br>
   Sliced QuestionnaireResponseBundle entry to enforce a single QuestionnaireResponse (1..1) and provided clearer guidance in specification.
   </li>
-  
+</ul>
+
+<p><b>Non-Substantive changes:</b></p>
+<ul>
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-50587">FHIR-50587</a> (Non-substantive):<br>
+  Added 'QuestionnaireResponse Contained Resources' section describing expectations for contained resources within QuestionnaireResponses.
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-50587">FHIR-50587</a> (Non-substantive):<br>
+  Added 'QuestionnaireResponse Contained Resources' section describing expectations for contained resources within QuestionnaireResponses.
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49815">FHIR-49815</a> (Non-substantive):<br>
+  Updated narrative in 'EHR to App Connectivity' to provide clarity around DTR support for payers.
+  </li> 
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49814">FHIR-49814</a> (Non-substantive):<br>
+  Added <code>alternateExpression</code> extension (as mustSupport) to each 'expression' extension in the Questionnaire profiles.
+  </li> 
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49730">FHIR-49730</a> (Non-substantive):<br>
+  Constrained out <code>itemOptionalDisplay</code> in base questionnaire.
+  </li>
+ 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49639">FHIR-49639</a> (Non-substantive):<br>
+  Adaptive Form Search profile modified to constrain out (0..0) the item due to questions not being relevant and were marked as MustSupport.
+  </li>
+ 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-49343">FHIR-49343</a> (Non-substantive):<br>
   Narrative guidance for QuestionnaireResponse Bundle change of 'will' to <b>SHALL</b> addressed by ticket <a href="https://jira.hl7.org/browse/FHIR-49339">FHIR-49399</a>.
   </li>
-
 </ul>
 
 ### Release 2.1.0
