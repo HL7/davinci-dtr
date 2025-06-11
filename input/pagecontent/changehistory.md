@@ -1,5 +1,10 @@
+### Release 2.1.0
 <p><b>The following issues have been addressed since publication of Release 2.1.0:</b></p>
 <ul>
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-50587">FHIR-50587</a> (Non-substantive):<br>
+  Added 'QuestionnaireResponse Contained Resources' section describing expectations for contained resources within QuestionnaireResponses.
+  </li>
 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-50587">FHIR-50587</a> (Non-substantive):<br>
