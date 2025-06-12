@@ -56,6 +56,7 @@
   Sliced QuestionnaireResponseBundle entry to enforce a single QuestionnaireResponse (1..1) and provided clearer guidance in specification.
   </li>
 </ul>
+<br/>
 
 <p><b>Non-Substantive changes:</b></p>
 <ul>
