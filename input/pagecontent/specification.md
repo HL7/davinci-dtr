@@ -232,7 +232,7 @@ It will be unusual for a <code>coverage-information</code> extension created by 
   </table>
 </div><br>
 
-If an adaptive questionnaire response includes an unsolicited determination that authorization requirements have been 'satisfied', the EHR **SHALL** allow the clinician to flag the provided determination number as "not valid".  For example, If they feel the determination was based on incorrect information. If a payer receives a new invocation of an adaptive form for the same order, they **SHALL** treat the result of the new completion as replacing any previous completion from a prior coverage determination process. 
+If an adaptive QuestionnaireResponse includes an unsolicited determination that authorization requirements have been 'satisfied', the EHR **SHALL** allow the clinician to flag the provided determination number as "not valid".  For example, If they feel the determination was based on incorrect information. If a payer receives a new invocation of an adaptive form for the same order, they **SHALL** treat the result of the new completion as replacing any previous completion from a prior coverage determination process. 
 
 If a final DTR QuestionnaireResponse includes a Coverage Information extension, the DTR Client **SHALL** associate the Coverage Information returned with the relevant Appointment, Encounter and/or Request resources and **SHALL** make the information provided in the extension available to their users for viewing.  This might be managed with icons, flyovers, or other mechanisms as is appropriate to the workflow of the users of that DTR Client.
 
