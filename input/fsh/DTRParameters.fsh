@@ -27,7 +27,8 @@ Description:    "The Parameters profile used to define the inputs of the [$quest
 * parameter[questionnaire].name = "questionnaire"
 * parameter[questionnaire].value[x] 1..1 MS
 * parameter[questionnaire].value[x] only canonical
-  * ^type.targetProfile = "http://hl7.org/fhir/StructureDefinition/Questionnaire"
+  * ^type.targetProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-std-questionnaire|2.1.0"
+
 * parameter[context].name = "context"
 * parameter[context] ^short = "CRD or CDex-provided context"
 * parameter[context].value[x] 1..1 MS
@@ -109,7 +110,7 @@ Description: "Profile used to validate the parameters that are the input of the 
 * parameter contains QuestionnaireResponse 1..1
 * parameter[QuestionnaireResponse].name = "questionnaire-response-in" (exactly)
 * parameter[QuestionnaireResponse].value[x] ..0
-* parameter[QuestionnaireResponse].resource only http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse
+* parameter[QuestionnaireResponse].resource only dtr-questionnaireresponse-adapt
 * parameter[QuestionnaireResponse].part ..0
 
 /**************************************************************************************************************/
@@ -133,5 +134,5 @@ Description: "Profile used to validate the parameters that are the output of the
 * parameter contains QuestionnaireResponse 1..1
 * parameter[QuestionnaireResponse].name = "questionnaire-response-out" (exactly)
 * parameter[QuestionnaireResponse].value[x] ..0
-* parameter[QuestionnaireResponse].resource only http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse
+* parameter[QuestionnaireResponse].resource only dtr-questionnaireresponse-adapt
 * parameter[QuestionnaireResponse].part ..0

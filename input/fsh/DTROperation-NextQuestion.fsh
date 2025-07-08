@@ -17,18 +17,16 @@ Usage: #definition
 * inputProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-next-question-input-parameters"
 * outputProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-next-question-output-parameters"
 
-* parameter[0].type = #Resource
-* parameter[=].name = #questionnaire-response-in
+* parameter[0].type = #Parameters
+* parameter[=].name = #nextquestion-param-in
 * parameter[=].use = #in
 * parameter[=].min = 1
 * parameter[=].max = "1"
-* parameter[=].type = #Parameters
-* parameter[=].documentation = "The [DTR QuestionnaireResponse Profile](StructureDefinition-dtr-questionnaireresponse.html) of the QuestionnaireResponse resource with a *contained* Questionnaire.  When invoking the operation for the first time, neither the QuestionnaireResponse nor the contained Questionnaire will have any items, as no questions are yet known.  In subsequent calls, the QuestionnaireResponse will include answers to all required questions asked so far and the contained Questionnaire will remain the same as provided back from the operation in the preceding response."
+* parameter[=].documentation = "The [DTR Adaptive QuestionnaireResponse Profile](StructureDefinition-dtr-questionnaireresponse-adapt.html) of the QuestionnaireResponse resource with a *contained* Questionnaire.  When invoking the operation for the first time, neither the QuestionnaireResponse nor the contained Questionnaire will have any items, as no questions are yet known.  In subsequent calls, the QuestionnaireResponse will include answers to all required questions asked so far and the contained Questionnaire will remain the same as provided back from the operation in the preceding response."
 
-* parameter[+].type = #Resource
-* parameter[=].name = #questionnaire-response-out
+* parameter[+].type = #Parameters
+* parameter[=].name = #nextquestion-param-out
 * parameter[=].use = #out
 * parameter[=].min = 1
 * parameter[=].max = "1"
-* parameter[=].type = #Parameters
-* parameter[=].documentation = "The [DTR QuestionnaireResponse Profile](StructureDefinition-dtr-questionnaireresponse.html) of the QuestionnaireResponse resource with a *contained* Questionnaire.  The Server updates the QuestionnaireResponse's contained Questionnaire by appending with the next question or questions ittems and any score or instruction items and returns the QuestionnaireResponse (with all answers completed thus far plus any calculated scores) as this parameter.  When the questionnaire is complete, the Server updates the status of the QuestionnaireResponse resource parameter to `complete`."
+* parameter[=].documentation = "The [DTR Adaptive QuestionnaireResponse Profile](StructureDefinition-dtr-questionnaireresponse-adapt.html) of the QuestionnaireResponse resource with a *contained* Questionnaire.  The Server updates the QuestionnaireResponse's contained Questionnaire by appending with the next question or questions ittems and any score or instruction items and returns the QuestionnaireResponse (with all answers completed thus far plus any calculated scores) as this parameter.  When the questionnaire is complete, the Server updates the status of the QuestionnaireResponse resource parameter to `complete`."
