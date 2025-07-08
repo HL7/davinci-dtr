@@ -6,7 +6,7 @@ Title: "$questionnaire-package Input Parameters Example"
 Usage: #example
 * parameter[coverage].resource = CoverageExample
 * parameter[order].resource = ServiceRequestExample
-* parameter[questionnaire].valueCanonical = "http://hl7.org/fhir/us/davinci-dtr/Questionnaire/home-o2-std-questionnaire"
+* parameter[questionnaire].valueCanonical = "http://hl7.org/fhir/us/davinci-dtr/Questionnaire/home-o2-std-questionnaire|2.1.0"
 
 // **********************************************************************************************************************************
 Instance: QuestionnairePackageOutputParamsExample
@@ -22,7 +22,7 @@ InstanceOf: DTRLogErrorsInputParameters
 Description: "An example instance of [Input Parameters](StructureDefinition-dtr-log-errors-input-parameters.html) that are supplied to the [Log Questionnaire Errors](OperationDefinition-log-questionnaire-errors.html) operation."
 Title: "$log-questionnaire-errors Input Parameters Example"
 Usage: #example
-* parameter[questionnaire].valueCanonical = "http://hl7.org/fhir/us/davinci-dtr/Questionnaire/home-o2-std-questionnaire"
+* parameter[questionnaire].valueCanonical = "http://hl7.org/fhir/us/davinci-dtr/Questionnaire/home-o2-std-questionnaire|2.1.0"
 * parameter[outcome].resource = OperationOutcomeExample
 
 // **********************************************************************************************************************************
