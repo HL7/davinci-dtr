@@ -10,8 +10,9 @@ Description: "Provides a code to express the intended audience for the Questionn
 * value[x] ^short = "Intended audience for the Questionnaire form."
 * value[x] ^definition = "Intended audience for the Questionnaire form."
 * value[x] 1..1
-* value[x] only CodeableConcept
-* value[x] from DTRAudience (extensible)
+* value[x] only code 
+* value[x] from DTRAudience (required)
+* value[x] ^short = "clinical | admin | patient"
 
 /**************************************************************************************************************/
 Extension: AlternativeExpression
