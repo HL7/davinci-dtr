@@ -18,7 +18,8 @@ Description: "Takes a subset of extensions and constraints from the SDC [renderi
 * subjectType 1..1
 * subjectType = #Patient
 
-// ***********************************************************************************************************************************************
+* extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/questionnaireAudience named audience 0..* MS
+
 * extension[assemble-expectation] 0..0
 * extension contains http://hl7.org/fhir/StructureDefinition/rendering-styleSensitive named styleSensitive 0..1
 * extension[styleSensitive].valueBoolean = false
@@ -37,7 +38,6 @@ Description: "Takes a subset of extensions and constraints from the SDC [renderi
 * extension contains sdcEntryMode named entryMode 0..* MS
 * extension contains sdcEndpoint named endpoint 0..0
 
-// ***********************************************************************************************************************************************
 * item obeys dtrq-2 and dtrq-3 and dtrq-4 and dtrq-5
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-hidden named itemHidden 0..1 MS
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl named itemControl 0..1 MS

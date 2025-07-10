@@ -1,6 +1,18 @@
 ///**********************************************************************************************
 // Value Sets
 // ************************************************************
+ValueSet: DTRAudience
+Id: questionnaireAudience
+Title: "Codes defining audience of additional documentation to be captured"
+Description: "Codes defining audience of additional documentation to be captured"
+* ^status = #active
+* ^experimental = false
+* ^extension[$fmm].valueInteger = 1
+* $CRDAdditionalDoc#clinical
+* $CRDAdditionalDoc#admin
+* $CRDAdditionalDoc#patient
+
+// ************************************************************
 ValueSet: DTRInformationOrigins
 Id: informationOrigins
 Title: "Information Origins Value Set"

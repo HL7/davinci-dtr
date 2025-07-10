@@ -1,3 +1,18 @@
+
+/**************************************************************************************************************/
+Extension: QuestionnaireAudience
+Id: questionnaireAudience
+Title: "Questionnaire Audience"
+Description: "Provides a code to express the intended audience for the Questionnaire form."
+* ^status = #active
+* ^context[0].type = #element
+* ^context[=].expression = "Expression"
+* value[x] ^short = "Intended audience for the Questionnaire form."
+* value[x] ^definition = "Intended audience for the Questionnaire form."
+* value[x] 1..1
+* value[x] only CodeableConcept
+* value[x] from DTRAudience (extensible)
+
 /**************************************************************************************************************/
 Extension: AlternativeExpression
 Id: alternativeExpression
@@ -64,7 +79,7 @@ Description: "Identifies the origin of the information in the answer and how it 
 * extension[source] ^definition = "The origination of information"
 * extension[source].value[x] 1..1
 * extension[source].value[x] from DTRInformationOrigins (required)
-* extension[source].value[x] only code
+* extension[source].value[x] only code 
 * extension[source].value[x] ^short = "auto | override | manual"
 
 * extension[author] only Extension
