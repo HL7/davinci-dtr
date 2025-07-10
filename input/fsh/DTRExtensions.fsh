@@ -1,3 +1,13 @@
+/**************************************************************************************************************/
+Extension: QuestionnaireResponseCoverage
+Id: qr-coverage
+Description: "Identifies the coverages associated with the specified QuestionnaireResponse."
+* ^title = "Questionnaire Response Context"
+* ^context[0].type = #element
+* ^context[=].expression = "QuestionnaireResponse"
+* ^status = #active
+* value[x] 1..1
+* value[x] only Reference($CRDCoverage)
 
 /**************************************************************************************************************/
 Extension: QuestionnaireAudience
@@ -41,13 +51,13 @@ Description: "Indicates that when filling a QuestionnaireResponse and selecting 
 /**************************************************************************************************************/
 Extension: QuestionnaireResponseContext
 Id: qr-context
-Description: "Identifies the orders, coverages, and or other resources associated with the specified QuestionnaireResponse.  Allows finding the DTR responses associated with a particular Order/Encounter/Appointment for a particular insurance coverage."
+Description: "Identifies the orders and/or other resources associated with the specified QuestionnaireResponse.  Allows finding the DTR responses associated with a particular Order/Encounter/Appointment for a particular insurance coverage."
 * ^title = "Questionnaire Response Context"
 * ^context[0].type = #element
 * ^context[=].expression = "QuestionnaireResponse"
 * ^status = #active
 * value[x] 1..1
-* value[x] only Reference($CRDCoverage or $CRDDeviceRequest or $CRDMedicationRequest or $CRDNutritionOrder or $CRDServiceRequest or $CRDEncounter or $CRDAppointmentBase)
+* value[x] only Reference($CRDDeviceRequest or $CRDMedicationRequest or $CRDNutritionOrder or $CRDServiceRequest or $CRDEncounter or $CRDAppointmentBase)
 
 /**************************************************************************************************************/
 Extension: IntendedUse 

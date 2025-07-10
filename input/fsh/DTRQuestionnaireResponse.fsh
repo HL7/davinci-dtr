@@ -14,8 +14,11 @@ Description:    "Enforces DTR requirements on a completed or partially completed
 
 * extension[signature] MS
 
-* extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/qr-context named context 2..* MS
-* extension[context] ^short = "Identifies the orders, coverages, and or other resources associated with the specified QuestionnaireResponse. The QuestionnaireResponse SHALL have at least one context that refers to a patient Coverage AND at least one context that refers to a Request resource or Encounter"
+* extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/qr-coverage named coverage 1..* MS
+* extension[coverage] ^short = "Identifies the coverages associated with the specified QuestionnaireResponse."
+
+* extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/qr-context named context 0..* MS
+* extension[context] ^short = "Identifies the orders and/or other resources associated with the specified QuestionnaireResponse."
 
 * extension contains CRDCoverageInformation named coverage-information 0..* MS
 * extension[coverage-information] ^short = "Coverage Info"
@@ -41,3 +44,4 @@ Description:    "Enforces DTR requirements on a completed or partially completed
 * item.answer.extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin named origin 1..1 MS
 * item.answer.extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/containedReference named containedReference 0..1 MS
 * item.answer.extension[containedReference] ^short = "Contain the reference?"
+
