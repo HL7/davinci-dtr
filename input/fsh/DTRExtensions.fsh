@@ -2,7 +2,7 @@
 Extension: QuestionnaireResponseCoverage
 Id: qr-coverage
 Description: "Identifies the coverages associated with the specified QuestionnaireResponse."
-* ^title = "Questionnaire Response Context"
+* ^title = "Questionnaire Response Coverage"
 * ^context[0].type = #element
 * ^context[=].expression = "QuestionnaireResponse"
 * ^status = #active
