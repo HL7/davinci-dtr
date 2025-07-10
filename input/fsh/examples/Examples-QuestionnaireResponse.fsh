@@ -4,8 +4,8 @@ Usage: #example
 Description: "An example [QuestionnaireResponse](StructureDefinition-dtr-questionnaireresponse.html) for Home Oxygen Therapy."
 * meta.profile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse"
 
-* extension[context][0].valueReference = Reference(CoverageExample)
-* extension[context][+].valueReference = Reference(ServiceRequestExample)
+* extension[coverage][0].valueReference = Reference(CoverageExample)
+* extension[context][0].valueReference = Reference(ServiceRequestExample)
 * extension[intendedUse].valueCodeableConcept.coding = http://hl7.org/fhir/us/davinci-crd/CodeSystem/temp#withorder "Include with order"
 
 * questionnaire = Canonical(referred-questionnaire)
