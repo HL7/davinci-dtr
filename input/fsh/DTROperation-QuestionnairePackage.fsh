@@ -44,6 +44,8 @@ When resuming a work in progress questionnaire response the DTR client **SHALL**
 
 * The `outcome` parameter is only present if the operation completes successfully with a 200 HTTP response code.  In the event of an error, no Parameters response will be returned at all, though a bare `OperationOutcome` might be returned.
 
+* When DTR is launched from CRD the context is available in the `coverage-information` extension, but when launched from PAS the context is from the Task.  
+
 #### Working with Multiple Forms
 When retrieving a Questionnaire Package, it's possible that a payer will have some sets of information they need to collect that is 'conditional'.  i.e., Depending on answers to initial questions, other sets of information may or may not need to be collected.  Historically, this may have been handled as 'First, fill out Form A.  Then, depending on the answers provided in Form A, there may be instructions to fill out Form B, C, and/or D'.  However, in the context of the Questionnaire Package operation, the expectation is that all forms returned by the $questionnaire-package operation are intended to be filled out, and they might be filled out in any order based on user preference. 
 
