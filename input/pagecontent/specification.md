@@ -632,9 +632,10 @@ The information gathered via DTR can be used for a variety of purposes:
 * Additional purposes not yet defined.
   
 Once DTR has written a QuestionnaireResponse to the DTR Client and updated the `QuestionnaireResponse.status` element to complete, the DTR Client needs to understand what action(s) it should take with the collected information. This is accomplished via three extensions:
-1. The [`qr-context`](StructureDefinition-qr-context.html) extension provides a reference to the Request resource(s) and/or Encounter that the QuestionnaireResponse relates to.
-2. The [`intendedUse`](StructureDefinition-intendedUse.html) extension indicates how the EHR is to use the information with respect to the associated orders/records
-3. The [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension captures any coverage determination made by the payer with respect to the Request or encounter resources mentioned in the `context` extension.
+1. The [`qr-coverage`](StructureDefinition-qr-coverage.html) extension provides a reference to the Coverage resource(s) related to the QuestionnaireResponse.
+2. The [`qr-context`](StructureDefinition-qr-context.html) extension provides a reference to the Request resource(s) and/or Encounter related to the QuestionnaireResponse.
+3. The [`intendedUse`](StructureDefinition-intendedUse.html) extension indicates how the EHR is to use the information with respect to the associated orders/records
+4. The [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension captures any coverage determination made by the payer with respect to the Request or encounter resources mentioned in the `context` extension.
  
 Upon storing a completed QuestionnaireResponse with one or more [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extensions, the EHR **SHALL** propagate the [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extensions to all non-Coverage resources included on the [`qr-context`](StructureDefinition-qr-context.html) extension on the QuestionnaireResponse.  If a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) already exists on the target resource with the same `coverage-information.coverage`, it **SHALL** be overridden.
 
