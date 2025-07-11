@@ -106,6 +106,11 @@
   </li> 
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49879">FHIR-49879</a> (Non-substantive):<br>
+  Provided clarifying narrative in Questionnaire Package operation regarding location of context.
+  </li> 
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-49815">FHIR-49815</a> (Non-substantive):<br>
   Updated narrative in 'EHR to App Connectivity' to provide clarity around DTR support for payers.
   </li> 
