@@ -23,7 +23,7 @@ In most cases, only one order and one coverage will be provided.  However, the o
 
 If any of the explicitly requested questionnaires cannot be found, a warning **SHALL** be provided in the [`Outcome`](StructureDefinition-dtr-qpackage-output-parameters.html) element of the outer `Parameters` resource.  Similarly, if there is an issue understanding any of the orders or coverages and determining appropriate Questionnaires, a warning will be provided.
 
-Each Questionnaire will be packaged into a distinct Bundle.  If there is only one Questionnaire and there are no warnings, then the QuestionnaireBundle can be returned as the sole payload of the operation response.  If there are multiple Questionnaires and/or there is a need to convey an OperationOutcome alongside Questionnaires, the response will be a `Parameters` resource.  If the operation fails, the response payload **SHOULD** be an OperationOutcome.
+Each Questionnaire will be packaged into a distinct Bundle. If the operation is successful, the response **SHALL** be a `Parameters` resource conformant to the [DTRQuestionnairePackageOutputParameters](StructureDefinition-dtr-qpackage-output-parameters.html) profile.  If the operation fails, the response payload **SHOULD** be an OperationOutcome.
 
 The Bundle **SHALL** include the Questionnaire as the first entry along with all external Libraries referenced by the Questionnaire using the [cqf-library](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-cqf-library.html) extension, as well as a recursive retrieval of all `relatedArtifact` references of type 'depends-on'.  All Libraries **SHALL** include both CQL and EML representations.  The Bundle **SHALL** include all external ValueSet instances referenced by the Questionnaire.  All value sets with expansions under 40 entries **SHALL** be expanded as of the current date and using expansion parameters (such as SNOMED release) as deemed appropriate by the payer.
 
@@ -96,14 +96,12 @@ When resuming a work in progress questionnaire response the DTR client **SHALL**
 * parameter[=].min = 0
 * parameter[=].max = "1"
 
-// PackageBundle
-* parameter[+].name = #PackageBundle
+* parameter[+].name = #paramenters
 * parameter[=].use = #out
 * parameter[=].min = 0
 * parameter[=].max = "*"
-
 * parameter[=].documentation = "A Bundle with a single Questionnaire, and 0..* Libraries containing needed CQL and/or ValueSets containing needed codes."
-* parameter[=].type = #Bundle
+* parameter[=].type = #Parameters
 
 * parameter[+].name = #outcome
 * parameter[=].use = #out
