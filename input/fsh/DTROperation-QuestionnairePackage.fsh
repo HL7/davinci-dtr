@@ -42,7 +42,15 @@ When resuming a work in progress questionnaire response the DTR client **SHALL**
 ### Notes
 * For adaptive questionnaires, there will be no question items to reference any ValueSets and no expressions to reference any Libraries.  However, the payer may still opt to include Libraries or ValueSets in the initial Bundle to avoid the overhead of needing to send contained content with each [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) invocation.  Alternatively, any needed Libraries and ValueSets may manifest as ‘contained’ resources within the QuestionnaireResponse returned by [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) based on which questions have been selected. (see [Adaptive Form Considerations](https://build.fhir.org/ig/HL7/davinci-dtr/specification.html#adaptive-form-considerations))
 
-* The `outcome` parameter is only present if the operation completes successfully with a 200 HTTP response code.  In the event of an error, no Parameters response will be returned at all, though a bare `OperationOutcome` might be returned."
+* The `outcome` parameter is only present if the operation completes successfully with a 200 HTTP response code.  In the event of an error, no Parameters response will be returned at all, though a bare `OperationOutcome` might be returned.
+
+#### Working with Multiple Forms
+When retrieving a Questionnaire Package, it's possible that a payer will have some sets of information they need to collect that is 'conditional'.  i.e., Depending on answers to initial questions, other sets of information may or may not need to be collected.  Historically, this may have been handled as 'First, fill out Form A.  Then, depending on the answers provided in Form A, there may be instructions to fill out Form B, C, and/or D'.  However, in the context of the Questionnaire Package operation, the expectation is that all forms returned by the $questionnaire-package operation are intended to be filled out, and they might be filled out in any order based on user preference. 
+
+If a payer is in a situation where they have historically had 'conditional' forms, there are two technical approaches that can be used to meet the requirement:
+
+1.  Make use of adaptive forms and define a single adaptive form rooted in the questions from A that will subsequently ask questions from the internal forms B, C, and/or D as necessary, gathering all of the answers into a single Questionnaire Response.
+2.  Make use of standard forms and combine forms A, B, C, and D into a single monolithic form that makes use of enableWhen logic to determine when the questions from the B, C, and/or D form sections are available/required to be completed.  Note that it's possible for the CRD server to continue to maintain the separate individual forms and use a light-weight 'parent' form and SDC assembly or a similar mechanism to combine them all into a single Questionnaire before including it in the `$questionnaire-package` response."
 
 * code = #questionnaire-package
 * base = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package"
