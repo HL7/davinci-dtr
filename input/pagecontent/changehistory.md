@@ -2,6 +2,16 @@
 <p><b>Substantive and breaking changes:</b></p>
 <ul>
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-50797">FHIR-50797</a> (Non-compatible):<br>
+  Updated Questionnaire Package operation to always return a Parameters resource upon successful execution.   
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-50240">FHIR-50240</a> (Compatible, substantive):<br>
+  Included narrative to specification to clarify expectations for sending more than one of orders/contextId/Questionnaire and cross-checking.
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-50020">FHIR-50020</a> (Compatible, substantive):<br>
   Rewrote section on Storing QuestionnaireResponses because it contained contradictory guidance and was misleading.   
   </li>
@@ -12,6 +22,11 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49862">FHIR-49862</a> (Compatible, substantive):<br>
+  Created Adaptive QuestionnaireResponse profile to enforce adaptive requirements on DTR QuestionnaireResponse used in $next-question operation.
+  </li> 
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-49845">FHIR-49845</a> (Compatible, substantive):<br>
   Added MustSupport flag to both the <code>context</code> and <code>intendedUse</code> elements of the QuestionnaireResponse.
   </li> 
@@ -19,6 +34,11 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-49836">FHIR-49836</a> (Compatible, substantive):<br>
   Redesigned 'Questionnaire Design' section to remove subjective qualifications.
+  </li> 
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49811">FHIR-49811</a> (Compatible, substantive):<br>
+  Created 'audience' extension to differentiate administrative vs. clinical forms.  
   </li> 
 
   <li>
@@ -52,6 +72,11 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49663">FHIR-49663</a> (Non-compatible):<br>
+  Removed coverage from context extension (qr-context) and split out into a corresponding coverage extension (qr-coverage)   
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-49339">FHIR-49339</a> (Non-compatible):<br>
   Sliced QuestionnaireResponseBundle entry to enforce a single QuestionnaireResponse (1..1) and provided clearer guidance in specification.
   </li>
@@ -71,6 +96,16 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-50282">FHIR-50282</a> (Non-substantive):<br>
+  Split apart previously 'temp' codesystem codes into appropriate, internal code systems (used in 'code' datatype elements)   
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49929">FHIR-49929</a> (Non-substantive):<br>
+  Included guidance in the Questionnaire Package operation regarding the expectations for handling 'optional' forms.
+  </li> 
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-49815">FHIR-49815</a> (Non-substantive):<br>
   Updated narrative in 'EHR to App Connectivity' to provide clarity around DTR support for payers.
   </li> 
@@ -83,12 +118,17 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-49730">FHIR-49730</a> (Non-substantive):<br>
   Constrained out <code>itemOptionalDisplay</code> in base questionnaire.
+  
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49648">FHIR-49648</a> (Non-substantive):<br>
+  Clarified that both the target resource and QuestionnaireResponse can contain multiple coverage-information extensions
   </li>
  
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-49639">FHIR-49639</a> (Non-substantive):<br>
   Adaptive Form Search profile modified to constrain out (0..0) the item due to questions not being relevant and were marked as MustSupport.
   </li>
+ </li>
  
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-49343">FHIR-49343</a> (Non-substantive):<br>

@@ -498,6 +498,14 @@ Previously completed QuestionnaireResponses <b>SHALL NOT</b> be supported due to
   </table>
 </div><br>
 
+#### Data Expectations for Invoking Questionnaire Package
+The expectations for what data is available for invoking the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation will be dependent on how DTR is launched:
+1.	When launched from PAS, the only element that will be present is the context.  There will be no Questionnaire or Request present.
+2.  When launched after CRD, the context, Request and referenced resources **SHALL** be present.  Questionnare canonicals **MAY** be present.  The payer will determine whether to drive off the context, Request or both, as well as how much cross-checking to do between them.  DTR servers **SHALL** allow for the possibility of minor changes in the order between CRD and DTR (e.g., changes to status, adding notes, etc.) that mean that the instances don't have to be identical to be considered the same order.  DTR servers **MAY** raise an error if they receive an order that is unrelated to the provided context id.
+3.  If launching DTR without either PAS or CRD, no context will be present, only Request and referenced resources and possibly Questionnaire canonicals.
+   
+In situation 2 and 3 above, if Questionnaire canonicals are present, the presence of these canonicals will limit what questionnaires are returned in the package (i.e., if there are multiple Questionnaires relevant for an order, but only one canonical is provided on the questionnaire-package call, the response will only return a package for the specified Questionnaire)
+
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
 ---------------------
