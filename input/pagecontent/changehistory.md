@@ -80,6 +80,12 @@
   <a href="https://jira.hl7.org/browse/FHIR-49339">FHIR-49339</a> (Non-compatible):<br>
   Sliced QuestionnaireResponseBundle entry to enforce a single QuestionnaireResponse (1..1) and provided clearer guidance in specification.
   </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48824">FHIR-448824</a> (Compatible, substantive):<br>
+  Created internal DTR valueset `$expand` operation to focus parameter expectations specific to DTR.
+  </li>
+
 </ul>
 <br/>
 
