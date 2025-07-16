@@ -296,7 +296,17 @@ The Questionnaire resource provides several mechanisms for conveying coded answe
     <td>Pass a value set in the questionnaire package, but the client recipient will need to run the expansion or ask a terminology server to do the expansion.</td>
     <td>The value set expansion is on the larger size (> ~40 codes), such that using the <a href="OperationDefinition-DTR-ValueSet-expand.html"><code>$expand</code></a> operation with a filter will be more efficient from a user interface perspective. These value sets <b>SHOULD</b> be expanded by the client and therefore <b>SHOULD NOT</b> be included in the questionnaire package.  DTR clients running as SMART on FHIR apps will typically need to hold the complete content of the questionnaire package in memory. Payers <b>SHOULD</b> design their questionnaires, value sets, and libraries with the knowledge that content which is too large may cause DTR clients to fail.</td>    
   </tr>
-</table><br>
+</table>
+
+<div markdown="1" class="notebox">
+  <table style="border: none; margin-bottom: 0px;">
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+      <td style="border: none"> 
+All value set expansions <b>SHOULD</b> be made by using the <a href="OperationDefinition-DTR-ValueSet-expand.html">DTR Valueset Expand (<code>$expand</code>)</a> operation.
+      </td>
+    </tr>
+  </table>
+</div><br>
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
