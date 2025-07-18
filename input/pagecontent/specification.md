@@ -312,7 +312,7 @@ All value set expansions <b>SHOULD</b> be made by using the <a href="OperationDe
 
 ---------------------
 ### Use of CQL
-As part of the SDC Questionnaires that define the information payers require to be captured, CQL is used to support automatic population of answers from existing EHR data and, occasionally, to enforce complex logic around what questions should be displayed. For example, whether answers are required, what answers should be enabled, etc. This CQL **MAY** query for patient observations, conditions, or other discrete information within the EHR to use as part of the population process or logic. The SDC specification provides guidance about how CQL expressions can be used for different purposes, as well as how information gathered by CQL in one portion of the Questionnaire can be made available in other portions of the Questionnaire.
+As part of the SDC Questionnaires that define the information payers require to be captured, CQL is used to support automatic population of answers from existing EHR data and, occasionally, to enforce complex logic around what questions should be displayed. For example, whether answers are required, what answers should be enabled, etc. This CQL **MAY** query for patient observations, conditions, or other discrete information within the EHR to use as part of the population process or logic. The SDC specification provides guidance about how CQL expressions can be used for different purposes, as well as how information gathered by CQL in one portion of the Questionnaire can be made available in other portions of the Questionnaire. The mime type that **SHOULD** be used for a CQL Identifier is "text/cql-identifier". 
 
 CQL can either be embedded inline as part of an expression or referenced in a Library resource. All [Libraries](http://hl7.org/fhir/R4/library.html) needed by a questionnaire **SHALL** be referenced by the [`cqf-library`](https://hl7.org/fhir/extensions/StructureDefinition-cqf-library.html) extension and included as part of the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation. 
   
@@ -526,8 +526,6 @@ All items that are pre-populated (whether by the payer in the initial Questionna
 
 #### Execution Sequence
 The flow of execution of the CQL will be determined by the associated Questionnaire. The client will proceed through the Questionnaire, and for any question that is associated with the result of a CQL expression, that specific CQL statement will be executed. The DTR client **SHALL** use result caching so that results that are already available will be reused without requesting them again.
-
-- The mime type that **SHOULD** be used for a CQL Identifier is "text/cql-identifier". 
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
