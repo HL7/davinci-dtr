@@ -1,5 +1,11 @@
 <link rel="stylesheet" type="text/css" href="formatting.css" />
 
+<blockquote class="note-to-balloters">
+  <p>
+    The Da Vinci Burden Reduction team is considering updating this specification to reference the newest version of Structured Data Capture (SDC), which has made a number of clarifications to the handling of Clinical Quality Language (CQL) and expectations around population that we think will help with interoperability.  We are asking for the opinion of balloters on the value of making that change.  
+  </p>
+</blockquote>
+
 <blockquote class="stu-note">
 <p>
 This specification is currently published as a Standard for Trial Use (STU).  Feedback is welcome and may be submitted through the <a href="https://jira.hl7.org/secure/CreateIssueDetails!init.jspa?pid=10405&issuetype=10600&customfield_11302=FHIR-us-davinci-dtr">FHIR change tracker</a> for this specification.
