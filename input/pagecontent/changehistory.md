@@ -2,6 +2,11 @@
 <p><b>Substantive and breaking changes:</b></p>
 <ul>
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-51020">FHIR-51020</a> (Non-compatible):<br>
+  Define whether cql-identifier is an allowed mime type.    
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-50797">FHIR-50797</a> (Non-compatible):<br>
   Updated Questionnaire Package operation to always return a Parameters resource upon successful execution.   
   </li>
@@ -39,6 +44,11 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-49811">FHIR-49811</a> (Compatible, substantive):<br>
   Created 'audience' extension to differentiate administrative vs. clinical forms.  
+  </li> 
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49810">FHIR-49810</a> (Compatible, substantive):<br>
+  Add a constraint that says you must either have context id or Coverage.  
   </li> 
 
   <li>
