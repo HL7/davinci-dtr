@@ -3,7 +3,7 @@
 <ul>
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-51020">FHIR-51020</a> (Non-compatible):<br>
-  Provided guidance that <c>>cql-identifier</code> should be used as mime type for CQL identifier.    
+  Provided guidance that <code>cql-identifier</code> should be used as mime type for CQL identifier.    
   </li>
 
   <li>
