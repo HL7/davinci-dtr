@@ -3,7 +3,7 @@
 <ul>
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-51020">FHIR-51020</a> (Non-compatible):<br>
-  Provided guidance that 'cql-identifier' should be used as CQL identifier mime type.    
+  Provided guidance that <c>>cql-identifier</code> should be used as mime type for CQL identifier.    
   </li>
 
   <li>
@@ -48,7 +48,7 @@
 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-49810">FHIR-49810</a> (Compatible, substantive):<br>
-  Add a constraint that says you must either have context id or Coverage.  
+  Added a complex constraint that says you must either have context id or Coverage.  
   </li> 
 
   <li>
