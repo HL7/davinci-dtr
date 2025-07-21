@@ -2,7 +2,7 @@
 // Various Examples
 // =======================================================================================================================================================================================
 Instance: CoverageExample
-InstanceOf: http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-coverage
+InstanceOf: http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-coverage|2.1.0
 Description: "An instance of CRD Coverage"
 Usage: #example
 * contained = OrgExample
