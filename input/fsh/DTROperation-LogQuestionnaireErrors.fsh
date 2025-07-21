@@ -24,17 +24,17 @@ The input OperationOutcome resource **SHOULD** include information on the DTR ap
 * instance = false
 
 // -------------------------- Input --------------------------
-* parameter[0].name = #Questionnaire
+* parameter[0].name = #resource
 * parameter[=].use = #in
 * parameter[=].documentation = "The Questionnaire which generated the errors"
 * parameter[=].type = #canonical
+//* ^type.targetProfile = "http://hl7.org/fhir/StructureDefinition/Questionnaire"
 * parameter[=].min = 1
 * parameter[=].max = "1"
 
-* parameter[+].name = #OperationOutcome
+* parameter[+].name = #resource
 * parameter[=].use = #in
 * parameter[=].documentation = "The OperationOutcome documenting the Questionnaire/CQL errors and their location"
 * parameter[=].type = #OperationOutcome
 * parameter[=].min = 1
 * parameter[=].max = "1"
-
