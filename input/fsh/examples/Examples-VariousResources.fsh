@@ -2,9 +2,10 @@
 // Various Examples
 // =======================================================================================================================================================================================
 Instance: CoverageExample
-InstanceOf: http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-coverage|2.1.0
+InstanceOf: http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-coverage
 Description: "An instance of CRD Coverage"
 Usage: #example
+* meta.profile = "http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-coverage|2.1.0"
 * contained = OrgExample
 * subscriber = Reference(PatientExample)
 * beneficiary = Reference(PatientExample)
@@ -22,6 +23,7 @@ Usage: #example
 Instance: ServiceRequestExample
 InstanceOf: http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-servicerequest
 Description: "Example of ServiceRequest used in the Home Oxygen Therapy (home-o2-questionnaireresponse) example"
+* meta.profile = "http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-servicerequest|2.1.0"
 * status = #active
 * intent = #original-order
 * authoredOn = "2019-09-18T07:53:21+07:00"
@@ -57,9 +59,10 @@ Usage: #example
 
 // *******************************************************************************************************************************
 Instance: PractitionerExample
-InstanceOf: USCorePractitionerProfile
+InstanceOf: USCorePractitionerProfile 
 Description: "An example practitioner referred to by the example resources."
 Usage: #example
+* meta.profile = "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|7.0.0"
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"
 * identifier.value = "1122334455"
 * name.family = "Doe"
