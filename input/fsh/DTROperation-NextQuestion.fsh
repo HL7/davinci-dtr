@@ -18,14 +18,14 @@ Usage: #definition
 * outputProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-next-question-output-parameters"
 
 * parameter[0].type = #Parameters
-* parameter[=].name = #nextquestion-param-in
+* parameter[=].name = #resource
 * parameter[=].use = #in
 * parameter[=].min = 1
 * parameter[=].max = "1"
 * parameter[=].documentation = "The [DTR Adaptive QuestionnaireResponse Profile](StructureDefinition-dtr-questionnaireresponse-adapt.html) of the QuestionnaireResponse resource with a *contained* Questionnaire.  When invoking the operation for the first time, neither the QuestionnaireResponse nor the contained Questionnaire will have any items, as no questions are yet known.  In subsequent calls, the QuestionnaireResponse will include answers to all required questions asked so far and the contained Questionnaire will remain the same as provided back from the operation in the preceding response."
 
 * parameter[+].type = #Parameters
-* parameter[=].name = #nextquestion-param-out
+* parameter[=].name = #return
 * parameter[=].use = #out
 * parameter[=].min = 1
 * parameter[=].max = "1"
