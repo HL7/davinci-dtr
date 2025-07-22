@@ -2,7 +2,8 @@
 // US Core artifacts
 Alias: $USCOREPractitionerRole311 = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole|3.1.1
 Alias: $USCOREPractitionerRole610 = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole|6.1.0
-Alias: $USCORE311PRVS = http://hl7.org/fhir/us/core/ValueSet/us-core-provider-role
+Alias: $USCORE311PRVS = http://hl7.org/fhir/us/core/ValueSet/us-core-provider-role|3.1.1
+//Alias: $USCOREPractitioner700 = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|7.0.0
 Alias: USCOREClientCapStatement = http://hl7.org/fhir/us/core/CapabilityStatement/us-core-client
 
 // ------------------------------------------------------------------------------------------------------------------------
@@ -65,3 +66,4 @@ Alias: COPAYTYPE = http://terminology.hl7.org/CodeSystem/coverage-copay-type
 Alias: RELATE = http://terminology.hl7.org/CodeSystem/subscriber-relationship
 Alias: CONTRACTTYPE = http://terminology.hl7.org/CodeSystem/contract-type
 Alias: $PASTask = http://hl7.org/fhir/us/davinci-pas/StructureDefinition/profile-task
+Alias: $dtrAltExpression = http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/alternativeExpression

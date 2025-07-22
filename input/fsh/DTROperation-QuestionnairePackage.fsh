@@ -60,62 +60,21 @@ If a payer is in a situation where they have historically had 'conditional' form
 * system = false
 * type = true
 * instance = false
-* inputProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-qpackage-input-parameters"
-* outputProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-qpackage-output-parameters"
 
-// in
-* parameter[0].name = #coverage
+// In
+* parameter[0].name = #Parameters
+* parameter[=].type = #Parameters
+* parameter[=].targetProfile = Canonical(dtr-qpackage-input-parameters)
 * parameter[=].use = #in
-* parameter[=].documentation = "Coverage resource instances to establish the member and the coverage for which documentation is to be collected."
-* parameter[=].type = #Coverage
-* parameter[=].min = 0
-* parameter[=].max = "*"
-
-* parameter[+].name = #order
-* parameter[=].use = #in
-* parameter[=].documentation = "Order resource instances. e.g., DeviceRequest, ServiceRequest, MedicationRequest,... Encounter, Appointment, etc. to establish context for the information to be collected."
-* parameter[=].type = #Any
-* parameter[=].min = 0
-* parameter[=].max = "*"
-
-* parameter[+].name = #referenced
-* parameter[=].use = #in
-* parameter[=].documentation = "Order-related referenced resources which are necessary to support stand-alone launch – specifically the Patient, requester, performer and location-related resources. (SHALL NOT include resources from `supportingInformation`)."
-* parameter[=].type = #Any
-* parameter[=].min = 0
-* parameter[=].max = "*"
-
-* parameter[+].name = #questionnaire
-* parameter[=].use = #in
-* parameter[=].documentation = "Canonical url for Questionnaire(s) (possibly version-specific) to return."
-* parameter[=].type = #canonical
-* parameter[=].min = 0
-* parameter[=].max = "*"
-
-* parameter[+].name = #context
-* parameter[=].use = #in
-* parameter[=].documentation = "Context ID from CRD or CDex.  May be used to determine what Questionnaires to return and/or to support pre-population."
-* parameter[=].type = #string
-* parameter[=].min = 0
+* parameter[=].min = 1
 * parameter[=].max = "1"
+* parameter[=].documentation = "The"
 
-* parameter[+].name = #changedsince
-* parameter[=].use = #in
-* parameter[=].documentation = "If present, only Questionnaire bundles whose Questionnaire or associated artifacts have changed since the specified timestamp.  If there are no changed artifacts the operation will simply return a 200 Ok indicating that nothing has changed since the specified timestamp."
-* parameter[=].type = #dateTime
-* parameter[=].min = 0
-* parameter[=].max = "1"
-
-* parameter[+].name = #paramenters
+// Out
+* parameter[+].name = #Paramenters
+* parameter[=].type = #Parameters
+* parameter[=].targetProfile = Canonical(dtr-qpackage-output-parameters)
 * parameter[=].use = #out
 * parameter[=].min = 0
 * parameter[=].max = "*"
 * parameter[=].documentation = "A Bundle with a single Questionnaire, and 0..* Libraries containing needed CQL and/or ValueSets containing needed codes."
-* parameter[=].type = #Parameters
-
-* parameter[+].name = #outcome
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].documentation = "Warning or information messages related to the successful execution of the operation"
-* parameter[=].type = #OperationOutcome
