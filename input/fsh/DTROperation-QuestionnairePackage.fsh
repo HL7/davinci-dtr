@@ -71,7 +71,7 @@ If a payer is in a situation where they have historically had 'conditional' form
 * parameter[=].documentation = "The"
 
 // Out
-* parameter[+].name = #Paramenters
+* parameter[+].name = #Parameters
 * parameter[=].type = #Parameters
 * parameter[=].targetProfile = Canonical(dtr-qpackage-output-parameters)
 * parameter[=].use = #out
