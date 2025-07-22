@@ -31,7 +31,7 @@ InstanceOf: DTRQuestionnaireNextQuestionnaireInputParameters
 Description: "An example instance of [input Parameters](StructureDefinition-dtr-next-question-input-parameters.html) used by the [Next Question](OperationDefinition-DTR-Questionnaire-next-question.html) operation."
 Title: "$next-question Input Parameters Example"
 Usage: #example
-* parameter[QuestionnaireResponse].resource = home-o2-questionnaireresponse
+* parameter[QuestionnaireResponse].resource = home-o2-adaptive-questionnaireresponse
 
 // **********************************************************************************************************************************
 Instance: NextQuestionOutputParamsExample
@@ -39,4 +39,4 @@ InstanceOf: DTRQuestionnaireNextQuestionnaireOutputParameters
 Description: "An example instance of [output Parameters](StructureDefinition-dtr-next-question-output-parameters.html) used by the [Next Question](OperationDefinition-DTR-Questionnaire-next-question.html) operation."
 Title: "$next-question Output Parameters Example"
 Usage: #example
-* parameter[QuestionnaireResponse].resource = home-o2-questionnaireresponse
+* parameter[QuestionnaireResponse].resource = home-o2-adaptive-questionnaireresponse

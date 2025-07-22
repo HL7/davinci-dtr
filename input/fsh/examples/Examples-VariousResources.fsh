@@ -93,7 +93,7 @@ Usage: #example
 // Inline Instances
 // =======================================================================================================================================================================================
 Instance: OrgExample
-InstanceOf: http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-organization
+InstanceOf: http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-organization|2.1.0
 Description: "An instance of Organization as a payer used in the example resources."
 Usage: #inline
 * identifier[0].value = "10D0202020"
