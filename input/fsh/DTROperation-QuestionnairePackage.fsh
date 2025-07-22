@@ -68,7 +68,8 @@ If a payer is in a situation where they have historically had 'conditional' form
 * parameter[=].use = #in
 * parameter[=].min = 1
 * parameter[=].max = "1"
-* parameter[=].documentation = "The"
+* parameter[=].documentation = "Coverage resource instances to establish the member and the coverage for which documentation is to be collected.  	
+Order resource instances. e.g., DeviceRequest, ServiceRequest, MedicationRequest,... Encounter, Appointment, etc. to establish context for the information to be collected.  Order-related referenced resources which are necessary to support stand-alone launch – specifically the Patient, requester, performer and location-related resources. (SHALL NOT include resources from supportingInformation).  Canonical url for Questionnaire(s) (possibly version-specific) to return.  Context ID from CRD or CDex. May be used to determine what Questionnaires to return and/or to support pre-population.  'ChangedSince' if present, only Questionnaire bundles whose Questionnaire or associated artifacts have changed since the specified timestamp. If there are no changed artifacts the operation will simply return a 200 Ok indicating that nothing has changed since the specified timestamp."
 
 // Out
 * parameter[+].name = #Parameters
