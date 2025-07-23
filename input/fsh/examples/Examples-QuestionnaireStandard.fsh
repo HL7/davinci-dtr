@@ -14,6 +14,7 @@ Description: "An example [Standard questionnaire](StructureDefinition-dtr-std-qu
 * date = "2020-01-13T00:00:00+00:00"
 * publisher = "Da Vinci DTR"
 * contact.name = "Example Author"
+* extension[audience].valueCode = #clinical
 * extension[rendering-styleSensitive].valueBoolean = false
 * extension[sdc-questionnaire-entryMode].valueCode = #sequential
 * extension[cqf-library].valueCanonical = "http://example.org/fhir/Library/quick"
@@ -22,8 +23,6 @@ Description: "An example [Standard questionnaire](StructureDefinition-dtr-std-qu
 * item[=].type = #group
 
 * item[=].item[0].linkId = "1.1"
-// * item[=].item[=].extension[minLength].valueInteger = 2
-// * item[=].item[=].extension[questionnaire-supportLink].valueUri = "https://example.com/supportLink"
 * item[=].item[=].text = "Last Name"
 * item[=].item[=].type = #string
 * item[=].item[=].required = true
