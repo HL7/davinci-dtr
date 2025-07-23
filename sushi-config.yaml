@@ -32,6 +32,10 @@ parameters:
   apply-publisher: true
   apply-contact: true
   globals-in-artifacts: true
+  pin-canonicals: pin-multiples
+  version-comparison: 
+   - 2.1.0
+  shownav: true
 
 dependencies:
   hl7.fhir.us.core:
@@ -39,19 +43,19 @@ dependencies:
     version: 7.0.0
     uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
     reason: |
-      Defines USCDI v4 EHR expectations on a range of resources that will be passed to and/or queried by CRD servers.  
+      Defines USCDI v4 EHR expectations on a range of resources that will be passed.  
   hl7.fhir.us.core.v610:
     id: uscore6
     version: 6.1.0
-    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
+    uri: http://hl7.org/fhir/us/core/v610/ImplementationGuide/hl7.fhir.us.core.v610
     reason: |
-      Defines USCDI v3 EHR expectations on a range of resources that will be passed to and/or queried by CRD servers
+      Defines USCDI v3 EHR expectations on a range of resources that will be passed.
   hl7.fhir.us.core.v311:
     id: uscore3
     version: 3.1.1
-    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
+    uri: http://hl7.org/fhir/us/core/v311/ImplementationGuide/hl7.fhir.us.core.v311
     reason: |
-      Defines USCDI v1 EHR expectations on a range of resources that will be passed to and/or queried by CRD servers. 
+      Defines USCDI v1 EHR expectations on a range of resources that will be passed. 
   hl7.fhir.uv.sdc:
     id: sdc
     version: 3.0.0
