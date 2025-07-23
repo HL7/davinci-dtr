@@ -93,9 +93,10 @@ Usage: #example
 // Inline Instances
 // =======================================================================================================================================================================================
 Instance: OrgExample
-InstanceOf: http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-organization|2.1.0
+InstanceOf: $CRDOrganization
 Description: "An instance of Organization as a payer used in the example resources."
 Usage: #inline
+* meta.profile = "http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-organization|2.1.0"
 * identifier[0].value = "10D0202020"
 * identifier[0].system = "urn:oid:2.16.840.1.113883.4.7"
 * type = http://terminology.hl7.org/CodeSystem/organization-type#pay "Payer"
