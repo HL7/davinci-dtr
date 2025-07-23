@@ -16,7 +16,7 @@ Title: "Questionnaire Audience"
 Description: "Provides a code to express the intended audience for the Questionnaire form."
 * ^status = #active
 * ^context[0].type = #element
-* ^context[=].expression = "Expression"
+* ^context[=].expression = "Questionnaire"
 * value[x] ^short = "Intended audience for the Questionnaire form."
 * value[x] ^definition = "Intended audience for the Questionnaire form."
 * value[x] 1..1
