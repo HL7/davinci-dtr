@@ -1,6 +1,6 @@
 == Suppressed Messages ==
 # Approved by Cross Group Projects WG:9/28/2023 https://confluence.hl7.org/display/CGP/2023-09-28+Cross-Group+Project+Workgroup+Call
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaireresponse').baseDefinition: US FHIR Usage rules require that all profiles on QuestionnaireResponse derive from the core US profile. See https://confluence.hl7.org/display/CGP/US+Core+Variance+Request+Process
+%US FHIR Usage rules require that all profiles on QuestionnaireResponse derive from the core US profile%
 
 # Error in IG Publisher 
 %value[x].extension:alternative' for "extension:alternative" cannot be resolved%
