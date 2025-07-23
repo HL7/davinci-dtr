@@ -6,9 +6,6 @@ WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-dtr/Str
 # See Grahame's statement regarding this issue: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/questionnaire-derivationType.20warning.20question
 %has no derivation type specified using the%
 
-# These are incorrectly declared as 'draft' in their source IGs
-Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/practitioner-role|1.0.0
-Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/organization-type|2.0.0
   
 # This is for an example of a Parameters resource containing a DTR Bundle. It should not have it's own narrative.
 Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
@@ -20,11 +17,7 @@ Rule dom-6: 'A resource should have narrative for robust management' Failed (def
   
 # This link is intended to be version-independent
 % The link 'http://hl7.org/fhir/us/davinci-dtr' for "Documentation Templates and Rules (DTR)" is a canonical link and is therefore unsafe with regard to versions
-  
-  
-# This will occur in the next major release
-INFORMATION: CodeSystem/temp: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
-  
+   
   
 # Not necessary for the examples
 %could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
