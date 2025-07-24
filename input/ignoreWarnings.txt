@@ -2,9 +2,9 @@
 # Approved by Cross Group Projects WG:9/28/2023 https://confluence.hl7.org/display/CGP/2023-09-28+Cross-Group+Project+Workgroup+Call
 %US FHIR Usage rules require that all profiles on QuestionnaireResponse derive from the core US profile%
 
-# Error in IG Publisher 
+# Error in IG Publisher:  https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Extension.20generation.20error.20in.20Snapshot.20vs.2E.20Differential 
 %value[x].extension:alternative' for "extension:alternative" cannot be resolved%
-%alternative in the generated snapshot: check that the path and definitions are legal in the differential%
+%snapshot: check that the path and definitions are legal in the differential%
 
 # Dependent on SDC publication
 %"SDC implementation guide" cannot be resolved%
