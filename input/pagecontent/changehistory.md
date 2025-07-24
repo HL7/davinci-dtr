@@ -1,4 +1,4 @@
-### Release 2.2.0
+### Release 2.2.0-ballot
 <p><b>Substantive and breaking changes:</b></p>
 <ul>
   <li>
