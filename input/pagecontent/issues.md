@@ -29,14 +29,6 @@
   <li>Tighten the specifications to prohibit requiring data elements beyond the specification or other otherwise not properly handling conformant instances, while still allowing exceptions where interoperability requirements have been approved through a change request and continuous-integration build update process.</li>
 </ol>
 
-<a name="multicov-options"> </a>
-<h4>Options</h4>
-<p>Potential resolutions of these issues</p>
-<ol>
-  <li>Update the specification in all places where there's conflicting language to make clear that only one coverage is exposed, only that coverage can be updated, no coverages can be added, and responses are limited to a single coverage.  Mark the request to support multiple coverages as 'Considered for Future Use' as something that can be explored in a future version of the specification once everyone is handling primary coverages well.</li>
-  <li>Add explicit support for multiple coverages, including mechanisms to flag which coverage is presumed to be primary, and extend standard response codes to support dealing with multi-coverage scenarios.</li>
-</ol>
-
 <!-- ***************************************************************************************************************************************** -->
 
 <!-- <a name="misc"> </a>
