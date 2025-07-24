@@ -1,13 +1,13 @@
 <div class="new-content" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R4/fhir-single.xsd">
   <p>As implementers get closer to the regulatory deadline, new voices have been joining the project calls and submitting feedback via Jira that call into question some of the foundational assumptions made in the implementation guides.  The project has been holding special calls to discuss a number of these issues, looping in a larger portion of the community to engage in the discussion.  However, at the time the content of this specification was being prepared for ballot, resolution had not yet been reached on most of the topics.  Postponing the ballot until these topics were landed would mean the updated specification that corrects a number of errors in the original specification and makes other useful clarificaitons and enhancements to the specification would be released too late to be useful to most implementers working to meet the CMS January 2027 regulatory deadline.  For this reason, the ballot will be occurring while these issues are still unresolved.</p>
   <p>However, there remains a possibility that some of these issues could be addressed before final publication of the balloted specification.  To ensure balloters have an opportunity to evaluate the potential options and to express their opinion on the issues, they are laid out here.  If you are uncomfortable with any of the candidate resolutions to any of the issues laid out here, feel free to vote negative on the issue(s) in question.  You can consider withdrawing your negative votes when final resolutions are landed, provided you are comfortable with the resolution.</p>
-  <p>NOTE 1: It is unlikely that all of these issues will be addressed in the CRD 2.2.0 release, and it's possible that there will be no changes to the specification from any of these issues and that they will either be deferred to some future (possibly post 2026) release, or they might be closed by the submitter or otherwise resolved with no change.</p>
+  <p>NOTE 1: It is unlikely that all of these issues will be addressed in the DTR 2.2.0 release, and it's possible that there will be no changes to the specification from any of these issues and that they will either be deferred to some future (possibly post 2026) release, or they might be closed by the submitter or otherwise resolved with no change.</p>
   <p>NOTE 2: If there is a resolution to one or more of these issues that involves making a change to the specification that is substantively different than any of the proposed dispositions, there will be an announced public review period of the specification with the proposed change applied to give the community an opportunity to evaluate and provide feedback on the new option prior to publication.</p>
 
 <a name="interop"> </a>
 <h3>Expectations for interoperability</h3>
 <p>
-  There has been discussion about the use of 'supplemental' guides and general interoperability expectations for both CRD client and server implementations.  This has manifested in the following ticket:
+  There has been discussion about the use of 'supplemental' guides and general interoperability expectations for DTR implementations.  This has manifested in the following ticket:
 </p>
 <ul>
   <li><a href="https://jira.hl7.org/browse/FHIR-50465">FHIR-50465</a> - Need guidance on supplemental guides</li>
@@ -27,8 +27,6 @@
 <ol>
   <li>Leave the specifications loose like they are, meaning that implementations can impose additional requirements necessitating code changes for interoperability with that partner.</li>
   <li>Tighten the specifications to prohibit requiring data elements beyond the specification or other otherwise not properly handling conformant instances, while still allowing exceptions where interoperability requirements have been approved through a change request and continuous-integration build update process.</li>
-</ol>
-
 </ol>
 
 <a name="multicov-options"> </a>
