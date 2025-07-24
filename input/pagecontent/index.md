@@ -2,7 +2,11 @@
 
 <blockquote class="note-to-balloters">
   <p>
-    The Da Vinci Burden Reduction team is considering updating this specification to reference the newest version of Structured Data Capture (SDC), which has made a number of clarifications to the handling of Clinical Quality Language (CQL) and expectations around population that we think will help with interoperability.  We are asking for the opinion of balloters on the value of making that change.  
+  The Da Vinci Burden Reduction team is considering updating this specification to reference the newest version of Structured Data Capture (SDC), which has made a number of clarifications to the handling of Clinical Quality Language (CQL) and expectations around population that we think will help with interoperability.  We are asking for the opinion of balloters on the value of making that change.
+  </p>  
+
+  <p>
+  <b>IMPORTANT:</b> The scope of this ballot is limited to the new changes incorporated (see <a href="changehistory.html">Change Log</a>) and to feedback open issues identified in this guide (<a href="issues.html">Open Issues</a>). While feedback can always be submitted against any content in the specification at any time, votes submitted against content that is outside the official scope of the ballot may be deemed 'not related' and therefore not able to support negative votes.
   </p>
 </blockquote>
 
