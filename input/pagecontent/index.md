@@ -6,7 +6,7 @@
   </p>  
 
   <p>
-  <b>IMPORTANT:</b> The scope of this ballot is limited to the new changes incorporated (see <a href="changehistory.html">Change Log</a>) and to feedback open issues identified in this guide (<a href="issues.html">Open Issues</a>). While feedback can always be submitted against any content in the specification at any time, votes submitted against content that is outside the official scope of the ballot may be deemed 'not related' and therefore not able to support negative votes.
+  <b>IMPORTANT:</b> The scope of this ballot is limited to the new changes incorporated (see <a href="changehistory.html">Change Log</a>) and to feedback open issues identified in this guide (see <a href="issues.html">Open Issues</a>). While feedback can always be submitted against any content in the specification at any time, votes submitted against content that is outside the official scope of the ballot may be deemed 'not related' and therefore not able to support negative votes.
   </p>
 </blockquote>
 
