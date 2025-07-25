@@ -6,6 +6,9 @@
 %value[x].extension:alternative' for "extension:alternative" cannot be resolved%
 %snapshot: check that the path and definitions are legal in the differential%
 
+# Began process for TSMG exception for internal code systems
+%Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now%
+
 # Dependent on SDC publication
 %"SDC implementation guide" cannot be resolved%
 
