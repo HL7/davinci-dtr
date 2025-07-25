@@ -19,22 +19,22 @@
 # See Grahame's statement regarding this issue: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/questionnaire-derivationType.20warning.20question
 %has no derivation type specified using the%
 
+# Deprecated elements 
+%The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated%
+%extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note%
+%extension http://hl7.org/fhir/StructureDefinition/ordinalValue|5.2.0 is deprecated with the note%
   
 # This is for an example of a Parameters resource containing a DTR Bundle. It should not have it's own narrative.
 Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
   
-  
 # See Grahame's statement regarding this issue: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/deprecated.20pattern.20slicing/near/482196925
 %For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 
-  
 # This link is intended to be version-independent
 % The link 'http://hl7.org/fhir/us/davinci-dtr' for "Documentation Templates and Rules (DTR)" is a canonical link and is therefore unsafe with regard to versions
    
-  
 # Not necessary for the examples
 %could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
-  
   
 # An example does exist within the IG as a contained resource in the QuestionnaireResponse for Adaptive
 INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaire-adapt'): The Implementation Guide contains no explicitly linked examples for this profile
