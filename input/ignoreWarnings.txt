@@ -12,9 +12,9 @@
 # Dependent on SDC publication
 %"SDC implementation guide" cannot be resolved%
 
-# Not applicable in this publication
-%are multiple different potential matches for the url%
-%A definition could not be found for Canonical URL%
+# Allowable to be suppressed in this publication
+%It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html)%
+%A definition could not be found for Canonical URL 'http://www.rfc-editor.org/bcp/bcp13.txt'%
 
 # Due to regulatory guidelines US Core 7.0.0 is the latest supported
 %The ImplementationGuide uses package hl7.fhir.us.core#7.0.0 released on 2024-05-08%
