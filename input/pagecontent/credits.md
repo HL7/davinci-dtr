@@ -55,6 +55,7 @@ Further details about the project, including minutes of meetings can be found on
     <li>Celine Lefebvre, Heather McComas, Denis Casaubon (AMA)</li>
     <li>Anup Mahansaria, Peni Moxim, Mariel Brechner (Evernorth)</li>
     <li>Carie Hammond and Ryan Moehrke (AEGIS)</li>
+    <li>Artem Sopin (Cotiviti)</li>
     <li>Brian Poteet (Edifecs)</li>
     <li>James Bound (Cognizant)</li>
     <li>Jason Vogt, Chris Hardee (Meditech)</li>
