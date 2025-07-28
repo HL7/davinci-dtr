@@ -5,7 +5,12 @@
 # Error in IG Publisher:  https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Extension.20generation.20error.20in.20Snapshot.20vs.2E.20Differential 
 %value[x].extension:alternative' for "extension:alternative" cannot be resolved%
 %snapshot: check that the path and definitions are legal in the differential%
-
+%The link 'StructureDefinition-dtr-base-questionnaire-definitions.html#Questionnaire.item.extension:candidateExpression.value[x].extension:alternativeExpression' for "extension:alternativeExpression" cannot be resolved%
+%The link 'StructureDefinition-dtr-base-questionnaire-definitions.html#Questionnaire.item.extension:initialExpression.value[x].extension:alternativeExpression' for "extension:alternativeExpression" cannot be resolved%
+%The link 'StructureDefinition-dtr-base-questionnaire-definitions.html#Questionnaire.item.extension:calculatedExpression.value[x].extension:alternativeExpression' for "extension:alternativeExpression" cannot be resolved%
+%The link 'StructureDefinition-dtr-base-questionnaire-definitions.html#Questionnaire.item.extension:candidateExpression.value[x].extension:alternativeExpression' for "extension:alternativeExpression" cannot be resolved%
+%The link 'StructureDefinition-dtr-base-questionnaire-definitions.html#Questionnaire.item.extension:initialExpression.value[x].extension:alternativeExpression' for "extension:alternativeExpression" cannot be resolved%
+%The link 'StructureDefinition-dtr-base-questionnaire-definitions.html#Questionnaire.item.extension:calculatedExpression.value[x].extension:alternativeExpression' for "extension:alternativeExpression" cannot be resolved%
 # Began process for TSMG exception for internal code systems
 %Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now%
 
