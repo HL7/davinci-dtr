@@ -1,48 +1,48 @@
 == Suppressed Messages ==
-# Approved by Cross Group Projects WG:9/28/2023 https://confluence.hl7.org/display/CGP/2023-09-28+Cross-Group+Project+Workgroup+Call
+# 01 - Approved by Cross Group Projects WG:9/28/2023 https://confluence.hl7.org/display/CGP/2023-09-28+Cross-Group+Project+Workgroup+Call
 %US FHIR Usage rules require that all profiles on QuestionnaireResponse derive from the core US profile%
 
-# Error in IG Publisher:  https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Extension.20generation.20error.20in.20Snapshot.20vs.2E.20Differential 
+# 02 - Error in IG Publisher:  https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Extension.20generation.20error.20in.20Snapshot.20vs.2E.20Differential 
 %The link 'StructureDefinition-dtr-base-questionnaire-definitions.html#Questionnaire.item.extension:%
 %snapshot: check that the path and definitions are legal in the differential%
 
-# Began process for TSMG exception for internal code systems
+# 03 - Began process for TSMG exception for internal code systems
 %Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now%
 
-# Dependent on SDC publication
+# 04 - Dependent on SDC publication
 %"SDC implementation guide" cannot be resolved%
 
-# Allowable to be suppressed in this publication
+# 05 - Allowable to be suppressed in this publication
 %It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html)%
 %A definition could not be found for Canonical URL 'http://www.rfc-editor.org/bcp/bcp13.txt'%
 
-# Due to regulatory guidelines US Core 7.0.0 is the latest supported
+# 06 - Due to regulatory guidelines US Core 7.0.0 is the latest supported
 %The ImplementationGuide uses package hl7.fhir.us.core#7.0.0 released on 2024-05-08%
   
-# See Grahame's statement regarding this issue: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/questionnaire-derivationType.20warning.20question
+# 07 - See Grahame's statement regarding this issue: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/questionnaire-derivationType.20warning.20question
 %has no derivation type specified using the%
 
-# Deprecated elements 
+# 08 - Deprecated elements 
 %The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated%
 %extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note%
 %extension http://hl7.org/fhir/StructureDefinition/ordinalValue|5.2.0 is deprecated with the note%
   
-# This is for an example of a Parameters resource containing a DTR Bundle. It should not have it's own narrative.
+# 09 - This is for an example of a Parameters resource containing a DTR Bundle. It should not have it's own narrative.
 Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
   
-# See Grahame's statement regarding this issue: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/deprecated.20pattern.20slicing/near/482196925
+# 10 - See Grahame's statement regarding this issue: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/deprecated.20pattern.20slicing/near/482196925
 %For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 
-# This link is intended to be version-independent
+# 11 - This link is intended to be version-independent
 % The link 'http://hl7.org/fhir/us/davinci-dtr' for "Documentation Templates and Rules (DTR)" is a canonical link and is therefore unsafe with regard to versions
    
-# Not necessary for the examples
+# 12 - Not necessary for the examples
 %could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
   
-# An example does exist within the IG as a contained resource in the QuestionnaireResponse for Adaptive
+# 13 - An example does exist within the IG as a contained resource in the QuestionnaireResponse for Adaptive
 INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaire-adapt'): The Implementation Guide contains no explicitly linked examples for this profile
 
-# These versions are before we started detailed tracking of changes and there's little value in going back to document them now
+# 14 - These versions are before we started detailed tracking of changes and there's little value in going back to document them now
 %DA VINCI: The Change Log page (changehistory.html) does not include an h3 section for the version 1.1.0-ballot
 %DA VINCI: The Change Log page (changehistory.html) does not include an h3 section for the version 1.0.0
 %DA VINCI: The Change Log page (changehistory.html) does not include an h3 section for the version 0.2.0
