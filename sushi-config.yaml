@@ -35,6 +35,7 @@ parameters:
   version-comparison: 
    - 2.1.0
   shownav: true
+  pin-canonicals: pin-multiples
 
 dependencies:
   hl7.fhir.us.core:
