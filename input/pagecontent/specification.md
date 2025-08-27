@@ -367,7 +367,7 @@ It is important to note that the Payer Identifier used in this file **SHALL** be
 Example 'Supported Payers' file:
 ```json
 {
-  "supportedPayers": [
+  "payers": [
     {
         "name": "Health Ohmy",
         "identifier" : {
