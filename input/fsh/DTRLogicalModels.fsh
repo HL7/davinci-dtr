@@ -12,7 +12,7 @@ This logical model is NOT a FHIR data structure for information exchange. Instea
 * ^experimental = false
 * ^extension[$fmm].valueInteger = 1
 * ^extension[$standards-status].valueCode = #informative
-* payer           0..* BackboneElement  "Supported Payer"  "Details for specific supported payer."
+* payers          0..* BackboneElement  "Supported Payer"  "Details for specific supported payer."
   * name          1..1 string           "Name of the payer" 
   * identifier    1..1 Identifier       "Identifier of the payer"
     * system      1..1                  
