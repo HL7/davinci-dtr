@@ -6,7 +6,7 @@
 %The link 'StructureDefinition-dtr-base-questionnaire-definitions.html#Questionnaire.item.extension:%
 %snapshot: check that the path and definitions are legal in the differential%
 
-# 03 - Began process for TSMG exception for internal code systems
+# 03 - Received exception for the three code systems internal to the IG: https://confluence.hl7.org/spaces/TSMG/pages/358270071/2025-08-25+TSMG+Agenda+and+Minutes
 %Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now%
 
 # 04 - Dependent on SDC publication
