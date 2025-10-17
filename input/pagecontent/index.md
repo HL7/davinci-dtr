@@ -117,7 +117,7 @@ This implementation guide and the underlying FHIR specification are licensed as 
 
 <div markdown="1" class="pbox">
 
-{% include ip-statements.xhtml %}
+{% lang-fragment ip-statements.xhtml %}
 
 </div>
 <br>
