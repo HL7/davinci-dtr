@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="formatting.css" />
 
 ### Da Vinci
-{% include davinci.md %}
+{% lang-fragment davinci.md %}
 
 ### The Da Vinci DTR project
 This standard aims to streamline the process of collecting patient documentation required by health insurance payers for purposes like prior authorization and claims processing. It enables payers to express their documentation requirements in a computable format using FHIR Questionnaires, allowing providers to easily gather and submit necessary information.

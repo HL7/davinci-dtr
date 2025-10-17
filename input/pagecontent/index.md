@@ -88,7 +88,7 @@ This guide is based on the FHIR R4 specification that is mandated for use in the
 
 In addition, this guide also relies on a number of parent implementation guides:
 
-{% include dependency-table-nontech.xhtml %}
+{% lang-fragment dependency-table-nontech.xhtml %}
 
 This implementation guide defines additional constraints and usage expectations above and beyond the information found in these base specifications.
 This guide also depends on several non-Da Vinci specifications:
