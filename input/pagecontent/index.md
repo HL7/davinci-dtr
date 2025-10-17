@@ -68,7 +68,7 @@ While designed to work with these other IGs, DTR can be implemented stand-alone.
       </td></tr>
   </table>
 </div><br>
-A fourth Da Vinci IG that is relevant to DTR is the [Health Record Exchange (HRex)](https://hl7.org/fhir/us/davinci-hrex/STU1.1/security.html) implementation guide, which defines a number of shared profiles and other shared content used across Da Vincie IGs - including this one.
+A fourth Da Vinci IG that is relevant to DTR is the [Health Record Exchange (HRex)](https://hl7.org/fhir/us/davinci-hrex/STU1.1/security.html) implementation guide, which defines several shared profiles and other shared content used across Da Vincie IGs - including this one.
 
 ### Content and Organization
 The IG is organized into the following sections:
