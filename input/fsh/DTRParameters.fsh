@@ -30,7 +30,7 @@ Description:    "The Parameters profile used to define the inputs of the [$quest
   * ^type.targetProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-std-questionnaire"
 
 * parameter[context].name = "context"
-* parameter[context] ^short = "CRD or CDex-provided context"
+* parameter[context] ^short = "CRD, CDex, or PAS-provided context"
 * parameter[context].value[x] 1..1 MS
 * parameter[context].value[x] only string
 * parameter[changedsince].name = "changedsince"
