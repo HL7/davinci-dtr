@@ -59,7 +59,7 @@ Description:    "A profile on Parameters indicating the expected response conten
 * parameter[PackageBundle].resource only DTRQuestionnairePackageBundle
 * parameter[PackageBundle] ^short = "The QuestionnairePackage bundle that was retrieved"
 
-* parameter[Outcome].name = "operationOutcome"
+* parameter[Outcome].name = "OperationOutcome"
 * parameter[Outcome].resource 0..1 MS
 * parameter[Outcome].resource only OperationOutcome
 * parameter[Outcome] ^short = "Operation Outcome from this execution"

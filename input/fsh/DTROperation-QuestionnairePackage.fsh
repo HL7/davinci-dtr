@@ -79,6 +79,24 @@ If a payer is in a situation where they have historically had 'conditional' form
 * parameter[=].max = "*"
 * parameter[=].documentation = "Order resource instances. e.g., DeviceRequest, ServiceRequest, MedicationRequest,... Encounter, Appointment, etc. to establish context for the information to be collected."
 * parameter[=].type = #Resource
+* parameter[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type"
+* parameter[=].extension[=].valueUri = #Appointment
+* parameter[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type"
+* parameter[=].extension[=].valueUri = #Encounter
+* parameter[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type"
+* parameter[=].extension[=].valueUri = #CommunicationRequest
+* parameter[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type"
+* parameter[=].extension[=].valueUri = #DeviceRequest
+* parameter[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type"
+* parameter[=].extension[=].valueUri = #MedicationRequest
+* parameter[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type"
+* parameter[=].extension[=].valueUri = #NutritionOrder
+* parameter[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type"
+* parameter[=].extension[=].valueUri = #ServiceRequest
+* parameter[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type"
+* parameter[=].extension[=].valueUri = #SupplyRequest
+* parameter[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type"
+* parameter[=].extension[=].valueUri = #VisionPrescription
 
 * parameter[+].name = #questionnaire
 * parameter[=].use = #in
@@ -86,6 +104,7 @@ If a payer is in a situation where they have historically had 'conditional' form
 * parameter[=].max = "*"
 * parameter[=].documentation = "Canonical url for Questionnaire(s) (possibly version-specific) to return."
 * parameter[=].type = #canonical
+* parameter[=].targetProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-std-questionnaire"
 
 * parameter[+].name = #context
 * parameter[=].use = #in
@@ -99,7 +118,7 @@ If a payer is in a situation where they have historically had 'conditional' form
 * parameter[=].min = 0
 * parameter[=].max = "1"
 * parameter[=].documentation = "If present, only Questionnaire bundles whose Questionnaire or associated artifacts have changed since the specified timestamp.  If there are no changed artifacts the operation will simply return a 200 Ok indicating that nothing has changed since the specified timestamp."
-* parameter[=].type = #dateTime
+* parameter[=].type = #instant
 
 //-------------------------------------------------------------------------------------
 // Output parameters
@@ -110,7 +129,7 @@ If a payer is in a situation where they have historically had 'conditional' form
 * parameter[=].documentation = "A Bundle with a single Questionnaire, and 0..* Libraries containing needed CQL and/or ValueSets containing needed codes."
 * parameter[=].type = #Bundle
 
-* parameter[+].name = #outcome
+* parameter[+].name = #Outcome
 * parameter[=].use = #out
 * parameter[=].min = 0
 * parameter[=].max = "1"
