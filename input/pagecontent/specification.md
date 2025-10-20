@@ -344,7 +344,7 @@ In this approach and results of the queries, filtering, and other operations are
 
 #### CQL Constraints
 DTR imposes the following additional rules on CQL use by payers to maximize interoperability:
-* The CQL **SHALL** be version [CQL 1.5](http://cql.hl7.org/N1/).
+* The CQL **SHALL** be compatible with version [CQL 1.5](http://cql.hl7.org/N1/).
 * CQL **SHALL** have a context of "Patient". 
 * Within the Questionnaire, CQL **SHALL** follow SDC rules for determining context. Specifically, CQL definitions and variables defined on ancestor elements or preceding expression extensions within the same Questionnaire item are in scope for referencing in descendant/following expressions. 
 * Within [Libraries](http://hl7.org/fhir/R4/library.html), both raw CQL and compiled ELM (in JSON syntax – i.e., application/elm+json) **SHALL** be provided as separate content repetitions within the library.  Within Expression elements, the base expression CQL **SHALL** be accompanied by an [Alternative Expression Extension](StructureDefinition-alternativeExpression.html) containing the compiled JSON ELM for the expression.
