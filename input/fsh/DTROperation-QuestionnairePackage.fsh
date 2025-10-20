@@ -61,21 +61,58 @@ If a payer is in a situation where they have historically had 'conditional' form
 * type = true
 * instance = false
 
-// In
-* parameter[0].name = #Parameters
-* parameter[=].type = #Parameters
-* parameter[=].targetProfile = Canonical(dtr-qpackage-input-parameters)
+* inputProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-qpackage-input-parameters"
+* outputProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-qpackage-output-parameters"
+
+//-------------------------------------------------------------------------------------
+// Input parameters
+* parameter[0].name = #coverage
 * parameter[=].use = #in
 * parameter[=].min = 1
-* parameter[=].max = "1"
-* parameter[=].documentation = "Coverage resource instances to establish the member and the coverage for which documentation is to be collected.  	
-Order resource instances. e.g., DeviceRequest, ServiceRequest, MedicationRequest,... Encounter, Appointment, etc. to establish context for the information to be collected.  Order-related referenced resources which are necessary to support stand-alone launch – specifically the Patient, requester, performer and location-related resources. (SHALL NOT include resources from supportingInformation).  Canonical url for Questionnaire(s) (possibly version-specific) to return.  Context ID from CRD or CDex. May be used to determine what Questionnaires to return and/or to support pre-population.  'ChangedSince' if present, only Questionnaire bundles whose Questionnaire or associated artifacts have changed since the specified timestamp. If there are no changed artifacts the operation will simply return a 200 Ok indicating that nothing has changed since the specified timestamp."
+* parameter[=].max = "*"
+* parameter[=].documentation = "Coverage resource instances to establish the member and the coverage for which documentation is to be collected."
+* parameter[=].type = #Coverage
 
-// Out
-* parameter[+].name = #Parameters
-* parameter[=].type = #Parameters
-* parameter[=].targetProfile = Canonical(dtr-qpackage-output-parameters)
+* parameter[+].name = #order
+* parameter[=].use = #in
+* parameter[=].min = 0
+* parameter[=].max = "*"
+* parameter[=].documentation = "Order resource instances. e.g., DeviceRequest, ServiceRequest, MedicationRequest,... Encounter, Appointment, etc. to establish context for the information to be collected."
+* parameter[=].type = #Resource
+
+* parameter[+].name = #questionnaire
+* parameter[=].use = #in
+* parameter[=].min = 0
+* parameter[=].max = "*"
+* parameter[=].documentation = "Canonical url for Questionnaire(s) (possibly version-specific) to return."
+* parameter[=].type = #canonical
+
+* parameter[+].name = #context
+* parameter[=].use = #in
+* parameter[=].min = 0
+* parameter[=].max = "1"
+* parameter[=].documentation = "Context ID from CRD or CDex.  May be used to determine what Questionnaires to return and/or to support pre-population."
+* parameter[=].type = #string
+
+* parameter[+].name = #changedsince
+* parameter[=].use = #in
+* parameter[=].min = 0
+* parameter[=].max = "1"
+* parameter[=].documentation = "If present, only Questionnaire bundles whose Questionnaire or associated artifacts have changed since the specified timestamp.  If there are no changed artifacts the operation will simply return a 200 Ok indicating that nothing has changed since the specified timestamp."
+* parameter[=].type = #dateTime
+
+//-------------------------------------------------------------------------------------
+// Output parameters
+* parameter[+].name = #PackageBundle
 * parameter[=].use = #out
 * parameter[=].min = 0
 * parameter[=].max = "*"
 * parameter[=].documentation = "A Bundle with a single Questionnaire, and 0..* Libraries containing needed CQL and/or ValueSets containing needed codes."
+* parameter[=].type = #Bundle
+
+* parameter[+].name = #outcome
+* parameter[=].use = #out
+* parameter[=].min = 0
+* parameter[=].max = "1"
+* parameter[=].documentation = "Warning or information messages related to the successful execution of the operation"
+* parameter[=].type = #OperationOutcome
