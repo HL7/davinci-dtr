@@ -2,8 +2,8 @@ This implementation guide uses specific terminology such as SHALL, SHOULD, MAY t
 
 Additional conformance expectations specific to this guide are as follows:
 
-### Conformance to this IG
-In order to conform to this implementation guide, in addition to adhering to any relevant 'SHALL' statements, a system **SHALL** conform to at least one of the appropriate CapabilityStatements listed here:
+### Conformance to this Implementation Guide
+§In order to conform to this implementation guide, in addition to adhering to any relevant 'SHALL' statements, a system **SHALL** conform to at least one of the appropriate CapabilityStatements listed here:§
 
 * **Light DTR EHR** (for [US Core 3.1.1](CapabilityStatement-light-dtr-ehr-311.html) / [US Core 6.1/7.0](CapabilityStatement-light-dtr-ehr-700.html))
 * **Full DTR EHR** (for [US Core 3.1.1](CapabilityStatement-full-dtr-ehr-311.html) / [US Core 6.1/7.0](CapabilityStatement-full-dtr-ehr-700.html))
@@ -15,9 +15,9 @@ This IG marks elements with the Must Support flag in its profiles. In addition t
 
 The FHIR specification makes it clear that when profiling another profile, a MustSupport flag can be constrained further (i.e., taken from 'false' to 'true') but cannot be loosened (i.e., changed from 'true' to 'false').   
   
-Da Vinci DTR implementations **SHALL** conform to the [HRex]({{site.data.fhir.ver.hrex}}/conformance.html#mustsupport) and [US Core]({{site.data.fhir.ver.uscore7}}must-support.html) Guidance where applicable.
+§Da Vinci DTR implementations **SHALL** conform to the [HRex]({{site.data.fhir.ver.hrex}}/conformance.html#mustsupport) and [US Core]({{site.data.fhir.ver.uscore7}}must-support.html) Guidance where applicable.§
   
-DTR apps and EHRs that take on DTR app responsibility **SHALL** be able to render Questionnaires and QuestionnaireResponses.  Specifically, apps and EHRs acting as form fillers **SHALL** be able to display:
+§DTR apps and EHRs that take on DTR app responsibility **SHALL** be able to render Questionnaires and QuestionnaireResponses.§  §Specifically, apps and EHRs acting as form fillers **SHALL** be able to display:§
 * `QuestionnaireResponse.questionnaire.questionnaireDisplay`/`Questionnaire.title`
 * `QuestionnaireResponse.authored`
 * `QuestionnaireResponse.author.resolve().name`
@@ -26,6 +26,11 @@ DTR apps and EHRs that take on DTR app responsibility **SHALL** be able to rende
 * `QuestionnaireResponse.item.value` - all data types
 * The same for all nested items
 
-They **SHALL** also handle all mustSupport elements within the Questionnaire profile and provide visual cues where those elements impact expected user action (e.g., required answers, need for signatures, etc.)
+§They **SHALL** also handle all mustSupport elements within the Questionnaire profile and provide visual cues where those elements impact expected user action (e.g., required answers, need for signatures, etc.)§
   
-Those same systems **SHOULD** be able to display `QuestionnaireResponse.item.itemMedia`
+§Those same systems **SHOULD** be able to display `QuestionnaireResponse.item.itemMedia`§
+
+
+### Conformance Statements in this Implementation Guide
+
+§§§
