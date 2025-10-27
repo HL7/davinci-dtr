@@ -1,3 +1,26 @@
+### Release 2.2.0
+<p><b>The following issues are addressed resulting from this ballot:</b></p>
+
+
+<p><b>Substantive and breaking changes:</b></p>
+<ul>
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-0000">FHIR-xxxxx</a> (Compatible, substantive):<br>
+  TBD
+  </li>
+</ul>
+<br/>
+
+<p><b>Non-Substantive changes:</b></p>
+<ul>
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-0000">FHIR-xxxxx</a> (Non-Substantive):<br>
+  TBD
+  </li>
+</ul>
+<br/>
+
+
 ### Release 2.2.0-ballot
 <p><b>Substantive and breaking changes:</b></p>
 <ul>
