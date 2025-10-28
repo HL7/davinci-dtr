@@ -44,7 +44,9 @@ For the DTR specification to work successfully at scale, it is essential that DT
   5. DTR clients and services and **SHALL** use standard DTR data elements (i.e., elements found within DTR-defined or inherited profiles and marked as mandatory or `mustSupport`) to communicate needed data if such elements are intended to convey such information. (If an organization believes they have a requirement for a data element not marked as `mustSupport` in the DTR or inherited profiles, they should raise the requirement for discussion on the [DTR stream](https://chat.fhir.org/#narrow/channel/197320-Da-Vinci-DTR) on chat.fhir.org.)
    
   6. DTR implementing organizations **SHALL NOT** publish guidance setting expectations for where certain data elements are conveyed within DTR and inherited data structures, but **MAY** submit change requests to DTR, CRD, HRex, or US Core requesting that additional guidance be provided to implementers on data structure usage to increase consistency across implementations.
+   
+
 <!-- 
-### Conformance Statements in this Implementation Guide
+Conformance Statements in this Implementation Guide
 
 §§§ -->
