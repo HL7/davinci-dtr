@@ -1,7 +1,6 @@
 ### Release 2.2.0
 <p><b>The following issues are addressed resulting from this ballot:</b></p>
 
-
 <p><b>Substantive and breaking changes:</b></p>
 <ul>
   <li>
@@ -13,6 +12,13 @@
   <a href="https://jira.hl7.org/browse/FHIR-50033">FHIR-50033</a> (Compatible, substantive):<br>
   In DTR we should have either Context id or CRD resources in Order but not both
   </li>
+
+<!-- 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR">FHIR</a> (Compatible, substantive):<br>
+  fffff
+  </li>
+   -->
 </ul>
 <br/>
 

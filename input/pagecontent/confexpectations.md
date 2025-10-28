@@ -30,6 +30,20 @@ The FHIR specification makes it clear that when profiling another profile, a Mus
   
 §Those same systems **SHOULD** be able to display `QuestionnaireResponse.item.itemMedia`§
 
+### Interoperability Expectations
+For the DTR specification to work successfully at scale, it is essential that DTR clients and servers be able to interoperate with each other without custom expectations or deviations driven by EHR-specific or payer-specific requirements. The following rules are intended to help drive such consistency:
+
+  1. §When determining Questionnaire packages, processing adaptive forms via $next-question, or constructing population logic, DTR services **SHALL NOT** depend on or set expectations for the inclusion of resource instances not compliant with profiles defined in this guide, HRex, or US Core.§  §Similarly, they **SHALL NOT** depend on or set expectations for the inclusion of any data elements not marked as mandatory (min cardinality >= 1) or `mustSupport` in those profiles.§
+   
+  2. §DTR servers **SHALL NOT** set expectations for systems to support Questionnaire rendering or response validation capabilities above those established in the [DTR Questionnaire profiles](artifacts.html#structures-resource-profiles) and **SHALL** accept and successfully process any Questionnaire Response returned for a Questionnaire from that DTR server that is deemed valid against the rules expressed only as `mustSupport` in the Questionnaire profile.§
+   
+  3. In the event a need to communicate data structures or elements not covered as required or `mustSupport` in the specification, the organization identifying the requirement are expected to submit change requests proposing adding the relevant profiles and/or `mustSupport` elements to a future version of the DTR specification. If the proposed change is adopted and published in the DTR continuous integration build or the CI build of one of its dependencies (e.g., US Core), implementations **MAY**, by mutual agreement, pre-adopt the use of those additional profiles and/or `mustSupport` data elements and not be considered in violation of #1 or #2 above.
+   
+  4. §Where cardinality and other constraints present in profiles allow data elements to be omitted, DTR compliant systems **SHALL NOT** treat the omission of those elements as a conformance error - i.e., DTR services are expected to return appropriate questionnaire package responses, not system level errors (e.g., HTTP 4xx errors), and DTR clients are expected to render and allow completion of forms as normal.§
+   
+  5. §DTR clients and services and **SHALL** use standard DTR data elements (i.e., elements found within DTR-defined or inherited profiles and marked as mandatory or `mustSupport`) to communicate needed data if such elements are intended to convey such information.§ (If an organization believes they have a requirement for a data element not marked as `mustSupport` in the DTR or inherited profiles, they should raise the requirement for discussion on the [DTR stream](https://chat.fhir.org/#narrow/channel/197320-Da-Vinci-DTR) on chat.fhir.org.)
+   
+  6. §DTR implementing organizations **SHALL NOT** publish guidance setting expectations for where certain data elements are conveyed within DTR and inherited data structures, but **MAY** submit change requests to DTR, CRD, HRex, or US Core requesting that additional guidance be provided to implementers on data structure usage to increase consistency across implementations.§
 
 ### Conformance Statements in this Implementation Guide
 
