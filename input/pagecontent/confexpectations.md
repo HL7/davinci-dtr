@@ -45,6 +45,7 @@ For the DTR specification to work successfully at scale, it is essential that DT
    
   6. DTR implementing organizations **SHALL NOT** publish guidance setting expectations for where certain data elements are conveyed within DTR and inherited data structures, but **MAY** submit change requests to DTR, CRD, HRex, or US Core requesting that additional guidance be provided to implementers on data structure usage to increase consistency across implementations.
    
+This guidance does not prevent trading partners from agreeing to exchange additional information as long as the implementation does not prevent transactions compliant with the implementation guide from being appropriately processed.   Such enhancements **SHALL** be submitted as a ticket for consideration for inclusion in a future version of the implementation guide. 
 
 <!-- 
 Conformance Statements in this Implementation Guide
