@@ -149,7 +149,7 @@
 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-48824">FHIR-448824</a> (Compatible, substantive):<br>
-  Created internal DTR valueset <c>$expand</c> operation to focus parameter expectations specific to DTR.
+  Created internal DTR valueset <code>$expand</code> operation to focus parameter expectations specific to DTR.
   </li>
 
 </ul>
