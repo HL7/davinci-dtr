@@ -12,7 +12,7 @@ The core of this process is summarized in this diagram:
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> 
-The use of a portal for collection of clinical data to support prior authorization <b>SHALL NOT</b> be considered conformant to the requirements of this Implementation Guide.
+A DTR client that is currently only able to communicate to a single payer is not considered to be a 'portal' for the purposes of the conformance language in this guide. However, DTR clients that do not allow providers to interoperate with most/all payers are strongly discouraged, as the guide's intention is that providers should typically only have to deal with the interface of a single DTR client, regardless of what payers their patients need.  Payer DTR services <b>SHALL NOT</b> work preferentially with their own apps for IG-defined functionality, though clients and services <b>MAY</b> offer additional behavior above and beyond what's covered in this specification.
       </td></tr>
   </table>
 </div>
@@ -48,7 +48,7 @@ SMART on FHIR defines the basic expectations for an EHR to [register a SMART app
 #### App/EHR to Payer Connectivity
 [![Connectivity-App-to-Payer](Connectivity-App-to-Payer.png){:style="float: none;width:330px;height:118px"}](Connectivity-App-to-Payer.png "App to Payer Connectivity")
 
-Similarly, all DTR apps **SHALL** be registered with the payer systems with which they communicate.  If an EHR opts to interact with the payer directly without using an app, then the EHR itself will need to register.
+spec-1: Similarly, all DTR apps **SHALL** be registered with the payer systems with which they communicate.  If an EHR opts to interact with the payer directly without using an app, then the EHR itself will need to register.
 
 Initial setup of connectivity between client and payer will have a manual component to establish security credentials and a trust relationship (unless both parties are part of a shared trust network).  Dynamic endpoint discovery allows for the potential to use different endpoints for the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation over time without changing security credential or legal agreement expectations.
 
