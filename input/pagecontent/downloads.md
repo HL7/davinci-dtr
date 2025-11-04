@@ -1,8 +1,8 @@
 ### Downloads
 * This full [DTR Implementation Guide](full-ig.zip)
-* FHIR R4 DTR Resource Definitions [(JSON)](definitions.json.zip) [(XML)](definitions.xml.zip) [(TTL)](definitions.ttl.zip)
-* FHIR R4 DTR Profile Examples [(JSON)](examples.json.zip) [(XML)](examples.xml.zip) [(TTL)](examples.ttl.zip)
-* FHIR R4 DTR [Validator Pack](validator-hl7.fhir.us.davinci-dtr.pack)
+* FHIR R4 DTR Resource Definitions [(JSON)](https://www.hl7.org/fhir/definitions.json.zip) [(XML)](https://www.hl7.org/fhir/definitions.xml.zip) [(TTL)](https://www.hl7.org/fhir/definitions.ttl.zip)
+* FHIR R4 DTR Profile Examples [(JSON)](https://www.hl7.org/fhir/examples.json.zip) [(XML)](https://www.hl7.org/fhir/examples.xml.zip) [(TTL)](https://www.hl7.org/fhir/examples.ttl.zip)
+* FHIR R4 DTR [Validator Pack](https://www.hl7.org/fhir/validator-hl7.fhir.us.davinci-dtr.pack)
 * The full [FHIR R4 core]({{site.data.fhir.path}}fhir-spec.zip) specifications and other [FHIR core downloads]({{site.data.fhir.path}}downloads.html)
 * A [validator](https://fhir.github.io/latest-ig-validator/org.hl7.fhir.validator.jar) that can be used to check FHIR resource instance validity and [instructions on how to use it](https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator)
 
@@ -11,7 +11,7 @@ The following package file includes an NPM  (Node Package Manager) package file 
 
 See the overview on validating <a href="http://hl7.org/fhir/R4/validation.html">FHIR profiles and resources</a>:
 
-* [Package](package.tgz)
+* [Package](https://www.hl7.org/fhir/package.tgz)
 * [Clinical Quality Language (CQL)](https://hl7.org/fhir/uv/sdc/STU3/full-ig.zip) specification
 * [SMART on FHIR](http://www.hl7.org/fhir/smart-app-launch/full-ig.zip) specification
 
