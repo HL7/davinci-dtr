@@ -5,7 +5,6 @@ This page is organized into several sections reflecting the various steps involv
 
 The core of this process is summarized in this diagram:
 
-<!-- [![DTRQuestionnairePackageOperation](Sequence-Diagram.png){:style="float: none;width:716px;height:595px"}](Sequence-Diagram.png "Sequence Diagram") -->
 [![DTRQuestionnairePackageOperation](Sequence-Diagram.png){:style="float: none;width:716px;height:465px"}](Sequence-Diagram.png "Sequence Diagram")
 
 <div markdown="1" class="notebox">
@@ -91,8 +90,18 @@ The Questionnaire resource is used to represent the information needs that provi
 * How the questions should be rendered (tables, drop-downs, etc.)
 * How to automatically fill in answers to some of the questions based on data already available from the EHR
 * Etc.
-  
+
 The base Questionnaire resource defines some of these capabilities.  However, to allow specifying all the expectations needed to meet payer requirements for data collection forms, additional extensions are necessary.  DTR leverages the extended Questionnaire capabilities defined in the [Structured Data Capture (SDC) implementation guide](http://hl7.org/fhir/uv/sdc/STU3/) to define the complete set of functionality necessary to support data capture for payer purposes.  
+
+<div markdown="1" class="notebox">
+  <table style="border: none; margin-bottom: 0px;">
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+      <td style="border: none"> 
+DTR requires, at a minimum, exposing question text, and permitted answers in a computable API.  Where payers are using third party logic in their data gathering processes, they may need to negotiate licenses to allow this information to be shared computably.
+      </td></tr>
+  </table>
+</div><br>
+
 
 More information regarding Questionnaires, workflow, and behaviors implementers will need to understand can be found in the SDC Guide:
 * [Basic SDC Workflow](http://hl7.org/fhir/uv/sdc/STU3/workflow.html)
@@ -165,7 +174,7 @@ Rules and logic are hidden and only questions relevant to the current member/ord
 Payers **MAY** support either approach or opt to provide some Questionnaires using one approach and others using the second based on the requirements of the form.  DTR apps and Full EHRs **SHALL** support both types of Questionnaires.
 
 #### Questionnaire Design
-Questionnaires, whether standard or adaptive, **SHOULD** also use logic that ensures that only 'relevant' questions and answer choices are displayed, based on what answers have already been provided/populated using elements such as enableWhen or enableWhenExpression. When using elements with a data type of  'Expression' within Questionnaires to control flow or rendering, all logic **SHALL** be written in CQL.  However, there are many other properties and extensions that control the rendering and behavior of Questionnaires.The DTR [Standard](StructureDefinition-dtr-std-questionnaire.html) and [Adaptive](StructureDefinition-dtr-questionnaire-adapt.html) Questionnaires have identified the elements and extensions from the SDC [Base](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html), [Advanced Rendering](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-render.html), [Advanced Behavior](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-behave.html) and [Expression-based Population](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-pop-exp.html) profiles that must be supported in DTR.  The descriptions Elements flagged as mustSupport **SHALL** be supported by DTR Apps and Full EHRs.  
+Questionnaires, whether standard or adaptive, **SHALL** also use logic that ensures that only questions and answer choices which are required for the intended clinical or administrative purposes are included, based on what answers have already been provided/populated using elements such as `enableWhen` or `enableWhenExpression`. When using elements with a data type of 'Expression' within Questionnaires to control flow or rendering, all logic **SHALL** be written in CQL.  However, there are many other properties and extensions that control the rendering and behavior of Questionnaires.The DTR [Standard](StructureDefinition-dtr-std-questionnaire.html) and [Adaptive](StructureDefinition-dtr-questionnaire-adapt.html) Questionnaires have identified the elements and extensions from the SDC [Base](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html), [Advanced Rendering](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-render.html), [Advanced Behavior](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-behave.html) and [Expression-based Population](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-pop-exp.html) profiles that must be supported in DTR.  The descriptions Elements flagged as mustSupport **SHALL** be supported by DTR Apps and Full EHRs.  
 
 These systems **SHOULD** also support all non mustSupport data extensions included in the differential of the DTR Questionnaire profiles as per SDC documentation for those elements and extensions, and non-support for an element **SHALL NOT** interfere with a user's ability to complete a QuestionnaireResponse.  However, payers **SHALL NOT** rely on support for any of these elements in the design of their Questionnaire (i.e., a DTR client that ignores such elements cannot impact the successful collection of information acceptability of the information gathered). 
 
@@ -243,7 +252,7 @@ Pre-populating answers reduces burden in two ways:
   
 Pre-population requires that logic be embedded in the Questionnaire that identifies where in the EHR the information can be found.  This in turn requires that the information needed be reliably locatable.
 
-Questionnaires **SHALL** include logic that supports population from the EHR where possible. Such logic **SHOULD** rely exclusively on data elements and search parameters defined either in US Core or [HRex]({{site.data.fhir.ver.hrex}}/index.html) (including simple calculations there-on - e.g., age from birthdate). Translation between standard codes **SHOULD** be supported where possible.  Ideally, the design of questions in payer forms **SHOULD** consider what data is likely to be available for pre-population purposes, with an objective of minimizing provider data entry effort. 
+Questionnaires **SHALL** include logic that supports population from the EHR where possible. Such logic **SHOULD** rely exclusively on data elements and search parameters defined either in US Core or [HRex]({{site.data.fhir.ver.hrex}}/index.html) (including simple calculations there-on - e.g., age from birthdate).  Ideally, the design of questions in payer forms **SHOULD** consider what data is likely to be available for pre-population purposes, with an objective of minimizing provider data entry effort. 
 
 Due to differences in workflows or information systems, clinical information **MAY** be represented in different FHIR resources or with different codes or code systems. Therefore, payer CQL **MAY** have to examine different resources or use value sets to find patient information. It is preferable to have more extensive CQL or value sets than require a user to input values that the rules were unable to find.
 
