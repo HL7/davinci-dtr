@@ -9,6 +9,16 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-50465">FHIR-50465</a> (Compatible, substantive):<br>
+  Need guidance on supplemental guides
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-52455">FHIR-52455</a> (Compatible, substantive):<br>
+  Clarify portals
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-50033">FHIR-50033</a> (Compatible, substantive):<br>
   In DTR we should have either Context id or CRD resources in Order but not both
   </li>
@@ -20,7 +30,6 @@
   </li>
    -->
 </ul>
-<br/>
 
 <p><b>Non-Substantive changes:</b></p>
 <ul>
@@ -153,7 +162,6 @@
   </li>
 
 </ul>
-<br/>
 
 <p><b>Non-Substantive changes:</b></p>
 <ul>
