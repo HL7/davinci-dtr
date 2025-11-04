@@ -9,6 +9,16 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-">FHIR-52803</a> (Compatible, substantive):<br>
+  Change SHOULD to SHALL
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-52801">FHIR-52801</a> (Non-Compatible):<br>
+  Change SHOULD to SHALL
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-50465">FHIR-50465</a> (Compatible, substantive):<br>
   Need guidance on supplemental guides
   </li>
@@ -33,6 +43,11 @@
 
 <p><b>Non-Substantive changes:</b></p>
 <ul>
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-52796">FHIR-52796</a> (Non-Substantive):<br>
+  Lack of a minimal-compliance path (general documentation) consistent with CMS intent
+  </li>
+
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-52701">FHIR-52701</a> (Non-Substantive):<br>
   Consider CQL 1.5+
