@@ -93,6 +93,16 @@ The Questionnaire resource is used to represent the information needs that provi
 
 The base Questionnaire resource defines some of these capabilities.  However, to allow specifying all the expectations needed to meet payer requirements for data collection forms, additional extensions are necessary.  DTR leverages the extended Questionnaire capabilities defined in the [Structured Data Capture (SDC) implementation guide](http://hl7.org/fhir/uv/sdc/STU3/) to define the complete set of functionality necessary to support data capture for payer purposes.  
 
+<!-- FHIR-50789 ======================================== -->
+When using adaptive forms, DTR servers **SHOULD** return as many items in a single call as possible (within reason), including questions that can be determined as enabled or disabled using simple 'enableWhen' logic.  Calling the `$next-question` operation **SHOULD** only be necessary when the DTR client requires invocation of more complex or non-disclosable logic to determine the next set of items.  Population will be more efficient the more items are returned at once (minimizing the number of calls).  Efficient population will be necessary to ensure a user experience that will make questionnaire completion amenable to clinicians.
+
+For adaptive questionnaires to be useable by clinicians, responses must be fast.  Initial calls to `$next-question` on a questionnaire from a DTR client are expected to have responses within 5 seconds.  Subsequent invocations of `$next-question` on the same QuestionnaireResponse within 60 minutes are expected to have responses within 1 second.  Conformant systems **SHALL** meet these timing expectations at least 90% of the time.
+
+In an adaptive Questionnaire with clinical or patient questions, systems that know that, after submitting the answers to the current unanswered questions, there will be no further questions targeted to patient or clinician, those systems **SHALL** provide a display item indicating that patient/clinical questions are complete.  Note that there might still be more administrative questions.
+
+Wherever possible, DTR services **SHOULD** leverage data retrieved from CRD and other mechanisms (claims data, PDex, etc.) to pre-populate answers in the QuestionnaireResponse returned to the client (regardless of whether the forms used are adaptive or standard).  This can be done in combination with population logic to retrieve EHR data.  In such a situation, EHR data will override payer-provided data if EHR data is available.  Clients can allow users to adjust data populated either by the payer or by local population.
+<!-- =================================================== -->
+
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
@@ -596,7 +606,7 @@ A query for data that returns no results <b>SHALL NOT</b> be considered a failur
 ### User Interaction with Questionnaires
 While the goal of DTR is to automatically gather all the necessary information to satisfy documentation requirements without interrupting the user, this is not possible in all cases.
 It is likely that at least some answers will not be able to be gleaned from the EHR, due to missing data, data that is not computable, or data that is not represented in a standardized way. Also, even where answers are determined automatically, users may wish to review them for accuracy and completeness. Therefore, the system acting as a form filler is responsible for displaying all 'enabled' questions, groups, and display items to the end user for completion and/or review.
- In some cases, the population process **MAY** populate all answers to the Questionnaire. The DTR client **SHALL** provide the ability, but NOT a requirement, for providers to review pre-populated answers prior to saving the resulting response for subsequent use within the EHR.
+ In some cases, the population process **MAY** populate all answers to the Questionnaire. The DTR client **SHALL** provide the ability, but NOT a requirement, for providers to review, and if necessary revise, pre-populated answers prior to saving the resulting response for subsequent use within the EHR.
 
 #### Questionnaire Rendering
 DTR leverages a subset of extensions and capabilities defined by the SDC implementation guide to support control over rendering, flow logic, and population and calculation of answers. The DTR SDC Questionnaire profile and DTR Adaptive Questionnaire profile identify the set of core elements and extensions that must be supported by 'full' EHRs and DTR solutions in terms of rendering and processing Questionnaires and their associated responses - and the elements that payers can count on being supported in the Questionnaires they expose.
