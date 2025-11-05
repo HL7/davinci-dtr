@@ -44,6 +44,11 @@
 <p><b>Non-Substantive changes:</b></p>
 <ul>
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-52982">FHIR-52982</a> (Non-Substantive):<br>
+  Misleading usage of "shared secret" when describing client/EHR and Payer connectivity
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-52796">FHIR-52796</a> (Non-Substantive):<br>
   Lack of a minimal-compliance path (general documentation) consistent with CMS intent
   </li>

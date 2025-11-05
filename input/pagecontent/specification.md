@@ -56,7 +56,7 @@ Payers **MAY** have multiple back-end functions that handle different types of d
 This registration process **SHALL** ensure that the DTR app or Full EHR (i.e., Native App):
 * Is 'trusted' by the payer to deal with patient-identifiable data (i.e., There is a BAA, or its equivalent, in place between the Payer and the application vendor).
 * Knows the relevant endpoint to use for the payer to access the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation.
-* Has a shared secret allowing secure access to the payer endpoint via [SMART on FHIR Backend Services](https://www.hl7.org/fhir/smart-app-launch/backend-services.html).
+* Has communicated the public keys via [SMART on FHIR Backend Services](https://www.hl7.org/fhir/smart-app-launch/backend-services.html).
 
 Implementers of this IG **SHOULD** support the [endpoint discovery]({{site.data.fhir.ver.hrex}}/endpoint-discovery.html) mechanism defined in the HRex specification to allow discovery of the endpoints used in this IG - specifically the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation endpoint used to retrieve the Questionnaires and associated libraries, value sets, etc. to be completed.  
 
