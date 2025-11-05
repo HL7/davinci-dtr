@@ -16,4 +16,4 @@ NOTE: This profile does not realistically need the `questionnaireAdaptive` exten
 
 * extension contains http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-questionnaireAdaptive named questionnaireAdaptive 1..1 MS
 * extension[questionnaireAdaptive].value[x] only url
-* item.enableWhen 0..0
+* item.enableWhen MS

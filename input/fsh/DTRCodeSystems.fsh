@@ -11,9 +11,10 @@ Description: "Codes used within the Information Origin valueset."
 * ^caseSensitive = true
 * ^content = #complete
 * ^hierarchyMeaning = #grouped-by
-* #auto         "Auto populated"        "Information was auto-populated"
-  * #override   "Auto with override"    "Information was auto-populated but overridden by a human"
-* #manual       "Manual entry"          "Information was manually entered by a human"
+* #auto-client  "Auto populated by Client" "Information was auto-populated by the client side (e.g., EHR)"
+* #auto-server  "Auto populated by Server" "Information was auto-populated by the server side (e.g., payer)"
+* #override     "Auto with override"       "Information was auto-populated but overridden by a human"
+* #manual       "Manual entry"             "Information was manually entered by a human"
 
 // ************************************************************
 CodeSystem: DTRMetricCodes

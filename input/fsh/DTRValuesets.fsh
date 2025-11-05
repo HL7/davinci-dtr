@@ -18,7 +18,8 @@ Id: informationOrigins
 Title: "Information Origins Value Set"
 Description: "Codes describing the possible origination of information."
 * ^experimental = false
-* DTRInformationOriginCodes#auto
+* DTRInformationOriginCodes#auto-client
+* DTRInformationOriginCodes#auto-server
 * DTRInformationOriginCodes#override
 * DTRInformationOriginCodes#manual
 
