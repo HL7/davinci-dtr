@@ -29,6 +29,11 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-50789">FHIR-50789</a> (Non-Compatible):<br>
+  Return all questions with response logic as must support
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-50033">FHIR-50033</a> (Compatible, substantive):<br>
   In DTR we should have either Context id or CRD resources in Order but not both
   </li>
