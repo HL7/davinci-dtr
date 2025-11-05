@@ -34,38 +34,38 @@ Description: "An example [QuestionnaireResponse](StructureDefinition-dtr-questio
 * item[=].item[=].answer[0].valueString = "Vlad"
 * item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
 
 * item[=].item[+].linkId = "1.3"
 * item[=].item[=].text = "Middle Initial"
 * item[=].item[=].answer[0].valueString = "A, N"
 * item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
 
 * item[=].item[+].linkId = "1.4"
 * item[=].item[=].text = "Date Of Birth"
 * item[=].item[=].answer[0].valueDate = "1956-12-01"
 * item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
 
 * item[=].item[+].linkId = "1.5"
 * item[=].item[=].text = "Gender"
 * item[=].item[=].answer[0].valueCoding = http://hl7.org/fhir/administrative-gender#male "Male"
 * item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
  
 * item[=].item[+].linkId = "1.6"
 * item[=].item[=].text = "Medicare ID"
 * item[=].item[=].answer[0].valueString = "10A3D58WH22"
 * item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
 * item[=].item[=].answer[=].extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
 
 // ===========================================================================================
 * item[+].linkId = "2"
@@ -76,35 +76,35 @@ Description: "An example [QuestionnaireResponse](StructureDefinition-dtr-questio
 * item[=].item[=].answer[0].valueString = "Doe"
 * item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
         // ===========================================================================================
 * item[=].item[+].linkId = "2.2"
 * item[=].item[=].text = "First Name"
 * item[=].item[=].answer[0].valueString = "Jane"
 * item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
         // ===========================================================================================
 * item[=].item[+].linkId = "2.3"
 * item[=].item[=].text = "Middle Initial"
 * item[=].item[=].answer[0].valueString = "B"
 * item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
         // ===========================================================================================
 * item[=].item[+].linkId = "2.4"
 * item[=].item[=].text = "NPI"
 * item[=].item[=].answer[0].valueString = "1122334455"
 * item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
         // ===========================================================================================
 * item[=].item[+].linkId = "2.5"
 * item[=].item[=].text = "Date of Face-To-Face Evaluation"
 * item[=].item[=].answer[0].valueDate = "2019-07-18"
 * item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
 * item[=].item[=].answer[=].extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
 * item[=].item[=].answer[=].extension[=].extension[=].valueCode = #override
@@ -129,38 +129,38 @@ Description: "An example [QuestionnaireResponse](StructureDefinition-dtr-questio
 * item[=].item[=].answer[+].valueCoding = http://snomed.info/sct#313296004 "Mild chronic obstructive pulmonary disease"
 * item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
 // * item[=].item[=].answer[+].valueCoding = http://snomed.info/sct#389087006 "Hypoxemia (disorder)"
 // * item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 // * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-// * item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+// * item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
 
 * item[=].item[+].linkId = "3.2"
 * item[=].item[=].text = "Arterial oxygen saturation (Patient on room air while at rest and awake when tested)"
 * item[=].item[=].answer[0].valueQuantity = 95 'mm[Hg]'
 * item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
 
 * item[=].item[+].linkId = "3.3"
 * item[=].item[=].text = "Arterial Partial Pressure of Oxygen (PO2) (Patient on room air while at rest and awake when tested)"
 * item[=].item[=].answer[0].valueQuantity = 83 'mm[Hg]'
 * item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
 
 * item[=].item[+].linkId = "3.4"
 * item[=].item[=].text = "Arterial oxygen saturation (Patient tested during exercise)"
 * item[=].item[=].answer[0].valueQuantity = 95 'mm[Hg]'
 * item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
 
 * item[=].item[+].linkId = "3.5"
 * item[=].item[=].answer[0].valueQuantity = 78 'mm[Hg]'
 * item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
 * item[=].item[=].text = "Arterial Partial Pressure of Oxygen (PO2) (Patient tested during exercise)"
 
 * item[=].item[+].linkId = "3.6"
@@ -168,7 +168,7 @@ Description: "An example [QuestionnaireResponse](StructureDefinition-dtr-questio
 * item[=].item[=].answer[0].valueBoolean = true
 * item[=].item[=].answer[=].extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
 
 // ===========================================================================================
 * item[+].linkId = "4"
@@ -179,14 +179,14 @@ Description: "An example [QuestionnaireResponse](StructureDefinition-dtr-questio
 * item[=].item[=].answer[0].valueDate = "2019-07-18"
 * item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
 
 * item[=].item[+].linkId = "4.2"
 * item[=].item[=].text = "Length of need: (months) (99 = lifetime)"
 * item[=].item[=].answer[0].valueQuantity.value = 99
 * item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
 
 * item[=].item[+].linkId = "4.3"
 * item[=].item[=].text = "Peak Flow Rate"
@@ -195,13 +195,13 @@ Description: "An example [QuestionnaireResponse](StructureDefinition-dtr-questio
 * item[=].item[=].item[=].answer[0].valueQuantity.value = 2
 * item[=].item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
 * item[=].item[=].item[+].linkId = "4.3.2"
 * item[=].item[=].item[=].text = "oxygen %"
 * item[=].item[=].item[=].answer[0].valueQuantity.value = 98
 * item[=].item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
 
 * item[=].item[+].linkId = "4.4"
 * item[=].item[=].text = "Average Flow Rate"
@@ -210,19 +210,19 @@ Description: "An example [QuestionnaireResponse](StructureDefinition-dtr-questio
 * item[=].item[=].item[=].answer[0].valueQuantity.value = 2
 * item[=].item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
 * item[=].item[=].item[+].linkId = "4.4.2"
 * item[=].item[=].item[=].text = "oxygen %"
 * item[=].item[=].item[=].answer[0].valueQuantity.value = 97
 * item[=].item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
 * item[=].item[+].linkId = "4.5"
 * item[=].item[=].text = "Frequency of use (choose all that apply)"
 * item[=].item[=].answer[0].valueString = "At rest and awake"
 * item[=].item[=].answer[=].extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
 
 // ===========================================================================================
 * item[+].linkId = "5"
@@ -233,7 +233,7 @@ Description: "An example [QuestionnaireResponse](StructureDefinition-dtr-questio
 * item[=].item[=].answer[0].valueString = "HCPCS E0424 - Stationary Compressed Gaseous Oxygen System, Rental"
 * item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
 
 * item[=].item[+].linkId = "5.1b"
 * item[=].item[=].text = "Current Order Is For A Portable Device"
@@ -243,11 +243,11 @@ Description: "An example [QuestionnaireResponse](StructureDefinition-dtr-questio
 * item[=].item[=].answer[0].valueCoding = http://example.org#122 "Compressed Gas"
 * item[=].item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client
 
 * item[=].item[+].linkId = "5.3"
 * item[=].item[=].text = "Means of oxygen delivery and accessories"
 * item[=].item[=].answer[0].valueCoding = http://example.org#134 "Mask"
 * item[=].item[=].answer[=].extension[0].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].item[=].answer[=].extension[=].extension[=].valueCode = #auto-client

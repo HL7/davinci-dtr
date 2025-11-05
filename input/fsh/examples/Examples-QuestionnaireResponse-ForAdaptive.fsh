@@ -18,11 +18,11 @@ Description: "An example [QuestionnaireResponse](StructureDefinition-dtr-questio
 * item[=].answer[0].valueString = "diagnosis"
 * item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].answer[=].extension[=].extension[=].valueCode = #auto-server
 
 * item[+].linkId = "2"
 * item[=].text = "Order Reason"
 * item[=].answer[0].valueCoding = http://example.org#4 "Replacement"
 * item[=].answer[=].extension[+].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin"
 * item[=].answer[=].extension[=].extension[0].url = "source"
-* item[=].answer[=].extension[=].extension[=].valueCode = #auto
+* item[=].answer[=].extension[=].extension[=].valueCode = #auto-server
