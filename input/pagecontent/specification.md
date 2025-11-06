@@ -178,8 +178,15 @@ Questionnaires, whether standard or adaptive, **SHALL** also use logic that ensu
 
 These systems **SHOULD** also support all non mustSupport data extensions included in the differential of the DTR Questionnaire profiles as per SDC documentation for those elements and extensions, and non-support for an element **SHALL NOT** interfere with a user's ability to complete a QuestionnaireResponse.  However, payers **SHALL NOT** rely on support for any of these elements in the design of their Questionnaire (i.e., a DTR client that ignores such elements cannot impact the successful collection of information acceptability of the information gathered). 
 
-The questionnaire designer **SHOULD** consider the possibility that access to some data may be restricted or prohibited and that access restrictions could happen silently (e.g., indistinguishable absent data).
-  
+<div markdown="1" class="notebox">
+  <table style="border: none; margin-bottom: 0px;">
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+      <td style="border: none"> 
+It is important for the questionnaire designer to be aware that the absence of data is not always because the data does not exist, but may be due to restricted or prohibited data not being exposed.
+      </td></tr>
+  </table>
+</div><br>
+
 #### Adaptive Form Considerations
 When a payer uses an Adaptive Form, they **SHALL** return a questionnaire instance compliant with the DTR [AdaptiveQuestionnaire-Search](StructureDefinition-dtr-questionnaire-adapt-search.html) profile. This will include a [`questionnaireAdaptive`](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-questionnaireAdaptive) extension that indicates that the Questionnaire is adaptive and is also used to determine the endpoint on which the [`$next-question`](OperationDefinition-DTR-Questionnaire-next-question.html) operation should be called to start completing the QuestionnaireResponse.  The extension's url value is the base for the next question operation (i.e., `[url]/Questionnaire/$next-question`).  
 
@@ -218,7 +225,7 @@ This mechanism is not necessary for non-adaptive forms as all resources pointed 
       </td></tr>
   </table>
 </div><br>
-
+    
 <!-- FHIR-50789 ======================================== -->
 When using adaptive forms, DTR servers **SHOULD** return as many items in a single call as possible (within reason), including questions that can be determined as enabled or disabled using simple 'enableWhen' logic.  Calling the `$next-question` operation **SHOULD** only be necessary when the DTR client requires invocation of more complex or non-disclosable logic to determine the next set of items.  Population will be more efficient the more items are returned at once (minimizing the number of calls).  Efficient population will be necessary to ensure a user experience that will make questionnaire completion amenable to clinicians.
 
