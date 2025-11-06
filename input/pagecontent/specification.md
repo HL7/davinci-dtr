@@ -190,14 +190,16 @@ It is important for the questionnaire designer to be aware that the absence of d
 #### Adaptive Form Considerations
 When a payer uses an Adaptive Form, they **SHALL** return a questionnaire instance compliant with the DTR [AdaptiveQuestionnaire-Search](StructureDefinition-dtr-questionnaire-adapt-search.html) profile. This will include a [`questionnaireAdaptive`](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-questionnaireAdaptive) extension that indicates that the Questionnaire is adaptive and is also used to determine the endpoint on which the [`$next-question`](OperationDefinition-DTR-Questionnaire-next-question.html) operation should be called to start completing the QuestionnaireResponse.  The extension's url value is the base for the next question operation (i.e., `[url]/Questionnaire/$next-question`).  
 
-<div markdown="1" class="notebox">
+If present, any `questionnaireAdaptive` url **SHALL** be a sub-url under the base for the payer and able to be accessed within the same SMART Backend Services connection as was established to make the [$questionnaire-package](OperationDefinition-questionnaire-package.html) call.
+
+<!-- <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> 
 If present, any <code>questionnaireAdaptive</code> url <b>SHALL</b> be a sub-url under the base for the payer and able to be accessed within the same SMART Backend Services connection as was established to make the <a href="OperationDefinition-questionnaire-package.html"><code>$questionnaire-package</code></a> call.
       </td></tr>
   </table>
-</div><br>
+</div><br> -->
 
 The QuestionnaireResponse included in the [Questionnaire Package Bundle](StructureDefinition-DTR-QPackageBundle.html) accompanying an adaptive Questionnaire **SHALL** follow the convention of referencing a [contained](https://hl7.org/fhir/R4/references.html#contained) Questionnaire `derivedFrom` the canonical for the Questionnaire being completed.  Typically, the QuestionnaireResponse and [contained](https://hl7.org/fhir/R4/references.html#contained) Questionnaire will contain no answers (or corresponding questions), though the payer **MAY** opt to include a few pre-populated answers for user review prior to soliciting additional questions using the [`$next-question`](OperationDefinition-DTR-Questionnaire-next-question.html) operation.
 
