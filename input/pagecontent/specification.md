@@ -217,7 +217,7 @@ The package returned by the [`$questionnaire-package`](OperationDefinition-quest
 This mechanism is not necessary for non-adaptive forms as all resources pointed to by the QuestionnaireResponse will be returned as part of the <a href="StructureDefinition-DTR-QPackageBundle.html">Questionnaire Package Bundle</a>
       </td></tr>
   </table>
-</div>
+</div><br>
 
 <!-- FHIR-50789 ======================================== -->
 When using adaptive forms, DTR servers **SHOULD** return as many items in a single call as possible (within reason), including questions that can be determined as enabled or disabled using simple 'enableWhen' logic.  Calling the `$next-question` operation **SHOULD** only be necessary when the DTR client requires invocation of more complex or non-disclosable logic to determine the next set of items.  Population will be more efficient the more items are returned at once (minimizing the number of calls).  Efficient population will be necessary to ensure a user experience that will make questionnaire completion amenable to clinicians.
