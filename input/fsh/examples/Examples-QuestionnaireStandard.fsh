@@ -43,11 +43,10 @@ Description: "An example [Standard questionnaire](StructureDefinition-dtr-std-qu
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].answerValueSet = "http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype"
+
 * item[=].item[+].linkId = "1.4"
-* item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/regex"
-* item[=].item[=].extension.valueString = "[A-Z][0-9][A-Z] [0-9][A-Z][0-9]"
-* item[=].item[=].text = "Postal Code (A1A 1A1)"
-* item[=].item[=].type = #string
+* item[=].item[=].text = "Date Of Birth"
+* item[=].item[=].type = #date
 
 * item[=].item[+].linkId = "1.5"
 * item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/minValue"
