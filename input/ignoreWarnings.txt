@@ -54,3 +54,4 @@ INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-dtr
 
 # 16 - Publisher error (Lloyd identified and suggested suppression)
 %No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'%
+%The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide%
