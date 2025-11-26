@@ -52,18 +52,18 @@ Description:    "A profile on Parameters indicating the expected response conten
 * parameter ^slicing.description = "Slice based on $this pattern"
 * parameter 1..* MS
 * parameter contains 
-	PackageBundle 0..* MS and
-  Outcome 0..1 MS 
-* parameter[PackageBundle].name = "packagebundle"
-* parameter[PackageBundle].resource 1..1 MS
-* parameter[PackageBundle].resource only DTRQuestionnairePackageBundle
-* parameter[PackageBundle] ^short = "The QuestionnairePackage bundle that was retrieved"
+	packagebundle 0..* MS and
+  outcome 0..1 MS 
+* parameter[packagebundle].name = "packagebundle"
+* parameter[packagebundle].resource 1..1 MS
+* parameter[packagebundle].resource only DTRQuestionnairePackageBundle
+* parameter[packagebundle] ^short = "The QuestionnairePackage bundle that was retrieved"
 
-* parameter[Outcome].name = "outcome"
-* parameter[Outcome].resource 0..1 MS
-* parameter[Outcome].resource only OperationOutcome
-* parameter[Outcome].value[x] 0..0
-* parameter[Outcome] ^short = "Operation Outcome from this execution"
+* parameter[outcome].name = "outcome"
+* parameter[outcome].resource 0..1 MS
+* parameter[outcome].resource only OperationOutcome
+* parameter[outcome].value[x] 0..0
+* parameter[outcome] ^short = "Operation Outcome from this execution"
 
 /**************************************************************************************************************/
 Profile:        DTRLogErrorsInputParameters
