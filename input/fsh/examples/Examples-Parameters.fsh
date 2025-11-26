@@ -14,7 +14,7 @@ InstanceOf: DTRQuestionnairePackageOutputParameters
 Description: "An example instance of [Output Parameters](StructureDefinition-dtr-qpackage-output-parameters.html) for the [QuestionnairePackage](OperationDefinition-questionnaire-package.html) operation."
 Title: "$questionnaire-package Output Parameters Example"
 Usage: #example
-* parameter[PackageBundle].resource = home-o2-questionnairepackage-bundle
+* parameter[packagebundle].resource = home-o2-questionnairepackage-bundle
 
 // **********************************************************************************************************************************
 Instance: LogQuestionnaireErrorsInputParamsExample
