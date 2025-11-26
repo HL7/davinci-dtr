@@ -54,14 +54,15 @@ Description:    "A profile on Parameters indicating the expected response conten
 * parameter contains 
 	PackageBundle 0..* MS and
   Outcome 0..1 MS 
-* parameter[PackageBundle].name = "PackageBundle"
+* parameter[PackageBundle].name = "packagebundle"
 * parameter[PackageBundle].resource 1..1 MS
 * parameter[PackageBundle].resource only DTRQuestionnairePackageBundle
 * parameter[PackageBundle] ^short = "The QuestionnairePackage bundle that was retrieved"
 
-* parameter[Outcome].name = "OperationOutcome"
+* parameter[Outcome].name = "outcome"
 * parameter[Outcome].resource 0..1 MS
 * parameter[Outcome].resource only OperationOutcome
+* parameter[Outcome].value[x] 0..0
 * parameter[Outcome] ^short = "Operation Outcome from this execution"
 
 /**************************************************************************************************************/

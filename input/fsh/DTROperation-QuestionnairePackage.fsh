@@ -122,14 +122,14 @@ If a payer is in a situation where they have historically had 'conditional' form
 
 //-------------------------------------------------------------------------------------
 // Output parameters
-* parameter[+].name = #PackageBundle
+* parameter[+].name = #packagebundle
 * parameter[=].use = #out
 * parameter[=].min = 0
 * parameter[=].max = "*"
 * parameter[=].documentation = "A Bundle with a single Questionnaire, and 0..* Libraries containing needed CQL and/or ValueSets containing needed codes."
 * parameter[=].type = #Bundle
 
-* parameter[+].name = #Outcome
+* parameter[+].name = #outcome
 * parameter[=].use = #out
 * parameter[=].min = 0
 * parameter[=].max = "1"
