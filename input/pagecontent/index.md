@@ -114,10 +114,14 @@ This guide also depends on several non-Da Vinci specifications:
 
 ### Intellectual Property Considerations
 This implementation guide and the underlying FHIR specification are licensed as public domain under the [FHIR license](http://hl7.org/fhir/R4/license.html#license). The license page also describes rules for the use of the FHIR name and logo.
-
+  
 <div markdown="1" class="pbox">
 
 {% lang-fragment ip-statements.xhtml %}
+
+<ul>
+<li>Current Procedural Terminology (CPT) is copyright 2020 American Medical Association. All rights reserved</li>
+</ul>
 
 </div>
 <br>
