@@ -31,7 +31,7 @@
 %extension http://hl7.org/fhir/StructureDefinition/ordinalValue|5.2.0 is deprecated with the note%
   
 # 10 - This is for an example of a Parameters resource containing a DTR Bundle. It should not have it's own narrative.
-Rule dom-6: 'A resource should have narrative for robust management' Failed (defined in http://hl7.org/fhir/StructureDefinition/DomainResource) (Best Practice Recommendation)
+%Constraint failed: dom-6: 'A resource should have narrative for robust management%
   
 # 11 - See Grahame's statement regarding this issue: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/deprecated.20pattern.20slicing/near/482196925
 %For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
@@ -52,6 +52,6 @@ INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-dtr
 %DA VINCI: The Change Log page (changehistory.html) does not include an h3 section for the version 0.1.0
 %DA VINCI: The Change Log page (changehistory.html) does not include an h3 section for the version 1.1.0
 
-# 16 - Publisher error (Lloyd identified and suggested suppression)
+# 16 - Publisher error (Lloyd suggested suppressing this one)
 %No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'%
 %The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide%
