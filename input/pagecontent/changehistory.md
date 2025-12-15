@@ -9,7 +9,7 @@
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-">FHIR-52803</a> (Compatible, substantive):<br>
+  <a href="https://jira.hl7.org/browse/FHIR-803">FHIR-52803</a> (Compatible, substantive):<br>
   Change SHOULD to SHALL
   </li>
 
@@ -59,6 +59,16 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-52802">FHIR-52802</a> (Clarification):<br>
+  rewrite conformance under questionnaire design
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-52794">FHIR-52794</a> (Non-Substantive):<br>
+  Intellectual-property (IP) and licensing exposure not adequately addressed
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-52701">FHIR-52701</a> (Non-Substantive):<br>
   Consider CQL 1.5+
   </li>
@@ -66,6 +76,11 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-52700">FHIR-52700</a> (Non-Substantive):<br>
   Consider referencing CQL resources
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-51100">FHIR-51100</a> (Non-Substantive):<br>
+  Add a warning about legal rights to terminology
   </li>
 
   <li>

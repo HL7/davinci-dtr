@@ -176,7 +176,7 @@ Payers **MAY** support either approach or opt to provide some Questionnaires usi
 #### Questionnaire Design
 Questionnaires, whether standard or adaptive, **SHALL** also use logic that ensures that only questions and answer choices which are required for the intended clinical or administrative purposes are included, based on what answers have already been provided/populated using elements such as `enableWhen` or `enableWhenExpression`. When using elements with a data type of 'Expression' within Questionnaires to control flow or rendering, all logic **SHALL** be written in CQL.  However, there are many other properties and extensions that control the rendering and behavior of Questionnaires.The DTR [Standard](StructureDefinition-dtr-std-questionnaire.html) and [Adaptive](StructureDefinition-dtr-questionnaire-adapt.html) Questionnaires have identified the elements and extensions from the SDC [Base](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire.html), [Advanced Rendering](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-render.html), [Advanced Behavior](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-behave.html) and [Expression-based Population](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-pop-exp.html) profiles that must be supported in DTR.  The descriptions Elements flagged as mustSupport **SHALL** be supported by DTR Apps and Full EHRs.  
 
-These systems **SHOULD** also support all non mustSupport data extensions included in the differential of the DTR Questionnaire profiles as per SDC documentation for those elements and extensions, and non-support for an element **SHALL NOT** interfere with a user's ability to complete a QuestionnaireResponse.  However, payers **SHALL NOT** rely on support for any of these elements in the design of their Questionnaire (i.e., a DTR client that ignores such elements cannot impact the successful collection of information acceptability of the information gathered). 
+These systems **SHOULD** also support all non `mustSupport` data extensions included in the differential of the DTR Questionnaire profiles as per SDC documentation for those elements and extensions, and non-support for an element **SHALL NOT** interfere with a user's ability to complete a QuestionnaireResponse.  However, payers **SHALL NOT** rely on support for any of these elements in the design of their Questionnaire (i.e., a DTR client that ignores such elements cannot impact the successful collection of information acceptability of the information gathered). 
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
@@ -186,6 +186,17 @@ It is important for the questionnaire designer to be aware that the absence of d
       </td></tr>
   </table>
 </div><br>
+
+<div class="dragon" markdown="1">
+Some terminologies, question text, or other questionnaire design features have legal constraints on their use and/or distribution.  DTR services providing Questionnaires and ValueSets (and possibly terminology services to expand value set contents) need to consider those legal constraints before deciding to make use of a given set of codes in their Questionnaire.  In particular, the legal considerations need to consider:
+<ul>
+    <li>Can codes be shared with and stored by the EHR?</li>
+    <li>Can a completed QuestionnaireResponse containing chosen answers be transmitted to the performing provider (as DTR requires)?</li>
+    <li>Can the EHR system make use of terminology services to access allowed lists of codes (if value sets are expression-based rather than enumerating codes)</li>
+</ul>
+</div>
+
+Payers licensing their decision logic from third parties and are concerned about disclosing licensed IP may find adaptive forms a helpful mechanism to conceal logic rules.  DTR requires, at a minimum, exposing question text, and permitted answers in a computable API.  Where payers are using third party logic in their data gathering processes, they may need to negotiate licenses to allow this information to be shared computably.
 
 #### Adaptive Form Considerations
 When a payer uses an Adaptive Form, they **SHALL** return a questionnaire instance compliant with the DTR [AdaptiveQuestionnaire-Search](StructureDefinition-dtr-questionnaire-adapt-search.html) profile. This will include a [`questionnaireAdaptive`](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-questionnaireAdaptive) extension that indicates that the Questionnaire is adaptive and is also used to determine the endpoint on which the [`$next-question`](OperationDefinition-DTR-Questionnaire-next-question.html) operation should be called to start completing the QuestionnaireResponse.  The extension's url value is the base for the next question operation (i.e., `[url]/Questionnaire/$next-question`).  

@@ -1,5 +1,14 @@
 This implementation guide uses specific terminology such as SHALL, SHOULD, MAY to flag statements that have relevance for the evaluation of conformance with the guide. As well, profiles in this implementation guide make use of the [mustSupport](http://hl7.org/fhir/R4/profiling.html#mustsupport) element. Base expectations for the intepretations of these terms are set in the [FHIR core specification](http://hl7.org/fhir/R4/conformance-rules.html#conflang) and general Da Vinci-wide expectations are defined in [HRex]({{site.data.fhir.ver.hrex}}/conformance.html).
 
+<!-- 
+
+<p>
+  Example of conformance statements id in HTML. 
+  <span class="fhir-conformance">Implementers <b>SHOULD</b> review this <a href="safety.html#search">checklist</a>.</span>
+</p> 
+
+-->
+
 Additional conformance expectations specific to this guide are as follows:
 
 ### Conformance to this Implementation Guide
@@ -47,7 +56,8 @@ For the DTR specification to work successfully at scale, it is essential that DT
    
 This guidance does not prevent trading partners from agreeing to exchange additional information as long as the implementation does not prevent transactions compliant with the implementation guide from being appropriately processed.   Such enhancements **SHALL** be submitted as a ticket for consideration for inclusion in a future version of the implementation guide. 
 
-<!-- 
-Conformance Statements in this Implementation Guide
 
-§§§ -->
+### Conformance Statements in this Implementation Guide
+
+§§§ 
+
