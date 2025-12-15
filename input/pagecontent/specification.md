@@ -195,7 +195,8 @@ Some terminologies, question text, or other questionnaire design features have l
     <li>Can the EHR system make use of terminology services to access allowed lists of codes (if value sets are expression-based rather than enumerating codes)</li>
 </ul>
 </div>
-
+  
+  
 Payers licensing their decision logic from third parties and are concerned about disclosing licensed IP may find adaptive forms a helpful mechanism to conceal logic rules.  DTR requires, at a minimum, exposing question text, and permitted answers in a computable API.  Where payers are using third party logic in their data gathering processes, they may need to negotiate licenses to allow this information to be shared computably.
 
 #### Adaptive Form Considerations
