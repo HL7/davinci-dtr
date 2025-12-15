@@ -85,16 +85,6 @@ Description: "Takes a subset of extensions and constraints from the SDC [renderi
 * item.extension contains sdcContextExpression named contextExpression 0..* MS
 * item.extension[contextExpression].extension[expression].valueExpression.extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/alternativeExpression named alternativeExpression 0..1 MS
 
-// * item.extension contains sdcCandidateExpression named candidateExpression 0..1 MS
-// * item.extension[candidateExpression].valueExpression.extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/alternativeExpression named alternative 0..1 MS
-// * item.extension contains sdcInitialExpression named initialExpression 0..1 MS
-// * item.extension[initialExpression].valueExpression.extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/alternativeExpression named alternative 0..1 MS
-// * item.extension contains sdcCalculatedExpression named calculatedExpression 0..1 MS
-// * item.extension[calculatedExpression].valueExpression.extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/alternativeExpression named alternative 0..1 MS
-// * item.extension contains sdcContextExpression named contextExpression 0..* MS
-// * item.extension[contextExpression].extension[expression].valueExpression.extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/alternativeExpression named alternative 0..1 MS
-
-
 * item.text 1..1
 * item.text.extension contains http://hl7.org/fhir/StructureDefinition/rendering-style named itemTextRenderingStyle 0..1
 * item.text.extension contains http://hl7.org/fhir/StructureDefinition/rendering-xhtml named itemTextRenderingXhtml 0..1 MS

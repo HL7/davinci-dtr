@@ -40,7 +40,7 @@ Description:    "Enforces DTR requirements on a completed or partially completed
 * item.extension[ItemSignature] MS
 
 * item.answer.extension[itemAnswerMedia] MS
-* item.answer.extension[ordinalValue] MS
+* item.answer.extension[itemWeight] MS
 * item.answer.extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/information-origin named origin 1..1 MS
 * item.answer.extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/containedReference named containedReference 0..1 MS
 * item.answer.extension[containedReference] ^short = "Contain the reference?"

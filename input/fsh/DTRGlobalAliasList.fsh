@@ -5,6 +5,8 @@ Alias: $USCOREPractitionerRole610 = http://hl7.org/fhir/us/core/StructureDefinit
 Alias: $USCORE311PRVS = http://hl7.org/fhir/us/core/ValueSet/us-core-provider-role|3.1.1
 //Alias: $USCOREPractitioner700 = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner|7.0.0
 Alias: USCOREClientCapStatement = http://hl7.org/fhir/us/core/CapabilityStatement/us-core-client
+Alias: $allowedType = http://hl7.org/fhir/StructureDefinition/operationdefinition-allowed-type 
+
 
 // ------------------------------------------------------------------------------------------------------------------------
 // CRD artifacts
@@ -29,25 +31,25 @@ Alias: $CRDDocReason = http://hl7.org/fhir/us/davinci-crd/ValueSet/DocReason|2.1
 // ------------------------------------------------------------------------------------------------------------------------
 // SDC artifacts
 Alias: $sdcEntryMode = http://hl7.org/fhir/uv/sdc/ValueSet/entryMode
-Alias: sdcLaunchContext = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext|3.0.0
-Alias: sdcItemPopulationContext = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext|3.0.0
-Alias: sdcEntryMode = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-entryMode|3.0.0
-Alias: sdcEndpoint = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-endpoint|3.0.0
-Alias: sdcItemAnswerMedia = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemAnswerMedia|3.0.0
-Alias: sdcItemMedia = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemMedia|3.0.0
-Alias: sdcOptionalDisplay = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-optionalDisplay|3.0.0 
-Alias: sdcShortText = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-shortText|3.0.0 
-Alias: sdcOpenLabel = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel|3.0.0 
-Alias: sdcChoiceColumn = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-choiceColumn|3.0.0 
-Alias: sdcWidth = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-width|3.0.0 
-Alias: sdcCollapsible = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-collapsible|3.0.0 
-Alias: sdcMinQuantity = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-minQuantity|3.0.0 
-Alias: sdcMaxQuantity = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-maxQuantity|3.0.0
-Alias: sdcCandidateExpression = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-candidateExpression|3.0.0
-Alias: sdcLookupQuestionnaire = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-lookupQuestionnaire|3.0.0 
-Alias: sdcInitialExpression = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression|3.0.0
-Alias: sdcCalculatedExpression = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression|3.0.0
-Alias: sdcContextExpression = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-contextExpression|3.0.0
+Alias: sdcLaunchContext = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext
+Alias: sdcItemPopulationContext = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemPopulationContext
+Alias: sdcEntryMode = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-entryMode
+Alias: sdcEndpoint = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-endpoint
+Alias: sdcItemAnswerMedia = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemAnswerMedia
+Alias: sdcItemMedia = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemMedia
+Alias: sdcOptionalDisplay = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-optionalDisplay 
+Alias: sdcShortText = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-shortText 
+Alias: sdcOpenLabel = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-openLabel 
+Alias: sdcChoiceColumn = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-choiceColumn 
+Alias: sdcWidth = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-width 
+Alias: sdcCollapsible = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-collapsible 
+Alias: sdcMinQuantity = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-minQuantity 
+Alias: sdcMaxQuantity = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-maxQuantity
+Alias: sdcCandidateExpression = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-candidateExpression
+Alias: sdcLookupQuestionnaire = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-lookupQuestionnaire 
+Alias: sdcInitialExpression = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression
+Alias: sdcCalculatedExpression = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression
+Alias: sdcContextExpression = http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-contextExpression
 
 // ------------------------------------------------------------------------------------------------------------------------
 // Miscellaneous artifacts
