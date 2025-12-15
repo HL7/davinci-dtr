@@ -194,9 +194,8 @@ Some terminologies, question text, or other questionnaire design features have l
     <li>Can a completed QuestionnaireResponse containing chosen answers be transmitted to the performing provider (as DTR requires)?</li>
     <li>Can the EHR system make use of terminology services to access allowed lists of codes (if value sets are expression-based rather than enumerating codes)</li>
 </ul>
-</div>
-  
-  
+</div><br>
+
 Payers licensing their decision logic from third parties and are concerned about disclosing licensed IP may find adaptive forms a helpful mechanism to conceal logic rules.  DTR requires, at a minimum, exposing question text, and permitted answers in a computable API.  Where payers are using third party logic in their data gathering processes, they may need to negotiate licenses to allow this information to be shared computably.
 
 #### Adaptive Form Considerations
@@ -509,6 +508,12 @@ The standardization of payer ids is still considered an open issue.  Guidance on
 ---------------------
 ### Launching DTR
 
+#### Launch Workflow 
+DTR can be launched in three circumstances:
+* In response to CRD, if the `info-needed` flag on the `coverage-information` extension is set.  The `$questionnaire-package` operation **SHALL** include the `coverage-information` coverage-assertion-id as the context value.  (DTR **MAY** error if invoked with CRD coverage-assertion-ids where the Coverage-Information did not indicate that info was needed.)  The invocation might also include the associated orders.
+* In response to PAS, when the PAS response includes a request for the 102089-0 LOINC code in the HI segment of the response. The `$questionnaire-package` operation **SHALL** include the TRN associated with the LOINC code as the context value.  (DTR **SHOULD** error if it is invoked with an unrecognized TRN value or one from a PAS response that did not specify such a LOINC code.)
+* As stand-alone, where no context is provided and only orders are indicated.
+
 #### Launching a DTR SMART app 
  
  <div markdown="1" class="notebox">
@@ -518,7 +523,7 @@ The standardization of payer ids is still considered an open issue.  Guidance on
 This section only applies if an EHR is using a SMART app.
       </td></tr>
   </table>
-</div>
+</div><br>
 
 When the DTR process is being launched, the Electronic Health Record (EHR) system and DTR process **SHALL** follow the procedures established by the SMART App Launch Framework - specifically the [SMART App Launch Framework's EHR launch sequence](https://www.hl7.org/fhir/smart-app-launch/app-launch.html#launch-app-ehr-launch).
 

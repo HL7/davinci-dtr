@@ -69,6 +69,11 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-52792">FHIR-52792</a> (Non-Substantive):<br>
+  reference that the guide is required under HT1-4
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-52701">FHIR-52701</a> (Non-Substantive):<br>
   Consider CQL 1.5+
   </li>
@@ -76,6 +81,16 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-52700">FHIR-52700</a> (Non-Substantive):<br>
   Consider referencing CQL resources
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-51869">FHIR-51869</a> (Non-Substantive):<br>
+  Error scenarios
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-50790">FHIR-50790</a> (Non-Substantive):<br>
+  Must Support Expectations
   </li>
 
   <li>

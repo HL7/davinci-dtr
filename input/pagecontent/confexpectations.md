@@ -26,7 +26,7 @@ The FHIR specification makes it clear that when profiling another profile, a Mus
   
 Da Vinci DTR implementations **SHALL** conform to the [HRex]({{site.data.fhir.ver.hrex}}/conformance.html#mustsupport) and [US Core]({{site.data.fhir.ver.uscore7}}must-support.html) Guidance where applicable.
   
-DTR apps and EHRs that take on DTR app responsibility **SHALL** be able to render Questionnaires and QuestionnaireResponses.  Specifically, apps and EHRs acting as form fillers **SHALL** be able to display:
+DTR apps and EHRs that take on DTR app responsibility **SHALL** be able to render Questionnaires and QuestionnaireResponses. DTR clients **MAY** adjust which client components expose which Questionnaire items, which Questionnaire items are exposed to which users and how those items are exposed as appropriate for the workflow so long as they retain the ability to render all `mustSupport` elements at least in some places within their client system(s).  Specifically, apps and EHRs acting as form fillers **SHALL** be able to display:
 * `QuestionnaireResponse.questionnaire.questionnaireDisplay`/`Questionnaire.title`
 * `QuestionnaireResponse.authored`
 * `QuestionnaireResponse.author.resolve().name`

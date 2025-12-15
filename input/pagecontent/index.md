@@ -64,7 +64,7 @@ While designed to work with these other IGs, DTR can be implemented stand-alone.
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> 
-  <a href="https://www.cms.gov/priorities/key-initiatives/burden-reduction/interoperability/policies-and-regulations/cms-interoperability-and-prior-authorization-final-rule-cms-0057-f">CMS 0057-F</a> sets out functionality requirements for prior authorization and recommends implementation of all 3 guides by covered systems to provide such functionality. There is an expectation that future versions of these implementation guides would become mandatory in future regulations.
+  <a href="https://www.cms.gov/priorities/key-initiatives/burden-reduction/interoperability/policies-and-regulations/cms-interoperability-and-prior-authorization-final-rule-cms-0057-f">CMS 0057-F</a> sets out functionality requirements for prior authorization and recommends implementation of all 3 guides by covered systems to provide such functionality. There is an expectation that future versions of these implementation guides would become mandatory in future regulations.  <a href="https://www.healthit.gov/topic/laws-regulation-and-policy/health-data-technology-and-interoperability-electronic-prescribing">HTI-4</a> adds optional conformance certification criteria that references the DTR specification.
       </td></tr>
   </table>
 </div><br>
