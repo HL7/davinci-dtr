@@ -4,6 +4,11 @@
 <p><b>Substantive and breaking changes:</b></p>
 <ul>
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-53496">FHIR-53496</a> (Compatible, substantive):<br>
+  Add a 'request-specific' flag on Questionnaire
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-53041">FHIR-53041</a> (Compatible, substantive):<br>
   DTRMetricData providerId and groupId required, but not generally available to payer services
   </li>
