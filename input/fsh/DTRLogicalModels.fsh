@@ -36,6 +36,8 @@ A separate instance should be created by each participant for each DTR 'session'
 * For a payer, a session runs from the time a SMART back-end connection from the Full EHR or SMART app is established until the last operation call is made using that security token.
 Resumed DTR sessions initiated from a previously stored QuestionnaireResponse will be tracked separately from initial DTR sessions.  Unless there is at least one CRD-assigned assertion id present on the record, it will not be possible to tie together multiple sessions related to the same QuestionnaireResponse or order."
 
+* obeys dtrl-1
+
 * ^status = #active
 * ^experimental = false
 * ^extension[$fmm].valueInteger = 1
@@ -45,12 +47,12 @@ Resumed DTR sessions initiated from a previously stored QuestionnaireResponse wi
 * source                 from MetricSource (required)
 * sofApp                 0..1 url             "URL of SMART on FHIR application" "The URL of SMART on FHIR application to identify the specific DTR application used by the provider and payer.  If not present, then the DTR session is with a Full EHR."
 
-* providerId             1..1 Identifier      "Identifier for the user initiating DTR"  "The NPI number of the user who initiated this DTR session."
+* providerId             0..1 Identifier      "Identifier for the user initiating DTR"  "The NPI number of the user who initiated this DTR session."
 * providerId.system      1..1
 * providerId.system      = "http://hl7.org/fhir/sid/us-npi"
 * providerId.value       1..1
 
-* groupId                1..1 Identifier      "Identifier for the healthcare organization initiating DTR"  "The NPI of the hospital/clinic/other organization that initiated this DTR session."
+* groupId                0..1 Identifier      "Identifier for the healthcare organization initiating DTR"  "The NPI of the hospital/clinic/other organization that initiated this DTR session."
 * groupId.system         1..1
 * groupId.system         = "http://hl7.org/fhir/sid/us-npi"
 * groupId.value          1..1

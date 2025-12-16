@@ -52,3 +52,9 @@ Invariant:  dtrb-2
 Description: "The first resource in bundle must be a QuestionnaireResponse."
 Severity:   #error
 Expression: "entry.first().resource.is(QuestionnaireResponse)"
+
+/*****************************************************************************************************/
+Invariant: dtrl-1
+Description: "if source is not 'payer-src', then providerId and groupId are required"
+Severity: #error
+Expression: "(source!='payer-src') implies (providerId.exists() and groupId.exists())"
