@@ -4,12 +4,17 @@
 <p><b>Substantive and breaking changes:</b></p>
 <ul>
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-53041">FHIR-53041</a> (Compatible, substantive):<br>
+  DTRMetricData providerId and groupId required, but not generally available to payer services
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-52804">FHIR-52804</a> (Non-Compatible):<br>
   Change SHOULD to SHALL
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-803">FHIR-52803</a> (Compatible, substantive):<br>
+  <a href="https://jira.hl7.org/browse/FHIR-52803">FHIR-52803</a> (Compatible, substantive):<br>
   Change SHOULD to SHALL
   </li>
 
@@ -64,7 +69,7 @@
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52802">FHIR-52802</a> (Clarification):<br>
+  <a href="https://jira.hl7.org/browse/FHIR-52802">FHIR-52802</a> (Non-Substantive):<br>
   rewrite conformance under questionnaire design
   </li>
 
