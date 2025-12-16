@@ -16,11 +16,9 @@ Description: "An example Adaptive questionnaire for Home Oxygen Therapy."
 * contact.name = "Example Author"
 * derivedFrom = Canonical(dtr-questionnaire)
 
-// * derivedFrom = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-base-questionnaire"
-// * derivedFrom.extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-derivationType"
-// * derivedFrom.extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-derivationType#compliesWith "Complies with"
-
 * extension[sdc-questionnaire-questionnaireAdaptive].valueUrl = "http://example.com/fhir/R4"
+* extension[request-specific].valueBoolean = false
+
 * item[0].linkId = "1"
 * item[=].text = "Relevant Patient Diagnoses (conditions that might be expected to improve with oxygen therapy)"
 * item[=].type = #text

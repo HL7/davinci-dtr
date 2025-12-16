@@ -15,6 +15,7 @@ Description: "An example [Standard questionnaire](StructureDefinition-dtr-std-qu
 * publisher = "Da Vinci DTR"
 * contact.name = "Example Author"
 * extension[audience].valueCode = #clinical
+* extension[request-specific].valueBoolean = false
 * extension[rendering-styleSensitive].valueBoolean = false
 * extension[sdc-questionnaire-entryMode].valueCode = #sequential
 * extension[cqf-library].valueCanonical = "http://example.org/fhir/Library/quick"
