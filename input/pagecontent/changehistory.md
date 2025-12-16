@@ -29,6 +29,11 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-51736">FHIR-51736</a> (Non-Compatible):<br>
+  DTR should only take a single coverage as input 
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-50789">FHIR-50789</a> (Non-Compatible):<br>
   Return all questions with response logic as must support
   </li>
