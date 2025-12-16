@@ -19,6 +19,7 @@ Description: "Takes a subset of extensions and constraints from the SDC [renderi
 * subjectType = #Patient
 
 * extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/questionnaireAudience named audience 0..* MS
+* extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/request-specific named RequestSpecific 0..1 MS
 
 * extension[assemble-expectation] 0..0
 * extension contains http://hl7.org/fhir/StructureDefinition/rendering-styleSensitive named styleSensitive 0..1

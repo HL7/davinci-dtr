@@ -1,4 +1,16 @@
 /**************************************************************************************************************/
+Extension: RequestSpecific
+Id: request-specific
+Title: "Request Specific Flag"
+Description: "If this flag is 'true' then a distinct QuestionnaireResponse is needed for each request where that Questionnaire is solicited.  If false, then a single QuestionnaireResponse can be used across all requests where the specified Questionnaire url and version was solicited.  (i.e., You can fill out the form once and re-use rather than completing multiple times.  Typically, re-use of a form is limited to the scope of a single encounter)"
+* ^status = #active
+* ^context[0].type = #element
+* ^context[=].expression = "Questionnaire"
+* value[x] ^short = "Is the Questionnaire specific to a request?"
+* value[x] 1..1
+* value[x] only boolean
+
+/**************************************************************************************************************/
 Extension: QuestionnaireResponseCoverage
 Id: qr-coverage
 Description: "Identifies the coverages associated with the specified QuestionnaireResponse."
