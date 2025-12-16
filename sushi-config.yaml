@@ -1,7 +1,3 @@
-# ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
-# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
-# │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.us.davinci-dtr
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
@@ -58,7 +54,7 @@ dependencies:
       Defines USCDI v1 EHR expectations on a range of resources that will be passed. 
   hl7.fhir.uv.sdc:
     id: sdc
-    version: 3.0.0
+    version: current
     reason: |
       Defines expecations for Questionnaires used to gather information
   hl7.fhir.us.davinci-hrex:
