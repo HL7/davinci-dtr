@@ -520,7 +520,7 @@ DTR can be launched in three circumstances:
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> 
-This section only applies if an EHR is using a SMART app.
+      This section only applies if an EHR is using a SMART app.
       </td></tr>
   </table>
 </div>
