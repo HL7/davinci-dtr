@@ -510,8 +510,8 @@ The standardization of payer ids is still considered an open issue.  Guidance on
 
 #### Launch Workflow 
 DTR can be launched in three circumstances:
-* In response to CRD, if the `info-needed` flag on the `coverage-information` extension is set.  The `$questionnaire-package` operation **SHALL** include the `coverage-information.coverage-assertion-id` as the context value.  (DTR **MAY** error if invoked with CRD coverage-assertion-ids where the Coverage-Information did not indicate that info was needed.)  The invocation might also include the associated orders.
-* In response to PAS, when the PAS response includes a request for the 102089-0 LOINC code in the HI segment of the response. The `$questionnaire-package` operation **SHALL** include the TRN associated with the LOINC code as the context value.  (DTR **SHOULD** error if it is invoked with an unrecognized TRN value or one from a PAS response that did not specify such a LOINC code.)
+* In response to CRD, if the `info-needed` flag on the [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension is set.  The [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation **SHALL** include the `coverage-information.coverage-assertion-id` as the context value.  (DTR **MAY** error if invoked with CRD coverage-assertion-ids where the Coverage-Information did not indicate that info was needed.)  The invocation might also include the associated orders.
+* In response to PAS, when the PAS response includes a request for the 102089-0 LOINC code in the HI segment of the response. The [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation **SHALL** include the TRN associated with the LOINC code as the context value.  (DTR **SHOULD** error if it is invoked with an unrecognized TRN value or one from a PAS response that did not specify such a LOINC code.)
 * As stand-alone, where no context is provided and only orders are indicated.
 
 #### Launching a DTR SMART app 
