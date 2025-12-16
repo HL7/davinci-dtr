@@ -523,8 +523,8 @@ DTR can be launched in three circumstances:
 This section only applies if an EHR is using a SMART app.
       </td></tr>
   </table>
-</div><br>
-
+</div>
+    
 When the DTR process is being launched, the Electronic Health Record (EHR) system and DTR process **SHALL** follow the procedures established by the SMART App Launch Framework - specifically the [SMART App Launch Framework's EHR launch sequence](https://www.hl7.org/fhir/smart-app-launch/app-launch.html#launch-app-ehr-launch).
 
 Like any SMART app, DTR is passed a context when launched.  The openId, user, and patient launch contexts **SHALL** be requested and provided.  In addition, the launch context **SHOULD** include fhirContext references as follows:
