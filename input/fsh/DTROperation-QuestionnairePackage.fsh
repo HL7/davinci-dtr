@@ -69,7 +69,7 @@ If a payer is in a situation where they have historically had 'conditional' form
 * parameter[0].name = #coverage
 * parameter[=].use = #in
 * parameter[=].min = 1
-* parameter[=].max = "*"
+* parameter[=].max = "1"
 * parameter[=].documentation = "Coverage resource instances to establish the member and the coverage for which documentation is to be collected."
 * parameter[=].type = #Coverage
 

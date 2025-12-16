@@ -44,6 +44,7 @@ Description: "Takes a subset of extensions and constraints from the SDC [renderi
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation named choiceOrientation 0..1
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory named displayCategory 0..1
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-supportLink named supportLink 0..1 MS
+// * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-supportHyperlink|5.3.0-ballot-tc1 named supportHyperlink 0..1 MS
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-sliderStepValue named sliderStepValue 0..1
 * item.extension contains http://hl7.org/fhir/StructureDefinition/entryFormat named entryFormat 0..1
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-usageMode named usageMode 0..1

@@ -13,7 +13,7 @@ If both orders and a context id are present, then the context id can be used to 
 * parameter ^slicing.description = "Slice based on $this pattern"
 * parameter 1..* MS
 * parameter contains 
-	  coverage 1..* MS and
+	  coverage 1..1 MS and
     order 0..* MS and
     questionnaire 0..* MS and
 	  context 0..1 MS and
