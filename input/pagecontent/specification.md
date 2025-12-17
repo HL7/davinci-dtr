@@ -178,6 +178,12 @@ Questionnaires, whether standard or adaptive, **SHALL** also use logic that ensu
 
 These systems **SHOULD** also support all non `mustSupport` data extensions included in the differential of the DTR Questionnaire profiles as per SDC documentation for those elements and extensions, and non-support for an element **SHALL NOT** interfere with a user's ability to complete a QuestionnaireResponse.  However, payers **SHALL NOT** rely on support for any of these elements in the design of their Questionnaire (i.e., a DTR client that ignores such elements cannot impact the successful collection of information acceptability of the information gathered). 
 
+If there is a need to collect both patient or clinical data as well as administrative data, forms **SHALL** be designed in one of the two the following manners:
+* Define separate form(s) for the data capture that requires patient and/or clinician output from the form(s) that can reasonably be filled out by administrative staff.
+* Front-load forms that capture a mixture of patient/clinical and administrative data such that the clinical and patient data can be captured first with a clear 'display' item included in the form that indicates when the patient/clinical portion is completed so that clinicans know when it is safe to save the response and leave the rest for later staff if that's their preference.
+
+NOTE: in some cases, decision logic may mean that a few questions that could be answered by administrative staff will need answers to determine which clinical and/or patient questions need to be displayed.  In this situation, these questions will need to be intermixed with the patient / clinical questions.
+
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>

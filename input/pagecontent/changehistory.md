@@ -109,6 +109,11 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-51629">FHIR-51629</a> (Non-Substantive):<br>
+  Set expectations for splitting clinical/patient and non-clinical forms
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-50790">FHIR-50790</a> (Non-Substantive):<br>
   Must Support Expectations
   </li>
