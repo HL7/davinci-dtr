@@ -26,9 +26,7 @@
 %has no derivation type specified using the%
 
 # 09 - Deprecated elements 
-%The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated%
-%extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note%
-%extension http://hl7.org/fhir/StructureDefinition/ordinalValue|5.2.0 is deprecated with the note%
+%is deprecated with the note:%
   
 # 10 - This is for an example of a Parameters resource containing a DTR Bundle. It should not have it's own narrative.
 %Constraint failed: dom-6: 'A resource should have narrative for robust management%
