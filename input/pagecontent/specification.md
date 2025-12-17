@@ -182,7 +182,7 @@ If there is a need to collect both patient or clinical data as well as administr
 * Define separate form(s) for the data capture that requires patient and/or clinician output from the form(s) that can reasonably be filled out by administrative staff.
 * Front-load forms that capture a mixture of patient/clinical and administrative data such that the clinical and patient data can be captured first with a clear 'display' item included in the form that indicates when the patient/clinical portion is completed so that clinicans know when it is safe to save the response and leave the rest for later staff if that's their preference.
 
-NOTE: in some cases, decision logic may mean that a few questions that could be answered by administrative staff will need answers to determine which clinical and/or patient questions need to be displayed.  In this situation, these questions will need to be intermixed with the patient / clinical questions.
+It should be noted that in some cases, decision logic may mean that a few questions that could be answered by administrative staff will need answers to determine which clinical and/or patient questions need to be displayed.  In this situation, these questions will need to be intermixed with the patient / clinical questions.
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
