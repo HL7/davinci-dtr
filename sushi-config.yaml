@@ -112,6 +112,11 @@ pages:
     extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
+  operational.md:
+    title: Operational Considerations
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: informative
   confexpectations.md:
     title: Conformance Expectations
     extension:
@@ -163,6 +168,7 @@ menu:
     Project and Participants: credits.html
     Burden Reduction: burden.html
     ePA Coordinators: epa.html
+    Operational Considerations: operational.html
 
   Specification:
     Conformance Expectations: confexpectations.html
