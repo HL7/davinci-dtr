@@ -29,6 +29,11 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-52791">FHIR-52791</a> (Non-Compatible):<br>
+  DTR guardrails
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-50465">FHIR-50465</a> (Compatible, substantive):<br>
   Need guidance on supplemental guides
   </li>
