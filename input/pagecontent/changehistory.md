@@ -119,6 +119,11 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-50499">FHIR-50499</a> (Non-Substantive):<br>
+  Need to explain rules for updating coverage-information with DTR
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-49898">FHIR-49898</a> (Non-Substantive):<br>
   Context ID from PAS is not mentioned in parameter table.
   </li>
