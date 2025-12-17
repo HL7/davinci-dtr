@@ -53,6 +53,11 @@
   In DTR we should have either Context id or CRD resources in Order but not both
   </li>
 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48879">FHIR-48879</a> (Compatible, substantive):<br>
+  Retrieving Questionnaire Packages (DTR IG 8.11)
+  </li>
+
 <!-- 
   <li>
   <a href="https://jira.hl7.org/browse/FHIR">FHIR</a> (Compatible, substantive):<br>

@@ -621,6 +621,8 @@ The expectations for what data is available for invoking the [`$questionnaire-pa
    
 In situation 2 and 3 above, if Questionnaire canonicals are present, the presence of these canonicals will limit what questionnaires are returned in the package (i.e., if there are multiple Questionnaires relevant for an order, but only one canonical is provided on the questionnaire-package call, the response will only return a package for the specified Questionnaire)
 
+If DTR is invoked and there are issues with the source data (e.g., the coverage cannot be found, the context id can't be found, etc.), then the DTR service **SHALL** return a 4xx error with an accompanying OperationOutcome.
+
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
 
