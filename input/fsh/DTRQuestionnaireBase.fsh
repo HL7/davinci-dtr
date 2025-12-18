@@ -68,7 +68,8 @@ Description: "Takes a subset of extensions and constraints from the SDC [renderi
 * item.extension[unitValueSet] ^comment = "Provide either unitOption(s) or unitValueSet. If either of the extensions are present, the units for a Quantity element are constrained to only the units listed by the extensions - i.e. it is treated as a \"required\", not an \"extensible\" binding. In the absence of either, any unit is valid. See additional guidance and examples in the [SDC implementation guide](http://hl7.org/fhir/uv/sdc/behavior.html#unitValueSet). If this extension present and an answer is provided for the question item in the QuestionnaireResponse, then the valueQuantity **SHALL** have a Quantity.code and Quantity.system that match the Coding.code and system of one of the allowed values if the Coding has a code and/or system. If the Coding only has a display, then the Quantity.unit must match. (Note that Coding with only a display is strongly discouraged.) If there is a match on code and system, but no match on display/unit, systems MAY raise a warning. However, because of translation and bandwidth considerations, some systems **MAY** opt to drop the unit or express it in an alternate language. Validation of the Quantity unit **MAY** be performed by using the $validateCode operation, populating the elements passed into the operation from the Quantity.code, system and unit elements."
 
 * item.extension contains sdcItemMedia named itemMedia 0..1
-* item.extension contains sdcOptionalDisplay named itemOptionalDisplay 0..0
+// * item.extension contains sdcOptionalDisplay named itemOptionalDisplay 0..0
+* item.extension[itemOptionalDisplay] 0..0
 * item.extension contains sdcShortText named shortText 0..1
 * item.extension contains sdcOpenLabel named openLabel 0..1
 * item.extension contains sdcChoiceColumn named choiceColumn 0..*

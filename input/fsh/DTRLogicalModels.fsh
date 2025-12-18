@@ -1,24 +1,23 @@
+// Logical: DTRSupportedPayers
+// Id: DTRSupportedPayers
+// Title: "DTR Supported Payers"
+// Description: "A logical model describing the listing of payers currently supported by the DTR app."
+// * ^purpose = "**Purpose:** 
 
-Logical: DTRSupportedPayers
-Id: DTRSupportedPayers
-Title: "DTR Supported Payers"
-Description: "A logical model describing the listing of payers currently supported by the DTR app."
-* ^purpose = "**Purpose:** 
-
-This logical model is NOT a FHIR data structure for information exchange. Instead, it is a model of the information that the DTR app will maintain for the Payers that are supported by the app. (See the [*Determination of Payers Supported by a DTR App*](specification.html#determination-of-payers-supported-by-a-dtr-app) section of the Formal Specification)
+// This logical model is NOT a FHIR data structure for information exchange. Instead, it is a model of the information that the DTR app will maintain for the Payers that are supported by the app. (See the [*Determination of Payers Supported by a DTR App*](specification.html#determination-of-payers-supported-by-a-dtr-app) section of the Formal Specification)
  
- The Payer Identifier used in structures based on this model **SHALL** be the same as the ones that are returned by the [endpoint discovery mechanism](https://build.fhir.org/ig/HL7/davinci-ehrx/endpoint-discovery.html) defined in HRex."
-* ^status = #active
-* ^experimental = false
-* ^extension[$fmm].valueInteger = 1
-* ^extension[$standards-status].valueCode = #informative
-* payers          0..* BackboneElement  "Supported Payer"  "Details for specific supported payer."
-  * name          1..1 string           "Name of the payer" 
-  * identifier    1..1 Identifier       "Identifier of the payer"
-    * system      1..1                  
-      * ^short = "Identifier namespace for this payer"
-    * value       1..1                  
-      * ^short = "Specific identifier value for this payer"
+//  The Payer Identifier used in structures based on this model **SHALL** be the same as the ones that are returned by the [endpoint discovery mechanism](https://build.fhir.org/ig/HL7/davinci-ehrx/endpoint-discovery.html) defined in HRex."
+// * ^status = #active
+// * ^experimental = false
+// * ^extension[$fmm].valueInteger = 1
+// * ^extension[$standards-status].valueCode = #informative
+// * payers          0..* BackboneElement  "Supported Payer"  "Details for specific supported payer."
+//   * name          1..1 string           "Name of the payer" 
+//   * identifier    1..1 Identifier       "Identifier of the payer"
+//     * system      1..1                  
+//       * ^short = "Identifier namespace for this payer"
+//     * value       1..1                  
+//       * ^short = "Specific identifier value for this payer"
 
 /**************************************************************************************************************************************************************/
 Logical: DTRMetricData
