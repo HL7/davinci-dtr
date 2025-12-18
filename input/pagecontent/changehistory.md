@@ -44,6 +44,12 @@
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-52320">FHIR-52320</a> (Non-Compatible):<br>
+  Use a List profile instead of a logical model for supported payers 
+  </li>
+
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-51736">FHIR-51736</a> (Non-Compatible):<br>
   DTR should only take a single coverage as input 
   </li>

@@ -472,36 +472,12 @@ DTR imposes the following additional rules on CQL use by payers to maximize inte
 ### Determination of Payers Supported by a DTR App
 While all apps must '*technically*' support all payers, it is possible that the apps used to provide DTR functionality will not have the business arrangements in place to allow data sharing with all payers the EHR might have "DTR requests" for. It is important for the EHR to know what payers their app supports so that they only allow their users to launch the DTR app in the context of payers the app will be able to support. (Launching an app only to be told "this payer isn't supported" is an unpleasant user experience.)  
 
-The developer of SMART on FHIR DTR apps **SHALL** define an endpoint maintaining a list of payers currently supported by that app. This listing of Payers is based on the [Supported Payers](StructureDefinition-DTRSupportedPayers.html) logical model also published in this IG.  EHRs using external DTR apps **SHALL** support accessing the endpoint. The EHR will be configured with knowledge of which endpoint to access for a given app as part of the process of configuring support for that app within the EHR. Different endpoints **SHALL** be defined for different versions of the application in situations where support for payers varies by application version.
+The developer of SMART on FHIR DTR apps **SHALL** define an endpoint maintaining a list of payers currently supported by that app. This listing of Payers **SHALL** conform to the [DTR Supported Payers](StructureDefinition-dtr-supported-Payers.html) profile also published in this IG.  EHRs using external DTR apps **SHALL** support accessing the endpoint. The EHR will be configured with knowledge of which endpoint to access for a given app as part of the process of configuring support for that app within the EHR. Different endpoints **SHALL** be defined for different versions of the application in situations where support for payers varies by application version.
 
 It is important to note that the Payer Identifier used in this file **SHALL** be the same as the ones that are returned by the [endpoint discovery mechanism]({{site.data.fhir.ver.hrex}}/endpoint-discovery.html) defined in [HRex]({{site.data.fhir.ver.hrex}}/index.html).  
 
-Example 'Supported Payers' file:
-```json
-{
-  "payers": [
-    {
-        "name": "Health Ohmy",
-        "identifier" : {
-            "system" : "http://healthohmy.com/NamingSystem/payer-identifiers",
-            "value" : "987654321"
-        }
-    },
-    {
-        "name": "Instancio Health",
-        "identifier" : {
-            "system" : "http://Instancio.org/NamingSystem/payer-identifiers",
-            "value" : "123456789"
-        }
-    }    
-  ],
-  ...
-}
-```
 
-Accessing the endpoint will be by a simple GET with an Accept header of application/json and **SHALL** be performed over TLS. The returned JSON object will contain a "payers" property referring to an array of objects. Each object will have an id and name property, both with string values. It is possible that additional properties **MAY** be supported in the future.
-
-EHRs will typically retrieve the list of supported payers for the app once per day and will use this information to determine whether to expose the ability to launch DTR for orders associated with coverages for that payer.
+Accessing the endpoint will be by a simple GET with an Accept header of application/json and **SHALL** be performed over TLS. The returned JSON object will contain a "payers" property referring to an array of objects. Each object will have an id and name property, both with string values. It is possible that additional properties **MAY** be supported in the future.  EHRs will typically retrieve the list of supported payers for the app once per day and will use this information to determine whether to expose the ability to launch DTR for orders associated with coverages for that payer.
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
