@@ -34,11 +34,6 @@
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50465">FHIR-50465</a> (Compatible, substantive):<br>
-  Need guidance on supplemental guides
-  </li>
-
-  <li>
   <a href="https://jira.hl7.org/browse/FHIR-52455">FHIR-52455</a> (Compatible, substantive):<br>
   Clarify portals
   </li>
@@ -48,15 +43,24 @@
   Use a List profile instead of a logical model for supported payers 
   </li>
 
-
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-51736">FHIR-51736</a> (Non-Compatible):<br>
   DTR should only take a single coverage as input 
   </li>
 
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-51631">FHIR-51631</a> (Non-Compatible):<br>
+  Give users an idea of how much time completion will take
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-50789">FHIR-50789</a> (Non-Compatible):<br>
   Return all questions with response logic as must support
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-50465">FHIR-50465</a> (Compatible, substantive):<br>
+  Need guidance on supplemental guides
   </li>
 
   <li>
