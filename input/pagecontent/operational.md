@@ -21,5 +21,5 @@ Some of the implementation expectations related to DTR are not conformance expec
 
 
 ### Additional Considerations
-* The 'SHOULD' conformance requirement [spc-1](specification.html#spc-1) is likely to become a 'SHALL' in a future release of this specification.
+* The 'SHOULD' conformance requirements [spc-1](specification.html#spc-1) and [spc-2](specification.html#spc-2) are likely to become a 'SHALL' in a future release of this specification.
 </div>
