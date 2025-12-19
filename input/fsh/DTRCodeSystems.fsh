@@ -2,6 +2,21 @@
 // Code Systems 
 
 // ************************************************************
+CodeSystem: DTRCompletionTimeCodes
+Id: dtr-completionTime-codes
+Title: "DTR Completion Time Codes"
+Description: "Codes used within the Competion Time valueset."
+* ^status = #active
+* ^experimental = false
+* ^caseSensitive = true
+* ^content = #complete
+* ^hierarchyMeaning = #grouped-by
+* #under-1min  "Under 1 Minute"   "Completion time was under 1 minute."
+* #under-3min  "Under 3 Minutes"  "Completion time was under 3 minutes."
+* #under-5min  "Under 5 Minutes"  "Completion time was under 5 minutes."
+* #over-5min   "Over 5 Minutes"   "Completion time was over 5 minutes."
+
+// ************************************************************
 CodeSystem: DTRInformationOriginCodes
 Id: dtr-informationorigin-codes
 Title: "DTR Information Origin Codes"

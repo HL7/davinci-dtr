@@ -1,4 +1,31 @@
 /**************************************************************************************************************/
+Extension: EstimatedCompletionTime 
+Id: estimated-completion-time 
+Description: "Provides information about the typical completion time for the form."
+* ^title = "Estimated Completion Time"
+* ^context[0].type = #element
+* ^context[=].expression = "Questionnaire"
+* ^status = #active
+* extension contains
+    clinicalTime 0..1 MS and
+    totalTime 1..1 MS
+* extension[clinicalTime] only Extension
+* extension[clinicalTime] ^short = "The typical time taken to complete the patient and clinical portion of this questionnaire."
+* extension[clinicalTime] ^definition = "The typical time taken to complete the patient and clinical portion of this questionnaire."
+* extension[clinicalTime].value[x] 1..1
+* extension[clinicalTime].value[x] from DTRCompletionTimes (required)
+* extension[clinicalTime].value[x] only code 
+* extension[clinicalTime].value[x] ^short = "under-1min | under-3min | under-5min | over-5min"
+
+* extension[totalTime] only Extension
+* extension[totalTime] ^short = "The typical time needed to complete all relevant questions in this form."
+* extension[totalTime] ^definition = "The typical time needed to complete all relevant questions in this form."
+* extension[totalTime].value[x] 1..1
+* extension[totalTime].value[x] from DTRCompletionTimes (required)
+* extension[totalTime].value[x] only code 
+* extension[totalTime].value[x] ^short = "under-1min | under-3min | under-5min | over-5min"
+
+/**************************************************************************************************************/
 Extension: RequestSpecific
 Id: request-specific
 Title: "Request Specific Flag"

@@ -1,6 +1,19 @@
 ///**********************************************************************************************
 // Value Sets
 // ************************************************************
+ValueSet: DTRCompletionTimes
+Id: completionTimes
+Title: "Questionnaire Completion Time Value Set"
+Description: "Codes defining estimated completion times for a Questionnaire"
+* ^status = #active
+* ^experimental = false
+* ^extension[$fmm].valueInteger = 1
+* DTRCompletionTimeCodes#under-1min
+* DTRCompletionTimeCodes#under-3min
+* DTRCompletionTimeCodes#under-5min
+* DTRCompletionTimeCodes#over-5min
+
+// ************************************************************
 ValueSet: DTRAudience
 Id: questionnaireAudience
 Title: "Audience Value Set"

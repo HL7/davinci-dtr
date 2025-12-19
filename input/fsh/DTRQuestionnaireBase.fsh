@@ -13,14 +13,15 @@ Description: "Takes a subset of extensions and constraints from the SDC [renderi
 * ^status = #active
 * ^date = "2021-11-12T02:27:35+00:00"
 * ^abstract = true
+* obeys dtrq-6
 
 * text.div ^comment = "The contents of the html element are an XHTML fragment containing only the basic html formatting elements described in chapters 7-11 and 15 of the HTML 4.0 standard, 'anchor' elements (either name or href), images and internally contained stylesheets. The XHTML content SHALL NOT contain a head, a body, external stylesheet references, scripts, forms, base/link/xlink, frames, iframes and objects."
 * subjectType 1..1
 * subjectType = #Patient
 
+* extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/estimated-completion-time named estimatedCompletionTime 0..1 MS
 * extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/questionnaireAudience named audience 0..* MS
 * extension contains http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/request-specific named RequestSpecific 0..1 MS
-
 * extension[assemble-expectation] 0..0
 * extension contains http://hl7.org/fhir/StructureDefinition/rendering-styleSensitive named styleSensitive 0..1
 * extension[styleSensitive].valueBoolean = false
@@ -68,7 +69,6 @@ Description: "Takes a subset of extensions and constraints from the SDC [renderi
 * item.extension[unitValueSet] ^comment = "Provide either unitOption(s) or unitValueSet. If either of the extensions are present, the units for a Quantity element are constrained to only the units listed by the extensions - i.e. it is treated as a \"required\", not an \"extensible\" binding. In the absence of either, any unit is valid. See additional guidance and examples in the [SDC implementation guide](http://hl7.org/fhir/uv/sdc/behavior.html#unitValueSet). If this extension present and an answer is provided for the question item in the QuestionnaireResponse, then the valueQuantity **SHALL** have a Quantity.code and Quantity.system that match the Coding.code and system of one of the allowed values if the Coding has a code and/or system. If the Coding only has a display, then the Quantity.unit must match. (Note that Coding with only a display is strongly discouraged.) If there is a match on code and system, but no match on display/unit, systems MAY raise a warning. However, because of translation and bandwidth considerations, some systems **MAY** opt to drop the unit or express it in an alternate language. Validation of the Quantity unit **MAY** be performed by using the $validateCode operation, populating the elements passed into the operation from the Quantity.code, system and unit elements."
 
 * item.extension contains sdcItemMedia named itemMedia 0..1
-// * item.extension contains sdcOptionalDisplay named itemOptionalDisplay 0..0
 * item.extension[itemOptionalDisplay] 0..0
 * item.extension contains sdcShortText named shortText 0..1
 * item.extension contains sdcOpenLabel named openLabel 0..1

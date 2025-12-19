@@ -29,6 +29,12 @@ Severity: #warning
 Expression: "(type='reference') implies extension.where(url='http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-candidateExpression').exists()"
 
 /*****************************************************************************************************/
+Invariant:  dtrq-6
+Description: "If audiene is 'clinical' or 'patient' then estimatedCompletionTime must contain clinicalTime."
+Severity:   #error
+Expression: "extension.exists(url = 'http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/questionnaireAudience' and (value = 'clinical' or value = 'patient')) implies extension.where(url = 'http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/estimated-completion-time').extension(url = 'clinicalTime').exists()"
+
+/*****************************************************************************************************/
 Invariant:  dtr-1
 Description: "At least one of 'order', 'questionnaire' and 'context' SHALL be present"
 Severity:   #error
