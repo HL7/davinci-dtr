@@ -71,7 +71,6 @@ Parent:         Parameters
 Id:             dtr-log-errors-input-parameters
 Title:          "DTR Log Questionnaire Errors Input Parameters"
 Description:    "The Parameters profile used to define the inputs to the [$log-questionnaire-errors](OperationDefinition-log-questionnaire-errors.html) operation."
-* obeys dtr-1
 * ^status = #active
 * parameter ^slicing.discriminator.type = #pattern
 * parameter ^slicing.discriminator.path = "name"
@@ -79,8 +78,8 @@ Description:    "The Parameters profile used to define the inputs to the [$log-q
 * parameter ^slicing.description = "Slice based on $this pattern"
 * parameter 1..* MS
 * parameter contains 
-    questionnaire 0..* MS and 
-    outcome 0..* MS
+    questionnaire 1..* MS and 
+    outcome 1..* MS
 * parameter[questionnaire].name = "questionnaire"
 * parameter[questionnaire] ^short = "The Questionnaire generating the errors (The reference SHOULD be version-specific)"
 * parameter[questionnaire].value[x] 1..1
