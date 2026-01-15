@@ -130,7 +130,7 @@ Description: "Identifies the origin of the information in the answer and how it 
 * extension[source].value[x] 1..1
 * extension[source].value[x] from DTRInformationOrigins (required)
 * extension[source].value[x] only code 
-* extension[source].value[x] ^short = "auto | override | manual"
+* extension[source].value[x] ^short = "auto-client | auto-server | override | manual"
 
 * extension[author] only Extension
 * extension[author] ^short = "The author of the information adjustment"
