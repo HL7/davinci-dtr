@@ -483,7 +483,7 @@ DTR imposes the following additional rules on CQL use by payers to maximize inte
 ### Determination of Payers Supported by a DTR App
 While all apps must '*technically*' support all payers, it is possible that the apps used to provide DTR functionality will not have the business arrangements in place to allow data sharing with all payers the EHR might have "DTR requests" for. It is important for the EHR to know what payers their app supports so that they only allow their users to launch the DTR app in the context of payers the app will be able to support. (Launching an app only to be told "this payer isn't supported" is an unpleasant user experience.)  
 
-The developer of SMART on FHIR DTR apps **SHALL** define an endpoint maintaining a list of payers currently supported by that app. This listing of Payers **SHALL** conform to the [DTR Supported Payers](StructureDefinition-dtr-supported-Payers.html) profile also published in this IG.  EHRs using external DTR apps **SHALL** support accessing the endpoint. The EHR will be configured with knowledge of which endpoint to access for a given app as part of the process of configuring support for that app within the EHR. Different endpoints **SHALL** be defined for different versions of the application in situations where support for payers varies by application version.
+Entities deploying SMART on FHIR DTR apps **SHALL** define an endpoint maintaining a list of payers currently supported by that app. This listing of Payers **SHALL** conform to the [DTR Supported Payers](StructureDefinition-dtr-supported-Payers.html) profile also published in this IG.  EHRs using external DTR apps **SHALL** support accessing the endpoint. The EHR will be configured with knowledge of which endpoint to access for a given app as part of the process of configuring support for that app within the EHR. Different endpoints **SHALL** be defined for different versions of the application in situations where support for payers varies by application version.
 
 It is important to note that the Payer Identifier used in this file **SHALL** be the same as the ones that are returned by the [endpoint discovery mechanism]({{site.data.fhir.ver.hrex}}/endpoint-discovery.html) defined in [HRex]({{site.data.fhir.ver.hrex}}/index.html).  
 
@@ -542,7 +542,7 @@ If these are not passed in as part of context, then the app **MAY** either raise
 
 In addition to launch contexts, the SMART app will need to request scopes for the type of information it needs to access and manipulate.  Payer-provided Questionnaires **MAY** require access to a wide range of resources.  
 
-At a minimum, the app and the HIT server **SHALL** support access to the following resources via the 21st Century Cures Act compliant APIs:  
+At a minimum, the DTR app and the HIT server **SHALL** support search access to the following resources via their FHIR RESTful API using the profiles defined by or referenced by this guide:  
 * Patient
 * Coverage 
 * QuestionnaireResponse
