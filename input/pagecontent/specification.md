@@ -363,7 +363,7 @@ If DTR is launched using a previously saved QuestionnaireResponse, the DTR clien
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
-    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">IMPLEMENTATION NOTE:</span></b></td>
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> 
 It is possible that future versions of this specification may allow greater configuration of how population by both payer and provider systems should be managed, for example supporting merger of population data from each.  Implementers are encouraged to share requirements around population where the current rules are inadequate/inappropriate.
       </td></tr>
