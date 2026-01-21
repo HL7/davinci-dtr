@@ -95,6 +95,7 @@ The base Questionnaire resource defines some of these capabilities.  However, to
 
 <a name="spc-1"/>DTR services **SHOULD** have DTR questionnaires available for all covered items that require additional data collection to support prior auth submission, claim submission, or appropriate use documentation. (Future versions of this guide will likely tighten this expectation to a SHALL)<a href="operational.html#additional-considerations"><sup>spc-1</sup></a>
 
+DTR server organizations **MAY** surface their Questionnaires via a registry or some similar mechanism that allows DTR client organizations to pre-examine/pre-process Questionnaires to allow for more optimal handling when those Questionnaires are actually solicited.  DTR clients **SHALL NOT** be dependent on such pre-availability in order to perform form completion.
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
@@ -324,19 +325,19 @@ Prior to exposing items from the draft QuestionnaireResponse to the user for com
 All items that are pre-populated (whether by the payer in the initial QuestionnaireResponse provided in the questionnaire package, or from data retrieved from the EHR) **SHALL** have their `origin.source` set to 'auto-server' (pre-populated by Payer) or 'auto-client' (pre-populated by EHR) within the required [`information-origin`](StructureDefinition-information-origin.html) extension.
 
 #### Execution Sequence
-The flow of execution of the CQL will be determined by the associated Questionnaire. The client will proceed through the Questionnaire, and for any question that is associated with the result of a CQL expression, that specific CQL statement will be executed. The DTR client **SHALL** use result caching so that results that are already available will be reused without requesting them again.
+The flow of execution of the CQL will be determined by the associated Questionnaire. The client will proceed through the Questionnaire, and for any question that is associated with the result of a CQL expression, that specific CQL statement will be executed. The DTR client **SHOULD** use result caching so that results queried by CQL (or otherwise retrieved based on CQL) previously remain available after a subsequent call to $next-question.
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> 
-The answers to questions populated by an <code>initialExpression</code> or <code>calculatedExpression</code> might themselves be dependencies to determine whether a Questionnaire item is enabled or not, which <b>MAY</b> in turn influence whether additional pre-population is required.  DTR clients <b>SHALL</b> iterate as necessary until a steady state is reached.  If dependencies are such that a steady state cannot be reached (e.g., an item that is enabled causes a value to be set which causes a different item to be enabled, that then disables the first item…), then the Questionnaire <b>SHALL</b> be treated as erroneous and attempts at automatic population <b>SHALL</b> end, with the user being informed of that.
+The answers to questions populated by an <code>initialExpression</code> or <code>calculatedExpression</code> might themselves be dependencies to determine whether a Questionnaire item is enabled or not, which might in turn influence whether additional pre-population is required.  DTR clients <b>SHALL</b> iterate as necessary until a steady state is reached.  If dependencies are such that a steady state cannot be reached (e.g., an item that is enabled causes a value to be set which causes a different item to be enabled, that then disables the first item…), then the Questionnaire <b>SHALL</b> be treated as erroneous and attempts at automatic population <b>SHALL</b> end, with the user being informed of that.
       </td></tr>
   </table>
 </div><br>
 
 #### Retrieval of patient FHIR resources to supply to CQL execution engine
-The DTR client **SHALL** retrieve the FHIR resources specified in the `dataRequirement` section of a Library.  SMART apps will do this using the access token provided on launch.  The client can then pass these resources to the Clinical Quality Language (CQL) engine. For example, the snippet below is from a Library that contains a `dataRequirement` section. In this code snippet the resource data needed from the EHR is Condition.
+If executing CQL directly, the DTR client **SHALL** retrieve the FHIR resources specified in the `dataRequirement` section of a Library.  SMART apps will do this using the access token provided on launch.  The client can then pass these resources to the Clinical Quality Language (CQL) engine. For example, the snippet below is from a Library that contains a `dataRequirement` section. In this code snippet the resource data needed from the EHR is Condition.
 
 ```json
 "dataRequirement": [
@@ -352,25 +353,34 @@ The DTR client **SHALL** retrieve the FHIR resources specified in the `dataRequi
 ```
 
 Depending on user permissions, the client might not have access to all the data. Queries **SHOULD** be constructed to minimize the retrieval of information that is not necessary to answer the relevant questions (For example, queries for medications that only require active medications should have appropriate filters to retrieve active medications and not inactive medications).
-It's possible not every CQL statement will be executed (for example some questions may only be enabled given certain answers to prior questions). To reduce data transfers and increase overall speed, data **MAY** be fetched as needed. However, the app's execution engine **MAY** be implemented using a different strategy (for example by doing bulk fetches before starting execution).
+It's possible not every CQL statement will be executed (for example some questions may only be enabled given certain answers to prior questions). To reduce data transfers and increase overall speed, data can be fetched as needed. However, the app's execution engine might be implemented using a different strategy (for example by doing bulk fetches before starting execution).
 
 #### Populating adaptive questionnaires
-An adaptive form handles population slightly differently from a 'standard' form because questions only become available one (or a few) at a time.  Some CQL [Libraries](http://hl7.org/fhir/R4/library.html) **MAY** themselves only become available once certain questions are displayed.  The population process must therefore happen after each call to [`$next-question`](OperationDefinition-DTR-Questionnaire-next-question.html), populating any newly available questions.  DTR clients **SHALL** support such an incremental population of adaptive QuestionnaireResponses.  For performance, the DTR application **SHOULD** save the results of execution of CQL prior to the [`$next-question`](OperationDefinition-DTR-Questionnaire-next-question.html) call.
+An adaptive form handles population slightly differently from a 'standard' form because questions only become available one (or a few) at a time.  Some CQL [Libraries](http://hl7.org/fhir/R4/library.html) might themselves only become available once certain questions are displayed.  The population process must therefore happen after each call to [`$next-question`](OperationDefinition-DTR-Questionnaire-next-question.html), populating any newly available questions.  DTR clients **SHALL** support such an incremental population of adaptive QuestionnaireResponses.  For performance, the DTR client may find it helpful to cache the results of CQL prior to the [`$next-question`](OperationDefinition-DTR-Questionnaire-next-question.html) call.
 
 #### Populating resumed QuestionnairesResponses
-If DTR is launched using a previously saved QuestionnaireResponse, the DTR client **SHOULD** re-execute CQL to populate all empty elements, as well as those with an [`origin.source`](StructureDefinition-information-origin.html) of 'auto-client' or 'auto-server'.  Any answers with an `origin.source` of 'override' or 'manual' **SHALL NOT** be changed, though if pre-population would have asserted a value for an answer with an `origin.source` of 'manual', the `origin.source` **SHALL** be changed to 'override'.
+If DTR is launched using a previously saved QuestionnaireResponse, the DTR client **SHOULD** re-execute CQL to populate all empty elements, as well as those with an [`origin.source`](StructureDefinition-information-origin.html) of 'auto-client' or 'auto-server'.  Any answers with an `origin.source` of 'override' or 'manual' **SHALL NOT** be changed, though if pre-population would have asserted a value for an answer with an `origin.source` of 'manual', the `origin.source` **SHALL** be changed to 'override'.  When executing CQL for population, DTR clients **SHALL** replace payer-prepopulated data unless the results of the CQL population is an empty set.
+
+<div markdown="1" class="notebox">
+  <table style="border: none; margin-bottom: 0px;">
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">IMPLEMENTATION NOTE:</span></b></td>
+      <td style="border: none"> 
+It is possible that future versions of this specification may allow greater configuration of how population by both payer and provider systems should be managed, for example supporting merger of population data from each.  Implementers are encouraged to share requirements around population where the current rules are inadequate/inappropriate.
+      </td></tr>
+  </table>
+</div><br>
 
 #### Library Dependencies
-The FHIR Library containing/referencing a CQL logic file can reference other needed CQL files (e.g., helper libraries) using the `relatedArtifact` field and a RelatedArtifact with a type of depends-on. The engine **SHALL** make available to the execution context all such referenced CQL [Libraries](http://hl7.org/fhir/R4/library.html). 
+The FHIR Library containing/referencing a CQL logic file can reference other needed CQL files (e.g., helper libraries) using the `relatedArtifact` field and a RelatedArtifact with a type of depends-on. If executing CQL directly, the engine **SHALL** make available to the execution context all such referenced CQL [Libraries](http://hl7.org/fhir/R4/library.html).  If not executing the CQL directly, alternative processes **SHOULD** consider the content of referenced libraries as well.
 
 #### Behavior when encountering CQL-related errors
-If the CQL is malformed (is not syntactically correct) in any way, the app's execution engine **SHALL NOT** attempt any execution of the malformed CQL. If the CQL engine reports an error when executing any of the CQL the app should similarly stop all CQL execution.  In either case, the client **SHALL** report the error to the payer using the [Log Questionnaire Errors operation](OperationDefinition-log-questionnaire-errors.html) and **SHOULD** Log the error internally and/or in the DTR client if possible.
+If the CQL is malformed (is not syntactically correct) in any way, a client directly executing the CQL **SHALL NOT** attempt any execution of the malformed CQL. If the CQL engine reports an error when executing any of the CQL, the client should similarly stop all CQL execution.  Clients not executing the CQL **SHOULD** be tolerant of malformed CQL.  In either case, the client **SHALL** report the error to the payer using the [Log Questionnaire Errors operation](OperationDefinition-log-questionnaire-errors.html) in addition to performing its own internal logging processes.
 
 If the CQL in the Questionnaire is only used for form population purposes, the app **SHALL**:
 * Notify the user with an appropriate message indicating that the form population did not occur.
 * Allow the user to enter the information manually, either now or at a later time.
 
-If the CQL also includes questionnaire logic, such as whether certain elements are enabled, or other validation rules, the app **SHALL** notify the user that there is an issue with the questionnaire and prohibit further completion of the form. 
+If the CQL also includes questionnaire logic, such as whether certain elements are enabled, or other validation rules, the DTR client (potentially in consultation with the user) **MAY** attempt to determine if the questionnaire is sufficiently simple that it would be reasonable to allow the user to attempt completion with potentially improperly enabled items.  If this is not possible, the client **SHALL** notify the user that there is an issue with the questionnaire and prohibit further completion of the form. 
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
@@ -478,7 +488,7 @@ The developer of SMART on FHIR DTR apps **SHALL** define an endpoint maintaining
 It is important to note that the Payer Identifier used in this file **SHALL** be the same as the ones that are returned by the [endpoint discovery mechanism]({{site.data.fhir.ver.hrex}}/endpoint-discovery.html) defined in [HRex]({{site.data.fhir.ver.hrex}}/index.html).  
 
 
-Accessing the endpoint will be by a simple GET with an Accept header of application/json and **SHALL** be performed over TLS. The returned JSON object will contain a "payers" property referring to an array of objects. Each object will have an id and name property, both with string values. It is possible that additional properties **MAY** be supported in the future.  EHRs will typically retrieve the list of supported payers for the app once per day and will use this information to determine whether to expose the ability to launch DTR for orders associated with coverages for that payer.
+Accessing the endpoint will be by a simple GET with an Accept header of application/json and **SHALL** be performed over TLS. The returned JSON object will contain a "payers" property referring to an array of objects. Each object will have an id and name property, both with string values. It is possible that additional properties might be supported in the future.  EHRs will typically retrieve the list of supported payers for the app once per day and will use this information to determine whether to expose the ability to launch DTR for orders associated with coverages for that payer.
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">

@@ -84,6 +84,11 @@
 <p><b>Non-Substantive changes:</b></p>
 <ul>
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-53484">FHIR-53484</a> (Non-Substantive):<br>
+  Evaluate conformance testability for DTR client guidance
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-52982">FHIR-52982</a> (Non-Substantive):<br>
   Misleading usage of "shared secret" when describing client/EHR and Payer connectivity
   </li>
@@ -126,6 +131,11 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-51629">FHIR-51629</a> (Non-Substantive):<br>
   Set expectations for splitting clinical/patient and non-clinical forms
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-51577">FHIR-51577</a> (Non-Substantive):<br>
+  Optimized data collection by ordering doctor, nurse and/or front/back office staff
   </li>
 
   <li>
