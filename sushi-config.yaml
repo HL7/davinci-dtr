@@ -24,6 +24,7 @@ jurisdiction: urn:iso:std:iso:3166#US
 parameters:
   excludettl: true
   show-inherited-invariants: false
+  requirements-category-vs: "http://hl7.org/fhir/us/davinci-dtr/ValueSet/cs-categories"
   path-expansion-params: 'Parameters-expansion-parameters-us-dtr.json'  #path is relative to [base]/fsh-generated/resources
   apply-publisher: true
   apply-contact: true
