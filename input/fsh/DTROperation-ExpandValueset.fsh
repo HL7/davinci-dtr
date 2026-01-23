@@ -7,7 +7,7 @@ Usage: #definition
 * kind = #operation
 * base = "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"
 * date = "2025-07-14T08:00:00+11:00"
-* description = "The definition of a value set is used to create a simple collection of codes suitable for use for data entry or validation. The operation is called at the system level and a url **SHALL** be provided.  Additionally, the valueset **SHALL** use the current date as the expansion date and **SHALL** include only active codes. An expanded value set will be returned, or an OperationOutcome with an error message. 
+* description = "The definition of a value set is used to create a simple collection of codes suitable for use for data entry or validation. §oper-4^dtr-client:The operation is called at the system level and a url **SHALL** be provided.§  §oper-5^dtr-client:Additionally, the valueset **SHALL** use the current date as the expansion date and **SHALL** include only active codes.§ An expanded value set will be returned, or an OperationOutcome with an error message. 
 
 For more details regarding this operation, see the FHIR R4 [`$expand`](https://hl7.org/fhir/R4/operation-valueset-expand.html) operation definition."
 * code = #expand

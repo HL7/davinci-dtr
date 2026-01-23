@@ -11,9 +11,9 @@ Usage: #definition
 * title = "Log errors resulting from a specific Questionnaire and/or CQL to the originating Payer"
 * status = #active
 * kind = #operation
-* description = "This operation **SHALL** be supported by payers and DTR applications. It allows submission of issues encountered when working with these DTR-provided artifacts.  The operation will pass the Questionnaire and an OperationOutcome detailing the issue(s) including where the error occurred.    
+* description = "§oper-1^dtr-client,dtr-server:This operation **SHALL** be supported by payers and DTR applications.§  It allows submission of issues encountered when working with these DTR-provided artifacts.  The operation will pass the Questionnaire and an OperationOutcome detailing the issue(s) including where the error occurred.    
 
-The input OperationOutcome resource **SHOULD** include information on the DTR application identity and version, date-time with time-zone offset, as well as the provider endpoint during which the error occurred, and it **SHALL NOT** contain information about the response or information retrieved from FHIR APIs that could potentially include PHI.  The Questionnaire reference **SHOULD** be version-specific."
+§oper-2^dtr-client:The input OperationOutcome resource **SHOULD** include information on the DTR application identity and version, date-time with time-zone offset, as well as the provider endpoint during which the error occurred, and it **SHALL NOT** contain information about the response or information retrieved from FHIR APIs that could potentially include PHI.§  §oper-3^dtr-client:The Questionnaire reference **SHOULD** be version-specific.§"
 * code = #log-questionnaire-errors
 * base = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/log-questionnaire-errors"
 

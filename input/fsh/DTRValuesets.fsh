@@ -81,3 +81,16 @@ Description: "A list of codes indicating the DTR action performed by a system."
 * DTRMetricCodes#nextq
 * DTRMetricCodes#userresponse
 * DTRMetricCodes#storeqr
+
+// ************************************************************
+ValueSet: ConformanceStatementCategories
+Id: cs-categories
+Title: "Conformance Statement Categories"
+Description: "Categories for conformance statements found in the DTR Implementation Guide"
+* ^status = #active
+* ^experimental = false
+* DTRConformanceStatementCategories#business
+* DTRConformanceStatementCategories#exchange
+* DTRConformanceStatementCategories#processing
+* DTRConformanceStatementCategories#storage
+* DTRConformanceStatementCategories#ui

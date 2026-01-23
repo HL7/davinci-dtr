@@ -68,3 +68,19 @@ Description: "Codes defining audience of additional documentation to be captured
 * #clinical       "Clinical Documentation"        "Details most likely to originate from a clinician are required to satisfy additional documentation requirements, determine coverage and/or prior auth applicability - e.g. via DTR by clinician.  Indicates that the CRD client should expose the need to launch DTR to clinical users."
 * #admin          "Administrative Documentation"  "Administrative details not likely to require clinical expertise are needed to satisfy additional documentation requirements, determine coverage and/or prior auth applicability - e.g. via DTR by back-end staff.  Indicates that while the CRD client might expose the ability to launch DTR as an option for clinical users, it should be clear that clinical input is not necessary and deferring the use of DTR to back-end staff is perfectly appropriate.  Some CRD clients might be configured (based on provider preference) to not even show clinicians the option to launch."
 * #patient        "Patient Documentation"         "Details most likely to originate from the patient or their personal representative (e.g. parent, spouse, etc.) are required to satisfy additional documentation requirements, determine coverage and/or prior auth applicability.  For example, information about household composition, accessibility considerations, etc.  This should be used when the data needs to come from the patient themselves, rather than a clinician's assessment of the patient"
+
+// ************************************************************
+CodeSystem: DTRConformanceStatementCategories
+Id: dtr-conformance-statement-categories
+Title: "DTR Conformance Statement Categories"
+Description: "Codes that help to categorize requirements statements"
+* ^status = #active
+* ^experimental = false
+* ^caseSensitive = true
+* ^content = #complete
+* ^hierarchyMeaning = #grouped-by
+* #business   "business"            "Requirements relating to the business operations of the entities responsible for a system"
+* #exchange   "exchange"            "Requirements relating to when or how data is exchanged with other systems"
+* #processing "processing"          "Requirements related to how data is dealt with internally to a system"
+* #storage    "storage"             "Requirements relating to when or how data is or is not persisted within a system"
+* #ui         "ui"                  "Requirements relating to the appearance of information on a user interface"
