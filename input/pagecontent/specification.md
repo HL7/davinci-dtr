@@ -95,7 +95,7 @@ The Questionnaire resource is used to represent the information needs that provi
 
 The base Questionnaire resource defines some of these capabilities.  However, to allow specifying all the expectations needed to meet payer requirements for data collection forms, additional extensions are necessary.  DTR leverages the extended Questionnaire capabilities defined in the [Structured Data Capture (SDC) implementation guide](http://hl7.org/fhir/uv/sdc/STU3/) to define the complete set of functionality necessary to support data capture for payer purposes.  
 
-§spec-12^dtr-server:DTR services **SHOULD** have DTR questionnaires available for all covered items that require additional data collection to support prior auth submission, claim submission, or appropriate use documentation.§ (Future versions of this guide will likely tighten this expectation to a 'SHALL')<a href="operational.html#additional-considerations">
+§spec-12^dtr-server:DTR services **SHOULD** have DTR questionnaires available for all covered items that require additional data collection to support prior auth submission, claim submission, or appropriate use documentation.§ (Future versions of this guide will likely tighten this expectation to a 'SHALL')<a id="spec-12" href="operational.html#additional-considerations">
 
 §spec-13^dtr-client:DTR server organizations **MAY** surface their Questionnaires via a registry or some similar mechanism that allows DTR client organizations to pre-examine/pre-process Questionnaires to allow for more optimal handling when those Questionnaires are actually solicited.§  §spec-14^dtr-client:DTR clients **SHALL NOT** be dependent on such pre-availability in order to perform form completion.§
 
@@ -107,7 +107,6 @@ DTR requires, at a minimum, exposing question text, and permitted answers in a c
       </td></tr>
   </table>
 </div><br>
-
 
 More information regarding Questionnaires, workflow, and behaviors implementers will need to understand can be found in the SDC Guide:
 * [Basic SDC Workflow](http://hl7.org/fhir/uv/sdc/STU3/workflow.html)
@@ -229,7 +228,7 @@ Adaptive questionnaires pose a slight challenge when it comes to preparing the Q
 
 In some cases, an adaptive form may need to retrieve resources from the EHR in order to determine what subsequent questions to ask or to make a prior authorization decision.  The only way for information to be relayed to the payer is with answers inside a QuestionnaireResponse.  However, QuestionnaireResponse answers can't actually be full resources, only references.  §spec-32^dtr-client:Payers needing full resources to be returned **SHOULD** use the [`containedReference`](StructureDefinition-containedReference.html) extension to indicate that the selected resource(s) for an answer of type reference should be included as [contained](https://hl7.org/fhir/R4/references.html#contained) resources within the QuestionnaireResponse.§  This provides a mechanism for full resources to be included as part of the QuestionnaireResponse.
 
-§spec-33^dtr-client:Implementers that support Adaptive Questionnaires **SHOULD** always include a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension when the QuestionnaireResponse is deemed complete.§  (Future versions of this guide will likely tighten this expectation to a 'SHALL').<a href="operational.html#additional-considerations">
+§spec-33^dtr-client:Implementers that support Adaptive Questionnaires **SHOULD** always include a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension when the QuestionnaireResponse is deemed complete.§  (Future versions of this guide will likely tighten this expectation to a 'SHALL').<a id="spec-33" href="operational.html#additional-considerations">
 
 §spec-34^dtr-client:The package returned by the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation **MAY** include Library and/or ValueSet instances that are not referenced by any of the returned questionnaires if at least one of those questionnaires is adaptive.§  §spec-35^dtr-client:In this circumstance these additional resources are being made available, and **SHALL** be retained in the session, on the likelihood that a question in one of those adaptive questionnaires returned by the [`$next-question`](OperationDefinition-DTR-Questionnaire-next-question.html) operation will need (and reference) these resources.§
 
