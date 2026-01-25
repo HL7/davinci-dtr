@@ -189,6 +189,9 @@ Rules and logic are hidden and only questions relevant to the current member/ord
 
 It should be noted that in some cases, decision logic may mean that a few questions that could be answered by administrative staff will need answers to determine which clinical and/or patient questions need to be displayed.  In this situation, these questions will need to be intermixed with the patient / clinical questions.
 
+It should be noted that hyperlinks in XHTML or `supportLink` may point to 'contained' binary resources.  §spec-160^dtr-server:Such resources **SHALL** either be PDFs or XHTML pages that adhere to FHIR's ['safe' HTML rules](https://hl7.org/fhir/R4/security.html#narrative) (no active content or scripts)§ 
+
+
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>

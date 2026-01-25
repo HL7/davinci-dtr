@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="formatting.css" />
+
 Guidance and conformance expectations around privacy and security are provided by all three specifications this implementation guide relies on. §sec-1^dtr-client,dtr-server:Implementers **SHALL** adhere to any security and privacy rules defined by:§
 * FHIR Core: [Security & Privacy Module]({{site.data.fhir.path}}secpriv-module.html), [Security Principles]({{site.data.fhir.path}}security.html) and [Implementer's Checklist]({{site.data.fhir.path}}safety.html)
 * HRex: [Privacy & Security]({{site.data.fhir.ver.hrex}}/security.html)
@@ -16,3 +18,12 @@ Any DTR SMART on FHIR application will have access to the scope of data authoriz
 * Responding to the operation.
 * Retention of the fully completed QuestionnaireResponse to support a coverage determination made as part of the Questionnaire completion process.
 * Internal audit and metric calculation.
+
+<div markdown="1" class="notebox">
+  <table style="border: none; margin-bottom: 0px;">
+    <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
+      <td style="border: none"> 
+When Questionnaires provide external links through XHTML or <code>supportLink</code>, there may need to be up-front negotiation to add such links to the 'safe'.
+      </td></tr>
+  </table>
+</div><br>

@@ -4,10 +4,19 @@
 <p><b>Substantive and breaking changes:</b></p>
 <ul>
   <li>
+  <a href="https://jira.hl7.org/browse/FHIR-55401">FHIR-55401</a> (Compatible, substantive):<br>
+  Support for rendering-xhtml links to contained HTML documents
+  </li>
+
+  <li>
   <a href="https://jira.hl7.org/browse/FHIR-53496">FHIR-53496</a> (Compatible, substantive):<br>
   Add a 'request-specific' flag on Questionnaire
   </li>
 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-53050">FHIR-53050</a> (Compatible, substantive):<br>
+  DTR version discovery 
+  </li>
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-53041">FHIR-53041</a> (Compatible, substantive):<br>
   DTRMetricData providerId and groupId required, but not generally available to payer services
@@ -86,6 +95,11 @@
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-53484">FHIR-53484</a> (Non-Substantive):<br>
   Evaluate conformance testability for DTR client guidance
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-53225">FHIR-53225</a> (Non-Substantive):<br>
+  Attribute all conformance requirements to distinct actors 
   </li>
 
   <li>
