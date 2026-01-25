@@ -14,7 +14,7 @@ Any DTR SMART on FHIR application will have access to the scope of data authoriz
 
 §sec-10^dtr-server:Payer systems **SHALL** use information received during execution of the DTR [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation solely for the purpose of satisfying the operation invoked, for audit, and to satisfy metric reporting needs.§
 
-§sec-11^dtr-server:If a payer uses adaptive forms to gather information, the payer **SHALL NOT** persist or use the information shared as part of the [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) operation for any purpose other than:§
+§sec-11?^dtr-server:If a payer uses adaptive forms to gather information, the payer **SHALL NOT** persist or use the information shared as part of the [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) operation for any purpose other than:§
 * Responding to the operation.
 * Retention of the fully completed QuestionnaireResponse to support a coverage determination made as part of the Questionnaire completion process.
 * Internal audit and metric calculation.

@@ -233,7 +233,7 @@ In some cases, an adaptive form may need to retrieve resources from the EHR in o
 
 §spec-33?^dtr-client:Implementers that support Adaptive Questionnaires **SHOULD** always include a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension when the QuestionnaireResponse is deemed complete.§  (Future versions of this guide will likely tighten this expectation to a 'SHALL').<a id="spec-33" href="operational.html#additional-considerations">
 
-§spec-34^dtr-client:The package returned by the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation **MAY** include Library and/or ValueSet instances that are not referenced by any of the returned questionnaires if at least one of those questionnaires is adaptive.§  §spec-35?^dtr-client:In this circumstance these additional resources are being made available, and **SHALL** be retained in the session, on the likelihood that a question in one of those adaptive questionnaires returned by the [`$next-question`](OperationDefinition-DTR-Questionnaire-next-question.html) operation will need (and reference) these resources.§
+§spec-34?^dtr-client:The package returned by the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation **MAY** include Library and/or ValueSet instances that are not referenced by any of the returned questionnaires if at least one of those questionnaires is adaptive.§  §spec-35?^dtr-client:In this circumstance these additional resources are being made available, and **SHALL** be retained in the session, on the likelihood that a question in one of those adaptive questionnaires returned by the [`$next-question`](OperationDefinition-DTR-Questionnaire-next-question.html) operation will need (and reference) these resources.§
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
@@ -509,7 +509,7 @@ The standardization of payer ids is still considered an open issue.  Guidance on
 
 #### Launch Workflow 
 DTR can be launched in three circumstances:
-* In response to CRD, if the `info-needed` flag on the [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension is set.  §spec-107^dtr-server:The [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation **SHALL** include a `coverage-assertion-id` element of the `coverage-information` as the context value.§  (§spec-108^dtr-client:DTR **MAY** error if invoked with CRD coverage-assertion-ids where the Coverage-Information did not indicate that info was needed.§)  The invocation might also include the associated orders.
+* In response to CRD, if the `info-needed` flag on the [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension is set.  §spec-107^dtr-server:The [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation **SHALL** include a `coverage-assertion-id` element of the `coverage-information` as the context value.§  (§spec-108?^dtr-client:DTR **MAY** error if invoked with CRD coverage-assertion-ids where the Coverage-Information did not indicate that info was needed.§)  The invocation might also include the associated orders.
 * In response to PAS, when the PAS response includes a request for the 102089-0 LOINC code in the HI segment of the response. §spec-109^dtr-server:The [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation **SHALL** include the TRN associated with the LOINC code as the context value.§  §spec-110?^dtr-client:DTR **SHOULD** error if it is invoked with an unrecognized TRN value or one from a PAS response that did not specify such a LOINC code.§
 * As stand-alone, where no context is provided and only orders are indicated.
 
@@ -644,7 +644,7 @@ Two different profiles are used to support two different approaches to managing 
 §spec-135^dtr-client:All DTR applications **SHALL** support rendering according to the `mustSupport` elements in the DTR Questionnaire profile as well as executing all CQL found within Questionnaire extensions.§ §spec-136^dtr-client:CQL and FHIR Questionnaires **SHALL** be required even when DTR is implemented within a DTR Native App as opposed to a DTR SMART App.§
 
 #### Separating user provided information from CQL retrieved information
-§spec-137^dtr-client:When a user fills in a value or changes an answer in a QuestionnaireResponse, the DTR client **SHALL** populate the [`information-origin`](StructureDefinition-information-origin.html) extension, setting the `author` property to the current user, and setting `source` to 'override' if the source was already 'override', 'auto-client', 'auto-server', or 'manual' otherwise.§ §spec-138^dtr-client:DTR clients **SHALL** either provide a PractitionerRole in the SMART App launch of DTR or support transmitting the role by means of the [`activeRole`](StructureDefinition-activeRole.html) extension within the Practitioner resource.§
+§spec-137?^dtr-client:When a user fills in a value or changes an answer in a QuestionnaireResponse, the DTR client **SHALL** populate the [`information-origin`](StructureDefinition-information-origin.html) extension, setting the `author` property to the current user, and setting `source` to 'override' if the source was already 'override', 'auto-client', 'auto-server', or 'manual' otherwise.§ §spec-138^dtr-client:DTR clients **SHALL** either provide a PractitionerRole in the SMART App launch of DTR or support transmitting the role by means of the [`activeRole`](StructureDefinition-activeRole.html) extension within the Practitioner resource.§
 
 #### QuestionnaireResponse Contained Resources 
 This guide contains certain expectations around the use of ['contained'](https://hl7.org/fhir/R4/references.html#contained) resources with a QuestionnaireResponse:
@@ -677,7 +677,7 @@ If a questionnaire or question is marked as [`questionnaire-signatureRequired`](
 ### Storing QuestionnaireResponses
 The DTR process creates a QuestionnaireResponse resource through the course of normal operation.  §spec-151^dtr-client:At any point prior to completion a DTR client **SHALL** be able to save the `in-progress` QuestionnaireResponse, both to ensure that work-in-progress is not lost, and to allow the user to close the session and then relaunch it later.§  §spec-152?^dtr-client:When the QuestionnaireResponse has been marked as `completed`, the DTR client **SHALL** save the QuestionnaireResponse to the EHR.§
 
-§spec-153^dtr-client:A DTR SMART App **SHALL** 'create' the record if it had not previously been stored, or 'update' if the record had already been saved at least once via the FHIR API.§
+§spec-153?^dtr-client:A DTR SMART App **SHALL** 'create' the record if it had not previously been stored, or 'update' if the record had already been saved at least once via the FHIR API.§
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
 
