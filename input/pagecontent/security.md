@@ -23,7 +23,7 @@ Any DTR SMART on FHIR application will have access to the scope of data authoriz
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> 
-When Questionnaires provide external links through XHTML or <code>supportLink</code>, there may need to be up-front negotiation to add such links to the 'safe'.
+When Questionnaires provide external links through XHTML or <code>supportLink</code>, there may need to be up-front negotiation to add such links to be 'safe'.
       </td></tr>
   </table>
 </div><br>
