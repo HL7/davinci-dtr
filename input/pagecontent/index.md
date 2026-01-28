@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="formatting.css" />
 
-<blockquote class="note-to-balloters">
+<blockquote class="stu-note">
   <p>
   The Da Vinci Burden Reduction team is considering updating this specification to reference the newest version of Structured Data Capture (SDC), which has made a number of clarifications to the handling of Clinical Quality Language (CQL) and expectations around population that we think will help with interoperability.  We are asking for the opinion of balloters on the value of making that change.
   </p>  
@@ -8,12 +8,10 @@
   <p>
   <b>IMPORTANT:</b> The scope of this ballot is limited to the new changes incorporated (see <a href="changehistory.html">Change Log</a>) and to feedback open issues identified in this guide (see <a href="issues.html">Open Issues</a>). While feedback can always be submitted against any content in the specification at any time, votes submitted against content that is outside the official scope of the ballot may be deemed 'not related' and therefore not able to support negative votes.
   </p>
-</blockquote>
 
-<blockquote class="stu-note">
-<p>
-This specification is currently published as a Standard for Trial Use (STU).  Feedback is welcome and may be submitted through the <a href="https://jira.hl7.org/secure/CreateIssueDetails!init.jspa?pid=10405&issuetype=10600&customfield_11302=FHIR-us-davinci-dtr">FHIR change tracker</a> for this specification.  Individuals interested in participating in Documentation Templates and Rules, or other HL7 Da Vinci projects, can find information about Da Vinci <a href="http://www.hl7.org/about/davinci">here</a>.
-</p>
+  <p>
+  This specification is currently published as a Standard for Trial Use (STU).  Feedback is welcome and may be submitted through the <a href="https://jira.hl7.org/secure/CreateIssueDetails!init.jspa?pid=10405&issuetype=10600&customfield_11302=FHIR-us-davinci-dtr">FHIR change tracker</a> for this specification.  Individuals interested in participating in Documentation Templates and Rules, or other HL7 Da Vinci projects, can find information about Da Vinci <a href="http://www.hl7.org/about/davinci">here</a>.
+  </p>
 </blockquote>
 
 ### Introduction
