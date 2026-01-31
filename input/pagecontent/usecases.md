@@ -12,7 +12,7 @@ The graphic below shows a high-level overview of CRD and DTR (DTR is the SMART o
   </table>
 </div><br>
   
-As an example, a clinician might order, “Home Oxygen Therapy”:
+As an example, a clinician might order “Home Oxygen Therapy”:
 
 <!-- ![CRD DTR Flow](CRD_DTR_Flow.png){:style="float: none;width:849px;height:307px"} -->
 [![CRD DTR Flow](CRD_DTR_Flow.png){:style="float: none; width:764px;height:276px; margin-left:35px; display: block;"}](CRD_DTR_Flow.png "View Image Larger")
