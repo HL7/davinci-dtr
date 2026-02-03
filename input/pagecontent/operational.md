@@ -10,15 +10,14 @@ Some of the implementation expectations related to DTR are not conformance expec
 #### Guidelines for timing:
 1.	Auto: questions that will normally be completed by pre-population via 21st Century FHIR APIs required by current EHR certification or equivalent EHR capability and (average review time of 5 seconds each)
 2.	Yes/No: yes/no question (average answer time of 5 seconds each)
-3.	Picklist: questions  that will normally not be pre-populated, SHOULD be answered 90% of the time from a predefined picklist supported by typeahead for long lists and allows for occasional text entries (average answer time of 5 seconds each)
+3.	§opcn-1^dtr-client^ui:Picklist: questions  that will normally not be pre-populated, **SHOULD** be answered 90% of the time from a predefined picklist supported by typeahead for long lists and allows for occasional text entries (average answer time of 5 seconds each)§
 4.	Text: questions that require textual answers
     * Simple condition (“Asthma”): ~3–5 seconds
     * Multiple or complex conditions (“Type 2 diabetes with neuropathy”): ~15–25 seconds
     * Multiple lines (8-15 seconds per lime)
 5.	Att: Attestation could Yes/No, Picklist, Text
-6.	SHOULD be clinical questions but may include administrative questions if necessary to select appropriate clinical questions.
-7.	May have additional questions as long as they are clearly indicated as administrative and the option to suspend after the above questions are completed
-
+6.	§opcn-2^dtr-client^ui:**SHOULD** be clinical questions but might include administrative questions if necessary to select appropriate clinical questions.§
+7.	Might have additional questions as long as they are clearly indicated as administrative and the option to suspend after the above questions are completed
 
 ### Additional Considerations
 * The 'SHOULD' conformance requirements [spec-12](specification.html#spec-12) and [spec-33](specification.html#spec-33) are likely to become a 'SHALL' in a future release of this specification.

@@ -74,7 +74,7 @@ Further details about the project, including minutes of meetings can be found on
 </ul>
 </div>
 
-This Implementation Guide was developed under the auspices of the Clinical Decision Support work group.
+This IG was developed under the auspices of the Clinical Decision Support work group.
 
 ----
 If you are interested in participating in the DTR project and Da Vinci: information about our calls, minutes of past discussions, and other information can be found on our [HL7 Da Vinci Confluence page]( https://confluence.hl7.org/display/DVP/Da+Vinci+Use+Cases).

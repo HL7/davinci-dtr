@@ -95,7 +95,7 @@ The Questionnaire resource is used to represent the information needs that provi
 
 The base Questionnaire resource defines some of these capabilities.  However, to allow specifying all the expectations needed to meet payer requirements for data collection forms, additional extensions are necessary.  DTR leverages the extended Questionnaire capabilities defined in the [Structured Data Capture (SDC) implementation guide](http://hl7.org/fhir/uv/sdc/STU3/) to define the complete set of functionality necessary to support data capture for payer purposes.  
 
-§spec-12^dtr-server^exchange:DTR services **SHOULD** have DTR questionnaires available for all covered items that require additional data collection to support prior auth submission, claim submission, or appropriate use documentation.§ (Future versions of this guide will likely tighten this expectation to a 'SHALL')<a id="spec-12" href="operational.html#additional-considerations">
+§spec-12^dtr-server^exchange:DTR services **SHOULD** have DTR questionnaires available for all covered items that require additional data collection to support prior auth submission, claim submission, or appropriate use documentation. (Future versions of this guide will likely tighten this expectation to a 'SHALL')§<a id="spec-12" href="operational.html#additional-considerations">
 
 §spec-13^dtr-server^exchange:DTR server organizations **MAY** surface their Questionnaires via a registry or some similar mechanism that allows DTR client organizations to pre-examine/pre-process Questionnaires to allow for more optimal handling when those Questionnaires are actually solicited.§  §spec-14^dtr-client^exchange:DTR clients **SHALL NOT** be dependent on such pre-availability in order to perform form completion.§
 
@@ -234,7 +234,7 @@ Adaptive questionnaires pose a slight challenge when it comes to preparing the Q
 
 In some cases, an adaptive form may need to retrieve resources from the EHR in order to determine what subsequent questions to ask or to make a prior authorization decision.  The only way for information to be relayed to the payer is with answers inside a QuestionnaireResponse.  However, QuestionnaireResponse answers can't actually be full resources, only references.  §spec-32?^dtr-client^exchange:Payers needing full resources to be returned **SHOULD** use the [`containedReference`](StructureDefinition-containedReference.html) extension to indicate that the selected resource(s) for an answer of type reference should be included as [contained](https://hl7.org/fhir/R4/references.html#contained) resources within the QuestionnaireResponse.§  This provides a mechanism for full resources to be included as part of the QuestionnaireResponse.
 
-§spec-33?^dtr-client^exchange:Implementers that support Adaptive Questionnaires **SHOULD** always include a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension when the QuestionnaireResponse is deemed complete.§  (Future versions of this guide will likely tighten this expectation to a 'SHALL').<a id="spec-33" href="operational.html#additional-considerations">
+§spec-33?^dtr-client^exchange:Implementers that support Adaptive Questionnaires **SHOULD** always include a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension when the QuestionnaireResponse is deemed complete.  (Future versions of this guide will likely tighten this expectation to a 'SHALL')§<a id="spec-33" href="operational.html#additional-considerations">
 
 §spec-34?^dtr-client^exchange:The package returned by the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation **MAY** include Library and/or ValueSet instances that are not referenced by any of the returned questionnaires if at least one of those questionnaires is adaptive.§  §spec-35?^dtr-client^exchange:In this circumstance these additional resources are being made available, and **SHALL** be retained in the session, on the likelihood that a question in one of those adaptive questionnaires returned by the [`$next-question`](OperationDefinition-DTR-Questionnaire-next-question.html) operation will need (and reference) these resources.§
 
@@ -288,7 +288,7 @@ When `coverage-information` repetitions come back in a QuestionnaireResponse, th
 #### Provider Attestation
 §spec-50^dtr-server^business:In some cases, if there isn't specific data that can be retrieved computably from the EHR, it **MAY** be sufficient for a payer to merely have an attestation by the provider that certain documentation exists, that a certain patient condition exists, or that certain actions have been completed.§ This can be represented in a Questionnaire as a simple boolean or choice question where the text describes what the user is attesting to. §spec-51?^dtr-server^business:Payers **SHOULD** design questionnaires to support attestation rather than discrete data where this is sufficient for the business requirements.§
 
-Some payers **MAY** require that attestations or other answers be 'signed' (the electronic equivalent of 'initialing' the answer). This would be identified by means of the [`questionnaire-signatureRequired`](http://hl7.org/fhir/StructureDefinition/questionnaire-signatureRequired) extension on the Questionnaire item.  
+§spec-161^dtr-server^business:Some payers **MAY** require that attestations or other answers be 'signed' (the electronic equivalent of 'initialing' the answer).§ This would be identified by means of the [`questionnaire-signatureRequired`](http://hl7.org/fhir/StructureDefinition/questionnaire-signatureRequired) extension on the Questionnaire item.  
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
@@ -328,7 +328,7 @@ DTR uses the [SDC Expression-based Population mechanism](http://hl7.org/fhir/uv/
 §spec-65?^dtr-client^processing:All items that are pre-populated (whether by the payer in the initial QuestionnaireResponse provided in the questionnaire package, or from data retrieved from the EHR) **SHALL** have their `origin.source` set to 'auto-server' (pre-populated by Payer) or 'auto-client' (pre-populated by EHR) within the required [`information-origin`](StructureDefinition-information-origin.html) extension.§
 
 #### Execution Sequence
-The flow of execution of the CQL will be determined by the associated Questionnaire. The client will proceed through the Questionnaire, and for any question that is associated with the result of a CQL expression, that specific CQL statement will be executed. The DTR client **SHOULD** use result caching so that results queried by CQL (or otherwise retrieved based on CQL) previously remain available after a subsequent call to $next-question.
+The flow of execution of the CQL will be determined by the associated Questionnaire. The client will proceed through the Questionnaire, and for any question that is associated with the result of a CQL expression, that specific CQL statement will be executed. §spec-162?^dtr-client^processing:The DTR client **SHOULD** use result caching so that results queried by CQL (or otherwise retrieved based on CQL) previously remain available after a subsequent call to $next-question.§
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
@@ -416,11 +416,10 @@ The Questionnaire resource provides several mechanisms for conveying coded answe
   </tr>
   <tr>
     <td>Pass a value set in the questionnaire package, but the client recipient will need to run the expansion or ask a terminology server to do the expansion.</td>
-    <td>The value set expansion is on the larger size (> ~40 codes), such that using the <a href="OperationDefinition-DTR-ValueSet-expand.html"><code>$expand</code></a> operation with a filter will be more efficient from a user interface perspective. These value sets <b>SHOULD</b> be expanded by the client and therefore <b>SHOULD NOT</b> be included in the questionnaire package.  DTR clients running as SMART on FHIR apps will typically need to hold the complete content of the questionnaire package in memory. Payers <b>SHOULD</b> design their questionnaires, value sets, and libraries with the knowledge that content which is too large may cause DTR clients to fail.</td>    
+    <td>The value set expansion is on the larger size (> ~40 codes), such that using the <a href="OperationDefinition-DTR-ValueSet-expand.html"><code>$expand</code></a> operation with a filter will be more efficient from a user interface perspective. §spec-163^dtr-client^exchange:These value sets <b>SHOULD</b> be expanded by the client and therefore <b>SHOULD NOT</b> be included in the questionnaire package.§  DTR clients running as SMART on FHIR apps will typically need to hold the complete content of the questionnaire package in memory. §spec-164^dtr-server^exchange:Payers <b>SHOULD</b> design their questionnaires, value sets, and libraries with the knowledge that content which is too large may cause DTR clients to fail.§</td>    
   </tr>
 </table>
   
-
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
@@ -476,7 +475,7 @@ DTR imposes the following additional rules on CQL use by payers to maximize inte
 * §spec-95^dtr-server^exchange:Within [Libraries](http://hl7.org/fhir/R4/library.html), both raw CQL and compiled ELM (in JSON syntax – i.e., application/elm+json) **SHALL** be provided as separate content repetitions within the library.§  §spec-96^dtr-server^exchange:Within Expression elements, the base expression CQL **SHALL** be accompanied by an [Alternative Expression Extension](StructureDefinition-alternativeExpression.html) containing the compiled JSON ELM for the expression.§
 * §spec-97?^dtr-server^exchange:If the Questionnaire depends on multiple [Libraries](http://hl7.org/fhir/R4/library.html) (has multiple [`cqf-library`](https://hl7.org/fhir/extensions/StructureDefinition-cqf-library.html) elements), then any [`valueExpression`](https://hl7.org/fhir/extensions/StructureDefinition-variable.html) referring to defined variables **SHALL** specify the library name as well as the statement name as follows: "LibraryName".statementName.§
 * §spec-98^dtr-server^exchange:Library names **SHALL** be unique within a Questionnaire package and **SHOULD** be unique across all Libraries made available by the payer (e.g., "expression": \"LowerLimbProsthesis\".PhysicalExaminationType" where LowerLimbProsthesis is the library name and PhysicalExaminationType is the expression name).§
-* §spec-99^dtr-serve^exchanger:FHIR [Libraries](http://hl7.org/fhir/R4/library.html) **SHALL** send CQL and ELM using the `content.data` element.§
+* §spec-99^dtr-server^exchange:FHIR [Libraries](http://hl7.org/fhir/R4/library.html) **SHALL** send CQL and ELM using the `content.data` element.§
 * §spec-100^dtr-server^exchange:CQL tools **SHOULD** support additional FHIRPath variables and functions that are defined within SDC.§
 
 [![ToTop](PageTop.png){:style="float: none;"}](specification.html "Back to top of page")
@@ -655,7 +654,7 @@ Two different profiles are used to support two different approaches to managing 
 #### QuestionnaireResponse Contained Resources 
 This guide contains certain expectations around the use of ['contained'](https://hl7.org/fhir/R4/references.html#contained) resources with a QuestionnaireResponse:
 * §spec-139^dtr-server^exchange:All references within the QuestionnaireResponse **SHALL** only point to either contained resources or to resources that reside on the DTR client's FHIR endpoint.§  (It is not acceptable to point to resources on the payer's endpoint or anywhere else).
-* §spec-140^dtr-server^exchange:The only situation where a resource can be ['contained'](https://hl7.org/fhir/R4/references.html#contained) **SHALL** be if the contained instance is provided by the payer either:
+* §spec-140^dtr-server^exchange:The only situation where a resource can be ['contained'](https://hl7.org/fhir/R4/references.html#contained) **SHALL** be if the contained instance is provided by the payer either:§
   *  In the initial partially pre-populated QuestionnaireResponse that is provided in the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation, or 
   *  In a response to the [`$next-question`](OperationDefinition-DTR-Questionnaire-next-question.html) operation. 
 * §spec-141^dtr-server^exchange:The only place ['contained'](https://hl7.org/fhir/R4/references.html#contained) resource references are permitted **SHALL** be in `item.answer` references.§  (References such as subject or author will never be contained resources).

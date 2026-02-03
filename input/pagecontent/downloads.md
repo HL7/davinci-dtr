@@ -1,5 +1,5 @@
 ### Downloads
-* This full [DTR Implementation Guide](full-ig.zip)
+* This full [DTR Implementation Guide](../full-ig.zip)
 * FHIR R4 DTR Resource Definitions [(JSON)](https://www.hl7.org/fhir/definitions.json.zip) [(XML)](https://www.hl7.org/fhir/definitions.xml.zip) [(TTL)](https://www.hl7.org/fhir/definitions.ttl.zip)
 * FHIR R4 DTR Profile Examples [(JSON)](https://www.hl7.org/fhir/examples.json.zip) [(XML)](https://www.hl7.org/fhir/examples.xml.zip) [(TTL)](https://www.hl7.org/fhir/examples.ttl.zip)
 * FHIR R4 DTR [Validator Pack](https://www.hl7.org/fhir/validator-hl7.fhir.us.davinci-dtr.pack)
