@@ -1,4 +1,14 @@
 == Suppressed Messages ==
+# 00 - These will go away once the next release of the Tools IG is published and we can point to that
+%The value provided ('requirements-category-vs') was not found in the value set 'ig-parameters Codes ValueSet' (http://hl7.org/fhir/tools/ValueSet/ig-parameters|0.9.0)%
+%No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'%
+%The System URI could not be determined for the code 'requirements-category-vs' in the ValueSet 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|0.9.0'%
+%Unknown Parameters: [requirements-category-vs=http://hl7.org/fhir/us/davinci-dtr/ValueSet/cs-categories]%
+
+# 00a - These are issues are caused by the inter-version extensions pack and should be addressed in the next release of that package
+%Slicing cannot be evaluated: Problem with use of resolve() - profile [CanonicalType[http://hl7.org/fhir/5.0/StructureDefinition/extension-Questionnaire.versionAlgorithm%5Bx%5D]] on Questionnaire.extension:versionAlgorithm%
+%If version is present, versionAlgorithm must be present. (version.exists() implies extension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension%
+
 # 01 - Approved by Cross Group Projects WG:9/28/2023 https://confluence.hl7.org/display/CGP/2023-09-28+Cross-Group+Project+Workgroup+Call
 %US FHIR Usage rules require that all profiles on QuestionnaireResponse derive from the core US profile%
 
@@ -27,6 +37,7 @@
 
 # 09 - Deprecated elements 
 %is deprecated with the note:%
+%Reference to deprecated ValueSet%
   
 # 10 - This is for an example of a Parameters resource containing a DTR Bundle. It should not have it's own narrative.
 %Constraint failed: dom-6: 'A resource should have narrative for robust management%
@@ -53,3 +64,12 @@ INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-dtr
 # 16 - Publisher error (Lloyd suggested suppressing this one)
 %No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'%
 %The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide%
+
+# 17 - Flagging conformance verbs that are not used as conformance language in the IG
+%Change SHOULD to SHALL%
+%The 'SHOULD' conformance requirements spec-12 and spec-33%
+%This implementation guide uses specific terminology such as SHALL, SHOULD, MAY to flag statements%
+%may become a requirement ('SHALL') in future versions of these IGs%
+
+# 18 - These are R5 resources, so we have to (and do) point to the R5 version
+%DA VINCI: The How to Read page (background.html) needs to include a reference to the http://hl7.org/fhir/R4/actordefinition.html because this IG uses the actordefinition resource.%
