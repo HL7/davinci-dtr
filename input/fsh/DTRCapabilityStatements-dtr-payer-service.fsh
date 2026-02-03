@@ -22,7 +22,7 @@ Usage: #definition
 * format = #json
 * rest.mode = #server
 * rest.documentation = "A DTR Payer service provides a service endpoint for DTR apps and full EHRs to connect to"
-* rest.security.description = "Implementations **SHALL** meet the general security requirements documented in the [HRex implementation guide](https://build.fhir.org/ig/HL7/davinci-ehrx)."
+* rest.security.description = "§caps-1^dtr-server,dtr-client^exchange:Implementations **SHALL** meet the general security requirements documented in the [HRex implementation guide](https://build.fhir.org/ig/HL7/davinci-ehrx).§"
 
 // Operations
 * rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"

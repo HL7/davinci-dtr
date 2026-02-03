@@ -109,7 +109,8 @@ Description: "Profile used to validate the parameters that are the input of the 
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.rules = #open
 * parameter contains QuestionnaireResponse 1..1
-* parameter[QuestionnaireResponse].name = "questionnaire-response-in" (exactly)
+// * parameter[QuestionnaireResponse].name = "questionnaire-response-in" (exactly)
+* parameter[QuestionnaireResponse].name = "questionnaire-response" (exactly)
 * parameter[QuestionnaireResponse].value[x] ..0
 * parameter[QuestionnaireResponse].resource only dtr-questionnaireresponse-adapt
 * parameter[QuestionnaireResponse].part ..0
@@ -133,7 +134,8 @@ Description: "Profile used to validate the parameters that are the output of the
 * parameter ^slicing.discriminator.path = "name"
 * parameter ^slicing.rules = #open
 * parameter contains QuestionnaireResponse 1..1
-* parameter[QuestionnaireResponse].name = "questionnaire-response-out" (exactly)
+// * parameter[QuestionnaireResponse].name = "questionnaire-response-out" (exactly)
+* parameter[QuestionnaireResponse].name = "return" (exactly)
 * parameter[QuestionnaireResponse].value[x] ..0
 * parameter[QuestionnaireResponse].resource only dtr-questionnaireresponse-adapt
 * parameter[QuestionnaireResponse].part ..0

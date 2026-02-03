@@ -23,7 +23,7 @@ Usage: #definition
 * format = #json
 * rest.mode = #client
 * rest.documentation = "A DTR Native Client provides an EHR-based application"
-* rest.security.description = "Implementations **SHALL** meet the general security requirements documented in the [HRex implementation guide](https://build.fhir.org/ig/HL7/davinci-ehrx)."
+* rest.security.description = "§caps-2^dtr-server,dtr-client^exchange:Implementations **SHALL** meet the general security requirements documented in the [HRex implementation guide](https://build.fhir.org/ig/HL7/davinci-ehrx).§"
 
 // Operations
 * rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
