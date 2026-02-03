@@ -12,64 +12,59 @@
 # 01 - Approved by Cross Group Projects WG:9/28/2023 https://confluence.hl7.org/display/CGP/2023-09-28+Cross-Group+Project+Workgroup+Call
 %US FHIR Usage rules require that all profiles on QuestionnaireResponse derive from the core US profile%
 
-# 02 - Error in IG Publisher:  https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Extension.20generation.20error.20in.20Snapshot.20vs.2E.20Differential 
-%The link 'StructureDefinition-dtr-base-questionnaire-definitions.html#Questionnaire.item.extension:%
-%snapshot: check that the path and definitions are legal in the differential%
-
-# 03 - Received exception for the three code systems internal to the IG: https://confluence.hl7.org/spaces/TSMG/pages/358270071/2025-08-25+TSMG+Agenda+and+Minutes
+# 02 - Received exception for the three code systems internal to the IG: https://confluence.hl7.org/spaces/TSMG/pages/358270071/2025-08-25+TSMG+Agenda+and+Minutes
 %Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now%
 
-# 04 - Dependent on SDC publication
+# 03 - Dependent on SDC publication
 %"SDC implementation guide" cannot be resolved%
 
-# 05 - These are the correct pinned versions
+# 04 - These are the correct pinned versions
 %Pinned the version of http:%
 %[IG Parameter `pin-canonicals`](https://hl7.org/fhir/tools/CodeSystem-ig-parameters.html)%
 
-# 06 - Issue inherited from the base resource
+# 05 - Issue inherited from the base resource
 %A definition could not be found for Canonical URL 'http://www.rfc-editor.org/bcp/bcp13.txt'%
 
-# 07 - Due to regulatory guidelines US Core 7.0.0 is the latest supported
+# 06 - Due to regulatory guidelines US Core 7.0.0 is the latest supported
 %The ImplementationGuide uses package hl7.fhir.us.core#7.0.0 released on 2024-05-08%
   
-# 08 - See Grahame's statement regarding this issue: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/questionnaire-derivationType.20warning.20question
+# 07 - See Grahame's statement regarding this issue: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/questionnaire-derivationType.20warning.20question
 %has no derivation type specified using the%
 
-# 09 - Deprecated elements 
+# 08 - Deprecated elements 
 %is deprecated with the note:%
 %Reference to deprecated ValueSet%
   
-# 10 - This is for an example of a Parameters resource containing a DTR Bundle. It should not have it's own narrative.
+# 09 - This is for an example of a Parameters resource containing a DTR Bundle. It should not have it's own narrative.
 %Constraint failed: dom-6: 'A resource should have narrative for robust management%
   
-# 11 - See Grahame's statement regarding this issue: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/deprecated.20pattern.20slicing/near/482196925
+# 10 - See Grahame's statement regarding this issue: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/deprecated.20pattern.20slicing/near/482196925
 %For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 
-# 12 - This link is intended to be version-independent
+# 11 - This link is intended to be version-independent
 % The link 'http://hl7.org/fhir/us/davinci-dtr' for "Documentation Templates and Rules (DTR)" is a canonical link and is therefore unsafe with regard to versions
    
-# 13 - Not necessary for the examples
+# 12 - Not necessary for the examples
 %could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
   
-# 14 - An example does exist within the IG as a contained resource in the QuestionnaireResponse for Adaptive
+# 13 - An example does exist within the IG as a contained resource in the QuestionnaireResponse for Adaptive
 INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-questionnaire-adapt'): The Implementation Guide contains no explicitly linked examples for this profile
 
-# 15 - These versions are before we started detailed tracking of changes and there's little value in going back to document them now
+# 14 - These versions are before we started detailed tracking of changes and there's little value in going back to document them now
 %DA VINCI: The Change Log page (changehistory.html) does not include an h3 section for the version 1.1.0-ballot
 %DA VINCI: The Change Log page (changehistory.html) does not include an h3 section for the version 1.0.0
 %DA VINCI: The Change Log page (changehistory.html) does not include an h3 section for the version 0.2.0
 %DA VINCI: The Change Log page (changehistory.html) does not include an h3 section for the version 0.1.0
 %DA VINCI: The Change Log page (changehistory.html) does not include an h3 section for the version 1.1.0
 
-# 16 - Publisher error (Lloyd suggested suppressing this one)
-%No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'%
+# 15 - Publisher error (Lloyd suggested suppressing this one)
 %The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide%
 
-# 17 - Flagging conformance verbs that are not used as conformance language in the IG
+# 16 - Flagging conformance verbs that are not used as conformance language in the IG
 %Change SHOULD to SHALL%
 %The 'SHOULD' conformance requirements spec-12 and spec-33%
 %This implementation guide uses specific terminology such as SHALL, SHOULD, MAY to flag statements%
 %may become a requirement ('SHALL') in future versions of these IGs%
 
-# 18 - These are R5 resources, so we have to (and do) point to the R5 version
+# 17 - These are R5 resources, so we have to (and do) point to the R5 version
 %DA VINCI: The How to Read page (background.html) needs to include a reference to the http://hl7.org/fhir/R4/actordefinition.html because this IG uses the actordefinition resource.%
