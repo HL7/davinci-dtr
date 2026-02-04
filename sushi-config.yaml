@@ -76,6 +76,10 @@ dependencies:
   hl7.fhir.us.davinci-pas:
     id: pas
     version: 2.1.0
+  hl7.fhir.uv.tools:
+    id: tools
+    version: 1.0.0
+    uri: http://hl7.org/fhir/tools/ImplementationGuide/hl7.fhir.uv.tools
 
 pages:
   index.md:
