@@ -1,9 +1,7 @@
 == Suppressed Messages ==
 # 00 - These will go away once the next release of the Tools IG is published and we can point to that
-%The value provided ('requirements-category-vs') was not found in the value set 'ig-parameters Codes ValueSet' (http://hl7.org/fhir/tools/ValueSet/ig-parameters|0.9.0)%
-%No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'%
-%The System URI could not be determined for the code 'requirements-category-vs' in the ValueSet 'http://hl7.org/fhir/tools/ValueSet/ig-parameters|0.9.0'%
 %Unknown Parameters: [requirements-category-vs=http://hl7.org/fhir/us/davinci-dtr/ValueSet/cs-categories]%
+%No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'%
 
 # 00a - These are issues are caused by the inter-version extensions pack and should be addressed in the next release of that package
 %Slicing cannot be evaluated: Problem with use of resolve() - profile [CanonicalType[http://hl7.org/fhir/5.0/StructureDefinition/extension-Questionnaire.versionAlgorithm%5Bx%5D]] on Questionnaire.extension:versionAlgorithm%
