@@ -173,16 +173,9 @@
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browseFHIR-49885">FHIR-49885</a> (Non-Substantive):<br>
+  <a href="https://jira.hl7.org/browse/FHIR-49885">FHIR-49885</a> (Non-Substantive):<br>
   Referenced Parameter is missing
   </li>
-
-<!-- 
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR">FHIR</a> (Non-Substantive):<br>
-  fffff
-  </li>
-   -->
 </ul>
 <br/>
 
