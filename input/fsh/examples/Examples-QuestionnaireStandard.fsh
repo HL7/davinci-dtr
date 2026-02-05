@@ -17,7 +17,7 @@ Description: "An example [Standard questionnaire](StructureDefinition-dtr-std-qu
 * extension[request-specific].valueBoolean = false
 * extension[rendering-styleSensitive].valueBoolean = false
 * extension[sdc-questionnaire-entryMode].valueCode = #sequential
-* extension[cqf-library].valueCanonical = "http://example.org/fhir/Library/quick"
+// * extension[cqf-library].valueCanonical = "http://example.org/fhir/Library/quick"
 
 // * extension[estimatedCompletionTime].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/estimated-completion-time"
 // * extension[estimatedCompletionTime].extension[clinicalTime].url = "clinicalTime"
