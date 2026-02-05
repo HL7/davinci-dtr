@@ -19,11 +19,11 @@ Description: "An example [Standard questionnaire](StructureDefinition-dtr-std-qu
 * extension[sdc-questionnaire-entryMode].valueCode = #sequential
 // * extension[cqf-library].valueCanonical = "http://example.org/fhir/Library/quick"
 
-// * extension[estimatedCompletionTime].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/estimated-completion-time"
-// * extension[estimatedCompletionTime].extension[clinicalTime].url = "clinicalTime"
-// * extension[estimatedCompletionTime].extension[clinicalTime].valueCode = #under-3min
-// * extension[estimatedCompletionTime].extension[totalTime].url = "totalTime"
-// * extension[estimatedCompletionTime].extension[totalTime].valueCode = #over-5min
+* extension[estimatedCompletionTime].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/estimated-completion-time"
+* extension[estimatedCompletionTime].extension[clinicalTime].url = "clinicalTime"
+* extension[estimatedCompletionTime].extension[clinicalTime].valueCode = #under-3min
+* extension[estimatedCompletionTime].extension[totalTime].url = "totalTime"
+* extension[estimatedCompletionTime].extension[totalTime].valueCode = #over-5min
 
 * item[+].linkId = "1"
 * item[=].text = "Patient Information"
