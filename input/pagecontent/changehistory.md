@@ -1,4 +1,4 @@
-### Release 2.2.0
+### Release 2.2.0-snapshot
 <p><b>The following issues are addressed resulting from this ballot:</b></p>
 
 <p><b>Substantive and breaking changes:</b></p>

@@ -1,11 +1,11 @@
 {
   "package-id" : "hl7.fhir.us.davinci-dtr",
-  "version" : "2.2.0-ballot",
+  "version" : "2.2.0-snapshot",
   "milestone" : true,
-        "path": "http://hl7.org/fhir/us/davinci-dtr/2025Sep",
-  "status" : "ballot",
+        "path": "http://hl7.org/fhir/us/davinci-dtr/2.2.0-snapshot",
+  "status" : "preview",
   "mode" : "working",
   "sequence" : "STU 2.2",
-  "desc" : "STU 2.2.0 Ballot Release",
-  "descmd" : "STU 2.2.0 ballot."
+  "desc" : "STU 2.2.0 post-ballot Peer Review",
+  "descmd" : "STU 2.2.0 post-ballot Peer Review snapshot.  See [list of changes](http://hl7.org/fhir/us/davinci-dtr/STU2.2.0-snapshot/changehistory.html#release-220-snapshot)"
 }
