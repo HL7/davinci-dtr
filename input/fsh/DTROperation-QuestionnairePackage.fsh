@@ -57,7 +57,6 @@ If a payer is in a situation where they have historically had 'conditional' form
 2.  Make use of standard forms and combine forms A, B, C, and D into a single monolithic form that makes use of enableWhen logic to determine when the questions from the B, C, and/or D form sections are available/required to be completed.  Note that it's possible for the CRD server to continue to maintain the separate individual forms and use a light-weight 'parent' form and SDC assembly or a similar mechanism to combine them all into a single Questionnaire before including it in the `$questionnaire-package` response."
 
 * code = #questionnaire-package
-* base = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package"
 * resource = #Questionnaire
 * system = false
 * type = true

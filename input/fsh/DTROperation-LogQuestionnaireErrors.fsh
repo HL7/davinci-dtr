@@ -15,7 +15,6 @@ Usage: #definition
 
 §oper-2^dtr-client^exchange:The input OperationOutcome resource **SHOULD** include information on the DTR application identity and version, date-time with time-zone offset, as well as the provider endpoint during which the error occurred, and it **SHALL NOT** contain information about the response or information retrieved from FHIR APIs that could potentially include PHI.§  §oper-3^dtr-client^exchange:The Questionnaire reference **SHOULD** be version-specific.§"
 * code = #log-questionnaire-errors
-* base = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/log-questionnaire-errors"
 
 * resource = #Questionnaire
 * system = false
