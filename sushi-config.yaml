@@ -9,7 +9,7 @@ extension:
 canonical: http://hl7.org/fhir/us/davinci-dtr
 name: DocumentationTemplatesRules
 title: "Da Vinci - Documentation Templates and Rules"
-description: "The Documentation Templates and Rules (DTR) Implementation Guide (IG) specifies how payer rules can be executed in a provider context to ensure that documentation requirements are met. The IG is a companion to the Coverage Requirements Discovery (CRD) IG, which uses CDS Hooks to query payers to determine if there are documentation requirements for a proposed medication, procedure or other service. DTR is also a dependency for the Prior Authorization Support (PAS) IG."
+description: "The Documentation Templates and Rules (DTR) Implementation Guide (IG) specifies how payer rules can be executed in a provider context to ensure that documentation requirements are met. The IG is a companion to the Coverage Requirements Discovery (CRD) IG, which uses CDS Hooks to query payers to determine if there are documentation requirements for a proposed medication, procedure or other service."
 status: active
 license: CC0-1.0
 version: 2.2.0-snapshot
@@ -66,6 +66,7 @@ dependencies:
   hl7.fhir.uv.extensions.r4:
     id: r5ext
     version: 5.3.0-ballot-tc1
+    uri: http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions
     reason: |
       Makes available certain R5 elements for use as part of this R4 IG
   hl7.fhir.us.davinci-crd:
@@ -76,7 +77,7 @@ dependencies:
   hl7.fhir.us.davinci-pas:
     id: pas
     version: 2.1.0
-  hl7.fhir.uv.tools:
+  hl7.fhir.uv.tools.r4:
     id: tools
     version: 1.0.0
     uri: http://hl7.org/fhir/tools/ImplementationGuide/hl7.fhir.uv.tools
