@@ -32,7 +32,7 @@ Expression: "(type='reference') implies extension.where(url='http://hl7.org/fhir
 Invariant:  dtrq-6
 Description: "If audience is 'clinical' or 'patient' then estimatedCompletionTime must contain clinicalTime."
 Severity:   #error
-Expression: "extension.exists(url = 'http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/questionnaireAudience' and (value = 'clinical' or value = 'patient')) and extension.exists(url = 'http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/estimated-completion-time') implies extension.where(url = 'http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/estimated-completion-time').extension(url = 'clinicalTime').exists()"
+Expression: "extension.exists(url = 'http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/questionnaireAudience' and (value = 'clinical' or value = 'patient')) and extension.exists(url = 'http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/estimated-completion-time') implies extension.where(url = 'http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/estimated-completion-time').extension.where(url = 'clinicalTime').exists()"
 
 /*****************************************************************************************************/
 Invariant:  dtr-1
