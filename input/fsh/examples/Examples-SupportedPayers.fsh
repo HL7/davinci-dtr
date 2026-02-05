@@ -1,5 +1,5 @@
 // =========================================================================================
-Instance: DTRSupportedPayers
+Instance: SupportedPayers
 InstanceOf: dtr-supported-Payers
 Description: "An instance of Supported Payers list used in the example resources."
 Usage: #example
