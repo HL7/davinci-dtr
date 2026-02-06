@@ -6,6 +6,7 @@
 # 00a - These are issues are caused by the inter-version extensions pack and should be addressed in the next release of that package
 %Slicing cannot be evaluated: Problem with use of resolve() - profile [CanonicalType[http://hl7.org/fhir/5.0/StructureDefinition/extension-Questionnaire.versionAlgorithm%5Bx%5D]] on Questionnaire.extension:versionAlgorithm%
 %If version is present, versionAlgorithm must be present. (version.exists() implies extension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension%
+%The ImplementationGuide uses package hl7.fhir.uv.extensions.r4#5.3.0-ballot-tc1 released on 2025-08-03, but the most recent appropriate version%
 
 # 01 - Approved by Cross Group Projects WG:9/28/2023 https://confluence.hl7.org/display/CGP/2023-09-28+Cross-Group+Project+Workgroup+Call
 %US FHIR Usage rules require that all profiles on QuestionnaireResponse derive from the core US profile%
