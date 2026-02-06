@@ -10,7 +10,7 @@ Usage: #definition
 * title = "Get Questionnaire Packge for given order(s)"
 * status = #active
 * kind = #operation
-* description = "This operation returns one or more 'collection' Bundles each consisting of a single Questionnaire resource, one or more QuestionnaireResponse resources, as well as any dependency Library and ValueSet instances needed to allow a renderer to fully render and otherwise process the Questionnaire.
+* description = "This operation returns one or more 'collection' Bundles each consisting of a single Questionnaire resource, a single QuestionnaireResponse resource, and any dependency Library and ValueSet instances needed to allow a renderer to fully render and otherwise process the Questionnaire.
 
 §oper-6^dtr-client^exchange:The operation **SHALL** take as input the Coverage resource(s) identifying the member and the type(s) of Coverage for which additional information is needed and at least one of:§   
 * Zero or more canonicals specifying the URL and, (optionally) the version of the Questionnaire(s) to retrieve;
@@ -33,7 +33,7 @@ Each Questionnaire will be packaged into a distinct Bundle. §oper-10?^dtr-serve
 
 If any of the dependencies cannot be retrieved or value sets expanded, a warning will be included in the [`Outcome`](StructureDefinition-dtr-qpackage-output-parameters.html). Each Library and ValueSet will only appear once in the Bundle, even if it is referenced multiple places.  The only exception is if more than one version of a Library or ValueSet are referenced.  Multiple versions of a ValueSet will be returned.  §oper-17^dtr-server^exchange:Multiple versions of a Library **MAY** be treated as an error, or **MAY** be handled by returning the 'most recent' version of the referenced versions.§
 
-§oper-18^dtr-server^exchange:As well, the Questionnaire Bundle **SHALL** contain one or more initial draft QuestionnaireResponses that reference the Questionnaire for that Bundle and populate the subject as well as repetitions of the Context extension that identify the Coverage(s) and Request or Encounter resources the Questionnaire is to be completed for.§ The same QuestionnaireResponse might be associated with multiple Request resources or may need to be filled out separately for different Requests.
+§oper-18^dtr-server^exchange:As well, the Questionnaire Bundle **SHALL** contain one initial draft `QuestionnaireResponse` that references the `Questionnaire` for that Bundle and populate the subject as well as repetitions of the Context extension that identify the Coverage(s) and Request or Encounter resources the `Questionnaire` is to be completed for.§ The same `QuestionnaireResponse` might be associated with multiple Request resources or may need to be filled out separately for different Requests.
 
 §oper-19^dtr-server^exchange:The payer **MAY** opt to pre-populate some answers in the provided QuestionnaireResponses based on information the payer has in its own records or has from context from CRD or from other prior auth or claims submissions.§
 
@@ -42,7 +42,7 @@ Payers must be cautious about prepopulating Questionnaires with sensitive inform
 §oper-20?^dtr-client^exchange:When resuming a work in progress questionnaire response the DTR client **SHALL** invoke the operation with the timestamp to see if the questionnaire package has changed since it was last retrieved, presuming that the `QuestionnaireResponse.meta.lastUpdated` element corresponds to the last package retrieval time.§
 
 ### Notes
-* For adaptive questionnaires, there will be no question items to reference any ValueSets and no expressions to reference any Libraries.  However, the payer may still opt to include Libraries or ValueSets in the initial Bundle to avoid the overhead of needing to send contained content with each [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) invocation.  Alternatively, any needed Libraries and ValueSets may manifest as ‘contained’ resources within the QuestionnaireResponse returned by [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) based on which questions have been selected. (see [Adaptive Form Considerations](https://build.fhir.org/ig/HL7/davinci-dtr/specification.html#adaptive-form-considerations))
+* For adaptive questionnaires, there will be no question items to reference any ValueSets and no expressions to reference any Libraries.  However, the payer may still opt to include Libraries or ValueSets in the initial Bundle to avoid the overhead of needing to send contained content with each [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) invocation.  Alternatively, any needed Libraries and ValueSets may manifest as 'contained' resources within the QuestionnaireResponse returned by [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) based on which questions have been selected. (see [Adaptive Form Considerations](https://build.fhir.org/ig/HL7/davinci-dtr/specification.html#adaptive-form-considerations))
 
 * The `outcome` parameter is only present if the operation completes successfully with a 200 HTTP response code.  In the event of an error, no Parameters response will be returned at all, though a bare `OperationOutcome` might be returned.
 
@@ -127,7 +127,7 @@ If a payer is in a situation where they have historically had 'conditional' form
 * parameter[=].use = #out
 * parameter[=].min = 0
 * parameter[=].max = "*"
-* parameter[=].documentation = "A Bundle with a single Questionnaire, and 0..* Libraries containing needed CQL and/or ValueSets containing needed codes."
+* parameter[=].documentation = "A Bundle with a single `Questionnaire`, a single `QuestionnaireResponse`, and 0..* Libraries containing needed CQL and/or ValueSets containing needed codes."
 * parameter[=].type = #Bundle
 
 * parameter[+].name = #outcome
