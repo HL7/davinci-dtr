@@ -29,6 +29,7 @@ Further details about the project, including minutes of meetings can be found on
     <li>Crystal Kallem (Point of Care Partners)</li>
     <li>Vanessa Candelora (Point of Care Partners)</li>
     <li>Jocelyn Keegan (Point of Care Partners)</li>
+    <li>Casey Thompson (Point of Care Partners)</li>
     <li>Dana Marcelonis (Point of Care Partners)</li>
 </ul>
 <br/>
@@ -49,7 +50,6 @@ Further details about the project, including minutes of meetings can be found on
 <b>Special Thanks...</b>
 <br>To the numerous Da Vinci members and community who have participated on conference calls, provided reviews and feedback, supported sample data gathering, reference implementation development, and testing including, but not limited to:
 <ul>
-    <li>Larry Decelles, Andy Gregorowicz, Cole Springate-Combs, Pat LaRocque, Keeyan Ghoreshi, Yolanda Liu, Robi Scalfani (The MITRE Corporation) </li>
     <li>Kyle Johnsen, Spencer Utley, Fred Switzer, and Matt Varghese (Epic)</li>
     <li>Sreekanth Puram (Mettle Solutions)</li>
     <li>Celine Lefebvre, Heather McComas, Denis Casaubon (AMA)</li>
@@ -59,17 +59,19 @@ Further details about the project, including minutes of meetings can be found on
     <li>Brian Poteet (Edifecs)</li>
     <li>James Bound (Cognizant)</li>
     <li>Jason Vogt, Chris Hardee (Meditech)</li>
-    <li>Hans Buitendijk (Oracle)</li>
-    <li>Richard Abercrombie (Palmetto GBA)</li>
+    <li>Scott Rossignol (eHealthExchange)</li>
     <li>Tom Kakanowski, Brenin Rhodes, David Chisholm (Smile Digital Health)</li>
     <li>Chris Cioffi (Elevance Health)</li>
     <li>Rob Brull, Brian Lind (Infor)</li>
     <li>Balaji Narayanan (Onyx)</li>
     <li>Maxim Gorshkov (InterSystems)</li>
-    <li>Joshua Lamb (Optum)</li>
+    <li>Joshua Lamb, Jeffrey Dandford (Optum)</li>
     <li>Rachel Foerster (CAQH CORE)</li>
     <li>Sreenivas Reddy Mallipeddi (MCG)</li>
     <li>Janice Hsieh, Muhammad Ali, Sudhansu Mishra, Shilpi Jain (AETNA)</li>
+    <li>Hans Buitendijk (Oracle)</li>
+    <li>Richard Abercrombie (Palmetto GBA)</li>
+    <li>Larry Decelles, Andy Gregorowicz, Cole Springate-Combs, Pat LaRocque, Keeyan Ghoreshi, Yolanda Liu, Robi Scalfani (The MITRE Corporation) </li>
     <li>Rick Geimer (Lantana Consulting Group)</li>
 </ul>
 </div>
