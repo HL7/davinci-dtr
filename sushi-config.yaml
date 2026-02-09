@@ -32,6 +32,7 @@ parameters:
   version-comparison: 
    - 2.1.0
   shownav: true
+  term-params-in-artifacts: true
   pin-canonicals: pin-multiples
 
 dependencies:
