@@ -80,7 +80,8 @@ dependencies:
     version: 2.1.0
   hl7.fhir.uv.tools.r4:
     id: tools
-    version: 1.0.0
+    # version: 1.0.0
+    version: current
     uri: http://hl7.org/fhir/tools/ImplementationGuide/hl7.fhir.uv.tools
 
 pages:
