@@ -16,7 +16,7 @@ This IG marks elements with the Must Support flag in its profiles. In addition t
 
 The FHIR specification makes it clear that when profiling another profile, a MustSupport flag can be constrained further (i.e., taken from 'false' to 'true') but cannot be loosened (i.e., changed from 'true' to 'false').   
   
-§conf-2^dtr-client,dtr-server^exchange:Da Vinci DTR implementations **SHALL** conform to the [HRex]({{site.data.fhir.ver.hrex}}/conformance.html#mustsupport) and [US Core]({{site.data.fhir.ver.uscore7}}must-support.html) Guidance where applicable.§
+§conf-2^dtr-client,dtr-server^exchange:Da Vinci DTR implementations **SHALL** conform to the [HRex]({{site.data.fhir.ver.hrex}}/conformance.html#mustsupport) and [US Core]({{site.data.fhir.ver.uscore7}}/must-support.html) Guidance where applicable.§
   
 §conf-3^dtr-client^ui:DTR apps and EHRs that take on DTR app responsibility **SHALL** be able to render Questionnaires and QuestionnaireResponses.§ §conf-4^dtr-client^ui:DTR clients **MAY** adjust which client components expose which Questionnaire items, which Questionnaire items are exposed to which users and how those items are exposed as appropriate for the workflow so long as they retain the ability to render all `mustSupport` elements at least in some places within their client system(s).§  §conf-5?^dtr-client^ui:Specifically, apps and EHRs acting as form fillers **SHALL** be able to display:§
 * `QuestionnaireResponse.questionnaire.questionnaireDisplay`/`Questionnaire.title`
