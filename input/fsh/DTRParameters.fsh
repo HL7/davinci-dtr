@@ -3,7 +3,7 @@ Profile:        DTRQuestionnairePackageInputParameters
 Parent:         Parameters
 Id:             dtr-qpackage-input-parameters
 Title:          "DTR Questionnaire Package Input Parameters"
-Description:    "The Parameters profile used to define the inputs of the [$questionnaire-package](OperationDefinition-questionnaire-package.html) operation.  
+Description:    "The Parameters profile used to define the inputs of the [$questionnaire-package](OperationDefinition-questionnaire-package.html) operation (also see ['Retrieving Questionnaire Packages'](specification.html#retrieving-questionnaire-packages)).  
 If both orders and a context id are present, then the context id can be used to link to additional information retrieved during CRD and to expedite re-processing of which Questionnaires are needed.  §prof-1^dtr-server^exchange:However, the system should check that the passed orders are the same as was processed at CRD time before presuming that the questionnaires needed will be the same and if the orders have changed, or there's a possibility that the rules governing which Questionnaires are needed might have changed, the system **SHOULD** re-check to determine the needed Questionnaires.§  If specific Questionnaires are requested as part of the DTR invocation, such additional checking is not expected."
 * obeys dtr-1
 * ^status = #active
