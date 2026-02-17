@@ -28,13 +28,20 @@ Usage: #definition
 * rest.operation[=].name = "questionnaire-package"
 * rest.operation[=].definition = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package"
 
+//***************************************************************************************************************
 * rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.operation[=].extension.valueCode = #SHALL
 * rest.operation[=].name = "expand"
 * rest.operation[=].definition = "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"
 
+//***************************************************************************************************************
 * rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.operation[=].extension.valueCode = #SHOULD
 * rest.operation[=].name = "next-question"
 * rest.operation[=].definition = "http://hl7.org/fhir/uv/sdc/OperationDefinition/Questionnaire-next-question"
 
+//***************************************************************************************************************
+* rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.operation[=].extension.valueCode = #SHALL
+* rest.operation[=].name = "log-questionnaire-errors"
+* rest.operation[=].definition = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/log-questionnaire-errors"
