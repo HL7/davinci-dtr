@@ -64,12 +64,12 @@ For more details regarding this operation, see the FHIR R4 [`$expand`](https://h
 // * parameter[=].documentation = "The date for which the expansion should be generated.  if a date is provided, it means that the server should use the value set / code system definitions as they were on the given date, or return an error if this is not possible.  Normally, the date is the current conditions (which is the default value) but under some circumstances, systems need to generate an expansion as it would have been in the past. A typical example of this would be where code selection is constrained to the set of codes that were available when the patient was treated, not when the record is being edited. Note that which date is appropriate is a matter for implementation policy."
 // * parameter[=].type = #dateTime
 //-------------------------------------------------------------------------------
-* parameter[+].name = #offset
-* parameter[=].use = #in
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].documentation = "Paging support - where to start if a subset is desired (default = 0). Offset is number of records (not number of pages)"
-* parameter[=].type = #integer
+// * parameter[+].name = #offset
+// * parameter[=].use = #in
+// * parameter[=].min = 0
+// * parameter[=].max = "1"
+// * parameter[=].documentation = "Paging support - where to start if a subset is desired (default = 0). Offset is number of records (not number of pages)"
+// * parameter[=].type = #integer
 //-------------------------------------------------------------------------------
 // * parameter[+].name = #count
 // * parameter[=].use = #in
