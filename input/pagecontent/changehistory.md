@@ -1,343 +1,288 @@
 ### Release 2.2.0-snapshot
 <p><b>The following issues are addressed resulting from this ballot:</b></p>
 
-<p><b>Substantive and breaking changes:</b></p>
+<!-- ============================== -->
+<p><b>Breaking changes:</b></p>
 <ul>
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-55401">FHIR-55401</a> (Compatible, substantive):<br>
-  Support for rendering-xhtml links to contained HTML documents
+  <a href="https://jira.hl7.org/browse/FHIR-52804">FHIR-52804</a> - Change SHOULD to SHALL
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-53496">FHIR-53496</a> (Compatible, substantive):<br>
-  Add a 'request-specific' flag on Questionnaire
+  <a href="https://jira.hl7.org/browse/FHIR-52801">FHIR-52801</a> - Change SHOULD to SHALL
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-53050">FHIR-53050</a> (Compatible, substantive):<br>
-  DTR version discovery 
-  </li>
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-53041">FHIR-53041</a> (Compatible, substantive):<br>
-  DTRMetricData providerId and groupId required, but not generally available to payer services
+  <a href="https://jira.hl7.org/browse/FHIR-52791">FHIR-52791</a> - DTR guardrails
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52804">FHIR-52804</a> (Non-Compatible):<br>
-  Change SHOULD to SHALL
+  <a href="https://jira.hl7.org/browse/FHIR-52320">FHIR-52320</a> - Use a List profile instead of a logical model for supported payers 
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52803">FHIR-52803</a> (Compatible, substantive):<br>
-  Change SHOULD to SHALL
+  <a href="https://jira.hl7.org/browse/FHIR-51736">FHIR-51736</a> - DTR should only take a single coverage as input 
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52801">FHIR-52801</a> (Non-Compatible):<br>
-  Change SHOULD to SHALL
+  <a href="https://jira.hl7.org/browse/FHIR-51631">FHIR-51631</a> - Give users an idea of how much time completion will take
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52791">FHIR-52791</a> (Non-Compatible):<br>
-  DTR guardrails
+  <a href="https://jira.hl7.org/browse/FHIR-50789">FHIR-50789</a> - Return all questions with response logic as must support
   </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52455">FHIR-52455</a> (Compatible, substantive):<br>
-  Clarify portals
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52320">FHIR-52320</a> (Non-Compatible):<br>
-  Use a List profile instead of a logical model for supported payers 
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-51736">FHIR-51736</a> (Non-Compatible):<br>
-  DTR should only take a single coverage as input 
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-51631">FHIR-51631</a> (Non-Compatible):<br>
-  Give users an idea of how much time completion will take
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50789">FHIR-50789</a> (Non-Compatible):<br>
-  Return all questions with response logic as must support
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50465">FHIR-50465</a> (Compatible, substantive):<br>
-  Need guidance on supplemental guides
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50033">FHIR-50033</a> (Compatible, substantive):<br>
-  In DTR we should have either Context id or CRD resources in Order but not both
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48879">FHIR-48879</a> (Compatible, substantive):<br>
-  Retrieving Questionnaire Packages (DTR IG 8.11)
-  </li>
-
-<!-- 
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR">FHIR</a> (Compatible, substantive):<br>
-  fffff
-  </li>
-   -->
 </ul>
 
+<!-- ============================== -->
+<p><b>Substantive changes:</b></p>
+<ul>
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-55401">FHIR-55401</a> - Support for rendering-xhtml links to contained HTML documents
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-53496">FHIR-53496</a> - Add a 'request-specific' flag on Questionnaire
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-53050">FHIR-53050</a> - DTR version discovery 
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-53041">FHIR-53041</a> - DTRMetricData providerId and groupId required, but not generally available to payer services
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-52803">FHIR-52803</a> - Change SHOULD to SHALL
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-52455">FHIR-52455</a> - Clarify portals
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-50465">FHIR-50465</a> - Need guidance on supplemental guides
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-50033">FHIR-50033</a> - In DTR we should have either Context id or CRD resources in Order but not both
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48879">FHIR-48879</a> - Retrieving Questionnaire Packages (DTR IG 8.11)
+  </li>
+</ul>
+
+<!-- ============================== -->
 <p><b>Non-Substantive changes:</b></p>
 <ul>
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-53484">FHIR-53484</a> (Non-Substantive):<br>
-  Evaluate conformance testability for DTR client guidance
+  <a href="https://jira.hl7.org/browse/FHIR-53484">FHIR-53484</a> - Evaluate conformance testability for DTR client guidance
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-53225">FHIR-53225</a> (Non-Substantive):<br>
-  Attribute all conformance requirements to distinct actors 
+  <a href="https://jira.hl7.org/browse/FHIR-53225">FHIR-53225</a> - Attribute all conformance requirements to distinct actors 
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52982">FHIR-52982</a> (Non-Substantive):<br>
-  Misleading usage of "shared secret" when describing client/EHR and Payer connectivity
+  <a href="https://jira.hl7.org/browse/FHIR-52982">FHIR-52982</a> - Misleading usage of "shared secret" when describing client/EHR and Payer connectivity
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52796">FHIR-52796</a> (Non-Substantive):<br>
-  Lack of a minimal-compliance path (general documentation) consistent with CMS intent
+  <a href="https://jira.hl7.org/browse/FHIR-52796">FHIR-52796</a> - Lack of a minimal-compliance path (general documentation) consistent with CMS intent
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52802">FHIR-52802</a> (Non-Substantive):<br>
-  rewrite conformance under questionnaire design
+  <a href="https://jira.hl7.org/browse/FHIR-52802">FHIR-52802</a> - rewrite conformance under questionnaire design
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52794">FHIR-52794</a> (Non-Substantive):<br>
-  Intellectual-property (IP) and licensing exposure not adequately addressed
+  <a href="https://jira.hl7.org/browse/FHIR-52794">FHIR-52794</a> - Intellectual-property (IP) and licensing exposure not adequately addressed
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52792">FHIR-52792</a> (Non-Substantive):<br>
-  reference that the guide is required under HT1-4
+  <a href="https://jira.hl7.org/browse/FHIR-52792">FHIR-52792</a> - reference that the guide is required under HT1-4
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52701">FHIR-52701</a> (Non-Substantive):<br>
-  Consider CQL 1.5+
+  <a href="https://jira.hl7.org/browse/FHIR-52701">FHIR-52701</a> - Consider CQL 1.5+
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52700">FHIR-52700</a> (Non-Substantive):<br>
-  Consider referencing CQL resources
+  <a href="https://jira.hl7.org/browse/FHIR-52700">FHIR-52700</a> - Consider referencing CQL resources
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-51869">FHIR-51869</a> (Non-Substantive):<br>
-  Error scenarios
+  <a href="https://jira.hl7.org/browse/FHIR-51869">FHIR-51869</a> - Error scenarios
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-51629">FHIR-51629</a> (Non-Substantive):<br>
-  Set expectations for splitting clinical/patient and non-clinical forms
+  <a href="https://jira.hl7.org/browse/FHIR-51629">FHIR-51629</a> - Set expectations for splitting clinical/patient and non-clinical forms
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-51577">FHIR-51577</a> (Non-Substantive):<br>
-  Optimized data collection by ordering doctor, nurse and/or front/back office staff
+  <a href="https://jira.hl7.org/browse/FHIR-51577">FHIR-51577</a> - Optimized data collection by ordering doctor, nurse and/or front/back office staff
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50790">FHIR-50790</a> (Non-Substantive):<br>
-  Must Support Expectations
+  <a href="https://jira.hl7.org/browse/FHIR-50790">FHIR-50790</a> - Must Support Expectations
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-51100">FHIR-51100</a> (Non-Substantive):<br>
-  Add a warning about legal rights to terminology
+  <a href="https://jira.hl7.org/browse/FHIR-51100">FHIR-51100</a> - Add a warning about legal rights to terminology
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50499">FHIR-50499</a> (Non-Substantive):<br>
-  Need to explain rules for updating coverage-information with DTR
+  <a href="https://jira.hl7.org/browse/FHIR-50499">FHIR-50499</a> - Need to explain rules for updating coverage-information with DTR
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49898">FHIR-49898</a> (Non-Substantive):<br>
-  Context ID from PAS is not mentioned in parameter table.
+  <a href="https://jira.hl7.org/browse/FHIR-49898">FHIR-49898</a> - Context ID from PAS is not mentioned in parameter table.
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49885">FHIR-49885</a> (Non-Substantive):<br>
-  Referenced Parameter is missing
+  <a href="https://jira.hl7.org/browse/FHIR-49885">FHIR-49885</a> - Referenced Parameter is missing
   </li>
 </ul>
 <br/>
 
 
+<!-- ############################################################################################################################################################ -->
 ### Release 2.2.0-ballot
-<p><b>Substantive and breaking changes:</b></p>
+<!-- ============================== -->
+<p><b>Breaking changes:</b></p>
 <ul>
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-51020">FHIR-51020</a> (Non-compatible):<br>
-  Provided guidance that <code>cql-identifier</code> should be used as mime type for CQL identifier.    
+  <a href="https://jira.hl7.org/browse/FHIR-51020">FHIR-51020</a> - Provided guidance that <code>cql-identifier</code> should be used as mime type for CQL identifier.    
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50797">FHIR-50797</a> (Non-compatible):<br>
-  Updated Questionnaire Package operation to always return a Parameters resource upon successful execution.   
+  <a href="https://jira.hl7.org/browse/FHIR-50797">FHIR-50797</a> - Updated Questionnaire Package operation to always return a Parameters resource upon successful execution.   
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50240">FHIR-50240</a> (Compatible, substantive):<br>
-  Included narrative to specification to clarify expectations for sending more than one of orders/contextId/Questionnaire and cross-checking.
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50020">FHIR-50020</a> (Compatible, substantive):<br>
-  Rewrote section on Storing QuestionnaireResponses because it contained contradictory guidance and was misleading.   
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50013">FHIR-50013</a> (Compatible, substantive):<br>
-  Updated the <b>SHOULD</b> to a <b>SHALL</b> in the <code>$log-questionnaire-errors</code> operation definition to align with narrative guidance.
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49862">FHIR-49862</a> (Compatible, substantive):<br>
-  Created Adaptive QuestionnaireResponse profile to enforce adaptive requirements on DTR QuestionnaireResponse used in $next-question operation.
+  <a href="https://jira.hl7.org/browse/FHIR-49726">FHIR-49726</a> - Made <code>Questionnaire.text</code> optional and also made <code>item.text</code> mandatory.
   </li> 
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49845">FHIR-49845</a> (Compatible, substantive):<br>
-  Added MustSupport flag to both the <code>context</code> and <code>intendedUse</code> elements of the QuestionnaireResponse.
-  </li> 
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49836">FHIR-49836</a> (Compatible, substantive):<br>
-  Redesigned 'Questionnaire Design' section to remove subjective qualifications.
-  </li> 
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49811">FHIR-49811</a> (Compatible, substantive):<br>
-  Created 'audience' extension to differentiate administrative vs. clinical forms.  
-  </li> 
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49810">FHIR-49810</a> (Compatible, substantive):<br>
-  Added a complex constraint that says you must either have context id or Coverage.  
-  </li> 
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49744">FHIR-49744</a> (Compatible, substantive):<br>
-  Included narrative guidance within section '9.6.3 CQL Constraints' indicating that DTR <b>SHOULD</b> support additional FHIRPath variables/functions.
-  </li> 
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49743">FHIR-49743</a> (Compatible, substantive):<br>
-  Added new invariants to Questionnaires that require certain extensions based on question type.
-  </li> 
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49729">FHIR-49729</a> (Compatible, substantive):<br>
-  Constrained <code>supportLink</code> cardinality from 0..* to 0..1.
+  <a href="https://jira.hl7.org/browse/FHIR-49663">FHIR-49663</a> - Removed coverage from context extension (qr-context) and split out into a corresponding coverage extension (qr-coverage)   
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49726">FHIR-49726</a> (Non-compatible):<br>
-  Made <code>Questionnaire.text</code> optional and also made <code>item.text</code> mandatory.
-  </li> 
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49724">FHIR-49724</a> (Compatible, substantive):<br>
-  Created abstract 'Base Questionnaire' (<code>dtr-base-questionnaire</code>) to contain common elements for both Standard and Adaptive questionnaires.
+  <a href="https://jira.hl7.org/browse/FHIR-49339">FHIR-49339</a> - Sliced QuestionnaireResponseBundle entry to enforce a single QuestionnaireResponse (1..1) and provided clearer guidance in specification.
   </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49699">FHIR-49699</a> (Compatible, substantive):<br>
-  QuestionnaireResponse item cardinality loosened from 1..* to 0..* to accommodate initial <code>$next-question</code> call.
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49663">FHIR-49663</a> (Non-compatible):<br>
-  Removed coverage from context extension (qr-context) and split out into a corresponding coverage extension (qr-coverage)   
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49339">FHIR-49339</a> (Non-compatible):<br>
-  Sliced QuestionnaireResponseBundle entry to enforce a single QuestionnaireResponse (1..1) and provided clearer guidance in specification.
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48824">FHIR-448824</a> (Compatible, substantive):<br>
-  Created internal DTR valueset <code>$expand</code> operation to focus parameter expectations specific to DTR.
-  </li>
-
 </ul>
 
+<!-- ============================== -->
+<p><b>Substantive changes:</b></p>
+<ul>
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-50240">FHIR-50240</a> - Included narrative to specification to clarify expectations for sending more than one of orders/contextId/Questionnaire and cross-checking.
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-50020">FHIR-50020</a> - Rewrote section on Storing QuestionnaireResponses because it contained contradictory guidance and was misleading.   
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-50013">FHIR-50013</a> - Updated the <b>SHOULD</b> to a <b>SHALL</b> in the <code>$log-questionnaire-errors</code> operation definition to align with narrative guidance.
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49862">FHIR-49862</a> - Created Adaptive QuestionnaireResponse profile to enforce adaptive requirements on DTR QuestionnaireResponse used in $next-question operation.
+  </li> 
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49845">FHIR-49845</a> - Added MustSupport flag to both the <code>context</code> and <code>intendedUse</code> elements of the QuestionnaireResponse.
+  </li> 
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49836">FHIR-49836</a> - Redesigned 'Questionnaire Design' section to remove subjective qualifications.
+  </li> 
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49811">FHIR-49811</a> - Created 'audience' extension to differentiate administrative vs. clinical forms.  
+  </li> 
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49810">FHIR-49810</a> - Added a complex constraint that says you must either have context id or Coverage.  
+  </li> 
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49744">FHIR-49744</a> - Included narrative guidance within section '9.6.3 CQL Constraints' indicating that DTR <b>SHOULD</b> support additional FHIRPath variables/functions.
+  </li> 
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49743">FHIR-49743</a> - Added new invariants to Questionnaires that require certain extensions based on question type.
+  </li> 
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49729">FHIR-49729</a> - Constrained <code>supportLink</code> cardinality from 0..* to 0..1.
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49724">FHIR-49724</a> - Created abstract 'Base Questionnaire' (<code>dtr-base-questionnaire</code>) to contain common elements for both Standard and Adaptive questionnaires.
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-49699">FHIR-49699</a> - QuestionnaireResponse item cardinality loosened from 1..* to 0..* to accommodate initial <code>$next-question</code> call.
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-48824">FHIR-448824</a> - Created internal DTR valueset <code>$expand</code> operation to focus parameter expectations specific to DTR.
+  </li>
+</ul>
+
+<!-- ============================== -->
 <p><b>Non-Substantive changes:</b></p>
 <ul>
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50587">FHIR-50587</a> (Non-substantive):<br>
-  Added 'QuestionnaireResponse Contained Resources' section describing expectations for contained resources within QuestionnaireResponses.
+  <a href="https://jira.hl7.org/browse/FHIR-50587">FHIR-50587</a> - Added 'QuestionnaireResponse Contained Resources' section describing expectations for contained resources within QuestionnaireResponses.
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50587">FHIR-50587</a> (Non-substantive):<br>
-  Added 'QuestionnaireResponse Contained Resources' section describing expectations for contained resources within QuestionnaireResponses.
+  <a href="https://jira.hl7.org/browse/FHIR-50587">FHIR-50587</a> - Added 'QuestionnaireResponse Contained Resources' section describing expectations for contained resources within QuestionnaireResponses.
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50282">FHIR-50282</a> (Non-substantive):<br>
-  Split apart previously 'temp' codesystem codes into appropriate, internal code systems (used in 'code' datatype elements)   
+  <a href="https://jira.hl7.org/browse/FHIR-50282">FHIR-50282</a> - Split apart previously 'temp' codesystem codes into appropriate, internal code systems (used in 'code' datatype elements)   
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49929">FHIR-49929</a> (Non-substantive):<br>
-  Included guidance in the Questionnaire Package operation regarding the expectations for handling 'optional' forms.
+  <a href="https://jira.hl7.org/browse/FHIR-49929">FHIR-49929</a> - Included guidance in the Questionnaire Package operation regarding the expectations for handling 'optional' forms.
   </li> 
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49879">FHIR-49879</a> (Non-substantive):<br>
-  Provided clarifying narrative in Questionnaire Package operation regarding location of context.
+  <a href="https://jira.hl7.org/browse/FHIR-49879">FHIR-49879</a> - Provided clarifying narrative in Questionnaire Package operation regarding location of context.
   </li> 
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49815">FHIR-49815</a> (Non-substantive):<br>
-  Updated narrative in 'EHR to App Connectivity' to provide clarity around DTR support for payers.
+  <a href="https://jira.hl7.org/browse/FHIR-49815">FHIR-49815</a> - Updated narrative in 'EHR to App Connectivity' to provide clarity around DTR support for payers.
   </li> 
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49814">FHIR-49814</a> (Non-substantive):<br>
-  Added <code>alternateExpression</code> extension (as mustSupport) to each 'expression' extension in the Questionnaire profiles.
+  <a href="https://jira.hl7.org/browse/FHIR-49814">FHIR-49814</a> - Added <code>alternateExpression</code> extension (as mustSupport) to each 'expression' extension in the Questionnaire profiles.
   </li> 
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49730">FHIR-49730</a> (Non-substantive):<br>
-  Constrained out <code>itemOptionalDisplay</code> in base questionnaire.
+  <a href="https://jira.hl7.org/browse/FHIR-49730">FHIR-49730</a> - Constrained out <code>itemOptionalDisplay</code> in base questionnaire.
+  </li>
   
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49648">FHIR-49648</a> (Non-substantive):<br>
-  Clarified that both the target resource and QuestionnaireResponse can contain multiple coverage-information extensions
+  <a href="https://jira.hl7.org/browse/FHIR-49648">FHIR-49648</a> - Clarified that both the target resource and QuestionnaireResponse can contain multiple coverage-information extensions
   </li>
  
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49639">FHIR-49639</a> (Non-substantive):<br>
-  Adaptive Form Search profile modified to constrain out (0..0) the item due to questions not being relevant and were marked as MustSupport.
+  <a href="https://jira.hl7.org/browse/FHIR-49639">FHIR-49639</a> - Adaptive Form Search profile modified to constrain out (0..0) the item due to questions not being relevant and were marked as MustSupport.
   </li>
- </li>
  
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49343">FHIR-49343</a> (Non-substantive):<br>
-  Narrative guidance for QuestionnaireResponse Bundle change of 'will' to <b>SHALL</b> addressed by ticket <a href="https://jira.hl7.org/browse/FHIR-49339">FHIR-49399</a>.
+  <a href="https://jira.hl7.org/browse/FHIR-49343">FHIR-49343</a> - Narrative guidance for QuestionnaireResponse Bundle change of 'will' to <b>SHALL</b> addressed by ticket <a href="https://jira.hl7.org/browse/FHIR-49339">FHIR-49399</a>.
   </li>
 </ul>
 
+
+<!-- ############################################################################################################################################################ -->
 ### Release 2.1.0
 <p><b>The following issues are addressed resulting from the STU Update Comment period review:</b></p>
 <ul>
