@@ -23,29 +23,30 @@ Usage: #definition
 * rest.documentation = "A DTR Native Client provides an EHR-based application"
 * rest.security.description = "Implementations **SHALL** meet the general security requirements documented in the [HRex implementation guide](https://build.fhir.org/ig/HL7/davinci-ehrx)."
 
+// ****************************************************************************************************************************
 // Operations
-* rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.operation[=].extension.valueCode = #SHALL
-* rest.operation[=].name = "questionnaire-package"
-* rest.operation[=].definition = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package"
+* rest.resource[+].type = #questionnaire
+* rest.resource[=].operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].operation[=].extension.valueCode = #SHALL
+* rest.resource[=].operation[=].name = "questionnaire-package"
+* rest.resource[=].operation[=].definition = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package"
 
-//***************************************************************************************************************
-* rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.operation[=].extension.valueCode = #SHALL
-* rest.operation[=].name = "expand"
-* rest.operation[=].definition = "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"
+* rest.resource[=].operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].operation[=].extension.valueCode = #SHALL
+* rest.resource[=].operation[=].name = "next-question"
+* rest.resource[=].operation[=].definition = "http://hl7.org/fhir/uv/sdc/OperationDefinition/Questionnaire-next-question"
 
-//***************************************************************************************************************
-* rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.operation[=].extension.valueCode = #SHALL
-* rest.operation[=].name = "next-question"
-* rest.operation[=].definition = "http://hl7.org/fhir/uv/sdc/OperationDefinition/Questionnaire-next-question"
+* rest.resource[=].operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].operation[=].extension.valueCode = #SHALL
+* rest.resource[=].operation[=].name = "log-questionnaire-errors"
+* rest.resource[=].operation[=].definition = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/log-questionnaire-errors"
 
-//***************************************************************************************************************
-* rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.operation[=].extension.valueCode = #SHALL
-* rest.operation[=].name = "log-questionnaire-errors"
-* rest.operation[=].definition = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/log-questionnaire-errors"
+//****
+* rest.resource[+].type = #ValueSet
+* rest.resource[=].operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].operation[=].extension.valueCode = #SHALL
+* rest.resource[=].operation[=].name = "expand"
+* rest.resource[=].operation[=].definition = "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"
 
 
 /**************************************************************************************************************************************************/
@@ -74,26 +75,27 @@ Usage: #definition
 * rest.documentation = "A DTR Native Client provides an EHR-based application"
 * rest.security.description = "Implementations **SHALL** meet the general security requirements documented in the [HRex implementation guide](https://build.fhir.org/ig/HL7/davinci-ehrx)."
 
+// ****************************************************************************************************************************
 // Operations
-* rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.operation[=].extension.valueCode = #SHALL
-* rest.operation[=].name = "questionnaire-package"
-* rest.operation[=].definition = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package"
+* rest.resource[+].type = #questionnaire
+* rest.resource[=].operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].operation[=].extension.valueCode = #SHALL
+* rest.resource[=].operation[=].name = "questionnaire-package"
+* rest.resource[=].operation[=].definition = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package"
 
-//***************************************************************************************************************
-* rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.operation[=].extension.valueCode = #SHALL
-* rest.operation[=].name = "expand"
-* rest.operation[=].definition = "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"
+* rest.resource[=].operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].operation[=].extension.valueCode = #SHALL
+* rest.resource[=].operation[=].name = "next-question"
+* rest.resource[=].operation[=].definition = "http://hl7.org/fhir/uv/sdc/OperationDefinition/Questionnaire-next-question"
 
-//***************************************************************************************************************
-* rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.operation[=].extension.valueCode = #SHALL
-* rest.operation[=].name = "next-question"
-* rest.operation[=].definition = "http://hl7.org/fhir/uv/sdc/OperationDefinition/Questionnaire-next-question"
+* rest.resource[=].operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].operation[=].extension.valueCode = #SHALL
+* rest.resource[=].operation[=].name = "log-questionnaire-errors"
+* rest.resource[=].operation[=].definition = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/log-questionnaire-errors"
 
-//***************************************************************************************************************
-* rest.operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.operation[=].extension.valueCode = #SHALL
-* rest.operation[=].name = "log-questionnaire-errors"
-* rest.operation[=].definition = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/log-questionnaire-errors"
+//****
+* rest.resource[+].type = #ValueSet
+* rest.resource[=].operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].operation[=].extension.valueCode = #SHALL
+* rest.resource[=].operation[=].name = "expand"
+* rest.resource[=].operation[=].definition = "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"
