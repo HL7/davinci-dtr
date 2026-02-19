@@ -241,10 +241,6 @@
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50587">FHIR-50587</a> - Added 'QuestionnaireResponse Contained Resources' section describing expectations for contained resources within QuestionnaireResponses.
-  </li>
-
-  <li>
   <a href="https://jira.hl7.org/browse/FHIR-50282">FHIR-50282</a> - Split apart previously 'temp' codesystem codes into appropriate, internal code systems (used in 'code' datatype elements)   
   </li>
 
