@@ -13,7 +13,7 @@ Usage: #definition
 * contact.name = "HL7 Clinical Decision Support Work Group"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://www.hl7.org/Special/committees/dss"
-* description = "This statement defines the expected capabilities of payer systems that provide questionnaires to DTR clients. Such systems need only support server capabilities for the Questionnaire Package, ValueSet Expand, and Next Question operations."
+* description = "This capability statement defines the expected capabilities of payer systems that provide questionnaires to DTR clients. Such systems need only support server capabilities for the Questionnaire Package, ValueSet Expand, and Next Question operations."
 * jurisdiction = urn:iso:std:iso:3166#US
 * kind = #requirements
 * fhirVersion = #4.0.1
@@ -46,3 +46,4 @@ Usage: #definition
 * rest.resource[=].operation[=].extension.valueCode = #SHALL
 * rest.resource[=].operation[=].name = "expand"
 * rest.resource[=].operation[=].definition = "http://hl7.org/fhir/OperationDefinition/ValueSet-expand"
+
