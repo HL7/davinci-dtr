@@ -183,7 +183,7 @@ Rules and logic are hidden and only questions relevant to the current member/ord
 
 §spec-20^dtr-client^exchange:These systems **SHOULD** also support all non `mustSupport` data extensions included in the differential of the DTR Questionnaire profiles as per SDC documentation for those elements and extensions, and non-support for an element **SHALL NOT** interfere with a user's ability to complete a QuestionnaireResponse.§  §spec-21^dtr-server^exchange:However, payers **SHALL NOT** rely on support for any of these elements in the design of their Questionnaire (i.e., a DTR client that ignores such elements cannot impact the successful collection of information acceptability of the information gathered).§ 
 
-§spec-22?^dtr-client^processing:If there is a need to collect both patient or clinical data as well as administrative data, forms **SHALL** be designed in one of the two the following manners:§
+§spec-22?^dtr-server^processing:If there is a need to collect both patient or clinical data as well as administrative data, forms **SHALL** be designed in one of the two the following manners:§
 * Define separate form(s) for the data capture that requires patient and/or clinician output from the form(s) that can reasonably be filled out by administrative staff.
 * Front-load forms that capture a mixture of patient/clinical and administrative data such that the clinical and patient data can be captured first with a clear 'display' item included in the form that indicates when the patient/clinical portion is completed so that clinicans know when it is safe to save the response and leave the rest for later staff if that's their preference.
 
@@ -513,7 +513,7 @@ The standardization of payer ids is still considered an open issue.  Guidance on
 #### Launch Workflow 
 DTR can be launched in three circumstances:
 * In response to CRD, if the `info-needed` flag on the [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension is set.  §spec-107^dtr-client^exchange:The [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation **SHALL** include a `coverage-assertion-id` element of the `coverage-information` as the context value.§  (§spec-108?^dtr-client^exchange:DTR **MAY** error if invoked with CRD `coverage-assertion-id` where the Coverage-Information did not indicate that info was needed.§)  The invocation might also include the associated orders.
-* In response to PAS, when the PAS response includes a request for the 102089-0 LOINC code in the HI segment of the response. §spec-109^dtr-server^exchange:The [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation **SHALL** include the TRN associated with the LOINC code as the context value.§  §spec-110?^dtr-client^exchange:DTR **SHOULD** error if it is invoked with an unrecognized TRN value or one from a PAS response that did not specify such a LOINC code.§
+* In response to PAS, when the PAS response includes a request for the 102089-0 LOINC code in the HI segment of the response. §spec-109^dtr-client^exchange:The [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation **SHALL** include the TRN associated with the LOINC code as the context value.§  §spec-110?^dtr-client^exchange:DTR **SHOULD** error if it is invoked with an unrecognized TRN value or one from a PAS response that did not specify such a LOINC code.§
 * As stand-alone, where no context is provided and only orders are indicated.
 
 #### Launching a DTR SMART app 
