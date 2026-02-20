@@ -104,7 +104,7 @@ Usage: #definition
 
 // ****************************************************************************************************************************
 // Operations
-* rest.resource[+].type = #questionnaire
+* rest.resource[+].type = #Questionnaire
 * rest.resource[=].operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].operation[=].extension.valueCode = #SHALL
 * rest.resource[=].operation[=].name = "questionnaire-package"
