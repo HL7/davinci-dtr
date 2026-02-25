@@ -4,7 +4,6 @@ Usage: #example
 Description: "An example [Standard questionnaire](StructureDefinition-dtr-std-questionnaire.html) for Home Oxygen Therapy."
 
 * url = "http://hl7.org/fhir/us/davinci-dtr/Questionnaire/home-o2-std-questionnaire"
-* version = "0.1.0"
 * name = "HomeOxygenTherapyStdQuestionnaire"
 * title = "Home Oxygen Therapy Order Template"
 * status = #draft
@@ -17,7 +16,6 @@ Description: "An example [Standard questionnaire](StructureDefinition-dtr-std-qu
 * extension[request-specific].valueBoolean = false
 * extension[rendering-styleSensitive].valueBoolean = false
 * extension[sdc-questionnaire-entryMode].valueCode = #sequential
-// * extension[cqf-library].valueCanonical = "http://example.org/fhir/Library/quick"
 
 * extension[estimatedCompletionTime].url = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/estimated-completion-time"
 * extension[estimatedCompletionTime].extension[clinicalTime].url = "clinicalTime"

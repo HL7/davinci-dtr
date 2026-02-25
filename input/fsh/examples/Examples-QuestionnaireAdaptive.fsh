@@ -4,7 +4,6 @@ InstanceOf: dtr-questionnaire-adapt
 Usage: #inline
 Description: "An example Adaptive questionnaire for Home Oxygen Therapy."
 * url = "http://example.com/fhir/questionnaire"
-* version = "0.1.0"
 * name = "HomeOxygenTherapyAdaptiveQuestionnaire"
 * title = "Adaptive Home Oxygen Therapy Order Template"
 * status = #draft
