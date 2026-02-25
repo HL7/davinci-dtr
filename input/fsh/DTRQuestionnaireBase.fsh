@@ -41,11 +41,9 @@ Description: "Takes a subset of extensions and constraints from the SDC [renderi
 * extension contains sdcEndpoint named endpoint 0..0
 
 * item obeys dtrq-2 and dtrq-3 and dtrq-4 and dtrq-5
-* item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-hidden named itemHidden 0..1 MS
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl named itemControl 0..1 MS
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation named choiceOrientation 0..1
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-displayCategory named displayCategory 0..1
-// * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-supportLink named supportLink 0..1 MS
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-supportHyperlink named supportHyperlink 0..1 MS
 * item.extension contains http://hl7.org/fhir/StructureDefinition/questionnaire-sliderStepValue named sliderStepValue 0..1
 * item.extension contains http://hl7.org/fhir/StructureDefinition/entryFormat named entryFormat 0..1
