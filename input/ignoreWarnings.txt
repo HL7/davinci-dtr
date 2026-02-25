@@ -33,7 +33,6 @@
 # 07 - Deprecated elements 
 %Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0%
 %StructureDefinition/DTR-QPackageBundle: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0-ballot-tc1 is deprecated with the note: 'Use additionalBinding extension or element instead%
-%StructureDefinition/dtr-base-questionnaire: StructureDefinition.snapshot.element[171].type[0].extension[1]: The extension http://hl7.org/fhir/StructureDefinition/regex|5.3.0-ballot-tc1 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex%
 %StructureDefinition/dtr-base-questionnaire: Questionnaire.item.answerOption.extension: The extension http://hl7.org/fhir/StructureDefinition/ordinalValue|5.3.0-ballot-tc1 is deprecated with the note: 'Replaced %
 
 # 08 - This is for an example of a Parameters resource containing a DTR Bundle. It should not have it's own narrative.
