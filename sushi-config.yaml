@@ -80,8 +80,8 @@ dependencies:
     version: 2.1.0
   hl7.fhir.uv.tools.r4:
     id: tools
-    version: 1.0.0
-    # version: current
+    # version: 1.0.0
+    version: current
     uri: http://hl7.org/fhir/tools/ImplementationGuide/hl7.fhir.uv.tools
 
 pages:
@@ -190,7 +190,7 @@ menu:
 
   Base Specs:
     FHIR R4 Spec: new-tab {{site.data.fhir.path}}
-    HRex 1.1.0: new-tab {{site.data.fhir.ver.hrex}}
+    HRex 1.2.0: new-tab {{site.data.fhir.ver.hrex}}
     Structured Data Capture (SDC): new-tab http://hl7.org/fhir/uv/sdc/STU3/
     Clinical Quality Language (CQL): new-tab http://cql.hl7.org/N1/
     SMART on FHIR: new-tab http://hl7.org/fhir/smart-app-launch/index.html
