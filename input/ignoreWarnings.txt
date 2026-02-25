@@ -1,13 +1,10 @@
 == Suppressed Messages ==
 # 00 - These will go away once the next release of the Tools IG is published and we can point to that
-%Unknown Parameters: [requirements-category-vs=http://hl7.org/fhir/us/davinci-dtr/ValueSet/cs-categories, term-params-in-artifacts=true]%
-%No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'%
 %The link 'http://hl7.org/fhir/uv/sdc/2025Jan/behavior.html%
 %The link 'http://hl7.org/fhir/uv/sdc/2025Jan/rendering.html%
 
 # 00a - These are issues are caused by the inter-version extensions pack and should be addressed in the next release of that package
-%Slicing cannot be evaluated: Problem with use of resolve() - profile [CanonicalType[http://hl7.org/fhir/5.0/StructureDefinition/extension-Questionnaire.versionAlgorithm%5Bx%5D]] on Questionnaire.extension:versionAlgorithm%
-%If version is present, versionAlgorithm must be present. (version.exists() implies extension.where(url='http://hl7.org/fhir/5.0/StructureDefinition/extension%
+%The extension http://hl7.org/fhir/StructureDefinition/regex|5.3.0-ballot-tc1 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'%
 %The ImplementationGuide uses package hl7.fhir.uv.extensions.r4#5.3.0-ballot-tc1 released on 2025-08-03, but the most recent appropriate version%
 
 # 01 - Approved by Cross Group Projects WG:9/28/2023 https://confluence.hl7.org/display/CGP/2023-09-28+Cross-Group+Project+Workgroup+Call
@@ -62,7 +59,6 @@ INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-dtr
 %DA VINCI: The Change Log page (changehistory.html) does not include an h3 section for the version 1.1.0
 
 # 14 - Flagging conformance verbs that are not used as conformance language in the IG
-%FHIR-52804 (Non-Compatible)%
 %FHIR-52804 - Change SHOULD to SHALL%
 %The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'This implementation guide uses specific terminology such as SHALL, SHOULD, MAY to flag statements that have relevance for the evaluation of conformance with the guide. As well, profiles in this implementation guide make use of the mustSupport element. Base expectations for the intepretations of these terms are set in the FHIR core specification and general Da Vinci-wide expectations are defined in HRex.'%
 %The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: 'Each of these IGs recommends a set of metrics that may be collected by each implementation to facilitate the evaluation of adoption, functionality, processes, and improved outcomes. While there is currently no requirement to aggregate these metrics, it is reasonable to believe that, in the future, interested entities (providers, payers, regulators, quality organization, certification agencies, states, etc.) will ask for these metrics to evaluate the ongoing automation of the supported processes and exchanges. While this guide will not require these metrics to be captured in this release, the authors strongly suggest each implementation should do so with the expectation that collection and dissemination of these metrics may become a requirement ('SHALL') in future versions of these IGs.%
