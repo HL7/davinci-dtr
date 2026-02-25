@@ -27,7 +27,7 @@
 # 05 - Due to regulatory guidelines US Core 7.0.0 is the latest supported
 %The ImplementationGuide uses package hl7.fhir.us.core#7.0.0 released on 2024-05-08%
   
-# 06 - See Grahame's statement regarding this issue: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/questionnaire-derivationType.20warning.20question
+# 06 - See FHIR Product Manager's statement regarding this issue: https://chat.fhir.org/#narrow/stream/179252-IG-creation/topic/questionnaire-derivationType.20warning.20question
 %has no derivation type specified using the%
 
 # 07 - Deprecated elements 
@@ -39,7 +39,7 @@
 # 08 - This is for an example of a Parameters resource containing a DTR Bundle. It should not have it's own narrative.
 %Constraint failed: dom-6: 'A resource should have narrative for robust management%
   
-# 09 - See Grahame's statement regarding this issue: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/deprecated.20pattern.20slicing/near/482196925
+# 09 - See FHIR Product Manager's statement regarding this issue: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/deprecated.20pattern.20slicing/near/482196925
 %For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 
 # 10 - This link is intended to be version-independent
