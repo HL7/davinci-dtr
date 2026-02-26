@@ -11,6 +11,7 @@ Description: "An example [Standard questionnaire](StructureDefinition-dtr-std-qu
 * date = "2020-01-13T00:00:00+00:00"
 * publisher = "Da Vinci DTR"
 * contact.name = "Example Author"
+* extension[artifact-versionAlgorithm].valueCoding = http://hl7.org/fhir/version-algorithm#semver
 
 * extension[audience].valueCode = #clinical
 * extension[request-specific].valueBoolean = false

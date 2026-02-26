@@ -43,6 +43,7 @@ Description: "An example [Adaptive Form](StructureDefinition-dtr-questionnaire-a
 Usage: #example
 * url = "http://example.org/fhir/Questionnaire/dtr-questionnaire-adapt-search"
 * status = #active
+* extension[artifact-versionAlgorithm].valueCoding = http://hl7.org/fhir/version-algorithm#semver
 * extension[questionnaireAdaptive].valueUrl = "http://example.com/fhir/R4"
 
 // *******************************************************************************************************************************
