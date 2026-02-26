@@ -20,7 +20,7 @@ The FHIR artifacts used by DTR are organized according to whether the content wa
   </tr>
 </table>
 
-These FHIR artifacts define the data that can be utilized by DTR Apps when executing CQL, SMART on FHIR, or queries from Payers by means of operations.  (e.g., `Questionnaire`, `QuestionnaireResponse`, `$questionnaire-package`, etc.)
+These FHIR artifacts define the data that can be utilized by DTR Apps when executing CQL, SMART on FHIR, or queries from Payers by means of operations.  (e.g., `Questionnaire`, `QuestionnaireResponse`, `$questionnaire-package`, `$next-question`, etc.)
 
 <div markdown="1" class="pbox">
 The artifacts are of four types:
