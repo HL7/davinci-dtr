@@ -1,6 +1,36 @@
-### Release 2.2.0-snapshot
-<p><b>The following issues are addressed resulting from this ballot:</b></p>
+### Release 2.2.0
+<!-- ============================== -->
+<p><b>Non-Substantive changes:</b></p>
+<ul>
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-55885">FHIR-55885</a> - Clarify responsibility for requirement spec-159
+  </li>
 
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-55884">FHIR-55884</a> - Requirements spec-47 and spec-155 in conflict
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-55883">FHIR-55883</a> - Clarify §spec-125 (regarding previously completed QuestionnaireResponses)
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-55866">FHIR-55866</a> - Clarify where the CQL Identifier mime type gets used 
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-55693">FHIR-55693</a> - Clarify scope of hyperlinks to contained Binary resources 
+  </li>
+
+  <li>
+  <a href="https://jira.hl7.org/browse/FHIR-55692">FHIR-55692</a> - Clarification of location of 'contained' Binary XHTML/PDF/image resources 
+  </li>
+
+</ul>
+
+<!-- ############################################################################################################################################################ -->
+---------------------
+### Release 2.2.0-snapshot
 <!-- ============================== -->
 <p><b>Breaking changes:</b></p>
 <ul>
@@ -76,30 +106,6 @@
 <!-- ============================== -->
 <p><b>Non-Substantive changes:</b></p>
 <ul>
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-55885">FHIR-55885</a> - Clarify responsibility for requirement spec-159
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-55884">FHIR-55884</a> - Requirements spec-47 and spec-155 in conflict
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-55883">FHIR-55883</a> - Clarify §spec-125 (regarding previously completed QuestionnaireResponses)
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-55866">FHIR-55866</a> - Clarify where the CQL Identifier mime type gets used 
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-55693">FHIR-55693</a> - Clarify scope of hyperlinks to contained Binary resources 
-  </li>
-
-  <li>
-  <a href="https://jira.hl7.org/browse/FHIR-55692">FHIR-55692</a> - Clarification of location of 'contained' Binary XHTML/PDF/image resources 
-  </li>
-
   <li>
   <a href="https://jira.hl7.org/browse/FHIR-53484">FHIR-53484</a> - Evaluate conformance testability for DTR client guidance
   </li>
@@ -305,7 +311,6 @@
 <!-- ############################################################################################################################################################ -->
 ---------------------
 ### Release 2.1.0
-<p><b>The following issues are addressed resulting from the STU Update Comment period review:</b></p>
 <ul>
  
   <li>
