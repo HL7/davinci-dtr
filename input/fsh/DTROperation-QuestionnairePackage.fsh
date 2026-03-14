@@ -105,7 +105,7 @@ If a payer is in a situation where they have historically had 'conditional' form
 * parameter[=].max = "*"
 * parameter[=].documentation = "Canonical url for Questionnaire(s) (possibly version-specific) to return."
 * parameter[=].type = #canonical
-* parameter[=].targetProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-std-questionnaire"
+* parameter[=].targetProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-base-questionnaire"
 
 * parameter[+].name = #context
 * parameter[=].use = #in

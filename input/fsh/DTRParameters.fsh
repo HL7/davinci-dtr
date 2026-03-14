@@ -28,7 +28,7 @@ If both orders and a context id are present, then the context id can be used to 
 * parameter[questionnaire].name = "questionnaire"
 * parameter[questionnaire].value[x] 1..1 MS
 * parameter[questionnaire].value[x] only canonical
-  * ^type.targetProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-std-questionnaire"
+  * ^type.targetProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-base-questionnaire"
 
 * parameter[context].name = "context"
 * parameter[context] ^short = "CRD, CDex, or PAS-provided context"
