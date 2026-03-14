@@ -342,6 +342,26 @@ The answers to questions populated by an <code>initialExpression</code> or <code
 #### Retrieval of patient FHIR resources to supply to CQL execution engine
 §spec-68?^dtr-client^exchange:If executing CQL directly, the DTR client **SHALL** retrieve the FHIR resources specified in the `dataRequirement` section of a Library.§  SMART apps will do this using the access token provided on launch.  The client can then pass these resources to the Clinical Quality Language (CQL) engine. For example, the snippet below is from a Library that contains a `dataRequirement` section. In this code snippet the resource data needed from the EHR is Condition.
 
+<!-- <p>
+  <button class="btn btn-info " type="button" title="Click to Show/hide dataRequirement example" data-toggle="collapse" data-target="#dataRequirement-example" aria-expanded="false" aria-controls="collapseExample">
+    Click to Show or hide Prefetch JSON
+  </button>
+</p>
+<div class="collapse" id="dataRequirement-example">
+<code>
+"dataRequirement": [
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1219.25"
+        }
+      ]
+    },
+</code>
+</div> -->
+
 ```json
 "dataRequirement": [
     {
@@ -591,7 +611,7 @@ There are several steps in processing the launch context to begin the data colle
 Once the EHR or app has authenticated itself, it can invoke the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation using the information gathered in the preceding [Retrieving Launch Context Information](specification.html#retrieving-launch-context-information) step.  The operation will be invoked with a 'POST' using the base endpoint associated with the coverages provided based on payer configuration.  If multiple Coverages are provided that are associated with payers having different endpoints, then the operation will be invoked once per payer endpoint (e.g., `POST [base]/$questionnaire-package`).
 
 The operation will be invoked passing a [DTR Questionnaire Package Input Parameters](StructureDefinition-dtr-qpackage-input-parameters.html) instance containing the following information:
-* All Coverages associated with the payer endpoint in repetitions of the `coverage` element.
+* The Coverage associated with the payer endpoint in the `coverage` element.
 * If a Questionnaire was identified, the version-specific canonical of that Questionnaire in the `questionnaire` element.
 * If no Questionnaires were identified but Request or Encounter resources were found in the preceding step, those resources as the `order` resources, plus the associated performer and requester Practitioner and Organizations, as well as any referenced Devices or Medications as 'referenced' resources.
 * If a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension was available, the `coverage-assertion-id` as `context`.
