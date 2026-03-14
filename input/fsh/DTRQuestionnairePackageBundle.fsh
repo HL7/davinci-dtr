@@ -21,7 +21,7 @@ Description: "This profile represents the Bundle of Questionnaires and Libraries
     
 * entry[questionnaire] ^short = "SHALL have one and only one Questionnaire"
 * entry[questionnaire].resource 1..1
-* entry[questionnaire].resource only Questionnaire
+* entry[questionnaire].resource only DTRBaseQuestionnaire
 
 * entry[questionnaireResponse] ^short = "SHALL have one and only one QuestionnaireResponse"
 * entry[questionnaireResponse].resource 1..1

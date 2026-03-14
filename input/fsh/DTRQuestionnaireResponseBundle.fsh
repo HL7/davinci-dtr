@@ -18,4 +18,4 @@ Description: "This profile represents the Bundle created by EHRs for transmissio
     
 * entry[questionnaireResponse] ^short = "SHALL have one and only one QuestionnaireResponse"
 * entry[questionnaireResponse].resource 1..1
-* entry[questionnaireResponse].resource only QuestionnaireResponse
+* entry[questionnaireResponse].resource only DTRQuestionnaireResponse
