@@ -67,5 +67,5 @@ INFORMATION: StructureDefinition.where(url = 'http://hl7.org/fhir/us/davinci-dtr
 # 15 - These are R5 resources, so we have to (and do) point to the R5 version
 %DA VINCI: The How to Read page (background.html) needs to include a reference to the http://hl7.org/fhir/R4/actordefinition.html because this IG uses the actordefinition resource.%
 
-# 16 - The intent is for the adaptiveQuestionnaire exist only here and constrain the type to a URL
+# 16 - The intent is for the adaptiveQuestionnaire extension to exist only here and constrain the type to a URL
 %This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-base-questionnaire|2.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)%
