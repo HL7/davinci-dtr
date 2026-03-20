@@ -6,8 +6,8 @@ Additional conformance expectations specific to this guide are as follows:
 ### Conformance to this Implementation Guide
 §conf-1^dtr-client,dtr-server^exchange:In order to conform to this implementation guide, in addition to adhering to any relevant 'SHALL' statements, a system **SHALL** conform to at least one of the appropriate CapabilityStatements listed here:§
 
-* **Light DTR EHR** (for [US Core 3.1.1](CapabilityStatement-light-dtr-ehr-311.html) / [US Core 6.1/7.0](CapabilityStatement-light-dtr-ehr-700.html))
-* **Full DTR EHR** (for [US Core 3.1.1](CapabilityStatement-full-dtr-ehr-311.html) / [US Core 6.1/7.0](CapabilityStatement-full-dtr-ehr-700.html))
+* **Light DTR EHR** (for [US Core 3.1.1](CapabilityStatement-light-dtr-ehr-311.html) & [US Core 6.1/7.0](CapabilityStatement-light-dtr-ehr-700.html))
+* **Full DTR EHR** (for [US Core 3.1.1](CapabilityStatement-full-dtr-ehr-311.html) & [US Core 6.1/7.0](CapabilityStatement-full-dtr-ehr-700.html))
 * [**SMART DTR Client**](CapabilityStatement-smart-dtr-client.html)
 * [**DTR Payer Service**](CapabilityStatement-dtr-payer-service.html)
 

@@ -26,10 +26,10 @@ For DTR, this specifically means that `satisfied-pa-id` in the [Coverage Informa
 
 ### Expected Systems
 This Implementation Guide has expectations defined for four types of systems that can be involved (with corresponding Capability Statements):
-* **Light DTR EHR** (for [US Core 3.1.1](CapabilityStatement-light-dtr-ehr-311.html) / [US Core 6.1/7.0](CapabilityStatement-light-dtr-ehr-700.html)):  
+* **Light DTR EHR** (for [US Core 3.1.1](CapabilityStatement-light-dtr-ehr-311.html) & [US Core 6.1/7.0](CapabilityStatement-light-dtr-ehr-700.html)):  
   SMART on FHIR-enabled EHR that handles the form filling function of DTR, requiring the server to provide access to the specified resources to allow such an app to retrieve and edit QuestionnaireResponses and related resources.
     
-* **Full DTR EHR** (for [US Core 3.1.1](CapabilityStatement-full-dtr-ehr-311.html) / [US Core 6.1/7.0](CapabilityStatement-full-dtr-ehr-700.html)):  
+* **Full DTR EHR** (for [US Core 3.1.1](CapabilityStatement-full-dtr-ehr-311.html) & [US Core 6.1/7.0](CapabilityStatement-full-dtr-ehr-700.html)):  
   EHRs that manage the form filling functions of DTR internally supporting client capabilities for the Questionnaire Package, ValueSet Expand, and Next Question operations.
     
 *  [**SMART DTR Client**](CapabilityStatement-smart-dtr-client.html):  
