@@ -77,6 +77,7 @@ Implementers should also familiarize themselves with the FHIR resources used wit
 | [Practitioner]({{site.data.fhir.path}}practitioner.html) | Used when identifying providers in Encounters, Tasks, and all requests |
 | [Questionnaire]({{site.data.fhir.path}}questionnaire.html) | Used to support the question structure to be answered |
 | [QuestionnaireResponse]({{site.data.fhir.path}}questionnaireresponse.html) | Used to support the capture of answers to a corresponding Questionnaire |
+| [Requirements](https://hl7.org/fhir/R5/requirements.html) | Used to computably track and categorize additional conformance expectations (pre-adopted from R5) |
 | [SearchParameter]({{site.data.fhir.path}}searchparameter.html) | Used in finding QuestionnaireResponses that contain information relevant to a particular appointment, encounter or order |
 | [ServiceRequest]({{site.data.fhir.path}}servicerequest.html) | One of the resources that can be involved in DTR context |
 | [StructureDefinition]({{site.data.fhir.path}}structuredefinition.html) | Used when profiling resource and defining extensions |

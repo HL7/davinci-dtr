@@ -1,0 +1,4341 @@
+{
+  "resourceType" : "Requirements",
+  "id" : "fromNarrative",
+  "url" : "http://hl7.org/fhir/us/davinci-dtr/Requirements/fromNarrative",
+  "name" : "FromNarrative",
+  "title" : "Narrative Conformance Statements",
+  "status" : "active",
+  "experimental" : false,
+  "description" : "Conformance statements found throughout the narrative of the IG consolidated into this computable resource for traceability purposes",
+  "actor" : ["http://hl7.org/fhir/us/davinci-dtr/ActorDefinition/dtr-client",
+  "http://hl7.org/fhir/us/davinci-dtr/ActorDefinition/dtr-server"],
+  "_actor" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-actorkey",
+      "valueId" : "dtr-client"
+    }]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-actorkey",
+      "valueId" : "dtr-server"
+    }]
+  }],
+  "statement" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "conf-1",
+    "conformance" : ["SHALL"],
+    "requirement" : "In order to conform to this implementation guide, in addition to adhering to any relevant 'SHALL' statements, a system **SHALL** conform to at least one of the appropriate CapabilityStatements listed here:"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "conf-2",
+    "conformance" : ["SHALL"],
+    "requirement" : "Da Vinci DTR implementations **SHALL** conform to the [HRex](https://build.fhir.org/ig/HL7/davinci-ehrx//conformance.html#mustsupport) and [US Core](http://hl7.org/fhir/us/core/STU7/must-support.html) Guidance where applicable."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "ui",
+          "display" : "ui"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "conf-3",
+    "conformance" : ["SHALL"],
+    "requirement" : "DTR apps and EHRs that take on DTR app responsibility **SHALL** be able to render Questionnaires and QuestionnaireResponses."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "ui",
+          "display" : "ui"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "conf-4",
+    "conformance" : ["MAY"],
+    "requirement" : "DTR clients **MAY** adjust which client components expose which Questionnaire items, which Questionnaire items are exposed to which users and how those items are exposed as appropriate for the workflow so long as they retain the ability to render all `mustSupport` elements at least in some places within their client system(s)."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "ui",
+          "display" : "ui"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "conf-5",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "Specifically, apps and EHRs acting as form fillers **SHALL** be able to display:"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "ui",
+          "display" : "ui"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "conf-6",
+    "conformance" : ["SHALL"],
+    "requirement" : "They **SHALL** also handle all mustSupport elements within the Questionnaire profile and provide visual cues where those elements impact expected user action (e.g., required answers, need for signatures, etc.)"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "ui",
+          "display" : "ui"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "conf-7",
+    "conformance" : ["SHOULD"],
+    "requirement" : "Those same systems **SHOULD** be able to display `QuestionnaireResponse.item.itemMedia`"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "conf-8",
+    "requirement" : "When determining Questionnaire packages, processing adaptive forms via `$next-question`, or constructing population logic, DTR services **SHALL NOT** depend on or set expectations for the inclusion of resource instances not compliant with profiles defined in this guide, HRex, or US Core."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "conf-9",
+    "requirement" : "Similarly, they **SHALL NOT** depend on or set expectations for the inclusion of any data elements not marked as mandatory (min cardinality >= 1) or `mustSupport` in those profiles."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "conf-10",
+    "conformance" : ["SHALL"],
+    "requirement" : "DTR servers **SHALL NOT** set expectations for systems to support Questionnaire rendering or response validation capabilities above those established in the [DTR Questionnaire profiles](artifacts.html#structures-resource-profiles) and **SHALL** accept and successfully process any Questionnaire Response returned for a Questionnaire from that DTR server that is deemed valid against the rules expressed only as `mustSupport` in the Questionnaire profile."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "business",
+          "display" : "business"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "conf-11",
+    "conformance" : ["MAY"],
+    "conditionality" : true,
+    "requirement" : "If the proposed change is adopted and published in the DTR continuous integration build or the CI build of one of its dependencies (e.g., US Core), implementations **MAY**, by mutual agreement, pre-adopt the use of those additional profiles and/or `mustSupport` data elements and not be considered in violation of #1 or #2 above."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "conf-12",
+    "conditionality" : true,
+    "requirement" : "Where cardinality and other constraints present in profiles allow data elements to be omitted, DTR compliant systems **SHALL NOT** treat the omission of those elements as a conformance error - i.e., DTR services are expected to return appropriate questionnaire package responses, not system level errors (e.g., HTTP 4xx errors), and DTR clients are expected to render and allow completion of forms as normal."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "conf-13",
+    "conformance" : ["SHALL"],
+    "requirement" : "DTR clients and services and **SHALL** use standard DTR data elements (i.e., elements found within DTR-defined or inherited profiles and marked as mandatory or `mustSupport`) to communicate needed data if such elements are intended to convey such information."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "conf-14",
+    "conformance" : ["MAY"],
+    "requirement" : "Organizations implementing DTR **SHALL NOT** publish guidance setting expectations for where certain data elements are conveyed within DTR and inherited data structures, but **MAY** submit change requests to DTR, CRD, HRex, or US Core requesting that additional guidance be provided to implementers on data structure usage to increase consistency across implementations."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "business",
+          "display" : "business"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "conf-15",
+    "conformance" : ["SHALL"],
+    "requirement" : "Such enhancements **SHALL** be submitted as a ticket for consideration for inclusion in a future version of the implementation guide."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "ui",
+          "display" : "ui"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "opcn-1",
+    "conformance" : ["SHOULD"],
+    "requirement" : "Picklist: questions that will normally not be pre-populated, **SHOULD** be answered 90% of the time from a predefined picklist supported by typeahead for long lists and allows for occasional text entries (average answer time of 5 seconds each)"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "ui",
+          "display" : "ui"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "opcn-2",
+    "conformance" : ["SHOULD"],
+    "requirement" : "**SHOULD** be clinical questions but might include administrative questions if necessary to select appropriate clinical questions."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "oper-1",
+    "conformance" : ["SHALL"],
+    "requirement" : "This operation **SHALL** be supported by payers and DTR applications."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "oper-2",
+    "conformance" : ["SHOULD"],
+    "requirement" : "The input OperationOutcome resource **SHOULD** include information on the DTR application identity and version, date-time with time-zone offset, as well as the provider endpoint during which the error occurred, and it **SHALL NOT** contain information about the response or information retrieved from FHIR APIs that could potentially include PHI."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "oper-3",
+    "conformance" : ["SHOULD"],
+    "requirement" : "The Questionnaire reference **SHOULD** be version-specific."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "oper-4",
+    "conformance" : ["SHALL"],
+    "requirement" : "The operation is called at the resource level and a url **SHALL** be provided."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "oper-5",
+    "conformance" : ["SHALL"],
+    "requirement" : "Additionally, the valueset **SHALL** use the current date as the expansion date and **SHALL** include only active codes."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "oper-6",
+    "conformance" : ["SHALL"],
+    "requirement" : "The operation **SHALL** take as input the Coverage resource(s) identifying the member and the type(s) of Coverage for which additional information is needed and at least one of:"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "oper-7",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If multiple versions of a questionnaire are returned, each **SHALL** be associated with distinct orders or coverages in the associated QuestionnaireResponses (see below)."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "oper-8",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If this operation is invoked with a context id provided by CRD where the `coverage-information` extension indicated that additional documentation was required, but no questionnaires are returned by the operation, the operation **SHALL** return an OperationOutcome with clear instructions on how else to determine needed documentation or an indication that circumstances have changed and additional documentation is no longer necessary."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "oper-9",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If any of the explicitly requested questionnaires cannot be found, a warning **SHALL** be provided in the [`Outcome`](StructureDefinition-dtr-qpackage-output-parameters.html) element of the outer `Parameters` resource."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "oper-10",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If the operation is successful, the response **SHALL** be a `Parameters` resource conformant to the [DTRQuestionnairePackageOutputParameters](StructureDefinition-dtr-qpackage-output-parameters.html) profile."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "oper-11",
+    "conformance" : ["SHOULD"],
+    "conditionality" : true,
+    "requirement" : "If the operation fails, the response payload **SHOULD** be an OperationOutcome."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "oper-12",
+    "conformance" : ["SHALL"],
+    "requirement" : "The Bundle **SHALL** include the Questionnaire as the first entry along with all external Libraries referenced by the Questionnaire using the [cqf-library](https://build.fhir.org/ig/HL7/fhir-extensions/StructureDefinition-cqf-library.html) extension, as well as a recursive retrieval of all `relatedArtifact` references of type 'depends-on'."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "oper-13",
+    "conformance" : ["SHALL"],
+    "requirement" : "All Libraries **SHALL** include both CQL and EML representations."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "oper-14",
+    "conformance" : ["SHALL"],
+    "requirement" : "The Bundle **SHALL** include all external ValueSet instances referenced by the Questionnaire."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "oper-15",
+    "conformance" : ["SHALL"],
+    "requirement" : "All value sets with expansions under 40 entries **SHALL** be expanded as of the current date and using expansion parameters (such as SNOMED release) as deemed appropriate by the payer."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "oper-16",
+    "conformance" : ["SHALL"],
+    "requirement" : "All references to Questionnaires, Libraries, and ValueSets within the Bundle **SHALL** be version specific, as breaking changes may occur between versions and would likely cause failures or inconsistent data."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "oper-17",
+    "conformance" : ["MAY"],
+    "requirement" : "Multiple versions of a Library **MAY** be treated as an error, or **MAY** be handled by returning the 'most recent' version of the referenced versions."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "oper-18",
+    "conformance" : ["SHALL"],
+    "requirement" : "As well, the Questionnaire Bundle **SHALL** contain one initial draft `QuestionnaireResponse` that references the `Questionnaire` for that Bundle and populate the subject as well as repetitions of the Context extension that identify the Coverage(s) and Request or Encounter resources the `Questionnaire` is to be completed for."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "oper-19",
+    "conformance" : ["MAY"],
+    "requirement" : "The payer **MAY** opt to pre-populate some answers in the provided QuestionnaireResponses based on information the payer has in its own records or has from context from CRD or from other prior auth or claims submissions."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "oper-20",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "When resuming a work in progress questionnaire response the DTR client **SHALL** invoke the operation with the timestamp to see if the questionnaire package has changed since it was last retrieved, presuming that the `QuestionnaireResponse.meta.lastUpdated` element corresponds to the last package retrieval time."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "prof-1",
+    "conformance" : ["SHOULD"],
+    "requirement" : "However, the system should check that the passed orders are the same as was processed at CRD time before presuming that the questionnaires needed will be the same and if the orders have changed, or there's a possibility that the rules governing which Questionnaires are needed might have changed, the system **SHOULD** re-check to determine the needed Questionnaires."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "prof-2",
+    "conformance" : ["SHALL"],
+    "requirement" : "The Payer Identifier used **SHALL** be the same as the ones that are returned by the [endpoint discovery mechanism](https://build.fhir.org/ig/HL7/davinci-ehrx/endpoint-discovery.html) defined in HRex."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "sec-1",
+    "conformance" : ["SHALL"],
+    "requirement" : "Implementers **SHALL** adhere to any security and privacy rules defined by:"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "sec-2",
+    "conformance" : ["MAY"],
+    "requirement" : "This scope granted **MAY** provide the SMART on FHIR application access to more data than is needed for the specific situation."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "sec-3",
+    "conformance" : ["SHALL"],
+    "requirement" : "For compliance with HIPAA Minimum Necessary, the CQL included in payer-defined Questionnaires **SHALL** limit requests for information from the EHR's API to only items that are relevant to the documentation requirements for which DTR was launched (e.g., documentation requirements for a service that does require prior authorization)."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "sec-4",
+    "requirement" : "Compliant Questionnaires **SHALL NOT** include hidden or read-only questions where the data is populated from the EHR."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "sec-5",
+    "conformance" : ["SHALL"],
+    "requirement" : "DTR Clients **SHALL** appropriately manage access to data that is sensitive per policy and regulatory requirements when responding to queries from a DTR app."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "sec-6",
+    "conformance" : ["SHOULD"],
+    "requirement" : "Providers **SHOULD** ask the patient if they want to share the information with the payer prior to manually populating it in any QuestionnaireResponses."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "sec-7",
+    "conformance" : ["SHOULD"],
+    "requirement" : "Any EHR with SMART on FHIR support **SHOULD** be prepared to deal with the implications of providing a client with the scopes they request."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "sec-8",
+    "conformance" : ["SHALL"],
+    "requirement" : "For example, EHRs **SHALL** limit FHIR search capabilities for clients, requiring a patient ID in any search query to ensure the client can only access resources related to that patient."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "sec-9",
+    "conformance" : ["SHALL"],
+    "requirement" : "Payer systems **SHALL** use information received during execution of the DTR [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation solely for the purpose of satisfying the operation invoked, for audit, and to satisfy metric reporting needs."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "sec-10",
+    "conditionality" : true,
+    "requirement" : "If a payer uses adaptive forms to gather information, the payer **SHALL NOT** persist or use the information shared as part of the [`$next-question`](http://hl7.org/fhir/uv/sdc/STU3/OperationDefinition-Questionnaire-next-question.html) operation for any purpose other than:"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-1",
+    "conformance" : ["MAY"],
+    "requirement" : "Payer DTR services **SHALL NOT** work preferentially with their own apps for IG-defined functionality, though clients and services **MAY** offer additional behavior above and beyond what's covered in this specification."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "business",
+          "display" : "business"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-2",
+    "conformance" : ["MAY"],
+    "requirement" : "This means that EHRs are free to choose which app they prefer and **MAY** switch apps as they see fit."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "business",
+          "display" : "business"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-3",
+    "conformance" : ["MAY"],
+    "conditionality" : true,
+    "requirement" : "In some cases, an EHR **MAY** opt to support multiple DTR SMART apps."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "business",
+          "display" : "business"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-4",
+    "conformance" : ["SHALL"],
+    "requirement" : "Similarly, all DTR apps **SHALL** be registered with the payer systems with which they communicate. If an EHR opts to interact with the payer directly without using an app, then the EHR itself will need to register."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-5",
+    "conformance" : ["MAY"],
+    "requirement" : "Payers **MAY** have multiple back-end functions that handle different types of decision support and/or different types of services."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-6",
+    "conformance" : ["SHALL"],
+    "requirement" : "However, for the purpose of DTR conformance, payers **SHALL** have a single endpoint (managed by themselves or a delegate) that can handle responding to all DTR service calls."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "business",
+          "display" : "business"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-7",
+    "conformance" : ["SHALL"],
+    "requirement" : "This registration process **SHALL** ensure that the DTR app or Full EHR (i.e., Native App):"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-8",
+    "conformance" : ["SHOULD"],
+    "requirement" : "Implementers of this IG **SHOULD** support the [endpoint discovery](https://build.fhir.org/ig/HL7/davinci-ehrx//endpoint-discovery.html) mechanism defined in the HRex specification to allow discovery of the endpoints used in this IG - specifically the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation endpoint used to retrieve the Questionnaires and associated libraries, value sets, etc. to be completed."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "business",
+          "display" : "business"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-9",
+    "conformance" : ["SHOULD",
+    "MAY"],
+    "requirement" : "Even after an application has been successfully registered, payers and EHRs **SHOULD** monitor the application behavior and **MAY** suspend an application's access if it is suspected of malicious behavior."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "business",
+          "display" : "business"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-10",
+    "conformance" : ["MAY"],
+    "requirement" : "Some payers **MAY** create Questionnaires that rely on code systems that require licensing for use where there isn’t already a cross-U.S. license in place (e.g., UB, CPT)."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "business",
+          "display" : "business"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-11",
+    "conformance" : ["SHALL"],
+    "requirement" : "The expectations around licensing requirements **SHALL** be established as part of the configuration process between the parties."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-12",
+    "conformance" : ["SHALL",
+    "SHOULD"],
+    "requirement" : "DTR services **SHOULD** have DTR questionnaires available for all covered items that require additional data collection to support prior auth submission, claim submission, or appropriate use documentation. (Future versions of this guide will likely tighten this expectation to a 'SHALL')"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-13",
+    "conformance" : ["MAY"],
+    "requirement" : "DTR server organizations **MAY** surface their Questionnaires via a registry or some similar mechanism that allows DTR client organizations to pre-examine/pre-process Questionnaires to allow for more optimal handling when those Questionnaires are actually solicited."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-14",
+    "requirement" : "DTR clients **SHALL NOT** be dependent on such pre-availability in order to perform form completion."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-15",
+    "conformance" : ["MAY"],
+    "requirement" : "Payers **MAY** support either approach or opt to provide some Questionnaires using one approach and others using the second based on the requirements of the form."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-16",
+    "conformance" : ["SHALL"],
+    "requirement" : "DTR apps and Full EHRs **SHALL** support both types of Questionnaires."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-17",
+    "conformance" : ["SHALL"],
+    "requirement" : "Questionnaires, whether standard or adaptive, **SHALL** also use logic that ensures that only questions and answer choices which are required for the intended clinical or administrative purposes are included, based on what answers have already been provided/populated using elements such as `enableWhen` or `enableWhenExpression`."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-18",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "When using elements with a data type of 'Expression' within Questionnaires to control flow or rendering, all logic **SHALL** be written in CQL."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-19",
+    "conformance" : ["SHALL"],
+    "requirement" : "The Elements flagged as mustSupport **SHALL** be supported by DTR Apps and Full EHRs."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-20",
+    "conformance" : ["SHOULD"],
+    "requirement" : "These systems **SHOULD** also support all non `mustSupport` data extensions included in the differential of the DTR Questionnaire profiles as per SDC documentation for those elements and extensions, and non-support for an element **SHALL NOT** interfere with a user's ability to complete a QuestionnaireResponse."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-21",
+    "requirement" : "However, payers **SHALL NOT** rely on support for any of these elements in the design of their Questionnaire (i.e., a DTR client that ignores such elements cannot impact the successful collection of information acceptability of the information gathered)."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-22",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If there is a need to collect both patient or clinical data as well as administrative data, forms **SHALL** be designed in one of the two the following manners:"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-23",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "When a payer uses an Adaptive Form, they **SHALL** return a questionnaire instance compliant with the DTR [AdaptiveQuestionnaire-Search](StructureDefinition-dtr-questionnaire-adapt-search.html) profile."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-24",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If present, any `questionnaireAdaptive` url **SHALL** be a sub-url under the base for the payer and able to be accessed within the same SMART Backend Services connection as was established to make the [$questionnaire-package](OperationDefinition-questionnaire-package.html) call."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-25",
+    "conformance" : ["SHALL"],
+    "requirement" : "The QuestionnaireResponse included in the [Questionnaire Package Bundle](StructureDefinition-DTR-QPackageBundle.html) accompanying an adaptive Questionnaire **SHALL** follow the convention of referencing a [contained](https://hl7.org/fhir/R4/references.html#contained) Questionnaire `derivedFrom` the canonical for the Questionnaire being completed."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-26",
+    "conformance" : ["MAY"],
+    "requirement" : "Typically, the QuestionnaireResponse and [contained](https://hl7.org/fhir/R4/references.html#contained) Questionnaire will contain no answers (or corresponding questions), though the payer **MAY** opt to include a few pre-populated answers for user review prior to soliciting additional questions using the [`$next-question`](OperationDefinition-DTR-Questionnaire-next-question.html) operation."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-27",
+    "conformance" : ["MAY"],
+    "requirement" : "Payers **MAY** define pre-populatable questions to extract such information, using CQL to access the Questionnaire's [`launchContext`](https://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-launchContext.html) extension or performing any necessary data retrieval."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-28",
+    "conformance" : ["MAY"],
+    "requirement" : "There are three strategies payers can use – and payers **MAY** opt to combine strategies within a single Questionnaire:"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-29",
+    "conformance" : ["MAY"],
+    "requirement" : "The payer **MAY** opt to include CQL [Libraries](http://hl7.org/fhir/R4/library.html) and ValueSets in the package that are not actually referenced by any questions, on the prospect that they **might** be (or are likely to be) referenced by one of the questions at some point."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-30",
+    "conformance" : ["MAY"],
+    "requirement" : "The payer **MAY** add CQL [Libraries](http://hl7.org/fhir/R4/library.html) and ValueSets as ['contained'](https://hl7.org/fhir/R4/references.html#contained) resources inside the QuestionnaireResponse that are relevant to the questions that are part of the Questionnaire for each [`$next-question`](OperationDefinition-DTR-Questionnaire-next-question.html) call, slowly building up the set of resources that happen to be relevant to the questions actually asked."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-31",
+    "conformance" : ["MAY"],
+    "requirement" : "Finally, the payer **MAY** opt to specify the CQL and codes without using [Libraries](http://hl7.org/fhir/R4/library.html) or ValueSets at all – the CQL can be sent in-line within the various Expression elements, and the codes can be listed directly as answerOption Codings."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-32",
+    "conformance" : ["SHOULD"],
+    "conditionality" : true,
+    "requirement" : "Payers needing full resources to be returned **SHOULD** use the [`containedReference`](StructureDefinition-containedReference.html) extension to indicate that the selected resource(s) for an answer of type reference should be included as [contained](https://hl7.org/fhir/R4/references.html#contained) resources within the QuestionnaireResponse."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-33",
+    "conformance" : ["SHALL",
+    "SHOULD"],
+    "conditionality" : true,
+    "requirement" : "Implementers that support Adaptive Questionnaires **SHOULD** always include a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension when the QuestionnaireResponse is deemed complete. (Future versions of this guide will likely tighten this expectation to a 'SHALL')"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-34",
+    "conformance" : ["MAY"],
+    "conditionality" : true,
+    "requirement" : "The package returned by the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation **MAY** include Library and/or ValueSet instances that are not referenced by any of the returned questionnaires if at least one of those questionnaires is adaptive."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-35",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "In this circumstance these additional resources are being made available, and **SHALL** be retained in the session, on the likelihood that a question in one of those adaptive questionnaires returned by the [`$next-question`](OperationDefinition-DTR-Questionnaire-next-question.html) operation will need (and reference) these resources."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-36",
+    "conformance" : ["SHOULD"],
+    "conditionality" : true,
+    "requirement" : "When using adaptive forms, DTR servers **SHOULD** return as many items in a single call as possible (within reason), including questions that can be determined as enabled or disabled using simple 'enableWhen' logic."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-37",
+    "conformance" : ["SHOULD"],
+    "conditionality" : true,
+    "requirement" : "Calling the `$next-question` operation **SHOULD** only be necessary when the DTR client requires invocation of more complex or non-disclosable logic to determine the next set of items."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-38",
+    "conformance" : ["SHALL"],
+    "requirement" : "Conformant systems **SHALL** meet these timing expectations at least 90% of the time."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-39",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "In an adaptive Questionnaire with clinical or patient questions, systems that know that, after submitting the answers to the current unanswered questions, there will be no further questions targeted to patient or clinician, those systems **SHALL** provide a display item indicating that patient/clinical questions are complete."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-40",
+    "conformance" : ["SHOULD"],
+    "requirement" : "Wherever possible, DTR services **SHOULD** leverage data retrieved from CRD and other mechanisms (claims data, PDex, etc.) to pre-populate answers in the QuestionnaireResponse returned to the client (regardless of whether the forms used are adaptive or standard)."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-41",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If Adaptive Forms are being used, and a DTR service determines that prior authorization is both necessary and the requirements have been satisfied, then the final question in the form **SHALL** be a question that asks the user if they would like the prior authorization identifier to be issued, and indicate the appropriate response options."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-42",
+    "requirement" : "DTR Servers **SHALL NOT** provide a `satisfied-pa-id` in response to a DTR invocation that was triggered by a PAS request."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-43",
+    "conformance" : ["SHALL"],
+    "requirement" : "DTR payers **SHALL** ONLY use DTR adaptive forms to return a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension when:"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-44",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If an adaptive QuestionnaireResponse includes an unsolicited determination that authorization requirements have been \"satisfied\", the EHR **SHALL** allow the clinician to flag the provided determination number as \"not valid\"."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-45",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If a payer receives a new invocation of an adaptive form for the same order, they **SHALL** treat the result of the new completion as replacing any previous completion from a prior coverage determination process."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-46",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If a final DTR QuestionnaireResponse includes a Coverage Information extension, the DTR Client **SHALL** associate the Coverage Information returned with the relevant Appointment, Encounter and/or Request resources and **SHALL** make the information provided in the extension available to their users for viewing."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-47",
+    "conformance" : ["SHALL"],
+    "requirement" : "For the purpose of determining whether to update or replace, the combination of the 'coverage' reference and the `coverage-assertion-id` **SHALL** be treated as a primary key (i.e., if the coverage and `coverage-assertion-id` is the same, then the expectation is to replace the existing `coverage-information` repetition. If either are different then the intention is to add an additional `coverage-information` extension repetition to the list.)"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-48",
+    "conformance" : ["SHOULD-NOT"],
+    "requirement" : "When updating an existing `coverage-information` instance, all elements other than the primary key may change, except that `doc-needed` and `doc-purpose` **SHOULD NOT** change to remove types of documentation needed merely to reflect forms that have already been completed."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "ui",
+          "display" : "ui"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-49",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If an updated `coverage-information` lists more Questionnaires to fill out then the original, DTR clients **SHALL** expose additional forms to the user in their typical manner."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "business",
+          "display" : "business"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-50",
+    "conformance" : ["MAY"],
+    "requirement" : "In some cases, if there isn't specific data that can be retrieved computably from the EHR, it **MAY** be sufficient for a payer to merely have an attestation by the provider that certain documentation exists, that a certain patient condition exists, or that certain actions have been completed."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "business",
+          "display" : "business"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-51",
+    "conformance" : ["SHOULD"],
+    "conditionality" : true,
+    "requirement" : "Payers **SHOULD** design questionnaires to support attestation rather than discrete data where this is sufficient for the business requirements."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-52",
+    "conformance" : ["MAY"],
+    "requirement" : "Questionnaires **MAY** also support attaching reports or other supporting documentation (e.g., images, pathology reports, etc.) where providing question answers is not sufficient."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-53",
+    "conformance" : ["SHOULD"],
+    "requirement" : "Payers **SHOULD** use the `Questionnaire.effectivePeriod` element to describe the period over which the documentation templates and rules are valid."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-54",
+    "conformance" : ["SHALL"],
+    "requirement" : "Questionnaires **SHALL** include logic that supports population from the EHR where possible."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-55",
+    "conformance" : ["SHOULD"],
+    "requirement" : "Such logic **SHOULD** rely exclusively on data elements and search parameters defined either in US Core or [HRex](https://build.fhir.org/ig/HL7/davinci-ehrx//index.html) (including simple calculations there-on - e.g., age from birthdate)."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-56",
+    "conformance" : ["SHOULD"],
+    "requirement" : "Ideally, the design of questions in payer forms **SHOULD** consider what data is likely to be available for pre-population purposes, with an objective of minimizing provider data entry effort."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-57",
+    "conformance" : ["MAY"],
+    "requirement" : "Due to differences in workflows or information systems, clinical information **MAY** be represented in different FHIR resources or with different codes or code systems."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-58",
+    "conformance" : ["MAY"],
+    "requirement" : "Therefore, payer CQL **MAY** have to examine different resources or use value sets to find patient information."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-59",
+    "conformance" : ["SHALL"],
+    "requirement" : "Any supplied CQL **SHALL** be used as the basis for pre-populating elements using data gathered from the EHR."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-60",
+    "conformance" : ["SHALL"],
+    "requirement" : "DTR clients **SHALL** handle expressions in Questionnaires denoted as either CQL or FHIRPath (which is a proper subset of CQL)."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-61",
+    "conformance" : ["SHOULD"],
+    "requirement" : "DTR servers **SHOULD** identify inline expressions that are valid FHIRPath as FHIRPath rather than CQL."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "ui",
+          "display" : "ui"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-62",
+    "conformance" : ["SHALL"],
+    "requirement" : "Prior to exposing items from the draft QuestionnaireResponse to the user for completion and/or review, the DTR client **SHALL** attempt to perform the SDC population of all elements having [`initialExpression`](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-initialExpression.html), [`candidateExpression`](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-candidateExpression.html) and [`calculatedExpression`](http://hl7.org/fhir/uv/sdc/STU3/StructureDefinition-sdc-questionnaire-calculatedExpression.html) extensions found in the Questionnaire for any enabled elements."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-63",
+    "conformance" : ["MAY"],
+    "requirement" : "However, clients **MAY** use alternative mechanisms that take into account the data requirements expressed by the CQL."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-64",
+    "conformance" : ["SHALL"],
+    "requirement" : "Such alternative mechanisms **SHALL** provide pre-population that is overall at least as complete and accurate as would be achieved through CQL execution."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-65",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "All items that are pre-populated (whether by the payer in the initial QuestionnaireResponse provided in the questionnaire package, or from data retrieved from the EHR) **SHALL** have their `origin.source` set to 'auto-server' (pre-populated by Payer) or 'auto-client' (pre-populated by EHR) within the required [`information-origin`](StructureDefinition-information-origin.html) extension."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-66",
+    "conformance" : ["SHALL"],
+    "requirement" : "DTR clients **SHALL** iterate as necessary until a steady state is reached."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-67",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If dependencies are such that a steady state cannot be reached (e.g., an item that is enabled causes a value to be set which causes a different item to be enabled, that then disables the first item…), then the Questionnaire **SHALL** be treated as erroneous and attempts at automatic population **SHALL** end, with the user being informed of that."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-68",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If executing CQL directly, the DTR client **SHALL** retrieve the FHIR resources specified in the `dataRequirement` section of a Library."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-69",
+    "conformance" : ["SHOULD"],
+    "requirement" : "Queries **SHOULD** be constructed to minimize the retrieval of information that is not necessary to answer the relevant questions (For example, queries for medications that only require active medications should have appropriate filters to retrieve active medications and not inactive medications)."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-70",
+    "conformance" : ["SHALL"],
+    "requirement" : "DTR clients **SHALL** support such an incremental population of adaptive QuestionnaireResponses."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-71",
+    "conformance" : ["SHOULD"],
+    "conditionality" : true,
+    "requirement" : "If DTR is launched using a previously saved QuestionnaireResponse, the DTR client **SHOULD** re-execute CQL to populate all empty elements, as well as those with an [`origin.source`](StructureDefinition-information-origin.html) of 'auto-client' or 'auto-server'."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-72",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "Any answers with an `origin.source` of 'override' or 'manual' **SHALL NOT** be changed, though if pre-population would have asserted a value for an answer with an `origin.source` of 'manual', the `origin.source` **SHALL** be changed to 'override'."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-73",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "When executing CQL for population, DTR clients **SHALL** replace payer-prepopulated data unless the results of the CQL population is an empty set."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-74",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If executing CQL directly, the engine **SHALL** make available to the execution context all such referenced CQL [Libraries](http://hl7.org/fhir/R4/library.html)."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-75",
+    "conformance" : ["SHOULD"],
+    "conditionality" : true,
+    "requirement" : "If not executing the CQL directly, alternative processes **SHOULD** consider the content of referenced libraries as well."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-76",
+    "conditionality" : true,
+    "requirement" : "If the CQL is malformed (is not syntactically correct) in any way, a client directly executing the CQL **SHALL NOT** attempt any execution of the malformed CQL."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-77",
+    "conformance" : ["SHOULD"],
+    "conditionality" : true,
+    "requirement" : "Clients not executing the CQL **SHOULD** be tolerant of malformed CQL."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-78",
+    "conformance" : ["SHALL"],
+    "requirement" : "In either case, the client **SHALL** report the error to the payer using the [Log Questionnaire Errors operation](OperationDefinition-log-questionnaire-errors.html) in addition to performing its own internal logging processes."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "ui",
+          "display" : "ui"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-79",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If the CQL in the Questionnaire is only used for form population purposes, the app **SHALL**:"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-80",
+    "conformance" : ["MAY"],
+    "conditionality" : true,
+    "requirement" : "If the CQL also includes questionnaire logic, such as whether certain elements are enabled, or other validation rules, the DTR client (potentially in consultation with the user) **MAY** attempt to determine if the questionnaire is sufficiently simple that it would be reasonable to allow the user to attempt completion with potentially improperly enabled items."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "ui",
+          "display" : "ui"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-81",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If this is not possible, the client **SHALL** notify the user that there is an issue with the questionnaire and prohibit further completion of the form."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-82",
+    "requirement" : "A query for data that returns no results **SHALL NOT** be considered a failure."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-83",
+    "conformance" : ["SHOULD"],
+    "requirement" : "The table below is guidance that **SHOULD** be used when constructing questions with coded answers:"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-84",
+    "conformance" : ["SHOULD"],
+    "requirement" : "All value set expansions **SHOULD** be made by using the [DTR Valueset Expand (`$expand`)](OperationDefinition-DTR-ValueSet-expand.html) operation."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-85",
+    "conformance" : ["MAY"],
+    "requirement" : "This CQL **MAY** query for patient observations, conditions, or other discrete information within the EHR to use as part of the population process or logic."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-86",
+    "conformance" : ["SHOULD"],
+    "requirement" : "The mime type that **SHOULD** be used for a CQL Identifier is \"text/cql-identifier\" and CQL expressions embedded in the Questionnaire **SHOULD** use this type and reference CQL found in libraries rather than including CQL inline. (See supporting information [here](https://build.fhir.org/ig/HL7/cql/03-developersguide.html#identifiers))"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-87",
+    "conformance" : ["SHALL"],
+    "requirement" : "All [Libraries](http://hl7.org/fhir/R4/library.html) needed by a questionnaire **SHALL** be referenced by the [`cqf-library`](https://hl7.org/fhir/extensions/StructureDefinition-cqf-library.html) extension and included as part of the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-88",
+    "conformance" : ["SHOULD",
+    "MAY"],
+    "requirement" : "CQL logic **SHOULD** be partitioned to be specific to groups/questions/etc., when doing so will allow it to be more efficient - though consideration should also be given to whether performing significant data gathering at the outset (even if the data is unneeded) will produce a more positive experience than intermittent data retrieval 'on demand', when such retrieval **MAY** introduce user-interface delays."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-89",
+    "conformance" : ["MAY"],
+    "requirement" : "This information **MAY** be gathered through a series of CQL statements."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-90",
+    "conformance" : ["SHOULD"],
+    "requirement" : "When constructing this CQL for DTR, these statements **SHOULD** be nested in conditionals to first check if the patient has diabetes before checking for information dependent on that condition."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-91",
+    "conformance" : ["SHOULD"],
+    "requirement" : "While CQL can either be embedded inline in Expression elements or packaged in [Libraries](http://hl7.org/fhir/R4/library.html), This guide strongly recommends that implementers **SHOULD** place CQL logic in libraries as it is much easier to edit and debug such logic when it is all in one place, rather than when it's scattered through many different expression elements throughout the Questionnaire."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-92",
+    "conformance" : ["SHALL"],
+    "requirement" : "The CQL **SHALL** be compatible with version [CQL 1.5](http://cql.hl7.org/N1/)."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-93",
+    "conformance" : ["SHALL"],
+    "requirement" : "CQL **SHALL** have a context of \"Patient\"."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-94",
+    "conformance" : ["SHALL"],
+    "requirement" : "Within the Questionnaire, CQL **SHALL** follow SDC rules for determining [context](https://hl7.org/fhir/uv/sdc/STU3/populate.html)."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-95",
+    "conformance" : ["SHALL"],
+    "requirement" : "Within [Libraries](http://hl7.org/fhir/R4/library.html), both raw CQL and compiled ELM (in JSON syntax – i.e., application/elm+json) **SHALL** be provided as separate content repetitions within the library."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-96",
+    "conformance" : ["SHALL"],
+    "requirement" : "Within Expression elements, the base expression CQL **SHALL** be accompanied by an [Alternative Expression Extension](StructureDefinition-alternativeExpression.html) containing the compiled JSON ELM for the expression."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-97",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If the Questionnaire depends on multiple [Libraries](http://hl7.org/fhir/R4/library.html) (has multiple [`cqf-library`](https://hl7.org/fhir/extensions/StructureDefinition-cqf-library.html) elements), then any [`valueExpression`](https://hl7.org/fhir/extensions/StructureDefinition-variable.html) referring to defined variables **SHALL** specify the library name as well as the statement name as follows: \"LibraryName\".statementName."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-98",
+    "conformance" : ["SHALL",
+    "SHOULD"],
+    "requirement" : "Library names **SHALL** be unique within a Questionnaire package and **SHOULD** be unique across all Libraries made available by the payer (e.g., \"expression\": \"LowerLimbProsthesis\".PhysicalExaminationType where LowerLimbProsthesis is the library name and PhysicalExaminationType is the expression name)."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-99",
+    "conformance" : ["SHALL"],
+    "requirement" : "FHIR [Libraries](http://hl7.org/fhir/R4/library.html) **SHALL** send CQL and ELM using the `content.data` element."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-100",
+    "conformance" : ["SHOULD"],
+    "requirement" : "CQL tools **SHOULD** support additional FHIRPath variables and functions that are [defined within SDC](https://hl7.org/fhir/uv/sdc/STU3/expressions.html#fhirpath-supplements)."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-101",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "Entities deploying SMART on FHIR DTR apps **SHALL** define an endpoint maintaining a list of payers currently supported by that app."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-102",
+    "conformance" : ["SHALL"],
+    "requirement" : "This listing of Payers **SHALL** conform to the [DTR Supported Payers](StructureDefinition-dtr-supported-Payers.html) profile also published in this IG."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-103",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "EHRs using external DTR apps **SHALL** support accessing the endpoint."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-104",
+    "conformance" : ["SHALL"],
+    "requirement" : "Different endpoints **SHALL** be defined for different versions of the application in situations where support for payers varies by application version."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-105",
+    "conformance" : ["SHALL"],
+    "requirement" : "It is important to note that the Payer Identifier used in this file **SHALL** be the same as the ones that are returned by the [endpoint discovery mechanism](https://build.fhir.org/ig/HL7/davinci-ehrx//endpoint-discovery.html) defined in [HRex](https://build.fhir.org/ig/HL7/davinci-ehrx//index.html)."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-106",
+    "conformance" : ["SHALL"],
+    "requirement" : "Accessing the endpoint will be by a simple GET with an Accept header of application/json and **SHALL** be performed over TLS."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-107",
+    "conformance" : ["SHALL"],
+    "requirement" : "The [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation **SHALL** include a `coverage-assertion-id` element of the `coverage-information` as the context value."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-108",
+    "conformance" : ["MAY"],
+    "conditionality" : true,
+    "requirement" : "DTR **MAY** error if invoked with CRD `coverage-assertion-id` where the Coverage-Information did not indicate that info was needed."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-109",
+    "conformance" : ["SHALL"],
+    "requirement" : "The [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation **SHALL** include the TRN associated with the LOINC code as the context value."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-110",
+    "conformance" : ["SHOULD"],
+    "conditionality" : true,
+    "requirement" : "DTR **SHOULD** error if it is invoked with an unrecognized TRN value or one from a PAS response that did not specify such a LOINC code."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-111",
+    "conformance" : ["SHALL"],
+    "requirement" : "When the DTR process is being launched, the Electronic Health Record (EHR) system and DTR process **SHALL** follow the procedures established by the SMART App Launch Framework - specifically the [SMART App Launch Framework's EHR launch sequence](https://www.hl7.org/fhir/smart-app-launch/app-launch.html#launch-app-ehr-launch)."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-112",
+    "conformance" : ["SHALL"],
+    "requirement" : "The openId, user, and patient launch contexts **SHALL** be requested and provided."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-113",
+    "conformance" : ["SHOULD"],
+    "requirement" : "In addition, the launch context **SHOULD** include fhirContext references as follows:"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-114",
+    "conformance" : ["MAY"],
+    "conditionality" : true,
+    "requirement" : "If these are not passed in as part of context, then the app **MAY** either raise an error or guide the user to select the needed records."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-115",
+    "conformance" : ["MAY"],
+    "requirement" : "Payer-provided Questionnaires **MAY** require access to a wide range of resources."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-116",
+    "conformance" : ["SHALL"],
+    "requirement" : "At a minimum, the DTR app and the HIT server **SHALL** support search access to the following resources via their FHIR RESTful API using the profiles defined by or referenced by this guide:"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-117",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "Resources referenced from the above via Must Support elements, including transitive references, **SHALL** also be supported."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-118",
+    "conformance" : ["MAY"],
+    "requirement" : "However, apps **MAY** opt to be more restrictive in their access requests if they are confident that they can do so while meeting payer CQL needs and EHRs indicate this is desirable."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-119",
+    "conformance" : ["SHALL"],
+    "requirement" : "Regardless of the scopes asked for and granted by the user, the EHR **SHALL** limit access to only that data they deem appropriate for use in automatically populating payer forms, in particular restricting sensitive data."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-120",
+    "conformance" : ["SHALL"],
+    "requirement" : "Payers **SHALL** require DTR apps and EHRs connecting to their endpoint to authenticate using [SMART on FHIR Backend Services](https://www.hl7.org/fhir/smart-app-launch/backend-services.html)."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-121",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If the launch context did not include Coverages, a QuestionnaireResponse or a Request or Encounter, the DTR app\u202f**SHALL** either\u202fgenerate an error or\u202fallow the user to search to find one to use as context for the DTR session."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-122",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "The `QuestionnaireResponse.questionnaire` **SHALL** point to the same canonical URL as the Questionnaire provided in the package Bundle."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-123",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If any of the retrieved Questionnaires have an `effectivePeriod` that ends prior to the current date, then the DTR client **SHALL** change the status of any retrieved work-in-progress QuestionnaireResponses for the expired Questionnaires to 'stopped' and notify the user that the previously recorded content has expired."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-124",
+    "conformance" : ["SHOULD"],
+    "conditionality" : true,
+    "requirement" : "If an expired Questionnaire is retrieved when it wasn't explicitly requested by referring to a canonical version, but instead by passing in the relevant order(s) and/or context id, the DTR client **SHOULD** report an error to the payer."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-125",
+    "requirement" : "Previously completed QuestionnaireResponses **SHALL NOT** be used by DTR clients to complete Questionnaires received due to concerns about currency of clinical information."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-126",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "When launched after CRD, the context, Request and referenced resources **SHALL** be present."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-127",
+    "conformance" : ["MAY"],
+    "requirement" : "Questionnare canonicals **MAY** be present."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-128",
+    "conformance" : ["SHALL"],
+    "requirement" : "DTR servers **SHALL** allow for the possibility of minor changes in the order between CRD and DTR (e.g., changes to status, adding notes, etc.) that mean that the instances don't have to be identical to be considered the same order."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-129",
+    "conformance" : ["MAY"],
+    "conditionality" : true,
+    "requirement" : "DTR servers **MAY** raise an error if they receive an order that is unrelated to the provided context id."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-130",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If DTR is invoked and there are issues with the source data (e.g., the coverage cannot be found, the context id can't be found, etc.), then the DTR service **SHALL** return a 4xx error with an accompanying OperationOutcome."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "ui",
+          "display" : "ui"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-131",
+    "conformance" : ["MAY"],
+    "requirement" : "In some cases, the population process **MAY** populate all answers to the Questionnaire."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "ui",
+          "display" : "ui"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-132",
+    "conformance" : ["SHALL"],
+    "requirement" : "The DTR client **SHALL** provide the ability, but NOT a requirement, for providers to review, and if necessary revise, pre-populated answers prior to saving the resulting response for subsequent use within the EHR."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-133",
+    "conformance" : ["SHOULD"],
+    "requirement" : "Implementers **SHOULD** review the advanced rendering, advanced behavior, population and adaptive forms portions of the SDC implementation guide, focusing on the elements and extensions included in the DTR profiles."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-134",
+    "conformance" : ["SHOULD"],
+    "requirement" : "Implementers **SHOULD** also be familiar with the documentation about the Questionnaire and QuestionnaireResponse resources from the core FHIR specification."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "ui",
+          "display" : "ui"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-135",
+    "conformance" : ["SHALL"],
+    "requirement" : "All DTR applications **SHALL** support rendering according to the `mustSupport` elements in the DTR Questionnaire profile according to all CQL found within Questionnaire extensions."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-136",
+    "conformance" : ["SHALL"],
+    "requirement" : "CQL and FHIR Questionnaires **SHALL** be required even when DTR is implemented within a DTR Native App as opposed to a DTR SMART App."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-137",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "When a user fills in a value or changes an answer in a QuestionnaireResponse, the DTR client **SHALL** populate the [`information-origin`](StructureDefinition-information-origin.html) extension, setting the `author` property to the current user, and setting `source` to 'override' if the source was already 'override', 'auto-client', 'auto-server', or 'manual' otherwise."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-138",
+    "conformance" : ["SHALL"],
+    "requirement" : "DTR clients **SHALL** either provide a PractitionerRole in the SMART App launch of DTR or support transmitting the role by means of the [`activeRole`](StructureDefinition-activeRole.html) extension within the Practitioner resource."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-139",
+    "conformance" : ["SHALL"],
+    "requirement" : "All references within the QuestionnaireResponse **SHALL** only point to either contained resources or to resources that reside on the DTR client's FHIR endpoint."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-140",
+    "conformance" : ["SHALL"],
+    "requirement" : "The only situation where a resource can be ['contained'](https://hl7.org/fhir/R4/references.html#contained) **SHALL** be if the contained instance is provided by the payer either:"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-141",
+    "conformance" : ["SHALL"],
+    "requirement" : "The only place ['contained'](https://hl7.org/fhir/R4/references.html#contained) resource references are permitted **SHALL** be in `item.answer` references."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-142",
+    "conformance" : ["SHALL"],
+    "requirement" : "The DTR client **SHALL** validate the QuestionnaireResponse on an ongoing basis as the user is reviewing and entering data."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "ui",
+          "display" : "ui"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-143",
+    "conformance" : ["SHALL"],
+    "requirement" : "The client **SHALL** visually flag any elements that require adjustment to meet validation rules."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "ui",
+          "display" : "ui"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-144",
+    "conformance" : ["SHALL",
+    "MAY"],
+    "conditionality" : true,
+    "requirement" : "For Standard Questionnaires, when the QuestionnaireResponse is valid, the DTR client **SHALL** indicate that to the user and allow them to mark the QuestionnaireResponse as complete, though the user **MAY** opt to continue making changes or save the QuestionnaireResponse in draft form."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-145",
+    "requirement" : "The DTR app **SHALL NOT** mark a Standard QuestionnaireResponse as 'complete' automatically."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "ui",
+          "display" : "ui"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-146",
+    "requirement" : "The DTR client **SHALL NOT** allow the user to indicate they are ready for the next question/set of questions until the answers to the current QuestionnaireResponse pass validation rules."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-147",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If [`$next-question`](OperationDefinition-DTR-Questionnaire-next-question.html) is invoked with a QuestionnaireResponse the payer determines is invalid based on the rules in the [contained](https://hl7.org/fhir/R4/references.html#contained) Questionnaire, it **SHALL** return an HTTP 400 error with an OperationOutcome indicating the circumstances where the QuestionnaireResponse is invalid."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-148",
+    "conformance" : ["MAY"],
+    "requirement" : "However, the QuestionnaireResponse **MAY** have a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension added reflecting the payer's coverage assessment based on the information gathered in the QuestionnaireResponse."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-149",
+    "conformance" : ["MAY"],
+    "requirement" : "In some cases, the answer to a question modified by a user **MAY** be the input to an expression driving other logic within the questionnaire."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-150",
+    "conformance" : ["SHALL"],
+    "requirement" : "DTR clients **SHALL** monitor for changes to dependent questionnaire answers and re-execute logic, adjusting calculatedValues, enabling elements, adjusting validation rules, etc. based on changes made by the user."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "storage",
+          "display" : "storage"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-151",
+    "conformance" : ["SHALL"],
+    "requirement" : "At any point prior to completion a DTR client **SHALL** be able to save the `in-progress` QuestionnaireResponse, both to ensure that work-in-progress is not lost, and to allow the user to close the session and then relaunch it later."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "storage",
+          "display" : "storage"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-152",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "When the QuestionnaireResponse has been marked as `completed`, the DTR client **SHALL** save the QuestionnaireResponse to the EHR."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "storage",
+          "display" : "storage"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-153",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "A DTR SMART App **SHALL** 'create' the record if it had not previously been stored, or 'update' if the record had already been saved at least once via the FHIR API."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-154",
+    "conformance" : ["SHALL"],
+    "requirement" : "Upon storing a completed QuestionnaireResponse with one or more [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extensions, the EHR **SHALL** propagate the [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extensions to all non-Coverage resources included on the [`qr-context`](StructureDefinition-qr-context.html) extension on the QuestionnaireResponse."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-155",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) already exists on the target resource with the same `coverage-information.coverage` or `coverage-information.coverage-assertion-id`, it **SHALL** be overridden."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-156",
+    "conformance" : ["SHALL"],
+    "requirement" : "In those cases where a QuestionnaireResponse is to be used to convey information either to the payer or to downstream service providers, the DTR Client **SHALL** place the QuestionnaireResponse in a 'collection' Bundle complying with the [questionnaireResponseBundle](StructureDefinition-DTR-QRBundle.html) profile."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-157",
+    "conformance" : ["SHALL"],
+    "requirement" : "This Bundle **SHALL** include no more than one QuestionnaireResponse entry and it **SHALL** be the initial entry."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-158",
+    "conformance" : ["SHALL"],
+    "requirement" : "The bundle **SHALL** also include any resources that are referenced by the QuestionnaireResponse as answerReference that are not already contained within the QuestionnaireResponse."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-159",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "If the initial `QuestionnaireResponse` has multiple purposes (e.g., for prior authorization, claim submission, and performer transmission), the DTR server organization **SHALL** ensure that the full completed [QuestionnaireResponse package](StructureDefinition-DTR-QPackageBundle.html) is appropriate for all uses. If there is a need to send different information to different recipients for different purposes, the DTR server organization **SHALL** produce distinct Questionnaires such that QuestionnaireResponses only contain information that can be shared without redaction for their listed purposes."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-160",
+    "conformance" : ["SHALL"],
+    "conditionality" : true,
+    "requirement" : "Such resources **SHALL** either be PDFs or XHTML pages that adhere to FHIR's ['safe' HTML rules](https://hl7.org/fhir/R4/security.html#narrative) (no active content or scripts)"
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "business",
+          "display" : "business"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-161",
+    "conformance" : ["MAY"],
+    "requirement" : "Some payers **MAY** require that attestations or other answers be 'signed' (the electronic equivalent of 'initialing' the answer)."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "processing",
+          "display" : "processing"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-162",
+    "conformance" : ["SHOULD"],
+    "conditionality" : true,
+    "requirement" : "The DTR client **SHOULD** use result caching so that results queried by CQL (or otherwise retrieved based on CQL) previously remain available after a subsequent call to $next-question."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-client"
+    }],
+    "key" : "spec-163",
+    "conformance" : ["SHOULD-NOT",
+    "SHOULD"],
+    "requirement" : "These value sets **SHOULD** be expanded by the client and therefore **SHOULD NOT** be included in the questionnaire package."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-164",
+    "conformance" : ["SHOULD"],
+    "requirement" : "Payers **SHOULD** design their questionnaires, value sets, and libraries with the knowledge that content which is too large may cause DTR clients to fail."
+  }]
+}
