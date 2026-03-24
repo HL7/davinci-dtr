@@ -35,31 +35,31 @@
 <p><b>Breaking changes:</b></p>
 <ul>
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52804">FHIR-52804</a> - Change SHOULD to SHALL for returning HTTP 400 error with an OperationOutcome indicating the circumstances where the QuestionnaireResponse is invalid
+  <a href="https://jira.hl7.org/browse/FHIR-52804">FHIR-52804</a> - Change SHOULD to SHALL for returning HTTP 400 error with an OperationOutcome indicating the circumstances where the QuestionnaireResponse is invalid (<a href="specification.html#questionnaireresponse-validation">link</a>)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52801">FHIR-52801</a> - Change SHOULD to SHALL regarding the use of logic ensuring only questions and answer choices which are required for the intended clinical or administrative purposes
+  <a href="https://jira.hl7.org/browse/FHIR-52801">FHIR-52801</a> - Change SHOULD to SHALL regarding the use of logic ensuring only questions and answer choices which are required for the intended clinical or administrative purposes (<a href="specification.html#questionnaire-design">link</a>)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52791">FHIR-52791</a> - Include expectations that DTR Services SHOULD have DTR questionnaires available for all covered items that require additional data collection 
+  <a href="https://jira.hl7.org/browse/FHIR-52791">FHIR-52791</a> - Include expectations that DTR Services SHOULD have DTR questionnaires available for all covered items that require additional data collection (<a href="specification.html#questionnaire-use">link</a>)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52320">FHIR-52320</a> - Use a List profile instead of a logical model for supported payers 
+  <a href="https://jira.hl7.org/browse/FHIR-52320">FHIR-52320</a> - Use a List profile instead of a logical model for supported payers (<a href="StructureDefinition-dtr-supported-Payers.html">link</a>)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-51736">FHIR-51736</a> - Constrain DTR to only take a single coverage as input 
+  <a href="https://jira.hl7.org/browse/FHIR-51736">FHIR-51736</a> - Constrain DTR to only take a single coverage as input (<a href="OperationDefinition-questionnaire-package.html">link</a>)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-51631">FHIR-51631</a> - Give users an idea of how much time completion will take (adding <code>estimatedCompletionTime</code> extension to base Questionnaire)
+  <a href="https://jira.hl7.org/browse/FHIR-51631">FHIR-51631</a> - Give users an idea of how much time completion will take by adding <code>estimatedCompletionTime</code> extension to base Questionnaire (<a href="StructureDefinition-dtr-base-questionnaire.html#profile">link</a>) 
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50789">FHIR-50789</a> - Provide clarity around simple logic in Adaptive forms and adaptive processing expectations and requirements.
+  <a href="https://jira.hl7.org/browse/FHIR-50789">FHIR-50789</a> - Provide clarity around simple logic in Adaptive forms and adaptive processing expectations and requirements (<a href="specification.html#adaptive-form-considerations">link</a>)
   </li>
 </ul>
 
