@@ -65,7 +65,7 @@
     }],
     "key" : "conf-2",
     "conformance" : ["SHALL"],
-    "requirement" : "Da Vinci DTR implementations **SHALL** conform to the [HRex](https://build.fhir.org/ig/HL7/davinci-ehrx//conformance.html#mustsupport) and [US Core](http://hl7.org/fhir/us/core/STU7/must-support.html) Guidance where applicable."
+    "requirement" : "Da Vinci DTR implementations **SHALL** conform to the [HRex](http://hl7.org/fhir/us/davinci-hrex/1.2.0/conformance.html#mustsupport) and [US Core](http://hl7.org/fhir/us/core/STU7/must-support.html) Guidance where applicable."
   },
   {
     "extension" : [{
@@ -1192,7 +1192,7 @@
     }],
     "key" : "spec-8",
     "conformance" : ["SHOULD"],
-    "requirement" : "Implementers of this IG **SHOULD** support the [endpoint discovery](https://build.fhir.org/ig/HL7/davinci-ehrx//endpoint-discovery.html) mechanism defined in the HRex specification to allow discovery of the endpoints used in this IG - specifically the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation endpoint used to retrieve the Questionnaires and associated libraries, value sets, etc. to be completed."
+    "requirement" : "Implementers of this IG **SHOULD** support the [endpoint discovery](http://hl7.org/fhir/us/davinci-hrex/1.2.0/endpoint-discovery.html) mechanism defined in the HRex specification to allow discovery of the endpoints used in this IG - specifically the [`$questionnaire-package`](OperationDefinition-questionnaire-package.html) operation endpoint used to retrieve the Questionnaires and associated libraries, value sets, etc. to be completed."
   },
   {
     "extension" : [{
@@ -2126,7 +2126,7 @@
     }],
     "key" : "spec-55",
     "conformance" : ["SHOULD"],
-    "requirement" : "Such logic **SHOULD** rely exclusively on data elements and search parameters defined either in US Core or [HRex](https://build.fhir.org/ig/HL7/davinci-ehrx//index.html) (including simple calculations there-on - e.g., age from birthdate)."
+    "requirement" : "Such logic **SHOULD** rely exclusively on data elements and search parameters defined either in US Core or [HRex](http://hl7.org/fhir/us/davinci-hrex/1.2.0/index.html) (including simple calculations there-on - e.g., age from birthdate)."
   },
   {
     "extension" : [{
@@ -3118,7 +3118,7 @@
     }],
     "key" : "spec-105",
     "conformance" : ["SHALL"],
-    "requirement" : "It is important to note that the Payer Identifier used in this file **SHALL** be the same as the ones that are returned by the [endpoint discovery mechanism](https://build.fhir.org/ig/HL7/davinci-ehrx//endpoint-discovery.html) defined in [HRex](https://build.fhir.org/ig/HL7/davinci-ehrx//index.html)."
+    "requirement" : "It is important to note that the Payer Identifier used in this file **SHALL** be the same as the ones that are returned by the [endpoint discovery mechanism](http://hl7.org/fhir/us/davinci-hrex/1.2.0/endpoint-discovery.html) defined in [HRex](http://hl7.org/fhir/us/davinci-hrex/1.2.0/index.html)."
   },
   {
     "extension" : [{
@@ -4337,5 +4337,48 @@
     "key" : "spec-164",
     "conformance" : ["SHOULD"],
     "requirement" : "Payers **SHOULD** design their questionnaires, value sets, and libraries with the knowledge that content which is too large may cause DTR clients to fail."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementshallnot",
+      "valueBoolean" : true
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-165",
+    "conditionality" : true,
+    "requirement" : "Such contained Binary pages **SHALL NOT** point to other contained resources unless those resources are pointed to directly by other elements in the Questionnaire."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementcategory",
+      "valueCodeableConcept" : {
+        "coding" : [{
+          "system" : "http://hl7.org/fhir/us/davinci-dtr/CodeSystem/dtr-conformance-statement-categories",
+          "code" : "exchange",
+          "display" : "exchange"
+        }]
+      }
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "dtr-server"
+    }],
+    "key" : "spec-166",
+    "conformance" : ["MAY"],
+    "conditionality" : true,
+    "requirement" : "Implementers **MAY** embed images or other content using the 'data' mechanism, or may opt to combine multiple files into a single instance to eliminate the need for inter-linking."
   }]
 }
