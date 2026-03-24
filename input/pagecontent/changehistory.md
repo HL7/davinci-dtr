@@ -91,7 +91,7 @@
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50465">FHIR-50465</a> - Added a new section on the conformance page titled "Interoperability Expectations"
+  <a href="https://jira.hl7.org/browse/FHIR-50465">FHIR-50465</a> - Added a new section on the conformance page titled "Interoperability Expectations" (<a href="confexpectations.html#interoperability-expectations">link</a>)
   </li>
 
   <li>
@@ -107,7 +107,7 @@
 <p><b>Non-Substantive changes:</b></p>
 <ul>
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-53484">FHIR-53484</a> - Evaluate conformance testability for DTR client guidance
+  <a href="https://jira.hl7.org/browse/FHIR-53484">FHIR-53484</a> - Multiple narrative and conformance updates to improve testability guidance 
   </li>
 
   <li>
@@ -115,35 +115,35 @@
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52982">FHIR-52982</a> - Misleading usage of "shared secret" when describing client/EHR and Payer connectivity
+  <a href="https://jira.hl7.org/browse/FHIR-52982">FHIR-52982</a> - Clarified expectations around communicated public keys via SMART on FHIR Backend Services
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52796">FHIR-52796</a> - Lack of a minimal-compliance path (general documentation) consistent with CMS intent
+  <a href="https://jira.hl7.org/browse/FHIR-52796">FHIR-52796</a> - Improve clarity for exposing question text and answers in API, as well as use of third party logic in data gathering.
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52802">FHIR-52802</a> - rewrite conformance under questionnaire design
+  <a href="https://jira.hl7.org/browse/FHIR-52802">FHIR-52802</a> - Clarified expectations around questionnaire design for absence of data
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52794">FHIR-52794</a> - Intellectual-property (IP) and licensing exposure not adequately addressed
+  <a href="https://jira.hl7.org/browse/FHIR-52794">FHIR-52794</a> - Provide narrative to note that adaptive forms may help to protect intellectual-property (IP) and licensing exposure 
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52792">FHIR-52792</a> - reference that the guide is required under HT1-4
+  <a href="https://jira.hl7.org/browse/FHIR-52792">FHIR-52792</a> - Include reference that the guide has requirements under HT1-4
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52701">FHIR-52701</a> - Consider CQL 1.5+
+  <a href="https://jira.hl7.org/browse/FHIR-52701">FHIR-52701</a> - Clarify that CQL SHALL be compatible with CQL version 1.5
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52700">FHIR-52700</a> - Consider referencing CQL resources
+  <a href="https://jira.hl7.org/browse/FHIR-52700">FHIR-52700</a> - Added references to CQL content
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-51869">FHIR-51869</a> - Error scenarios
+  <a href="https://jira.hl7.org/browse/FHIR-51869">FHIR-51869</a> - Added section named "Launch Workflow" enumerating DTR's launch circumstance (<a href="specification.html#launch-workflow">link</a>)
   </li>
 
   <li>
@@ -151,7 +151,7 @@
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-51577">FHIR-51577</a> - Optimized data collection by ordering doctor, nurse and/or front/back office staff
+  <a href="https://jira.hl7.org/browse/FHIR-51577">FHIR-51577</a> - Included guidance that server organizations MAY allow clients to pre-examine/pre-process questionnaires 
   </li>
 
   <li>
