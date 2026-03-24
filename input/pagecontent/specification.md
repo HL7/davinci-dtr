@@ -187,11 +187,11 @@ Rules and logic are hidden and only questions relevant to the current member/ord
 * Define separate form(s) for the data capture that requires patient and/or clinician output from the form(s) that can reasonably be filled out by administrative staff.
 * Front-load forms that capture a mixture of patient/clinical and administrative data such that the clinical and patient data can be captured first with a clear 'display' item included in the form that indicates when the patient/clinical portion is completed so that clinicans know when it is safe to save the response and leave the rest for later staff if that's their preference.
 
-
 It should be noted that in some cases, decision logic may mean that a few questions that could be answered by administrative staff will need answers to determine which clinical and/or patient questions need to be displayed.  In this situation, these questions will need to be intermixed with the patient / clinical questions.
 
 It should be noted that hyperlinks in XHTML or `supportLink` may point to 'contained' binary resources.  §spec-160?^dtr-server^exchange:Such resources **SHALL** either be PDFs or XHTML pages that adhere to FHIR's ['safe' HTML rules](https://hl7.org/fhir/R4/security.html#narrative) (no active content or scripts)§ Hyperlinks in these XHTML pages may themselves point to 'contained' binary resources. (Note that all contained resources must be contained in the QuestionnaireResponse, as the FHIR [dom-2 constraint](https://hl7.org/fhir/R4/domainresource.html#invs) prohibits contained resources from themselves having contained resources.)
 
+§spec-165?^dtr-server^exchange:Such contained Binary pages **SHALL NOT** point to other contained resources unless those resources are pointed to directly by other elements in the Questionnaire.§ §spec-166?^dtr-server^exchange:Implementers **MAY** embed images or other content using the 'data' mechanism, or may opt to combine multiple files into a single instance to eliminate the need for inter-linking.§
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">

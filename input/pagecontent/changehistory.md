@@ -3,27 +3,27 @@
 <p><b>Non-Substantive changes:</b></p>
 <ul>
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-55885">FHIR-55885</a> - Making clear that the responsibility rests with the DTR server to produce distinct questionnaires
+  <a href="https://jira.hl7.org/browse/FHIR-55885">FHIR-55885</a> - Making clear that the responsibility rests with the DTR server to produce distinct questionnaires (<a href="specification.html#passing-dtr-questionnaireresponses-to-downstream-processes">link</a>)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-55884">FHIR-55884</a> - Requirements around primary keys and update behavior for coverage-information extensions are out of sync between server and client sections
+  <a href="https://jira.hl7.org/browse/FHIR-55884">FHIR-55884</a> - Requirements around primary keys and update behavior for coverage-information extensions are out of sync between server and client sections (<a href="specification.html#passing-dtr-questionnaireresponses-to-downstream-processes">link</a>)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-55883">FHIR-55883</a> - Clarify §spec-125 regarding not supporting previously completed QuestionnaireResponses
+  <a href="https://jira.hl7.org/browse/FHIR-55883">FHIR-55883</a> - Clarify §spec-125 regarding not supporting previously completed QuestionnaireResponses (<a href="https://build.fhir.org/ig/HL7/davinci-dtr/en/confexpectations.html#ci-c-spec-125">link</a>)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-55866">FHIR-55866</a> - Expand narrative to clarify where the CQL Identifier mime type gets used 
+  <a href="https://jira.hl7.org/browse/FHIR-55866">FHIR-55866</a> - Expand narrative to clarify where the CQL Identifier mime type gets used (<a href="specification.html#use-of-cql">link</a>)   
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-55693">FHIR-55693</a> - Clarify scope of hyperlinks to contained Binary resources 
+  <a href="https://jira.hl7.org/browse/FHIR-55693">FHIR-55693</a> - Clarify scope of hyperlinks to contained Binary resources (<a href="specification.html#questionnaire-design">link</a>)  
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-55692">FHIR-55692</a> - Clarification of location of 'contained' Binary XHTML/PDF/image resources 
+  <a href="https://jira.hl7.org/browse/FHIR-55692">FHIR-55692</a> - Clarification of location of 'contained' Binary XHTML/PDF/image resources (<a href="specification.html#questionnaire-design">link</a>)
   </li>
 
 </ul>
@@ -155,23 +155,23 @@
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50790">FHIR-50790</a> - Must Support Expectations
+  <a href="https://jira.hl7.org/browse/FHIR-50790">FHIR-50790</a> - Clarified guidance on ability for DTR client to expose questionnaire items and how they are exposed
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-51100">FHIR-51100</a> - Add a warning about legal rights to terminology
+  <a href="https://jira.hl7.org/browse/FHIR-51100">FHIR-51100</a> - Added a 'dragon' warning about legal rights to terminology in "Questionnaire Design"  (<a href="specification.html#questionnaire-design">link</a>)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50499">FHIR-50499</a> - Need to explain rules for updating coverage-information with DTR
+  <a href="https://jira.hl7.org/browse/FHIR-50499">FHIR-50499</a> - Added narrative guidance to explain rules for updating coverage-information with DTR (<a href="specification.html#determinations-from-adaptive-forms">link</a>)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49898">FHIR-49898</a> - Context ID from PAS is not mentioned in parameter table.
+  <a href="https://jira.hl7.org/browse/FHIR-49898">FHIR-49898</a> - Updated the context parameter to say "CRD, CDex, or PAS-provided context" (<a href="StructureDefinition-dtr-qpackage-input-parameters.html#profile">link</a>)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-49885">FHIR-49885</a> - Referenced Parameter is missing
+  <a href="https://jira.hl7.org/browse/FHIR-49885">FHIR-49885</a> - Corrected the Questionnaire Package operation to explicitly list all parameters (<a href="OperationDefinition-questionnaire-package.html#parameters">link</a>)
   </li>
 </ul>
 
