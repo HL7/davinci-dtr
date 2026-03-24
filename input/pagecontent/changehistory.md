@@ -67,11 +67,11 @@
 <p><b>Substantive changes:</b></p>
 <ul>
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-55401">FHIR-55401</a> - Documenting that hyperlinks in XHTML or supportLink may point to 'contained' binary resources, and include note on security implications
+  <a href="https://jira.hl7.org/browse/FHIR-55401">FHIR-55401</a> - Documenting that hyperlinks in XHTML or supportLink may point to 'contained' binary resources, and include note on security implications (<a href="specification.html#questionnaire-design">link</a>)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-53496">FHIR-53496</a> - Adding a 'request-specific' flag on Questionnaire to clarify circumstances allowed to re-use a form
+  <a href="https://jira.hl7.org/browse/FHIR-53496">FHIR-53496</a> - Adding a 'request-specific' flag on Questionnaire to clarify circumstances allowed to re-use a form (<a href="StructureDefinition-dtr-base-questionnaire.html#profile">link</a>)
   </li>
 
   <li>
@@ -79,7 +79,7 @@
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-53041">FHIR-53041</a> - Making DTRMetricData providerId and groupId optional, but with a constraint that they are required if the source is the EHR
+  <a href="https://jira.hl7.org/browse/FHIR-53041">FHIR-53041</a> - Making DTRMetricData providerId and groupId optional, but with a constraint that they are required if the source is the EHR (<a href="StructureDefinition-DTRMetricData.html#profile">link</a>)
   </li>
 
   <li>
@@ -87,7 +87,7 @@
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52455">FHIR-52455</a> - Added clarification narrative regarding what is considered a 'portal' and expectations for it
+  <a href="https://jira.hl7.org/browse/FHIR-52455">FHIR-52455</a> - Added clarification narrative regarding what is considered a 'portal' and expectations for it (<a href="specification.html#overview">link</a>)
   </li>
 
   <li>
@@ -95,11 +95,11 @@
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50033">FHIR-50033</a> - Added clarification narrative regarding If both orders and a context id are present
+  <a href="https://jira.hl7.org/browse/FHIR-50033">FHIR-50033</a> - Added clarification narrative regarding If both orders and a context id are present (<a href="StructureDefinition-dtr-qpackage-input-parameters.html">link</a>)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48879">FHIR-48879</a> - Added clarification narrative regarding issues with source data in retrieving questionnaire packages 
+  <a href="https://jira.hl7.org/browse/FHIR-48879">FHIR-48879</a> - Added clarification narrative regarding issues with source data in retrieving questionnaire packages (<a href="specification.html#data-expectations-for-invoking-questionnaire-package">link</a>)
   </li>
 </ul>
 
@@ -107,39 +107,39 @@
 <p><b>Non-Substantive changes:</b></p>
 <ul>
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-53484">FHIR-53484</a> - Multiple narrative and conformance updates to improve testability guidance 
+  <a href="https://jira.hl7.org/browse/FHIR-53484">FHIR-53484</a> - Multiple narrative and conformance updates to improve testability guidance (<a href="specification.html#pre-population">link</a>)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-53225">FHIR-53225</a> - Attribute all conformance requirements to distinct actors 
+  <a href="https://jira.hl7.org/browse/FHIR-53225">FHIR-53225</a> - Attribute all conformance requirements to distinct actors (<a href="confexpectations.html#conformance-details">link</a>)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52982">FHIR-52982</a> - Clarified expectations around communicated public keys via SMART on FHIR Backend Services
+  <a href="https://jira.hl7.org/browse/FHIR-52982">FHIR-52982</a> - Clarified expectations around communicated public keys via SMART on FHIR Backend Services (<a href="specification.html#appehr-to-payer-connectivity">link</a>)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52796">FHIR-52796</a> - Improve clarity for exposing question text and answers in API, as well as use of third party logic in data gathering.
+  <a href="https://jira.hl7.org/browse/FHIR-52796">FHIR-52796</a> - Improve clarity for exposing question text and answers in API, as well as use of third party logic in data gathering (<a href="specification.html#questionnaire-use">link</a>) 
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52802">FHIR-52802</a> - Clarified expectations around questionnaire design for absence of data
+  <a href="https://jira.hl7.org/browse/FHIR-52802">FHIR-52802</a> - Clarified expectations around questionnaire design for absence of data (<a href="specification.html#questionnaire-design">link</a>)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52794">FHIR-52794</a> - Provide narrative to note that adaptive forms may help to protect intellectual-property (IP) and licensing exposure 
+  <a href="https://jira.hl7.org/browse/FHIR-52794">FHIR-52794</a> - Provide narrative to note that adaptive forms may help to protect intellectual-property (IP) and licensing exposure (<a href="specification.html#questionnaire-design">link</a>)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52792">FHIR-52792</a> - Include reference that the guide has requirements under HT1-4
+  <a href="https://jira.hl7.org/browse/FHIR-52792">FHIR-52792</a> - Include reference that the guide has requirements under HT1-4 (<a href="index.html#boundaries-and-relationships">link</a>)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52701">FHIR-52701</a> - Clarify that CQL SHALL be compatible with CQL version 1.5
+  <a href="https://jira.hl7.org/browse/FHIR-52701">FHIR-52701</a> - Clarify that CQL SHALL be compatible with CQL version 1.5 (<a href="specification.html#cql-constraints">link</a>)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52700">FHIR-52700</a> - Added references to CQL content
+  <a href="https://jira.hl7.org/browse/FHIR-52700">FHIR-52700</a> - Added references to CQL content (<a href="specification.html#use-of-cql">link</a>)
   </li>
 
   <li>
@@ -147,15 +147,15 @@
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-51629">FHIR-51629</a> - Set expectations for splitting clinical/patient and non-clinical forms
+  <a href="https://jira.hl7.org/browse/FHIR-51629">FHIR-51629</a> - Set expectations for splitting clinical/patient and non-clinical forms (<a href="specification.html#questionnaire-design">link</a>)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-51577">FHIR-51577</a> - Included guidance that server organizations MAY allow clients to pre-examine/pre-process questionnaires 
+  <a href="https://jira.hl7.org/browse/FHIR-51577">FHIR-51577</a> - Included guidance that server organizations MAY allow clients to pre-examine/pre-process questionnaires (<a href="specification.html#questionnaire-use">link</a>)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50790">FHIR-50790</a> - Clarified guidance on ability for DTR client to expose questionnaire items and how they are exposed
+  <a href="https://jira.hl7.org/browse/FHIR-50790">FHIR-50790</a> - Clarified guidance on ability for DTR client to expose questionnaire items and how they are exposed (<a href="confexpectations.html#mustsupport">link</a>)
   </li>
 
   <li>
