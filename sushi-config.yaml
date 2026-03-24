@@ -56,12 +56,12 @@ dependencies:
       Defines USCDI v1 EHR expectations on a range of resources that will be passed. 
   hl7.fhir.uv.sdc:
     id: sdc
-    version: current
+    version: 4.0.0
     reason: |
       Defines expecations for Questionnaires used to gather information
   hl7.fhir.us.davinci-hrex:
     id: hrex
-    version: current
+    version: 1.2.0
     reason: |
       Defines common conformance rules across all Da Vinci IGs, as well as additional constraints and profiles beyond U.S. Core
   hl7.fhir.uv.extensions.r4:
@@ -72,16 +72,20 @@ dependencies:
       Makes available certain R5 elements for use as part of this R4 IG
   hl7.fhir.us.davinci-crd:
     id: crd
-    version: 2.1.0
+    version: 2.2.0
     reason: |
       Makes available CRD profiles, valuesets, and codes for use as part of this IG
   hl7.fhir.us.davinci-pas:
     id: pas
-    version: 2.1.0
+    version: 2.2.0
+    reason: |
+      Makes available PAS profiles, valuesets, and codes for use as part of this IG
   hl7.fhir.uv.tools.r4:
     id: tools
     version: 1.1.2
     uri: http://hl7.org/fhir/tools/ImplementationGuide/hl7.fhir.uv.tools
+    reason: |
+      Common tooling features needed by all IGs
 
 pages:
   index.md:
