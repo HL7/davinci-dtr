@@ -3,19 +3,19 @@
 <p><b>Non-Substantive changes:</b></p>
 <ul>
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-55885">FHIR-55885</a> - Clarify responsibility for requirement spec-159
+  <a href="https://jira.hl7.org/browse/FHIR-55885">FHIR-55885</a> - Making clear that the responsibility rests with the DTR server to produce distinct questionnaires
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-55884">FHIR-55884</a> - Requirements spec-47 and spec-155 in conflict
+  <a href="https://jira.hl7.org/browse/FHIR-55884">FHIR-55884</a> - Requirements around primary keys and update behavior for coverage-information extensions are out of sync between server and client sections
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-55883">FHIR-55883</a> - Clarify §spec-125 (regarding previously completed QuestionnaireResponses)
+  <a href="https://jira.hl7.org/browse/FHIR-55883">FHIR-55883</a> - Clarify §spec-125 regarding not supporting previously completed QuestionnaireResponses
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-55866">FHIR-55866</a> - Clarify where the CQL Identifier mime type gets used 
+  <a href="https://jira.hl7.org/browse/FHIR-55866">FHIR-55866</a> - Expand narrative to clarify where the CQL Identifier mime type gets used 
   </li>
 
   <li>
@@ -35,15 +35,15 @@
 <p><b>Breaking changes:</b></p>
 <ul>
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52804">FHIR-52804</a> - Change SHOULD to SHALL
+  <a href="https://jira.hl7.org/browse/FHIR-52804">FHIR-52804</a> - Change SHOULD to SHALL for returning HTTP 400 error with an OperationOutcome indicating the circumstances where the QuestionnaireResponse is invalid
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52801">FHIR-52801</a> - Change SHOULD to SHALL
+  <a href="https://jira.hl7.org/browse/FHIR-52801">FHIR-52801</a> - Change SHOULD to SHALL regarding the use of logic ensuring only questions and answer choices which are required for the intended clinical or administrative purposes
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52791">FHIR-52791</a> - DTR guardrails
+  <a href="https://jira.hl7.org/browse/FHIR-52791">FHIR-52791</a> - Include expectations that DTR Services SHOULD have DTR questionnaires available for all covered items that require additional data collection 
   </li>
 
   <li>
@@ -51,15 +51,15 @@
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-51736">FHIR-51736</a> - DTR should only take a single coverage as input 
+  <a href="https://jira.hl7.org/browse/FHIR-51736">FHIR-51736</a> - Constrain DTR to only take a single coverage as input 
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-51631">FHIR-51631</a> - Give users an idea of how much time completion will take
+  <a href="https://jira.hl7.org/browse/FHIR-51631">FHIR-51631</a> - Give users an idea of how much time completion will take (adding <code>estimatedCompletionTime</code> extension to base Questionnaire)
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50789">FHIR-50789</a> - Return all questions with response logic as must support
+  <a href="https://jira.hl7.org/browse/FHIR-50789">FHIR-50789</a> - Provide clarity around simple logic in Adaptive forms and adaptive processing expectations and requirements.
   </li>
 </ul>
 
@@ -67,39 +67,39 @@
 <p><b>Substantive changes:</b></p>
 <ul>
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-55401">FHIR-55401</a> - Support for rendering-xhtml links to contained HTML documents
+  <a href="https://jira.hl7.org/browse/FHIR-55401">FHIR-55401</a> - Documenting that hyperlinks in XHTML or supportLink may point to 'contained' binary resources, and include note on security implications
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-53496">FHIR-53496</a> - Add a 'request-specific' flag on Questionnaire
+  <a href="https://jira.hl7.org/browse/FHIR-53496">FHIR-53496</a> - Adding a 'request-specific' flag on Questionnaire to clarify circumstances allowed to re-use a form
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-53050">FHIR-53050</a> - DTR version discovery 
+  <a href="https://jira.hl7.org/browse/FHIR-53050">FHIR-53050</a> - DTR version discovery as referenced in HRex
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-53041">FHIR-53041</a> - DTRMetricData providerId and groupId required, but not generally available to payer services
+  <a href="https://jira.hl7.org/browse/FHIR-53041">FHIR-53041</a> - Making DTRMetricData providerId and groupId optional, but with a constraint that they are required if the source is the EHR
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52803">FHIR-52803</a> - Change SHOULD to SHALL
+  <a href="https://jira.hl7.org/browse/FHIR-52803">FHIR-52803</a> - Removed statement about translation between standard codes "where possible" as it is too ambiguous
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-52455">FHIR-52455</a> - Clarify portals
+  <a href="https://jira.hl7.org/browse/FHIR-52455">FHIR-52455</a> - Added clarification narrative regarding what is considered a 'portal' and expectations for it
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50465">FHIR-50465</a> - Need guidance on supplemental guides
+  <a href="https://jira.hl7.org/browse/FHIR-50465">FHIR-50465</a> - Added a new section on the conformance page titled "Interoperability Expectations"
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50033">FHIR-50033</a> - In DTR we should have either Context id or CRD resources in Order but not both
+  <a href="https://jira.hl7.org/browse/FHIR-50033">FHIR-50033</a> - Added clarification narrative regarding If both orders and a context id are present
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-48879">FHIR-48879</a> - Retrieving Questionnaire Packages (DTR IG 8.11)
+  <a href="https://jira.hl7.org/browse/FHIR-48879">FHIR-48879</a> - Added clarification narrative regarding issues with source data in retrieving questionnaire packages 
   </li>
 </ul>
 
