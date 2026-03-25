@@ -632,7 +632,7 @@ It is the responsibility of the DTR client to check whether there's already an e
   <table style="border: none; margin-bottom: 0px;">
     <tr><td style="width: 72px; border: none"><img src="Note.png" style="float: left; width:18px; height:18px; margin: 0px;">&nbsp;<b><span style="color:maroon;">NOTE:</span></b></td>
       <td style="border: none"> 
-<span>§spec-125^dtr-client^exchange:Previously completed QuestionnaireResponses <b>SHALL NOT</b> be used by DTR clients to complete Questionnaires received due to concerns about currency of clinical information.§</span>
+<a name="FHIR-55883"> </a><span>§spec-125^dtr-client^exchange:Previously completed QuestionnaireResponses <b>SHALL NOT</b> be used by DTR clients to complete Questionnaires received due to concerns about currency of clinical information.§</span>
       </td></tr>
   </table>
 </div><br>

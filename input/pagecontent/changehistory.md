@@ -11,7 +11,7 @@
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-55883">FHIR-55883</a> - Clarify §spec-125 regarding not supporting previously completed QuestionnaireResponses (<a href="confexpectations.html#ci-c-spec-125">link</a>)
+  <a href="https://jira.hl7.org/browse/FHIR-55883">FHIR-55883</a> - Clarify §spec-125 regarding not supporting previously completed QuestionnaireResponses (<a href="specification.html#FHIR-55883">link</a>)
   </li>
 
   <li>
