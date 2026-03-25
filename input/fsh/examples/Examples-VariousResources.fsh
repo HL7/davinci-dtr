@@ -5,7 +5,7 @@ Instance: CoverageExample
 InstanceOf: http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-coverage
 Description: "An instance of CRD Coverage"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-coverage|2.1.0"
+* meta.profile = "http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-coverage|2.2.0"
 * contained = OrgExample
 * subscriber = Reference(PatientExample)
 * beneficiary = Reference(PatientExample)
@@ -23,7 +23,7 @@ Usage: #example
 Instance: ServiceRequestExample
 InstanceOf: http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-servicerequest
 Description: "Example of ServiceRequest used in the Home Oxygen Therapy (home-o2-questionnaireresponse) example"
-* meta.profile = "http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-servicerequest|2.1.0"
+* meta.profile = "http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-servicerequest|2.2.0"
 * status = #active
 * intent = #original-order
 * authoredOn = "2019-09-18T07:53:21+07:00"
@@ -97,7 +97,7 @@ Instance: OrgExample
 InstanceOf: $CRDOrganization
 Description: "An instance of Organization as a payer used in the example resources."
 Usage: #inline
-* meta.profile = "http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-organization|2.1.0"
+* meta.profile = "http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-organization|2.2.0"
 * identifier[0].value = "10D0202020"
 * identifier[0].system = "urn:oid:2.16.840.1.113883.4.7"
 * type = http://terminology.hl7.org/CodeSystem/organization-type#pay "Payer"
