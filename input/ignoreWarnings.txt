@@ -14,11 +14,9 @@
 %Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now%
 
 # 03 - These are the correct pinned versions
+%Pinned the version of http://hl7.org/fhir/us/%
 %Pinned the version of http://hl7.org/fhir/uv/sdc/%
 %Pinned the version of http://hl7.org/fhir/StructureDefinition/%
-%Pinned the version of http://hl7.org/fhir/us/davinci-crd/%
-%Pinned the version of http://hl7.org/fhir/us/core/%
-%Pinned the version of http://hl7.org/fhir/us/davinci-hrex/%
 %It might be a good idea to fix to the correct version to reduce the likelihood of a wrong version being selected by an implementation/implementer, or use the [IG Parameter `pin-canonicals`]%
 
 # 04 - Issue inherited from the base resource
@@ -70,3 +68,4 @@ WARNING: DA VINCI: The How to Read page (background.html) needs to include a ref
 
 # 16 - The intent is for the adaptiveQuestionnaire extension to exist only here and constrain the type to a URL
 %This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-base-questionnaire|2.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)%
+%This element does not match any known slice defined in the profile http://hl7.org/fhir/us/davinci-crd/StructureDefinition/profile-servicerequest|2.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)%
