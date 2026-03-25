@@ -1,6 +1,6 @@
 ///**********************************************************************************************
 // Value Sets
-// ************************************************************
+// **********************************************************************************************
 ValueSet: DTRCompletionTimes
 Id: completionTimes
 Title: "Questionnaire Completion Time Value Set"
@@ -13,7 +13,7 @@ Description: "Codes defining estimated completion times for a Questionnaire"
 * DTRCompletionTimeCodes#under-5min
 * DTRCompletionTimeCodes#over-5min
 
-// ************************************************************
+// **********************************************************************
 ValueSet: DTRAudience
 Id: questionnaireAudience
 Title: "Audience Value Set"
@@ -25,7 +25,7 @@ Description: "Codes defining audience of additional documentation to be captured
 * DTRIntendedAudience#admin
 * DTRIntendedAudience#patient
 
-// ************************************************************
+// **********************************************************************
 ValueSet: DTRInformationOrigins
 Id: informationOrigins
 Title: "Information Origins Value Set"
@@ -36,7 +36,7 @@ Description: "Codes describing the possible origination of information."
 * DTRInformationOriginCodes#override
 * DTRInformationOriginCodes#manual
 
-// ************************************************************
+// **********************************************************************
 ValueSet: MetricsInformationOrigins
 Id: MetricsinformationOrigins
 Title: "Information Human Origins Value Set"
@@ -45,7 +45,7 @@ Description: "Questionnaire actions taken by human actors."
 * DTRInformationOriginCodes#override
 * DTRInformationOriginCodes#manual
 
-// ************************************************************
+// **********************************************************************
 ValueSet: MetricSource
 Id: metric-Source
 Title: "Metric Source"
@@ -56,7 +56,7 @@ Description: "A list of codes indicating the perspective from which metric data 
 * DTRMetricCodes#provider-src
 * DTRMetricCodes#DTRApp-src
 
-// ************************************************************
+// **********************************************************************
 ValueSet: MetricLaunchMode
 Id: metric-launchmode
 Title: "Metric Launch Mode"
@@ -68,7 +68,7 @@ Description: "A list of codes indicating how DTR was launched."
 * DTRMetricCodes#salaunch
 * DTRMetricCodes#cdexlaunch
 
-// ************************************************************
+// **********************************************************************
 ValueSet: MetricAction
 Id: metric-Action
 Title: "Metric Action"
@@ -82,7 +82,7 @@ Description: "A list of codes indicating the DTR action performed by a system."
 * DTRMetricCodes#userresponse
 * DTRMetricCodes#storeqr
 
-// ************************************************************
+// **********************************************************************
 ValueSet: ConformanceStatementCategories
 Id: cs-categories
 Title: "Conformance Statement Categories"
