@@ -73,7 +73,8 @@ The IG is organized into the following sections:
 * [Burden Reduction](burden.html): Presents a somewhat detailed overview of Burden Reduction including the Implementation Guides that are expected within the workflow.
 * [ePA Coordinators](epa.html): Provides information regarding the interactions necessary to participate in an ePA workflow.
 * [Operational Consideration](operational.html): Provides information about certain business practices that will likely be necessary for implementation of this specification.
-* [Conformance Expectations](confexpectations.html): Base conformance details for the specification as well as a listing of all conformance statements used within this IG.
+* [Conformance Expectations](confexpectations.html): Base expectations of conformance that is foundational for this specification.
+* [Conformance Details](confdetails.html): Listing of all conformance details (i.e., conformance statements) used within this IG.
 * [Formal Specification](specification.html): Provides the technical conformance details for the specification.
 * [Privacy, Security, and Safety](security.html): Describes guidance and conformance expectations around privacy and security this IG relies on.
 * [DTR Metrics](metrics.html): Provides guidance on capturing formal metrics to help evaluate and potentially benchmark DTR implementations.
