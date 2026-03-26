@@ -67,15 +67,19 @@ A fourth Da Vinci IG that is relevant to DTR is the [Health Record Exchange (HRe
 ### Content and Organization
 The IG is organized into the following sections:
 
-* [Use Cases and Overview](usecases.html) Provides examples of how this specification can be used by provider and payer organizations.
-* [Technical Background](background.html) Describes the underlying technologies this specification builds upon that readers should be familiar with before reading the rest of the IG.
-* [ePA Coordinators](epa.html) Provides information regarding the interactions necessary to participate in an ePA workflow.
-* [Formal Specification](specification.html) Provides the technical conformance details for the specification.
-* [Privacy, Security, and Safety](security.html) Describes guidance and conformance expectations around privacy and security this IG relies on.
-* [DTR Metrics](metrics.html) Provides guidance on capturing formal metrics to help evaluate and potentially benchmark DTR implementations.
-* [Artifacts](allartifacts.html) Introduces and provides links to the FHIR profiles, operations, extensions, as well as examples.
-* [Credits](credits.html) Identifies the individuals and organizations involved in developing this IG.
-* [Change History](changehistory.html) Documents the changes that have been made to this IG in its different releases and pointers to the discussion that drove those changes.
+* [Reading this IG](background.html): Describes the underlying technologies this specification builds upon that readers should be familiar with before reading the rest of the IG.
+* [Use Cases](usecases.html): Provides examples of how this specification can be used by provider and payer organizations.
+* [Project and Participants](credits.html): Provides a basic overview of the Da Vinci FHIR accelerator along with a snapshot of the people and organizations who contributed to this IG.
+* [Burden Reduction](burden.html): Presents a somewhat detailed overview of Burden Reduction including the Implementation Guides that are expected within the workflow.
+* [ePA Coordinators](epa.html): Provides information regarding the interactions necessary to participate in an ePA workflow.
+* [Operational Consideration](operational.html): Provides information about certain business practices that will likely be necessary for implementation of this specification.
+* [Conformance Expectations](confexpectations.html): Base conformance details for the specification as well as a listing of all conformance statements used within this IG.
+* [Formal Specification](specification.html): Provides the technical conformance details for the specification.
+* [Privacy, Security, and Safety](security.html): Describes guidance and conformance expectations around privacy and security this IG relies on.
+* [DTR Metrics](metrics.html): Provides guidance on capturing formal metrics to help evaluate and potentially benchmark DTR implementations.
+* [Artifacts Overview](allartifacts.html): Introduces and provides links to the FHIR profiles, operations, extensions, as well as examples.
+* [DTR-Specific Artifacts](artifacts.html): Provides a list of the FHIR artifacts defined as part of, and specific to, this implementation guide.
+* [Change History](changehistory.html): Documents the changes that have been made to this IG in its different releases and pointers to the discussion that drove those changes.
    
 ### Dependencies
 This guide is based on the FHIR R4 specification that is mandated for use in the U.S. as well as the [Clinical Quality Language (CQL) N1](http://cql.hl7.org/N1/) release specification. It also leverages the SMART on FHIR specification for non-native DTR Apps.
