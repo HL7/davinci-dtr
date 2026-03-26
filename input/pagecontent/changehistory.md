@@ -91,7 +91,7 @@
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50465">FHIR-50465</a> - Added a new section on the conformance page titled "Interoperability Expectations" (<a href="confexpectations.html#interoperability-expectations">link</a>)
+  <a href="https://jira.hl7.org/browse/FHIR-50465">FHIR-50465</a> - Added a new section on the conformance page titled "Interoperability Expectations" (<a href="confdetails.html">link</a>)
   </li>
 
   <li>
