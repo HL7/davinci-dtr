@@ -72,12 +72,12 @@ dependencies:
       Makes available certain R5 elements for use as part of this R4 IG
   hl7.fhir.us.davinci-crd:
     id: crd
-    version: current
+    version: 2.2.1
     reason: |
       Makes available CRD profiles, valuesets, and codes for use as part of this IG
   hl7.fhir.us.davinci-pas:
     id: pas
-    version: current
+    version: 2.2.1
     reason: |
       Makes available PAS profiles, valuesets, and codes for use as part of this IG
   hl7.fhir.uv.tools.r4:
