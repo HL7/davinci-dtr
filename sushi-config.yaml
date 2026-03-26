@@ -72,12 +72,12 @@ dependencies:
       Makes available certain R5 elements for use as part of this R4 IG
   hl7.fhir.us.davinci-crd:
     id: crd
-    version: current
+    version: 2.2.0 
     reason: |
       Makes available CRD profiles, valuesets, and codes for use as part of this IG
   hl7.fhir.us.davinci-pas:
     id: pas
-    version: current
+    version: 2.2.0 
     reason: |
       Makes available PAS profiles, valuesets, and codes for use as part of this IG
   hl7.fhir.uv.tools.r4:
@@ -133,6 +133,11 @@ pages:
     extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: trial-use
+    confdetails.md:
+      title: Conformance Details
+      extension:
+        - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+          valueCode: trial-use
   specification.md:
     title: Formal Specification
     extension:
@@ -183,6 +188,7 @@ menu:
 
   Specification:
     Conformance Expectations: confexpectations.html
+    Conformance Details: confdetails.html
     Formal Specification: specification.html
     Privacy, Safety, and Security: security.html
     DTR Metrics: metrics.html
