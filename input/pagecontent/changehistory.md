@@ -91,7 +91,7 @@
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-50465">FHIR-50465</a> - Added a new section on the conformance page titled "Interoperability Expectations" (<a href="confexpectations.html#interoperability-expectations">link</a>)
+  <a href="https://jira.hl7.org/browse/FHIR-50465">FHIR-50465</a> - Added a new page called Conformance Details (<a href="confdetails.html">link</a>)
   </li>
 
   <li>
@@ -111,7 +111,7 @@
   </li>
 
   <li>
-  <a href="https://jira.hl7.org/browse/FHIR-53225">FHIR-53225</a> - Attribute all conformance requirements to distinct actors (<a href="confexpectations.html#conformance-details">link</a>)
+  <a href="https://jira.hl7.org/browse/FHIR-53225">FHIR-53225</a> - Attribute all conformance requirements to distinct actors (<a href="confdetails.html">link</a>)
   </li>
 
   <li>
