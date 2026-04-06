@@ -21,11 +21,21 @@ Usage: #definition
 * type = true
 * instance = false
 
+* inputProfile = "http://hl7.org/fhir/us/davinci-dtr/StructureDefinition/dtr-log-errors-input-parameters"
+
 // -------------------------- Input --------------------------
-* parameter[0].name = #resource
+
+* parameter[+].name = #questionnaire
 * parameter[=].use = #in
-* parameter[=].documentation = "The Questionnaire which generated the errors and/or an OperationOutcome"
-* parameter[=].type = #Parameters
-* parameter[=].targetProfile = Canonical(dtr-log-errors-input-parameters)
 * parameter[=].min = 1
-* parameter[=].max = "1"
+* parameter[=].max = "*"
+* parameter[=].documentation = "The Questionnaire generating the errors (The reference SHOULD be version-specific)"
+* parameter[=].type = #canonical
+* parameter[=].targetProfile = "http://hl7.org/fhir/StructureDefinition/Questionnaire"
+
+* parameter[+].name = #operationOutcome
+* parameter[=].use = #in
+* parameter[=].min = 1
+* parameter[=].max = "*"
+* parameter[=].documentation = "Operation Outcome associated with the Questionnaire/CQL"
+* parameter[=].type = #OperationOutcome
