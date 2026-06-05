@@ -25,7 +25,7 @@ Description: "An example [QuestionnaireResponse](StructureDefinition-dtr-questio
 * item[=].item[=].answer[=].extension[=].extension[=].valueCode = #override
 * item[=].item[=].answer[=].extension[=].extension[+].url = "author"
 * item[=].item[=].answer[=].extension[=].extension[=].extension[0].url = "role"
-* item[=].item[=].answer[=].extension[=].extension[=].extension[=].valueCodeableConcept = http://nucc.org/provider-taxonomy#207Q00000X "Family Medicine"
+* item[=].item[=].answer[=].extension[=].extension[=].extension[=].valueCodeableConcept = http://nucc.org/provider-taxonomy#207Q00000X "Family Medicine Physician"
 * item[=].item[=].answer[=].extension[=].extension[=].extension[+].url = "practitioner"
 * item[=].item[=].answer[=].extension[=].extension[=].extension[=].valueReference = Reference(PractitionerExample) "Dr. Jane Doe"
 
@@ -110,7 +110,7 @@ Description: "An example [QuestionnaireResponse](StructureDefinition-dtr-questio
 * item[=].item[=].answer[=].extension[=].extension[=].valueCode = #override
 * item[=].item[=].answer[=].extension[=].extension[+].url = "author"
 * item[=].item[=].answer[=].extension[=].extension[=].extension[0].url = "role"
-* item[=].item[=].answer[=].extension[=].extension[=].extension[=].valueCodeableConcept = http://nucc.org/provider-taxonomy#207Q00000X "Family Medicine"
+* item[=].item[=].answer[=].extension[=].extension[=].extension[=].valueCodeableConcept = http://nucc.org/provider-taxonomy#207Q00000X "Family Medicine Physician"
 * item[=].item[=].answer[=].extension[=].extension[=].extension[+].url = "practitioner"
 * item[=].item[=].answer[=].extension[=].extension[=].extension[=].valueReference = Reference(PractitionerExample) "Dr. Jane Doe"
         // ===========================================================================================
