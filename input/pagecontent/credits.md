@@ -24,8 +24,8 @@ Further details about the project, including minutes of meetings and other infor
 <br>
 <b>Da Vinci Project Coordination and Core Team:</b> 
 <ul>
-    <li>Robert Dieterle (EnableCare, LLC)</li>
     <li>Viet Nguyen (Stratametrics, LLC)</li>
+    <li>Robert Dieterle (EnableCare, LLC)</li>
     <li>Crystal Kallem (Point of Care Partners)</li>
     <li>Vanessa Candelora (Point of Care Partners)</li>
     <li>Jocelyn Keegan (Point of Care Partners)</li>
@@ -76,7 +76,7 @@ Further details about the project, including minutes of meetings and other infor
 </ul>
 </div>
 
-This IG was developed under the auspices of the Clinical Decision Support work group.
+This IG was developed under the auspices of the HL7 Clinical Decision Support work group.
 
 ----
 If you are interested in participating in the DTR project and Da Vinci: information about our calls, minutes of past discussions, and other information can be found on our [HL7 Da Vinci Confluence page]( https://confluence.hl7.org/display/DVP/Da+Vinci+Use+Cases).
