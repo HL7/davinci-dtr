@@ -262,9 +262,12 @@ In some cases, upon receiving enough answers from an adaptive form, a payer will
 
 §spec-41?^dtr-server^exchange:If Adaptive Forms are being used, and a DTR service determines that prior authorization is both necessary and the requirements have been satisfied, then the final question in the form **SHALL** be a question that asks the user if they would like the prior authorization identifier to be issued, and indicate the appropriate response options.§  If the answer indicates a desire to have the identifier issued, then the completed [`questionnaireResponse`](StructureDefinition-dtr-questionnaireresponse.html) from the payer will contain the issued Prior Authorization identifier in the `satisfied-pa-id` element of the [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension.  §spec-42^dtr-server^exchange:DTR Servers **SHALL NOT** provide a `satisfied-pa-id` in response to a DTR invocation that was triggered by a PAS request.§
 
-§spec-43^dtr-server^exchange:DTR payers **SHALL** ONLY use DTR adaptive forms to return a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension when:§
+§§spec-43^dtr-server^exchange:DTR payers **SHALL** ONLY use DTR adaptive forms to return a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension^
+DTR payers **SHALL** ONLY use DTR adaptive forms to return a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension when:
 * CRD has already been called and a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension is already present on the relevant order; and
 * Information is needed from a user that cannot be made available via the CRD process (either by pre-fetch or active query).
+
+§§
 
 <div markdown="1" class="notebox">
   <table style="border: none; margin-bottom: 0px;">
