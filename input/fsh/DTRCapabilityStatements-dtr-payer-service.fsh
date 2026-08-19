@@ -31,9 +31,10 @@ Usage: #definition
 * rest.resource[=].operation[=].definition = "http://hl7.org/fhir/us/davinci-dtr/OperationDefinition/questionnaire-package"
 
 * rest.resource[=].operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest.resource[=].operation[=].extension.valueCode = #SHALL
+* rest.resource[=].operation[=].extension.valueCode = #SHOULD
 * rest.resource[=].operation[=].name = "next-question"
 * rest.resource[=].operation[=].definition = "http://hl7.org/fhir/uv/sdc/OperationDefinition/Questionnaire-next-question"
+* rest.resource[=].operation[=].documentation = "This operation is used by systems that support adaptive questionnaires"
 
 * rest.resource[=].operation[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest.resource[=].operation[=].extension.valueCode = #SHALL
