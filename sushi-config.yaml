@@ -25,6 +25,7 @@ parameters:
   excludettl: true
   show-inherited-invariants: false
   requirements-category-vs: "http://hl7.org/fhir/us/davinci-dtr/ValueSet/cs-categories"
+  auto-oid-root: 2.16.840.1.113883.4.642.40.22
   path-expansion-params: 'Parameters-expansion-parameters-us-dtr.json'  #path is relative to [base]/fsh-generated/resources
   apply-publisher: true
   apply-contact: true
