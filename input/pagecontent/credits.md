@@ -54,11 +54,10 @@ Further details about the project, including minutes of meetings and other infor
     <li>Sreekanth Puram (Mettle Solutions)</li>
     <li>Celine Lefebvre, Heather McComas, Denis Casaubon (AMA)</li>
     <li>Anup Mahansaria, Peni Moxim, Mariel Brechner (Evernorth)</li>
-    <li>Carie Hammond and Ryan Moehrke (AEGIS)</li>
-    <li>Artem Sopin (Cotiviti)</li>
-    <li>Brian Poteet (Edifecs)</li>
+    <li>Carie Hammond, Ryan Moehrke (AEGIS)</li>
+    <li>Artem Sopin, Brian Poteet (Cotiviti/Edifecs)</li>
     <li>James Bound (Cognizant)</li>
-    <li>Jason Vogt, Chris Hardee (Meditech)</li>
+    <li>Jason Vogt, Chris Hardee, Dan Murphy (MEDITECH)</li>
     <li>Scott Rossignol (eHealthExchange)</li>
     <li>Tom Kakanowski, Brenin Rhodes, David Chisholm (Smile Digital Health)</li>
     <li>Chris Cioffi (Elevance Health)</li>
