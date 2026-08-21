@@ -1,12 +1,56 @@
 {
   "resourceType" : "Requirements",
   "id" : "fromNarrative",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+    "valueCode" : "cds"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 2,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/us/davinci-dtr/ImplementationGuide/hl7.fhir.us.davinci-dtr"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "trial-use",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://hl7.org/fhir/us/davinci-dtr/ImplementationGuide/hl7.fhir.us.davinci-dtr"
+      }]
+    }
+  }],
   "url" : "http://hl7.org/fhir/us/davinci-dtr/Requirements/fromNarrative",
+  "identifier" : [{
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:oid:2.16.840.1.113883.4.642.40.22.36.1"
+  }],
+  "version" : "2.2.0",
   "name" : "FromNarrative",
   "title" : "Narrative Conformance Statements",
   "status" : "active",
   "experimental" : false,
+  "date" : "2026-08-21T10:35:55-04:00",
+  "publisher" : "HL7 International / Clinical Decision Support",
+  "contact" : [{
+    "name" : "HL7 International / Clinical Decision Support",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://www.hl7.org/Special/committees/dss"
+    }]
+  }],
   "description" : "Conformance statements found throughout the narrative of the IG consolidated into this computable resource for traceability purposes",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
   "actor" : ["http://hl7.org/fhir/us/davinci-dtr/ActorDefinition/dtr-client",
   "http://hl7.org/fhir/us/davinci-dtr/ActorDefinition/dtr-server"],
   "_actor" : [{
@@ -1892,8 +1936,9 @@
       "valueId" : "dtr-server"
     }],
     "key" : "spec-43",
+    "label" : "DTR payers SHALL ONLY use DTR adaptive forms to return a coverage-information extension",
     "conformance" : ["SHALL"],
-    "requirement" : "DTR payers **SHALL** ONLY use DTR adaptive forms to return a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension when:"
+    "requirement" : "DTR payers **SHALL** ONLY use DTR adaptive forms to return a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension when:\r\n\r\n* CRD has already been called and a [`coverage-information`](https://build.fhir.org/ig/HL7/davinci-crd/StructureDefinition-ext-coverage-information.html) extension is already present on the relevant order; and\r\n* Information is needed from a user that cannot be made available via the CRD process (either by pre-fetch or active query)."
   },
   {
     "extension" : [{
