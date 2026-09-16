@@ -90,7 +90,7 @@ dependencies:
 
 pages:
   index.md:
-    title: Documentation Templates and Rules Implementation Guide Home Page
+    title: DTR IG Home Page
     extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: informative
