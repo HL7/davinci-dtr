@@ -58,7 +58,7 @@ Further details about the project, including minutes of meetings and other infor
     <li>Artem Sopin, Brian Poteet (Cotiviti/Edifecs)</li>
     <li>James Bound (Cognizant)</li>
     <li>Jason Vogt, Chris Hardee, Dan Murphy (MEDITECH)</li>
-    <li>Scott Rossignol (eHealthExchange)</li>
+    <li>Scott Rossignol, Tiffanie Hickman (eHealthExchange)</li>
     <li>Tom Kakanowski, Brenin Rhodes, David Chisholm (Smile Digital Health)</li>
     <li>Chris Cioffi (Elevance Health)</li>
     <li>Rob Brull, Brian Lind (Infor)</li>
